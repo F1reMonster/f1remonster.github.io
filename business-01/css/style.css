@@ -731,7 +731,7 @@ li button:focus {
 .newsletter__bg {
   background-image: url("../img/dotted_map1.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
+  /* background-size: cover; */
   background-position: center;
   width: 100%;
   height: 100vh;
