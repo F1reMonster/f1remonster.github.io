@@ -9,8 +9,11 @@ $(function () {
  
 });
 
-$(".header__menu-mobile").hide();
+$('.header__menu-mobile').hide();
 
 $("#burger").on("click", function() {
+  this.classList.toggle('burger-active');
   $(".header__menu-mobile").slideToggle();
 })
+
+$('')
