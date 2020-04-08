@@ -20,7 +20,6 @@ header {
   font-weight: 400;
 }
 
-
 ul,
 li {
   list-style: none;
@@ -71,7 +70,6 @@ h6 {
   padding: 0px 20px;
   color: #868686;
   text-decoration: none;
-  
 }
 
 .menu a:hover {
@@ -82,13 +80,10 @@ h6 {
 }
 
 /* Burger */
-
 .burger, 
 .header__menu-mobile {
   display: none;
 }
-
-
 
 
 /* SLIDER 
@@ -110,7 +105,6 @@ h6 {
 
 
 .slick-dots {
-  
   text-align: center;
   margin-top: 40px;
   width: 100%;
@@ -162,8 +156,6 @@ li button:focus {
   justify-content: center;
 }
 
-
-
 .banner__img-center {
   display: block;
   margin: 0 auto;
@@ -179,13 +171,11 @@ li button:focus {
   
   font-family: "Open Sans", sans-serif;
   margin: 0 0 10px 12px;
-  
 }
 
 .form__item input {
   color: #a9a9a9;
   padding: 18px 20px 18px 47px;
-  
   width: 250px;
   border: none;
   border-radius: 4px;
@@ -262,15 +252,11 @@ li button:focus {
   width: 15%;
   font-size: 60px;
   color: #709dca;
-
   margin-right: 10px;
-  
 }
 
 .services__name {
   width: 85%;
-  /* left: 80px;
-  top: 125px; */
 }
 
 .services__title {
@@ -287,34 +273,27 @@ li button:focus {
   font-size: 13px;
   color: #7b7b7b;
   line-height: 1.5;
-  /* max-width: 470px; */
 }
 /* end of services*/
 
 /* about us
 ===============================*/
 
-
-
 .about__item {
   display: flex;
   flex-wrap: wrap;
-
 }
 
 .about__left  {
   width: 50%;
   height: 625px;
   overflow: hidden;
-  
 }
 
 .about__right {
   background-color: #ffc155;
   width: 50%;
 }
-
-
 
 .about__desc {
   margin-top: 175px;
@@ -343,15 +322,12 @@ li button:focus {
 
 .about__btn {
   padding: 17px 33px;
-
   font-family: "Lato", sans-serif;
   font-size: 14px;
   border: 2px solid #e7ad48;
-
   text-decoration: none;
   text-transform: uppercase;
   color: #fff;
-
   cursor: pointer;
 }
 
@@ -575,8 +551,6 @@ li button:focus {
   text-transform: uppercase;
   text-decoration: none;
   padding: 15px 30px;
- 
-
   transition: 0.2s;
 }
 
@@ -618,17 +592,14 @@ li button:focus {
 .clients__content {
   display: flex;
   flex-wrap: wrap;
-
   margin-left: -20px;
 }
 
 .clients__item {
   width: calc(50% - 20px);
   background-color: #fff;
-
   margin-left: 20px;
   margin-bottom: 10px;
-
   display: flex;
 }
 
@@ -655,7 +626,6 @@ li button:focus {
   font-weight: 400;
   line-height: 1.5;
   text-transform: uppercase;
-
 }
 
 
@@ -666,7 +636,6 @@ li button:focus {
   font-weight: 400;
   line-height: 1.5;
   text-transform: uppercase;
-
 }
 
 /* NEWSLETTER
@@ -694,7 +663,6 @@ li button:focus {
 
 }
 
-
 .newsletter__descr {
   font-family: "Lato", sans-serif;
   font-size: 18px;
@@ -706,8 +674,6 @@ li button:focus {
   flex-wrap: wrap;
   justify-content: center;
   margin: 40px 0 55px -6px;
-  
-  
 }
 
 .field-input.news input {
@@ -717,26 +683,20 @@ li button:focus {
 
 }
 
-
-
 .newsletter__addr {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 60px;
-  
   background: url(..//img/dotted_map1.jpg) center no-repeat;
   background-size: cover;
   height: 550px; 
-  
-
 }
 
 .newsletter__address {
   position: absolute;
   margin-top: -120px;
   text-align: center;
-
   font-family: "Open Sans", sans-serif;
   font-size: 13px;
   line-height: 1.8;
@@ -761,7 +721,6 @@ li button:focus {
   cursor: pointer;
 }
 
-
 /* FOOTER
 =========================*/
 
@@ -775,7 +734,6 @@ li button:focus {
   font-family: "Open Sans", sans-serif;
   font-size: 13px;
   color: #394b50;
-  
 }
 
 .footer__block .menu a:hover {
@@ -798,7 +756,6 @@ li button:focus {
   font-size: 13px;
   line-height: 1.5;
   text-align: center;
-  
   background-color: #709dca;
   color: #fff;
   
@@ -817,10 +774,8 @@ li button:focus {
   margin-left: 5px;
 }
 
-
 .social__icon:hover {
   fill: #ffc155;
-
   transition: 0.2s;
 
 }
@@ -838,23 +793,18 @@ li button:focus {
 @media (max-width: 1900px) {
 
 /* about us */
-
 .about__desc {
     margin-right: 100px;
-    
   }
 }
 
 @media (max-width: 1200px) {
 
-/* about us */
-  
+  /* about us */
 .about__desc {
   margin: 20px;
-    
   }
-    
-    }
+}
 
 
 /* 797px =====================
@@ -862,26 +812,18 @@ li button:focus {
 @media (max-width: 797px) {
 
 /* banner */
-
 .banner__content {
-
   padding-top: 50px;
-
 }
-
-
 
 .slider .banner__img-center {
   display: none;
 }
 
 /* Burger */
-
 .header__menu {
   display: none;
 }
-
-
 
 .burger {
   display: block;
@@ -889,8 +831,6 @@ li button:focus {
   height: 5px;
   background-color: #868686;
   position: relative;
-
-  
 }
 
 .burger::after {
@@ -932,7 +872,6 @@ li button:focus {
   top: 0;
   transition: top .2s linear, transform 0.2s ease-in .2s;
 }
-
 /* end of burger*/
 
 .header__menu-mobile {
@@ -953,7 +892,6 @@ li button:focus {
   line-height: 34px;
   padding: 0px 20px;
   color: #868686;
-  
 }
 
 .menu__mobile li:hover  {
@@ -967,7 +905,6 @@ li button:focus {
 }
 
   /* services */
-
 .services {
   margin: 40px 0 40px;
 }
@@ -977,9 +914,7 @@ li button:focus {
   padding: 40px 0 0 0;
 }
 
-
   /* about us*/
-
 .about__desc {
   padding-bottom: 20px;
 }
@@ -995,7 +930,6 @@ li button:focus {
 }
 
   /*plans*/
-
 .prices__content {
   padding-top: 50px;
 }
@@ -1004,24 +938,19 @@ li button:focus {
   padding: 40px 0;
 }
 .prices__item {
-  
   width: 50%;
-  
 }
 
 /* clients*/
-
 .clients___inner {
   padding: 40px 0;
 }
 
 .clients__item {
   width: 100%;
-
   }
 
 /* howit*/
-
 .howit__inner {
   padding: 40px 0;
 }
@@ -1035,16 +964,12 @@ li button:focus {
 }
 
 /*newsletter*/
-
 .newsletter {
   margin: 40px 0;
 }
 
 .newsletter__address {
-  
   margin-top: -100px;
-  
-  
 }
 
 .newsletter__address1 {
@@ -1055,7 +980,6 @@ li button:focus {
 .footer__block nav.menu {
   display: none;
 }
-
 }
  
 
@@ -1064,23 +988,16 @@ li button:focus {
 @media (max-width: 570px) {
 
   /*newsletter*/
-  
   .newsletter__address {
-    
     margin-top: -110px;
     font-size: 14px;
-    
   }
   
   .newsletter__address1 {
     font-size: 16px;
     padding-bottom: 5px;
-    
   }
-  
-  
-  
-  }
+}
 
   
 /* 450px =====================
@@ -1088,20 +1005,13 @@ li button:focus {
 @media (max-width: 450px) {
 
 /* services*/
-
-
 .services__icon {
   width: 30%;
-  
 }
 
-
   /*plans*/
-
 .prices__item {
-  
   width: 100%;
-  
 }
 
 
@@ -1133,13 +1043,10 @@ li button:focus {
 @media (max-width: 414px) {
 
   /* menu */
-  
   .menu__mobile li a {
-    
     line-height: 90px;
-    
-    
   }
+}
 
 /* 375px =====================
 ============================*/
@@ -1147,14 +1054,10 @@ li button:focus {
 @media (max-width: 375px) {
 
   /* menu */
-  
   .menu__mobile li a {
-    
     line-height: 80px;
-    
-    
   }
-
+}
 
 /* 320px =====================
 ============================*/
@@ -1162,28 +1065,18 @@ li button:focus {
 @media (max-width: 320px) {
 
 /* menu */
-
 .menu__mobile li a {
-  
   line-height: 65px;
-  
-  
 }
 
 /*newsletter*/
-
 .newsletter__address {
-  
   margin-top: -115px;
   font-size: 16px;
-  
 }
 
 .newsletter__address1 {
   font-size: 18px;
-  
 }
-
-
 
 }
