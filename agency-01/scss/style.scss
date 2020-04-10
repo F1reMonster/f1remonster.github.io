@@ -2,6 +2,7 @@
 @import "../../../node_modules/normalize.css/normalize";
 @import "vars";
 @import "fonts";
+@import "mixins";
 
 
 *,
@@ -12,8 +13,7 @@
 
 body {
     margin: 0;
-    font-family: $FontPrimary;
-    color: #fff;
+    -webkit-tap-highlight-color: transparent;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -39,7 +39,7 @@ p {
     display: block;
     width: 30px;
     height: 5px;
-    background-color: #fff;
+    background-color: $white;
     position: relative;
 
     &::after {
@@ -50,7 +50,7 @@ p {
         left: 0;
         width: 30px;
         height: 5px;
-        background-color: #fff;
+        background-color: $white;
         transition: transform 0.2s ease-in, top .2s linear .2s;
       }
 
@@ -62,7 +62,7 @@ p {
         left: 0;
         width: 30px;
         height: 5px;
-        background-color: #fff;
+        background-color: $white;
         transition: transform 0.2s ease-in, top .2s linear .2s;
       }
 
@@ -84,7 +84,7 @@ p {
 
   }
 
-  // ===========  HEADER =========== 
+  // ===========  HEADER BLOCK =========== 
 
 .header {
     width: 100%;
@@ -97,6 +97,7 @@ p {
 
     &__inner {
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
         padding: 50px 80px;
@@ -108,13 +109,15 @@ p {
 
  .nav {
      display: flex;
+     flex-wrap: wrap;
      font-weight: 600;
      font-size: 17px;
 
      &__link {
         margin-left: 36px;
+        font-family: $font-primary;
     
-        color: #fff;
+        color: $white;
         text-decoration: none;
         opacity: .75;
     
@@ -130,8 +133,9 @@ p {
     }
  }
 
-// =========== INTRO =========== 
+// =========== INTRO BLOCK =========== 
 .intro {
+    width: 100%;
     height: 950px;
     
     background: url("../img/header_bg.jpg") center no-repeat;
@@ -165,25 +169,20 @@ p {
 
 
 
-.about {
+.main {
+    width: 100%;
 
     &__text1 {
-        font-family: $FontSecondary;
-        font-size: 42px;
+        @include text-italic(42px, 400, $white);
         padding-bottom: 20px;
-        
     }
 
     &__slogan {
-        font-family: $FontPrimary;
-        font-size: 64px;
-        font-weight: 600;
+        @include text-main(64px, 600, $white);
     }
 
     &__text2 {
-        font-family: $FontPrimary;
-        font-size: 23px;
-        font-weight: 400;
+        @include text-main(23px, 400, $white);
         padding-top: 40px;
     }
 
@@ -192,33 +191,110 @@ p {
 
 // =========== BUTTONS =========== 
 
-.btn {
-    text-decoration: none;
-    text-transform: uppercase;
+.btn__intro {
     
-    font-family: $FontPrimary;
-    font-weight: 600;
-
-    &__intro {
-        font-size: 16px;
-        color: #fff;
-        
-        padding: 22px 45px;
-        
-        border-radius: 50px;
-        background-color: $Color1;
-        box-shadow: 4px 4px 16px rgba(1,2,2,.35);
-
-        transition: 0.2s;
-
-        &:hover {
-            background-color: $Color2;
-
-        }
+    @include btn1 (16px, 600, $white, 22px 45px, 50px);
     
+    background-color: $color1;
+    box-shadow: 4px 4px 16px rgba(1,2,2,.35);
+   
+    &:hover {
+        background-color: $color2;
     }
-
-
-
+  
+           
+    
 }
 
+
+// =========== OUR COMPANY BLOCK =========== 
+
+.company {
+    width: 100%;
+    height: 660px;
+
+    background: $white url(../img/world_map.png) center no-repeat;
+    background-size: cover;
+    overflow: hidden;
+
+    &__inner {
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+
+    &__about {
+        width: 50%;
+
+        &-img {
+            padding-top: 70px;
+            text-align: right;
+        }
+    }
+
+    &__text1 {
+        @include text-italic (32px, 400, $black);
+        padding-top: 100px;
+    }
+    &__text2 {
+        @include text-main (14px, 400, $black);
+        line-height: 25px;
+        
+        padding-top: 30px;
+    }
+    &__slogan {
+        @include text-main (50px, 600, $black);
+        padding-top: 25px;
+        padding-bottom: 30px;
+    }
+
+    &__btn {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        &-link {
+            display: block;
+            @include btn1 (13px, 600, $black, 15px 30px, 50px);
+
+            &:hover {
+
+                color: $white;
+                background-color: $color1;
+                box-shadow: 4px 4px 16px rgba(1,2,2,.35);
+
+            }
+
+        }
+
+    }
+
+    &__btn2 {
+
+        &-block {
+            padding-top: 60px;
+            padding-left: 15px;
+        }
+
+        &-link {
+            display: inline-block;
+            @include btn1 (15px, 600, $white, 15px 30px, 10px);
+            background-color: $color1;
+            box-shadow: 0 10px $color1_1;
+
+            transition: box-shadow .2s ease-in;
+
+            &:hover {
+                box-shadow: 0 10px $color2;
+            }
+
+        }
+        
+
+
+    }
+
+    
+
+    
+}

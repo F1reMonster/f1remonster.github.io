@@ -1,0 +1,31 @@
+@mixin text-main($font-size, $font-weight, $font-color) {
+    font-family: $font-primary;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    color: $font-color;
+
+}
+
+@mixin text-italic($font-size, $font-weight, $font-color) {
+    font-family: $font-secondary;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    color: $font-color;
+
+}
+
+@mixin btn1 ($font-size, $font-weight, $font-color, $font-padding, $b-radius) {
+    
+    @include text-main($font-size, $font-weight, $font-color);
+
+    text-decoration: none;
+    text-transform: uppercase;
+
+    padding: $font-padding;
+
+    border-radius: $b-radius;
+        
+    transition: background-color .1s ease-in;
+}
+
+
