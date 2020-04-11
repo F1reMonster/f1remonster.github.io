@@ -173,12 +173,17 @@ p {
     width: 100%;
 
     &__text1 {
-        @include text-italic(42px, 400, $white);
         padding-bottom: 20px;
+        h3 {
+            @include text-italic(42px, 400, $white);
+        }
+        
     }
 
     &__slogan {
-        @include text-main(64px, 600, $white);
+        h1 {
+            @include text-main(64px, 600, $white);
+        }
     }
 
     &__text2 {
@@ -233,17 +238,23 @@ p {
     }
 
     &__text1 {
-        @include text-italic (32px, 400, $black);
+        
+        h3 {
+            @include text-italic (32px, 400, $black);
+        }
         padding-top: 100px;
     }
     &__text2 {
+        
         @include text-main (14px, 400, $black);
         line-height: 25px;
-        
         padding-top: 30px;
     }
     &__slogan {
-        @include text-main (50px, 600, $black);
+
+        h1 {
+            @include text-main (50px, 600, $black);
+        }
         padding-top: 25px;
         padding-bottom: 30px;
     }
@@ -277,24 +288,230 @@ p {
         }
 
         &-link {
-            display: inline-block;
             @include btn1 (15px, 600, $white, 15px 30px, 10px);
+            
+            display: inline-block;
             background-color: $color1;
             box-shadow: 0 10px $color1_1;
+            transition: box-shadow .2s ease-in;
 
+            &:hover {
+                box-shadow: 0 10px $color2;
+            }
+        }
+    }
+}
+
+// =========== ACHIEVEMENT BLOCK =========== 
+
+.achievement {
+    &__inner {
+        width: 100%;
+        height: 510px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+
+    &__item1 {
+        &-wrapper {
+            padding: 80px 100px 0 225px;
+        }
+    }
+
+    &__item1,
+    &__item3 {
+        width: 35%;
+        background-color: $color-achievement-bg1;
+    }
+    
+    &__item2 {
+        width: 30%;
+        background-color: $color-achievement-bg2;
+
+        &-wrapper {
+            padding: 80px 100px 0 100px;
+        }
+    }
+
+    &__item3 {
+        &-wrapper {
+            padding: 80px 225px 0 100px;
+        }
+    }
+
+    &__item1-wrapper, &__item2-wrapper, &__item3-wrapper {
+        text-align: center;
+
+
+        .first {
+            @include text-main (50px, 600, $white);
+            padding-top: 25px;
+        }
+        .second {
+            @include text-main (30px, 600, $white);
+            padding-top: 15px;
+        }
+        .third {
+            @include text-main (25px, 400, $white);
+        }
+        .fourth {
+            @include text-main (15px, 400, $white);
+            padding-top: 30px;
+            line-height: 24px;
+            opacity: .4;
+        }
+    }
+}
+
+// =========== STORY BLOCK =========== 
+
+.story {
+    width: 100%;
+    height: 480px;
+    text-align: center;
+    background: url(../img/story.jpg) no-repeat center;
+    background-size: cover;
+
+    &__text1 {
+        @include text-italic (48px, 400, $white);
+        line-height: 50px;
+        padding-top: 90px;
+    }
+    &__text2 {
+        @include text-main (50px, 600, $white);
+        line-height: 52px;
+        padding-top: 27px;
+    }
+    
+    &__text3 {
+        @include text-main (20px, 400, $white);
+        line-height: 32px;
+        padding-top: 45px;
+    }
+
+    &__btn {
+        padding-top: 55px;
+
+        &-link {
+           
+            @include btn1 (15px, 600, $white, 15px 30px, 10px);
+            
+            display: inline-block;
+            background-color: $color1;
+            box-shadow: 0 10px $color1_1;
+            transition: box-shadow .2s ease-in;
+
+            &:hover {
+                box-shadow: 0 10px $color2;
+            }
+        }
+    }
+}
+
+// =========== OUR SERVICE BLOCK =========== 
+.service {
+    height: 845px;
+    width: 100%;
+    background-color: $white;
+    
+    h1 {
+        @include text-main (50px, 600, $black);
+        line-height: 52px;
+        padding-top: 10px;
+       
+    }
+    
+    h3 {
+        @include text-italic (33px, 400, $black);
+        padding-top: 100px;
+    }
+    
+    &__text1 {
+        @include text-main (17px, 400, $black);
+        line-height: 25px;
+        padding-top: 30px;
+    }
+    
+    &__text2 {
+        @include text-main (25px, 600, $black);
+        line-height: 28px;
+        padding-top: 15px;
+    }
+
+    &__text3 {
+        @include text-main (14px, 400, $black);
+        line-height: 25px;
+        padding: 25px 55px 35px 0;
+    }
+    
+    &__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+    }
+   
+    &__srv  {
+        display: flex;
+        margin-top: 60px;
+        
+    }
+
+    &__content {
+        width: 50%;
+
+    }
+    
+    &__media {
+        width: 50%;
+        &-video {
+            position: relative;
+            padding-top: 144px;
+            text-align: right;
+            &__btn {
+                display: block;
+                position: absolute;
+                top: 53%;
+                left: 44%;
+                height: 100px;
+                width: 100px;
+                border-radius: 50px;
+                background-color: $color1;
+                cursor: pointer;
+                box-shadow: 4px 4px 16px $black;
+                transition: all .2s ease-in;
+                &:hover {
+                    background-color: $color2;
+                }
+                &::after {
+                    
+                    content: '';
+                    position: absolute;
+                    width: 0;
+                    height: 0;
+                    border-top: 20px solid transparent;
+                    border-left: 40px solid $white;
+                    border-bottom: 20px solid transparent;
+                    top: 30%;
+                    left: 38%;
+
+                }
+            }
+        }
+
+    }
+
+    &__btn {
+        @include btn1 (15px, 600, $white, 15px 30px, 10px);
+
+            display: inline-block;
+            background-color: $color1;
+            box-shadow: 0 10px $color1_1;
             transition: box-shadow .2s ease-in;
 
             &:hover {
                 box-shadow: 0 10px $color2;
             }
 
-        }
-        
-
-
     }
 
-    
-
-    
 }
