@@ -1,6 +1,7 @@
 // =========== FONTS ===========
 @font-face {
     font-family: "Palatino Italic";
-    src: url(../fonts/Palatino-LT-Std-Italic.ttf);
+    src: url('../fonts/Palatino-LT-Std-Italic.woff2') format('woff2'),
+    url('../fonts/Palatino-LT-Std-Italic.woff') format('woff') ;
 
 }

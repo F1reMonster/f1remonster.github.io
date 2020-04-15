@@ -1,0 +1,211 @@
+// 1440 1366 1280 1024 
+
+@media (max-width: 1600px) {
+    .achievement {
+        &__item1, 
+        &__item2,
+        &__item3 {
+        width: 33.33333%;
+        border: none;
+        }
+
+        &__item1-wrapper,
+        &__item2-wrapper,
+        &__item3-wrapper {
+            padding: 80px 50px 0 50px;
+
+        }
+    }
+
+}
+
+@media (max-width: 1300px) {
+    .intro {
+        &__img {
+            display: none;
+        }
+        &__btn {
+            text-align: center;
+        }
+    }
+         
+    .main {
+        width: 100%;
+        padding: 0 40px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 1200px) {
+    .company {
+        &__text1,
+        &__slogan,
+        &__text2 {
+            padding-left: 20px;
+        }
+    }
+    
+    
+    .works {
+        &__photo {
+            justify-content: center;
+        }
+        &__item {
+            width: 40%;
+        }
+
+        
+    }
+
+    .service {
+        &__content {
+            h1, h3, p {
+                padding-left: 20px;
+            }
+        }
+       
+        &__srv {
+            padding-left: 20px;
+        }
+
+        &__media-video {
+            text-align: center;
+        }
+
+        &__media-video__btn {
+            left: 40%;;
+        }
+
+    }
+
+
+    .help {
+        &__form {
+            flex-wrap: wrap;
+            padding-top: 40px;
+        }
+        &__submit {
+            margin-left: 90px;
+            margin-top: 50px;
+
+        }
+        
+        
+    }
+    
+        
+}
+
+@media (max-width: 1024px) {
+
+    .nav {
+        display: none;
+    }
+    
+    .burger__menu {
+        display: block;
+
+    }
+
+    .btnblock {
+        white-space: nowrap;
+        @include btnblock (15px 10px);
+    }
+
+    .company__btn2-block {
+        padding-top: 30px;
+    }
+
+    .achievement__item1-wrapper, .achievement__item2-wrapper, .achievement__item3-wrapper {
+        padding: 50px;
+    }
+    .story {
+        &__text1 {
+            padding-top: 40px;
+        }
+        &__text3 {
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+
+    }
+
+    .service {
+        &__content,
+        &__media {
+            width: 100%;
+            &-video {
+                margin-top: 50px;
+                margin-bottom: 50px;
+                &__btn {
+                    left: 44%;
+                }
+
+            }
+        }
+        &__text1 {
+            padding-right: 20px;
+            font-size: 22px;
+        }
+        &__text3 {
+            font-size: 18px;
+        }
+    }
+
+    .works {
+        &__inner {
+            .btnblock {
+                @include btnblock (15px 30px);
+            }
+        }
+    }
+    
+    .help__input input {
+     
+        width: 435px;
+    }
+
+    .qlinks {
+        &__item {
+            padding-left: 20px;
+        }
+
+        &__photo {
+            margin-left: 0;
+            margin-right: 10px;
+        }
+    }
+
+    .social {
+        &__inner {
+            display: none;
+        }
+        &__mobile {
+            display: inline-block;
+            padding-top: 50px;
+        }
+
+        &__mlink {
+            padding-left: 20px;        
+        }
+
+
+
+
+        &__icon { 
+            display: inline-block;
+            height: 80px;
+            width: 80px;
+            fill: $text-color-01;
+            
+            opacity: 0.5;
+            transition: opacity 0.2s;
+ 
+            &:hover {
+                opacity: 1;
+            }
+         }
+    }
+
+
+}
