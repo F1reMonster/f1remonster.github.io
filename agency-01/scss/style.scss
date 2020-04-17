@@ -778,8 +778,19 @@ input:focus {
         @include text-main (27px, 600, $text-color-01);
         text-decoration: none;
         padding: 0 40px;
+        border-left: 3px solid $btn-color-02;
+        opacity: 0.5;
+        transition: opacity 0.2s;
         
-        
+
+        &:first-child {
+            border-left: none;
+
+        }
+
+        &:hover {
+            opacity: 1;
+        }
     }
     &__mobile {
         display: none;

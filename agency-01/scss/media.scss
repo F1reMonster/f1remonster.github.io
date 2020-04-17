@@ -49,6 +49,7 @@
     .works {
         &__photo {
             justify-content: center;
+            margin-left: -40px;
         }
         &__item {
             width: 40%;
@@ -209,3 +210,394 @@
 
 
 }
+
+@media (max-width: 865px) {
+    .company {
+        &__about {
+            width: 100%;
+
+            &-img {
+                text-align: center;
+            }
+        }
+
+        .btnblock {
+            justify-content: center;
+        }
+    }
+
+    .story {
+        &__text1 {
+            padding-top: 20px;
+        }
+        &__text3 {
+            padding-top: 30px;
+        }
+    }
+
+
+    .testimonials {
+        &__content {
+            width: 100%;
+        }
+        &__img {
+            display: none;
+        }
+
+    }
+
+    .help {
+
+        &__title {
+            padding-top: 20px;
+        }
+        
+        &__text2 {
+            padding: 20px 20px 10px 20px;
+        }
+        
+        &__form {
+            padding-top: 5px;
+            
+        }
+
+
+        &__input {
+            margin-left: 0px;
+            padding-bottom: 10px;
+
+        }
+        
+        &__submit {
+            width: 100%;
+            position: static;
+            margin-left: 0px;
+            margin-top: 0px;
+            text-align: center;
+            input {
+                position: static;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .company {
+        &__about-img {
+            display: none;
+        }
+    }
+
+    .achievement {
+        &__item1-wrapper,
+        &__item2-wrapper,
+        &__item3-wrapper {
+           .first {
+                font-size: 30px;
+            }
+            .second {
+                font-size: 20px;
+            }
+            .third {
+                font-size: 15px;
+            }
+            .fourth {
+                font-size: 10px;
+            }
+        }
+
+    }
+}
+
+
+@media (max-width: 414px) {
+    
+    .btn__intro {
+        @include btn1 (16px, 600, $text-color-01, 22px 22px, 50px);
+    }
+    
+    
+    .header {
+        height: 100px;
+        
+        &__inner {
+            padding: 20px 20px;
+        }
+    }
+
+    .intro {
+        min-height: 738px;
+        &__inner {
+            padding-top: 110px;
+
+            .main {
+                padding: 0 10px;
+                &__text1 h3 {
+                    font-size: 38px;
+                    padding-top: 20px;
+                }
+                &__slogan h1 {
+                    font-size: 44px;
+                    padding-top: 10px;
+                }
+                &__text2 {
+                    font-size: 26px;
+                    padding-top: 10px;
+                    
+                }
+            }
+        }
+        &__btn {
+            .ourstory {
+                padding-left: 0;
+            }
+           
+        }
+    }
+
+    .company {
+        min-height: 738px;
+
+        &__text1 {
+            padding-top: 50px;
+        }
+        &__text2 {
+            padding: 20px 20px;
+        }
+    }
+
+    .achievement {
+        &__item1, &__item2, &__item3 {
+            width: 100%;
+        }
+
+        &__item1-wrapper,
+        &__item2-wrapper,
+        &__item3-wrapper {
+           .first {
+                font-size: 40px;
+            }
+            .second {
+                font-size: 30px;
+            }
+            .third {
+                font-size: 25px;
+            }
+            .fourth {
+                font-size: 20px;
+            }
+        }
+    }
+
+    .story {
+        min-height: 738px;
+
+        &__text1 {
+            padding-top: 60px;
+        }
+    }
+
+    .service {
+        &__srv {
+            flex-wrap: wrap;
+            padding-left: 10px;
+            margin-top: 20px;
+        }
+        &__item {
+            width: 100%;
+            padding-top: 20px;
+        }
+
+        &__icon {
+            display: none;
+        }
+
+        &__text3 {
+            padding: 10px;
+        }
+        &__media {
+            overflow: hidden;
+        }
+    }
+
+    .works {
+        .btnblock {
+            justify-content: center;
+        }
+
+        &__item {
+            width: 100%;
+        }
+    }
+
+    .clients {
+        &__item {
+            width: 100%;
+            
+        }
+    }
+
+    .testimonials {
+        min-height: 738px;
+        &__text {
+            margin-left: 75px;
+        }
+    }
+
+    .help {
+        min-height: 738px;
+        &__title {
+            padding-top: 50px;
+        }
+
+        &__input {
+            
+            padding-top: 30px;
+        
+            input {
+                width: 300px;
+            }
+        }
+        &__submit {
+            padding-top: 30px;
+        }
+
+    }
+
+    .social {
+        &__mobile {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 30px;
+        }
+        &__mlink {
+            padding-bottom: 20px;
+            &:first-child {
+                padding-left: 0;
+            }
+
+        }
+    }
+    .qlinks {
+        &__content {
+            width: 100%;
+            padding-top: 10px;
+        }
+        &__item {
+            margin-top: 0;
+        }
+        &__photo {
+            height: 180px;
+            margin: 0 5px 5px 5px;
+        }
+    }
+}
+
+@media (max-width: 375px) {
+    .company {
+        &__slogan {
+            h1 {
+                font-size: 45px;
+            }
+        }
+        &__btn2-block {
+            padding-top: 10px;
+        }
+    }
+
+    .story {
+        h3 {
+            padding-top: 30px;
+        }
+    }
+
+    .service {
+        &__content {
+            
+            h1 {
+                font-size: 44px;
+            }
+            
+            h3 {
+                padding-top: 20px;
+            }
+
+        }
+    }
+
+}
+
+@media (max-width: 320px) {
+    
+    .header {
+        &__inner {
+            padding: 10px 5px;
+        }
+    }
+    .intro {
+        &__inner {
+            padding-top: 70px;
+        }
+
+        &__btn {
+            margin-top: 30px;
+        }
+    }
+
+    .btn__intro {
+        @include btn1 (15px, 600, $text-color-01, 10px 15px, 50px);
+    }
+
+    .company {
+        &__slogan {
+            h1 {
+                font-size: 40px;
+            }
+        }
+        &__btn2-block {
+            padding-top: 10px;
+        }
+
+        &__text2 {
+            padding: 5px;
+        }
+    }
+
+    .testimonials {
+        &__content {
+            h1 {
+                font-size: 40px;
+                padding-left: 10px;
+            }
+        }
+        &__text {
+            margin-left: 56px;
+            &::before {
+                font-size: 150px;
+                top: -23px;
+                left: -56px;
+            }
+        }
+    }
+
+    .qlinks {
+        &__item {
+            padding-left: 5px;
+        }
+    }
+
+    .story {
+        &__text2 {
+            font-size: 40px;
+        }
+        &__text3 {
+            padding: 10px 10px;
+        }
+
+    }
+        
+
+}
+
