@@ -1,3 +1,5 @@
+$('.nav').hide();
+
 var $status = $('.slider__paging');
 var $slickElement = $('.slider');
 
@@ -32,4 +34,11 @@ $('.slider').slick({
     infinite: false,
     slidesToShow: 3,
     slidesToScroll: 1
-  });
+});
+  
+$('.header__menu').on('click', function () {
+
+  $('.header__menu span').toggleClass('active');
+  $('.nav').slideToggle();
+
+})

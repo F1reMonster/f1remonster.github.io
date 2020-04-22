@@ -1,4 +1,5 @@
 @import "../../../node_modules/slick-carousel/slick/slick";
+
 @import "_vars";
 @import "_mixins";
 
@@ -53,6 +54,10 @@ svg {
     display: none;
 }
 
+i {
+    padding: 0 10px;
+}
+
 .container {
     width: 1366px;
     margin: 0 auto;
@@ -76,7 +81,14 @@ svg {
     }
 
     &__menu {
-        padding-left: 25px;
+        margin-left: 25px;
+        
+        width: 30px;
+        height: 30px;
+
+        
+        cursor: pointer;
+        position: relative;
         span {
             display: block;
             width: 25px;
@@ -173,9 +185,23 @@ svg {
     }
 }
 
-nav {
-    display: none;
-    
+.nav {
+    position: absolute;
+    top: 50px;
+    left: 0;    
+    width: 220px;
+    background-color: $bg-color-01;    
+    z-index: 1;
+
+    li a {
+        @include text (14px, 400);
+        color: $text-color-01;
+        
+    }
+
+    li {
+        padding-bottom: 10px;
+    }
 }
 
 .main   {

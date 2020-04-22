@@ -148,6 +148,10 @@ svg {
   display: none;
 }
 
+i {
+  padding: 0 10px;
+}
+
 .container {
   width: 1366px;
   margin: 0 auto;
@@ -170,7 +174,11 @@ svg {
 }
 
 .header__menu {
-  padding-left: 25px;
+  margin-left: 25px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  position: relative;
 }
 
 .header__menu span {
@@ -260,8 +268,23 @@ svg {
   background: url(../img/down-arrow.png) no-repeat right #000033;
 }
 
-nav {
-  display: none;
+.nav {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 220px;
+  background-color: #000033;
+  z-index: 1;
+}
+
+.nav li a {
+  font-size: 14px;
+  font-weight: 400;
+  color: #fff;
+}
+
+.nav li {
+  padding-bottom: 10px;
 }
 
 .main {
