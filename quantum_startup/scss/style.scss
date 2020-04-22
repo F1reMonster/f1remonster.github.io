@@ -1,0 +1,542 @@
+@import "../../../node_modules/slick-carousel/slick/slick";
+@import "_vars";
+@import "_mixins";
+
+
+
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    -webkit-tap-highlight-color: transparent;
+    font-family: $font-main;
+    color: $text-color-01;
+    background-color: $bg-color-01;
+    // background: url("../img/bg.jpg") no-repeat center;
+    // background-size: cover;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+h1 {
+    @include text (72px, 300);
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+svg {
+    display: none;
+}
+
+input, select, option {
+     
+        outline: none;
+  
+
+}
+
+ul, li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+svg {
+    display: none;
+}
+
+.container {
+    width: 1366px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+
+.header {
+    
+    background-color: $bg-color-01;
+    width: 100%;
+    height: 70px;
+
+    &__inner {
+        height: 100%;
+        width: 100%;
+    }
+
+    &__logo {
+        padding-left: 70px;
+    }
+
+    &__menu {
+        padding-left: 25px;
+        span {
+            display: block;
+            width: 25px;
+            height: 5px;
+            background-color: $text-color-01;
+            position: relative;
+
+            &::after {
+                position: absolute;
+                content: '';
+                display: block;
+                top: -10px;
+                left: 0;
+                width: 25px;
+                height: 5px;
+                background-color: $text-color-01;
+                transition: transform 0.2s ease-in, top .2s linear .2s;
+              }
+        
+              &::before {
+                position: absolute;
+                content: '';
+                display: block;
+                top: 10px;
+                left: 0;
+                width: 25px;
+                height: 5px;
+                background-color: $text-color-01;
+                transition: transform 0.2s ease-in, top .2s linear .2s;
+              }
+        
+              &.active {
+                background-color: transparent;
+              }
+        
+              &.active::after {
+                transform: rotate(45deg);
+                top: 0;
+                transition: top .2s linear, transform 0.2s ease-in .2s;
+              } 
+        
+              &.active::before {
+                transform: rotate(-45deg);
+                top: 0;
+                transition: top .2s linear, transform 0.2s ease-in .2s;
+              }
+        }
+    }
+    &__left {
+        font-size: 14px;
+        font-weight: 400;
+        padding-right: 90px;
+
+        li {
+            display: inline-block;
+            padding-left: 30px;
+        }
+        select {
+            color: $text-color-01;
+            background-color: $bg-color-01;
+            border: none;
+
+                 
+        }
+
+        &-item {
+            span {
+        
+                color: $text-color-02;
+                padding: 7px;
+                border-radius: 50%;
+                border: 1px solid $text-color-02;
+        
+            }
+
+            img {
+                padding-left: 20px;
+            }
+
+        }
+       
+    }
+    &__lang {
+        
+        display: block;
+        width: 100%; 
+        padding-right: 2rem;
+        background: none; 
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background: url(../img/down-arrow.png) no-repeat right $bg-color-01;
+       
+    }
+}
+
+nav {
+    display: none;
+    
+}
+
+.main   {
+    width: 100%;
+    height: 1002px;
+    background: url(../img/section-01.jpg) no-repeat center;
+    background-size: cover;
+    position: relative;
+    
+    &__inner {
+        
+        h1 {
+            padding-top: 100px;
+        }
+        p {
+            @include text (24px, 300);
+            padding-top: 60px;
+            padding-bottom: 100px;
+            width: 600px;
+        }
+        span {
+            @include text (24px, 400);
+        }
+
+
+        button {
+            
+            width: 400px;
+            height: 58px;
+            @include text (24px, 600);
+            
+        }
+        
+    }
+    &__total {
+        position: absolute;
+        width: 100%;
+        bottom: 60px;
+        background-color: rgba(0, 0, 51, .5);
+        
+
+         
+        .col {
+            position: relative;
+            &::before {
+                content: "";
+                position: absolute;
+                display: block;
+                left: 0px;
+                top: 30px;
+                height: 80%;
+                width: 1px;
+                background-color: #fff;
+                
+            }
+            &:last-child::after {
+                content: "";
+                position: absolute;
+                display: block;
+                right: 0;
+                top: 30px;
+                height: 80%;
+                width: 1px;
+                background-color: #fff;
+                
+            }
+
+
+
+        }
+        p.total {
+            @include text (72px, 600);
+            text-align: center;
+
+        }
+
+        p.descr {
+            @include text (24px, 300);
+            text-align: center;
+            padding-bottom: 10px;
+        }
+    }
+
+}
+
+.hiw {
+    width: 100%;
+    height: 844px;
+    position: relative;
+    background: url(../img/section-02.jpg) no-repeat center;
+    background-size: cover;
+
+    &__inner {
+        // margin-left: 640px;
+        // margin-right: -150px;
+        width: 600px;
+        position: absolute;
+        right: 250px;
+
+        h3 {
+            padding-top: 100px;
+            @include text (48px, 600);
+        }
+
+        h1 {
+            padding-top: 125px;
+            @include text (72px, 300);
+        }
+
+        p {
+            padding-top: 80px;
+            @include text (24px, 300);
+                
+        }
+
+        span {
+            @include text (24px, 600);
+        }
+    }
+
+}
+
+
+.setgoal {
+    width: 100%;
+    height: 1357px;
+    background: url(../img/section-03.jpg) no-repeat center;
+    background-size: cover;
+    position: relative;
+
+    &__inner1 {
+        position: absolute;
+        
+        left: 330px;
+    }
+    &__inner2 {
+        position: absolute;
+        bottom: 70px;
+        right: 350px;
+        
+
+        button {
+            
+            width: 400px;
+            height: 58px;
+            @include text (24px, 600);
+            
+        }
+    }
+    
+    &__inner1,
+    &__inner2 {
+
+        width: 600px;
+        
+        h1 {
+            padding-top: 60px;
+            @include text (72px, 300);
+        }
+        p {
+            padding-top: 65px;
+            padding-bottom: 100px;
+            @include text (24px, 300);
+        }
+        span {
+            @include text (24px, 600);
+        }
+
+    }
+
+}
+
+.startups {
+    
+
+    h1 {
+        @include text (48px, 600); 
+    }
+
+    &__button {
+            
+        width: 400px;
+        height: 58px;
+        @include text (24px, 600);
+        
+    }
+
+    &__inner {
+        padding-top: 150px;
+        padding-bottom: 100px;
+    }
+
+    
+    &__content {
+        position: relative;
+    }
+
+}
+
+.slider {
+    
+    &__item {
+        height: 540px;
+        border: 2px solid $text-color-02;
+        border-radius: 10px;
+        margin-left: 20px;
+    }
+
+    &__paging {
+        position: absolute;
+        bottom: -63px;
+        right: 17px;
+        @include text (18px, 600);
+    }
+
+    &__total {
+        color: $text-color-03;
+    }
+       
+}
+
+.item { 
+    &__content {
+        padding: 40px 20px;
+    }
+
+    &__descr {
+        @include text (15px, 600);
+        padding-top: 40px;
+        padding-bottom: 20px;
+    }
+
+    &__industry,
+    &__location {
+        @include text (15px, 400);
+    }
+
+    &__price {
+        @include text (15px, 600);
+        
+
+    }
+
+    &__img {
+        width: 100%;
+        height: 100px;
+    }
+
+    &__text {
+        width: 100%;
+        height: 340px;
+    }
+                
+}
+
+.footer {
+
+    &__inner {
+        padding: 330px 60px 70px;
+
+        p {
+            @include text (24px, 600);
+            padding-bottom: 20px;
+        }
+
+        li {
+            padding-bottom: 20px;
+        }
+
+        a {
+            @include text (14px, 500);
+            color: $text-color-01;
+        }
+
+        .row {
+            padding-bottom: 50px;
+        }
+
+        &__social {
+            text-align: center;
+        }
+
+        
+    }
+
+    &__copy {
+        border-top: 2px solid $text-color-01;
+        text-align: center;
+
+        p {
+            padding: 40px 0;
+        }
+
+
+    }
+
+    &__icons {
+        padding-top: 50px;
+        text-align: center;
+    }
+
+    &__logo {
+        text-align: center;
+    }
+
+    &__link {
+        display: inline-block;
+        padding-left: 20px;
+
+    }
+
+
+
+    .social__icon {
+        display: inline-block;
+        
+        width: 26px;
+        height: 26px;
+        fill: $text-color-01;
+    }
+
+    
+}
+
+
+
+// slider
+    .arrow-left,
+    .arrow-right {
+        position: absolute;
+        display: block;
+        bottom: -60px;
+        border: solid white;
+        border-width: 0 3px 3px 0;
+        padding: 10px;
+        cursor: pointer;
+
+    }
+
+    .arrow-right {
+        right: 0;
+        transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+    }
+
+    .arrow-left {
+        right: 70px;
+        transform: rotate(135deg);
+        -webkit-transform: rotate(135deg);
+       
+
+    }
+
+    .slider .slick-dots li {
+        display: none;
+    }
+
+    
+
+
+
+
+
+
