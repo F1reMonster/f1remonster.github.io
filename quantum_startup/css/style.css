@@ -103,8 +103,8 @@
   display: none;
 }
 
-*:before,
-*:after {
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -627,7 +627,7 @@ i {
   display: block;
 }
 
-.modal__select:after {
+.modal__select::after {
   position: absolute;
   display: block;
   content: 'QQQQ';

@@ -5,8 +5,8 @@
 
 
 
-*:before,
-*:after {
+*::before,
+*::after {
     box-sizing: border-box;
 }
 
@@ -580,7 +580,7 @@ i {
             
         }
 
-        &__select:after {
+        &__select::after {
             position: absolute;
             display: block;
             content: 'QQQQ';
