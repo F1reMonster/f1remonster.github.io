@@ -627,15 +627,8 @@ i {
 }
 
 .modal__select {
-  position: relative;
-  display: block;
   background: url(../img/modal-down-arrow.png) no-repeat right;
-}
-
-.modal__select::after {
-  position: absolute;
-  display: block;
-  content: 'QQQQ';
+  background-position-x: 95%;
 }
 
 .modal__select, .modal__input {
