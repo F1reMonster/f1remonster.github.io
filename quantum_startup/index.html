@@ -179,7 +179,7 @@
                 Инвестиционные проекты</span>, а также <span>отправляются адресно</span> на рассмотрение Инвесторов, которые сформулировали свои <span>Инвестиционные Интересы</span>
             </p>
 
-            <button class="btn btn-light" data-toggle="modal" >Добавить проэкт</button>
+            <button class="btn btn-light" data-toggle="modal" data-target="#modalCenter">Добавить проэкт</button>
         </div>
     </section>
 
@@ -193,7 +193,7 @@
                         <h1>Что ищут инвесторы?</h1>
                     </div>
                     <div class="startups__item">
-                        <button class="startups__button btn btn-light">Инвестировать</button>
+                        <button class="startups__button btn btn-light" data-toggle="modal" data-target="#modalCenter">Инвестировать</button>
                     </div>
                 </div>
                 <div class="slider">
@@ -452,18 +452,18 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <div class="d-flex modal-body">
+                <div class="d-flex justify-content-between modal-body">
                     
                         <div class="modal__item">
                             <p>
-                                Оставьте заявку уже сейчас
+                                <h2>Оставьте заявку уже сейчас</h2>
                             </p>
                             <p>
                                 and receive a notification when the Quantum Card becomes available in your country
                             </p>
 
                         </div>
-                        <div class="modal-item">
+                        <div class="modal__item">
                             <select class="modal__select form-control" name="country" id="">
                                 <option value="default">Выберите страну</option>
                                 <option value="ua">Україна</option>
@@ -471,14 +471,43 @@
                             </select>
                             <input type="email" class="modal__input form-control" id="" placeholder="Введите почту">
                             <button class="btn btn-light modal__btn">Register Interest</button>
-
-
-                            
-
                         </div>
                     
                 </div>
-                <div class="modal-footer">
+                <div class="modal-footer d-flex justify-content-between align-items-start">
+                    
+                        
+                        <div class="modal-footer__item">
+                            <p>
+                                Контакты для СМИ:
+                            </p>
+                            <p>
+                                <a href="mailto:PR@GetBinanceCard.com">PR@GetBinanceCard.com</a>
+                            </p>
+                        </div>
+                        <div class="modal-footer__item">
+                            <p>
+                                Поддержка:
+                            </p>
+                            <p>
+                                <a href="#">Отправить запрос</a>
+                            </p>
+    
+                        </div>
+                        <div class="modal-footer__item">
+                            <p>
+                                <a href="#">Политика конфиденциальности</a>
+                            </p>
+    
+                        </div>
+                        <div class="modal-footer__item">
+                            <p>
+                                @2020 Moon Tech Pty Ltd Все права защищены
+                            </p>
+    
+                        </div>
+
+                    
                     
                 </div>
             </div>

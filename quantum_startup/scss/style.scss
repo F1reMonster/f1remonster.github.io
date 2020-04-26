@@ -556,6 +556,10 @@ i {
 
     .modal {
 
+        &-lg {
+            max-width: 900px;
+        }
+
         select {
             -moz-appearance: none;
             -webkit-appearance: none;
@@ -576,7 +580,7 @@ i {
         &__select {
             position: relative;
             display: block;
-            //background: url(../img/modal-down-arrow.png) no-repeat right;
+            background: url(../img/modal-down-arrow.png) no-repeat right;
             
         }
 
@@ -586,9 +590,6 @@ i {
             content: 'QQQQ';
 
         }
-
-        
-
 
         &__select,
         &__input {
@@ -626,10 +627,14 @@ i {
         }
 
         &-content {
-            background-color: $bg-color-01;
+            background-color: transparent;
+            border: 0;
+        }
+        &-body {
             border: 1px solid $text-color-02;
-
-            
+            background-color: $bg-color-01;
+            border-radius: 5px;
+            margin-bottom: 110px;
         }
 
         &-header {
@@ -639,8 +644,25 @@ i {
         &-footer {
             border-top: 1px solid $text-color-02;
         }
-        &-item {
+        &__item {
+
+            h2 {
+                @include text (24px, 600);
+                padding-bottom: 35px;
+
+            } 
             
+            p {
+                @include text (14px, 400);
+                width: 400px;
+            }
+            
+        }
+
+        &-footer {
+            p {
+                @include text (14px, 400);
+            }
         }
         
     }
