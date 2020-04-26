@@ -605,3 +605,62 @@ i {
 .slider .slick-dots li {
   display: none;
 }
+
+.modal__select, .modal__input, .modal__btn {
+  height: 55px;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.modal__select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.modal__select, .modal__input {
+  background-color: #000033;
+  font-size: 14px;
+  font-weight: 400;
+  border-color: #0070a3;
+  color: #ccc;
+}
+
+.modal__select:focus, .modal__input:focus {
+  background-color: #000033;
+  color: #ccc;
+}
+
+.modal__input::placeholder {
+  color: #ccc;
+}
+
+.modal__btn {
+  width: 400px;
+  background-color: #0070a3;
+  border-color: #0070a3;
+  color: #000;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.modal .close {
+  color: #fff;
+}
+
+.modal-content {
+  background-color: #000033;
+  border: 1px solid #0070a3;
+}
+
+.modal-header {
+  border-bottom: 0px;
+}
+
+.modal-footer {
+  border-top: 1px solid #0070a3;
+}
+
+.form-control {
+  width: 400px;
+}

@@ -151,7 +151,6 @@ i {
             background-color: $bg-color-01;
             border: none;
 
-                 
         }
 
         &-item {
@@ -169,7 +168,6 @@ i {
             }
 
         }
-       
     }
     &__lang {
         
@@ -181,7 +179,6 @@ i {
         -moz-appearance: none;
         appearance: none;
         background: url(../img/down-arrow.png) no-repeat right $bg-color-01;
-       
     }
 }
 
@@ -551,7 +548,6 @@ i {
         right: 70px;
         transform: rotate(135deg);
         -webkit-transform: rotate(135deg);
-       
 
     }
 
@@ -559,7 +555,88 @@ i {
         display: none;
     }
 
-    
+// modal
+
+    .modal {
+
+        &__select,
+        &__input,
+        &__btn {
+            height: 55px;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        &__select {
+            
+            -moz-appearance: none;
+            -webkit-appearance: none;
+            appearance: none;
+            
+        }
+
+
+
+        &__select,
+        &__input {
+            background-color: $bg-color-01;
+            @include text (14px, 400);
+            border-color: $text-color-02;
+            color: $text-color-05;
+        }
+
+        &__select:focus,
+        &__input:focus {
+            background-color: $bg-color-01;
+            color: $text-color-05; // 
+            
+        }
+
+
+
+        &__input::placeholder {
+            color: $text-color-05;
+        }
+
+        &__btn {
+            width: 400px;
+            background-color: $text-color-02;
+            border-color: $text-color-02;
+            color: #000;
+            @include text (14px, 600);
+
+        }
+
+        .close  {
+            color: $text-color-01;
+        }
+
+        &-content {
+            background-color: $bg-color-01;
+            border: 1px solid $text-color-02;
+
+            
+        }
+
+        &-header {
+            border-bottom: 0px; 
+
+        }
+        &-footer {
+            border-top: 1px solid $text-color-02;
+        }
+        &-item {
+            
+        }
+        
+    }
+
+    .form-control {
+        width: 400px;
+        
+        
+    }
+
 
 
 

@@ -21,8 +21,7 @@ $slickElement.on('init reInit afterChange', function (event, slick, currentSlide
     totalSlides = '0' + totalSlides;
   }
   
-  // $status.text(currSlide + '<span class="slider__total"&nbsp;/&nbsp;>' + totalSlides + '</span>');
-   $status.html(currSlide + '<span class="slider__total">&nbsp;/&nbsp;' + totalSlides + '</span>');
+  $status.html(currSlide + '<span class="slider__total">&nbsp;/&nbsp;' + totalSlides + '</span>');
 
 });
 
@@ -41,4 +40,6 @@ $('.header__menu').on('click', function () {
   $('.header__menu span').toggleClass('active');
   $('.nav').slideToggle();
 
-})
+});
+
+
