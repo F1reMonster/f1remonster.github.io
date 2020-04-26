@@ -606,16 +606,31 @@ i {
   display: none;
 }
 
-.modal__select, .modal__input, .modal__btn {
-  height: 55px;
-  margin-bottom: 15px;
-  display: block;
+.form-control {
+  width: 400px;
 }
 
-.modal__select {
+.modal select {
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
+}
+
+.modal__select, .modal__input, .modal__btn {
+  height: 55px;
+  margin-bottom: 15px;
+  width: 400px;
+}
+
+.modal__select {
+  position: relative;
+  display: block;
+}
+
+.modal__select:after {
+  position: absolute;
+  display: block;
+  content: 'QQQQ';
 }
 
 .modal__select, .modal__input {
@@ -624,6 +639,7 @@ i {
   font-weight: 400;
   border-color: #0070a3;
   color: #ccc;
+  padding-left: 20px;
 }
 
 .modal__select:focus, .modal__input:focus {
@@ -636,7 +652,6 @@ i {
 }
 
 .modal__btn {
-  width: 400px;
   background-color: #0070a3;
   border-color: #0070a3;
   color: #000;
@@ -659,8 +674,4 @@ i {
 
 .modal-footer {
   border-top: 1px solid #0070a3;
-}
-
-.form-control {
-  width: 400px;
 }

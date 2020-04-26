@@ -38,9 +38,7 @@ svg {
 }
 
 input, select, option {
-     
-        outline: none;
-  
+    outline: none;
 
 }
 
@@ -240,7 +238,6 @@ i {
         background-color: rgba(0, 0, 51, .5);
         
 
-         
         .col {
             position: relative;
             &::before {
@@ -265,23 +262,17 @@ i {
                 background-color: #fff;
                 
             }
-
-
-
         }
         p.total {
             @include text (72px, 600);
             text-align: center;
-
         }
-
         p.descr {
             @include text (24px, 300);
             text-align: center;
             padding-bottom: 10px;
         }
     }
-
 }
 
 .hiw {
@@ -557,24 +548,46 @@ i {
 
 // modal
 
+.form-control {
+    width: 400px;
+    
+    
+}
+
     .modal {
+
+        select {
+            -moz-appearance: none;
+            -webkit-appearance: none;
+            appearance: none;
+        }
 
         &__select,
         &__input,
         &__btn {
             height: 55px;
             margin-bottom: 15px;
-            display: block;
+            width: 400px;
+            
+            
+            
         }
 
         &__select {
-            
-            -moz-appearance: none;
-            -webkit-appearance: none;
-            appearance: none;
+            position: relative;
+            display: block;
+            //background: url(../img/modal-down-arrow.png) no-repeat right;
             
         }
 
+        &__select:after {
+            position: absolute;
+            display: block;
+            content: 'QQQQ';
+
+        }
+
+        
 
 
         &__select,
@@ -583,6 +596,7 @@ i {
             @include text (14px, 400);
             border-color: $text-color-02;
             color: $text-color-05;
+            padding-left: 20px;
         }
 
         &__select:focus,
@@ -596,10 +610,10 @@ i {
 
         &__input::placeholder {
             color: $text-color-05;
+            
         }
 
         &__btn {
-            width: 400px;
             background-color: $text-color-02;
             border-color: $text-color-02;
             color: #000;
@@ -630,16 +644,3 @@ i {
         }
         
     }
-
-    .form-control {
-        width: 400px;
-        
-        
-    }
-
-
-
-
-
-
-
