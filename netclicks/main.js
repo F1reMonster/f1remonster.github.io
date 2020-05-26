@@ -15,9 +15,7 @@ const API_KEY = 'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzYmM1MDNhZmYxOGY4OGU1MTNmODRiZj
                 return res.json();
             } else {
                 throw new Error(`no connect to url ${url}`)
-    
             }
-            
         }
     
         getTestData = () => {
@@ -57,16 +55,10 @@ const API_KEY = 'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzYmM1MDNhZmYxOGY4OGU1MTNmODRiZj
             `;
 
             tvShowList.append(card);
-
-            
         });
-    
-    
     };
     
     new DBService().getTestData().then(renderCard);
-        
-
 
 // menu
 
@@ -107,7 +99,6 @@ tvShowList.addEventListener('click', event => {
         document.body.style.overflow = 'hidden';
         modal.classList.remove('hide');
     }
-
 });
 
 // close modal window
@@ -138,10 +129,8 @@ const changeImage = event => {
         if (img.dataset.backdrop) {
             
             // метод деструктурізації заміни змінних
-
             [img.src, img.dataset.backdrop] = [img.dataset.backdrop, img.src]
         }
-
     }
 };
 
