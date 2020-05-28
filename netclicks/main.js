@@ -177,8 +177,7 @@ tvShowList.addEventListener('click', event => {
                         loading.remove();
 
                 }
-                
-                
+                                
             })
             
     }
