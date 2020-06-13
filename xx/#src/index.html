@@ -8,42 +8,7 @@
     <title>test</title>
 </head>
 <body>
-    <header class="header">
-    <div class="container">
-        <div class="header__between">
-            <a href="#" class="logo">
-                Xx<span>.</span>
-            </a>
-            <div class="header__row">
-                <nav class="header__nav">
-                    <ul class="menu">
-                        <li class="menu__item">
-                            <a href="#" class="menu__link">
-                                <span class="add"></span>добавить квартиру
-                            </a>
-                        </li>
-                        <li class="menu__item">
-                            <a href="#" class="menu__link">
-                                ВХОД
-                            </a>
-                        </li>
-                        <li class="menu__item header__selects-item">
-                            <a href="#" class="menu__link">RU
-                                <svg class="header__selects-arrow">
-                                    <use xlink:href="img/sprite/sprite.svg#arrow-down"></use>
-                                </svg>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-            <button class="burger">
-                <span class="burger__line burger__line-top"></span>
-                <span class="burger__line burger__line-bottom"></span>
-            </button>
-        </div>
-    </div>
-</header>
+    @@include('_header.html')
 
     <section class="main">
         
@@ -672,7 +637,7 @@
                                     </div>
 
                                     <div class="master__about-item">
-                                        <p class="master__about-item__skilled">
+                                        <p class="master__about-item__skilled bg-light-yellow">
                                             Опытный владелец
                                         </p>
                                         <p class="master__about-item__skilled-text">
@@ -687,11 +652,166 @@
                         
 
                     </div> <!-- /.apartment -->
-                    
-                    
-
                     <div class="reservation__right">
+                    </div>
 
+                    <div class="card">
+                        <div class="card__title">
+                            <h3>
+                                Похожие предложения
+                            </h3>
+                        </div>
+                        <div class="card__list">
+                            <div class="card-item">
+                                <div class="card-top">
+                                    <img src="img/card-item-1.jpg" alt="" class="card-top__img">
+                                    
+                                    <div class="card-top__info">
+                                        <a href="#" class="text-16-b t-white">1 комната</a>
+                                        <div class="star">
+                                            <img src="img/star.svg" alt="star" class="img-star">
+                                            <p class="text-15-sb t-white">4,5 <span class="t-grey"> (33)</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-col">
+                                    <div class="card-content">
+                                        <div class="discount" style="display:none">-10%</div>
+                                        <a href="#" class="text-16-b">Просторная и современная квартира в центре города</a>
+                                        <div class="card-info">
+                                            <div class="card-info__left">
+                                                <p class="card-info__item bg-light-yellow">Опытный владелец</p>
+                                                <p class="card-info__item bg-light-pink">Редкая находка</p>
+                                            </div>
+                                            <p class="c-blue">Всего $180</p>
+                                        </div>
+                                        <div class="card-row">
+                                            <a href="#" class="location">
+                                                <span class="pin"></span>
+                                                <p>
+                                                    <span class="address">ул. Зарифа Алиева 28</span>
+                                                    0,5 км от центра
+                                                </p>
+                                            </a>
+                                            <div class="price">
+                                                
+                                                <div class="price-row">
+                                                    <span class="price-crossed">$30</span>
+                                                    <span class="price-item">24$</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <label class="card-bottom">
+                                        <input type="checkbox" class="checkbox">
+                                        <span><img src="img/lightning.svg" alt="lightning" class="img-lightning"> МГНОВЕННОЕ БРОНИРОВАНИЕ</span>
+                                        <svg class="instant-reservation">
+                                            <use xlink:href="img/sprite/sprite.svg#heart"></use>
+                                        </svg>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="card-item">
+                                <div class="card-top">
+                                    <img src="img/card-item-2.jpg" alt="" class="card-top__img">
+                                    <div class="discount">-15%</div>
+                                    <div class="card-top__info">
+                                        <a href="#" class="text-16-b t-white">2 комнаты</a>
+                                        <div class="star">
+                                            <img src="img/star.svg" alt="star" class="img-star">
+                                            <p class="text-15-sb t-white">5,0 <span class="t-grey"> (98)</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-col">
+                                    <div class="card-content">
+                                        
+                                        <a href="#" class="text-16-b">Просторная и современная квартира в центре города</a>
+                                        <div class="card-info">
+                                            <div class="card-info__left">
+                                                <p class="card-info__item bg-light-yellow">Опытный владелец</p>
+                                                <p class="card-info__item bg-light-pink">Редкая находка</p>
+                                            </div>
+                                            <p class="c-blue">Всего $180</p>
+                                        </div>
+                                        <div class="card-row">
+                                            <a href="#" class="location">
+                                                <span class="pin"></span>
+                                                <p>
+                                                    <span class="address">ул. Зарифа Алиева 28</span>
+                                                    0,5 км от центра
+                                                </p>
+                                            </a>
+                                            <div class="price">
+                                                
+                                                <div class="price-row">
+                                                    <span class="price-crossed">$62</span>
+                                                    <span class="price-item">51$</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <label class="card-bottom">
+                                        <input type="checkbox" class="checkbox">
+                                        <span><img src="img/lightning.svg" alt="lightning" class="img-lightning"> МГНОВЕННОЕ БРОНИРОВАНИЕ</span>
+                                        <svg class="instant-reservation">
+                                            <use xlink:href="img/sprite/sprite.svg#heart"></use>
+                                        </svg>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="card-item">
+                                <div class="card-top">
+                                    <img src="img/card-item-3.jpg" alt="" class="card-top__img">
+                                    <div class="discount" style="display:none">-10%</div>
+                                    <div class="card-top__info">
+                                        <a href="#" class="text-16-b t-white">3 комнаты</a>
+                                        <div class="star">
+                                            <img src="img/star.svg" alt="star" class="img-star">
+                                            <p class="text-15-sb t-white">4,5 <span class="t-grey"> (33)</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-col">
+                                    <div class="card-content">
+                                        
+                                        <a href="#" class="text-16-b">Просторная и современная квартира в центре города</a>
+                                        <div class="card-info">
+                                            <div class="card-info__left">
+                                                <p class="card-info__item bg-light-yellow">Опытный владелец</p>
+                                                <p class="card-info__item bg-light-pink">Редкая находка</p>
+                                            </div>
+                                            <p class="c-blue">Всего $180</p>
+                                        </div>
+                                        <div class="card-row">
+                                            <a href="#" class="location">
+                                                <span class="pin"></span>
+                                                <p>
+                                                    <span class="address">ул. Зарифа Алиева 28</span>
+                                                    0,5 км от центра
+                                                </p>
+                                            </a>
+                                            <div class="price">
+                                                
+                                                <div class="price-row">
+                                                    <span class="price-crossed" style="display:none">$50</span>
+                                                    <span class="price-item">90$</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <label class="card-bottom">
+                                        <input type="checkbox" class="checkbox">
+                                        <span><img src="img/lightning.svg" alt="lightning" class="img-lightning"> МГНОВЕННОЕ БРОНИРОВАНИЕ</span>
+                                        <svg class="instant-reservation">
+                                            <use xlink:href="img/sprite/sprite.svg#heart"></use>
+                                        </svg>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 
             </div>
@@ -699,120 +819,7 @@
 
     </section>
     
-    <footer class="footer">
-    <div class="container">
-        <div class="footer-top">
-            <div class="col">
-                <div class="footer-top__row">
-                    <a href="#" class="logo">Xx
-                        <span class="logo-span">.</span>
-                    </a>
-                    <p class="footer-text">
-                        Lorem ipsum dolor sit amet, <br> consectetur adipiscing
-                    </p>
-                </div>
-                <div class="markets">
-                    <a href="#">
-                        <img src="img/app-store.png" alt="app store" class="markets-img">
-                    </a>
-                    <a href="#">
-                        <img src="img/google-play.png" alt="google play" class="markets-img">
-                    </a>
-                </div>
-            </div>
-            <ul class="col">
-                <li class="footer-main">COMPANY</li>
-                <li class="footer-item">
-                    <a href="#" class="footer-link">About</a>
-                </li>
-                <li class="footer-item">
-                    <a href="#" class="footer-link">Partnership</a>
-                </li>
-                <li class="footer-item">
-                    <a href="#" class="footer-link">Careers</a>
-                </li>
-                <li class="footer-item">
-                    <a href="#" class="footer-link">Contacts</a>
-                </li>
-            </ul>
-            <ul class="col">
-                <li class="footer-main">host</li>
-                <li class="footer-item">
-                    <a href="#" class="footer-link">Host your home</a>
-                </li>
-                <li class="footer-item">
-                    <a href="#" class="footer-link">Hosting rules</a>
-                </li>
-                <li class="footer-item">
-                    <a href="#" class="footer-link">Payment methods</a>
-                </li>
-                <li class="footer-item">
-                    <a href="#" class="footer-link">Hosting is safe</a>
-                </li>
-            </ul>
-            <ul class="col">
-                <li class="footer-main">SUPPORT</li>
-                <li class="footer-item">
-                    <a href="#" class="footer-link">Knowledge base</a>
-                </li>
-                <li class="footer-item">
-                    <a href="#" class="footer-link">Report abuse</a>
-                </li>
-                <li class="footer-item">
-                    <a href="#" class="footer-review">Trustpilot review score</a>
-                </li>
-            </ul>
-            <div class="markets-mob">
-                <a href="#">
-                    <img src="img/app-store.png" alt="app store" class="markets-img">
-                </a>
-                <a href="#">
-                    <img src="img/google-play.png" alt="google play" class="markets-img">
-                </a>
-            </div>
-
-        </div>
-    </div>
-    <div class="footer-bottom">
-        <div class="container">
-            <div class="footer-bottom__row">
-                <div class="footer-bottom__first">
-                    <p class="footer-text">
-                        © 2020 Rentxx, Inc. All rights reserved
-                    </p>
-                    <ul class="footer-bottom__ul">
-                        <li class="footer-bottom__li">
-                            <a href="#" class="footer-link">Privacy</a>
-                        </li>
-                        <li class="footer-bottom__li">
-                            <a href="#" class="footer-link"> Terms </a>
-                        </li>
-                        <li class="footer-bottom__li">
-                            <a href="#" class="footer-link">Sitemap</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="footer__cards">
-                    <a href="#" class="footer__card"><img src="img/visa.png" alt="visa" class="footer-card__logo"></a>
-                    <a href="#" class="footer__card"><img src="img/mastercard.png" alt="mastercard" class="footer-card__logo"></a>
-                    <a href="#" class="footer__card"><img src="img/paypal.png" alt="paypal" class="footer-card__logo"></a>
-                </div>
-                <div class="footer__row">
-                    <a href="#" class="footer__select">$ USD
-                        <svg class="footer__select-arrow">
-                            <use xlink:href="img/sprite/sprite.svg#arrow-down"></use>
-                        </svg>
-                    </a>
-                    <a href="#" class="footer__select">ru
-                        <svg class="footer__select-arrow">
-                            <use xlink:href="img/sprite/sprite.svg#arrow-down"></use>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</footer>
+    @@include('_footer.html')
 
     <div>
         <div class="popups popup__lang-curr">

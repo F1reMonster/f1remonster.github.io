@@ -182,6 +182,30 @@ body {
   color: #50575E;
 }
 
+input,
+textarea {
+  resize: none;
+  padding: 24px 25px 6px;
+  background-color: transparent;
+  font-family: "Gilroy-Bold", sans-serif;
+  font-size: 15px;
+  line-height: 36px;
+  letter-spacing: 0.02em;
+  color: #124570;
+  border: 2px solid #EEF3F9;
+  border-radius: 4px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  outline: none;
+}
+
 input {
   height: 70px;
 }
@@ -1234,7 +1258,6 @@ img {
   line-height: 22px;
   letter-spacing: 0.02em;
   color: #897C63;
-  background: rgba(221, 159, 0, 0.08);
   border-radius: 4px;
   width: 195px;
   padding: 10px 0;
@@ -1244,6 +1267,295 @@ img {
   padding-top: 15px;
   line-height: 24px;
   color: #50575E;
+}
+
+.card {
+  padding: 100px 0;
+}
+
+.card__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.card__title {
+  font-family: "Merriweather-Bold", sans-serif;
+  font-size: 36px;
+  line-height: 60px;
+  color: #292C31;
+}
+
+.card-item {
+  width: 366px;
+  height: 100%;
+  margin-top: 25px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 4px 25px #ECEDEF;
+          box-shadow: 0 4px 25px #ECEDEF;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.card-top {
+  position: relative;
+  width: 100%;
+}
+
+.card-top .discount {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  border-radius: 0 4px 0 4px;
+  min-width: 67px;
+}
+
+.card-top__info {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 15px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  z-index: 2;
+}
+
+.card-top .star {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card-top .star p {
+  padding-left: 5px;
+}
+
+.card-col {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.card-content {
+  padding: 18px 20px 7px;
+  position: relative;
+}
+
+.card-info {
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 9px;
+}
+
+.card-info__left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.card-info__item {
+  line-height: 28px;
+  letter-spacing: 0.02em;
+  padding: 0 15px;
+  margin-right: 15px;
+}
+
+.card-info .c-blue {
+  white-space: nowrap;
+}
+
+.card-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 17px 0 8px;
+}
+
+.card-row .location {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card-row .location p,
+.card-row .location span {
+  display: block;
+  line-height: 22px;
+}
+
+.card-bottom {
+  padding: 13px 24px 13px 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: #EEF3F9;
+  padding: 13px 24px;
+  cursor: pointer;
+}
+
+.card-bottom span {
+  color: #124570;
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: 0.02em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.card .img-lightning {
+  margin-right: 25px;
+}
+
+.img-lightning {
+  margin-right: 10px;
+  width: 9px;
+  height: 16px;
+}
+
+.instant-reservation {
+  fill: transparent;
+  stroke: #124570;
+  width: 19px;
+  height: 17px;
+  stroke-width: 1.2;
+}
+
+.instant-reservation:hover {
+  fill: #124570;
+}
+
+.price {
+  font-family: "Gilroy-Medium", sans-serif;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 22px;
+  letter-spacing: 0.02em;
+  color: #FF3535;
+}
+
+.price-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.price-crossed {
+  text-decoration: line-through;
+  font-family: "Gilroy-Light", sans-serif;
+  font-size: 18px;
+  line-height: 22px;
+  color: #979798;
+  margin-right: 6px;
+}
+
+.pin {
+  background: #EEF3F9 url(../img/pin.svg) no-repeat center/12px 17px;
+  width: 39px;
+  height: 39px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  border-radius: 4px;
+  margin-right: 9px;
+}
+
+.bg-light-yellow {
+  background-color: rgba(221, 159, 0, 0.08);
+}
+
+.bg-light-pink {
+  background-color: #FCE3E3;
+}
+
+.c-blue {
+  color: #124570;
+}
+
+.text-16-b {
+  font-family: "Gilroy-Bold", sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0.02em;
+  color: #124570;
+}
+
+.text-15-sb {
+  font-size: 15px;
+  font-family: "Gilroy-SemiBold", sans-serif;
+  letter-spacing: 0.02em;
+}
+
+.t-white {
+  color: #ffffff;
+}
+
+.t-grey {
+  color: #D0D0D0;
+}
+
+.discount {
+  background: #FF3535;
+  font-family: "Gilroy-Bold", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 35px;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+  padding: 0 14px;
+  z-index: 2;
+  text-align: center;
 }
 
 .disabled .apartment__rules-icon {
