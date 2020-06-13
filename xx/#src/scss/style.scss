@@ -123,6 +123,10 @@ img {
     background: #EEF3F9 url(../img/check.svg) no-repeat center/37%;
 }
 
+.checkbox:checked ~ .instant-reservation {
+    fill: #124570;
+}
+
 .check {
     background-color: #EEF3F9;
     border-radius: 4px;
@@ -417,9 +421,18 @@ img {
 }
 
 .apartment {
-    width: calc(100% - 403px);
-    max-width: 685px;
-    padding-right: 20px;
+    padding: 47px 0 90px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+
+    &__content {
+        width: calc(100% - 403px);
+        max-width: 685px;
+        padding-right: 20px;
+    }
+    
     &__inner {
         display: flex;
     }
@@ -914,7 +927,18 @@ img {
     }
 }
 
-
+.star {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    p{
+        padding-left: 5px;
+    }
+    &__item {
+        display: flex;
+        align-items: center;
+    }
+} 
 .card {
     padding: 100px 0;
 
@@ -959,13 +983,7 @@ img {
             justify-content: space-between;
             z-index: 2;
             }
-            .star {
-                display: flex;
-                align-items: center;
-                p{
-                    padding-left: 5px;
-                }
-            }
+            
     }
     &-col {
         width: 100%;
@@ -1036,6 +1054,232 @@ img {
         margin-right: 25px;
     }
 }
+.payment {
+    &__right {
+        width: 100%;
+        max-width: 400px;
+        flex-shrink: 0;
+        min-height: 100%;
+        
+    }
+    &__form {
+        background: #FCFDFF;
+        border: 2px solid #EEF3F9;
+        box-sizing: border-box;
+        border-radius: 4px;
+        position: sticky;
+        top: 20px;
+        height: fit-content;
+
+        &-head {
+            
+            padding: 30px 30px 25px;
+            background: #EEF3F9;
+            .star {
+                width: 100%;
+            }
+            .bg-light-pink {
+                padding: 10px 20px;
+                border-radius: 4px;
+            }
+            .price {
+                margin-bottom: 10px;
+            }
+            .price-crossed {
+                padding-left: 5px;
+            }
+            .price-day {
+                font-family: "Gilroy-Regular", sans-serif;
+                font-size: 14px;
+                line-height: 22px;
+                letter-spacing: 0.02em;
+                color: #50575E;
+            }
+        }
+        &-content {
+            padding: 0 38px 20px;
+        }
+        &-li {
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid #EAF2FA;
+            padding: 13px 0;
+        }
+        
+        &-grey {
+            font-size: 14px;
+            line-height: 22px;
+            letter-spacing: 0.02em;
+            color: #898989;
+        }
+        &-blue {
+            font-family: "Gilroy-Bold", sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 15px;
+            line-height: 22px;
+            letter-spacing: 0.02em;
+            color: #124570;
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            margin: 30px 0 10px;
+            line-height: 50px;
+            text-align: center;
+        }
+
+        &-bottom {
+            display: none;
+        }
+
+        
+    }
+    
+}
+
+.mt-22 {
+    margin-top: 22px;
+}
+
+.name {
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    color: #898989;
+    position: absolute;
+    left: 27px;
+    top: 15px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.no-border {
+    border: none;
+}
+
+.field {
+    position: relative;
+    display: flex;
+    width: 100%;
+    .icon {
+        height: calc(100% - 4px);
+        top: 50%;
+        transform: translateY(-50%);
+        right: 2px;
+    }    
+}
+
+.pr-75 {
+    input {
+        padding-right: 75px;
+    }
+}
+
+
+.icon {
+    height: 100%;
+    width: 65px;
+    background: #EEF3F9;
+    border-radius: 0 4px 4px 0;
+    margin-left: -4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s;
+    position: absolute;
+    right: 0;
+    top: 0;
+    .calendar-icon,
+    .person-icon {
+        margin: 0;
+        fill: #124570;
+        stroke: #124570;
+        width: 20px;
+        height: 20px;
+    }
+}
+.calendar-icon,
+.person-icon {
+        transform: none;
+}
+.counts {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    &-item {
+        font-size: 15px;
+        line-height: 22px;
+        letter-spacing: 0.02em;
+        color: #50575E;
+    }
+    &-total {
+        font-family: "Gilroy-SemiBold", sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 22px;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+        color: #124570;
+    }
+}
+
+.question {
+    width: 18px;
+    height: 18px;
+    position: relative;
+    background: url(../img/question.svg) no-repeat center/contain;
+    display: block;
+    float: right;
+    margin: 0 10px;
+
+    &:hover {
+        .tooltip {
+            opacity: 1;
+            pointer-events: auto;
+        }
+    }
+
+
+}
+
+
+.tooltip {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-30%);
+    bottom: calc(100% + 15px);
+    line-height: 16px;
+    letter-spacing: 0.02em;
+    color: #50575E;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    display: block;
+    max-width: 310px;
+    background: #ffffff;
+    z-index: 5;
+    border: 1px solid #124570;
+    box-sizing: border-box;
+    border-radius: 4px;
+    padding: 12px;
+    transition: all 0.4s;
+    opacity: 0;
+    pointer-events: none;
+
+    
+    @media only screen and (max-width: 1260px)
+    {
+        left: auto;
+        right: -20px;
+        transform: none;
+    }
+}
+
+
 
 .img-lightning {
     margin-right: 10px;
@@ -1113,12 +1357,22 @@ img {
     letter-spacing: 0.02em;
 }
 
+.text-15-r {
+    font-size: 15px;
+    font-family: "Gilroy-Regular", sans-serif;
+    letter-spacing: 0.02em;
+}
+
 .t-white {
     color: #ffffff;
 }
 
 .t-grey {
     color: #D0D0D0;
+}
+
+.c-gray-medium {
+    color: #50575E;
 }
 
 .discount {
@@ -1475,4 +1729,8 @@ img {
 }
 
 
-
+#map {
+    width: 683px;
+    height: 314px;
+    z-index: -1;
+}

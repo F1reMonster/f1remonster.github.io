@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+    crossorigin=""/>
     <link rel="stylesheet" href="css/style.min.css">
     <title>test</title>
 </head>
@@ -54,641 +56,740 @@
             <div class="container">
                 
                     <div class="apartment">
-                        <div class="apartment__inner">
-                            <div class="apartment__title">
-                                <h1>Просторная и современная квартира в центре города</h1>
-                            </div>
-                            <div class="apartment__btn">
-                                <a href="#" class="btn-white btn-apartment-photo">
-                                    <svg class="apartment-photo">
-                                        <use xlink:href="img/sprite/sprite.svg#photo"></use>
-                                    </svg>
-                                    все фото
-                                </a>
-                                <a href="#" class="btn-white btn-apartment-save">
-                                    <svg class="apartment-save">
-                                        <use xlink:href="img/sprite/sprite.svg#heart"></use>
-                                    </svg>
-                                    сохранить
-                                </a>
-                            </div>
-                        </div>
-                        <div class="apartment__description">
-                            <h3 class="apartment__description-title">
-                                характеристики
-                            </h3>
-                            <div class="apartment__description-inner">
-                                <div class="apartment__description-item">
-                                    <div class="apartment__description-icon">
-                                        <svg>
-                                            <use xlink:href="img/sprite/sprite1.svg#building"></use>
-                                        </svg>
-                                    </div>
-                                    <p>
-                                        Площадь 20 кв.м.
-                                    </p>
-                                </div>
-                                <div class="apartment__description-item">
-                                    <div class="apartment__description-icon">
-                                        <svg>
-                                            <use xlink:href="img/sprite/sprite1.svg#bathroom"></use>
-                                        </svg>
-                                    </div>
-                                    <p>
-                                        Ванные комнаты: 1
-                                    </p>
-                                </div>
-                                <div class="apartment__description-item">
-                                    <div class="apartment__description-icon">
-                                        <svg>
-                                            <use xlink:href="img/sprite/sprite1.svg#night"></use>
-                                        </svg>
-                                    </div>
-                                    <p>
-                                        Минимум 1 ночь
-                                    </p>
-                                </div>
-                                <div class="apartment__description-item">
-                                    <div class="apartment__description-icon">
-                                        <svg>
-                                            <use xlink:href="img/sprite/sprite1.svg#plans"></use>
-                                        </svg>
-                                    </div>
-                                    <p>
-                                        1-комнатная
-                                    </p>
-                                </div>
-                                <div class="apartment__description-item">
-                                    <div class="apartment__description-icon">
-                                        <svg>
-                                            <use xlink:href="img/sprite/sprite.svg#person"></use>
-                                        </svg>
-                                    </div>
-                                    <p>
-                                        Максимум 2 гостя
-                                    </p>
-                                </div>
-                                <div class="apartment__description-item">
-                                    <div class="apartment__description-icon">
-                                        <svg>
-                                            <use xlink:href="img/sprite/sprite1.svg#stairs"></use>
-                                        </svg>
-                                    </div>
-                                    <p>
-                                        1 этаж из 9
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="apartment__sleep">
-                            <h3 class="apartment__sleep-title">
-                                спальные места
-                            </h3>
-                            <div class="apartment__sleep-inner">
-                                <div class="apartment__sleep-item">
-                                    <div class="apartment__sleep-icon">
-                                        <svg>
-                                            <use xlink:href="img/sprite/sprite1.svg#double-bed"></use>
-                                        </svg>
-                                    </div>
-                                    <p class="text1">
-                                        Спальня 1
-                                    </p>
-                                    <p class="text2">
-                                        Сдвоенная кровать
-                                    </p>
-                                </div>
-                                <div class="apartment__sleep-item">
-                                    <div class="apartment__sleep-icon">
-                                        <svg>
-                                            <use xlink:href="img/sprite/sprite1.svg#single-bed"></use>
-                                        </svg>
-                                        <svg>
-                                            <use xlink:href="img/sprite/sprite1.svg#sofa"></use>
-                                        </svg>
-                                    </div>
-                                    <p class="text1">
-                                        Спальня 2
-                                    </p>
-                                    <p class="text2">
-                                        Кровать, диван
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="apartment__about">
-                            <div class="apartment__about-title">
-                                <h3>описание</h3>
-                            </div>
-                            <p class="text">
-                                Небольшой уютный гостиничный номер в жилом многоквартирном доме.
-                                Удобное месторасположение и уникальный дизайн апартаментов подарят Вам незабываемые ощущения. Комната укомплектована всем необходимым для ...
-                            </p>
-                            <a href="#" class="apartment__read-more">
-                                Читать далее
-                                <svg class="apartment__more-arrow">
-                                    <use xlink:href="img/sprite/sprite.svg#arrow-down"></use>
-                                </svg>
-                            </a>
-                        </div>
-                        <div class="apartment__comfort">
-                            <h3 class="apartment__comfort-title">
-                                удобства
-                            </h3> 
-                            <div class="apartment__comfort-inner">
-                                <div class="apartment__comfort-item">
-                                    <div class="apartment__comfort-icon">
-                                        <svg>
-                                            <use xlink:href="img/sprite/sprite1.svg#wifi"></use>
-                                        </svg>
-                                    </div>
-                                    <p class="apartment__comfort-text">
-                                        Wi-Fi
-                                    </p>
-                                </div>
-                                <div class="apartment__comfort-item">
-                                    <div class="apartment__comfort-icon">
-                                        <svg>
-                                            <use xlink:href="img/sprite/sprite1.svg#wifi"></use>
-                                        </svg>
-                                    </div>
-                                    <p class="apartment__comfort-text">
-                                        Wi-Fi
-                                    </p>
-                                </div>
-                                <div class="apartment__comfort-item">
-                                    <div class="apartment__comfort-icon">
-                                        <svg>
-                                            <use xlink:href="img/sprite/sprite1.svg#tv"></use>
-                                        </svg>
-                                    </div>
-                                    <p class="apartment__comfort-text">
-                                        Телевизор
-                                    </p>
-                                </div>
-                                <div class="apartment__comfort-item">
-                                    <div class="apartment__comfort-icon">
-                                        <svg>
-                                            <use xlink:href="img/sprite/sprite1.svg#washing_machine"></use>
-                                        </svg>
-                                    </div>
-                                    <p class="apartment__comfort-text">
-                                        Стиральная<br> машина
-                                    </p>
-                                </div>
-                                <div class="apartment__comfort-item">
-                                    <div class="apartment__comfort-icon">
-                                        <svg>
-                                            <use xlink:href="img/sprite/sprite1.svg#kitchen"></use>
-                                        </svg>
-                                    </div>
-                                    <p class="apartment__comfort-text">
-                                        Кухонные<br>
-                                        принадлежности
-                                    </p>
-                                </div>
-                                <div class="apartment__comfort-item">
-                                    <div class="apartment__comfort-icon">
-                                        <svg>
-                                            <use xlink:href="img/sprite/sprite1.svg#balcon"></use>
-                                        </svg>
-                                    </div>
-                                    <p class="apartment__comfort-text">
-                                        Балкон
-                                    </p>
-                                </div>
-                            </div>
-                            <a href="#" class="apartment__read-more">
-                                Показать все удобства
-                                <svg class="apartment__more-arrow">
-                                    <use xlink:href="img/sprite/sprite.svg#arrow-down"></use>
-                                </svg>
-                            </a>
-                        </div>
-                        <div class="apartment__remember">
-                            <h3 class="apartment__remember-title">
-                                что нужно помнить
-                            </h3>
-                            <div class="apartment__remember-inner">
-                                <div class="apartment__remember-item">
-                                    <div class="apartment__remember-icon">
-                                        <svg>
-                                            <use xlink:href="img/sprite/sprite1.svg#clock-cilcular"></use>
-                                        </svg>
-                                    </div>
-                                    <div class="apartment__remember-text">
-                                        <p class="text1">
-                                            Прибытие
-                                        </p>
-                                        <p class="text2">
-                                            13:00 – 00:00
-                                        </p>
-                                    </div>
-                                    
-                                </div>
-                                <div class="apartment__remember-item">
-                                    <div class="apartment__remember-icon">
-                                        <svg>
-                                            <use xlink:href="img/sprite/sprite1.svg#clock-cilcular"></use>
-                                        </svg>
-                                    </div>
-                                    <div class="apartment__remember-text">
-                                        <p class="text1">
-                                            Выезд
-                                        </p>
-                                        <p class="text2">
-                                            11:00
-                                        </p>
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                        </div>
-                        <div class="apartment__rules">
-                            <div class="apartment__rules-title">
-                                <h3>
-                                    Правила дома
-                                </h3>
-                            </div>
-                            <div class="apartment__rules-inner">
-                                <div class="apartment__rules-item">
-                                    <div class="apartment__rules-icon">
-                                        <svg>
-                                            <use xlink:href="img/sprite/sprite.svg#pet"></use>
-                                        </svg>
-                                    </div>
-                                    <div class="apartment__rules-text">
-                                        Можно<br>
-                                        с животными
-                                    </div>
-                                </div>
-                                <div class="apartment__rules-item disabled">
-                                    <div class="apartment__rules-icon">
-                                        <svg>
-                                            <use xlink:href="img/sprite/sprite.svg#party"></use>
-                                        </svg>
-                                    </div>
-                                    <div class="apartment__rules-text">
-                                        Без вечеринок<br>
-                                        и мероприятий
-                                    </div>
-                                </div>
-                                <div class="apartment__rules-item disabled">
-                                    <div class="apartment__rules-icon">
-                                        <svg>
-                                            <use xlink:href="img/sprite/sprite.svg#smoking"></use>
-                                        </svg>
-                                    </div>
-                                    <div class="apartment__rules-text">
-                                        Нельзя курить
-                                    </div>
-                                </div>
-                            </div>
-                        </div> 
-                        <div class="apartment__disable">
-                            <div class="apartment__disable-title">
-                                <h3>Политика отмены бронирования от владельца квартиры</h3>
-                            </div>
-                            <p class="text">
-                                Предоплата не возвращается в случае отмены заказа менее чем за 7 дней до заезда.
-                            </p>
-                        </div>
-                        <div class="apartment__location">
-                            <div class="apartment__location-title">
-                                <h3>Месторасположение</h3>
-                            </div>
-                            <div class="apartment__location-address">
-                                <div class="apartment__location-icon">
-                                    <svg>
-                                        <use xlink:href="img/sprite/sprite.svg#pin"></use>
-                                    </svg>
-                                </div>
-                                <div class="apartment__location-text">
-                                    ул. Саксаганского 7, Центр, Киев
-                                </div>
-                            </div>
-                            <div class="apartment__location-map">
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1068.4833801791056!2d30.5193177550844!3d50.43558557540447!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cefd91844331%3A0xa909ac4f315b09b8!2z0LLRg9C70LjRhtGPINCh0LDQutGB0LDQs9Cw0L3RgdGM0LrQvtCz0L4sIDcsINCa0LjRl9CyLCAwMjAwMA!5e0!3m2!1suk!2sua!4v1591902607010!5m2!1suk!2sua" width="683" height="314" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-                            </div>
-                            <div class="apartment__location-metro">
-                                <h4>
-                                    Ближайшее метро:
-                                </h4>
-                                <ul>
-                                    <li>Дворец спорта <span>(~0.32 км)</span></li>
-                                </ul>
-                            </div>
-                            <div class="apartment__location-attractions">
-                                <h4>
-                                    Достопримечательности рядом:
-                                </h4>
-                                <ul>
-                                    <li>НСК Олимпийский <span>(~0.2 км)</span></li>
-                                    <li>Хоральная Синагога Бродского <span>(~0.34 км)</span></li>
-                                    <li>Арена Сити <span>(~0.63 км</span>)</li>
-                                    <li>Пинчук Арт Центр <span>(~0.63 км)</span></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="apartment__availability">
-                            <div class="apartment__availability-title">
-                                <h3>
-                                    доступность
-                                </h3>
 
-                            </div>
-                            <div id="apartment__availability-calendar">
-                                
-                            </div>
-                        </div>
-                        
-                        <div class="apartment__reviews">
-                            <div class="apartment__reviews-title">
-                                <h3>
-                                    отзывы
-                                </h3>
-                            </div>
-                            <div class="apartment__reviews-rate">
-                                <div class="apartment__reviews-rate__total">
-                                    <img class="apartment__reviews-star" src="img/star.svg" alt="">
-                                    <p>5,0 <span>(98 отзывов)</span></p>
+                        <div class="apartment__content">
+                            <div class="apartment__inner">
+                                <div class="apartment__title">
+                                    <h1>Просторная и современная квартира в центре города</h1>
                                 </div>
-                                
-                                <div class="apartment__reviews-rate__inner">
-                                    
-                                    <div class="apartment__reviews-rate__item">
-                                        <div class="item__content">
-                                            <div class="item__title">
-                                                Общение
-                                            </div>
-                                            <div class="item__mark">
-                                                <span class="line">
-                                                    <span class="line1" style="width: 100px;"></span>
-                                                </span>
-                                                <span class="score">5,0</span>
-                                            </div>
+                                <div class="apartment__btn">
+                                    <a href="#" class="btn-white btn-apartment-photo">
+                                        <svg class="apartment-photo">
+                                            <use xlink:href="img/sprite/sprite.svg#photo"></use>
+                                        </svg>
+                                        все фото
+                                    </a>
+                                    <a href="#" class="btn-white btn-apartment-save">
+                                        <svg class="apartment-save">
+                                            <use xlink:href="img/sprite/sprite.svg#heart"></use>
+                                        </svg>
+                                        сохранить
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="apartment__description">
+                                <h3 class="apartment__description-title">
+                                    характеристики
+                                </h3>
+                                <div class="apartment__description-inner">
+                                    <div class="apartment__description-item">
+                                        <div class="apartment__description-icon">
+                                            <svg>
+                                                <use xlink:href="img/sprite/sprite1.svg#building"></use>
+                                            </svg>
                                         </div>
+                                        <p>
+                                            Площадь 20 кв.м.
+                                        </p>
                                     </div>
-                                    <div class="apartment__reviews-rate__item">
-                                        <div class="item__content">
-                                            <div class="item__title">
-                                                Точность
-                                            </div>
-                                            <div class="item__mark">
-                                                <span class="line">
-                                                    <span class="line1" style="width: 90px;"></span>
-                                                </span>
-                                                <span class="score">4,9</span>
-                                            </div>
+                                    <div class="apartment__description-item">
+                                        <div class="apartment__description-icon">
+                                            <svg>
+                                                <use xlink:href="img/sprite/sprite1.svg#bathroom"></use>
+                                            </svg>
                                         </div>
+                                        <p>
+                                            Ванные комнаты: 1
+                                        </p>
                                     </div>
-                                    <div class="apartment__reviews-rate__item">
-                                        <div class="item__content">
-                                            <div class="item__title">
+                                    <div class="apartment__description-item">
+                                        <div class="apartment__description-icon">
+                                            <svg>
+                                                <use xlink:href="img/sprite/sprite1.svg#night"></use>
+                                            </svg>
+                                        </div>
+                                        <p>
+                                            Минимум 1 ночь
+                                        </p>
+                                    </div>
+                                    <div class="apartment__description-item">
+                                        <div class="apartment__description-icon">
+                                            <svg>
+                                                <use xlink:href="img/sprite/sprite1.svg#plans"></use>
+                                            </svg>
+                                        </div>
+                                        <p>
+                                            1-комнатная
+                                        </p>
+                                    </div>
+                                    <div class="apartment__description-item">
+                                        <div class="apartment__description-icon">
+                                            <svg>
+                                                <use xlink:href="img/sprite/sprite.svg#person"></use>
+                                            </svg>
+                                        </div>
+                                        <p>
+                                            Максимум 2 гостя
+                                        </p>
+                                    </div>
+                                    <div class="apartment__description-item">
+                                        <div class="apartment__description-icon">
+                                            <svg>
+                                                <use xlink:href="img/sprite/sprite1.svg#stairs"></use>
+                                            </svg>
+                                        </div>
+                                        <p>
+                                            1 этаж из 9
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="apartment__sleep">
+                                <h3 class="apartment__sleep-title">
+                                    спальные места
+                                </h3>
+                                <div class="apartment__sleep-inner">
+                                    <div class="apartment__sleep-item">
+                                        <div class="apartment__sleep-icon">
+                                            <svg>
+                                                <use xlink:href="img/sprite/sprite1.svg#double-bed"></use>
+                                            </svg>
+                                        </div>
+                                        <p class="text1">
+                                            Спальня 1
+                                        </p>
+                                        <p class="text2">
+                                            Сдвоенная кровать
+                                        </p>
+                                    </div>
+                                    <div class="apartment__sleep-item">
+                                        <div class="apartment__sleep-icon">
+                                            <svg>
+                                                <use xlink:href="img/sprite/sprite1.svg#single-bed"></use>
+                                            </svg>
+                                            <svg>
+                                                <use xlink:href="img/sprite/sprite1.svg#sofa"></use>
+                                            </svg>
+                                        </div>
+                                        <p class="text1">
+                                            Спальня 2
+                                        </p>
+                                        <p class="text2">
+                                            Кровать, диван
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="apartment__about">
+                                <div class="apartment__about-title">
+                                    <h3>описание</h3>
+                                </div>
+                                <p class="text">
+                                    Небольшой уютный гостиничный номер в жилом многоквартирном доме.
+                                    Удобное месторасположение и уникальный дизайн апартаментов подарят Вам незабываемые ощущения. Комната укомплектована всем необходимым для ...
+                                </p>
+                                <a href="#" class="apartment__read-more">
+                                    Читать далее
+                                    <svg class="apartment__more-arrow">
+                                        <use xlink:href="img/sprite/sprite.svg#arrow-down"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="apartment__comfort">
+                                <h3 class="apartment__comfort-title">
+                                    удобства
+                                </h3> 
+                                <div class="apartment__comfort-inner">
+                                    <div class="apartment__comfort-item">
+                                        <div class="apartment__comfort-icon">
+                                            <svg>
+                                                <use xlink:href="img/sprite/sprite1.svg#wifi"></use>
+                                            </svg>
+                                        </div>
+                                        <p class="apartment__comfort-text">
+                                            Wi-Fi
+                                        </p>
+                                    </div>
+                                    <div class="apartment__comfort-item">
+                                        <div class="apartment__comfort-icon">
+                                            <svg>
+                                                <use xlink:href="img/sprite/sprite1.svg#wifi"></use>
+                                            </svg>
+                                        </div>
+                                        <p class="apartment__comfort-text">
+                                            Wi-Fi
+                                        </p>
+                                    </div>
+                                    <div class="apartment__comfort-item">
+                                        <div class="apartment__comfort-icon">
+                                            <svg>
+                                                <use xlink:href="img/sprite/sprite1.svg#tv"></use>
+                                            </svg>
+                                        </div>
+                                        <p class="apartment__comfort-text">
+                                            Телевизор
+                                        </p>
+                                    </div>
+                                    <div class="apartment__comfort-item">
+                                        <div class="apartment__comfort-icon">
+                                            <svg>
+                                                <use xlink:href="img/sprite/sprite1.svg#washing_machine"></use>
+                                            </svg>
+                                        </div>
+                                        <p class="apartment__comfort-text">
+                                            Стиральная<br> машина
+                                        </p>
+                                    </div>
+                                    <div class="apartment__comfort-item">
+                                        <div class="apartment__comfort-icon">
+                                            <svg>
+                                                <use xlink:href="img/sprite/sprite1.svg#kitchen"></use>
+                                            </svg>
+                                        </div>
+                                        <p class="apartment__comfort-text">
+                                            Кухонные<br>
+                                            принадлежности
+                                        </p>
+                                    </div>
+                                    <div class="apartment__comfort-item">
+                                        <div class="apartment__comfort-icon">
+                                            <svg>
+                                                <use xlink:href="img/sprite/sprite1.svg#balcon"></use>
+                                            </svg>
+                                        </div>
+                                        <p class="apartment__comfort-text">
+                                            Балкон
+                                        </p>
+                                    </div>
+                                </div>
+                                <a href="#" class="apartment__read-more">
+                                    Показать все удобства
+                                    <svg class="apartment__more-arrow">
+                                        <use xlink:href="img/sprite/sprite.svg#arrow-down"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="apartment__remember">
+                                <h3 class="apartment__remember-title">
+                                    что нужно помнить
+                                </h3>
+                                <div class="apartment__remember-inner">
+                                    <div class="apartment__remember-item">
+                                        <div class="apartment__remember-icon">
+                                            <svg>
+                                                <use xlink:href="img/sprite/sprite1.svg#clock-cilcular"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="apartment__remember-text">
+                                            <p class="text1">
                                                 Прибытие
-                                            </div>
-                                            <div class="item__mark">
-                                                <span class="line">
-                                                    <span class="line1" style="width: 100px;"></span>
-                                                </span>
-                                                <span class="score">5,0</span>
-                                            </div>
+                                            </p>
+                                            <p class="text2">
+                                                13:00 – 00:00
+                                            </p>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="apartment__remember-item">
+                                        <div class="apartment__remember-icon">
+                                            <svg>
+                                                <use xlink:href="img/sprite/sprite1.svg#clock-cilcular"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="apartment__remember-text">
+                                            <p class="text1">
+                                                Выезд
+                                            </p>
+                                            <p class="text2">
+                                                11:00
+                                            </p>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="apartment__rules">
+                                <div class="apartment__rules-title">
+                                    <h3>
+                                        Правила дома
+                                    </h3>
+                                </div>
+                                <div class="apartment__rules-inner">
+                                    <div class="apartment__rules-item">
+                                        <div class="apartment__rules-icon">
+                                            <svg>
+                                                <use xlink:href="img/sprite/sprite.svg#pet"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="apartment__rules-text">
+                                            Можно<br>
+                                            с животными
                                         </div>
                                     </div>
-                                    <div class="apartment__reviews-rate__item">
-                                        <div class="item__content">
-                                            <div class="item__title">
-                                                Местоположение
-                                            </div>
-                                            <div class="item__mark">
-                                                <span class="line">
-                                                    <span class="line1" style="width: 100px;"></span>
-                                                </span>
-                                                <span class="score">5,0</span>
-                                            </div>
+                                    <div class="apartment__rules-item disabled">
+                                        <div class="apartment__rules-icon">
+                                            <svg>
+                                                <use xlink:href="img/sprite/sprite.svg#party"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="apartment__rules-text">
+                                            Без вечеринок<br>
+                                            и мероприятий
                                         </div>
                                     </div>
-                                    <div class="apartment__reviews-rate__item">
-                                        <div class="item__content">
-                                            <div class="item__title">
-                                                Чистота
-                                            </div>
-                                            <div class="item__mark">
-                                                <span class="line">
-                                                    <span class="line1" style="width: 100px;"></span>
-                                                </span>
-                                                <span class="score">5,0</span>
-                                            </div>
+                                    <div class="apartment__rules-item disabled">
+                                        <div class="apartment__rules-icon">
+                                            <svg>
+                                                <use xlink:href="img/sprite/sprite.svg#smoking"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="apartment__rules-text">
+                                            Нельзя курить
                                         </div>
                                     </div>
-                                    <div class="apartment__reviews-rate__item">
-                                        <div class="item__content">
-                                            <div class="item__title">
-                                                Цена/качество
-                                            </div>
-                                            <div class="item__mark">
-                                                
-                                            <span class="line">
-                                                <span class="line1" style="width: 100px;"></span>
-                                            </span>
-                                            <span class="score">5,0</span>
-                                            </div>
-                                        </div>
+                                </div>
+                            </div> 
+                            <div class="apartment__disable">
+                                <div class="apartment__disable-title">
+                                    <h3>Политика отмены бронирования от владельца квартиры</h3>
+                                </div>
+                                <p class="text">
+                                    Предоплата не возвращается в случае отмены заказа менее чем за 7 дней до заезда.
+                                </p>
+                            </div>
+                            <div class="apartment__location">
+                                <div class="apartment__location-title">
+                                    <h3>Месторасположение</h3>
+                                </div>
+                                <div class="apartment__location-address">
+                                    <div class="apartment__location-icon">
+                                        <svg>
+                                            <use xlink:href="img/sprite/sprite.svg#pin"></use>
+                                        </svg>
                                     </div>
+                                    <div class="apartment__location-text">
+                                        ул. Саксаганского 7, Центр, Киев
+                                    </div>
+                                </div>
+                                <div id="map">
+                                    
+                                </div>
+                                <div class="apartment__location-metro">
+                                    <h4>
+                                        Ближайшее метро:
+                                    </h4>
+                                    <ul>
+                                        <li>Дворец спорта <span>(~0.32 км)</span></li>
+                                    </ul>
+                                </div>
+                                <div class="apartment__location-attractions">
+                                    <h4>
+                                        Достопримечательности рядом:
+                                    </h4>
+                                    <ul>
+                                        <li>НСК Олимпийский <span>(~0.2 км)</span></li>
+                                        <li>Хоральная Синагога Бродского <span>(~0.34 км)</span></li>
+                                        <li>Арена Сити <span>(~0.63 км</span>)</li>
+                                        <li>Пинчук Арт Центр <span>(~0.63 км)</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="apartment__availability">
+                                <div class="apartment__availability-title">
+                                    <h3>
+                                        доступность
+                                    </h3>
+    
+                                </div>
+                                <div id="apartment__availability-calendar">
+                                    
                                 </div>
                             </div>
                             
-                        </div> <!-- /.reviews -->
-                        
-                        <div class="comment">
-                            <div class="comment__inner">
-                                <div class="comment__person">
-                                    <div class="comment__person-img">
-                                        <img src="img/photo1.jpg" alt="">
-                                    </div>
-                                    <div class="comment__person-info">
-                                        <p class="comment__person-name">
-                                            Марина
-                                        </p>
-                                        <p class="comment__person-date">
-                                            май 2020
-                                        </p>
+                            <div class="apartment__reviews">
+                                <div class="apartment__reviews-title">
+                                    <h3>
+                                        отзывы
+                                    </h3>
+                                </div>
+                                <div class="apartment__reviews-rate">
+                                    <div class="apartment__reviews-rate__total">
+                                        <img class="apartment__reviews-star" src="img/star.svg" alt="">
+                                        <p>5,0 <span>(98 отзывов)</span></p>
                                     </div>
                                     
-                                </div> 
-                                <div class="comment__text">
-                                    В Баку для своего отдыха нашла это предложение с прекрасными видом и большими панорамными окнами! 
-                                    Мы были и остались в восторге от неё! Современный стильный интерьер, продуманные детали и аксессуары...
-                                </div>
-                                <div class="comment__link">
-                                    <a href="#" class="comment__read-more">
-                                        Читать далее
-                                        <svg class="comment__more-arrow">
-                                            <use xlink:href="img/sprite/sprite.svg#arrow-down"></use>
-                                        </svg>
-                                    </a> 
-                                </div>
-                                <div class="comment__person">
-                                    <div class="comment__person-img">
-                                        <img src="img/photo1.jpg" alt="">
+                                    <div class="apartment__reviews-rate__inner">
+                                        
+                                        <div class="apartment__reviews-rate__item">
+                                            <div class="item__content">
+                                                <div class="item__title">
+                                                    Общение
+                                                </div>
+                                                <div class="item__mark">
+                                                    <span class="line">
+                                                        <span class="line1" style="width: 100px;"></span>
+                                                    </span>
+                                                    <span class="score">5,0</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="apartment__reviews-rate__item">
+                                            <div class="item__content">
+                                                <div class="item__title">
+                                                    Точность
+                                                </div>
+                                                <div class="item__mark">
+                                                    <span class="line">
+                                                        <span class="line1" style="width: 90px;"></span>
+                                                    </span>
+                                                    <span class="score">4,9</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="apartment__reviews-rate__item">
+                                            <div class="item__content">
+                                                <div class="item__title">
+                                                    Прибытие
+                                                </div>
+                                                <div class="item__mark">
+                                                    <span class="line">
+                                                        <span class="line1" style="width: 100px;"></span>
+                                                    </span>
+                                                    <span class="score">5,0</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="apartment__reviews-rate__item">
+                                            <div class="item__content">
+                                                <div class="item__title">
+                                                    Местоположение
+                                                </div>
+                                                <div class="item__mark">
+                                                    <span class="line">
+                                                        <span class="line1" style="width: 100px;"></span>
+                                                    </span>
+                                                    <span class="score">5,0</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="apartment__reviews-rate__item">
+                                            <div class="item__content">
+                                                <div class="item__title">
+                                                    Чистота
+                                                </div>
+                                                <div class="item__mark">
+                                                    <span class="line">
+                                                        <span class="line1" style="width: 100px;"></span>
+                                                    </span>
+                                                    <span class="score">5,0</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="apartment__reviews-rate__item">
+                                            <div class="item__content">
+                                                <div class="item__title">
+                                                    Цена/качество
+                                                </div>
+                                                <div class="item__mark">
+                                                    
+                                                <span class="line">
+                                                    <span class="line1" style="width: 100px;"></span>
+                                                </span>
+                                                <span class="score">5,0</span>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="comment__person-info">
-                                        <p class="comment__person-name">
-                                            Марина
-                                        </p>
-                                        <p class="comment__person-date">
-                                            май 2020
-                                        </p>
+                                </div>
+                                
+                            </div> <!-- /.reviews -->
+                            
+                            <div class="comment">
+                                <div class="comment__inner">
+                                    <div class="comment__person">
+                                        <div class="comment__person-img">
+                                            <img src="img/photo1.jpg" alt="">
+                                        </div>
+                                        <div class="comment__person-info">
+                                            <p class="comment__person-name">
+                                                Марина
+                                            </p>
+                                            <p class="comment__person-date">
+                                                май 2020
+                                            </p>
+                                        </div>
+                                        
+                                    </div> 
+                                    <div class="comment__text">
+                                        В Баку для своего отдыха нашла это предложение с прекрасными видом и большими панорамными окнами! 
+                                        Мы были и остались в восторге от неё! Современный стильный интерьер, продуманные детали и аксессуары...
                                     </div>
-                                    
-                                </div> 
-                                <div class="comment__text">
-                                    В Баку для своего отдыха нашла это предложение с прекрасными видом и большими панорамными окнами! 
-                                    Мы были и остались в восторге от неё! Современный стильный интерьер, продуманные детали и аксессуары...
-                                </div>
-                                <div class="comment__link">
-                                    <a href="#" class="comment__read-more">
-                                        Читать далее
-                                        <svg class="comment__more-arrow">
-                                            <use xlink:href="img/sprite/sprite.svg#arrow-down"></use>
-                                        </svg>
-                                    </a> 
-                                </div>
-                                <div class="comment__person">
-                                    <div class="comment__person-img">
-                                        <img src="img/photo1.jpg" alt="">
-                                    </div>
-                                    <div class="comment__person-info">
-                                        <p class="comment__person-name">
-                                            Марина
-                                        </p>
-                                        <p class="comment__person-date">
-                                            май 2020
-                                        </p>
-                                    </div>
-                                    
-                                </div> 
-                                <div class="comment__text">
-                                    В Баку для своего отдыха нашла это предложение с прекрасными видом и большими панорамными окнами! 
-                                    Мы были и остались в восторге от неё! Современный стильный интерьер, продуманные детали и аксессуары...
-                                </div>
-                                <div class="comment__link">
-                                    <a href="#" class="comment__read-more">
-                                        Читать далее
-                                        <svg class="comment__more-arrow">
-                                            <use xlink:href="img/sprite/sprite.svg#arrow-down"></use>
-                                        </svg>
-                                    </a> 
-                                </div>
-                                <ul class="pagination">
-                                    <li class="page-item">
-                                        <a class="page-prev page-arrow" href="#"></a>
-                                    </li>
-                                    <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                    <li class="page-item"><a class="page-link active" href="#">3</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">...</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">10</a></li>
-                                    <li class="page-item"><a class="page-next page-arrow" href="#"></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="master">
-                            <div class="master__title">
-                                <h3>
-                                    ХОЗЯИН sinan
-                                </h3>
-                            </div>
-                            <div class="master__inner">
-                                <div class="master__photo">
-                                    <img src="img/photo2.jpg" alt="" class="master__img">
-                                </div>
-                                <div class="master__info">
-
-                                    <div class="master__info-item">
-                                        <div class="master__info-item__icon">
-                                            <svg>
-                                                <use xlink:href="img/sprite/sprite1.svg#star1"></use>
+                                    <div class="comment__link">
+                                        <a href="#" class="comment__read-more">
+                                            Читать далее
+                                            <svg class="comment__more-arrow">
+                                                <use xlink:href="img/sprite/sprite.svg#arrow-down"></use>
                                             </svg>
-                                        </div>
-                                        <div class="master__info-item__text">
-                                            73 отзыва
-                                        </div>
+                                        </a> 
                                     </div>
-
-                                    <div class="master__info-item">
-                                        <div class="master__info-item__icon">
-                                            <svg>
-                                                <use xlink:href="img/sprite/sprite.svg#check"></use>
+                                    <div class="comment__person">
+                                        <div class="comment__person-img">
+                                            <img src="img/photo1.jpg" alt="">
+                                        </div>
+                                        <div class="comment__person-info">
+                                            <p class="comment__person-name">
+                                                Марина
+                                            </p>
+                                            <p class="comment__person-date">
+                                                май 2020
+                                            </p>
+                                        </div>
+                                        
+                                    </div> 
+                                    <div class="comment__text">
+                                        В Баку для своего отдыха нашла это предложение с прекрасными видом и большими панорамными окнами! 
+                                        Мы были и остались в восторге от неё! Современный стильный интерьер, продуманные детали и аксессуары...
+                                    </div>
+                                    <div class="comment__link">
+                                        <a href="#" class="comment__read-more">
+                                            Читать далее
+                                            <svg class="comment__more-arrow">
+                                                <use xlink:href="img/sprite/sprite.svg#arrow-down"></use>
                                             </svg>
-                                        </div>
-                                        <div class="master__info-item__text">
-                                            Проверен
-                                        </div>
+                                        </a> 
                                     </div>
-
-                                    <div class="master__info-item">
-                                        <div class="master__info-item__icon">
-                                            <svg>
-                                                <use xlink:href="img/sprite/sprite.svg#pin"></use>
+                                    <div class="comment__person">
+                                        <div class="comment__person-img">
+                                            <img src="img/photo1.jpg" alt="">
+                                        </div>
+                                        <div class="comment__person-info">
+                                            <p class="comment__person-name">
+                                                Марина
+                                            </p>
+                                            <p class="comment__person-date">
+                                                май 2020
+                                            </p>
+                                        </div>
+                                        
+                                    </div> 
+                                    <div class="comment__text">
+                                        В Баку для своего отдыха нашла это предложение с прекрасными видом и большими панорамными окнами! 
+                                        Мы были и остались в восторге от неё! Современный стильный интерьер, продуманные детали и аксессуары...
+                                    </div>
+                                    <div class="comment__link">
+                                        <a href="#" class="comment__read-more">
+                                            Читать далее
+                                            <svg class="comment__more-arrow">
+                                                <use xlink:href="img/sprite/sprite.svg#arrow-down"></use>
                                             </svg>
-                                        </div>
-                                        <div class="master__info-item__text">
-                                            Баку, Азербайджан
-                                        </div>
+                                        </a> 
                                     </div>
-
-                                    <div class="master__info-item">
-                                        <div class="master__info-item__icon">
-                                            <svg>
-                                                <use xlink:href="img/sprite/sprite1.svg#calendar"></use>
-                                            </svg>
-                                        </div>
-                                        <div class="master__info-item__text">
-                                            На сайте с январь 2014 г.
-                                        </div>
-                                    </div>
-                                    
+                                    <ul class="pagination">
+                                        <li class="page-item">
+                                            <a class="page-prev page-arrow" href="#"></a>
+                                        </li>
+                                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link active" href="#">3</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">...</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">10</a></li>
+                                        <li class="page-item"><a class="page-next page-arrow" href="#"></a></li>
+                                    </ul>
                                 </div>
                             </div>
-                            <div class="master__about-me">
-                                <p>
-                                    Im Sinan, studied in Tourism Management at University of Surrey. 
-                                    My hobbies are: Football, Basketball, Collecting pins and Traveling.
-                                </p>
-                            </div>
-                            <div class="master__about">
-                                <div class="master__about-inner">
-                                    <div class="master__about-item">
-                                        <p class="master__about-item__lang">
-                                            Языки:<span> English, Русский, Türkçe</span> 
-                                        </p>
-                                        <p class="master__about-item__freq">
-                                            Частота ответов:<span> 100%</span> 
-                                        </p>
-                                        <p class="master__about-item__time">
-                                            Время ответа:<span> в течение часа</span>
-                                        </p>
+                            <div class="master">
+                                <div class="master__title">
+                                    <h3>
+                                        ХОЗЯИН sinan
+                                    </h3>
+                                </div>
+                                <div class="master__inner">
+                                    <div class="master__photo">
+                                        <img src="img/photo2.jpg" alt="" class="master__img">
                                     </div>
-
-                                    <div class="master__about-item">
-                                        <p class="master__about-item__skilled bg-light-yellow">
-                                            Опытный владелец
-                                        </p>
-                                        <p class="master__about-item__skilled-text">
-                                            Опытные хозяины с отличными отзывами, которые делают всё для комфорта гостей
-                                        </p>
+                                    <div class="master__info">
+    
+                                        <div class="master__info-item">
+                                            <div class="master__info-item__icon">
+                                                <svg>
+                                                    <use xlink:href="img/sprite/sprite1.svg#star1"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="master__info-item__text">
+                                                73 отзыва
+                                            </div>
+                                        </div>
+    
+                                        <div class="master__info-item">
+                                            <div class="master__info-item__icon">
+                                                <svg>
+                                                    <use xlink:href="img/sprite/sprite.svg#check"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="master__info-item__text">
+                                                Проверен
+                                            </div>
+                                        </div>
+    
+                                        <div class="master__info-item">
+                                            <div class="master__info-item__icon">
+                                                <svg>
+                                                    <use xlink:href="img/sprite/sprite.svg#pin"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="master__info-item__text">
+                                                Баку, Азербайджан
+                                            </div>
+                                        </div>
+    
+                                        <div class="master__info-item">
+                                            <div class="master__info-item__icon">
+                                                <svg>
+                                                    <use xlink:href="img/sprite/sprite1.svg#calendar"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="master__info-item__text">
+                                                На сайте с январь 2014 г.
+                                            </div>
+                                        </div>
                                         
                                     </div>
-                                    
+                                </div>
+                                <div class="master__about-me">
+                                    <p>
+                                        Im Sinan, studied in Tourism Management at University of Surrey. 
+                                        My hobbies are: Football, Basketball, Collecting pins and Traveling.
+                                    </p>
+                                </div>
+                                <div class="master__about">
+                                    <div class="master__about-inner">
+                                        <div class="master__about-item">
+                                            <p class="master__about-item__lang">
+                                                Языки:<span> English, Русский, Türkçe</span> 
+                                            </p>
+                                            <p class="master__about-item__freq">
+                                                Частота ответов:<span> 100%</span> 
+                                            </p>
+                                            <p class="master__about-item__time">
+                                                Время ответа:<span> в течение часа</span>
+                                            </p>
+                                        </div>
+    
+                                        <div class="master__about-item">
+                                            <p class="master__about-item__skilled bg-light-yellow">
+                                                Опытный владелец
+                                            </p>
+                                            <p class="master__about-item__skilled-text">
+                                                Опытные хозяины с отличными отзывами, которые делают всё для комфорта гостей
+                                            </p>
+                                            
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="payment__right">
+                            <div class="payment__form">
+                                <div class="payment__form-head">
+                                    <div class="price">
+                                        <div class="price-row">
+                                            <span class="price-item">45$</span>
+                                            <span class="price-crossed">50$</span>
+                                            <span class="price-day">за сутки</span>
+                                            
+                                        </div>
+                                    </div>
+                                        <div class="star">
+                                            <div class="star__item">
+                                                <img src="img/star.svg" alt="star" class="img-star">
+                                            <p class="text-15-r c-gray-medium">5,0 (98 отзывов)</p>
+                                            </div>
+                                            <div class="star__item">
+                                                <p class="bg-light-pink">Редкая находка</p>
+                                            </div>
+                                        </div>
+                                </div>
+                                <div class="payment__form-content">
+                                    <ul class="payment__form-ul">
+                                        <li class="payment__form-li no-border">
+                                                <div class="field mt-22 pr-75">
+                                                    <p class="name">Прибытие и выезд</p>
+                                                    <input type="text" value="10 сентября - 20 сентября" readonly required>
+                                                    <div class="icon">
+                                                        <svg class="calendar-icon">
+                                                            <use xlink:href="img/sprite/sprite.svg#calendar"></use>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                
+                                        </li>
+                                        <li class="payment__form-li no-border">
+                                            
+                                                <div class="field pr-75">
+                                                    <p class="name">Гостей</p>
+                                                    <input type="text" value="3 человека" readonly required>
+                                                    <div class="icon">
+                                                        <svg class="person-icon">
+                                                            <use xlink:href="img/sprite/sprite.svg#person"></use>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                
+                                            
+                                        </li>
+                                    </ul>
+                                    <ul class="payment__form-ul">
+                                        <li class="payment__form-li">
+                                            <div class="counts">
+                                                <p class="counts-item">878₽ x 10 ночей</p>
+                                                <p class="counts-item">$450</p>
+                                            </div>
+                                        </li>
+                                        <li class="payment__form-li">
+                                            <div class="counts">
+                                                <p class="counts-item">Скидка 10% (за неделю)
+                                                    <span class="question">
+                                                        <span class="tooltip">При отмене не позднее чем за 14 дней до прибытия вы получите полный возврат и любовь.</span>
+                                                    </span>
+                                                </p>
+                                                <p class="counts-item">-$45</p>
+                                            </div>
+                                        </li>
+                                        <li class="payment__form-li">
+                                            <div class="counts">
+                                                <p class="counts-item">Плата за уборку
+                                                    <span class="question">
+                                                        <span class="tooltip">При отмене не позднее чем за 14 дней до прибытия вы получите полный возврат и любовь.</span>
+                                                    </span>
+                                                </p>
+                                                <p class="counts-item">$15</p>
+                                            </div>
+                                        </li>
+                                        <li class="payment__form-li">
+                                            <div class="counts">
+                                                <p class="counts-total">Итого</p>
+                                                <p class="counts-total"> $420</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <a href="#" class="btn btn-red">ЗАБРОНИРОВАТЬ</a>
+                                    <div class="payment__form-bottom">
+                                        <p class="text-16">Бесплатная отмена до 27 августа</p>
+                                        <p class="payment__form-text">
+                                            При отмене не позднее чем за 14 дней до прибытия вы получите полный возврат. <a href="#" class="more-link"> Подробнее</a>
+                                        </p>
+                                    </div>
+        
                                 </div>
                             </div>
                         </div>
-                        
 
                     </div> <!-- /.apartment -->
-                    <div class="reservation__right">
-                    </div>
+
+                    
 
                     <div class="card">
                         <div class="card__title">
@@ -1191,10 +1292,14 @@
             </div>
         </div>
     </div>
-    
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+            integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+            crossorigin="">
+    </script>
     <script src="js/moment.min.js"></script>
     <script src="js/jquery.min.js"></script>
     <script src="js/libs.min.js"></script>
+    <script src="js/map.js"></script>
     <script src="js/jquery.inputmask.bundle.js"></script>
     <script src="js/jquery.daterangepicker.min.js"></script>
     <script src="js/common.js"></script>
