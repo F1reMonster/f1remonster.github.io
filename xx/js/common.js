@@ -345,4 +345,24 @@ $(document).ready(function () {
     });
 });
 
+$( function() {
+    $("#datepicker").datepicker({
+        changeMonth: true,
+        changeYear: true
+    });
+});
 
+$(function() {
+    $("calendar").dateRangePicker({
+        inline: true,
+        container: '#calendar',
+        singleMonth: true,
+        showShortcuts: false,
+        showTopbar: false,
+        alwaysOpen: true,
+        startOfWeek: 'monday',
+        monthSelect: true,
+        yearSelect: true,
+        
+    });    
+});
