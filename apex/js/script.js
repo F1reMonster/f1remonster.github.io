@@ -21,4 +21,14 @@ $('.clients__slider').slick({
         slidesToScroll: 1,
         // autoplay: true,
         // autoplaySpeed: 2000,
-    });
+});
+
+
+
+$('.faq__item-title').click(function () {
+
+    $(this).parent().find('.faq__item-title').toggleClass('closed');
+    $(this).parent().find('.faq__item-text').toggleClass('hide');
+
+});
+
