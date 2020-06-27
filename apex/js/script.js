@@ -32,3 +32,8 @@ $('.faq__item-title').click(function () {
 
 });
 
+$('.burger').click(function () {
+    $('.burger').toggleClass('burger-active');
+    $('.menu__list').toggleClass('menu-open');
+})
+
