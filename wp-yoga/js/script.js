@@ -41,13 +41,13 @@ window.onload = function () {
     let firefoxVer = isitFirefox ? parseInt(isitFirefox[1]) : 0;
 
     // Если есть поддержка Webp или браузер Firefox версии больше или равно 65
-    if (canUseWebp() || firefoxVer >= 65) {
-        // Делаем все то же самое что и для jpg, но уже для изображений формата Webp
-        let imagesWebp = document.querySelectorAll('[data-bg-webp]');
-        for (let i = 0; i < imagesWebp.length; i++) {
-            let imageWebp = imagesWebp[i].getAttribute('data-bg-webp');
-            imagesWebp[i].style.backgroundImage = 'url(' + imageWebp + ')';
-        }
-    }
+    // if (canUseWebp() || firefoxVer >= 65) {
+    //     // Делаем все то же самое что и для jpg, но уже для изображений формата Webp
+    //     let imagesWebp = document.querySelectorAll('[data-bg-webp]');
+    //     for (let i = 0; i < imagesWebp.length; i++) {
+    //         let imageWebp = imagesWebp[i].getAttribute('data-bg-webp');
+    //         imagesWebp[i].style.backgroundImage = 'url(' + imageWebp + ')';
+    //     }
+    // }
 };
     
