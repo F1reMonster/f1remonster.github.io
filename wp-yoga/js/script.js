@@ -24,6 +24,19 @@ $('.slider').slick({
     fade: true,
 
 }); 
+
+$('.block3__slider').slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    infinite: true,
+    prevArrow: '<button type="button" class="slick-btn slick-prev"><img src="img/arrow-left.svg"></button>',
+    nextArrow: '<button type="button" class="slick-btn slick-next"><img src="img/arrow-right.svg"></button>'
+    
+
+}); 
+
+
+
 // Проверяем, можно ли использовать Webp формат
 function canUseWebp() {
     // Создаем элемент canvas
