@@ -20,7 +20,7 @@ $('.slider').slick({
     arrows: false,
     infinite: true,
     autoplay: true,
-    autoplaySpeed: 10000,
+    autoplaySpeed: 5000,
     fade: true,
 
 }); 
@@ -78,3 +78,13 @@ window.onload = function () {
     
 
 new WOW().init();
+
+$('.range__slider').ionRangeSlider({
+    type: "double",
+    min: 0,
+    max: 115,
+    from: 15,
+    to: 60,
+    step: 5,
+    hide_min_max: true,
+});
