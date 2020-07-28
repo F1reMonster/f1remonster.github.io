@@ -96,14 +96,24 @@ $('.burger').click(function () {
 });
 
 
-
-
 $('.dropdown').click(function(){
-    $('.header__submenu').removeClass('active-submenu');
-    $(this).find('.header__submenu').toggleClass('active-submenu');
     
+    let submenuActive = $(this).find('.header__submenu').hasClass('active-submenu');
+    
+    if (submenuActive == false) {
+        $('.header__submenu').removeClass('active-submenu');
+        $(this).find('.header__submenu').addClass('active-submenu');
+    } else {
+        $(this).find('.header__submenu').removeClass('active-submenu');
+    }
 });
 
+// $('body').click(function () {
+    
+//     if (($('.header__submenu').hasClass('active-submenu')) == true) {
+//         $('.header__submenu').removeClass('active-submenu');
+//     }
+// });
 
 
 
