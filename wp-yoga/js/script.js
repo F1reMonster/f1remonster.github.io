@@ -29,8 +29,8 @@ $('.block3__slider').slick({
     slidesToShow: 4,
     slidesToScroll: 1,
     infinite: true,
-    prevArrow: '<button type="button" class="slick-btn slick-prev"><img src="img/arrow-left.svg"></button>',
-    nextArrow: '<button type="button" class="slick-btn slick-next"><img src="img/arrow-right.svg"></button>'
+    prevArrow: '<button type="button" class="slick-btn slick-prev"></button>',
+    nextArrow: '<button type="button" class="slick-btn slick-next"></button>'
     
 
 }); 
@@ -88,3 +88,37 @@ $('.range__slider').ionRangeSlider({
     step: 5,
     hide_min_max: true,
 });
+
+$('.burger').click(function () {
+    
+    $('.burger').toggleClass('burger-active');
+    $('.header__menu-list').toggleClass('active');
+});
+
+
+
+
+$('.dropdown').click(function(){
+    $('.header__submenu').removeClass('active-submenu');
+    $(this).find('.header__submenu').toggleClass('active-submenu');
+    
+});
+
+
+
+
+
+// $('#domain').hide();
+// $('.footer__item-input').on('input', function(e) {
+//     let valInput = $(this).val(),
+//         res = valInput.charAt(valInput.length-1);
+//         if (res == '@') {
+
+//             let valLen = $(this).val().length;
+//             console.log(valLen);
+//         } else {
+//             console.log('none');
+//         }
+// });
+
+
