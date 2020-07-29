@@ -30,9 +30,40 @@ $('.block3__slider').slick({
     slidesToScroll: 1,
     infinite: true,
     prevArrow: '<button type="button" class="slick-btn slick-prev"></button>',
-    nextArrow: '<button type="button" class="slick-btn slick-next"></button>'
-    
-
+    nextArrow: '<button type="button" class="slick-btn slick-next"></button>',
+    responsive: [
+        {
+            breakpoint: 1325,
+            settings: {
+                centerMode: true,
+                centerPadding: '10px',
+                slidesToShow: 3
+                }
+        },
+        {
+            breakpoint: 950,
+            settings: {
+                centerMode: true,
+                centerPadding: '10px',
+                slidesToShow: 2
+            }
+        },
+        {
+            breakpoint: 640,
+            settings: {
+                centerMode: true,
+                slidesToShow: 1
+            }
+        },
+        {
+            breakpoint: 440,
+            settings: {
+                arrows: false,
+                centerMode: true,
+                slidesToShow: 1
+            }
+        }
+    ]
 }); 
 
 
@@ -89,24 +120,31 @@ $('.range__slider').ionRangeSlider({
     hide_min_max: true,
 });
 
-$('.burger').click(function () {
-    
+$('.burger').on('click', function () {
     $('.burger').toggleClass('burger-active');
     $('.header__menu-list').toggleClass('active');
 });
 
 
-$('.dropdown').click(function(){
-    
-    let submenuActive = $(this).find('.header__submenu').hasClass('active-submenu');
-    
-    if (submenuActive == false) {
+$('.dropdown').on('click', function(){
+    const $submenuActive = $(this).find('.header__submenu').hasClass('active-submenu');
+    if ($submenuActive == false) {
         $('.header__submenu').removeClass('active-submenu');
         $(this).find('.header__submenu').addClass('active-submenu');
     } else {
         $(this).find('.header__submenu').removeClass('active-submenu');
     }
 });
+
+$(document).mouseup(function(e) {
+    const $headerSubmenu = $('.header__submenu');
+    if (!$headerSubmenu.is(e.target)) {
+        $('.header__submenu').removeClass('active-submenu');
+    }
+});
+
+
+
 
 // $('body').click(function () {
     
