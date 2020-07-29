@@ -2504,6 +2504,15 @@ a {
         margin-bottom: 20px;
     }
 
+    .block2 .block__text,
+  .block4 .block__text {
+        padding: 20px 0 30px;
+    }
+
+    .block4 .block__title {
+        padding: 0;
+    }
+
     .block4__item {
         -webkit-box-orient: vertical;
         -webkit-box-direction: reverse;

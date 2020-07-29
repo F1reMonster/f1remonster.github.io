@@ -52,6 +52,7 @@ $('.block3__slider').slick({
             breakpoint: 640,
             settings: {
                 centerMode: true,
+                centerPadding: '10px',
                 slidesToShow: 1
             }
         },
@@ -60,6 +61,7 @@ $('.block3__slider').slick({
             settings: {
                 arrows: false,
                 centerMode: true,
+                centerPadding: '5px',
                 slidesToShow: 1
             }
         }
