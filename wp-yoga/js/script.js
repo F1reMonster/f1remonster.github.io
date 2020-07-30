@@ -124,51 +124,13 @@ $('.range__slider').ionRangeSlider({
 
 $('.burger').on('click', function () {
     $('.burger').toggleClass('burger-active');
-    $('.header__menu-list').toggleClass('active');
+    $('.header__menu-list').toggleClass('active-menu');
 });
 
 
-$('.dropdown').on('click', function(){
-    const $submenuActive = $(this).find('.header__submenu').hasClass('active-submenu');
-    if ($submenuActive == false) {
-        $('.header__submenu').removeClass('active-submenu');
-        $(this).find('.header__submenu').addClass('active-submenu');
-    } else {
-        $(this).find('.header__submenu').removeClass('active-submenu');
-    }
-});
-
-$(document).mouseup(function(e) {
-    const $headerSubmenu = $('.header__submenu');
-    if (!$headerSubmenu.is(e.target)) {
-        $('.header__submenu').removeClass('active-submenu');
-    }
-});
-
-
-
-
-// $('body').click(function () {
+$('.lessons__filter-link').on('click', function () {
+    $(this).toggleClass('font-b').next().slideToggle(300);
     
-//     if (($('.header__submenu').hasClass('active-submenu')) == true) {
-//         $('.header__submenu').removeClass('active-submenu');
-//     }
-// });
-
-
-
-
-// $('#domain').hide();
-// $('.footer__item-input').on('input', function(e) {
-//     let valInput = $(this).val(),
-//         res = valInput.charAt(valInput.length-1);
-//         if (res == '@') {
-
-//             let valLen = $(this).val().length;
-//             console.log(valLen);
-//         } else {
-//             console.log('none');
-//         }
-// });
+});
 
 
