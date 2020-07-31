@@ -1704,39 +1704,22 @@ a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
 }
 
 .lessons .block__title {
     text-align: left;
     text-transform: none;
-    padding-bottom: 31px;
 }
 
-.lessons__left {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 20%;
-            flex: 0 1 20%;
+.lessons__content {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 80%;
+            flex: 1 1 80%;
 }
 
-.lessons__filter-item {
-    font-family: OSans-R;
-    font-size: 15px;
-    line-height: 20px;
-    padding-bottom: 15px;
-}
-
-.lessons__filter-body {
-    display: none;
-}
-
-.lessons__right {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 80%;
-            flex: 0 1 80%;
-    border-left: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-.lessons__right .block__title {
+.lessons__content .block__title {
     padding-left: 60px;
     text-align: left;
     text-transform: none;
@@ -1744,21 +1727,20 @@ a {
 }
 
 .lessons__inner {
-    margin-left: 60px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    padding: 0 20px;
 }
 
 .lessons__item {
-    margin-right: 40px;
+    margin-right: 20px;
     margin-bottom: 80px;
-}
-
-.lessons__item:nth-child(3n+3) {
-    margin-right: 0;
 }
 
 .lessons__item-video {
@@ -2176,7 +2158,7 @@ a {
 }
 
 .range__input {
-    margin-right: 80px;
+    margin-right: 20px;
 }
 
 .irs--flat .irs-line {
@@ -2295,6 +2277,75 @@ a {
     overflow: hidden;
 }
 
+.filter {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 20%;
+            flex: 0 0 20%;
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.filter__title span {
+    position: relative;
+}
+
+.filter__title span:after,
+.filter__title span:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    height: 2px;
+    width: 15px;
+    background-color: #000;
+    -webkit-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+.filter__title span:after {
+    -webkit-transform: rotate(-40deg);
+        -ms-transform: rotate(-40deg);
+            transform: rotate(-40deg);
+    right: -30px;
+}
+
+.filter__title span:before {
+    -webkit-transform: rotate(40deg);
+        -ms-transform: rotate(40deg);
+            transform: rotate(40deg);
+    right: -20px;
+}
+
+.filter__title.filter-open span:after {
+    -webkit-transform: rotate(40deg);
+        -ms-transform: rotate(40deg);
+            transform: rotate(40deg);
+}
+
+.filter__title.filter-open span:before {
+    -webkit-transform: rotate(-40deg);
+        -ms-transform: rotate(-40deg);
+            transform: rotate(-40deg);
+}
+
+.filter__body {
+    margin-top: 30px;
+}
+
+.filter__item {
+    font-family: OSans-R;
+    font-size: 15px;
+    line-height: 20px;
+    padding-bottom: 15px;
+}
+
+a.filter__title {
+    display: none;
+}
+
+.filter-close {
+    display: none;
+}
+
 .block__title {
     font-family: OSans-B;
     text-align: center;
@@ -2325,6 +2376,10 @@ a {
     .burger {
         display: none;
     }
+
+    .filter__body {
+        display: block !important;
+    }
 }
 
 @media only screen and (max-width: 1325px) {
@@ -2334,6 +2389,13 @@ a {
 
     .slick-next {
         right: 0;
+    }
+}
+
+@media only screen and (max-width: 1320px) {
+    .filter {
+        padding-left: 20px;
+        padding-right: 20px;
     }
 }
 
@@ -2515,6 +2577,20 @@ a {
         padding: 0 120px 90px;
     }
 
+    .lessons .block__title {
+        padding-left: 20px;
+    }
+
+    .lessons__content {
+        -webkit-box-flex: 1;
+            -ms-flex: 1 1 auto;
+                flex: 1 1 auto;
+    }
+
+    .lessons__inner {
+        padding: 0 10px;
+    }
+
     .footer {
         margin-top: 20px;
     }
@@ -2532,6 +2608,38 @@ a {
     .mr,
   .ml {
         margin: 0;
+    }
+
+    .range__input {
+        width: 250px;
+        margin-right: 0;
+    }
+
+    .filter {
+        -webkit-box-flex: 0;
+            -ms-flex: 0 0 100%;
+                flex: 0 0 100%;
+        border: none;
+    }
+
+    .filter {
+        padding: 0;
+    }
+
+    a.filter__title {
+        display: block;
+    }
+
+    span.filter__title {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .filter__body {
+        display: none;
+        padding-left: 20px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     }
 }
 
@@ -2627,6 +2735,11 @@ a {
     .slider__title {
         font-size: 28px;
         line-height: 39px;
+    }
+
+    .lessons__item {
+        margin-right: 0;
+        margin-bottom: 40px;
     }
 
     .block__title {

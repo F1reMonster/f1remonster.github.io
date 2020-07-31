@@ -107,6 +107,21 @@ window.onload = function () {
             imagesWebp[i].style.backgroundImage = 'url(' + imageWebp + ')';
         }
     }
+
+
+    const linkFilter = $('.filter__link');
+    
+    if (linkFilter.length > 0) {
+        for (let i = 0; i < linkFilter.length; i++) {
+            const openedFilter = $(linkFilter[i]).hasClass('font-b');
+            if (!openedFilter) {
+                $(linkFilter[i]).next().addClass('filter-close');
+            }
+        }
+    }
+    
+    
+
 };
     
 
@@ -122,15 +137,32 @@ $('.range__slider').ionRangeSlider({
     hide_min_max: true,
 });
 
-$('.burger').on('click', function () {
+$('.burger').on('click', function (e) {
+    e.preventDefault();
     $('.burger').toggleClass('burger-active');
     $('.header__menu-list').toggleClass('active-menu');
 });
 
 
-$('.lessons__filter-link').on('click', function () {
-    $(this).toggleClass('font-b').next().slideToggle(300);
+
+
+$('.filter__link').on('click', function (e) {
+    e.preventDefault();
+    //$(this).toggleClass('font-b').next().slideToggle(300);
+    const openedFilter = $(this).hasClass('font-b');
+    if (openedFilter) {
+
+        $(this).removeClass('font-b').next().slideToggle(300);
+    } else {
+        $(this).addClass('font-b').next().slideToggle(300);
+    }
     
 });
+
+$('a.filter__title').on('click', function(e) {
+    e.preventDefault();
+    $(this).toggleClass('filter-open');
+    $('.filter__body').toggleClass('filter-open').slideToggle(300);
+})
 
 
