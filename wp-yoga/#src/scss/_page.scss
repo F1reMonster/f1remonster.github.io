@@ -1,0 +1,446 @@
+.page {
+    margin-top: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    .block__title {
+        text-align: left;
+        text-transform: none;
+        @media only screen and (max-width: 992px) {
+            padding-left: 20px;
+        }
+    }
+
+    &__title {
+        display: flex;
+        align-items: center;
+        
+    }
+    
+    &__inner {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 40px;
+        padding: 0 20px;
+        @media only screen and (max-width: 992px) {
+            padding: 0 10px;
+        }
+    }
+
+    &__item {
+        margin-right: 20px;
+        margin-bottom: 80px;
+        @media only screen and (max-width: 414px) {
+            margin-right: 0;
+            margin-bottom: 40px;
+        }
+        
+    }
+
+    &__item-link:hover {
+        .page__video-play {
+            opacity: 0;
+            transition: 0.2s;
+        }
+        .page__item-description {
+            opacity: 1;
+            transition: 0.2s;
+        }
+        .page__item-free {
+            opacity: 0;
+            transition: 0.2s;
+        }
+    }
+
+    &__item-video {
+        position: relative;
+        width: 301px;
+        height: 261px;
+        border-radius: 10px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        &:after {
+            position: absolute;
+            content: "";
+            width: 301px;
+            height: 261px;
+            border-radius: 10px;
+            top: 0;
+            left: 0;
+            background-color: #000;
+            opacity: 0.5;
+        }
+    }
+    
+    &__item-free {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        font-family: OSans-SB;
+        font-size: 13px;
+        line-height: 18px;
+        color: #000000;
+        z-index: 1;
+        span {
+            background: #FFB800;
+            border-radius: 27px;
+            padding: 5px 15px;
+        }
+    }
+
+    &__item-description {
+        position: absolute;
+        margin: 30px;
+        color: #fff;
+        font-family: OSans-R;
+        font-size: 13px;
+        line-height: 18px;
+        z-index: 1;
+        opacity: 0;
+        .title {
+            font-family: OSans-B;
+            padding-bottom: 15px;
+            font-size: 14px;
+            line-height: 17px;
+        }
+
+    }
+
+    &__video-play {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 1;
+        transform: translate(-50%, -50%);
+        img {
+            width: 43px;
+            height: 43px;
+        }
+    }
+    
+    &__video-info {
+        position: absolute;
+        right: 20px;
+        bottom: 20px;
+        font-family: OSans-SB;
+        font-size: 13px;
+        line-height: 18px;
+        color: #000000;
+        z-index: 1;
+    }
+    
+    &__video-title, &__video-duration {
+        padding: 5px 10px;
+        background-color: #fff;
+        border-radius: 27px;
+    }
+
+    &__video-duration {
+        margin-left: 10px;
+    }
+
+    &__item-title {
+        padding-top: 20px;
+        font-family: OSans-B;
+        font-size: 16px;
+        line-height: 22px;
+    }
+    
+    &__item-teacher,
+    &__item-level {
+        font-family: OSans-R;
+    }
+    
+    &__item-level {
+        font-size: 13px;
+        line-height: 18px;
+        color: #525252;
+    }
+    
+    &__item-teacher {
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+        span {
+            padding-left: 10px;
+            font-size: 14px;
+            line-height: 19px;
+            color: #000000;
+        }
+        img {
+            width: 12px;
+            height: 14px;
+        }
+    }
+    
+    &__more {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        span {
+            font-family: OSans-SB;
+            font-size: 14px;
+            line-height: 17px;
+            color: #090909;
+            padding-left: 10px;
+        }
+        img {
+            width: 20px;
+            height: 20px;
+        }
+    }
+}
+
+// * ================== LESSONS PAGE ============================
+.lessons {
+    &__content {
+
+        flex: 1 1 80%;
+        @media only screen and (max-width: 992px) {
+            flex: 1 1 auto;
+        }
+
+    }
+
+    &__title {
+        padding-left: 60px;
+        text-align: left;
+        text-transform: none; 
+    }
+    
+}
+
+
+// * ================== DETAIL PAGE =============================
+
+.details {
+    &__content {
+        max-width: 1010px;
+        margin: 0 auto;
+        width: 100%;
+
+    }
+    &__inner {
+        padding: 0 0 60px;
+        border-bottom: 1px solid rgba(196, 196, 196, .5);
+    }
+    &__video {
+        
+            border-radius: 8px;
+            overflow: hidden;
+        video {
+            border-radius: 8px;
+            overflow: hidden;
+            width: 100%;
+            height: auto;
+            max-width: 100%;
+        }
+    }
+
+    &__video-info {
+        width: 100%;
+        margin-top: 30px;
+        display: flex;
+        padding-bottom: 30px;
+        border-bottom: 1px solid rgba(196, 196, 196, .5);
+        
+
+    }
+
+    &__video-teacher,
+    &__video-level,
+    &__video-type,
+    &__video-favorite {
+        font-family: OSans-R;
+        font-size: 14px;
+        line-height: 19px;
+        color: #000000;
+        margin-right: 70px;
+        img {
+            margin-right: 5px;
+        }
+    }
+    &__video-description {
+        margin-top: 20px;
+        margin-bottom: 60px;
+        .title {
+            font-family: OSans-SB;
+            font-size: 16px;
+            line-height: 22px;
+            color: #000000;
+        }
+        .text {
+            margin-top: 15px;
+            font-family: OSans-R;
+            font-size: 13px;
+            line-height: 18px;
+            color: #000000;
+        }
+    }
+
+    &__video-similar {
+        width: 100%;
+        .page__item {
+            margin: 0 20px;
+        }
+        
+    }
+
+    &__video-slider {
+        margin-top: 50px;
+    }
+
+    &__video-similar,
+    &__comments {
+        margin-top: 50px; 
+        .page__title {
+            justify-content: center;
+
+        }
+    }
+    &__comments-form {
+        display: flex;
+        padding-bottom: 30px;
+        textarea {
+            width: 100%;
+            height: 153px;
+            border: 1px solid #A9A9A9;
+            border-radius: 3px;
+            padding: 20px;
+            font-family: OSans-R;
+            font-size: 13px;
+            line-height: 18px;
+            color: #000000;
+            resize: none;
+            outline: none;
+            &::placeholder {
+                font-family: OSans-R;
+                font-size: 13px;
+                line-height: 18px;
+                color: #000000;
+            }
+        }
+        
+    }
+    &__comments-add {
+        margin-top: 50px;
+    }
+
+    &__comments-img,
+    &__answer-img {
+        width: 76px;
+        height: 76px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-right: 25px;
+        img {
+            width: 76px;
+            height: auto;
+        }
+    }
+    &__comments-body,
+    &__answer-body {
+        width: 100%;
+        .username {
+            font-family: OSans-SB;
+            font-size: 15px;
+            line-height: 20px;
+            padding-bottom: 15px;
+        }
+        .time {
+            padding-left: 15px;
+            opacity: 0.78;
+        }
+        .time,
+        .comment {
+            font-family: OSans-R;
+            font-size: 13px;
+            line-height: 18px;
+        }
+        .comment {
+            padding-bottom: 15px;
+        }
+        .answer {
+            
+            text-decoration-line: underline;
+        }
+        .likes, 
+        .answer {
+            font-family: OSans-SB;
+            font-size: 13px;
+            line-height: 18px;
+        }
+        .likes {
+            padding: 0 15px 0 20px;
+        }
+        .thumb-up,
+        .thumb-down {
+            opacity: 0.3;
+            &.active {
+                opacity: 1;
+            }
+        }
+        .thumb-down {
+            padding-left: 15px;
+        }
+
+    }
+    &__comments-submit {
+        
+        display: flex;
+        justify-content: flex-end;
+        input {
+            cursor: pointer;
+        }
+    }
+
+    &__comments-added {
+        margin-top: 50px;
+        border-bottom: 1px solid rgba(196, 196, 196, .5);
+    }
+
+    &__answer {
+        margin-top: 40px;
+    }
+    &__answer-img {
+        width: 46px;
+        height: 46px;
+        img {
+            width: 46px;
+            height: auto;
+        }
+    }
+    &__answer-body {
+        color: #575757;
+        .username {
+            font-size: 13px;
+            line-height: 18px;
+        }
+        .time,
+        .comment {
+            font-size: 12px;
+            line-height: 16px;
+        }
+    }
+
+
+
+
+	
+    &__title {
+        p {
+            display: block;
+            margin-left: 20px;
+            font-family: OSans-SB;
+            font-size: 13px;
+            line-height: 18px;
+            color: #000000;
+            background: #FFB800;
+            border-radius: 27px;
+            padding: 5px 15px;
+        
+
+        }
+    }
+}
