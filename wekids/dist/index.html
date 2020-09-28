@@ -1,0 +1,1396 @@
+<!DOCTYPE html>
+<html lang="ua">
+
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/style.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>weKids Project</title>
+</head>
+
+<body>
+	<div class="container">
+		<header class="header">
+	<div class="header__top">
+		<div class="header__logo">
+			<a href="#"><img src="img/logo.png" alt="logo" loading="lazy"></a>
+		</div>
+		<div class="header__logo-mobile">
+			<a href="#"><img src="img/logo-mobile.png" alt="logo-mobile" loading="lazy"></a>
+		</div>
+		<div class="header__inner">
+			<div class="header__inner-top">
+				<div class="header__inner-menu">
+					<ul class="middle-menu">
+						<li class="middle-menu__item"><a class="middle-menu__link" href="#">О нас</a></li>
+						<li class="middle-menu__item"><a class="middle-menu__link" href="#">Гарантия/Возврат</a></li>
+						<li class="middle-menu__item"><a class="middle-menu__link" href="#">Доставка и оплата</a></li>
+						<li class="middle-menu__item"><a class="middle-menu__link" href="#">Частые вопросы</a></li>
+						<li class="middle-menu__item"><a class="middle-menu__link" href="#">Отзывы</a></li>
+						<li class="middle-menu__item"><a class="middle-menu__link" href="#">Контакты</a></li>
+					</ul>
+				</div>
+				<div class="header__login">
+					<a class="login__link" href="#">
+						<svg class="icon">
+							<use xlink:href="img/sprite.svg#user"></use>
+						</svg>
+						Вход/Регистрация
+					</a>
+				</div>
+			</div>
+
+			<div class="header__inner-bottom">
+				<div class="header__search">
+					<input type="text" placeholder="Я ищу...">
+				</div>
+				<div class="header__inner-wrapper">
+					<div class="header__call">
+						<div class="header__call-top">
+							<svg class="icon icon__phone">
+								<use xlink:href="img/sprite.svg#phone"></use>
+							</svg>
+							<p class="header__call-number">
+								050 339 56 00
+							</p>
+							<svg class="icon icon__phone">
+								<use xlink:href="img/sprite.svg#down-arrow"></use>
+							</svg>
+						</div>
+						<p class="header__call-order">
+							Заказать звонок
+						</p>
+					</div>
+					<div class="header__icons">
+						<svg class="icon icon__header-justice">
+							<use xlink:href="img/sprite.svg#justice"></use>
+						</svg>
+						<svg class="icon icon__header-heart">
+							<use xlink:href="img/sprite.svg#heart"></use>
+						</svg>
+						<svg class="icon icon__header-cart">
+							<use xlink:href="img/sprite.svg#cart"></use>
+						</svg>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<nav class="header__bottom">
+		<ul class="header__cat-menu">
+			<li class="header__cat-menu-item">
+				<div class="header__cat-menu-item-wrapper">
+					<svg class="header__cat-menu-icon icon-menu">
+						<use xlink:href="img/sprite.svg#menu"></use>
+					</svg>
+					<p class="header__cat-menu-title">КАТАЛОГ ТОВАРОВ</p>
+					<svg class="header__cat-menu-icon icon-arrow-down">
+						<use xlink:href="img/sprite.svg#down-arrow"></use>
+					</svg>
+				</div>
+				
+				<div class="cat__menu-wrapper">
+	<ul class="cat__menu">
+		<li class="cat__menu-item">
+			<a class="cat__menu-link" href="#">
+				<span class="cat__menu-icon">
+					<svg>
+						<use xlink:href="img/sprite.svg#bycicle"></use>
+					</svg>
+				</span>
+				<p class="cat__menu-name">Велосипеды</p>
+			</a>
+
+			<!-- ! submenu -->
+			<div class="cat__submenu-wrapper">
+				<ul class="cat__submenu">
+					<li class="cat__submenu-item">Тип</li>
+					<li class="cat__submenu-item">
+						<a href="#" class="cat__submenu-link">
+							Двухколесные
+						</a>
+						<!-- ! filter 2wheels-->
+						<div class="cat__filter-wrapper">
+							<div class="cat__filter">
+								<ul class="cat__filter-list">
+									<li class="cat__filter-item">Диаметр</li>
+									<li class="cat__filter-item">
+										<input type="checkbox" id="12inch" value="12inch" checked hidden>
+										<label for="12inch">12” дюймов</label>
+									</li>
+									<li class="cat__filter-item">
+										<input type="checkbox" id="14inch" value="14inch" hidden>
+										<label for="14inch">14” дюймов</label>	
+									</li>
+									<li class="cat__filter-item">
+										<input type="checkbox" id="16inch" value="16inch" hidden>
+										<label for="16inch">16” дюймов</label>	
+									</li>
+									<li class="cat__filter-item">
+										<input type="checkbox" id="18inch" value="18inch" hidden>
+										<label for="18inch">18” дюймов</label>	
+									</li>
+									<li class="cat__filter-item">
+										<input type="checkbox" id="20inch" value="20inch" hidden>
+										<label for="20inch">20” дюймов</label>	
+									</li>
+									<li class="cat__filter-item">
+										<input type="checkbox" id="24inch" value="24inch" hidden>
+										<label for="24inch">24” дюймов</label>	
+									</li>
+									<li class="cat__filter-item">
+										<input type="checkbox" id="26inch" value="26inch" hidden>
+										<label for="26inch">26” дюймов</label>	
+									</li>
+								</ul>
+	
+								<ul class="cat__filter-list">
+									<li class="cat__filter-item">Рост</li>
+									<li class="cat__filter-item">
+										<input type="checkbox" id="82-108cm" value="82-108cm" hidden>
+										<label for="82-108cm">82-108 см.</label>
+									</li>
+									<li class="cat__filter-item">
+										<input type="checkbox" id="98-106cm" value="98-106cm" hidden>
+										<label for="98-106cm">98-106 см.</label>	
+									</li>
+									<li class="cat__filter-item">
+										<input type="checkbox" id="104-122cm" value="104-122cm" hidden>
+										<label for="104-122cm">104-122 см.</label>	
+									</li>
+									<li class="cat__filter-item">
+										<input type="checkbox" id="112-124cm" value="112-124cm" hidden>
+										<label for="112-124cm">112-124 см.</label>	
+									</li>
+									<li class="cat__filter-item">
+										<input type="checkbox" id="120-130cm" value="120-130cm" hidden>
+										<label for="120-130cm">120-130 см.</label>	
+									</li>
+									<li class="cat__filter-item">
+										<input type="checkbox" id="127-142cm" value="127-142cm" hidden>
+										<label for="127-142cm">127-142 см.</label>	
+									</li>
+									<li class="cat__filter-item">
+										<input type="checkbox" id="140-150cm" value="140-150cm" hidden>
+										<label for="140-150cm">140-158 см.</label>	
+									</li>
+								</ul>
+
+								<ul class="cat__filter-list">
+									<li class="cat__filter-item">Возраст</li>
+									<li class="cat__filter-item">
+										<input type="checkbox" id="from2to4" value="from2to4" hidden>
+										<label for="from2to4">от 2 до 4 лет</label>
+									</li>
+									<li class="cat__filter-item">
+										<input type="checkbox" id="from4to6" value="from4to6" hidden>
+										<label for="from4to6">от 4 до 6 лет</label>	
+									</li>
+									<li class="cat__filter-item">
+										<input type="checkbox" id="from6to8" value="from6to8" hidden>
+										<label for="from6to8">от 6 до 8 лет</label>	
+									</li>
+									<li class="cat__filter-item">
+										<input type="checkbox" id="form8to12" value="form8to12" hidden>
+										<label for="form8to12">от 8 до 12 лет</label>	
+									</li>
+									<li class="cat__filter-item">
+										<input type="checkbox" id="from12" value="from12" hidden>
+										<label for="from12">от 12 лет</label>	
+									</li>
+									<li class="cat__filter-item">Пол ребенка</li>
+									<li class="cat__filter-item">
+										<input type="checkbox" id="for-boys" value="for-boys" hidden>
+										<label for="for-boys">Для мальчика</label>	
+									</li>
+									<li class="cat__filter-item">
+										<input type="checkbox" id="for-girls" value="for-girls" hidden>
+										<label for="for-girls">Для девочки</label>	
+									</li>
+								</ul>
+
+								<ul class="cat__filter-list">
+									<li class="cat__filter-item">Материал рамы</li>
+									<li class="cat__filter-item">
+										<input type="checkbox" id="steel" value="steel" hidden>
+										<label for="steel">Сталь</label>
+									</li>
+									<li class="cat__filter-item">
+										<input type="checkbox" id="aluminium" value="aluminium" hidden>
+										<label for="aluminium">Алюминий</label>	
+									</li>
+									<li class="cat__filter-item">
+										<input type="checkbox" id="magnium" value="magnium" hidden>
+										<label for="magnium">Магний</label>	
+									</li>
+									<li class="cat__filter-item">Тип тормозов</li>
+									<li class="cat__filter-item">
+										<input type="checkbox" id="rim" value="rim" hidden>
+										<label for="rim">Ободные</label>	
+									</li>
+									<li class="cat__filter-item">
+										<input type="checkbox" id="disc" value="disc" hidden>
+										<label for="disc">Дисковые</label>	
+									</li>
+									<li class="cat__filter-item">
+										<input type="checkbox" id="legs" value="legs" hidden>
+										<label for="legs">Ножные</label>	
+									</li>
+									<li class="cat__filter-item">
+										<input type="checkbox" id="rim-and-legs" value="rim-and-legs" hidden>
+										<label for="rim-and-legs">Ободный и ножной</label>	
+									</li>
+								</ul>
+
+								<ul class="cat__filter-list">
+									<li class="cat__filter-item">Топ бренды</li>
+									<li class="cat__filter-item">
+										<input type="checkbox" id="hammer" value="hammer" hidden>
+										<label for="hammer">Hammer</label>
+									</li>
+									<li class="cat__filter-item">
+										<input type="checkbox" id="mars" value="mars" hidden>
+										<label for="mars">Mars</label>	
+									</li>
+									<li class="cat__filter-item">
+										<input type="checkbox" id="pride" value="pride" hidden>
+										<label for="pride">Pride</label>	
+									</li>
+									<li class="cat__filter-item">
+										<input type="checkbox" id="formula" value="formula" hidden>
+										<label for="formula">Formula</label>	
+									</li>
+									<li class="cat__filter-item">
+										<input type="checkbox" id="royal-baby" value="royal-baby" hidden>
+										<label for="royal-baby">Royal Baby</label>	
+									</li>
+								</ul>
+							</div>
+							
+						</div>
+						<!--! filter 2wheels end -->
+					</li>
+					<li class="cat__submenu-item">
+						<a href="#" class="cat__submenu-link">
+							Трехколесные
+						</a>
+						<!-- ! filter 3wheels-->
+						<div class="cat__filter-wrapper">
+							<div class="cat__filter">
+								<ul class="cat__filter-list wheels-three">
+									<li class="cat__filter-item">Материал колес</li>
+									<li class="cat__filter-item">
+										<input type="checkbox" id="inflate" value="inflate" checked hidden>
+										<label for="inflate">Надувные</label>
+									</li>
+									<li class="cat__filter-item">
+										<input type="checkbox" id="foamy" value="foamy" hidden>
+										<label for="foamy">Пенные</label>	
+									</li>
+									<li class="cat__filter-item">
+										<input type="checkbox" id="rubberized" value="rubberized" hidden>
+										<label for="rubberized">Прорезиненные</label>	
+									</li>
+									<li class="cat__filter-item">
+										<input type="checkbox" id="polyurethane" value="polyurethane" hidden>
+										<label for="polyurethane">Полиуретановые</label>	
+									</li>
+									<li class="cat__filter-item">Материал рамы</li>
+									<li class="cat__filter-item">
+										<input type="checkbox" id="frame-steel" value="frame-steel" hidden>
+										<label for="frame-steel">Сталь</label>	
+									</li>
+									<li class="cat__filter-item">
+										<input type="checkbox" id="frame-aluminium" value="frame-aluminium" hidden>
+										<label for="frame-aluminium">Алюминий</label>	
+									</li>
+								</ul>
+	
+								<ul class="cat__filter-list wheels-three">
+									<li class="cat__filter-item">Пол ребенка</li>
+									<li class="cat__filter-item">
+										<input type="checkbox" id="for-boys-3wheels" value="for-boys-3wheels" hidden>
+										<label for="for-boys-3wheels">Для мальчика</label>	
+									</li>
+									<li class="cat__filter-item">
+										<input type="checkbox" id="for-girls-3wheels" value="for-girls-3wheels" hidden>
+										<label for="for-girls-3wheels">Для девочки</label>	
+									</li>
+									<li class="cat__filter-item">Складной</li>
+									<li class="cat__filter-item">
+										<input type="checkbox" id="folding-yes" value="folding-yes" hidden>
+										<label for="folding-yes">Да</label>
+									</li>
+									<li class="cat__filter-item">
+										<input type="checkbox" id="folding-no" value="folding-no" hidden>
+										<label for="folding-no">Нет</label>	
+									</li>
+								</ul>
+
+								<ul class="cat__filter-list wheels-three">
+									<li class="cat__filter-item">Музыкальная панель</li>
+									<li class="cat__filter-item">
+										<input type="checkbox" id="music-panel-yes" value="music-panel-yes" hidden>
+										<label for="music-panel-yes">Есть</label>
+									</li>
+									<li class="cat__filter-item">Наклон спинки</li>
+									<li class="cat__filter-item">
+										<input type="checkbox" id="backrest-tilt-yes" value="backrest-tilt-yes" hidden>
+										<label for="backrest-tilt-yes">Есть</label>	
+									</li>
+									<li class="cat__filter-item">Поворотное сиденье</li>
+									<li class="cat__filter-item">
+										<input type="checkbox" id="swivel-seat-yes" value="swivel-seat-yes" hidden>
+										<label for="swivel-seat-yes">Есть</label>	
+									</li>
+									
+								</ul>
+
+								<ul class="cat__filter-list wheels-three">
+									<li class="cat__filter-item">Цвет</li>
+									<li class="cat__filter-item">
+										<input type="checkbox" id="blue-3w" value="blue-3w" hidden>
+										<label for="blue-3w">Синий</label>
+									</li>
+									<li class="cat__filter-item">
+										<input type="checkbox" id="light-blue-3w" value="light-blue-3w" hidden>
+										<label for="light-blue-3w">Голубой</label>	
+									</li>
+									<li class="cat__filter-item">
+										<input type="checkbox" id="red-3w" value="red-3w" hidden>
+										<label for="red-3w">Красный</label>	
+									</li>
+									<li class="cat__filter-item">
+										<input type="checkbox" id="pink-3w" value="pink-3w" hidden>
+										<label for="pink-3w">Розовый</label>	
+									</li>
+									<li class="cat__filter-item">
+										<input type="checkbox" id="yellow-3w" value="yellow-3w" hidden>
+										<label for="yellow-3w">Желтый</label>	
+									</li>
+									<li class="cat__filter-item">
+										<input type="checkbox" id="green-3w" value="green-3w" hidden>
+										<label for="green-3w">Зеленый</label>	
+									</li>
+									<li class="cat__filter-item">
+										<input type="checkbox" id="black-3w" value="black-3w" hidden>
+										<label for="black-3w">Черный</label>	
+									</li>
+									<li class="cat__filter-item">
+										<input type="checkbox" id="white-3w" value="white-3w" hidden>
+										<label for="white-3w">Белый</label>	
+									</li>
+								</ul>
+
+								<ul class="cat__filter-list wheels-three">
+									<li class="cat__filter-item">Топ бренды</li>
+									<li class="cat__filter-item">
+										<input type="checkbox" id="best-trike" value="best-trike" hidden>
+										<label for="best-trike">Best Trike</label>
+									</li>
+									<li class="cat__filter-item">
+										<input type="checkbox" id="turbo-trike" value="turbo-trike" hidden>
+										<label for="turbo-trike">Turbo Trike</label>	
+									</li>
+									<li class="cat__filter-item">
+										<input type="checkbox" id="lamborghini" value="lamborghini" hidden>
+										<label for="lamborghini">Lamborghini</label>	
+									</li>
+									<li class="cat__filter-item">
+										<input type="checkbox" id="galileo" value="galileo" hidden>
+										<label for="galileo">Galileo</label>	
+									</li>
+									<li class="cat__filter-item">
+										<input type="checkbox" id="tilly" value="tilly" hidden>
+										<label for="tilly">Tilly</label>	
+									</li>
+								</ul>
+							</div>
+							
+						</div>
+						<!--! filter 3wheels end -->
+					</li>
+				</ul>
+			</div>
+			
+
+			<!--! submenu end -->
+
+		</li>
+		<li class="cat__menu-item">
+			<a class="cat__menu-link" href="#">
+				<p class="cat__menu-icon">
+					<svg>
+						<use xlink:href="img/sprite.svg#pram"></use>
+					</svg>
+				</p>
+				<p class="cat__menu-name">Коляски</p>
+			</a>
+		</li>
+		<li class="cat__menu-item">
+			<a class="cat__menu-link" href="#">
+				<p class="cat__menu-icon">
+					<svg>
+						<use xlink:href="img/sprite.svg#car-seat"></use>
+					</svg>
+				</p>
+				<p class="cat__menu-name">Автокресла</p>
+			</a>
+		</li>
+		<li class="cat__menu-item">
+			<a class="cat__menu-link" href="#">
+				<p class="cat__menu-icon">
+					<svg>
+						<use xlink:href="img/sprite.svg#electro-car"></use>
+					</svg>	
+				</p>
+				<p class="cat__menu-name">Электромобили</p>
+			</a>
+		</li>
+		<li class="cat__menu-item">
+			<a class="cat__menu-link" href="#">
+				<p class="cat__menu-icon">
+					<svg>
+						<use xlink:href="img/sprite.svg#push-car"></use>
+					</svg>
+				</p>
+				<p class="cat__menu-name">Толокары</p>
+			</a>
+			
+		</li>
+		<li class="cat__menu-item">
+			<a class="cat__menu-link" href="#">
+				<p class="cat__menu-icon">
+					<svg>
+						<use xlink:href="img/sprite.svg#scooter"></use>
+					</svg>
+				</p>
+				<p class="cat__menu-name">Самокаты</p>
+			</a>
+		</li>
+		<li class="cat__menu-item">
+			<a class="cat__menu-link" href="#">
+				<p class="cat__menu-icon">
+					<svg>
+						<use xlink:href="img/sprite.svg#begovel"></use>
+					</svg>
+				</p>
+				<p class="cat__menu-name">Беговелы</p>
+			</a>
+		</li>
+		<li class="cat__menu-item">
+			<a class="cat__menu-link" href="#">
+				<p class="cat__menu-icon">
+					<svg>
+						<use xlink:href="img/sprite.svg#rc-model"></use>
+					</svg>
+				</p>
+				<p class="cat__menu-name">Радиомодели</p>
+			</a>
+		</li>
+		<li class="cat__menu-item">
+			<a class="cat__menu-link" href="#">
+				<p class="cat__menu-icon">
+					<svg>
+						<use xlink:href="img/sprite.svg#accessory"></use>
+					</svg>
+				</p>
+				<p class="cat__menu-name">Аксессуары</p>
+			</a>
+		</li>
+		<li class="cat__menu-item">
+			<a class="cat__menu-link discount" href="#">
+				<p class="cat__menu-icon">
+					<svg>
+						<use xlink:href="img/sprite.svg#percent"></use>
+					</svg>
+				</p>
+				<p class="cat__menu-name">Акции</p>
+			</a>
+		</li>
+	</ul>
+</div>
+			</li>
+			<li class="header__cat-menu-item"><a href="#" class="header__cat-menu-link">Велосипеды</a></li>
+			<li class="header__cat-menu-item"><a href="#" class="header__cat-menu-link">Коляски</a></li>
+			<li class="header__cat-menu-item"><a href="#" class="header__cat-menu-link">Автокресла</a></li>
+			<li class="header__cat-menu-item"><a href="#" class="header__cat-menu-link">Электромобили</a></li>
+			<li class="header__cat-menu-item"><a href="#" class="header__cat-menu-link">Толокары</a></li>
+			<li class="header__cat-menu-item"><a href="#" class="header__cat-menu-link">Самокаты</a></li>
+			<li class="header__cat-menu-item"><a href="#" class="header__cat-menu-link">Беговелы</a></li>
+			<li class="header__cat-menu-item"><a href="#" class="header__cat-menu-link">Другие</a></li>
+		</ul>
+	</nav>
+
+	
+
+</header>
+		<section class="main">
+	<div class="slider">
+		<div class="slider__item">
+			<img src="img/slider-1.png" loading="lazy" alt="slider-1">
+		</div>
+		<div class="slider__item">
+			<img src="img/slider-2.jpg" loading="lazy" alt="slider-1">
+		</div>
+	</div>
+	<div class="main__cat">
+		<div class="main__cat-item bicycle">
+			<div class="main__cat-item-wrapper">
+				<span>Велосипеды</span>
+				<a class="main__cat-link" href="#"><span>СМОТРЕТЬ</span></a>
+			</div>
+
+		</div>
+		<div class="main__cat-item pram">
+			<div class="main__cat-item-wrapper">
+				<span>Коляски</span>
+				<a class="main__cat-link" href="#"><span>СМОТРЕТЬ</span></a>
+			</div>
+		</div>
+		<div class="main__cat-item car-seat">
+			<div class="main__cat-item-wrapper">
+				<span>Автокресла</span>
+				<a class="main__cat-link" href="#"><span>СМОТРЕТЬ</span></a>
+			</div>
+		</div>
+		<div class="main__cat-item electrocar">
+			<div class="main__cat-item-wrapper">
+				<span>Электромобили</span>
+				<a class="main__cat-link" href="#"><span>СМОТРЕТЬ</span></a>
+			</div>
+
+		</div>
+		<div class="main__cat-item scooter">
+			<div class="main__cat-item-wrapper">
+				<span>Самокаты</span>
+				<a class="main__cat-link" href="#"><span>СМОТРЕТЬ</span></a>
+			</div>
+		</div>
+		<div class="main__cat-item begovel">
+			<div class="main__cat-item-wrapper">
+				<span>Беговелы</span>
+				<a class="main__cat-link" href="#"><span>СМОТРЕТЬ</span></a>
+			</div>
+
+		</div>
+		<div class="main__cat-item pushcar">
+			<div class="main__cat-item-wrapper">
+				<span>Толокары</span>
+				<a class="main__cat-link" href="#"><span>СМОТРЕТЬ</span></a>
+			</div>
+
+		</div>
+		<div class="main__cat-item rcmodel">
+			<div class="main__cat-item-wrapper">
+				<span>Радиомодели</span>
+				<a class="main__cat-link" href="#"><span>СМОТРЕТЬ</span></a>
+			</div>
+
+		</div>
+	</div>
+	<div class="main__tabs">
+		<ul class="main__tabs-list">
+			<li class="main__tab-item active" data-tab="hits">Хиты</li>
+			<li class="main__tab-item" data-tab="action">Акции</li>
+			<li class="main__tab-item" data-tab="newest">Новинки</li>
+		</ul>
+
+		<div id="hits" class="main__tab-content active">
+			<div class="main__slider-hits">
+				
+				<div class="main__cards-slider-item-hits">
+					<div class="card main-tabs">
+						<img class="card__image main-tab" src="img/card-image.jpg" alt="card-iamge" loading="lazy">
+						<div class="card__colors">
+							<div class="card__color-item">
+								<div class="card__color-half black"></div>
+								<div class="card__color-half black"></div>
+							</div>
+							<div class="card__color-item">
+								<div class="card__color-half white"></div>
+								<div class="card__color-half white"></div>
+							</div>
+							<div class="card__color-item">
+								<div class="card__color-half red"></div>
+								<div class="card__color-half red"></div>
+							</div>
+							<div class="card__color-item">
+								<div class="card__color-half blue"></div>
+								<div class="card__color-half white"></div>
+							</div>
+						</div>
+						<div class="card__description">
+							Велосипед 18-Galaxy Рама и что там ещё может быть здесь то в д...
+						</div>
+						<div class="card__rate">
+							<div class="card__rate-stars">
+								<div class="card__star amber">
+									<svg>
+										<use xlink:href="img/sprite.svg#star"></use>
+									</svg>
+								</div>
+								<div class="card__star amber">
+									<svg>
+										<use xlink:href="img/sprite.svg#star"></use>
+									</svg>
+								</div>
+								<div class="card__star amber">
+									<svg>
+										<use xlink:href="img/sprite.svg#star"></use>
+									</svg>
+								</div>
+								<div class="card__star half-filed">
+									<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M13.9636 5.37035C13.8719 5.08687 13.6205 4.88552 13.323 4.85871L9.28222 4.49181L7.68438 0.751919C7.56657 0.477834 7.29825 0.300415 7.00013 0.300415C6.70201 0.300415 6.4337 0.477834 6.31588 0.75256L4.71805 4.49181L0.676621 4.85871C0.379677 4.88616 0.128877 5.08687 0.0366966 5.37035C-0.0554842 5.65384 0.0296468 5.96478 0.254277 6.16078L3.30863 8.83947L2.40797 12.8069C2.34207 13.0986 2.45529 13.4001 2.69733 13.5751C2.82743 13.6691 2.97964 13.7169 3.13314 13.7169C3.26548 13.7169 3.39675 13.6813 3.51457 13.6108L7.00013 11.5276L10.4844 13.6108C10.7394 13.7641 11.0608 13.7501 11.3023 13.5751C11.5444 13.3996 11.6576 13.0979 11.5917 12.8069L10.691 8.83947L13.7453 6.16131C13.97 5.96478 14.0557 5.65437 13.9636 5.37035Z"
+											fill="url(#paint0_linear)" />
+										<defs>
+											<linearGradient id="paint0_linear" x1="18.5001" y1="13.5" x2="-1.49994" y2="13.5"
+												gradientUnits="userSpaceOnUse">
+												<stop offset="0.574805" stop-color="#C4C4C4" />
+												<stop offset="0.574805" stop-color="#FFC107" />
+											</linearGradient>
+										</defs>
+									</svg>
+								</div>
+								<div class="card__star silver">
+									<svg>
+										<use xlink:href="img/sprite.svg#star"></use>
+									</svg>
+								</div>
+	
+							</div>
+							<div class="card__rate-comments">
+								1 отзыв
+							</div>
+						</div>
+						<div class="card__prices">
+							<div class="card__discount-wrapper">
+								<div class="card__price-discount">4876</div>
+								<div class="card__discount">-10%</div>
+							</div>
+							<div class="card__price">
+								<span>4 112 ₴</span>
+							</div>
+						</div>
+					</div>
+				</div> <!--!ends item 1-->
+				<div class="main__cards-slider-item-hits">
+					<div class="card main-tabs">
+						<img class="card__image main-tab" src="img/card-image.jpg" alt="card-iamge" loading="lazy">
+						<div class="card__colors">
+							<div class="card__color-item">
+								<div class="card__color-half black"></div>
+								<div class="card__color-half black"></div>
+							</div>
+							<div class="card__color-item">
+								<div class="card__color-half white"></div>
+								<div class="card__color-half white"></div>
+							</div>
+							<div class="card__color-item">
+								<div class="card__color-half red"></div>
+								<div class="card__color-half red"></div>
+							</div>
+							<div class="card__color-item">
+								<div class="card__color-half blue"></div>
+								<div class="card__color-half white"></div>
+							</div>
+						</div>
+						<div class="card__description">
+							Велосипед 18-Galaxy Рама и что там ещё может быть здесь то в д...
+						</div>
+						<div class="card__rate">
+	
+							<div class="card__rate-comments">
+								<svg>
+									<use xlink:href="img/sprite.svg#speech-bubble"></use>
+								</svg>
+								1 отзыв
+							</div>
+						</div>
+						<div class="card__prices">
+							<div class="card__price right">
+								<span>4 112 ₴</span>
+							</div>
+						</div>
+					</div>
+				</div> <!--!ends item 2-->
+				<div class="main__cards-slider-item-hits">
+					<div class="card main-tabs">
+						<img class="card__image main-tab" src="img/card-image.jpg" alt="card-iamge" loading="lazy">
+						<div class="card__colors">
+							<div class="card__color-item">
+								<div class="card__color-half black"></div>
+								<div class="card__color-half black"></div>
+							</div>
+							<div class="card__color-item">
+								<div class="card__color-half white"></div>
+								<div class="card__color-half white"></div>
+							</div>
+							<div class="card__color-item">
+								<div class="card__color-half red"></div>
+								<div class="card__color-half red"></div>
+							</div>
+							<div class="card__color-item">
+								<div class="card__color-half blue"></div>
+								<div class="card__color-half white"></div>
+							</div>
+						</div>
+						<div class="card__description">
+							Велосипед 18-Galaxy Рама и что там ещё может быть здесь то в д...
+						</div>
+						<div class="card__rate">
+	
+							<div class="card__rate-comments">
+								<svg>
+									<use xlink:href="img/sprite.svg#speech-bubble"></use>
+								</svg>
+								Оставить отзыв
+							</div>
+						</div>
+						<div class="card__prices">
+							<div class="card__price right">
+								<span>4 112 ₴</span>
+							</div>
+						</div>
+					</div>
+				</div> <!--!ends item 3-->
+				<div class="main__cards-slider-item-hits">
+					<div class="card main-tabs">
+						<img class="card__image main-tab" src="img/card-image.jpg" alt="card-iamge" loading="lazy">
+						<div class="card__colors">
+							<div class="card__color-item">
+								<div class="card__color-half black"></div>
+								<div class="card__color-half black"></div>
+							</div>
+							<div class="card__color-item">
+								<div class="card__color-half white"></div>
+								<div class="card__color-half white"></div>
+							</div>
+							<div class="card__color-item">
+								<div class="card__color-half red"></div>
+								<div class="card__color-half red"></div>
+							</div>
+							<div class="card__color-item">
+								<div class="card__color-half blue"></div>
+								<div class="card__color-half white"></div>
+							</div>
+						</div>
+						<div class="card__description">
+							Велосипед 18-Galaxy Рама и что там ещё может быть здесь то в д...
+						</div>
+						<div class="card__rate">
+							<div class="card__rate-stars">
+								<div class="card__star amber">
+									<svg>
+										<use xlink:href="img/sprite.svg#star"></use>
+									</svg>
+								</div>
+								<div class="card__star amber">
+									<svg>
+										<use xlink:href="img/sprite.svg#star"></use>
+									</svg>
+								</div>
+								<div class="card__star amber">
+									<svg>
+										<use xlink:href="img/sprite.svg#star"></use>
+									</svg>
+								</div>
+								<div class="card__star half-filed">
+									<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M13.9636 5.37035C13.8719 5.08687 13.6205 4.88552 13.323 4.85871L9.28222 4.49181L7.68438 0.751919C7.56657 0.477834 7.29825 0.300415 7.00013 0.300415C6.70201 0.300415 6.4337 0.477834 6.31588 0.75256L4.71805 4.49181L0.676621 4.85871C0.379677 4.88616 0.128877 5.08687 0.0366966 5.37035C-0.0554842 5.65384 0.0296468 5.96478 0.254277 6.16078L3.30863 8.83947L2.40797 12.8069C2.34207 13.0986 2.45529 13.4001 2.69733 13.5751C2.82743 13.6691 2.97964 13.7169 3.13314 13.7169C3.26548 13.7169 3.39675 13.6813 3.51457 13.6108L7.00013 11.5276L10.4844 13.6108C10.7394 13.7641 11.0608 13.7501 11.3023 13.5751C11.5444 13.3996 11.6576 13.0979 11.5917 12.8069L10.691 8.83947L13.7453 6.16131C13.97 5.96478 14.0557 5.65437 13.9636 5.37035Z"
+											fill="url(#paint0_linear)" />
+										<defs>
+											<linearGradient id="paint0_linear" x1="18.5001" y1="13.5" x2="-1.49994" y2="13.5"
+												gradientUnits="userSpaceOnUse">
+												<stop offset="0.574805" stop-color="#C4C4C4" />
+												<stop offset="0.574805" stop-color="#FFC107" />
+											</linearGradient>
+										</defs>
+									</svg>
+								</div>
+								<div class="card__star silver">
+									<svg>
+										<use xlink:href="img/sprite.svg#star"></use>
+									</svg>
+								</div>
+	
+							</div>
+							<div class="card__rate-comments">
+								1 отзыв
+							</div>
+						</div>
+						<div class="card__prices">
+							<div class="card__discount-wrapper">
+								<div class="card__price-discount">4876</div>
+								<div class="card__discount">-10%</div>
+							</div>
+							<div class="card__price">
+								<span>4 112 ₴</span>
+							</div>
+						</div>
+					</div>
+				</div> <!--!ends item 4-->
+				<div class="main__cards-slider-item-hits">
+					<div class="card main-tabs">
+						<img class="card__image main-tab" src="img/card-image.jpg" alt="card-iamge" loading="lazy">
+						<div class="card__colors">
+							<div class="card__color-item">
+								<div class="card__color-half black"></div>
+								<div class="card__color-half black"></div>
+							</div>
+							<div class="card__color-item">
+								<div class="card__color-half white"></div>
+								<div class="card__color-half white"></div>
+							</div>
+							<div class="card__color-item">
+								<div class="card__color-half red"></div>
+								<div class="card__color-half red"></div>
+							</div>
+							<div class="card__color-item">
+								<div class="card__color-half blue"></div>
+								<div class="card__color-half white"></div>
+							</div>
+						</div>
+						<div class="card__description">
+							Велосипед 18-Galaxy Рама и что там ещё может быть здесь то в д...
+						</div>
+						<div class="card__rate">
+							<div class="card__rate-stars">
+								<div class="card__star amber">
+									<svg>
+										<use xlink:href="img/sprite.svg#star"></use>
+									</svg>
+								</div>
+								<div class="card__star amber">
+									<svg>
+										<use xlink:href="img/sprite.svg#star"></use>
+									</svg>
+								</div>
+								<div class="card__star amber">
+									<svg>
+										<use xlink:href="img/sprite.svg#star"></use>
+									</svg>
+								</div>
+								<div class="card__star half-filed">
+									<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M13.9636 5.37035C13.8719 5.08687 13.6205 4.88552 13.323 4.85871L9.28222 4.49181L7.68438 0.751919C7.56657 0.477834 7.29825 0.300415 7.00013 0.300415C6.70201 0.300415 6.4337 0.477834 6.31588 0.75256L4.71805 4.49181L0.676621 4.85871C0.379677 4.88616 0.128877 5.08687 0.0366966 5.37035C-0.0554842 5.65384 0.0296468 5.96478 0.254277 6.16078L3.30863 8.83947L2.40797 12.8069C2.34207 13.0986 2.45529 13.4001 2.69733 13.5751C2.82743 13.6691 2.97964 13.7169 3.13314 13.7169C3.26548 13.7169 3.39675 13.6813 3.51457 13.6108L7.00013 11.5276L10.4844 13.6108C10.7394 13.7641 11.0608 13.7501 11.3023 13.5751C11.5444 13.3996 11.6576 13.0979 11.5917 12.8069L10.691 8.83947L13.7453 6.16131C13.97 5.96478 14.0557 5.65437 13.9636 5.37035Z"
+											fill="url(#paint0_linear)" />
+										<defs>
+											<linearGradient id="paint0_linear" x1="18.5001" y1="13.5" x2="-1.49994" y2="13.5"
+												gradientUnits="userSpaceOnUse">
+												<stop offset="0.574805" stop-color="#C4C4C4" />
+												<stop offset="0.574805" stop-color="#FFC107" />
+											</linearGradient>
+										</defs>
+									</svg>
+								</div>
+								<div class="card__star silver">
+									<svg>
+										<use xlink:href="img/sprite.svg#star"></use>
+									</svg>
+								</div>
+	
+							</div>
+							<div class="card__rate-comments">
+								1 отзыв
+							</div>
+						</div>
+						<div class="card__prices">
+							<div class="card__discount-wrapper">
+								<div class="card__price-discount">4876</div>
+								<div class="card__discount">-10%</div>
+							</div>
+							<div class="card__price">
+								<span>4 112 ₴</span>
+							</div>
+						</div>
+					</div>
+				</div> <!--!ends item 5-->
+				<div class="main__cards-slider-item-hits">
+					<div class="card main-tabs">
+						<img class="card__image main-tab" src="img/card-image.jpg" alt="card-iamge" loading="lazy">
+						<div class="card__colors">
+							<div class="card__color-item">
+								<div class="card__color-half black"></div>
+								<div class="card__color-half black"></div>
+							</div>
+							<div class="card__color-item">
+								<div class="card__color-half white"></div>
+								<div class="card__color-half white"></div>
+							</div>
+							<div class="card__color-item">
+								<div class="card__color-half red"></div>
+								<div class="card__color-half red"></div>
+							</div>
+							<div class="card__color-item">
+								<div class="card__color-half blue"></div>
+								<div class="card__color-half white"></div>
+							</div>
+						</div>
+						<div class="card__description">
+							Велосипед 18-Galaxy Рама и что там ещё может быть здесь то в д...
+						</div>
+						<div class="card__rate">
+	
+							<div class="card__rate-comments">
+								<svg>
+									<use xlink:href="img/sprite.svg#speech-bubble"></use>
+								</svg>
+								Оставить отзыв
+							</div>
+						</div>
+						<div class="card__prices">
+							<div class="card__price right">
+								<span>4 112 ₴</span>
+							</div>
+						</div>
+					</div>
+				</div> <!--!ends item 6-->
+				
+				
+			</div>  <!-- * end slider hits-->
+		</div><!-- ? end tabs hits-->
+
+
+
+		<div id="action" class="main__tab-content">
+			<div class="main__slider-action">
+				
+				<div class="main__cards-slider-item-action">
+					<div class="card main-tabs">
+						<img class="card__image main-tab" src="img/card-image.jpg" alt="card-iamge" loading="lazy">
+						<div class="card__colors">
+							<div class="card__color-item">
+								<div class="card__color-half black"></div>
+								<div class="card__color-half black"></div>
+							</div>
+							<div class="card__color-item">
+								<div class="card__color-half white"></div>
+								<div class="card__color-half white"></div>
+							</div>
+							<div class="card__color-item">
+								<div class="card__color-half red"></div>
+								<div class="card__color-half red"></div>
+							</div>
+							<div class="card__color-item">
+								<div class="card__color-half blue"></div>
+								<div class="card__color-half white"></div>
+							</div>
+						</div>
+						<div class="card__description">
+							Велосипед 18-Galaxy Рама и что там ещё может быть здесь то в д...
+						</div>
+						<div class="card__rate">
+							<div class="card__rate-stars">
+								<div class="card__star amber">
+									<svg>
+										<use xlink:href="img/sprite.svg#star"></use>
+									</svg>
+								</div>
+								<div class="card__star amber">
+									<svg>
+										<use xlink:href="img/sprite.svg#star"></use>
+									</svg>
+								</div>
+								<div class="card__star amber">
+									<svg>
+										<use xlink:href="img/sprite.svg#star"></use>
+									</svg>
+								</div>
+								<div class="card__star half-filed">
+									<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M13.9636 5.37035C13.8719 5.08687 13.6205 4.88552 13.323 4.85871L9.28222 4.49181L7.68438 0.751919C7.56657 0.477834 7.29825 0.300415 7.00013 0.300415C6.70201 0.300415 6.4337 0.477834 6.31588 0.75256L4.71805 4.49181L0.676621 4.85871C0.379677 4.88616 0.128877 5.08687 0.0366966 5.37035C-0.0554842 5.65384 0.0296468 5.96478 0.254277 6.16078L3.30863 8.83947L2.40797 12.8069C2.34207 13.0986 2.45529 13.4001 2.69733 13.5751C2.82743 13.6691 2.97964 13.7169 3.13314 13.7169C3.26548 13.7169 3.39675 13.6813 3.51457 13.6108L7.00013 11.5276L10.4844 13.6108C10.7394 13.7641 11.0608 13.7501 11.3023 13.5751C11.5444 13.3996 11.6576 13.0979 11.5917 12.8069L10.691 8.83947L13.7453 6.16131C13.97 5.96478 14.0557 5.65437 13.9636 5.37035Z"
+											fill="url(#paint0_linear)" />
+										<defs>
+											<linearGradient id="paint0_linear" x1="18.5001" y1="13.5" x2="-1.49994" y2="13.5"
+												gradientUnits="userSpaceOnUse">
+												<stop offset="0.574805" stop-color="#C4C4C4" />
+												<stop offset="0.574805" stop-color="#FFC107" />
+											</linearGradient>
+										</defs>
+									</svg>
+								</div>
+								<div class="card__star silver">
+									<svg>
+										<use xlink:href="img/sprite.svg#star"></use>
+									</svg>
+								</div>
+	
+							</div>
+							<div class="card__rate-comments">
+								1 отзыв
+							</div>
+						</div>
+						<div class="card__prices">
+							<div class="card__discount-wrapper">
+								<div class="card__price-discount">4876</div>
+								<div class="card__discount">-10%</div>
+							</div>
+							<div class="card__price">
+								<span>4 112 ₴</span>
+							</div>
+						</div>
+					</div>
+				</div> <!--!ends item 1-->
+				<div class="main__cards-slider-item-action">
+					<div class="card main-tabs">
+						<img class="card__image main-tab" src="img/card-image.jpg" alt="card-iamge" loading="lazy">
+						<div class="card__colors">
+							<div class="card__color-item">
+								<div class="card__color-half black"></div>
+								<div class="card__color-half black"></div>
+							</div>
+							<div class="card__color-item">
+								<div class="card__color-half white"></div>
+								<div class="card__color-half white"></div>
+							</div>
+							<div class="card__color-item">
+								<div class="card__color-half red"></div>
+								<div class="card__color-half red"></div>
+							</div>
+							<div class="card__color-item">
+								<div class="card__color-half blue"></div>
+								<div class="card__color-half white"></div>
+							</div>
+						</div>
+						<div class="card__description">
+							Велосипед 18-Galaxy Рама и что там ещё может быть здесь то в д...
+						</div>
+						<div class="card__rate">
+	
+							<div class="card__rate-comments">
+								<svg>
+									<use xlink:href="img/sprite.svg#speech-bubble"></use>
+								</svg>
+								1 отзыв
+							</div>
+						</div>
+						<div class="card__prices">
+							<div class="card__price right">
+								<span>4 112 ₴</span>
+							</div>
+						</div>
+					</div>
+				</div> <!--!ends item 2-->
+				<div class="main__cards-slider-item-action">
+					<div class="card main-tabs">
+						<img class="card__image main-tab" src="img/card-image.jpg" alt="card-iamge" loading="lazy">
+						<div class="card__colors">
+							<div class="card__color-item">
+								<div class="card__color-half black"></div>
+								<div class="card__color-half black"></div>
+							</div>
+							<div class="card__color-item">
+								<div class="card__color-half white"></div>
+								<div class="card__color-half white"></div>
+							</div>
+							<div class="card__color-item">
+								<div class="card__color-half red"></div>
+								<div class="card__color-half red"></div>
+							</div>
+							<div class="card__color-item">
+								<div class="card__color-half blue"></div>
+								<div class="card__color-half white"></div>
+							</div>
+						</div>
+						<div class="card__description">
+							Велосипед 18-Galaxy Рама и что там ещё может быть здесь то в д...
+						</div>
+						<div class="card__rate">
+	
+							<div class="card__rate-comments">
+								<svg>
+									<use xlink:href="img/sprite.svg#speech-bubble"></use>
+								</svg>
+								Оставить отзыв
+							</div>
+						</div>
+						<div class="card__prices">
+							<div class="card__price right">
+								<span>4 112 ₴</span>
+							</div>
+						</div>
+					</div>
+				</div> <!--!ends item 3-->
+				<div class="main__cards-slider-item-action">
+					<div class="card main-tabs">
+						<img class="card__image main-tab" src="img/card-image.jpg" alt="card-iamge" loading="lazy">
+						<div class="card__colors">
+							<div class="card__color-item">
+								<div class="card__color-half black"></div>
+								<div class="card__color-half black"></div>
+							</div>
+							<div class="card__color-item">
+								<div class="card__color-half white"></div>
+								<div class="card__color-half white"></div>
+							</div>
+							<div class="card__color-item">
+								<div class="card__color-half red"></div>
+								<div class="card__color-half red"></div>
+							</div>
+							<div class="card__color-item">
+								<div class="card__color-half blue"></div>
+								<div class="card__color-half white"></div>
+							</div>
+						</div>
+						<div class="card__description">
+							Велосипед 18-Galaxy Рама и что там ещё может быть здесь то в д...
+						</div>
+						<div class="card__rate">
+							<div class="card__rate-stars">
+								<div class="card__star amber">
+									<svg>
+										<use xlink:href="img/sprite.svg#star"></use>
+									</svg>
+								</div>
+								<div class="card__star amber">
+									<svg>
+										<use xlink:href="img/sprite.svg#star"></use>
+									</svg>
+								</div>
+								<div class="card__star amber">
+									<svg>
+										<use xlink:href="img/sprite.svg#star"></use>
+									</svg>
+								</div>
+								<div class="card__star half-filed">
+									<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M13.9636 5.37035C13.8719 5.08687 13.6205 4.88552 13.323 4.85871L9.28222 4.49181L7.68438 0.751919C7.56657 0.477834 7.29825 0.300415 7.00013 0.300415C6.70201 0.300415 6.4337 0.477834 6.31588 0.75256L4.71805 4.49181L0.676621 4.85871C0.379677 4.88616 0.128877 5.08687 0.0366966 5.37035C-0.0554842 5.65384 0.0296468 5.96478 0.254277 6.16078L3.30863 8.83947L2.40797 12.8069C2.34207 13.0986 2.45529 13.4001 2.69733 13.5751C2.82743 13.6691 2.97964 13.7169 3.13314 13.7169C3.26548 13.7169 3.39675 13.6813 3.51457 13.6108L7.00013 11.5276L10.4844 13.6108C10.7394 13.7641 11.0608 13.7501 11.3023 13.5751C11.5444 13.3996 11.6576 13.0979 11.5917 12.8069L10.691 8.83947L13.7453 6.16131C13.97 5.96478 14.0557 5.65437 13.9636 5.37035Z"
+											fill="url(#paint0_linear)" />
+										<defs>
+											<linearGradient id="paint0_linear" x1="18.5001" y1="13.5" x2="-1.49994" y2="13.5"
+												gradientUnits="userSpaceOnUse">
+												<stop offset="0.574805" stop-color="#C4C4C4" />
+												<stop offset="0.574805" stop-color="#FFC107" />
+											</linearGradient>
+										</defs>
+									</svg>
+								</div>
+								<div class="card__star silver">
+									<svg>
+										<use xlink:href="img/sprite.svg#star"></use>
+									</svg>
+								</div>
+	
+							</div>
+							<div class="card__rate-comments">
+								1 отзыв
+							</div>
+						</div>
+						<div class="card__prices">
+							<div class="card__discount-wrapper">
+								<div class="card__price-discount">4876</div>
+								<div class="card__discount">-10%</div>
+							</div>
+							<div class="card__price">
+								<span>4 112 ₴</span>
+							</div>
+						</div>
+					</div>
+				</div> <!--!ends item 4-->
+				<div class="main__cards-slider-item-action">
+					<div class="card main-tabs">
+						<img class="card__image main-tab" src="img/card-image.jpg" alt="card-iamge" loading="lazy">
+						<div class="card__colors">
+							<div class="card__color-item">
+								<div class="card__color-half black"></div>
+								<div class="card__color-half black"></div>
+							</div>
+							<div class="card__color-item">
+								<div class="card__color-half white"></div>
+								<div class="card__color-half white"></div>
+							</div>
+							<div class="card__color-item">
+								<div class="card__color-half red"></div>
+								<div class="card__color-half red"></div>
+							</div>
+							<div class="card__color-item">
+								<div class="card__color-half blue"></div>
+								<div class="card__color-half white"></div>
+							</div>
+						</div>
+						<div class="card__description">
+							Велосипед 18-Galaxy Рама и что там ещё может быть здесь то в д...
+						</div>
+						<div class="card__rate">
+							<div class="card__rate-stars">
+								<div class="card__star amber">
+									<svg>
+										<use xlink:href="img/sprite.svg#star"></use>
+									</svg>
+								</div>
+								<div class="card__star amber">
+									<svg>
+										<use xlink:href="img/sprite.svg#star"></use>
+									</svg>
+								</div>
+								<div class="card__star amber">
+									<svg>
+										<use xlink:href="img/sprite.svg#star"></use>
+									</svg>
+								</div>
+								<div class="card__star half-filed">
+									<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M13.9636 5.37035C13.8719 5.08687 13.6205 4.88552 13.323 4.85871L9.28222 4.49181L7.68438 0.751919C7.56657 0.477834 7.29825 0.300415 7.00013 0.300415C6.70201 0.300415 6.4337 0.477834 6.31588 0.75256L4.71805 4.49181L0.676621 4.85871C0.379677 4.88616 0.128877 5.08687 0.0366966 5.37035C-0.0554842 5.65384 0.0296468 5.96478 0.254277 6.16078L3.30863 8.83947L2.40797 12.8069C2.34207 13.0986 2.45529 13.4001 2.69733 13.5751C2.82743 13.6691 2.97964 13.7169 3.13314 13.7169C3.26548 13.7169 3.39675 13.6813 3.51457 13.6108L7.00013 11.5276L10.4844 13.6108C10.7394 13.7641 11.0608 13.7501 11.3023 13.5751C11.5444 13.3996 11.6576 13.0979 11.5917 12.8069L10.691 8.83947L13.7453 6.16131C13.97 5.96478 14.0557 5.65437 13.9636 5.37035Z"
+											fill="url(#paint0_linear)" />
+										<defs>
+											<linearGradient id="paint0_linear" x1="18.5001" y1="13.5" x2="-1.49994" y2="13.5"
+												gradientUnits="userSpaceOnUse">
+												<stop offset="0.574805" stop-color="#C4C4C4" />
+												<stop offset="0.574805" stop-color="#FFC107" />
+											</linearGradient>
+										</defs>
+									</svg>
+								</div>
+								<div class="card__star silver">
+									<svg>
+										<use xlink:href="img/sprite.svg#star"></use>
+									</svg>
+								</div>
+	
+							</div>
+							<div class="card__rate-comments">
+								1 отзыв
+							</div>
+						</div>
+						<div class="card__prices">
+							<div class="card__discount-wrapper">
+								<div class="card__price-discount">4876</div>
+								<div class="card__discount">-10%</div>
+							</div>
+							<div class="card__price">
+								<span>4 112 ₴</span>
+							</div>
+						</div>
+					</div>
+				</div> <!--!ends item 5-->
+				<div class="main__cards-slider-item-action">
+					<div class="card main-tabs">
+						<img class="card__image main-tab" src="img/card-image.jpg" alt="card-iamge" loading="lazy">
+						<div class="card__colors">
+							<div class="card__color-item">
+								<div class="card__color-half black"></div>
+								<div class="card__color-half black"></div>
+							</div>
+							<div class="card__color-item">
+								<div class="card__color-half white"></div>
+								<div class="card__color-half white"></div>
+							</div>
+							<div class="card__color-item">
+								<div class="card__color-half red"></div>
+								<div class="card__color-half red"></div>
+							</div>
+							<div class="card__color-item">
+								<div class="card__color-half blue"></div>
+								<div class="card__color-half white"></div>
+							</div>
+						</div>
+						<div class="card__description">
+							Велосипед 18-Galaxy Рама и что там ещё может быть здесь то в д...
+						</div>
+						<div class="card__rate">
+	
+							<div class="card__rate-comments">
+								<svg>
+									<use xlink:href="img/sprite.svg#speech-bubble"></use>
+								</svg>
+								Оставить отзыв
+							</div>
+						</div>
+						<div class="card__prices">
+							<div class="card__price right">
+								<span>4 112 ₴</span>
+							</div>
+						</div>
+					</div>
+				</div> <!--!ends item 6-->
+
+
+			</div><!-- * end slider action-->
+		</div> <!-- ? end tabs action-->
+
+
+		<div id="newest" class="main__tab-content">
+			<div class="main__slider-newest">
+
+			</div>
+
+		</div><!-- ends tabs newest-->
+	</div> <!-- ends main__tabs-->
+
+</section>
+		<footer class="footer">
+	<div class="footer__top">
+		<ul class="footer__nav">
+			<li class="footer__nav-item">Компания</li>
+			<li class="footer__nav-item"><a href="#" class="footer__nav-link">О нас</a></li>
+			<li class="footer__nav-item"><a href="#" class="footer__nav-link">Контакты</a></li>
+			<li class="footer__nav-item"><a href="#" class="footer__nav-link">Договор оферты</a></li>
+			<li class="footer__nav-item"><a href="#" class="footer__nav-link">Оставить отзыв</a></li>
+		</ul>
+		<ul class="footer__nav">
+			<li class="footer__nav-item">Клиентам</li>
+			<li class="footer__nav-item"><a href="#" class="footer__nav-link">Гарантия/Возврат</a></li>
+			<li class="footer__nav-item"><a href="#" class="footer__nav-link">Доставка и оплата</a></li>
+			<li class="footer__nav-item"><a href="#" class="footer__nav-link">Личный кабинет</a></li>
+			<li class="footer__nav-item"><a href="#" class="footer__nav-link">Частые вопросы</a></li>
+			<li class="footer__nav-item"><a href="#" class="footer__nav-link">Отзывы</a></li>
+		</ul>
+		<ul class="footer__nav">
+			<li class="footer__nav-item">Популярные категории</li>
+			<li class="footer__nav-item"><a href="#" class="footer__nav-link">Велосипеды</a></li>
+			<li class="footer__nav-item"><a href="#" class="footer__nav-link">Коляски</a></li>
+			<li class="footer__nav-item"><a href="#" class="footer__nav-link">Электромобили</a></li>
+			<li class="footer__nav-item"><a href="#" class="footer__nav-link">Автокресла</a></li>
+			<li class="footer__nav-item"><a href="#" class="footer__nav-link">Беговелы</a></li>
+		</ul>
+		<ul class="footer__nav">
+			<li class="footer__nav-item">График Call-центра:</li>
+			<li class="footer__nav-item footer-time">Пн-Пт: 10:00-18:00</li>
+			<li class="footer__nav-item footer-time">Сб-Вс: 10:00-16:00</li>
+			<li class="footer__nav-item">Связаться с нами:</li>
+			<li class="footer__nav-item"><a href="tel:+380503395600" class="footer__nav-link">050 339 56 00</a></li>
+			<li class="footer__nav-item"><a href="tel:+380966735151" class="footer__nav-link">096 673 51 51</a></li>
+			<li class="footer__nav-item"><a href="#" class="footer__nav-link call-order">Заказать звонок</a></li>
+			<li class="footer__nav-item"><a href="mailto:shop@wekids.com.ua" class="footer__nav-link footer-email">shop@wekids.com.ua</a></li>
+		</ul>
+	</div>
+	<div class="footer__bottom">
+		<div class="footer__card">
+			<svg class="icon icon__mastercard-footer">
+				<use xlink:href="img/sprite.svg#mastercard"></use>
+			</svg>
+			<svg class="icon icon__visa-footer">
+				<use xlink:href="img/sprite.svg#visa"></use>
+			</svg>
+		</div>
+		<div class="footer__copyrights">
+			<p>Wekids.com.ua 2014-2020. Все права защищены.</p>
+		</div>
+		<div class="footer__social">
+			<!-- <svg class="icon icon__instagram-footer">
+				<use xlink:href="img/sprite.svg#instagram"></use>
+			</svg>
+			<svg class="icon icon__facebook-footer">
+				<use xlink:href="img/sprite.svg#facebook"></use>
+			</svg> -->
+			<img class="instagram-footer" src="img/instagram.png" alt="instagram">
+			<img class="facebook-footer" src="img/facebook.png" alt="facebook">
+		</div>
+	</div>
+</footer>
+	</div>
+	
+	<script src="js/libs.min.js"></script>
+	<script src="js/script.min.js"></script>
+</body>
+
+</html>
