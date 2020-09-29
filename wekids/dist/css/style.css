@@ -781,8 +781,7 @@ a {
     transition: 1s opacity;
 }
 
-.main__cards-slider-item-hits,
-.main__cards-slider-item-action {
+.main__cards-slider-item {
     margin: 10px;
     outline: none;
 }
