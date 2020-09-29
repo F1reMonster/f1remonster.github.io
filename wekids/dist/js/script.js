@@ -33,6 +33,67 @@ tabsSlider.slick({
     infinite: false,
     slidesToScroll: 1,
     slidesToShow: 5,
+    
     prevArrow: '<button type="button" class="slider__btn prev tab"><svg><use xlink:href="img/sprite.svg#slider-prev-arrow"></use></svg></button>',
     nextArrow: '<button type="button" class="slider__btn next tab"><svg><use xlink:href="img/sprite.svg#slider-next-arrow"></use></svg></button>',
+    responsive: [
+        {
+            breakpoint: 1368,
+            settings: {
+                slidesToScroll: 1,
+                slidesToShow: 4,
+            }
+        },
+        {
+            breakpoint: 1100,
+            settings: {
+                slidesToScroll: 1,
+                slidesToShow: 3,
+            }
+        },
+        {
+            breakpoint: 865,
+            settings: {
+                slidesToScroll: 1,
+                slidesToShow: 2,
+            }
+        },
+        {
+            breakpoint: 710,
+            settings: {
+                dots: true,
+                dotsClass: 'slider__dots',
+                slidesToScroll: 1,
+                slidesToShow: 5,
+            }
+        },
+        {
+            breakpoint: 610,
+            settings: {
+                dots: true,
+                dotsClass: 'slider__dots',
+                slidesToScroll: 1,
+                slidesToShow: 4,
+            }
+        },
+        {
+            breakpoint: 515,
+            settings: {
+                dots: true,
+                dotsClass: 'slider__dots',
+                slidesToScroll: 1,
+                slidesToShow: 3,
+            }
+        },
+        {
+            breakpoint: 374,
+            settings: {
+                dots: true,
+                dotsClass: 'slider__dots',
+                slidesToScroll: 1,
+                slidesToShow: 2,
+            }
+        }
+
+    ]
 });
