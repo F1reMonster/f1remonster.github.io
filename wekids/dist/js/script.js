@@ -7,7 +7,6 @@ $(".slider").slick({
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
-    fade: true,
     prevArrow: '<button type="button" class="slider__btn prev"><svg><use xlink:href="img/sprite.svg#slider-prev-arrow"></use></svg></button>',
     nextArrow: '<button type="button" class="slider__btn next"><svg><use xlink:href="img/sprite.svg#slider-next-arrow"></use></svg></button>',
 });
@@ -15,13 +14,13 @@ $(".slider").slick({
 
 const tabs = $('.main__tab-item');
 const tabsContent = $('.main__tab-content');
-const sliderHits = $(".main__slider-hits");
-const sliderActions = $(".main__slider-action");
+const tabsSlider = $('.main__slider-hits, .main__slider-action, .main__slider-newest');
+
 
 tabs.on('click', function(){
     let tabName = $(this).attr('data-tab');
-    sliderHits.slick('refresh');
-    sliderActions.slick('refresh');
+
+    tabsSlider.slick('refresh');
 
     tabs.removeClass('active');
     tabsContent.removeClass('active');
@@ -30,22 +29,10 @@ tabs.on('click', function(){
     $("#"+tabName).addClass('active');
 });
 
-sliderHits.slick({
+tabsSlider.slick({
     infinite: false,
-    arrows: false,
     slidesToScroll: 1,
-    slidesToShow: 5
+    slidesToShow: 5,
+    prevArrow: '<button type="button" class="slider__btn prev tab"><svg><use xlink:href="img/sprite.svg#slider-prev-arrow"></use></svg></button>',
+    nextArrow: '<button type="button" class="slider__btn next tab"><svg><use xlink:href="img/sprite.svg#slider-next-arrow"></use></svg></button>',
 });
-sliderActions.slick({
-    infinite: false,
-    arrows: false,
-    slidesToScroll: 1,
-    slidesToShow: 5
-});
-    
-    
-    
-
-    
-
-

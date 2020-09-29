@@ -781,9 +781,70 @@ a {
     transition: 1s opacity;
 }
 
+.main__slider-hits,
+.main__slider-action,
+.main__slider-newest {
+    position: relative;
+    height: 370px;
+    overflow: hidden;
+}
+
 .main__cards-slider-item {
     margin: 10px;
     outline: none;
+}
+
+.main__tags {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+}
+
+.main__tags-item {
+    display: block;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    font-family: "Circe-Regular";
+    font-size: 16px;
+    line-height: 24px;
+    color: #2d2d2d;
+    border: 1px solid #CCDBEB;
+    border-radius: 5px;
+    -webkit-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s;
+}
+
+.main__tags-item:hover {
+    background: #2da5e1;
+    color: #ffffff;
+    -webkit-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s;
+}
+
+.main__tags-item.active {
+    background: #2da5e1;
+    color: #ffffff;
+}
+
+.main__tags-item.more {
+    background: #C8E7F7;
+    color: #2da5e1;
+    -webkit-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s;
+}
+
+.main__tags-item.more:hover {
+    background: #2da5e1;
+    color: #C8E7F7;
+    -webkit-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s;
 }
 
 .slider__item {
@@ -841,12 +902,29 @@ a {
     fill: #2da5e1;
 }
 
+.slider__btn.prev:hover.tab svg,
+.slider__btn.next:hover.tab svg {
+    fill: #ffffff;
+}
+
 .slider__btn.prev {
     left: 22px;
 }
 
 .slider__btn.next {
     right: 22px;
+}
+
+.slider__btn.tab {
+    background: rgba(45, 165, 225, 0.5);
+}
+
+.slider__btn.tab:hover {
+    background: rgba(45, 165, 225, 0.9);
+}
+
+.slider__btn.tab.slick-disabled {
+    background: rgba(196, 196, 196, 0.8);
 }
 
 .slider__dots {
@@ -1083,6 +1161,11 @@ a {
     padding: 20px;
 }
 
+.footer__cards svg {
+    width: auto;
+    height: 48px;
+}
+
 .footer__copyrights {
     font-family: Circe-Regular;
     font-size: 16px;
@@ -1092,6 +1175,12 @@ a {
 
 .footer__social {
     margin-right: 60px;
+}
+
+.footer__social svg {
+    padding-left: 15px;
+    width: 48px;
+    height: 48px;
 }
 
 .call-order,
