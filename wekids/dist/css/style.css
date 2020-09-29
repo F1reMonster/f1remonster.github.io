@@ -1300,8 +1300,9 @@ a {
         height: 250px;
     }
 
-    .main__tags {
-        display: none;
+    .main__tags-item {
+        font-size: 12px;
+        line-height: 18px;
     }
 
     .slider__btn:hover {
