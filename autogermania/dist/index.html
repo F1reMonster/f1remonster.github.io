@@ -43,13 +43,47 @@
 					Авто з Німеччини під замовлення
 				</h2>
 				<div class="header__bottom-phone">
-					<svg class="header__bottom-icon icon-phone">
-						<use xlink:href="img/sprite.svg#phone"></use>
-					</svg>
-					<span>067 - 234 9490</span>
-					<svg class="header__bottom-icon icon-down">
-						<use xlink:href="img/sprite.svg#arrow-down-2"></use>
-					</svg>
+					<div class="header__bottom-phone-wrapper">
+						<svg class="header__bottom-icon icon-phone">
+							<use xlink:href="img/sprite.svg#phone"></use>
+						</svg>
+						<a href="tel:+380672349490">067 - 234 9490</a>
+						<svg class="header__bottom-icon icon-down">
+							<use xlink:href="img/sprite.svg#arrow-down-2"></use>
+						</svg>
+					</div>
+					<div class="header__bottom-phone-window">
+						<div class="contact-phone">
+							<div class="contact-phone__item">
+								<div class="image">
+									<svg class="header__bottom-icon icon-contact-phone">
+										<use xlink:href="img/sprite.svg#phone"></use>
+									</svg>
+								</div>
+								<div class="text">
+									<p>Ваш персональний консультант </p>
+									<p>з підбору авто <span>067 - 234 9490</span></p>
+								</div>
+							</div>
+							<div class="contact-phone__item">
+								<div class="image"></div>
+								<div class="text">
+									<p>Понеділок - Субота <span>10:00-20:00</span></p>
+								</div>
+							</div>
+							<div class="contact-phone__item">
+								<div class="image">
+									<svg class="header__bottom-icon icon-contact-email">
+										<use xlink:href="img/sprite.svg#email_icon"></use>
+									</svg>
+								</div>
+								<div class="text">
+									<a href="mailto:email@gmail.com">email@gmail.com</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
 				</div>
 				<div class="header__bottom-star">
 					<svg class="header__bottom-icon icon-star">
@@ -58,7 +92,7 @@
 				</div>
 				<div class="header__account">
 					<div class="header__account-reg">
-						Зарееструватись
+						<a class="header__account-reg-link" href="#">Зарееструватись</a>
 					</div>
 					<div class="header__account-enter">
 						<p>Вхід до кабінету</p>
@@ -66,12 +100,42 @@
 							<use xlink:href="img/sprite.svg#arrow-down-2"></use>
 						</svg>
 					</div>
+
+					<div class="header__account-sign">
+						<div class="wrapper">
+							<div class="user-links">
+								<a href="#">Мої Обрані</a>
+								<hr>
+								<a href="#">Мій Пошук</a>
+								<hr>
+							</div>
+							<div class="sign-in-block">
+								<a href="#" class="btn-sign-in">Увійти</a>
+								<div class="user-registration">
+									<span>в перше на сайті?</span>
+									<a href="#">Зарееструватись</a>
+									
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+
+
+
+
+
+
+
+
+
+
 				</div>
 			</div>
 		</div>
 	</div>
 </header>
-
     <section class="main-slider">
 	<div class="container">
 		<div class="slider">
@@ -185,6 +249,11 @@
 					</svg>
 					Переглянути результати
 				</a>
+				<div class="search__filter-adv">
+					<a href="#" class="search__filter-adv-link">розширений пошук</a>
+				</div>
+
+				
 			</div>
 			<div class="search__girl">
 				<img src="img/girl.png" alt="Search Girl" loading="lazy">
@@ -605,6 +674,7 @@
 		</div>
 	</div>
 </section>
+<!-- * about end * -->
     <footer class="footer">
 	<div class="container">
 		<div class="footer__title">
@@ -636,15 +706,21 @@
 			<ul class="footer__nav-list">
 				<li>Медіа</li>
 				<li>
-					<svg class="footer__icon icon-facebook">
-						<use xlink:href="img/sprite.svg#facebook_icon"></use>
-					</svg>
-					<svg class="footer__icon icon-instagram">
-						<use xlink:href="img/sprite.svg#instagram_icon"></use>
-					</svg>
-					<svg class="footer__icon icon-youtube">
-						<use xlink:href="img/sprite.svg#youtube_icon"></use>
-					</svg>
+					<a class="footer__nav-link social" href="#">
+						<svg class="footer__icon icon-facebook">
+							<use xlink:href="img/sprite.svg#facebook_icon"></use>
+						</svg>
+					</a>
+					<a class="footer__nav-link social" href="#">
+						<svg class="footer__icon icon-instagram">
+							<use xlink:href="img/sprite.svg#instagram_icon"></use>
+						</svg>
+					</a>
+					<a class="footer__nav-link social" href="#">
+						<svg class="footer__icon icon-youtube">
+							<use xlink:href="img/sprite.svg#youtube_icon"></use>
+						</svg>
+					</a>
 				</li>
 			</ul>
 		</div>
