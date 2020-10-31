@@ -479,6 +479,11 @@ h6 {
     background-color: #dae3ee;
 }
 
+hr {
+    margin: 0;
+    border: 1px solid #d7d7d7;
+}
+
 .main-arrow-up {
     position: fixed;
     right: 20px;
@@ -487,7 +492,9 @@ h6 {
     border-radius: 50%;
     width: 30px;
     height: 30px;
-    background-color: #005ccb;
+    background: #005ccb url("../img/main-arrow-up.png") no-repeat center;
+    -webkit-transform: rotate(180deg) translateZ(0);
+            transform: rotate(180deg) translateZ(0);
 }
 
 .header {
@@ -511,7 +518,6 @@ h6 {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding: 0 40px;
     height: 32px;
 }
 
@@ -870,8 +876,11 @@ h6 {
     right: 0;
     top: 42px;
     z-index: 10;
+    border-left: 1px solid #d7d7d7;
     width: 216px;
     height: 100vh;
+    -webkit-box-shadow: -3px 0 5px 0 #d7d7d7;
+            box-shadow: -3px 0 5px 0 #d7d7d7;
     font-family: "SF-Reg", serif;
     font-size: 15px;
     letter-spacing: 0.3px;
@@ -1659,6 +1668,7 @@ h6 {
 }
 
 .benefits__top-item {
+    position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1669,7 +1679,7 @@ h6 {
         -ms-flex-pack: center;
             justify-content: center;
     margin-bottom: 10px;
-    width: 25%;
+    padding: 0 15px;
 }
 
 .benefits__top-item span {
@@ -1691,7 +1701,76 @@ h6 {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    width: 180px;
+}
+
+.benefits__tooltip {
+    position: absolute;
+    left: -50%;
+    top: 60px;
+    display: none;
+}
+
+.benefits__tooltip.active {
+    display: block;
+}
+
+.benefits__tooltip-arrow {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    margin-top: -5px;
+    border: 0;
+    border-bottom: 2px solid #005ccb;
+    border-left: 2px solid #005ccb;
+    width: 24px;
+    height: 24px;
+    background: #fff;
+    -webkit-transform: rotate(135deg) translateY(9px);
+        -ms-transform: rotate(135deg) translateY(9px);
+            transform: rotate(135deg) translateY(9px);
+}
+
+.benefits__tooltip-inner {
+    border: 2px solid #005ccb;
+    border-radius: 4px;
+    padding: 3px 8px;
+    max-width: 350px;
+    color: #fff;
+    background: #fff;
+}
+
+.benefits__tooltip-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 10px;
+    min-width: 310px;
+}
+
+.benefits__tooltip-img {
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    margin-right: 10px;
+    min-width: 100px;
+}
+
+.benefits__tooltip-text {
+    min-width: 200px;
+}
+
+.benefits__tooltip-text h5 {
+    margin-bottom: 10px;
+    font-family: "SF-Semi";
+    font-size: 16px;
+    text-align: left;
+    text-transform: uppercase;
+    color: #005ccb;
+}
+
+.benefits__tooltip-text p {
+    font-size: 13px;
+    text-align: left;
+    color: #333;
 }
 
 .benefits__icon {
@@ -1702,6 +1781,11 @@ h6 {
 .benefits__icon.icon-search-car {
     width: 41px;
     height: 40px;
+}
+
+.benefits__icon.icon-tooltip {
+    width: 94px;
+    height: 94px;
 }
 
 .benefits__icon.icon-hand-ok {
@@ -2257,9 +2341,12 @@ h6 {
         position: fixed;
         top: 42px;
         z-index: 2;
+        border-right: 1px solid #d7d7d7;
         padding: 10px 20px;
         width: 270px;
         height: 100vh;
+        -webkit-box-shadow: 3px 0 5px 0 #d7d7d7;
+                box-shadow: 3px 0 5px 0 #d7d7d7;
         background-color: #fff;
         -webkit-transform: translateX(-100vw);
             -ms-transform: translateX(-100vw);
@@ -2401,6 +2488,12 @@ h6 {
     }
 }
 
+@media only screen and (max-width: 768px) {
+    .main-slider {
+        background-image: url("../img/header-bg-mobile.webp");
+    }
+}
+
 @media only screen and (max-width: 767px) {
     .slider__item {
         height: 625px;
@@ -2503,6 +2596,23 @@ h6 {
     }
 }
 
+@media only screen and (max-width: 545px) {
+    .brands__wrapper {
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        padding: 10px 10px 20px;
+    }
+
+    .brands__item {
+        margin-right: 20px;
+    }
+
+    .brands__item:nth-child(2n) {
+        margin-right: 0;
+    }
+}
+
 @media only screen and (max-width: 500px) {
     .header__logo img {
         width: auto;
@@ -2566,6 +2676,7 @@ h6 {
 
 @media only screen and (max-width: 413px) {
     .brands__item {
+        margin-right: 10px;
         padding: 10px 0 20px;
         width: 140px;
         height: 190px;
@@ -2615,3 +2726,5 @@ h6 {
         font-size: 22px;
     }
 }
+
+.webp .main-arrow-up{ background: #005ccb url(../img/main-arrow-up.webp) no-repeat center; }
