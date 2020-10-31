@@ -479,6 +479,17 @@ h6 {
     background-color: #dae3ee;
 }
 
+.main-arrow-up {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 3;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    background-color: #005ccb;
+}
+
 .header {
     position: relative;
     left: 0;
@@ -500,6 +511,7 @@ h6 {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    padding: 0 40px;
     height: 32px;
 }
 
@@ -519,7 +531,6 @@ h6 {
 .header__bottom {
     border-top: 1px solid #cdcdcd;
     border-bottom: 1px solid #cdcdcd;
-    height: 50px;
     background-color: rgba(255, 255, 255, 0.2);
 }
 
@@ -587,7 +598,7 @@ h6 {
 }
 
 .header__bottom-mobile-item {
-    margin-right: 50px;
+    margin-right: 21px;
 }
 
 .header__bottom-mobile-item:last-child {
@@ -597,10 +608,10 @@ h6 {
 .header__bottom-news-mobile {
     display: none;
     overflow: hidden;
-    padding: 15px;
+    padding: 12px;
     width: 100%;
     font-family: "SF-Semi", serif;
-    font-size: 16px;
+    font-size: 14px;
     white-space: nowrap;
     background-color: #ffd337;
 }
@@ -686,8 +697,8 @@ h6 {
 .header__bottom-icon.icon-phone-mobile,
 .header__bottom-icon.icon-search-mobile,
 .header__bottom-icon.icon-user-mobile {
-    width: 40px;
-    height: 40px;
+    width: 22px;
+    height: 22px;
     fill: #515151;
 }
 
@@ -857,7 +868,7 @@ h6 {
 .header__account-sign-mobile {
     position: fixed;
     right: 0;
-    top: 89px;
+    top: 42px;
     z-index: 10;
     width: 216px;
     height: 100vh;
@@ -981,8 +992,8 @@ h6 {
 .burger {
     position: relative;
     display: none;
-    width: 30px;
-    height: 6px;
+    width: 20px;
+    height: 3px;
     background-color: #005ccb;
 }
 
@@ -990,10 +1001,10 @@ h6 {
     content: "";
     position: absolute;
     left: 0;
-    top: 10px;
+    top: 6px;
     display: block;
-    width: 30px;
-    height: 6px;
+    width: 20px;
+    height: 3px;
     background-color: #005ccb;
     -webkit-transition: top 0.2s linear 0.2s, -webkit-transform 0.2s ease-in;
     transition: top 0.2s linear 0.2s, -webkit-transform 0.2s ease-in;
@@ -1006,10 +1017,10 @@ h6 {
     content: "";
     position: absolute;
     left: 0;
-    top: -10px;
+    top: -6px;
     display: block;
-    width: 30px;
-    height: 6px;
+    width: 20px;
+    height: 3px;
     background-color: #005ccb;
     -webkit-transition: top 0.2s linear 0.2s, -webkit-transform 0.2s ease-in;
     transition: top 0.2s linear 0.2s, -webkit-transform 0.2s ease-in;
@@ -1534,15 +1545,15 @@ h6 {
     transition: all 0.4s;
 }
 
+.selected.rotate::after {
+    -webkit-transform: rotateX(180deg);
+            transform: rotateX(180deg);
+}
+
 .select-box .options-container.active {
     overflow-y: scroll;
     max-height: 240px;
     opacity: 1;
-}
-
-.select-box .options-container.active + .selected::after {
-    -webkit-transform: rotateX(180deg);
-            transform: rotateX(180deg);
 }
 
 .select-box .options-container::-webkit-scrollbar {
@@ -2128,21 +2139,13 @@ h6 {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    padding: 25px 10px;
+    padding: 25px 30px;
     font-size: 14px;
     color: #9c9c9c;
 }
 
 .footer__nav-list {
     font-family: "SF-Med";
-}
-
-.footer__nav-list li {
-    margin-bottom: 15px;
-}
-
-.footer__nav-list li:last-child {
-    margin-bottom: 0;
 }
 
 .footer__nav-list-title {
@@ -2240,26 +2243,78 @@ h6 {
 
 @media only screen and (max-width: 1200px) {
     .header__logo {
-        margin-left: 10px;
+        margin-left: 15px;
+    }
+
+    .header__logo img {
+        position: relative;
+        top: 3px;
+        width: auto;
+        height: 22px;
     }
 
     .header__menu {
-        display: none;
+        position: fixed;
+        top: 42px;
+        z-index: 2;
+        padding: 10px 20px;
+        width: 270px;
+        height: 100vh;
+        background-color: #fff;
+        -webkit-transform: translateX(-100vw);
+            -ms-transform: translateX(-100vw);
+                transform: translateX(-100vw);
+        -webkit-transition: -webkit-transform 0.3s;
+        transition: -webkit-transform 0.3s;
+        -o-transition: transform 0.3s;
+        transition: transform 0.3s;
+        transition: transform 0.3s, -webkit-transform 0.3s;
+    }
+
+    .header__menu.open {
+        -webkit-transform: translateX(0);
+            -ms-transform: translateX(0);
+                transform: translateX(0);
+    }
+
+    .header__menu-list {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start;
+    }
+
+    .header__menu-item {
+        display: block;
+        margin-right: 0;
+        border-bottom: 1px solid #d7d7d7;
+        padding: 10px 0;
+        width: 100%;
+    }
+
+    .header__menu-link {
+        color: #333;
+    }
+
+    .header__menu-link:hover {
+        color: #333;
     }
 
     .header__bottom {
         position: fixed;
-        padding: 0 10px;
+        z-index: 1;
         width: 100%;
-        height: 90px;
-        background-color: #fff;
+        background-color: rgba(255, 255, 255, 0.9);
     }
 
     .header__bottom-wrapper {
         -webkit-box-pack: justify;
             -ms-flex-pack: justify;
                 justify-content: space-between;
-        height: 90px;
+        padding: 7px 0;
     }
 
     .header__bottom-inner {
@@ -2318,27 +2373,8 @@ h6 {
 }
 
 @media only screen and (max-width: 855px) {
-    .header__bottom {
-        height: 60px;
-    }
-
-    .header__bottom-wrapper {
-        height: 60px;
-    }
-
-    .header__bottom-mobile-item {
-        margin-right: 20px;
-    }
-
-    .header__bottom-icon.icon-phone-mobile,
-  .header__bottom-icon.icon-search-mobile,
-  .header__bottom-icon.icon-user-mobile {
-        width: 32px;
-        height: 32px;
-    }
-
     .header__account-sign-mobile {
-        top: 59px;
+        top: 42px;
     }
 
     .slider__car {
@@ -2418,17 +2454,27 @@ h6 {
     .benefits__bottom-item:not(:first-child) {
         margin-top: 15px;
     }
+
+    .about__title {
+        font-size: 16px;
+    }
 }
 
 @media only screen and (max-width: 766px) {
+    .header__bottom-wrapper {
+        padding: 7px 10px;
+    }
+
     .header__bottom-news-mobile {
+        position: relative;
+        top: 42px;
         display: block;
     }
 }
 
 @media only screen and (max-width: 650px) {
     .footer__nav-list {
-        margin-bottom: 20px;
+        margin-bottom: 10px;
         width: 50%;
     }
 
@@ -2460,18 +2506,7 @@ h6 {
 @media only screen and (max-width: 500px) {
     .header__logo img {
         width: auto;
-        height: 32px;
-    }
-
-    .header__bottom-mobile-item {
-        margin-right: 10px;
-    }
-
-    .header__bottom-icon.icon-phone-mobile,
-  .header__bottom-icon.icon-search-mobile,
-  .header__bottom-icon.icon-user-mobile {
-        width: 24px;
-        height: 24px;
+        height: 22px;
     }
 
     .search {
@@ -2506,6 +2541,10 @@ h6 {
         width: 100%;
     }
 
+    .footer__nav-list-content {
+        display: none;
+    }
+
     .footer__nav-list-title {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -2516,24 +2555,12 @@ h6 {
         cursor: pointer;
     }
 
-    .footer__nav-list-content {
-        display: none;
-    }
-
     .footer__nav-change {
         display: block;
     }
 
-    .footer__nav-icon {
-        -webkit-transform: rotate(180deg);
-            -ms-transform: rotate(180deg);
-                transform: rotate(180deg);
-    }
-
-    .footer__nav-icon.rotate {
-        -webkit-transform: rotate(0deg);
-            -ms-transform: rotate(0deg);
-                transform: rotate(0deg);
+    .footer {
+        margin-top: 0;
     }
 }
 
@@ -2551,7 +2578,17 @@ h6 {
     }
 
     .search {
-        width: 300px;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .footer__nav-list-content {
+        padding: 0 0 20px 20px;
+    }
+
+    .footer__nav-list-content li {
+        margin-bottom: 10px;
     }
 }
 

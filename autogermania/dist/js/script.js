@@ -26,6 +26,7 @@ jQuery(function ($) {
 			aboutIcon = $('.about__title-icon'),
 			aboutText = $(".about__text"),
 			burgerMenu = $('.burger'),
+			headerMenu = $('.header__menu'),
 			footerListTitle = $('.footer__nav-list-title'),
 			footerListContent = $('.footer__nav-list-content'),
 			footerTitleIcon = $('.footer__nav-icon'),
@@ -92,7 +93,7 @@ jQuery(function ($) {
 
 						slidesToShow: 1,
 						slidesToScroll: 1,
-						arrows: false,
+						//arrows: false,
 					}
 				}
 
@@ -116,7 +117,7 @@ jQuery(function ($) {
 		burgerMenu.on('click', function (e) {
 			e.preventDefault();
 			burgerMenu.toggleClass('burger-active');
-			//$('.header__menu-list').toggleClass('active-menu');
+			headerMenu.toggleClass('open');
 		});
 
 		// футер меню закриваємо/откриваємо
@@ -140,6 +141,7 @@ jQuery(function ($) {
 				remove = true;
 
 			$('.select-box .options-container').removeClass('active');
+			
 			if (remove)
 				$target.removeClass('active');
 			else
