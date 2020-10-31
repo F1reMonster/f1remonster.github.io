@@ -155,8 +155,8 @@ filterCarYear.select2({
 
 
 
-// const selected = document.querySelectorAll(".selected");
-// const optionsContainer = document.querySelectorAll(".options-container");
+// const selected = document.querySelector(".selected");
+// const optionsContainer = document.querySelector(".options-container");
 
 // const optionsList = document.querySelectorAll(".option");
 
@@ -172,11 +172,35 @@ filterCarYear.select2({
 // });
 
 const selected = $('.selected'), 
-		optionsContainer = $(".option-container"),
+		optionsContainer = $(".options-container"),
 		option = $('.option'),
 		filterItem = $('.search__filter-item');
 
 	selected.on('click', function(e) {
 		e.preventDefault();
-		$(this).next(optionsContainer).toggleClass('active');
+		
+			
+			if (optionsContainer.hasClass('active')) {
+				optionsContainer.removeClass('active');
+
+
+				//$(this).closest(optionsContainer).toggleClass('active');
+			} else {
+				$(this).next(optionsContainer).toggleClass('active');
+			}
+
+
+		
+
+		// const optionList = $(this).next(option);
+
+		// optionList.each(function(item) {
+		// 	item.on('click', function(){
+		// 		$(this).innerHTML = item.$('label').innerHTML;
+		// 	})
+		// })
+
+
+
+
 	} )
