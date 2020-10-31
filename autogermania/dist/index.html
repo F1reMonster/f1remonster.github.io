@@ -341,64 +341,176 @@
 	</div>
 </div>
 		</div>
-		<div class="search">
+		<!-- * =========== includedd in _main-slider.html ============== -->
+<div class="search">
 	<div class="search__title">
 		Компактний пошук
 	</div>
 	<div class="search__filters">
 		<div class="search__filter-item">
-			<!-- <svg class="search__filter-item-icon icon-search">
-				<use xlink:href="img/sprite.svg#search"></use>
-			</svg>
-			<p class="search__filter-item-placeholder">Обрати марку</p>
-			<svg class="search__filter-item-icon icon-arrow-down">
-				<use xlink:href="img/sprite.svg#down-arrow"></use>
-			</svg> -->
+				<div class="select-box">
+
+					<div class="selected">
+						<svg class="search__filter-item-icon icon-search">
+							<use xlink:href="img/sprite.svg#search"></use>
+						</svg>
+						<p class="search__filter-item-placeholder">Обрати марку</p>
+					</div>
 
 
-			<select class="search__filter-brands" name="car-brands">
-				<option value=""></option>
-				<option value="audi">Audi</option>
-				<option value="bmw">BMW</option>
-				<option value="ford">Ford</option>
-			</select>
+
+					<div class="options-container">
+						<div class="option">
+							<input type="radio" class="radio" id="audi" name="car-brand" />
+							<label for="audi">Audi</label>
+						</div>
+
+						<div class="option">
+							<input type="radio" class="radio" id="bmw" name="car-brand" />
+							<label for="bmw">Bmw</label>
+						</div>
+
+						<div class="option">
+							<input type="radio" class="radio" id="ford" name="car-brand" />
+							<label for="ford">Ford</label>
+						</div>
+
+						<div class="option">
+							<input type="radio" class="radio" id="vw" name="car-brand" />
+							<label for="vw">Volkswagen</label>
+						</div>
+
+						<div class="option">
+							<input type="radio" class="radio" id="opel" name="car-brand" />
+							<label for="opel">Opel</label>
+						</div>
+
+						<div class="option">
+							<input type="radio" class="radio" id="toyota" name="car-brand" />
+							<label for="toyota">Toyota</label>
+						</div>
+
+						<div class="option">
+							<input type="radio" class="radio" id="nissan" name="car-brand" />
+							<label for="nissan">Nissan</label>
+						</div>
+
+						<div class="option">
+							<input type="radio" class="radio" id="honda" name="car-brand" />
+							<label for="honda">Honda</label>
+						</div>
+
+						<div class="option">
+							<input type="radio" class="radio" id="kia" name="car-brand" />
+							<label for="kia">Kia</label>
+						</div>
+					</div>
+
+					
+				</div>
+			
+				
 		</div>
 		<div class="search__filter-item">
-			<!-- <svg class="search__filter-item-icon icon-search">
-				<use xlink:href="img/sprite.svg#search"></use>
-			</svg>
-			<p class="search__filter-item-placeholder">Обрати модель</p>
-			<svg class="search__filter-item-icon icon-arrow-down">
-				<use xlink:href="img/sprite.svg#down-arrow"></use>
-			</svg> -->
-			<select class="search__filter-models" name="car-models">
-				<option value="x5">x5</option>
-				<option value="x6">x6</option>
-				<option value="330d">330d</option>
-			</select>
+
+			<div class="select-box">
+
+				<div class="selected">
+					<svg class="search__filter-item-icon icon-search">
+						<use xlink:href="img/sprite.svg#search"></use>
+					</svg>
+					<p class="search__filter-item-placeholder">Обрати модель</p>
+				</div>
+
+				<div class="options-container">
+					<div class="option">
+						<input type="radio" class="radio" id="model1" name="car-model" />
+						<label for="model1">Model1</label>
+					</div>
+
+					<div class="option">
+						<input type="radio" class="radio" id="model2" name="car-model" />
+						<label for="model2">Model2</label>
+					</div>
+
+					<div class="option">
+						<input type="radio" class="radio" id="model3" name="car-model" />
+						<label for="model3">Model3</label>
+					</div>
+				</div>
+
+				
+			</div>
+
 		</div>
 		<div class="search__filter-row">
 			<div class="search__filter-item mr10">
-				<!-- <svg class="search__filter-item-icon icon-year">
-					<use xlink:href="img/sprite.svg#calendar"></use>
-				</svg>
-				<p class="search__filter-item-placeholder">рік</p> -->
-				<select class="search__filter-year" name="car-year">
-					<option value="2020">2020</option>
-					<option value="2019">2019</option>
-					<option value="2018">2018</option>
-				</select>
+
+				<div class="select-box">
+
+
+					<div class="selected">
+						<svg class="search__filter-item-icon icon-search">
+							<use xlink:href="img/sprite.svg#calendar"></use>
+						</svg>
+						<p class="search__filter-item-placeholder">рік</p>
+					</div>
+
+					<div class="options-container">
+						<div class="option">
+							<input type="radio" class="radio" id="2020" name="car-year" />
+							<label for="2020">2020</label>
+						</div>
+	
+						<div class="option">
+							<input type="radio" class="radio" id="2019" name="car-year" />
+							<label for="2019">2019</label>
+						</div>
+	
+						<div class="option">
+							<input type="radio" class="radio" id="2018" name="car-year" />
+							<label for="2018">2018</label>
+						</div>
+					</div>
+	
+					
+				</div>
+
+
+
 			</div>
 			<div class="search__filter-item">
-				<!-- <svg class="search__filter-item-icon icon-odo">
-					<use xlink:href="img/sprite.svg#odometer"></use>
-				</svg>
-				<p class="search__filter-item-placeholder">пробіг км</p> -->
-				<select class="search__filter-odo" name="car-odo">
-					<option value="0">0</option>
-					<option value="10000">10000</option>
-					<option value="20000">20000</option>
-				</select>
+				
+				<div class="select-box">
+
+					<div class="selected">
+						<svg class="search__filter-item-icon icon-search">
+							<use xlink:href="img/sprite.svg#odometer"></use>
+						</svg>
+						<p class="search__filter-item-placeholder">пробіг км</p>
+					</div>
+
+					<div class="options-container">
+						<div class="option">
+							<input type="radio" class="radio" id="0" name="car-odo" />
+							<label for="0">0</label>
+						</div>
+	
+						<div class="option">
+							<input type="radio" class="radio" id="10000" name="car-odo" />
+							<label for="10000">10000</label>
+						</div>
+	
+						<div class="option">
+							<input type="radio" class="radio" id="20000" name="car-odo" />
+							<label for="20000">20000</label>
+						</div>
+					</div>
+	
+					
+				</div>
+
+
 			</div>
 		</div>
 		<a class="search__filter-btn" href="#">
