@@ -492,7 +492,7 @@ hr {
     border-radius: 50%;
     width: 30px;
     height: 30px;
-    background: #005ccb url("../img/main-arrow-up.png") no-repeat center;
+    background: #005ccb url("../img/main-arrow-up.webp") no-repeat center;
     opacity: 0;
     -webkit-transform: rotate(180deg) translateZ(0);
             transform: rotate(180deg) translateZ(0);
@@ -2729,5 +2729,3 @@ hr {
         font-size: 22px;
     }
 }
-
-.webp .main-arrow-up{ background: #005ccb url(../img/main-arrow-up.webp) no-repeat center; }
