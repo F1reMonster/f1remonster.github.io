@@ -569,12 +569,26 @@ hr {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+}
+
+.header__bottom-inner2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .header__bottom-title {
+    display: block;
     margin-left: 53px;
-    font-family: "SF-Med", serif;
-    font-size: 24px;
+    font-family: "SF-Reg";
+    font-size: 22px;
 }
 
 .header__bottom-phone-wrapper {
