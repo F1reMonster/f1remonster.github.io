@@ -1,0 +1,198 @@
+.car-item {
+	position: relative;
+	margin-bottom: 20px;
+	border: 1px solid $alto;
+	border-radius: 4px;
+	font-family: "SF-Reg";
+
+	&__overlay {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+	}
+
+	&.new {
+		.car-item__new {
+			display: block;
+		}
+	}
+
+	&.sell {
+		.car-item__sell {
+			display: block;
+		}
+
+		.car-item__overlay {
+			background-color: hsla(0, 0%, 100%, 0.5);
+		}
+	}
+
+	&__body {
+		position: relative;
+		display: flex;
+		padding: 10px;
+	}
+
+	&__img {
+		overflow: hidden;
+		min-width: 300px;
+
+		img {
+			border-radius: 6px;
+			width: 300px;
+			height: 220px;
+		}
+	}
+
+	&__info {
+		display: flex;
+		padding-left: 20px;
+	}
+
+	&__name {
+		padding-bottom: 10px;
+		font-size: 18px;
+		color: $mine-shaft;
+
+		span {
+			font-family: "SF-Bold";
+			color: $science-blue;
+		}
+	}
+
+	&__details {
+		border-right: 1px solid $alto;
+		padding-right: 10px;
+	}
+
+	&__ttx {
+		display: flex;
+		flex-wrap: wrap;
+		margin-top: 10px;
+
+		span {
+			padding-left: 10px;
+		}
+	}
+
+	&__ttx-item {
+		display: flex;
+		align-items: center;
+		margin-top: 20px;
+		width: 50%;
+	}
+
+	&__price {
+		padding-bottom: 30px;
+		padding-left: 10px;
+		min-width: 170px;
+
+		.favorite {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-family: "SF-Med";
+			font-size: 18px;
+			color: $science-blue;
+
+			svg {
+				margin-left: 10px;
+			}
+		}
+
+		.price-real,
+		.price-was,
+		.price-economy {
+			text-align: center;
+		}
+
+		.price-real {
+			margin-top: 20px;
+			font-family: "SF-Bold";
+			font-size: 24px;
+			color: $japanese-laurel;
+		}
+
+		.price-was,
+		.price-economy {
+			font-family: "SF-Med";
+			font-size: 16px;
+
+			span {
+				font-family: "SF-Bold";
+				color: $thunderbird;
+			}
+		}
+
+		.price-economy {
+			border-bottom: 1px solid $alto;
+			padding-bottom: 20px;
+		}
+
+		.price-was {
+			span {
+				text-decoration: line-through;
+			}
+		}
+
+		.price-include {
+			margin: 25px 0 30px;
+			font-family: "SF-Med";
+			font-size: 14px;
+		}
+
+	}
+
+	&__btn {
+		display: block;
+		border-radius: 4px;
+		padding: 5px 35px;
+		font-family: "SF-Med";
+		font-size: 14px;
+		text-align: center;
+		color: $white;
+		background-color: $science-blue;
+		transition: 0.3s ease-in;
+
+		&:hover {
+			background-color: $pistacio;
+		}
+
+	}
+
+	&__marker {
+		position: absolute;
+		left: 10px;
+		bottom: 10px;
+		display: block;
+	}
+
+	&__new,
+	&__sell {
+		position: absolute;
+		left: 0;
+		top: 25px;
+		z-index: 10;
+		border-radius: 0 4px 4px 0;
+		padding: 5px 10px;
+		font-family: "SF-Bold";
+		font-size: 18px;
+		color: $white;
+
+		&.active {
+			display: block;
+		}
+	}
+
+	&__new {
+		display: none;
+		background-color: $green;
+	}
+
+	&__sell {
+		display: none;
+		background-color: $red;
+	}
+}

@@ -2198,12 +2198,16 @@ hr {
     width: 100%;
 }
 
-.search-result__inner {
+.search-result__wrapper {
     margin-left: 20px;
     border: 1px solid #d7d7d7;
     border-radius: 4px;
-    width: 100%;
-    height: 500px;
+    padding: 20px 10px;
+    background-color: #fff;
+}
+
+.search-result__wrapper .select-box {
+    width: 200px;
 }
 
 .breadcrumbs {
@@ -2335,7 +2339,7 @@ hr {
 }
 
 .filter .select-box .selected {
-    border: 1px solid #515151;
+    border: 1px solid #9c9c9c;
     border-radius: 4px;
     padding: 8px 10px;
 }
@@ -2359,14 +2363,22 @@ hr {
 }
 
 .filter-body__item {
-    padding: 10px;
     border-bottom: 1px solid #d7d7d7;
+    padding: 10px;
     font-family: "SF-Reg";
     font-size: 14px;
 }
 
 .filter-body__item:last-child {
     border-bottom: none;
+}
+
+.filter-body__item.salon-body {
+    padding-left: 7px;
+}
+
+.filter-body__item.salon-body .filter-body__item-title {
+    padding: 10px;
 }
 
 .filter-body__item .wd .checkbox p,
@@ -2377,6 +2389,7 @@ hr {
 
 .filter-body__item .wd .checkbox__div,
 .filter-body__item .gearbox .checkbox__div {
+    border: 1px solid #d7d7d7;
     width: 34px;
     height: 34px;
 }
@@ -2398,6 +2411,7 @@ hr {
 .filter-body__item .wd .checkbox__input:checked ~ .checkbox__border .checkbox__div::before,
 .filter-body__item .gearbox .checkbox__input:checked ~ .checkbox__border .checkbox__div::before {
     background-image: url("../img/svg/checked.svg");
+    background-color: rgba(255, 255, 255, 0.7);
 }
 
 .filter-body__item .material {
@@ -2452,7 +2466,15 @@ hr {
 
 .filter-body__salon-color .checkbox__input:checked ~ .checkbox__div,
 .filter-body__color .checkbox__input:checked ~ .checkbox__div {
-    background-color: #d9e7f7;
+    border: 1px solid #005ccb;
+    -webkit-transition: 0.3s all;
+    -o-transition: 0.3s all;
+    transition: 0.3s all;
+}
+
+.filter-body__salon-color .checkbox__input:checked ~ .checkbox__div::after,
+.filter-body__color .checkbox__input:checked ~ .checkbox__div::after {
+    background-color: rgba(255, 255, 255, 0.7);
     -webkit-transition: 0.3s all;
     -o-transition: 0.3s all;
     transition: 0.3s all;
@@ -2540,19 +2562,25 @@ hr {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    max-width: 260px;
+    width: 260px;
+    max-width: 245px;
 }
 
-.filter-body__salon .checkbox__input:checked ~ .checkbox__div {
-    background-color: #d9e7f7;
+.filter-body__salon .checkbox__input:checked ~ .checkbox__border {
+    border: 1px solid #005ccb;
     -webkit-transition: 0.3s all;
     -o-transition: 0.3s all;
     transition: 0.3s all;
 }
 
+.filter-body__salon .checkbox__input:checked ~ .checkbox__border .checkbox__div::before {
+    background-image: url("../img/svg/checked.svg");
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
 .filter-body__salon .checkbox__div {
-    width: 34px;
-    height: 34px;
+    min-width: 34px;
+    min-height: 34px;
 }
 
 .filter-body__salon .checkbox__div::before {
@@ -2561,7 +2589,8 @@ hr {
 }
 
 .filter-body__salon .salon {
-    width: 50%;
+    margin-right: 1px;
+    width: 120px;
 }
 
 .filter-body__salon .salon p {
@@ -2655,6 +2684,7 @@ hr {
 .checkbox__div::before {
     content: "";
     position: absolute;
+    z-index: 2;
     width: 14px;
     height: 14px;
     background-position: center;
@@ -2665,12 +2695,31 @@ hr {
     transition: 0.3s all;
 }
 
+.checkbox__div::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+}
+
 .checkbox__div.other {
     border: 1px solid #515151;
 }
 
+.checkbox__div.other:hover {
+    border: 1px solid #005ccb;
+}
+
 .checkbox__div.alto {
     border: 1px solid #d7d7d7;
+}
+
+.checkbox__div.alto:hover {
+    border: 1px solid #005ccb;
 }
 
 .checkbox p {
@@ -2681,6 +2730,218 @@ hr {
 
 .checkbox.other {
     margin-bottom: 10px;
+}
+
+.car-item {
+    position: relative;
+    margin-bottom: 20px;
+    border: 1px solid #d7d7d7;
+    border-radius: 4px;
+    font-family: "SF-Reg";
+}
+
+.car-item__overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.car-item.new .car-item__new {
+    display: block;
+}
+
+.car-item.sell .car-item__sell {
+    display: block;
+}
+
+.car-item.sell .car-item__overlay {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.car-item__body {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 10px;
+}
+
+.car-item__img {
+    overflow: hidden;
+    min-width: 300px;
+}
+
+.car-item__img img {
+    border-radius: 6px;
+    width: 300px;
+    height: 220px;
+}
+
+.car-item__info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-left: 20px;
+}
+
+.car-item__name {
+    padding-bottom: 10px;
+    font-size: 18px;
+    color: #333;
+}
+
+.car-item__name span {
+    font-family: "SF-Bold";
+    color: #005ccb;
+}
+
+.car-item__details {
+    border-right: 1px solid #d7d7d7;
+    padding-right: 10px;
+}
+
+.car-item__ttx {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.car-item__ttx span {
+    padding-left: 10px;
+}
+
+.car-item__ttx-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 20px;
+    width: 50%;
+}
+
+.car-item__price {
+    padding-bottom: 30px;
+    padding-left: 10px;
+    min-width: 170px;
+}
+
+.car-item__price .favorite {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-family: "SF-Med";
+    font-size: 18px;
+    color: #005ccb;
+}
+
+.car-item__price .favorite svg {
+    margin-left: 10px;
+}
+
+.car-item__price .price-real,
+.car-item__price .price-was,
+.car-item__price .price-economy {
+    text-align: center;
+}
+
+.car-item__price .price-real {
+    margin-top: 20px;
+    font-family: "SF-Bold";
+    font-size: 24px;
+    color: #257a05;
+}
+
+.car-item__price .price-was,
+.car-item__price .price-economy {
+    font-family: "SF-Med";
+    font-size: 16px;
+}
+
+.car-item__price .price-was span,
+.car-item__price .price-economy span {
+    font-family: "SF-Bold";
+    color: #da231a;
+}
+
+.car-item__price .price-economy {
+    border-bottom: 1px solid #d7d7d7;
+    padding-bottom: 20px;
+}
+
+.car-item__price .price-was span {
+    text-decoration: line-through;
+}
+
+.car-item__price .price-include {
+    margin: 25px 0 30px;
+    font-family: "SF-Med";
+    font-size: 14px;
+}
+
+.car-item__btn {
+    display: block;
+    border-radius: 4px;
+    padding: 5px 35px;
+    font-family: "SF-Med";
+    font-size: 14px;
+    text-align: center;
+    color: #fff;
+    background-color: #005ccb;
+    -webkit-transition: 0.3s ease-in;
+    -o-transition: 0.3s ease-in;
+    transition: 0.3s ease-in;
+}
+
+.car-item__btn:hover {
+    background-color: #93d500;
+}
+
+.car-item__marker {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    display: block;
+}
+
+.car-item__new,
+.car-item__sell {
+    position: absolute;
+    left: 0;
+    top: 25px;
+    z-index: 10;
+    border-radius: 0 4px 4px 0;
+    padding: 5px 10px;
+    font-family: "SF-Bold";
+    font-size: 18px;
+    color: #fff;
+}
+
+.car-item__new.active,
+.car-item__sell.active {
+    display: block;
+}
+
+.car-item__new {
+    display: none;
+    background-color: #00b800;
+}
+
+.car-item__sell {
+    display: none;
+    background-color: #ff0b00;
 }
 
 .footer {

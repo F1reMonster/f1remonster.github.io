@@ -38,10 +38,6 @@
 		margin-right: 10px;
 	}
 
-	&__subitem-body {
-		//padding: 10px;
-	}
-
 	&__subitem-add {
 		display: flex;
 		align-items: center;
@@ -90,7 +86,7 @@
 		}
 
 		.selected {
-			border: 1px solid $emperor;
+			border: 1px solid $dusty-gray;
 			border-radius: 4px;
 			padding: 8px 10px;
 
@@ -119,8 +115,8 @@
 
 .filter-body {
 	&__item {
-		padding: 10px;
 		border-bottom: 1px solid $alto;
+		padding: 10px;
 		font-family: "SF-Reg";
 		font-size: 14px;
 
@@ -128,7 +124,16 @@
 			border-bottom: none;
 		}
 
+		&.salon-body {
+			padding-left: 7px;
+
+			.filter-body__item-title {
+				padding: 10px;
+			}
+		}
+
 		// * привіт + коробка * //
+
 		.wd,
 		.gearbox {
 			.checkbox {
@@ -139,6 +144,7 @@
 			}
 
 			.checkbox__div {
+				border: 1px solid $alto;
 				width: 34px;
 				height: 34px;
 
@@ -154,6 +160,7 @@
 
 				.checkbox__div::before {
 					background-image: url("../img/svg/checked.svg");
+					background-color: hsla(0, 0%, 100%, 0.7);
 				}
 			}
 		}
@@ -208,8 +215,13 @@
 	&__salon-color,
 	&__color {
 		.checkbox__input:checked ~ .checkbox__div {
-			background-color: $link-water;
+			border: 1px solid $science-blue;
 			transition: 0.3s all;
+
+			&::after {
+				background-color: hsla(0, 0%, 100%, 0.7);
+				transition: 0.3s all;
+			}
 		}
 
 		.checkbox__div {
@@ -288,16 +300,22 @@
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
-		max-width: 260px;
+		width: 260px;
+		max-width: 245px;
 
-		.checkbox__input:checked ~ .checkbox__div {
-			background-color: $link-water;
+		.checkbox__input:checked ~ .checkbox__border {
+			border: 1px solid $science-blue;
 			transition: 0.3s all;
+
+			.checkbox__div::before {
+				background-image: url("../img/svg/checked.svg");
+				background-color: hsla(0, 0%, 100%, 0.7);
+			}
 		}
 
 		.checkbox__div {
-			width: 34px;
-			height: 34px;
+			min-width: 34px;
+			min-height: 34px;
 
 			&::before {
 				width: 24px;
@@ -306,15 +324,12 @@
 		}
 
 		.salon {
-			width: 50%;
+			margin-right: 1px;
+			width: 120px;
 
 			p {
 				padding-left: 5px;
 			}
-
-			// &:nth-child(2n+1) {
-			// 	margin-right: 1px;
-			// }
 		}
 
 		.material {
@@ -389,6 +404,7 @@
 		&::before {
 			content: "";
 			position: absolute;
+			z-index: 2;
 			width: 14px;
 			height: 14px;
 			background-position: center;
@@ -397,12 +413,31 @@
 			transition: 0.3s all;
 		}
 
+		&::after {
+			content: "";
+			position: absolute;
+			left: 0;
+			top: 0;
+			z-index: 1;
+			border-radius: 50%;
+			width: 100%;
+			height: 100%;
+		}
+
 		&.other {
 			border: 1px solid $emperor;
+
+			&:hover {
+				border: 1px solid $science-blue;
+			}
 		}
 
 		&.alto {
 			border: 1px solid $alto;
+
+			&:hover {
+				border: 1px solid $science-blue;
+			}
 		}
 	}
 

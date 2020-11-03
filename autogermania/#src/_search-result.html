@@ -15,13 +15,38 @@
 		</div>
 
 		<div class="search-result__body">
-			
-
-
 			@@include('_filter.html')
 
 			<div class="search-result__inner">
+				<div class="search-result__wrapper">
+					<div class="search-result__top">
+						<p class="search-result__total"><span>2 Авто</span> знайдено</p>
+						
+						<div class="select-box filter-section">
+							<div class="selected">
+								<p class="search__filter-item-placeholder">Модель</p>
+							</div>
+							<div class="options-container">
+								<div class="option">
+									<input type="radio" class="radio" id="model1" name="car-model" />
+									<label for="model1"><p>Model1</p></label>
+								</div>
+								<div class="option">
+									<input type="radio" class="radio" id="model2" name="car-model" />
+									<label for="model2"><p>Model2</p></label>
+								</div>
+								<div class="option">
+									<input type="radio" class="radio" id="model3" name="car-model" />
+									<label for="model3"><p>Model3</p></label>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+					@@include('_car-item.html')
 				
+				</div>
 
 			</div>
 
