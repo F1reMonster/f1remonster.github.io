@@ -506,6 +506,96 @@ hr {
             transform: rotate(180deg) translateZ(0);
 }
 
+.pagination {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 35px 0 25px;
+    width: 100%;
+    font-family: "SF-Reg";
+    font-size: 18px;
+}
+
+.pagination .disabled {
+    color: #d7d7d7;
+    cursor: not-allowed;
+}
+
+.pagination .disabled svg {
+    fill: #d7d7d7;
+}
+
+.pagination .current {
+    border-color: #005ccb;
+    color: #fff;
+    background-color: #005ccb;
+    cursor: default;
+}
+
+.pagination__btn-next,
+.pagination__btn-prev {
+    outline: none;
+    border: 0;
+    text-transform: capitalize;
+    color: #005ccb;
+    background: 0;
+}
+
+.pagination__btn-next svg,
+.pagination__btn-prev svg {
+    font-size: 14px;
+}
+
+.pagination__btn-prev {
+    margin-right: 10px;
+}
+
+.pagination__btn-prev svg {
+    margin-right: 10px;
+    -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+            transform: rotate(90deg);
+}
+
+.pagination__btn-next {
+    margin-left: 35px;
+}
+
+.pagination__btn-next svg {
+    margin-left: 10px;
+    fill: #005ccb;
+    -webkit-transform: rotate(270deg);
+        -ms-transform: rotate(270deg);
+            transform: rotate(270deg);
+}
+
+.pagination__btn {
+    margin-left: 25px;
+    outline: none;
+    border: 1px solid #005ccb;
+    border-radius: 3px;
+    padding: 0 5px;
+    height: 25px;
+    min-width: 25px;
+    font-family: "SF-Bold";
+    font-size: 14px;
+    color: #005ccb;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.pagination__btn:hover {
+    border-color: transparent;
+    color: #fff;
+    background-color: rgba(0, 92, 203, 0.5);
+}
+
 .header {
     position: fixed;
     left: 0;
@@ -2845,12 +2935,26 @@ hr {
     font-family: "SF-Reg";
 }
 
+.car-item__overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1px;
+    height: 1px;
+}
+
 .car-item.new .car-item__new {
     display: block;
 }
 
 .car-item.sell .car-item__sell {
     display: block;
+}
+
+.car-item.sell .car-item__overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
 }
 
 .car-item__body {
@@ -3005,21 +3109,38 @@ hr {
 }
 
 .car-item__btn {
-    display: block;
-    border-radius: 4px;
-    padding: 5px 35px;
+    display: inline-block;
+    overflow: hidden;
+    margin: 0;
+    outline: none;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    padding: 0 10px;
+    width: 100%;
+    height: 30px;
+    min-height: 28px;
     font-family: "SF-Med";
-    font-size: 14px;
-    text-align: center;
+    font-size: 16px;
+    line-height: 26px;
+    white-space: nowrap;
+    text-decoration: none;
+    -o-text-overflow: ellipsis;
+       text-overflow: ellipsis;
     color: #fff;
     background-color: #005ccb;
-    -webkit-transition: 0.3s ease-in;
-    -o-transition: 0.3s ease-in;
-    transition: 0.3s ease-in;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
 }
 
 .car-item__btn:hover {
-    background-color: #93d500;
+    -webkit-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
+            box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
 }
 
 .car-item__marker {

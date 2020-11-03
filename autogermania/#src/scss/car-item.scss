@@ -6,13 +6,13 @@
 	min-width: 320px;
 	font-family: "SF-Reg";
 
-	// &__overlay {
-	// 	position: absolute;
-	// 	left: 0;
-	// 	top: 0;
-	// 	width: 100%;
-	// 	height: 100%;
-	// }
+	&__overlay {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 1px;
+		height: 1px;
+	}
 
 	@media only screen and (max-width: 414px) {
 		margin-bottom: 20px;
@@ -31,9 +31,11 @@
 			display: block;
 		}
 
-		// .car-item__overlay {
-		// 	background-color: hsla(0, 0%, 100%, 0.5);
-		// }
+		.car-item__overlay {
+			width: 100%;
+			height: 100%;
+			background-color: hsla(0, 0%, 100%, 0.5);
+		}
 	}
 
 	&__body {
@@ -154,6 +156,7 @@
 		padding-bottom: 30px;
 		padding-left: 15px;
 		min-width: 145px;
+		
 
 		.favorite {
 			display: flex;
@@ -219,18 +222,30 @@
 	}
 
 	&__btn {
-		display: block;
-		border-radius: 4px;
-		padding: 5px 35px;
+		display: inline-block;
+		overflow: hidden;
+		margin: 0;
+		outline: none;
+		border: 1px solid transparent;
+		border-radius: 3px;
+		padding: 0 10px;
+		width: 100%;
+		height: 30px;
+		min-height: 28px;
 		font-family: "SF-Med";
-		font-size: 14px;
-		text-align: center;
+		font-size: 16px;
+		line-height: 26px;
+		white-space: nowrap;
+		text-decoration: none;
+		text-overflow: ellipsis;
 		color: $white;
 		background-color: $science-blue;
-		transition: 0.3s ease-in;
+		transition: all 0.2s ease-in-out;
+		cursor: pointer;
+		user-select: none;
 
 		&:hover {
-			background-color: $pistacio;
+			box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
 		}
 
 		@media only screen and (max-width: 414px) {
