@@ -1,8 +1,13 @@
 .filter {
+	display: block;
 	border: 1px solid $alto;
 	border-radius: 4px;
 	min-width: 260px;
 	background-color: $white;
+
+	@media only screen and (max-width: 992px) {
+		display: none;
+	}
 
 	&__subitem {
 		border-bottom: 1px solid $alto;
@@ -80,7 +85,7 @@
 		.options-container {
 			top: 10px;
 			margin-bottom: 10px;
-			border: 1px solid $emperor;
+			border: 1px solid $dusty-gray;
 			border-radius: 4px;
 			color: $emperor;
 		}

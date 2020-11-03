@@ -21,31 +21,100 @@
 				<div class="search-result__wrapper">
 					<div class="search-result__top">
 						<p class="search-result__total"><span>2 Авто</span> знайдено</p>
-						
+
 						<div class="select-box filter-section">
 							<div class="selected">
-								<p class="search__filter-item-placeholder">Модель</p>
+								<p class="search__filter-item-placeholder">Сортувати по</p>
 							</div>
 							<div class="options-container">
 								<div class="option">
 									<input type="radio" class="radio" id="model1" name="car-model" />
-									<label for="model1"><p>Model1</p></label>
+									<label for="model1">
+										<p>Стандартно</p>
+									</label>
 								</div>
 								<div class="option">
 									<input type="radio" class="radio" id="model2" name="car-model" />
-									<label for="model2"><p>Model2</p></label>
+									<label for="model2">
+										<p>Нові пропозиції перші</p>
+									</label>
 								</div>
 								<div class="option">
 									<input type="radio" class="radio" id="model3" name="car-model" />
-									<label for="model3"><p>Model3</p></label>
+									<label for="model3">
+										<p>Вартість за зростанням</p>
+									</label>
+								</div>
+								<div class="option">
+									<input type="radio" class="radio" id="model3" name="car-model" />
+									<label for="model3">
+										<p>Вартість за зменьшенням</p>
+									</label>
+								</div>
+								<div class="option">
+									<input type="radio" class="radio" id="model3" name="car-model" />
+									<label for="model3">
+										<p>Рік за збільшення</p>
+									</label>
+								</div>
+								<div class="option">
+									<input type="radio" class="radio" id="model3" name="car-model" />
+									<label for="model3">
+										<p>Рік за зменьшенням</p>
+									</label>
+								</div>
+								<div class="option">
+									<input type="radio" class="radio" id="model3" name="car-model" />
+									<label for="model3">
+										<p>Пробіг за зменьшенням</p>
+									</label>
+								</div>
+								<div class="option">
+									<input type="radio" class="radio" id="model3" name="car-model" />
+									<label for="model3">
+										<p>Пробіг за зростанням</p>
+									</label>
+								</div>
+								<div class="option">
+									<input type="radio" class="radio" id="model3" name="car-model" />
+									<label for="model3">
+										<p>Потужність за зростанням</p>
+									</label>
+								</div>
+								<div class="option">
+									<input type="radio" class="radio" id="model3" name="car-model" />
+									<label for="model3">
+										<p>Потужність за зменьшенням</p>
+									</label>
 								</div>
 							</div>
 						</div>
 
 					</div>
 
+					<div class="search-result__bottom">
+						<div class="search-result__tag">
+							<span>BMW</span>
+							<span class="delete-marker">
+								<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="12px"
+									height="12px">
+									<path fill-rule="evenodd" fill="rgb(0, 92, 203)"
+										d="M11.656,10.241 L10.242,11.655 L5.999,7.412 L1.757,11.655 L0.343,10.241 L4.585,5.998 L0.343,1.755 L1.757,0.341 L5.999,4.584 L10.242,0.341 L11.656,1.755 L7.414,5.998 L11.656,10.241 Z" />
+								</svg>
+							</span>
+						</div>
+						<a href="#" class="delete-filters">
+							Прибрати усі фільтра
+							<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="12px"
+								height="12px">
+								<path fill-rule="evenodd" fill="rgb(0, 92, 203)"
+									d="M11.656,10.241 L10.242,11.655 L5.999,7.412 L1.757,11.655 L0.343,10.241 L4.585,5.998 L0.343,1.755 L1.757,0.341 L5.999,4.584 L10.242,0.341 L11.656,1.755 L7.414,5.998 L11.656,10.241 Z" />
+							</svg>
+						</a>
+					</div>
+
 					@@include('_car-item.html')
-				
+
 				</div>
 
 			</div>
