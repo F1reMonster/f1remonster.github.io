@@ -1,0 +1,166 @@
+.footer {
+	margin-top: 53px;
+	padding-top: 48px;
+	letter-spacing: 0.28px;
+	background-color: $white;
+
+	&__title {
+		display: flex;
+		justify-content: space-between;
+		border-top: 2px solid $alto;
+		border-bottom: 2px solid $alto;
+		padding: 20px 15px;
+		font-family: "SF-Med";
+		font-size: 14px;
+	}
+
+	&__up {
+		display: flex;
+		align-items: center;
+		font-family: "SF-Med";
+		font-size: 14px;
+		color: $science-blue;
+		cursor: pointer;
+	}
+
+	&__icon {
+		margin-right: 5px;
+		width: 8px;
+		height: 12px;
+		fill: $science-blue;
+
+		&.icon-facebook,
+		&.icon-instagram,
+		&.icon-youtube {
+			margin-right: 20px;
+			width: 30px;
+			height: 30px;
+			fill: $dusty-gray;
+		}
+
+		&.icon-youtube {
+			width: 39px;
+			height: 30px;
+		}
+	}
+
+	&__nav {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		padding: 25px 30px;
+		font-size: 14px;
+		color: $dusty-gray;
+	}
+
+	&__nav-list {
+		font-family: "SF-Med";
+
+		// li {
+		// 	margin-bottom: 15px;
+		// }
+
+		// li:last-child {
+		// 	margin-bottom: 15px;
+		// }
+
+		@media only screen and (max-width: 650px) {
+			margin-bottom: 10px;
+			width: 50%;
+		}
+
+		@media only screen and (max-width: 414px) {
+			width: 100%;
+		}
+	}
+
+	&__nav-list-content {
+		@media only screen and (max-width: 414px) {
+			display: none;
+		}
+
+		@media only screen and (max-width: 375px) {
+			padding: 0 0 20px 20px;
+
+			li {
+				margin-bottom: 10px;
+			}
+		}
+	}
+
+	&__nav-list-title {
+		display: inline-flex;
+		align-items: center;
+		margin-bottom: 10px;
+		font-family: "SF-Semi";
+
+		span {
+			border-bottom: 1px solid;
+		}
+
+		@media only screen and (max-width: 414px) {
+			display: flex;
+			justify-content: space-between;
+			cursor: pointer;
+		}
+	}
+
+	&__nav-list-item-link {
+		color: inherit;
+	}
+
+	&__nav-list-media {
+		display: flex;
+	}
+
+	&__nav-change {
+		@media only screen and (max-width: 650px) {
+			display: none;
+		}
+
+		@media only screen and (max-width: 414px) {
+			display: block;
+		}
+	}
+
+	&__nav-icon {
+		fill: $dusty-gray;
+		transition: transform 0.2s;
+
+		&.icon-down {
+			width: 0;
+			height: 0;
+
+			@media only screen and (max-width: 650px) {
+				margin-left: 5px;
+				width: 14px;
+				height: 8px;
+			}
+		}
+
+		&.rotate {
+			transform: rotate(180deg);
+		}
+
+		// @media only screen and (max-width: 414px) {
+		// 	transform: rotate(180deg);
+
+		// 	&.rotate {
+		// 		transform: rotate(0deg);
+		// 	}
+		// }
+	}
+
+	&__copy {
+		padding: 30px 0;
+		font-family: "SF-Bold";
+		font-size: 10px;
+		letter-spacing: 0.2px;
+		text-align: center;
+		background-color: $alabaster;
+	}
+
+	@media only screen and (max-width: 414px) {
+		margin-top: 0;
+	}
+}

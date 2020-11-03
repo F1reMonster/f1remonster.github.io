@@ -1,0 +1,83 @@
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	color: $mine-shaft;
+	background-color: $alabaster;
+}
+
+p {
+	margin: 0;
+	padding: 0;
+}
+
+ul,
+li {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+	margin: 0 auto;
+	max-width: 1170px;
+
+	&.section-bg {
+		border: 1px solid $mercury;
+		background-color: $white;
+
+		&.about {
+			background-color: $bitocelli;
+		}
+	}
+
+	@media only screen and (min-width: 1200px) {
+		max-width: 1170px;
+	}
+
+	@media only screen and (min-width: 992px) {
+		max-width: 970px;
+	}
+
+	@media only screen and (min-width: 768px) {
+		max-width: 750px;
+	}
+}
+
+hr {
+	margin: 0;
+	border: 1px solid $alto;
+}
+
+.main-arrow-up {
+	position: fixed;
+	right: 20px;
+	bottom: 20px;
+	z-index: 3;
+	border-radius: 50%;
+	width: 30px;
+	height: 30px;
+	background: $science-blue url("../img/main-arrow-up.webp") no-repeat center;
+	opacity: 0;
+	transform: rotate(180deg) translateZ(0);
+}

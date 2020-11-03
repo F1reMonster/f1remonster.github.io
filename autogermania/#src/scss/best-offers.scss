@@ -1,0 +1,160 @@
+.best-offers {
+	margin-top: 40px;
+	font-family: "SF-Reg";
+
+	&__wrapper {
+		padding: 0 20px 30px;
+	}
+
+	&__title {
+		padding: 20px 0 10px 18px;
+		font-size: 24px;
+		letter-spacing: 0.48px;
+		text-transform: uppercase;
+		color: $science-blue;
+
+		@media only screen and (max-width: 320px) {
+			font-size: 22px;
+		}
+	}
+
+	&__slider {
+		position: relative;
+		display: flex;
+		justify-content: center;
+	}
+
+	&__slider-item {
+		outline: none;
+	}
+
+	&__slider-item-wrapper {
+		position: relative;
+		margin: 0 auto;
+		border: 1px solid $mercury;
+		border-bottom: 6px solid $science-blue;
+		max-width: 248px;
+		color: $mine-shaft;
+	}
+
+	&__slider-btn {
+		position: absolute;
+		top: 50%;
+		z-index: 5;
+		outline: none;
+		border: none;
+		width: 12px;
+		height: 50px;
+		background-color: transparent;
+		transform: translateY(-50%);
+		cursor: pointer;
+
+		&.prev,
+		&.next {
+			svg {
+				width: 12px;
+				height: 50px;
+				fill: $science-blue;
+			}
+		}
+
+		&.prev {
+			left: -20px;
+		}
+
+		&.next {
+			right: -10px;
+		}
+	}
+}
+
+.car {
+	&__wrapper {
+		position: relative;
+		width: 100%;
+	}
+
+	&__info {
+		padding: 10px 10px 0;
+	}
+
+	&__price {
+		position: absolute;
+		right: 10px;
+		top: 6px;
+		display: inline-block;
+		border-radius: 4px;
+		padding: 3px 10px;
+		font-family: "SF-Bold";
+		color: $white;
+		background-color: $pistacio;
+	}
+
+	&__slider {
+		margin-top: 34px;
+		margin-bottom: 31px;
+	}
+
+	&__slider-img {
+		margin: auto;
+		width: auto;
+		height: 105px;
+	}
+
+	&__slider-item {
+		position: relative;
+		outline: transparent;
+	}
+
+	&__slider-btn {
+		position: absolute;
+		top: 155px;
+		z-index: 5;
+		outline: none;
+		border: none;
+		border-radius: 4px;
+		width: 25px;
+		height: 8px;
+		background-color: $science-blue;
+		cursor: pointer;
+
+		&.prev,
+		&.next {
+			svg {
+				position: absolute;
+				right: 8px;
+				top: -2px;
+				width: 8px;
+				height: 12px;
+				fill: $white;
+			}
+		}
+
+		&.next {
+			right: 5px;
+		}
+
+		&.prev {
+			left: 5px;
+		}
+	}
+
+	&__title {
+		font-family: "SF-Bold";
+		font-size: 16px;
+
+		span {
+			padding-right: 5px;
+			color: $science-blue;
+		}
+	}
+
+	&__details {
+		padding: 18px 0;
+		font-size: 14px;
+
+		span {
+			padding-right: 5px;
+		}
+	}
+}
