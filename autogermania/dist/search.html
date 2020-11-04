@@ -218,9 +218,7 @@
 
 		<div class="search-result__body">
 			
-				<!-- ! v2 without block filter__item-->
-
-<aside class="filter">
+				<aside class="filter">
 	<button class="filter-btn-close">
 		<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="14px" height="14px">
 			<path fill-rule="evenodd" fill="rgb(0, 92, 203)"
@@ -228,683 +226,683 @@
 		</svg>
 	</button>
 	<!-- * Основні дані * -->
-
-	<div class="filter__item-title">
-		<div class="filter__item-title-img">
-			<img src="img/svg/plus.svg" alt="plus icon">
+	<div class="filter__item">
+		<div class="filter__item-title">
+			<div class="filter__item-title-img">
+				<img src="img/svg/plus.svg" alt="plus icon">
+			</div>
+			<p class="filter__item-title-text">Основні дані</p>
 		</div>
-		<p class="filter__item-title-text">Основні дані</p>
-	</div>
 
-	<div class="filter__subitem">
-		<div class="filter__subitem-body">
+		<div class="filter__subitem">
+			<div class="filter__subitem-body">
 
-			<!-- * Марка * -->
-			<div class="filter-body__item">
+				<!-- * Марка * -->
+				<div class="filter-body__item">
 
-				<div class="select-box filter-section">
-					<div class="selected">
-						<p class="placeholder">Марка</p>
+					<div class="select-box filter-section">
+						<div class="selected">
+							<p class="placeholder">Марка</p>
+						</div>
+						<div class="options-container">
+							<div class="option">
+								<input type="radio" class="radio" id="audi" name="car-brand" />
+								<label for="audi">
+									<p>Audi</p>
+								</label>
+							</div>
+
+							<div class="option">
+								<input type="radio" class="radio" id="bmw" name="car-brand" />
+								<label for="bmw">
+									<p>Bmw</p>
+								</label>
+							</div>
+
+							<div class="option">
+								<input type="radio" class="radio" id="ford" name="car-brand" />
+								<label for="ford">
+									<p>Ford</p>
+								</label>
+							</div>
+
+							<div class="option">
+								<input type="radio" class="radio" id="vw" name="car-brand" />
+								<label for="vw">
+									<p>Volkswagen</p>
+								</label>
+							</div>
+
+							<div class="option">
+								<input type="radio" class="radio" id="opel" name="car-brand" />
+								<label for="opel">
+									<p>Opel</p>
+								</label>
+							</div>
+
+						</div>
 					</div>
-					<div class="options-container">
-						<div class="option">
-							<input type="radio" class="radio" id="audi" name="car-brand" />
-							<label for="audi">
-								<p>Audi</p>
-							</label>
+
+
+					<!-- * Модель * -->
+					<div class="select-box filter-section">
+						<div class="selected">
+							<p class="placeholder">Модель</p>
+						</div>
+						<div class="options-container">
+							<div class="option">
+								<input type="radio" class="radio" id="model1" name="car-model" />
+								<label for="model1">
+									<p>Model1</p>
+								</label>
+							</div>
+							<div class="option">
+								<input type="radio" class="radio" id="model2" name="car-model" />
+								<label for="model2">
+									<p>Model2</p>
+								</label>
+							</div>
+							<div class="option">
+								<input type="radio" class="radio" id="model3" name="car-model" />
+								<label for="model3">
+									<p>Model3</p>
+								</label>
+							</div>
+						</div>
+					</div>
+
+					<div class="filter__subitem-add">
+						<div class="filter__subitem-add-img">
+							<svg class="filter__icon icon-plus">
+								<use xlink:href="img/sprite.svg#plus"></use>
+							</svg>
+						</div>
+						<p class="filter__subitem-add-text"><a href="#">додати авто для пошуку</a></p>
+					</div>
+
+					<!-- * Тип кузову * -->
+					<div class="select-box filter-section">
+						<div class="selected">
+							<p class="placeholder">Тип кузову</p>
+						</div>
+						<div class="options-container">
+							<div class="option">
+								<label class="checkbox">
+									<input type="checkbox" class="checkbox__input" id="suv" name="car-body">
+									<div class="checkbox__div"></div>
+									<p>Універсал</p>
+								</label>
+							</div>
+							<div class="option">
+								<label class="checkbox">
+									<input type="checkbox" class="checkbox__input" id="suv" name="car-body">
+									<div class="checkbox__div"></div>
+									<p>SUV</p>
+								</label>
+							</div>
+							<div class="option">
+								<label class="checkbox">
+									<input type="checkbox" class="checkbox__input" id="cupe" name="car-body">
+									<div class="checkbox__div"></div>
+									<p>Купе</p>
+								</label>
+							</div>
+							<div class="option">
+								<label class="checkbox">
+									<input type="checkbox" class="checkbox__input" id="compact" name="car-body">
+									<div class="checkbox__div"></div>
+									<p>Компакт</p>
+								</label>
+							</div>
+							<div class="option">
+								<label class="checkbox">
+									<input type="checkbox" class="checkbox__input" id="minivan" name="car-body">
+									<div class="checkbox__div"></div>
+									<p>Мінівен</p>
+								</label>
+							</div>
 						</div>
 
-						<div class="option">
-							<input type="radio" class="radio" id="bmw" name="car-brand" />
-							<label for="bmw">
-								<p>Bmw</p>
-							</label>
-						</div>
 
-						<div class="option">
-							<input type="radio" class="radio" id="ford" name="car-brand" />
-							<label for="ford">
-								<p>Ford</p>
-							</label>
-						</div>
+					</div>
 
-						<div class="option">
-							<input type="radio" class="radio" id="vw" name="car-brand" />
-							<label for="vw">
-								<p>Volkswagen</p>
-							</label>
-						</div>
+				</div>
 
-						<div class="option">
-							<input type="radio" class="radio" id="opel" name="car-brand" />
-							<label for="opel">
-								<p>Opel</p>
-							</label>
-						</div>
+				<!-- * Рік випуску * -->
+				<div class="filter-body__item">
+					<div class="filter-body__item-title">Рік випуску</div>
+				</div>
 
+				<!-- * Пробіг * -->
+				<div class="filter-body__item">
+					<div class="filter-body__item-title">Пробіг</div>
+				</div>
+
+				<!-- * ПАливо * -->
+				<div class="filter-body__item">
+					<div class="filter-body__item-title">Паливо</div>
+
+					<div class="select-box filter-section">
+						<div class="selected">
+							<p class="placeholder">Паливо</p>
+						</div>
+						<div class="options-container">
+							<div class="option">
+								<input type="radio" class="radio" id="model1" name="car-model" />
+								<label for="model1">
+									<p>Бензин</p>
+								</label>
+							</div>
+							<div class="option">
+								<input type="radio" class="radio" id="model2" name="car-model" />
+								<label for="model2">
+									<p>Дизель</p>
+								</label>
+							</div>
+							<div class="option">
+								<input type="radio" class="radio" id="model3" name="car-model" />
+								<label for="model3">
+									<p>Газ</p>
+								</label>
+							</div>
+						</div>
 					</div>
 				</div>
 
-
-				<!-- * Модель * -->
-				<div class="select-box filter-section">
-					<div class="selected">
-						<p class="placeholder">Модель</p>
-					</div>
-					<div class="options-container">
-						<div class="option">
-							<input type="radio" class="radio" id="model1" name="car-model" />
-							<label for="model1">
-								<p>Model1</p>
-							</label>
-						</div>
-						<div class="option">
-							<input type="radio" class="radio" id="model2" name="car-model" />
-							<label for="model2">
-								<p>Model2</p>
-							</label>
-						</div>
-						<div class="option">
-							<input type="radio" class="radio" id="model3" name="car-model" />
-							<label for="model3">
-								<p>Model3</p>
-							</label>
-						</div>
-					</div>
+				<!-- * Об'єм двигуна *  -->
+				<div class="filter-body__item">
+					<div class="filter-body__item-title">Об'єм двигуна</div>
 				</div>
 
-				<div class="filter__subitem-add">
-					<div class="filter__subitem-add-img">
-						<svg class="filter__icon icon-plus">
-							<use xlink:href="img/sprite.svg#plus"></use>
-						</svg>
-					</div>
-					<p class="filter__subitem-add-text"><a href="#">додати авто для пошуку</a></p>
+				<div class="filter-body__item">
+					<div class="filter-body__item-title">Потужність</div>
 				</div>
-
-				<!-- * Тип кузову * -->
-				<div class="select-box filter-section">
-					<div class="selected">
-						<p class="placeholder">Тип кузову</p>
-					</div>
-					<div class="options-container">
-						<div class="option">
-							<label class="checkbox">
-								<input type="checkbox" class="checkbox__input" id="suv" name="car-body">
-								<div class="checkbox__div"></div>
-								<p>Універсал</p>
-							</label>
-						</div>
-						<div class="option">
-							<label class="checkbox">
-								<input type="checkbox" class="checkbox__input" id="suv" name="car-body">
-								<div class="checkbox__div"></div>
-								<p>SUV</p>
-							</label>
-						</div>
-						<div class="option">
-							<label class="checkbox">
-								<input type="checkbox" class="checkbox__input" id="cupe" name="car-body">
-								<div class="checkbox__div"></div>
-								<p>Купе</p>
-							</label>
-						</div>
-						<div class="option">
-							<label class="checkbox">
-								<input type="checkbox" class="checkbox__input" id="compact" name="car-body">
-								<div class="checkbox__div"></div>
-								<p>Компакт</p>
-							</label>
-						</div>
-						<div class="option">
-							<label class="checkbox">
-								<input type="checkbox" class="checkbox__input" id="minivan" name="car-body">
-								<div class="checkbox__div"></div>
-								<p>Мінівен</p>
-							</label>
-						</div>
-					</div>
-
-
-				</div>
-
-			</div>
-
-			<!-- * Рік випуску * -->
-			<div class="filter-body__item">
-				<div class="filter-body__item-title">Рік випуску</div>
-			</div>
-
-			<!-- * Пробіг * -->
-			<div class="filter-body__item">
-				<div class="filter-body__item-title">Пробіг</div>
-			</div>
-
-			<!-- * ПАливо * -->
-			<div class="filter-body__item">
-				<div class="filter-body__item-title">Паливо</div>
-
-				<div class="select-box filter-section">
-					<div class="selected">
-						<p class="placeholder">Паливо</p>
-					</div>
-					<div class="options-container">
-						<div class="option">
-							<input type="radio" class="radio" id="model1" name="car-model" />
-							<label for="model1">
-								<p>Бензин</p>
-							</label>
-						</div>
-						<div class="option">
-							<input type="radio" class="radio" id="model2" name="car-model" />
-							<label for="model2">
-								<p>Дизель</p>
-							</label>
-						</div>
-						<div class="option">
-							<input type="radio" class="radio" id="model3" name="car-model" />
-							<label for="model3">
-								<p>Газ</p>
-							</label>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<!-- * Об'єм двигуна *  -->
-			<div class="filter-body__item">
-				<div class="filter-body__item-title">Об'єм двигуна</div>
-			</div>
-
-			<div class="filter-body__item">
-				<div class="filter-body__item-title">Потужність</div>
 			</div>
 		</div>
 	</div>
-
 
 	<!-- * Привід та трансмісія * -->
-
-	<div class="filter__item-title">
-		<div class="filter__item-title-img">
-			<img src="img/svg/plus.svg" alt="plus icon">
-		</div>
-		<p class="filter__item-title-text">Привід та трансмісія</p>
-	</div>
-	<div class="filter__subitem">
-		<div class="filter__subitem-body">
-
-			<div class="filter-body__item">
-				<div class="filter-body__item-title">Привід</div>
-				<div class="wd">
-					<label class="checkbox other">
-						<input type="checkbox" class="checkbox__input" value="abs">
-						<div class="checkbox__border">
-							<div class="checkbox__div other">
-								<div class="material fwd"></div>
-							</div>
-							<p>Передній</p>
-						</div>
-					</label>
-				</div>
-				<div class="wd">
-					<label class="checkbox other">
-						<input type="checkbox" class="checkbox__input" value="abs">
-						<div class="checkbox__border">
-							<div class="checkbox__div other">
-								<div class="material rwd"></div>
-							</div>
-							<p>Задній</p>
-
-						</div>
-					</label>
-				</div>
-				<div class="wd">
-					<label class="checkbox other">
-						<input type="checkbox" class="checkbox__input" value="abs">
-						<div class="checkbox__border">
-							<div class="checkbox__div other">
-								<div class="material awd"></div>
-							</div>
-							<p>Повний</p>
-
-						</div>
-					</label>
-				</div>
+	<div class="filter__item">
+		<div class="filter__item-title">
+			<div class="filter__item-title-img">
+				<img src="img/svg/plus.svg" alt="plus icon">
 			</div>
-
-			<div class="filter-body__item">
-				<div class="filter-body__item-title">Трансмісія</div>
-				<div class="gearbox">
-					<label class="checkbox other">
-						<input type="checkbox" class="checkbox__input" value="abs">
-						<div class="checkbox__border">
-							<div class="checkbox__div other">
-								<div class="material automatic"></div>
-							</div>
-							<p>Автоматична</p>
-						</div>
-
-					</label>
-				</div>
-				<div class="gearbox">
-					<label class="checkbox other">
-						<input type="checkbox" class="checkbox__input" value="abs">
-						<div class="checkbox__border">
-							<div class="checkbox__div other">
-								<div class="material manual"></div>
-							</div>
-							<p>Ручна</p>
-						</div>
-					</label>
-				</div>
-				<div class="gearbox">
-					<label class="checkbox other">
-						<input type="checkbox" class="checkbox__input" value="abs">
-						<div class="checkbox__border">
-							<div class="checkbox__div other">
-								<div class="material robot"></div>
-							</div>
-							<p>Робот</p>
-						</div>
-					</label>
-				</div>
-			</div>
-
+			<p class="filter__item-title-text">Привід та трансмісія</p>
 		</div>
+		<div class="filter__subitem">
+			<div class="filter__subitem-body">
+
+				<div class="filter-body__item">
+					<div class="filter-body__item-title">Привід</div>
+					<div class="wd">
+						<label class="checkbox other">
+							<input type="checkbox" class="checkbox__input" value="abs">
+							<div class="checkbox__border">
+								<div class="checkbox__div other">
+									<div class="material fwd"></div>
+								</div>
+								<p>Передній</p>
+							</div>
+						</label>
+					</div>
+					<div class="wd">
+						<label class="checkbox other">
+							<input type="checkbox" class="checkbox__input" value="abs">
+							<div class="checkbox__border">
+								<div class="checkbox__div other">
+									<div class="material rwd"></div>
+								</div>
+								<p>Задній</p>
+
+							</div>
+						</label>
+					</div>
+					<div class="wd">
+						<label class="checkbox other">
+							<input type="checkbox" class="checkbox__input" value="abs">
+							<div class="checkbox__border">
+								<div class="checkbox__div other">
+									<div class="material awd"></div>
+								</div>
+								<p>Повний</p>
+
+							</div>
+						</label>
+					</div>
+				</div>
+
+				<div class="filter-body__item">
+					<div class="filter-body__item-title">Трансмісія</div>
+					<div class="gearbox">
+						<label class="checkbox other">
+							<input type="checkbox" class="checkbox__input" value="abs">
+							<div class="checkbox__border">
+								<div class="checkbox__div other">
+									<div class="material automatic"></div>
+								</div>
+								<p>Автоматична</p>
+							</div>
+
+						</label>
+					</div>
+					<div class="gearbox">
+						<label class="checkbox other">
+							<input type="checkbox" class="checkbox__input" value="abs">
+							<div class="checkbox__border">
+								<div class="checkbox__div other">
+									<div class="material manual"></div>
+								</div>
+								<p>Ручна</p>
+							</div>
+						</label>
+					</div>
+					<div class="gearbox">
+						<label class="checkbox other">
+							<input type="checkbox" class="checkbox__input" value="abs">
+							<div class="checkbox__border">
+								<div class="checkbox__div other">
+									<div class="material robot"></div>
+								</div>
+								<p>Робот</p>
+							</div>
+						</label>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
 	</div>
-
-
 
 	<!-- * колір та матеріали * -->
-
-	<div class="filter__item-title">
-		<div class="filter__item-title-img">
-			<img src="img/svg/plus.svg" alt="plus icon">
+	<div class="filter__item">
+		<div class="filter__item-title">
+			<div class="filter__item-title-img">
+				<img src="img/svg/plus.svg" alt="plus icon">
+			</div>
+			<p class="filter__item-title-text">Колір та матеріали</p>
 		</div>
-		<p class="filter__item-title-text">Колір та матеріали</p>
-	</div>
-	<div class="filter__subitem">
+		<div class="filter__subitem">
 
-		<div class="filter__subitem-body">
+			<div class="filter__subitem-body">
 
-			<!-- * колір авто * -->
-			<div class="filter-body__item">
-				<div class="filter-body__item-title">Колір авто</div>
-				<div class="filter-body__color">
-					<div class="color-row">
-						<div class="color">
-							<label class="checkbox other">
-								<input type="checkbox" class="checkbox__input" value="abs">
-								<div class="checkbox__div alto">
-									<div class="color black"></div>
-								</div>
-							</label>
+				<!-- * колір авто * -->
+				<div class="filter-body__item">
+					<div class="filter-body__item-title">Колір авто</div>
+					<div class="filter-body__color">
+						<div class="color-row">
+							<div class="color">
+								<label class="checkbox other">
+									<input type="checkbox" class="checkbox__input" value="abs">
+									<div class="checkbox__div alto">
+										<div class="color black"></div>
+									</div>
+								</label>
+							</div>
+							<div class="color">
+								<label class="checkbox other">
+									<input type="checkbox" class="checkbox__input" value="abs">
+									<div class="checkbox__div alto">
+										<div class="color gray"></div>
+									</div>
+								</label>
+							</div>
+							<div class="color">
+								<label class="checkbox other">
+									<input type="checkbox" class="checkbox__input" value="abs">
+									<div class="checkbox__div alto">
+										<div class="color silver"></div>
+									</div>
+								</label>
+							</div>
+							<div class="color">
+								<label class="checkbox other">
+									<input type="checkbox" class="checkbox__input" value="abs">
+									<div class="checkbox__div alto">
+										<div class="color white"></div>
+									</div>
+								</label>
+							</div>
+							<div class="color">
+								<label class="checkbox other">
+									<input type="checkbox" class="checkbox__input" value="abs">
+									<div class="checkbox__div alto">
+										<div class="color blue"></div>
+									</div>
+								</label>
+							</div>
 						</div>
-						<div class="color">
-							<label class="checkbox other">
-								<input type="checkbox" class="checkbox__input" value="abs">
-								<div class="checkbox__div alto">
-									<div class="color gray"></div>
-								</div>
-							</label>
+
+						<div class="color-row">
+							<div class="color">
+								<label class="checkbox other">
+									<input type="checkbox" class="checkbox__input" value="abs">
+									<div class="checkbox__div alto">
+										<div class="color black"></div>
+									</div>
+								</label>
+							</div>
+							<div class="color">
+								<label class="checkbox other">
+									<input type="checkbox" class="checkbox__input" value="abs">
+									<div class="checkbox__div alto">
+										<div class="color gray"></div>
+									</div>
+								</label>
+							</div>
+							<div class="color">
+								<label class="checkbox other">
+									<input type="checkbox" class="checkbox__input" value="abs">
+									<div class="checkbox__div alto">
+										<div class="color silver"></div>
+									</div>
+								</label>
+							</div>
+							<div class="color">
+								<label class="checkbox other">
+									<input type="checkbox" class="checkbox__input" value="abs">
+									<div class="checkbox__div alto">
+										<div class="color white"></div>
+									</div>
+								</label>
+							</div>
+							<div class="color">
+								<label class="checkbox other">
+									<input type="checkbox" class="checkbox__input" value="abs">
+									<div class="checkbox__div alto">
+										<div class="color blue"></div>
+									</div>
+								</label>
+							</div>
 						</div>
-						<div class="color">
-							<label class="checkbox other">
-								<input type="checkbox" class="checkbox__input" value="abs">
-								<div class="checkbox__div alto">
-									<div class="color silver"></div>
-								</div>
-							</label>
+
+						<div class="color-row">
+							<div class="color">
+								<label class="checkbox other">
+									<input type="checkbox" class="checkbox__input" value="abs">
+									<div class="checkbox__div alto">
+										<div class="color black"></div>
+									</div>
+								</label>
+							</div>
+							<div class="color">
+								<label class="checkbox other">
+									<input type="checkbox" class="checkbox__input" value="abs">
+									<div class="checkbox__div alto">
+										<div class="color gray"></div>
+									</div>
+								</label>
+							</div>
+							<div class="color">
+								<label class="checkbox other">
+									<input type="checkbox" class="checkbox__input" value="abs">
+									<div class="checkbox__div alto">
+										<div class="color silver"></div>
+									</div>
+								</label>
+							</div>
+							<div class="color">
+								<label class="checkbox other">
+									<input type="checkbox" class="checkbox__input" value="abs">
+									<div class="checkbox__div alto">
+										<div class="color white"></div>
+									</div>
+								</label>
+							</div>
+							<div class="color">
+								<label class="checkbox other">
+									<input type="checkbox" class="checkbox__input" value="abs">
+									<div class="checkbox__div alto">
+										<div class="color blue"></div>
+									</div>
+								</label>
+							</div>
 						</div>
-						<div class="color">
-							<label class="checkbox other">
-								<input type="checkbox" class="checkbox__input" value="abs">
-								<div class="checkbox__div alto">
-									<div class="color white"></div>
-								</div>
-							</label>
-						</div>
-						<div class="color">
-							<label class="checkbox other">
-								<input type="checkbox" class="checkbox__input" value="abs">
-								<div class="checkbox__div alto">
-									<div class="color blue"></div>
-								</div>
-							</label>
-						</div>
+
+
 					</div>
-
-					<div class="color-row">
-						<div class="color">
-							<label class="checkbox other">
-								<input type="checkbox" class="checkbox__input" value="abs">
-								<div class="checkbox__div alto">
-									<div class="color black"></div>
-								</div>
-							</label>
-						</div>
-						<div class="color">
-							<label class="checkbox other">
-								<input type="checkbox" class="checkbox__input" value="abs">
-								<div class="checkbox__div alto">
-									<div class="color gray"></div>
-								</div>
-							</label>
-						</div>
-						<div class="color">
-							<label class="checkbox other">
-								<input type="checkbox" class="checkbox__input" value="abs">
-								<div class="checkbox__div alto">
-									<div class="color silver"></div>
-								</div>
-							</label>
-						</div>
-						<div class="color">
-							<label class="checkbox other">
-								<input type="checkbox" class="checkbox__input" value="abs">
-								<div class="checkbox__div alto">
-									<div class="color white"></div>
-								</div>
-							</label>
-						</div>
-						<div class="color">
-							<label class="checkbox other">
-								<input type="checkbox" class="checkbox__input" value="abs">
-								<div class="checkbox__div alto">
-									<div class="color blue"></div>
-								</div>
-							</label>
-						</div>
-					</div>
-
-					<div class="color-row">
-						<div class="color">
-							<label class="checkbox other">
-								<input type="checkbox" class="checkbox__input" value="abs">
-								<div class="checkbox__div alto">
-									<div class="color black"></div>
-								</div>
-							</label>
-						</div>
-						<div class="color">
-							<label class="checkbox other">
-								<input type="checkbox" class="checkbox__input" value="abs">
-								<div class="checkbox__div alto">
-									<div class="color gray"></div>
-								</div>
-							</label>
-						</div>
-						<div class="color">
-							<label class="checkbox other">
-								<input type="checkbox" class="checkbox__input" value="abs">
-								<div class="checkbox__div alto">
-									<div class="color silver"></div>
-								</div>
-							</label>
-						</div>
-						<div class="color">
-							<label class="checkbox other">
-								<input type="checkbox" class="checkbox__input" value="abs">
-								<div class="checkbox__div alto">
-									<div class="color white"></div>
-								</div>
-							</label>
-						</div>
-						<div class="color">
-							<label class="checkbox other">
-								<input type="checkbox" class="checkbox__input" value="abs">
-								<div class="checkbox__div alto">
-									<div class="color blue"></div>
-								</div>
-							</label>
-						</div>
-					</div>
-
+					<label class="checkbox other">
+						<input type="checkbox" class="checkbox__input" value="sss">
+						<div class="checkbox__div other"></div>
+						<p>Metalic</p>
+					</label>
 
 				</div>
-				<label class="checkbox other">
-					<input type="checkbox" class="checkbox__input" value="sss">
-					<div class="checkbox__div other"></div>
-					<p>Metalic</p>
-				</label>
 
-			</div>
-
-			<!-- * колір салону * -->
-			<div class="filter-body__item">
-				<div class="filter-body__item-title">Колір салону</div>
-				<div class="filter-body__salon-color">
-					<div class="color">
-						<label class="checkbox other">
-							<input type="checkbox" class="checkbox__input" value="abs">
-							<div class="checkbox__div alto">
-								<div class="color black"></div>
-							</div>
-						</label>
-					</div>
-					<div class="color">
-						<label class="checkbox other">
-							<input type="checkbox" class="checkbox__input" value="abs">
-							<div class="checkbox__div alto">
-								<div class="color gray"></div>
-							</div>
-						</label>
-					</div>
-					<div class="color">
-						<label class="checkbox other">
-							<input type="checkbox" class="checkbox__input" value="abs">
-							<div class="checkbox__div alto">
-								<div class="color indian-tan"></div>
-							</div>
-						</label>
-					</div>
-					<div class="color">
-						<label class="checkbox other">
-							<input type="checkbox" class="checkbox__input" value="abs">
-							<div class="checkbox__div alto">
-								<div class="color brown"></div>
-							</div>
-						</label>
-					</div>
-					<div class="color">
-						<label class="checkbox other">
-							<input type="checkbox" class="checkbox__input" value="abs">
-							<div class="checkbox__div alto">
-								<div class="color beige"></div>
-							</div>
-						</label>
+				<!-- * колір салону * -->
+				<div class="filter-body__item">
+					<div class="filter-body__item-title">Колір салону</div>
+					<div class="filter-body__salon-color">
+						<div class="color">
+							<label class="checkbox other">
+								<input type="checkbox" class="checkbox__input" value="abs">
+								<div class="checkbox__div alto">
+									<div class="color black"></div>
+								</div>
+							</label>
+						</div>
+						<div class="color">
+							<label class="checkbox other">
+								<input type="checkbox" class="checkbox__input" value="abs">
+								<div class="checkbox__div alto">
+									<div class="color gray"></div>
+								</div>
+							</label>
+						</div>
+						<div class="color">
+							<label class="checkbox other">
+								<input type="checkbox" class="checkbox__input" value="abs">
+								<div class="checkbox__div alto">
+									<div class="color indian-tan"></div>
+								</div>
+							</label>
+						</div>
+						<div class="color">
+							<label class="checkbox other">
+								<input type="checkbox" class="checkbox__input" value="abs">
+								<div class="checkbox__div alto">
+									<div class="color brown"></div>
+								</div>
+							</label>
+						</div>
+						<div class="color">
+							<label class="checkbox other">
+								<input type="checkbox" class="checkbox__input" value="abs">
+								<div class="checkbox__div alto">
+									<div class="color beige"></div>
+								</div>
+							</label>
+						</div>
 					</div>
 				</div>
-			</div>
 
-			<!-- * матеріал салону * -->
-			<div class="filter-body__item salon-padding">
-				<div class="filter-body__item-title">Матеріал салону</div>
+				<!-- * матеріал салону * -->
+				<div class="filter-body__item salon-padding">
+					<div class="filter-body__item-title">Матеріал салону</div>
 
-				<div class="filter-body__salon">
-					<div class="salon">
-						<label class="checkbox other">
-							<input type="checkbox" class="checkbox__input" value="abs">
-							<div class="checkbox__border">
-								<div class="checkbox__div other">
-									<div class="material leather"></div>
+					<div class="filter-body__salon">
+						<div class="salon">
+							<label class="checkbox other">
+								<input type="checkbox" class="checkbox__input" value="abs">
+								<div class="checkbox__border">
+									<div class="checkbox__div other">
+										<div class="material leather"></div>
+									</div>
+									<p>Шкіра</p>
+
 								</div>
-								<p>Шкіра</p>
-
-							</div>
-						</label>
-					</div>
-					<div class="salon">
-						<label class="checkbox other">
-							<input type="checkbox" class="checkbox__input" value="abs">
-							<div class="checkbox__border">
-								<div class="checkbox__div other">
-									<div class="material part-leather"></div>
+							</label>
+						</div>
+						<div class="salon">
+							<label class="checkbox other">
+								<input type="checkbox" class="checkbox__input" value="abs">
+								<div class="checkbox__border">
+									<div class="checkbox__div other">
+										<div class="material part-leather"></div>
+									</div>
+									<p>Частково шкіра</p>
 								</div>
-								<p>Частково шкіра</p>
-							</div>
-						</label>
-					</div>
+							</label>
+						</div>
 
-					<div class="salon">
-						<label class="checkbox other">
-							<input type="checkbox" class="checkbox__input" value="abs">
-							<div class="checkbox__border">
-								<div class="checkbox__div other">
-									<div class="material alkantara"></div>
+						<div class="salon">
+							<label class="checkbox other">
+								<input type="checkbox" class="checkbox__input" value="abs">
+								<div class="checkbox__border">
+									<div class="checkbox__div other">
+										<div class="material alkantara"></div>
+									</div>
+									<p>Алькантара</p>
+
 								</div>
-								<p>Алькантара</p>
+							</label>
+						</div>
 
-							</div>
-						</label>
-					</div>
+						<div class="salon">
+							<label class="checkbox other">
+								<input type="checkbox" class="checkbox__input" value="abs">
+								<div class="checkbox__border">
+									<div class="checkbox__div other">
+										<div class="material velurus"></div>
+									</div>
+									<p>Велюр</p>
 
-					<div class="salon">
-						<label class="checkbox other">
-							<input type="checkbox" class="checkbox__input" value="abs">
-							<div class="checkbox__border">
-								<div class="checkbox__div other">
-									<div class="material velurus"></div>
 								</div>
-								<p>Велюр</p>
+							</label>
+						</div>
 
-							</div>
-						</label>
-					</div>
+						<div class="salon">
+							<label class="checkbox other">
+								<input type="checkbox" class="checkbox__input" value="abs">
+								<div class="checkbox__border">
+									<div class="checkbox__div other">
+										<div class="material fabric"></div>
+									</div>
+									<p>Тканина</p>
 
-					<div class="salon">
-						<label class="checkbox other">
-							<input type="checkbox" class="checkbox__input" value="abs">
-							<div class="checkbox__border">
-								<div class="checkbox__div other">
-									<div class="material fabric"></div>
 								</div>
-								<p>Тканина</p>
+							</label>
+						</div>
 
-							</div>
-						</label>
-					</div>
+						<div class="salon">
+							<label class="checkbox other">
+								<input type="checkbox" class="checkbox__input" value="abs">
+								<div class="checkbox__border">
+									<div class="checkbox__div other">
+										<div class="material other"></div>
+									</div>
+									<p>Інша</p>
 
-					<div class="salon">
-						<label class="checkbox other">
-							<input type="checkbox" class="checkbox__input" value="abs">
-							<div class="checkbox__border">
-								<div class="checkbox__div other">
-									<div class="material other"></div>
 								</div>
-								<p>Інша</p>
+							</label>
+						</div>
 
-							</div>
-						</label>
+
 					</div>
-
-
 				</div>
 			</div>
 		</div>
 	</div>
-
 
 
 	<!-- * фільтр додаткового обладнання * -->
-
-	<div class="filter__item-title">
-		<div class="filter__item-title-img">
-			<img src="img/svg/plus.svg" alt="plus icon">
+	<div class="filter__item">
+		<div class="filter__item-title">
+			<div class="filter__item-title-img">
+				<img src="img/svg/plus.svg" alt="plus icon">
+			</div>
+			<p class="filter__item-title-text">Обладнання</p>
 		</div>
-		<p class="filter__item-title-text">Обладнання</p>
-	</div>
-	<div class="filter__subitem">
+		<div class="filter__subitem">
 
-		<div class="filter__subitem-body">
+			<div class="filter__subitem-body">
 
-			<div class="filter-body__item">
-				<div class="filter-body__item-title">Додаткове</div>
-				<label class="checkbox other">
-					<input type="checkbox" class="checkbox__input" value="sss">
-					<div class="checkbox__div other"></div>
-					<p>Star Stop System</p>
-				</label>
-				<label class="checkbox other">
-					<input type="checkbox" class="checkbox__input" value="abs">
-					<div class="checkbox__div other"></div>
-					<p>ABS</p>
-				</label>
-				<label class="checkbox other">
-					<input type="checkbox" class="checkbox__input" value="esp">
-					<div class="checkbox__div other"></div>
-					<p>ESP</p>
-				</label>
-				<label class="checkbox other">
-					<input type="checkbox" class="checkbox__input" value="hd">
-					<div class="checkbox__div other"></div>
-					<p>Head Display</p>
-				</label>
-				<label class="checkbox other">
-					<input type="checkbox" class="checkbox__input" value="pa">
-					<div class="checkbox__div other"></div>
-					<p>Parking Assistance</p>
-				</label>
-				<label class="checkbox other">
-					<input type="checkbox" class="checkbox__input" value="ars">
-					<div class="checkbox__div other"></div>
-					<p>Automatic Rain Sensors</p>
-				</label>
-				<label class="checkbox other">
-					<input type="checkbox" class="checkbox__input" value="ars">
-					<div class="checkbox__div other"></div>
-					<p>Criuse Control</p>
-				</label>
-				<label class="checkbox other">
-					<input type="checkbox" class="checkbox__input" value="ars">
-					<div class="checkbox__div other"></div>
-					<p>Traffic Sign Recognition</p>
-				</label>
-				<label class="checkbox other">
-					<input type="checkbox" class="checkbox__input" value="ars">
-					<div class="checkbox__div other"></div>
-					<p>Climatisation</p>
-				</label>
-				<label class="checkbox other">
-					<input type="checkbox" class="checkbox__input" value="ars">
-					<div class="checkbox__div other"></div>
-					<p>Auxilary Heating</p>
-				</label>
-				<label class="checkbox other">
-					<input type="checkbox" class="checkbox__input" value="ars">
-					<div class="checkbox__div other"></div>
-					<p>Bluetooth</p>
-				</label>
-				<label class="checkbox other">
-					<input type="checkbox" class="checkbox__input" value="ars">
-					<div class="checkbox__div other"></div>
-					<p>Hands free phone system</p>
-				</label>
-				<label class="checkbox other">
-					<input type="checkbox" class="checkbox__input" value="ars">
-					<div class="checkbox__div other"></div>
-					<p>Navigation System</p>
-				</label>
-				<label class="checkbox other">
-					<input type="checkbox" class="checkbox__input" value="ars">
-					<div class="checkbox__div other"></div>
-					<p>Heated Seats</p>
-				</label>
-				<label class="checkbox other">
-					<input type="checkbox" class="checkbox__input" value="ars">
-					<div class="checkbox__div other"></div>
-					<p>Airbag</p>
-				</label>
-				<label class="checkbox other">
-					<input type="checkbox" class="checkbox__input" value="ars">
-					<div class="checkbox__div other"></div>
-					<p>Multifuncion Wheel</p>
-				</label>
+				<div class="filter-body__item">
+					<div class="filter-body__item-title">Додаткове</div>
+					<label class="checkbox other">
+						<input type="checkbox" class="checkbox__input" value="sss">
+						<div class="checkbox__div other"></div>
+						<p>Star Stop System</p>
+					</label>
+					<label class="checkbox other">
+						<input type="checkbox" class="checkbox__input" value="abs">
+						<div class="checkbox__div other"></div>
+						<p>ABS</p>
+					</label>
+					<label class="checkbox other">
+						<input type="checkbox" class="checkbox__input" value="esp">
+						<div class="checkbox__div other"></div>
+						<p>ESP</p>
+					</label>
+					<label class="checkbox other">
+						<input type="checkbox" class="checkbox__input" value="hd">
+						<div class="checkbox__div other"></div>
+						<p>Head Display</p>
+					</label>
+					<label class="checkbox other">
+						<input type="checkbox" class="checkbox__input" value="pa">
+						<div class="checkbox__div other"></div>
+						<p>Parking Assistance</p>
+					</label>
+					<label class="checkbox other">
+						<input type="checkbox" class="checkbox__input" value="ars">
+						<div class="checkbox__div other"></div>
+						<p>Automatic Rain Sensors</p>
+					</label>
+					<label class="checkbox other">
+						<input type="checkbox" class="checkbox__input" value="ars">
+						<div class="checkbox__div other"></div>
+						<p>Criuse Control</p>
+					</label>
+					<label class="checkbox other">
+						<input type="checkbox" class="checkbox__input" value="ars">
+						<div class="checkbox__div other"></div>
+						<p>Traffic Sign Recognition</p>
+					</label>
+					<label class="checkbox other">
+						<input type="checkbox" class="checkbox__input" value="ars">
+						<div class="checkbox__div other"></div>
+						<p>Climatisation</p>
+					</label>
+					<label class="checkbox other">
+						<input type="checkbox" class="checkbox__input" value="ars">
+						<div class="checkbox__div other"></div>
+						<p>Auxilary Heating</p>
+					</label>
+					<label class="checkbox other">
+						<input type="checkbox" class="checkbox__input" value="ars">
+						<div class="checkbox__div other"></div>
+						<p>Bluetooth</p>
+					</label>
+					<label class="checkbox other">
+						<input type="checkbox" class="checkbox__input" value="ars">
+						<div class="checkbox__div other"></div>
+						<p>Hands free phone system</p>
+					</label>
+					<label class="checkbox other">
+						<input type="checkbox" class="checkbox__input" value="ars">
+						<div class="checkbox__div other"></div>
+						<p>Navigation System</p>
+					</label>
+					<label class="checkbox other">
+						<input type="checkbox" class="checkbox__input" value="ars">
+						<div class="checkbox__div other"></div>
+						<p>Heated Seats</p>
+					</label>
+					<label class="checkbox other">
+						<input type="checkbox" class="checkbox__input" value="ars">
+						<div class="checkbox__div other"></div>
+						<p>Airbag</p>
+					</label>
+					<label class="checkbox other">
+						<input type="checkbox" class="checkbox__input" value="ars">
+						<div class="checkbox__div other"></div>
+						<p>Multifuncion Wheel</p>
+					</label>
+				</div>
 			</div>
 		</div>
 	</div>
-
 
 	<div class="filter-wrapper-btn fixed">
 		<button class="btn" type="button">

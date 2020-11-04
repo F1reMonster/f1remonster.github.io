@@ -2585,7 +2585,7 @@ hr {
 
 .filter .filter-btn-close {
     position: absolute;
-    right: 10px;
+    right: 20px;
     top: -25px;
     display: none;
     outline: none;
@@ -2640,10 +2640,6 @@ hr {
     -webkit-transition: all 0.4s;
     -o-transition: all 0.4s;
     transition: all 0.4s;
-}
-
-.filter__item-title:first-child {
-    border-radius: 4px 4px 0 0;
 }
 
 .filter__item-title.close::after {
@@ -3755,6 +3751,10 @@ hr {
 
     .breadcrumbs {
         display: none;
+    }
+
+    .filter__item {
+        margin: 0 10px;
     }
 
     .car-item__body {
