@@ -151,15 +151,18 @@ jQuery(function ($) {
 
 			$('.select-box .options-container').removeClass('active');
 
-			if (remove)
+			if (remove) {
 				$target.removeClass('active');
-			else
+			} else
+			{
 				$target.addClass('active');
+			}
+				
 		});
 		$('.select-box .option').on('click', function () {
 			const $cont = $(this).closest('.select-box');
 			const text = $(this).find('p').html();
-			$cont.find('.search__filter-item-placeholder').html(text);
+			$cont.find('.placeholder').html(text);
 			$cont.find('.options-container').removeClass('active');
 		});
 
@@ -208,5 +211,16 @@ jQuery(function ($) {
 		$(this).next('.benefits__tooltip').removeClass('active');
 	});
 
+
+	$('.bottom-filter').on('click', function(){
+		$('.filter').toggleClass('filter-open');
+	});
+
+	$('.filter-btn-close').on('click', function(e) {
+		e.preventDefault();
+		if ($('.filter').hasClass('filter-open')) {
+			$('.filter').removeClass('filter-open');
+		}
+	})
 
 });
