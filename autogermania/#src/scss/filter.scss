@@ -1,20 +1,18 @@
 .filter {
 	position: relative;
 	display: block;
-	border: 1px solid $alto;
 	border-radius: 4px;
 	min-width: 260px;
-	background-color: $white;
 
 	.filter-btn-close {
 		position: absolute;
-		width: 20px;
-		height: 20px;
 		right: 10px;
 		top: -25px;
 		display: none;
 		outline: none;
 		border: none;
+		width: 20px;
+		height: 20px;
 		background-color: transparent;
 		transform: rotate(45deg);
 		cursor: pointer;
@@ -24,30 +22,21 @@
 		}
 	}
 
-	&.filter-open {
-		@media only screen and (max-width: 992px) {
-			display: block;
-			margin-top: 20px;
-			width: 100%;
-
-			+ .search-result__inner {
-				display: none;
-			}
-		}
-	}
-
 	&__subitem {
-		border-bottom: 1px solid $alto;
+		border: 1px solid $alto;
+		background-color: $white;
 	}
 
 	&__item-title {
 		position: relative;
 		display: flex;
 		align-items: center;
-		border-bottom: 1px solid $alto;
+		border: 1px solid $alto;
 		padding: 10px;
 		font-family: "SF-Bold";
 		font-size: 16px;
+		background-color: $white;
+		cursor: pointer;
 
 		&::after {
 			content: "";
@@ -62,6 +51,20 @@
 			background-color: $nobel;
 			transform: rotate(180deg);
 			transition: all 0.4s;
+		}
+
+		&:first-child {
+			border-radius: 4px 4px 0 0;
+		}
+
+		&.close {
+			&::after {
+				transform: rotate(0deg);
+			}
+
+			+ .filter__subitem {
+				display: none;
+			}
 		}
 	}
 
@@ -170,6 +173,10 @@
 			&:hover {
 				box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
 			}
+
+			@media only screen and (max-width: 414px) {
+				min-width: 200px;
+			}
 		}
 
 		&.fixed {
@@ -178,7 +185,22 @@
 			right: 0;
 			bottom: 0;
 			z-index: 3;
+		}
+
+		@media only screen and (max-width: 992px) {
 			display: flex;
+		}
+	}
+
+	&.filter-open {
+		@media only screen and (max-width: 992px) {
+			display: block;
+			margin-top: 20px;
+			width: 100%;
+
+			+ .search-result__inner {
+				display: none;
+			}
 		}
 	}
 
@@ -194,20 +216,7 @@
 		font-family: "SF-Reg";
 		font-size: 14px;
 
-		&:last-child {
-			border-bottom: none;
-		}
-
-		&.salon-body {
-			padding-left: 7px;
-
-			.filter-body__item-title {
-				padding: 10px;
-			}
-		}
-
 		// * привіт + коробка * //
-
 		.wd,
 		.gearbox {
 			.checkbox {
@@ -268,6 +277,18 @@
 
 			&.robot {
 				background-image: url("../img/svg/gearbox-robot.svg");
+			}
+		}
+
+		&:last-child {
+			border-bottom: none;
+		}
+
+		&.salon-body {
+			padding-left: 7px;
+
+			.filter-body__item-title {
+				padding: 10px;
 			}
 		}
 	}
@@ -346,13 +367,6 @@
 		}
 
 		.checkbox__div {
-			&.block {
-				margin-top: 5px;
-				border-radius: 3px;
-				width: 20px;
-				height: 20px;
-			}
-
 			.color {
 				&.silver {
 					background-color: $silver;
@@ -365,6 +379,13 @@
 				&.blue {
 					background-color: $blue;
 				}
+			}
+
+			&.block {
+				margin-top: 5px;
+				border-radius: 3px;
+				width: 20px;
+				height: 20px;
 			}
 		}
 	}

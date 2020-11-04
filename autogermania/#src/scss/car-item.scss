@@ -133,6 +133,10 @@
 		word-break: break-word;
 		text-overflow: ellipsis;
 
+		&:last-child {
+			margin-right: 0;
+		}
+
 		@media only screen and (max-width: 1200px) {
 			font-size: 12px;
 		}
@@ -144,10 +148,6 @@
 		@media only screen and (max-width: 414px) {
 			margin-top: 5px;
 		}
-
-		&:last-child {
-			margin-right: 0;
-		}
 	}
 
 	&__price {
@@ -156,7 +156,6 @@
 		padding-bottom: 30px;
 		padding-left: 15px;
 		min-width: 145px;
-		
 
 		.favorite {
 			display: flex;

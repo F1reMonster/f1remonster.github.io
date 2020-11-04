@@ -2579,21 +2579,19 @@ hr {
 .filter {
     position: relative;
     display: block;
-    border: 1px solid #d7d7d7;
     border-radius: 4px;
     min-width: 260px;
-    background-color: #fff;
 }
 
 .filter .filter-btn-close {
     position: absolute;
-    width: 20px;
-    height: 20px;
     right: 10px;
     top: -25px;
     display: none;
     outline: none;
     border: none;
+    width: 20px;
+    height: 20px;
     background-color: transparent;
     -webkit-transform: rotate(45deg);
         -ms-transform: rotate(45deg);
@@ -2602,7 +2600,8 @@ hr {
 }
 
 .filter__subitem {
-    border-bottom: 1px solid #d7d7d7;
+    border: 1px solid #d7d7d7;
+    background-color: #fff;
 }
 
 .filter__item-title {
@@ -2613,10 +2612,12 @@ hr {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    border-bottom: 1px solid #d7d7d7;
+    border: 1px solid #d7d7d7;
     padding: 10px;
     font-family: "SF-Bold";
     font-size: 16px;
+    background-color: #fff;
+    cursor: pointer;
 }
 
 .filter__item-title::after {
@@ -2639,6 +2640,20 @@ hr {
     -webkit-transition: all 0.4s;
     -o-transition: all 0.4s;
     transition: all 0.4s;
+}
+
+.filter__item-title:first-child {
+    border-radius: 4px 4px 0 0;
+}
+
+.filter__item-title.close::after {
+    -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+            transform: rotate(0deg);
+}
+
+.filter__item-title.close + .filter__subitem {
+    display: none;
 }
 
 .filter__item-title-img {
@@ -2764,9 +2779,6 @@ hr {
     right: 0;
     bottom: 0;
     z-index: 3;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
 }
 
 .filter-body__item {
@@ -2774,18 +2786,6 @@ hr {
     padding: 10px;
     font-family: "SF-Reg";
     font-size: 14px;
-}
-
-.filter-body__item:last-child {
-    border-bottom: none;
-}
-
-.filter-body__item.salon-body {
-    padding-left: 7px;
-}
-
-.filter-body__item.salon-body .filter-body__item-title {
-    padding: 10px;
 }
 
 .filter-body__item .wd .checkbox p,
@@ -2851,6 +2851,18 @@ hr {
 
 .filter-body__item .material.robot {
     background-image: url("../img/svg/gearbox-robot.svg");
+}
+
+.filter-body__item:last-child {
+    border-bottom: none;
+}
+
+.filter-body__item.salon-body {
+    padding-left: 7px;
+}
+
+.filter-body__item.salon-body .filter-body__item-title {
+    padding: 10px;
 }
 
 .filter-body__item-title {
@@ -2941,13 +2953,6 @@ hr {
     padding-left: 10px;
 }
 
-.filter-body__color .checkbox__div.block {
-    margin-top: 5px;
-    border-radius: 3px;
-    width: 20px;
-    height: 20px;
-}
-
 .filter-body__color .checkbox__div .color.silver {
     background-color: #cdcdcd;
 }
@@ -2958,6 +2963,13 @@ hr {
 
 .filter-body__color .checkbox__div .color.blue {
     background-color: #00f;
+}
+
+.filter-body__color .checkbox__div.block {
+    margin-top: 5px;
+    border-radius: 3px;
+    width: 20px;
+    height: 20px;
 }
 
 .filter-body__salon {
@@ -3612,6 +3624,12 @@ hr {
         display: block;
     }
 
+    .filter .filter-wrapper-btn {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+
     .filter.filter-open {
         display: block;
         margin-top: 20px;
@@ -3924,6 +3942,10 @@ hr {
 
     .search-result__bottom {
         padding: 0 10px;
+    }
+
+    .filter .filter-wrapper-btn .btn {
+        min-width: 200px;
     }
 
     .car-item {
