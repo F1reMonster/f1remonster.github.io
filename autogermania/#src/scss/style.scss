@@ -1,5 +1,6 @@
 @import "../../node_modules/normalize.css/normalize";
 @import "../../node_modules/slick-carousel/slick/slick.css";
+@import "../../node_modules/nouislider/distribute/nouislider";
 @import "mixin";
 @import "fonts";
 @import "vars";
@@ -16,3 +17,4 @@
 @import "filter";
 @import "car-item";
 @import "footer";
+@import "range-slider";

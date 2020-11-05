@@ -153,11 +153,10 @@ jQuery(function ($) {
 
 			if (remove) {
 				$target.removeClass('active');
-			} else
-			{
+			} else {
 				$target.addClass('active');
 			}
-				
+
 		});
 		$('.select-box .option').on('click', function () {
 			const $cont = $(this).closest('.select-box');
@@ -199,7 +198,7 @@ jQuery(function ($) {
 		var btnFixed = $('.filter-wrapper-btn').outerHeight();
 		var headerHeight = $('.header').outerHeight()
 		var footerHeight = $('.footer').outerHeight();
-		
+
 		var posBtnRemove = filterHeight - footerHeight + btnFixed + headerHeight;
 		var posBtnActive = filterHeight - footerHeight + btnFixed;
 
@@ -214,42 +213,83 @@ jQuery(function ($) {
 
 	$(window).scroll(function () {
 
-		
+
 		arrowUpVisible();
 
 		filterBtnFixed();
-		
+
 		if ($(this).scrollTop() > 0) {
-			$('.header__bottom').css('background-color','rgba(255,255,255,0.8)')
+			$('.header__bottom').css('background-color', 'rgba(255,255,255,0.8)')
 		}
 		if ($(this).scrollTop() === 0) {
-			$('.header__bottom').css('background-color','rgba(255,255,255,0.2)')
+			$('.header__bottom').css('background-color', 'rgba(255,255,255,0.2)')
 		}
 	});
-	
 
-	$('.benefits__top-item-wrapper').hover(function(){
+
+	$('.benefits__top-item-wrapper').hover(function () {
 		$(this).next('.benefits__tooltip').addClass('active');
-	}, function(){
+	}, function () {
 		$(this).next('.benefits__tooltip').removeClass('active');
 	});
 
 
-	$('.bottom-filter').on('click', function(){
+	$('.bottom-filter').on('click', function () {
 		$('.filter').toggleClass('filter-open');
 	});
 
-	$('.filter-btn-close').on('click', function(e) {
+	$('.filter-btn-close').on('click', function (e) {
 		e.preventDefault();
 		if ($('.filter').hasClass('filter-open')) {
 			$('.filter').removeClass('filter-open');
 		}
 	});
 
-	$('.filter__item-title').click(function(e) {
+	$('.filter__item-title').click(function (e) {
 		e.preventDefault();
 		$(this).toggleClass('close');
 	})
+
+
+	// * ============ rangeSlider ============== * //
+
+	const filterYear = document.querySelector('.filter-year'),
+			filterKm = document.querySelector('.filter-km'),
+			filterPower = document.querySelector('.filter-power');
+
+	noUiSlider.create(filterYear, {
+		start: [1990, 2020],
+		connect: true,
+		step: 1,
+		tooltips: [wNumb({decimals: 0}),wNumb({decimals: 0})],
+		range: {
+			'min': 1990,
+			'max': 2020
+		}
+	});
+
+	noUiSlider.create(filterKm, {
+		start: [0, 300000],
+		connect: true,
+		step: 10000,
+		tooltips: [wNumb({decimals: 0}),wNumb({decimals: 0})],
+		range: {
+			'min': 0,
+			'max': 300000
+		}
+	});
+
+	noUiSlider.create(filterPower, {
+		start: [50, 1000],
+		connect: true,
+		step: 10,
+		tooltips: [wNumb({decimals: 0}),wNumb({decimals: 0})],
+		range: {
+			'min': 50,
+			'max': 1000
+		}
+	});
+
 
 
 
