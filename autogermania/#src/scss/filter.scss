@@ -301,6 +301,11 @@
 		font-size: 14px;
 	}
 
+	&__item-wrapper {
+		display: flex;
+		justify-content: space-between;
+	}
+
 	// * колір салону + авто * //
 
 	&__salon-color {
@@ -475,59 +480,6 @@
 	margin-bottom: 2px;
 	padding: 0 8px;
 
-	&.reverse {
-		ul {
-			flex-direction: row-reverse;
-		}
-	}
-
-	&.power {
-		li {
-			width: 10px;
-			min-width: 10px;
-
-			&:nth-child(2) {
-				bottom: -5px;
-				height: 90%;
-			}
-	
-			&:nth-child(3) {
-				bottom: -10px;
-				height: 80%;
-			}
-	
-			&:nth-child(4) {
-				bottom: -15px;
-				height: 70%;
-			}
-	
-			&:nth-child(5) {
-				bottom: -20px;
-				height: 60%;
-			}
-
-			&:nth-child(6) {
-				bottom: -25px;
-				height: 50%;
-			}
-	
-			&:nth-child(7) {
-				bottom: -30px;
-				height: 40%;
-			}
-	
-			&:nth-child(8) {
-				bottom: -35px;
-				height: 30%;
-			}
-	
-			&:nth-child(9) {
-				bottom: -40px;
-				height: 20%;
-			}
-		}
-	}
-
 	ul {
 		display: flex;
 		justify-content: space-between;
@@ -563,45 +515,83 @@
 			height: 20%;
 		}
 	}
+
+	&.reverse {
+		ul {
+			flex-direction: row-reverse;
+		}
+	}
+
+	&.power {
+		li {
+			width: 10px;
+			min-width: 10px;
+
+			&:nth-child(2) {
+				bottom: -5px;
+				height: 90%;
+			}
+
+			&:nth-child(3) {
+				bottom: -10px;
+				height: 80%;
+			}
+
+			&:nth-child(4) {
+				bottom: -15px;
+				height: 70%;
+			}
+
+			&:nth-child(5) {
+				bottom: -20px;
+				height: 60%;
+			}
+
+			&:nth-child(6) {
+				bottom: -25px;
+				height: 50%;
+			}
+
+			&:nth-child(7) {
+				bottom: -30px;
+				height: 40%;
+			}
+
+			&:nth-child(8) {
+				bottom: -35px;
+				height: 30%;
+			}
+
+			&:nth-child(9) {
+				bottom: -40px;
+				height: 20%;
+			}
+		}
+	}
 }
 
-// .filter-blocks-power {
-// 	margin-bottom: 2px;
-// 	padding: 0 8px;
+.filter-input {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 10px;
 
-// 	ul {
-// 		display: flex;
-// 		justify-content: space-between;
-// 		height: 50px;
-// 	}
+	.select-box {
+		min-width: 105px;
 
-// 	li {
-// 		position: relative;
-// 		display: block;
-// 		border-radius: 3px 3px 0 0;
-// 		width: 10px;
-// 		height: 100%;
-// 		min-width: 32px;
-// 		background-color: $seagull;
+		.selected {
+			border: 0;
+			border-bottom: 1px solid $science-blue;
+			border-radius: 0;
 
-// 		&:nth-child(2) {
-// 			bottom: -10px;
-// 			height: 80%;
-// 		}
+			&:hover {
+				order: 0;
+				border-bottom: 1px solid $science-blue;
+				border-radius: 0;
+			}
+		}
+	}
+}
 
-// 		&:nth-child(3) {
-// 			bottom: -20px;
-// 			height: 60%;
-// 		}
-
-// 		&:nth-child(4) {
-// 			bottom: -30px;
-// 			height: 40%;
-// 		}
-
-// 		&:nth-child(5) {
-// 			bottom: -40px;
-// 			height: 20%;
-// 		}
-// 	}
-// }
+.select-box-wrapper {
+	min-width: 60px;
+}

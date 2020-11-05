@@ -362,8 +362,6 @@
 								</label>
 							</div>
 						</div>
-
-
 					</div>
 
 				</div>
@@ -384,13 +382,45 @@
 						<div class="filter-year">
 						</div>
 
+						<div class="filter-input">
+							<div class="select-box filter-section">
+								<div class="selected">
+									<p class="placeholder">від</p>
+								</div>
+								<div class="options-container">
+									<div class="option">
+										<input type="radio" class="radio" id="year" name="year" />
+										<label for="model1">
+											<p>1990</p>
+										</label>
+									</div>
+
+								</div>
+							</div>
+
+							<div class="select-box filter-section">
+								<div class="selected">
+									<p class="placeholder">до</p>
+								</div>
+								<div class="options-container">
+									<div class="option">
+										<input type="radio" class="radio" id="year" name="car-year" />
+										<label for="model1">
+											<p>2020</p>
+										</label>
+									</div>
+
+								</div>
+							</div>
+						</div>
+
 					</div>
 				</div>
 
 				<!-- * Пробіг * -->
 				<div class="filter-body__item">
 					<div class="filter-body__item-title">Пробіг</div>
-				
+
 					<div class="filter-range">
 						<div class="filter-blocks reverse">
 							<ul>
@@ -404,8 +434,39 @@
 						<div class="filter-km">
 						</div>
 
+						<div class="filter-input">
+							<div class="select-box filter-section">
+								<div class="selected">
+									<p class="placeholder">від</p>
+								</div>
+								<div class="options-container">
+									<div class="option">
+										<input type="radio" class="radio" id="km" name="km" />
+										<label for="km">
+											<p>0</p>
+										</label>
+									</div>
+
+								</div>
+							</div>
+
+							<div class="select-box filter-section">
+								<div class="selected">
+									<p class="placeholder">до</p>
+								</div>
+								<div class="options-container">
+									<div class="option">
+										<input type="radio" class="radio" id="km" name="km" />
+										<label for="km">
+											<p>50000</p>
+										</label>
+									</div>
+
+								</div>
+							</div>
+						</div>
 					</div>
-				
+
 				</div>
 
 				<!-- * ПАливо * -->
@@ -442,10 +503,70 @@
 				<!-- * Об'єм двигуна *  -->
 				<div class="filter-body__item">
 					<div class="filter-body__item-title">Об'єм двигуна</div>
+					<div class="filter-input">
+						<div class="select-box filter-section">
+							<div class="selected">
+								<p class="placeholder">від</p>
+							</div>
+							<div class="options-container">
+								<div class="option">
+									<input type="radio" class="radio" id="enginevalue" name="enginevalue" />
+									<label for="enginevalue">
+										<p>1</p>
+									</label>
+								</div>
+
+							</div>
+						</div>
+
+						<div class="select-box filter-section">
+							<div class="selected">
+								<p class="placeholder">до</p>
+							</div>
+							<div class="options-container">
+								<div class="option">
+									<input type="radio" class="radio" id="enginevalue" name="enginevalue" />
+									<label for="enginevalue">
+										<p>6.3</p>
+									</label>
+								</div>
+
+							</div>
+						</div>
+					</div>
 				</div>
 
 				<div class="filter-body__item">
-					<div class="filter-body__item-title">Потужність</div>
+					<div class="filter-body__item-wrapper">
+						<div class="filter-body__item-title">Потужність</div>
+
+						<div class="select-box-wrapper">
+
+							<div class="select-box filter-section">
+								<div class="selected">
+									<p class="placeholder">pH</p>
+								</div>
+								<div class="options-container">
+									<div class="option">
+										<input type="radio" class="radio" id="model1" name="car-model" />
+										<label for="model1">
+											<p>pH</p>
+										</label>
+									</div>
+									<div class="option">
+										<input type="radio" class="radio" id="model2" name="car-model" />
+										<label for="model2">
+											<p>kW</p>
+										</label>
+									</div>
+									
+								</div>
+							</div>
+						
+						</div>
+
+					</div>
+
 					<div class="filter-range">
 						<div class="filter-blocks reverse power">
 							<ul>
@@ -462,6 +583,38 @@
 							</ul>
 						</div>
 						<div class="filter-power">
+						</div>
+
+						<div class="filter-input">
+							<div class="select-box filter-section">
+								<div class="selected">
+									<p class="placeholder">від</p>
+								</div>
+								<div class="options-container">
+									<div class="option">
+										<input type="radio" class="radio" id="ph" name="ph" />
+										<label for="ph">
+											<p>50</p>
+										</label>
+									</div>
+
+								</div>
+							</div>
+
+							<div class="select-box filter-section">
+								<div class="selected">
+									<p class="placeholder">до</p>
+								</div>
+								<div class="options-container">
+									<div class="option">
+										<input type="radio" class="radio" id="ph" name="ph" />
+										<label for="ph">
+											<p>500</p>
+										</label>
+									</div>
+
+								</div>
+							</div>
 						</div>
 
 					</div>
@@ -1079,8 +1232,11 @@
 	<div class="car-item__img">
 		<div class="car-item__img-container">
 			<img src="img/car-item.jpg" alt="Car Item" loading="lazy">
+			<img src="img/car-item.jpg" alt="Car Item" loading="lazy">
+			<img src="img/car-item.jpg" alt="Car Item" loading="lazy">
+			<img src="img/car-item.jpg" alt="Car Item" loading="lazy">
 		</div>
-		
+		<div class="paging-info"></div>
 	</div>
 	<div class="car-item__info">
 		<div class="car-item__details">
@@ -1175,17 +1331,18 @@
 	<span class="car-item__sell">продано</span>
 </div>
 <div class="car-item__overlay"></div>
-
 </div>
 
 <div class="car-item sell">
-
 	<div class="car-item__body">
 	<div class="car-item__img">
 		<div class="car-item__img-container">
 			<img src="img/car-item.jpg" alt="Car Item" loading="lazy">
+			<img src="img/car-item.jpg" alt="Car Item" loading="lazy">
+			<img src="img/car-item.jpg" alt="Car Item" loading="lazy">
+			<img src="img/car-item.jpg" alt="Car Item" loading="lazy">
 		</div>
-		
+		<div class="paging-info"></div>
 	</div>
 	<div class="car-item__info">
 		<div class="car-item__details">
@@ -1280,9 +1437,8 @@
 	<span class="car-item__sell">продано</span>
 </div>
 <div class="car-item__overlay"></div>
-	
-
 </div>
+
 
 					<div class="pagination">
 						<button class="pagination__btn-prev disabled">
