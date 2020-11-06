@@ -1,11 +1,12 @@
 .search-result {
 	position: relative;
-	margin-top: 90px;
+	margin-top: 87px;
 
 	&__body {
 		position: relative;
 		display: flex;
 		width: 100%;
+		margin-top: -10px;
 	}
 
 	&__inner {
@@ -19,10 +20,6 @@
 
 	&__wrapper {
 		margin-left: 20px;
-		border: 1px solid $alto;
-		border-radius: 4px;
-		padding: 20px 10px;
-		background-color: $white;
 
 		.select-box {
 			position: relative;
@@ -111,7 +108,6 @@
 		}
 
 		@media only screen and (max-width: 414px) {
-			padding: 20px 0;
 		}
 	}
 
@@ -120,8 +116,9 @@
 		align-items: center;
 		justify-content: space-between;
 
-		@media only screen and (max-width: 414px) {
-			padding: 0 10px;
+		@media only screen and (max-width: 768px) {
+			border-bottom: 1px solid $silver;
+			padding-left: 13px;
 		}
 	}
 
@@ -145,12 +142,24 @@
 
 		.bottom-body {
 			display: flex;
-			align-items: flex-start;
+			align-items: center;
 			justify-content: space-between;
 			width: 100%;
+
+			&__filter {
+				display: flex;
+			}
 		}
 
 		.bottom-body-tag {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			padding-left: 5px;
+			width: 100%;
+		}
+
+		.tags-inner {
 			display: flex;
 			flex-wrap: wrap;
 		}
@@ -158,9 +167,8 @@
 		.bottom-filter {
 			display: none;
 			align-items: center;
+			margin-left: 10px;
 			border: 1px solid $alto;
-			border-top-left-radius: 3px;
-			border-bottom-left-radius: 3px;
 			padding: 5px;
 			color: $science-blue;
 			cursor: pointer;
@@ -172,6 +180,10 @@
 			}
 
 			@media only screen and (max-width: 768px) {
+				// border: 0;
+				// border-right: 1px solid $alto;
+				// border-left: 1px solid $alto;
+				margin-top: -1px;
 				font-family: "SF-Reg";
 				font-size: 12px;
 			}
@@ -196,12 +208,13 @@
 		}
 
 		@media only screen and (max-width: 768px) {
+			margin: 0;
 			font-size: 12px;
 			line-height: 20px;
 		}
 
 		@media only screen and (max-width: 414px) {
-			padding: 0 10px;
+			padding: 0;
 		}
 	}
 
@@ -224,6 +237,20 @@
 				top: 2px;
 				margin-left: 10px;
 			}
+		}
+	}
+
+	&__text {
+		display: none;
+
+		@media only screen and (max-width: 768px) {
+			display: block;
+			margin-top: -1px;
+			border-top: 1px solid $alto;
+			padding: 5px 0 5px 10px;
+			width: 100%;
+			font-family: "SF-Bold";
+			color: $science-blue;
 		}
 	}
 

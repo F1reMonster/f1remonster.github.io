@@ -40,7 +40,6 @@ h6 {
 }
 
 .container {
-	//overflow-x: hidden;
 	margin: 0 auto;
 	max-width: 1170px;
 
@@ -88,10 +87,12 @@ hr {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	margin-top: -20px;
 	padding: 35px 0 25px;
 	width: 100%;
 	font-family: "SF-Reg";
 	font-size: 18px;
+	background-color: $white;
 
 	.disabled {
 		color: $alto;
@@ -244,7 +245,6 @@ hr {
 .select-box .option .radio {
 	display: none;
 }
-
 
 // * =================== CHEKBOX ==========================
 .checkbox {
