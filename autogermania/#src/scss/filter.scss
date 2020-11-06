@@ -56,6 +56,10 @@
 		@media only screen and (max-width: 768px) {
 			margin: 0 10px;
 		}
+
+		@media only screen and (max-width: 414px) {
+			margin: 0;
+		}
 	}
 
 	&__subitem {
@@ -87,6 +91,10 @@
 			background-color: $nobel;
 			transform: rotate(180deg);
 			transition: all 0.4s;
+
+			@media only screen and (max-width: 414px) {
+				background-color: $science-blue;
+			}
 		}
 
 		&.close {
@@ -98,11 +106,19 @@
 				display: none;
 			}
 		}
+
+		@media only screen and (max-width: 414px) {
+			color: $science-blue;
+		}
 	}
 
 	&__item-title-img {
 		margin-top: 5px;
 		margin-right: 10px;
+
+		@media only screen and (max-width: 414px) {
+			display: none;
+		}
 	}
 
 	&__subitem-add {
@@ -145,15 +161,19 @@
 
 	.select-box {
 		position: relative;
-		margin-bottom: 20px;
+		margin: 0 0 10px;
 
 		.options-container {
 			position: absolute;
 			top: 40px;
-			margin-bottom: 10px;
 			border: 1px solid $dusty-gray;
 			border-radius: 4px;
 			color: $emperor;
+
+			@media only screen and (max-width: 414px) {
+				top: 50px;
+				width: 96%;
+			}
 		}
 
 		.selected {
@@ -163,6 +183,11 @@
 
 			&:hover {
 				border: 1px solid $science-blue;
+			}
+
+			@media only screen and (max-width: 414px) {
+				border-radius: 0;
+				height: 46px;
 			}
 		}
 
@@ -174,12 +199,18 @@
 
 		.placeholder {
 			margin: 0;
+			color: $mine-shaft;
 		}
 
 		&.filter-section {
 			font-family: "SF-Reg";
 			font-size: 14px;
 			color: $emperor;
+		}
+
+		@media only screen and (max-width: 414px) {
+			padding: 0 7.5px;
+			height: 46px;
 		}
 	}
 
@@ -248,7 +279,7 @@
 .filter-body {
 	&__item {
 		border-bottom: 1px solid $alto;
-		padding: 10px;
+		padding: 9px;
 		font-family: "SF-Reg";
 		font-size: 14px;
 
@@ -346,6 +377,10 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+
+		@media only screen and (max-width: 414px) {
+			justify-content: start;
+		}
 	}
 
 	&__salon-color,
@@ -391,6 +426,10 @@
 					background-color: $brown;
 				}
 			}
+
+			@media only screen and (max-width: 414px) {
+				margin-right: 20px;
+			}
 		}
 	}
 
@@ -399,6 +438,10 @@
 			display: flex;
 			justify-content: space-between;
 			width: 100%;
+
+			@media only screen and (max-width: 414px) {
+				justify-content: start;
+			}
 		}
 
 		.checkbox {
@@ -420,6 +463,7 @@
 				&.blue {
 					background-color: $blue;
 				}
+
 			}
 
 			&.block {
@@ -427,6 +471,10 @@
 				border-radius: 3px;
 				width: 20px;
 				height: 20px;
+			}
+
+			@media only screen and (max-width: 414px) {
+				margin-right: 20px;
 			}
 		}
 	}
@@ -504,6 +552,10 @@
 
 .filter-range {
 	padding: 0 10px;
+
+	@media only screen and (max-width: 414px) {
+		padding: 0;
+	}
 }
 
 .filter-year {
@@ -602,6 +654,10 @@
 			}
 		}
 	}
+
+	@media only screen and (max-width: 414px) {
+		display: none;
+	}
 }
 
 .filter-input {
@@ -611,6 +667,19 @@
 
 	.select-box {
 		min-width: 105px;
+		@media only screen and (max-width: 414px) {
+			min-width: 163px;
+		}
+
+		@media only screen and (max-width: 320px) {
+			min-width: 145px;
+		}
+
+		.options-container {
+			@media only screen and (max-width: 414px) {
+				width: 90%;
+			}
+		}
 
 		.selected {
 			border: 0;
@@ -621,11 +690,32 @@
 				order: 0;
 				border-bottom: 1px solid $science-blue;
 				border-radius: 0;
+
+				@media only screen and (max-width: 414px) {
+					border: 1px solid $science-blue;
+				}
+			}
+
+			@media only screen and (max-width: 414px) {
+				border: 1px solid $dusty-gray;
 			}
 		}
+	}
+
+	@media only screen and (max-width: 414px) {
+		margin-top: 0;
 	}
 }
 
 .select-box-wrapper {
-	min-width: 60px;
+	min-width: 75px;
+
+	.select-box {
+		.options-container {
+			@media only screen and (max-width: 414px) {
+				width: 85%;
+			}
+		}
+	}
+
 }

@@ -1374,6 +1374,10 @@ hr {
     }
 }
 
+.header__bottom-news-mobile .hide {
+    display: none;
+}
+
 .header__bottom-phone-window {
     position: absolute;
     left: 50%;
@@ -3152,13 +3156,12 @@ hr {
 
 .filter .select-box {
     position: relative;
-    margin-bottom: 20px;
+    margin: 0 0 10px;
 }
 
 .filter .select-box .options-container {
     position: absolute;
     top: 40px;
-    margin-bottom: 10px;
     border: 1px solid #9c9c9c;
     border-radius: 4px;
     color: #515151;
@@ -3180,6 +3183,7 @@ hr {
 
 .filter .select-box .placeholder {
     margin: 0;
+    color: #333;
 }
 
 .filter .select-box.filter-section {
@@ -3226,7 +3230,7 @@ hr {
 
 .filter-body__item {
     border-bottom: 1px solid #d7d7d7;
-    padding: 10px;
+    padding: 9px;
     font-family: "SF-Reg";
     font-size: 14px;
 }
@@ -3634,7 +3638,7 @@ hr {
 }
 
 .select-box-wrapper {
-    min-width: 60px;
+    min-width: 75px;
 }
 
 .car-item {
@@ -4428,6 +4432,14 @@ hr {
         background-image: url("../img/header-bg-mobile.webp");
     }
 
+    .benefits__news {
+        display: none;
+    }
+
+    .benefits__top {
+        display: none;
+    }
+
     .search-result__inner {
         margin: 0 auto;
         max-width: 530px;
@@ -4632,14 +4644,6 @@ hr {
         padding: 10px;
     }
 
-    .benefits__news {
-        display: none;
-    }
-
-    .benefits__top {
-        display: none;
-    }
-
     .benefits__text {
         margin-top: 0;
     }
@@ -4745,6 +4749,10 @@ hr {
 }
 
 @media only screen and (max-width: 414px) {
+    .main-arrow-up {
+        display: none;
+    }
+
     .about__title-text {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -4755,8 +4763,92 @@ hr {
         padding: 0;
     }
 
+    .filter__item {
+        margin: 0;
+    }
+
+    .filter__item-title::after {
+        background-color: #005ccb;
+    }
+
+    .filter__item-title {
+        color: #005ccb;
+    }
+
+    .filter__item-title-img {
+        display: none;
+    }
+
+    .filter .select-box .options-container {
+        top: 50px;
+        width: 96%;
+    }
+
+    .filter .select-box .selected {
+        border-radius: 0;
+        height: 46px;
+    }
+
+    .filter .select-box {
+        padding: 0 7.5px;
+        height: 46px;
+    }
+
     .filter .filter-wrapper-btn .btn {
         min-width: 200px;
+    }
+
+    .filter-body__salon-color {
+        -webkit-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: start;
+    }
+
+    .filter-body__salon-color .checkbox__div,
+  .filter-body__color .checkbox__div {
+        margin-right: 20px;
+    }
+
+    .filter-body__color .color-row {
+        -webkit-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: start;
+    }
+
+    .filter-body__color .checkbox__div {
+        margin-right: 20px;
+    }
+
+    .filter-range {
+        padding: 0;
+    }
+
+    .filter-blocks {
+        display: none;
+    }
+
+    .filter-input .select-box {
+        min-width: 163px;
+    }
+
+    .filter-input .select-box .options-container {
+        width: 90%;
+    }
+
+    .filter-input .select-box .selected:hover {
+        border: 1px solid #005ccb;
+    }
+
+    .filter-input .select-box .selected {
+        border: 1px solid #9c9c9c;
+    }
+
+    .filter-input {
+        margin-top: 0;
+    }
+
+    .select-box-wrapper .select-box .options-container {
+        width: 85%;
     }
 
     .car-item {
@@ -4838,6 +4930,10 @@ hr {
     .footer {
         margin-top: 0;
     }
+
+    .noUi-target {
+        display: none;
+    }
 }
 
 @media only screen and (max-width: 413px) {
@@ -4904,6 +5000,10 @@ hr {
 
     .brands__title {
         font-size: 22px;
+    }
+
+    .filter-input .select-box {
+        min-width: 145px;
     }
 
     .car-item__img .paging-info {

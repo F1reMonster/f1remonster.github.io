@@ -17,6 +17,10 @@
 
 .noUi-target {
 	border-radius: 0;
+
+	@media only screen and (max-width: 414px) {
+		display: none;
+	}
 }
 
 .noUi-connects {

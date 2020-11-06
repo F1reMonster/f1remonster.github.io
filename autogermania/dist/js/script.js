@@ -276,13 +276,34 @@ jQuery(function ($) {
 
 	$('.bottom-filter').on('click', function () {
 		$('.filter').toggleClass('filter-open');
+		console.log($(window).width());
+		
+		
+		
+		if ($(window).width() > 768) {
+			$('.benefits__news').css('display','none');
+		}
+
+		if ($(window).width() < 768) {
+			$('.header__bottom-news-mobile').css('display','none');
+		}
+		
 	});
 
 	$('.filter-btn-close').on('click', function (e) {
 		e.preventDefault();
 		$('.car-item__img-container').slick('refresh');
+		
 		if ($('.filter').hasClass('filter-open')) {
 			$('.filter').removeClass('filter-open');
+			if ($(window).width() > 768) {
+				$('.benefits__news').css('display','block');
+			}
+	
+			if ($(window).width() < 768) {
+				$('.header__bottom-news-mobile').css('display','block');
+			}
+			
 		}
 	});
 
@@ -292,6 +313,7 @@ jQuery(function ($) {
 	})
 
 
+	
 	// * ============ rangeSlider ============== * //
 
 	const filterYear = document.querySelector('.filter-year'),
@@ -335,3 +357,6 @@ jQuery(function ($) {
 
 
 });
+
+
+console.log($(window).width());

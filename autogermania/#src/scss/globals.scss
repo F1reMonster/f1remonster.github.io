@@ -81,6 +81,10 @@ hr {
 	background: $science-blue url("../img/main-arrow-up.webp") no-repeat center;
 	opacity: 0;
 	transform: rotate(180deg) translateZ(0);
+
+	@media only screen and (max-width: 414px) {
+		display: none;
+	}
 }
 
 .pagination {
