@@ -237,11 +237,13 @@
 			top: 50px;
 			z-index: 1;
 			display: block;
+
+			&.hide {
+				display: none;
+			}
 		}
 
-		.hide {
-			display: none;
-		}
+		
 	}
 
 	&__bottom-phone-window {

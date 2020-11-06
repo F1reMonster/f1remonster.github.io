@@ -281,11 +281,11 @@ jQuery(function ($) {
 		
 		
 		if ($(window).width() > 768) {
-			$('.benefits__news').css('display','none');
+			$('.benefits__news').addClass('hide');
 		}
 
 		if ($(window).width() < 768) {
-			$('.header__bottom-news-mobile').css('display','none');
+			$('.header__bottom-news-mobile').addClass('hide');
 		}
 		
 	});
@@ -297,11 +297,17 @@ jQuery(function ($) {
 		if ($('.filter').hasClass('filter-open')) {
 			$('.filter').removeClass('filter-open');
 			if ($(window).width() > 768) {
-				$('.benefits__news').css('display','block');
+				if ($('.benefits__news').hasClass('hide')) {
+					$('.benefits__news').removeClass('hide')
+				};
 			}
 	
 			if ($(window).width() < 768) {
-				$('.header__bottom-news-mobile').css('display','block');
+
+				if ($('.header__bottom-news-mobile').hasClass('hide')) {
+					$('.header__bottom-news-mobile').removeClass('hide')
+				};
+				;
 			}
 			
 		}

@@ -1374,10 +1374,6 @@ hr {
     }
 }
 
-.header__bottom-news-mobile .hide {
-    display: none;
-}
-
 .header__bottom-phone-window {
     position: absolute;
     left: 50%;
@@ -2259,6 +2255,10 @@ hr {
         -webkit-transform: translate(-100%, 0);
                 transform: translate(-100%, 0);
     }
+}
+
+.benefits__news.hide {
+    display: none;
 }
 
 .benefits__wrapper {
@@ -4420,6 +4420,10 @@ hr {
         top: 50px;
         z-index: 1;
         display: block;
+    }
+
+    .header__bottom-news-mobile.hide {
+        display: none;
     }
 
     .header__account-sign-mobile {
