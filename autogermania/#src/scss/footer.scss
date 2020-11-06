@@ -80,10 +80,10 @@
 		}
 
 		@media only screen and (max-width: 375px) {
-			padding: 0 0 20px 20px;
+			padding-left: 10px;
 
 			li {
-				margin-bottom: 10px;
+				margin-bottom: 5px;
 			}
 		}
 	}
@@ -106,6 +106,7 @@
 	}
 
 	&__nav-list-item-link {
+		font-family: "SF-Reg";
 		color: inherit;
 	}
 
@@ -125,7 +126,7 @@
 
 	&__nav-icon {
 		fill: $dusty-gray;
-		transition: transform 0.2s;
+		transition: transform 0.4s;
 
 		&.icon-down {
 			width: 0;
@@ -139,7 +140,9 @@
 		}
 
 		&.rotate {
+			fill: $science-blue;
 			transform: rotate(180deg);
+			transition: transform 0.4s;
 		}
 
 		// @media only screen and (max-width: 414px) {

@@ -3202,8 +3202,10 @@ hr {
 }
 
 .filter .filter-wrapper-btn .btn {
+    margin: 0 40px;
     outline: none;
     border: 1px solid transparent;
+    border-radius: 4px;
     padding: 0 10px;
     height: 40px;
     min-width: 260px;
@@ -3729,15 +3731,21 @@ hr {
     width: 100%;
 }
 
-.car-item__name {
+.car-item__name,
+.car-item__name-mobile {
     padding-bottom: 10px;
     font-size: 18px;
     color: #333;
 }
 
-.car-item__name span {
+.car-item__name span,
+.car-item__name-mobile span {
     font-family: "SF-Bold";
     color: #005ccb;
+}
+
+.car-item__name-mobile {
+    display: none;
 }
 
 .car-item__details {
@@ -4059,6 +4067,7 @@ hr {
 }
 
 .footer__nav-list-item-link {
+    font-family: "SF-Reg";
     color: inherit;
 }
 
@@ -4070,11 +4079,11 @@ hr {
 
 .footer__nav-icon {
     fill: #9c9c9c;
-    -webkit-transition: -webkit-transform 0.2s;
-    transition: -webkit-transform 0.2s;
-    -o-transition: transform 0.2s;
-    transition: transform 0.2s;
-    transition: transform 0.2s, -webkit-transform 0.2s;
+    -webkit-transition: -webkit-transform 0.4s;
+    transition: -webkit-transform 0.4s;
+    -o-transition: transform 0.4s;
+    transition: transform 0.4s;
+    transition: transform 0.4s, -webkit-transform 0.4s;
 }
 
 .footer__nav-icon.icon-down {
@@ -4083,9 +4092,15 @@ hr {
 }
 
 .footer__nav-icon.rotate {
+    fill: #005ccb;
     -webkit-transform: rotate(180deg);
         -ms-transform: rotate(180deg);
             transform: rotate(180deg);
+    -webkit-transition: -webkit-transform 0.4s;
+    transition: -webkit-transform 0.4s;
+    -o-transition: transform 0.4s;
+    transition: transform 0.4s;
+    transition: transform 0.4s, -webkit-transform 0.4s;
 }
 
 .footer__copy {
@@ -4292,7 +4307,8 @@ hr {
         margin-top: 60px;
     }
 
-    .car-item__name {
+    .car-item__name,
+  .car-item__name-mobile {
         font-size: 14px;
     }
 
@@ -4799,7 +4815,7 @@ hr {
     }
 
     .filter .filter-wrapper-btn .btn {
-        min-width: 200px;
+        width: 100%;
     }
 
     .filter-body__salon-color {
@@ -4831,10 +4847,6 @@ hr {
         display: none;
     }
 
-    .filter-input .select-box {
-        min-width: 163px;
-    }
-
     .filter-input .select-box .options-container {
         width: 90%;
     }
@@ -4845,6 +4857,10 @@ hr {
 
     .filter-input .select-box .selected {
         border: 1px solid #9c9c9c;
+    }
+
+    .filter-input .select-box {
+        min-width: 163px;
     }
 
     .filter-input {
@@ -4878,6 +4894,20 @@ hr {
         padding: 10px;
     }
 
+    .car-item__name {
+        display: none;
+    }
+
+    .car-item__name-mobile {
+        display: block;
+        margin-top: 10px;
+        padding: 0 10px;
+    }
+
+    .car-item__details {
+        padding-top: 20px;
+    }
+
     .car-item__ttx {
         margin-top: 5px;
     }
@@ -4899,6 +4929,14 @@ hr {
     .car-item__price .price-was,
   .car-item__price .price-economy {
         font-size: 12px;
+    }
+
+    .car-item__price .price-include {
+        margin: 10px 0;
+    }
+
+    .car-item__price {
+        padding-bottom: 0;
     }
 
     .car-item__btn {
@@ -4975,11 +5013,11 @@ hr {
     }
 
     .footer__nav-list-content {
-        padding: 0 0 20px 20px;
+        padding-left: 10px;
     }
 
     .footer__nav-list-content li {
-        margin-bottom: 10px;
+        margin-bottom: 5px;
     }
 }
 
