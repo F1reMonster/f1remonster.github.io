@@ -280,6 +280,7 @@ jQuery(function ($) {
 
 	$('.filter-btn-close').on('click', function (e) {
 		e.preventDefault();
+		$('.car-item__img-container').slick('refresh');
 		if ($('.filter').hasClass('filter-open')) {
 			$('.filter').removeClass('filter-open');
 		}

@@ -105,6 +105,10 @@
 			border-radius: 6px;
 			width: 100%;
 			height: auto;
+
+			@media only screen and (max-width: 414px) {
+				border-radius: 0;
+			}
 		}
 
 		@media only screen and (max-width: 768px) {
@@ -127,6 +131,11 @@
 		@media only screen and (max-width: 414px) {
 			padding: 10px;
 		}
+
+		@media only screen and (max-width: 320px) {
+			padding-right: 5px;
+			padding-left: 5px;
+		}
 	}
 
 	&__name {
@@ -147,6 +156,14 @@
 	&__details {
 		padding-right: 10px;
 		max-width: 355px;
+
+		@media only screen and (max-width: 375px) {
+			padding-right: 5px;
+		}
+
+		@media only screen and (max-width: 320px) {
+			padding-right: 0;
+		}
 	}
 
 	&__ttx {
@@ -155,7 +172,7 @@
 		margin-top: 30px;
 
 		@media only screen and (max-width: 414px) {
-			flex-direction: column;
+			//flex-direction: column;
 			margin-top: 5px;
 		}
 
@@ -176,6 +193,8 @@
 
 		svg {
 			flex-shrink: 0;
+			width: 21px;
+			height: 21px;
 		}
 
 		&:last-child {
@@ -192,6 +211,19 @@
 
 		@media only screen and (max-width: 414px) {
 			margin-top: 5px;
+			margin-right: 10px;
+		}
+
+		@media only screen and (max-width: 375px) {
+			flex-basis: 47%;
+		}
+
+		@media only screen and (max-width: 320px) {
+			flex-basis: 47%;
+
+			span {
+				padding-left: 5px;
+			}
 		}
 	}
 
@@ -233,6 +265,7 @@
 
 			@media only screen and (max-width: 414px) {
 				margin-top: 0;
+				font-size: 20px;
 			}
 		}
 
@@ -244,6 +277,10 @@
 			span {
 				font-family: "SF-Bold";
 				color: $thunderbird;
+			}
+
+			@media only screen and (max-width: 414px) {
+				font-size: 12px;
 			}
 		}
 
@@ -262,6 +299,11 @@
 			margin: 25px 0 30px;
 			font-family: "SF-Med";
 			font-size: 14px;
+		}
+
+		@media only screen and (max-width: 320px) {
+			padding-left: 10px;
+			min-width: 123px;
 		}
 	}
 

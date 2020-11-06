@@ -2797,6 +2797,10 @@ hr {
 
 .search-result__wrapper {
     margin-left: 20px;
+    border: 1px solid #d7d7d7;
+    border-radius: 4px;
+    padding: 20px 10px;
+    background-color: #fff;
 }
 
 .search-result__wrapper .select-box {
@@ -2908,9 +2912,6 @@ hr {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
     padding-left: 5px;
     width: 100%;
 }
@@ -2932,6 +2933,7 @@ hr {
     border: 1px solid #d7d7d7;
     padding: 5px;
     color: #005ccb;
+    background-color: #fff;
     cursor: pointer;
 }
 
@@ -2962,6 +2964,7 @@ hr {
     border: 1px solid #9c9c9c;
     border-radius: 4px;
     padding: 8px 10px;
+    background-color: #fff;
     color: #333;
 }
 
@@ -3002,20 +3005,45 @@ hr {
     min-width: 260px;
 }
 
-.filter .filter-btn-close {
-    position: absolute;
-    right: 20px;
-    top: -25px;
+.filter__top {
     display: none;
+}
+
+.filter__top p {
+    font-family: "SF-Bold";
+    font-size: 16px;
+    color: #005ccb;
+}
+
+.filter .filter-btn-close {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     outline: none;
     border: none;
+    font-family: "SF-Reg";
+    font-size: 14px;
+    color: #333;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.filter .filter-btn-close svg {
+    position: absolute;
+    right: 10px;
+    top: 13px;
     width: 20px;
     height: 20px;
-    background-color: transparent;
     -webkit-transform: rotate(45deg);
         -ms-transform: rotate(45deg);
             transform: rotate(45deg);
-    cursor: pointer;
+}
+
+.filter .filter-btn-close span {
+    padding-right: 20px;
 }
 
 .filter__subitem {
@@ -3746,6 +3774,8 @@ hr {
 .car-item__ttx-item svg {
     -ms-flex-negative: 0;
         flex-shrink: 0;
+    width: 21px;
+    height: 21px;
 }
 
 .car-item__ttx-item:last-child {
@@ -4294,12 +4324,32 @@ hr {
         margin-left: 0;
     }
 
+    .search-result__bottom .bottom-body-tag {
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+    }
+
     .search-result__bottom .bottom-filter {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
         font-family: "SF-Bold";
         font-size: 16px;
+    }
+
+    .filter__top {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        padding: 10px;
+        width: 100%;
     }
 
     .filter .filter-btn-close {
@@ -4314,7 +4364,7 @@ hr {
 
     .filter.filter-open {
         display: block;
-        margin-top: 20px;
+        margin-top: 0;
         width: 100%;
     }
 
@@ -4415,6 +4465,13 @@ hr {
         width: auto;
     }
 
+    .search-result__wrapper {
+        border: 0;
+        border-radius: 0;
+        padding: 0;
+        background-color: transparent;
+    }
+
     .search-result__top {
         border-bottom: 1px solid #cdcdcd;
         padding-left: 13px;
@@ -4461,7 +4518,7 @@ hr {
     }
 
     .filter.filter-open {
-        margin-top: 40px;
+        margin-top: 0;
     }
 
     .car-item {
@@ -4717,20 +4774,21 @@ hr {
         top: 275px;
     }
 
+    .car-item__img-container img {
+        border-radius: 0;
+    }
+
     .car-item__info {
         padding: 10px;
     }
 
     .car-item__ttx {
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-                flex-direction: column;
         margin-top: 5px;
     }
 
     .car-item__ttx-item {
         margin-top: 5px;
+        margin-right: 10px;
     }
 
     .car-item__price .favorite {
@@ -4739,6 +4797,12 @@ hr {
 
     .car-item__price .price-real {
         margin-top: 0;
+        font-size: 20px;
+    }
+
+    .car-item__price .price-was,
+  .car-item__price .price-economy {
+        font-size: 12px;
     }
 
     .car-item__btn {
@@ -4801,6 +4865,15 @@ hr {
         top: 245px;
     }
 
+    .car-item__details {
+        padding-right: 5px;
+    }
+
+    .car-item__ttx-item {
+        -ms-flex-preferred-size: 47%;
+            flex-basis: 47%;
+    }
+
     .footer__nav-list-content {
         padding: 0 0 20px 20px;
     }
@@ -4836,5 +4909,28 @@ hr {
     .car-item__img .paging-info {
         left: 25px;
         top: 210px;
+    }
+
+    .car-item__info {
+        padding-right: 5px;
+        padding-left: 5px;
+    }
+
+    .car-item__details {
+        padding-right: 0;
+    }
+
+    .car-item__ttx-item {
+        -ms-flex-preferred-size: 47%;
+            flex-basis: 47%;
+    }
+
+    .car-item__ttx-item span {
+        padding-left: 5px;
+    }
+
+    .car-item__price {
+        padding-left: 10px;
+        min-width: 123px;
     }
 }

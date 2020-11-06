@@ -20,6 +20,10 @@
 
 	&__wrapper {
 		margin-left: 20px;
+		border: 1px solid $alto;
+		border-radius: 4px;
+		padding: 20px 10px;
+		background-color: $white;
 
 		.select-box {
 			position: relative;
@@ -107,6 +111,13 @@
 			margin-left: 0;
 		}
 
+		@media only screen and (max-width: 768px) {
+			border: 0;
+			border-radius: 0;
+			padding: 0;
+			background-color: transparent;
+		}
+
 		@media only screen and (max-width: 414px) {
 		}
 	}
@@ -154,9 +165,12 @@
 		.bottom-body-tag {
 			display: flex;
 			flex-wrap: wrap;
-			justify-content: space-between;
 			padding-left: 5px;
 			width: 100%;
+
+			@media only screen and (max-width: 992px) {
+				justify-content: space-between;
+			}
 		}
 
 		.tags-inner {
@@ -171,6 +185,7 @@
 			border: 1px solid $alto;
 			padding: 5px;
 			color: $science-blue;
+			background-color: $white;
 			cursor: pointer;
 
 			@media only screen and (max-width: 992px) {
@@ -223,6 +238,7 @@
 		border: 1px solid $dusty-gray;
 		border-radius: 4px;
 		padding: 8px 10px;
+		background-color: $white;
 		color: $mine-shaft;
 
 		svg {
