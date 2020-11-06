@@ -3667,7 +3667,8 @@ hr {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding: 2px;
+    border-radius: 3px;
+    padding: 2px 7px;
     background-color: #fff;
     -webkit-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
