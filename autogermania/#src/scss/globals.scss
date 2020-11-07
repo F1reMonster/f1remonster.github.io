@@ -182,7 +182,7 @@ hr {
 	}
 }
 
-// * ================== celect-box ====================
+// * ================== select-box ====================
 .select-box {
 	display: flex;
 	flex-direction: column;
@@ -201,7 +201,7 @@ hr {
 		opacity: 0;
 		transition: all 0.4s;
 
-		.option input[type="radio"]:checked + label {
+		.option input[type="radio"]:checked + label span {
 			background: $link-water;
 		}
 
@@ -352,6 +352,10 @@ hr {
 
 	&.other {
 		margin-bottom: 10px;
+	}
+
+	span {
+		padding-left: 10px;
 	}
 }
 

@@ -1040,7 +1040,7 @@ hr {
     transition: all 0.4s;
 }
 
-.select-box .options-container .option input[type="radio"]:checked + label {
+.select-box .options-container .option input[type="radio"]:checked + label span {
     background: #d9e7f7;
 }
 
@@ -1214,6 +1214,10 @@ hr {
 
 .checkbox.other {
     margin-bottom: 10px;
+}
+
+.checkbox span {
+    padding-left: 10px;
 }
 
 .form-radio {

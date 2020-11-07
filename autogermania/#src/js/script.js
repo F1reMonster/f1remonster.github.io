@@ -200,7 +200,7 @@ jQuery(function ($) {
 		});
 		$('.select-box .option').on('click', function () {
 			const $cont = $(this).closest('.select-box');
-			const text = $(this).find('p').html();
+			const text = $(this).find('span').html();
 			$cont.find('.placeholder').html(text);
 			$cont.find('.options-container').removeClass('active');
 		});
