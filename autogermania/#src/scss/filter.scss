@@ -30,7 +30,6 @@
 		font-family: "SF-Reg";
 		font-size: 14px;
 		color: $mine-shaft;
-
 		background-color: transparent;
 		cursor: pointer;
 
@@ -60,11 +59,6 @@
 		@media only screen and (max-width: 414px) {
 			margin: 0;
 		}
-	}
-
-	&__subitem {
-		border: 1px solid $alto;
-		background-color: $white;
 	}
 
 	&__item-title {
@@ -119,6 +113,11 @@
 		@media only screen and (max-width: 414px) {
 			display: none;
 		}
+	}
+
+	&__subitem {
+		border: 1px solid $alto;
+		background-color: $white;
 	}
 
 	&__subitem-add {
@@ -285,6 +284,14 @@
 		font-family: "SF-Reg";
 		font-size: 14px;
 
+		.advanced-items {
+			padding-left: 10px;
+		}
+		
+		&.advanced {
+			padding: 9px 0;
+		}
+
 		// * привіт + коробка * //
 		.wd,
 		.gearbox {
@@ -363,14 +370,54 @@
 	}
 
 	&__item-title {
-		padding: 13px 0 18px;
+		padding: 13px 10px 18px;
 		font-family: "SF-Bold";
 		font-size: 14px;
+
+		&.advanced {
+			position: relative;
+			margin-bottom: 10px;
+			border-bottom: 1px solid $alto;
+			padding-bottom: 5px;
+
+			&::after {
+				content: "";
+				position: absolute;
+				right: 10px;
+				top: 15px;
+				mask-image: url("../img/sprite.svg#down-arrow");
+				mask-repeat: no-repeat;
+				mask-size: contain;
+				width: 14px;
+				height: 14px;
+				background-color: $nobel;
+				transform: rotate(180deg);
+				transition: all 0.4s;
+
+				@media only screen and (max-width: 414px) {
+					background-color: $science-blue;
+				}
+			}
+
+			&.close {
+				&::after {
+					transform: rotate(0deg);
+				}
+
+				+ .advanced-items {
+					display: none;
+				}
+			}
+		}
 	}
 
 	&__item-wrapper {
 		display: flex;
 		justify-content: space-between;
+
+		@media only screen and (max-width: 414px) {
+			display: block;
+		}
 	}
 
 	// * колір салону + авто * //
@@ -487,6 +534,11 @@
 		justify-content: space-between;
 		width: 260px;
 		max-width: 245px;
+
+		@media only screen and (max-width: 414px) {
+			width: 270px;
+			max-width: 270px;
+		}
 
 		.checkbox__input:checked ~ .checkbox__border {
 			border: 1px solid $science-blue;
@@ -712,10 +764,20 @@
 .select-box-wrapper {
 	min-width: 75px;
 
-	.select-box {
-		.options-container {
-			@media only screen and (max-width: 414px) {
-				width: 85%;
+	&.mobile {
+		.mobile-options {
+			display: none;
+			margin-bottom: 15px;
+			margin-left: 10px;
+		}
+
+		@media only screen and (max-width: 414px) {
+			.select-box {
+				display: none;
+			}
+
+			.mobile-options {
+				display: flex;
 			}
 		}
 	}

@@ -14,13 +14,13 @@
 				position: relative;
 				top: 3px;
 				width: auto;
-				height: 22px;
+				height: 30px;
 			}
 
-			@media only screen and (max-width: 500px) {
-				width: auto;
-				height: 22px;
-			}
+			// @media only screen and (max-width: 500px) {
+			// 	width: auto;
+			// 	height: 22px;
+			// }
 		}
 
 		@media only screen and (max-width: 1200px) {
@@ -35,7 +35,7 @@
 
 		@media only screen and (max-width: 1200px) {
 			position: fixed;
-			top: 59px;
+			top: 55px;
 			z-index: 2;
 			border-right: 1px solid $alto;
 			padding: 10px 20px;
@@ -52,7 +52,7 @@
 		}
 
 		@media only screen and (max-width: 768px) {
-			top: 45px;
+			top: 40px;
 		}
 	}
 
@@ -108,7 +108,8 @@
 		}
 
 		@media only screen and (max-width: 768px) {
-			padding: 5px 0;
+			padding-top: 0;
+			padding-bottom: 0;
 		}
 	}
 
@@ -119,11 +120,11 @@
 
 		@media only screen and (max-width: 1200px) {
 			justify-content: space-between;
-			padding: 7px 0;
+			//padding: 7px 0;
 		}
 
 		@media only screen and (max-width: 766px) {
-			padding: 7px 10px;
+			padding: 3px 10px;
 		}
 	}
 
@@ -234,7 +235,7 @@
 
 		@media only screen and (max-width: 768px) {
 			position: relative;
-			top: 50px;
+			top: 40px;
 			z-index: 1;
 			display: block;
 
@@ -466,7 +467,7 @@
 	&__account-sign-mobile {
 		position: fixed;
 		right: 0;
-		top: 59px;
+		top: 55px;
 		z-index: 10;
 		border-left: 1px solid $alto;
 		width: 216px;
@@ -531,7 +532,7 @@
 		}
 
 		@media only screen and (max-width: 768px) {
-			top: 45px;
+			top: 40px;
 		}
 	}
 

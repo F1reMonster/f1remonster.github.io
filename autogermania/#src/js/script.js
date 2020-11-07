@@ -316,7 +316,14 @@ jQuery(function ($) {
 	$('.filter__item-title').click(function (e) {
 		e.preventDefault();
 		$(this).toggleClass('close');
-	})
+	});
+
+	$('.filter-body__item-title.advanced').click(function (e) {
+		e.preventDefault();
+		$(this).toggleClass('close');
+	});
+
+
 
 
 	

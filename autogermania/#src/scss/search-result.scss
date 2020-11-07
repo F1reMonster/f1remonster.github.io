@@ -6,7 +6,7 @@
 		position: relative;
 		display: flex;
 		width: 100%;
-		margin-top: -10px;
+		//margin-top: -10px;
 	}
 
 	&__inner {
@@ -29,19 +29,7 @@
 			position: relative;
 			width: 200px;
 
-			.options-container {
-				position: absolute;
-				right: 0;
-				top: 42px;
-				z-index: 11;
-				margin-bottom: 10px;
-				border: 1px solid $science-blue;
-				border-radius: 4px;
-				width: 247px;
-				font-family: "SF-Reg";
-				font-size: 16px;
-				color: $emperor;
-			}
+			
 
 			.selected {
 				border: 1px solid $dusty-gray;
@@ -94,6 +82,26 @@
 				}
 			}
 
+			.options-container {
+				position: absolute;
+				right: 0;
+				top: 42px;
+				z-index: 11;
+				margin-bottom: 10px;
+				border: 1px solid $science-blue;
+				border-radius: 4px;
+				width: 247px;
+				font-family: "SF-Reg";
+				font-size: 16px;
+				color: $emperor;
+
+				&.active {
+					+ .selected {
+						border: 1px solid $science-blue;
+					}
+				}
+			}
+
 			.option {
 				padding: 5px 10px;
 			}
@@ -101,6 +109,8 @@
 			.search__filter-item-placeholder {
 				margin-left: 0;
 			}
+
+			
 
 			@media only screen and (max-width: 768px) {
 				width: auto;
@@ -271,8 +281,10 @@
 	}
 
 	@media only screen and (max-width: 1200px) {
-		margin-top: 60px;
+		margin-top: 55px;
 	}
+
+	
 }
 
 .breadcrumbs {
