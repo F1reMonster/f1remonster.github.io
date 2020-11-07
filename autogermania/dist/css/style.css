@@ -1059,6 +1059,10 @@ hr {
     opacity: 1;
 }
 
+.select-box .option.select {
+    background-color: #d9e7f7;
+}
+
 .select-box .option:hover {
     background: #d9e7f7;
 }

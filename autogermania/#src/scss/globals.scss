@@ -221,6 +221,12 @@ hr {
 		}
 	}
 
+	.option {
+		&.select {
+			background-color: $link-water;
+		}
+	}
+
 	.option:hover {
 		background: $link-water;
 	}

@@ -126,7 +126,7 @@ jQuery(function ($) {
 				slidesToScroll: 1,
 				prevArrow: '<button type="button" class="carslider-btn prev"></button>',
 				nextArrow: '<button type="button" class="carslider-btn next"></button>',
-				
+
 			});
 
 		});
@@ -197,12 +197,20 @@ jQuery(function ($) {
 				$target.addClass('active');
 			}
 
+
+
 		});
 		$('.select-box .option').on('click', function () {
 			const $cont = $(this).closest('.select-box');
 			const text = $(this).find('span').html();
 			$cont.find('.placeholder').html(text);
 			$cont.find('.options-container').removeClass('active');
+
+
+
+			$('.option').closest('.select').removeClass('select');
+			$(this).addClass('select');
+			
 		});
 
 		//закриваєм фільтр якщо клікаєм не на елементі фільтра
@@ -277,9 +285,9 @@ jQuery(function ($) {
 	$('.bottom-filter').on('click', function () {
 		$('.filter').toggleClass('filter-open');
 		console.log($(window).width());
-		
-		
-		
+
+
+
 		if ($(window).width() > 768) {
 			$('.benefits__news').addClass('hide');
 		}
@@ -287,13 +295,13 @@ jQuery(function ($) {
 		if ($(window).width() < 768) {
 			$('.header__bottom-news-mobile').addClass('hide');
 		}
-		
+
 	});
 
 	$('.filter-btn-close').on('click', function (e) {
 		e.preventDefault();
 		$('.car-item__img-container').slick('refresh');
-		
+
 		if ($('.filter').hasClass('filter-open')) {
 			$('.filter').removeClass('filter-open');
 			if ($(window).width() > 768) {
@@ -301,7 +309,7 @@ jQuery(function ($) {
 					$('.benefits__news').removeClass('hide')
 				};
 			}
-	
+
 			if ($(window).width() < 768) {
 
 				if ($('.header__bottom-news-mobile').hasClass('hide')) {
@@ -309,7 +317,7 @@ jQuery(function ($) {
 				};
 				;
 			}
-			
+
 		}
 	});
 
@@ -326,7 +334,7 @@ jQuery(function ($) {
 
 
 
-	
+
 	// * ============ rangeSlider ============== * //
 
 	const filterYear = document.querySelector('.filter-year'),
