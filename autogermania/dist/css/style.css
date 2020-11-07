@@ -1040,7 +1040,7 @@ hr {
     transition: all 0.4s;
 }
 
-.select-box .options-container .option input[type="radio"]:checked + label p {
+.select-box .options-container .option input[type="radio"]:checked + label {
     background: #d9e7f7;
 }
 
@@ -3464,15 +3464,6 @@ hr {
     display: none;
 }
 
-.filter-body__item-wrapper {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-}
-
 .filter-body__salon-color {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -3785,6 +3776,19 @@ hr {
 
 .select-box-wrapper {
     min-width: 75px;
+}
+
+.select-box-wrapper__body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+}
+
+.select-box-wrapper .select-box {
+    min-width: 70px;
 }
 
 .select-box-wrapper.mobile .mobile-options {

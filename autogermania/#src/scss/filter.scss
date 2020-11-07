@@ -412,8 +412,8 @@
 	}
 
 	&__item-wrapper {
-		display: flex;
-		justify-content: space-between;
+		//display: flex;
+		//justify-content: space-between;
 
 		@media only screen and (max-width: 414px) {
 			display: block;
@@ -763,6 +763,15 @@
 
 .select-box-wrapper {
 	min-width: 75px;
+
+	&__body {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.select-box {
+		min-width: 70px;
+	}
 
 	&.mobile {
 		.mobile-options {
