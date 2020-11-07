@@ -207,8 +207,9 @@ jQuery(function ($) {
 			$cont.find('.options-container').removeClass('active');
 
 
-
-			$('.option').closest('.select').removeClass('select');
+			//зміна background-color пілся вибору елемента в списку
+			const $a = $(this).closest('.options-container');
+			$a.find('.select').removeClass('select');
 			$(this).addClass('select');
 			
 		});
