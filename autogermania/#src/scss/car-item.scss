@@ -338,7 +338,7 @@
 		display: inline-block;
 		overflow: hidden;
 		margin: 0;
-		outline: none;
+		//outline: none;
 		border: 1px solid transparent;
 		border-radius: 3px;
 		padding: 0 10px;
@@ -349,6 +349,7 @@
 		font-size: 16px;
 		line-height: 26px;
 		white-space: nowrap;
+		text-align: center;
 		text-decoration: none;
 		text-overflow: ellipsis;
 		color: $white;

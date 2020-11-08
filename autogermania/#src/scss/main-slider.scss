@@ -4,7 +4,7 @@
 
 .main-slider {
 	position: relative;
-	padding: 85px 0 150px;
+	padding: 113px 0 150px; // was 85 0 150 - 8-11-2020
 	background-image: url("../img/header-bg.jpg");
 	background-position: center;
 	background-size: cover;
@@ -12,12 +12,12 @@
 
 	@media only screen and (max-width: 1244px) {
 		margin-bottom: 530px;
-		padding: 110px 0 20px;
+		padding: 80px 0 20px; // was 110 0 20 - 8-11-2020
 	}
 
 	@media only screen and (max-width: 768px) {
 		margin-top: 5px;
-		padding-top: 125px;
+		padding-top: 60px;
 		background-image: url("../img/header-bg-mobile.jpg");
 	}
 }
@@ -25,7 +25,7 @@
 .slider {
 	&__item {
 		outline: transparent;
-		height: 550px;
+		height: 504px;
 
 		@media only screen and (max-width: 767px) {
 			height: 625px;
@@ -168,7 +168,7 @@
 	&__price {
 		position: absolute;
 		right: 10px;
-		bottom: -80px;
+		bottom: -55px;
 		width: 300px;
 		font-family: "SF-Reg", serif;
 		font-size: 18px;

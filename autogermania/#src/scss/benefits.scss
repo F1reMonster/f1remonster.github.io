@@ -50,7 +50,7 @@
 	}
 
 	&__top {
-		margin-top: 70px;
+		//margin-top: 70px;
 
 		@media only screen and (max-width: 1200px) {
 			margin-top: 20px;
@@ -71,12 +71,12 @@
 		align-items: center;
 		justify-content: center;
 		margin-bottom: 10px;
-		padding: 0 15px;
+		padding: 22px 30px; // 0 15px - 8-11-2020
 
 		span {
 			font-family: "SF-Semi";
-			font-size: 18px;
-			letter-spacing: 0.36px;
+			font-size: 16px;
+			//letter-spacing: 0.36px;
 			text-transform: uppercase;
 			color: $science-blue;
 		}
@@ -94,7 +94,7 @@
 	&__tooltip {
 		position: absolute;
 		left: -50%;
-		top: 60px;
+		top: 80px; // 60px - 8-11-2020
 		display: none;
 
 		&.active {
@@ -202,7 +202,7 @@
 
 	&__text {
 		display: inline-block;
-		margin-top: 48px;
+		margin-top: 15px;
 		text-align: center;
 
 		h1 {
