@@ -3479,9 +3479,11 @@ hr {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
 }
 
 .filter-body__salon-color .checkbox__input:checked ~ .checkbox__div,
@@ -3544,9 +3546,11 @@ hr {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
     width: 100%;
 }
 
@@ -4667,8 +4671,10 @@ hr {
     }
 
     .search-result__top {
+        margin-top: -13px;
         border-bottom: 1px solid #cdcdcd;
         padding-left: 13px;
+        height: 35px;
     }
 
     .search-result__bottom .bottom-body {
@@ -4999,17 +5005,11 @@ hr {
 
     .filter-body__salon-color .checkbox__div,
   .filter-body__color .checkbox__div {
-        margin-right: 20px;
-    }
-
-    .filter-body__color .color-row {
-        -webkit-box-pack: start;
-            -ms-flex-pack: start;
-                justify-content: start;
+        margin-right: 15px;
     }
 
     .filter-body__color .checkbox__div {
-        margin-right: 20px;
+        margin-right: 15px;
     }
 
     .filter-body__salon {

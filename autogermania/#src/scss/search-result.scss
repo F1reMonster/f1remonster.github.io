@@ -134,8 +134,10 @@
 		justify-content: space-between;
 
 		@media only screen and (max-width: 768px) {
+			margin-top: -13px;
 			border-bottom: 1px solid $silver;
 			padding-left: 13px;
+			height: 35px;
 		}
 	}
 

@@ -425,7 +425,9 @@
 	&__salon-color {
 		display: flex;
 		align-items: center;
-		justify-content: space-between;
+		flex-wrap: wrap;
+		//justify-content: space-between;
+		justify-content: start;
 
 		@media only screen and (max-width: 414px) {
 			justify-content: start;
@@ -477,7 +479,7 @@
 			}
 
 			@media only screen and (max-width: 414px) {
-				margin-right: 20px;
+				margin-right: 15px;
 			}
 		}
 	}
@@ -485,12 +487,14 @@
 	&__color {
 		.color-row {
 			display: flex;
-			justify-content: space-between;
+			flex-wrap: wrap;
+			//justify-content: space-between;
+			justify-content: start;
 			width: 100%;
 
-			@media only screen and (max-width: 414px) {
-				justify-content: start;
-			}
+			// @media only screen and (max-width: 414px) {
+			// 	justify-content: start;
+			// }
 		}
 
 		.checkbox {
@@ -522,7 +526,7 @@
 			}
 
 			@media only screen and (max-width: 414px) {
-				margin-right: 20px;
+				margin-right: 15px;
 			}
 		}
 	}
