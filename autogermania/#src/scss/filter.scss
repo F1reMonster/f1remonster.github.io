@@ -427,11 +427,11 @@
 		align-items: center;
 		flex-wrap: wrap;
 		//justify-content: space-between;
-		justify-content: start;
+		//justify-content: start;
 
-		@media only screen and (max-width: 414px) {
-			justify-content: start;
-		}
+		// @media only screen and (max-width: 414px) {
+		// 	justify-content: start;
+		// }
 	}
 
 	&__salon-color,
@@ -450,6 +450,7 @@
 			border-radius: 50%;
 			width: 35px;
 			height: 35px;
+			margin-right: 10px;
 
 			.color {
 				border: 1px solid $alto;
@@ -489,7 +490,7 @@
 			display: flex;
 			flex-wrap: wrap;
 			//justify-content: space-between;
-			justify-content: start;
+			//justify-content: start;
 			width: 100%;
 
 			// @media only screen and (max-width: 414px) {
@@ -504,6 +505,9 @@
 		}
 
 		.checkbox__div {
+
+			margin-right: 10px;
+
 			.color {
 				&.silver {
 					background-color: $silver;

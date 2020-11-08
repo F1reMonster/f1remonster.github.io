@@ -1896,7 +1896,7 @@ hr {
 .main-slider {
     position: relative;
     padding: 85px 0 150px;
-    background-image: url("../img/header-bg.webp");
+    background-image: url("../img/header-bg.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -3481,9 +3481,6 @@ hr {
             align-items: center;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: start;
 }
 
 .filter-body__salon-color .checkbox__input:checked ~ .checkbox__div,
@@ -3507,6 +3504,7 @@ hr {
     border-radius: 50%;
     width: 35px;
     height: 35px;
+    margin-right: 10px;
 }
 
 .filter-body__salon-color .checkbox__div .color,
@@ -3548,14 +3546,15 @@ hr {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: start;
     width: 100%;
 }
 
 .filter-body__color .checkbox p {
     padding-left: 10px;
+}
+
+.filter-body__color .checkbox__div {
+    margin-right: 10px;
 }
 
 .filter-body__color .checkbox__div .color.silver {
@@ -4615,7 +4614,7 @@ hr {
     .main-slider {
         margin-top: 5px;
         padding-top: 125px;
-        background-image: url("../img/header-bg-mobile.webp");
+        background-image: url("../img/header-bg-mobile.jpg");
     }
 
     .benefits__news {
@@ -4997,12 +4996,6 @@ hr {
         display: block;
     }
 
-    .filter-body__salon-color {
-        -webkit-box-pack: start;
-            -ms-flex-pack: start;
-                justify-content: start;
-    }
-
     .filter-body__salon-color .checkbox__div,
   .filter-body__color .checkbox__div {
         margin-right: 15px;
@@ -5259,4 +5252,11 @@ hr {
         padding-left: 10px;
         min-width: 123px;
     }
+}
+
+.webp .main-slider{ background-image: url(../img/header-bg.webp); }
+
+@media only screen and (max-width: 768px){
+
+    .webp .main-slider{ background-image: url(../img/header-bg-mobile.webp); }
 }

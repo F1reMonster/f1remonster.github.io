@@ -5,7 +5,7 @@
 .main-slider {
 	position: relative;
 	padding: 85px 0 150px;
-	background-image: url("../img/header-bg.webp");
+	background-image: url("../img/header-bg.jpg");
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -18,7 +18,7 @@
 	@media only screen and (max-width: 768px) {
 		margin-top: 5px;
 		padding-top: 125px;
-		background-image: url("../img/header-bg-mobile.webp");
+		background-image: url("../img/header-bg-mobile.jpg");
 	}
 }
 
