@@ -244,7 +244,7 @@
 		}
 
 		&.fixed {
-			position: fixed;
+			position: sticky;
 			left: 0;
 			right: 0;
 			bottom: 0;
@@ -286,10 +286,6 @@
 
 		.advanced-items {
 			padding-left: 10px;
-		}
-		
-		&.advanced {
-			padding: 9px 0;
 		}
 
 		// * привіт + коробка * //
@@ -367,6 +363,10 @@
 				padding: 10px;
 			}
 		}
+
+		&.advanced {
+			padding: 9px 0;
+		}
 	}
 
 	&__item-title {
@@ -379,6 +379,7 @@
 			margin-bottom: 10px;
 			border-bottom: 1px solid $alto;
 			padding-bottom: 5px;
+			cursor: pointer;
 
 			&::after {
 				content: "";
@@ -412,9 +413,6 @@
 	}
 
 	&__item-wrapper {
-		//display: flex;
-		//justify-content: space-between;
-
 		@media only screen and (max-width: 414px) {
 			display: block;
 		}
@@ -424,18 +422,14 @@
 
 	&__salon-color {
 		display: flex;
-		align-items: center;
 		flex-wrap: wrap;
-		//justify-content: space-between;
-		//justify-content: start;
-
-		// @media only screen and (max-width: 414px) {
-		// 	justify-content: start;
-		// }
+		align-items: center;
 	}
 
 	&__salon-color,
 	&__color {
+		max-width: 270px;
+
 		.checkbox__input:checked ~ .checkbox__div {
 			border: 1px solid $science-blue;
 			transition: 0.3s all;
@@ -447,10 +441,10 @@
 		}
 
 		.checkbox__div {
+			margin-right: 10px;
 			border-radius: 50%;
 			width: 35px;
 			height: 35px;
-			margin-right: 10px;
 
 			.color {
 				border: 1px solid $alto;
@@ -483,19 +477,17 @@
 				margin-right: 15px;
 			}
 		}
+
+		@media only screen and (max-width: 976px) {
+			max-width: 100%;
+		}
 	}
 
 	&__color {
 		.color-row {
 			display: flex;
 			flex-wrap: wrap;
-			//justify-content: space-between;
-			//justify-content: start;
 			width: 100%;
-
-			// @media only screen and (max-width: 414px) {
-			// 	justify-content: start;
-			// }
 		}
 
 		.checkbox {
@@ -505,7 +497,6 @@
 		}
 
 		.checkbox__div {
-
 			margin-right: 10px;
 
 			.color {
@@ -542,11 +533,6 @@
 		justify-content: space-between;
 		width: 260px;
 		max-width: 245px;
-
-		@media only screen and (max-width: 414px) {
-			width: 270px;
-			max-width: 270px;
-		}
 
 		.checkbox__input:checked ~ .checkbox__border {
 			border: 1px solid $science-blue;
@@ -607,6 +593,11 @@
 			&.fabric {
 				background-image: url("../img/svg/fabric1.svg");
 			}
+		}
+
+		@media only screen and (max-width: 414px) {
+			// width: 270px;
+			// max-width: 270px;
 		}
 	}
 }

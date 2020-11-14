@@ -69,13 +69,13 @@
 					border: 1px solid $science-blue;
 
 					@media only screen and (max-width: 768px) {
-						border: none;
+						border: 1px solid transparent;
 					}
 				}
 
 				@media only screen and (max-width: 768px) {
 					outline: none;
-					border: none;
+					border: 1px solid transparent;
 					border-radius: 0;
 				}
 			}
@@ -282,11 +282,13 @@
 		}
 	}
 
+	.favorites__info {
+		display: none;
+	}
+
 	@media only screen and (max-width: 1200px) {
 		margin-top: 55px;
 	}
-
-	
 }
 
 .breadcrumbs {

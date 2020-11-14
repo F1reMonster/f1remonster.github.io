@@ -1,26 +1,7 @@
-// function testWebP(callback) {
-
-// 	var webP = new Image();
-// 	webP.onload = webP.onerror = function () {
-// 		callback(webP.height == 2);
-// 	};
-// 	webP.src = "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA";
-// }
-
-// testWebP(function (support) {
-
-// 	if (support == true) {
-// 		document.querySelector('body').classList.add('webp');
-// 	}
-// });
-
-
 jQuery(function ($) {
 	$(document).ready(function () {
 
 		const sliderMain = $('.slider'),
-			carSlider = $(".car__slider"),
-			bestOfferSlider = $(".best-offers__slider"),
 			btnFooterUp = $(".footer__up"),
 			aboutTitle = $(".about__title-text"),
 			aboutIcon = $('.about__title-icon'),
@@ -53,51 +34,85 @@ jQuery(function ($) {
 			]
 		});
 
-		carSlider.slick({
-			infinite: true,
-			slidesToShow: 1,
-			slidesToScroll: 1,
-			prevArrow: '<button type="button" class="car__slider-btn prev"><svg><use xlink:href="img/sprite.svg#arrow_prev"></use></svg></button>',
-			nextArrow: '<button type="button" class="car__slider-btn next"><svg><use xlink:href="img/sprite.svg#arrow_next"></use></svg></button>',
 
-		});
 
-		bestOfferSlider.slick({
-			infinite: true,
+		// * best-offers слайдер в слайдері */
+
+
+		var innerSlider = $(".car__slider"),
+			$wrapperSlider = $(".best-offers__slider");
+
+		wrapperSlider = $wrapperSlider[0];
+
+
+		$(".best-offers__slider").slick({
+			infinite: false,
+			centerMode: false,
+			variableWidth: false,
 			slidesToShow: 4,
 			slidesToScroll: 1,
+			speed: 500,
 			prevArrow: '<button type="button" class="best-offers__slider-btn prev"><svg><use xlink:href="img/sprite.svg#slider_arrow_left"></use></svg></button>',
 			nextArrow: '<button type="button" class="best-offers__slider-btn next"><svg><use xlink:href="img/sprite.svg#slider_arrow_right"></use></svg></button>',
+			swipe: true,
 			responsive: [
 				{
 					breakpoint: 1200,
 					settings: {
-
 						slidesToShow: 3,
 						slidesToScroll: 1,
-
+						swipe: true,
 					}
 				},
 				{
 					breakpoint: 992,
 					settings: {
-
 						slidesToShow: 2,
-						slidesToScroll: 1
+						slidesToScroll: 1,
+						swipe: true,
 					}
 				},
 				{
 					breakpoint: 480,
 					settings: {
-
 						slidesToShow: 1,
 						slidesToScroll: 1,
-						//arrows: false,
+						swipe: true,
 					}
 				}
 
 			]
 		});
+
+		$(".car__slider").on('mousedown', function () {
+			wrapperSlider.slick.setOption({
+				swipe: false
+			})
+		})
+
+		innerSlider.slick({
+			infinite: false,
+			centerMode: false,
+			variableWidth: false,
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			prevArrow: '<button type="button" class="car__slider-btn prev"><svg><use xlink:href="img/sprite.svg#arrow_prev"></use></svg></button>',
+			nextArrow: '<button type="button" class="car__slider-btn next"><svg><use xlink:href="img/sprite.svg#arrow_next"></use></svg></button>',
+			swipe: true,
+
+		}).on('afterChange', function (event, slick) {
+			wrapperSlider.slick.setOption({
+				swipe: true
+			})
+		});
+
+
+
+
+
+
+
+		// * =============== search.html slider ================ * //
 
 
 		var numSlick = 0;
@@ -132,8 +147,199 @@ jQuery(function ($) {
 		});
 
 
-		// var $status = $('.paging-info');
+		// * =============== favorites.html slider ================ * //
 
+		//console.log($(window).width());
+
+		var numFavSlick = 0;
+		var favSlider = $('.favorites__slider');
+		//var paginInfo = $('.paging-info');
+
+		numFavSlick = 0;
+		favSlider.each(function () {
+
+			numFavSlick++;
+
+			var windowWidth = $(window).width();
+
+			var newFavSlider = $(this).addClass('slider-' + numFavSlick);
+
+			if (windowWidth > 768)  {
+				var paging = newFavSlider.next('.paging-info').addClass('page-' + numFavSlick);
+				pagingToShow = paging.text(i + ' | ' + slick.slideCount)
+			} else {
+
+			}
+
+			
+			
+
+		//	var pagingMobile
+
+			// $current = $('.details-pagination.current'),
+			// 	$total = $('.details-pagination.total');
+
+			newFavSlider.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
+				//currentSlide is undefined on init -- set it to 0 in this case (currentSlide is 0 based)
+				var i = (currentSlide ? currentSlide : 0) + 1;
+				//paging.text(i + ' | ' + slick.slideCount);
+				pagingToShow;
+			})
+
+
+			newFavSlider.slick({
+				infinite: true,
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				prevArrow: '<button type="button" class="carslider-btn prev"></button>',
+				nextArrow: '<button type="button" class="carslider-btn next"></button>',
+
+			});
+
+		});
+
+
+
+		// * similar in details.html 
+
+
+		$('.car__similar-slider').slick({
+			slidesToShow: 2,
+			slidesToScroll: 1,
+			infinite: false,
+			prevArrow: '<button type="button" class="carsimilar-btn prev"></button>',
+			nextArrow: '<button type="button" class="carsimilar-btn next"></button>',
+			responsive: [
+				{
+					breakpoint: 560,
+					settings: {
+						slidesToShow: 1,
+						slidesToScroll: 1,
+
+
+						//arrows: false,
+					}
+				}
+			]
+		});
+
+		$('.ds-car__slider').slick({
+			infinite: false,
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			prevArrow: '<button type="button" class="ds__slider-btn prev"><svg><use xlink:href="img/sprite.svg#arrow_prev"></use></svg></button>',
+			nextArrow: '<button type="button" class="ds__slider-btn next"><svg><use xlink:href="img/sprite.svg#arrow_next"></use></svg></button>'
+
+		});
+
+		//** refresh sliders after change window */
+		$(window).on('resize', function () {
+			$('.car__similar-slider').on('breakpoint', function (event, slick) {
+				//console.log('in details.html slider is breakpointed');
+
+				//$(this).slick('refresh');
+				//$('.ds-car__slider').slick('unslick');
+				$('.ds-car__slider').slick('unslick');
+				$('.ds-car__slider').slick({
+					infinite: false,
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					prevArrow: '<button type="button" class="ds__slider-btn prev"><svg><use xlink:href="img/sprite.svg#arrow_prev"></use></svg></button>',
+					nextArrow: '<button type="button" class="ds__slider-btn next"><svg><use xlink:href="img/sprite.svg#arrow_next"></use></svg></button>'
+
+				});
+			});
+
+			$(".best-offers__slider").on('breakpoint', function (event, slick) {
+				//console.log('in index.html slider is breakpointed');
+
+				//$(this).slick('refresh');
+				$('.car__slider').slick('unslick');
+				$('.car__slider').slick({
+					infinite: false,
+					centerMode: false,
+					variableWidth: false,
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					prevArrow: '<button type="button" class="car__slider-btn prev"><svg><use xlink:href="img/sprite.svg#arrow_prev"></use></svg></button>',
+					nextArrow: '<button type="button" class="car__slider-btn next"><svg><use xlink:href="img/sprite.svg#arrow_next"></use></svg></button>',
+					swipe: true,
+
+				});
+			});
+		});
+
+
+
+		// * ============= details.html ===================== * 
+
+
+
+		var detailsSlider = $('.details__slider');
+		detailsSlider.each(function () {
+			var
+				$current = $('.details-pagination.current'),
+				$total = $('.details-pagination.total');
+
+			$(this).on('init reInit afterChange', function (evet, slick, currentSlide, nextSlide) {
+				var i = (currentSlide ? currentSlide : 0) + 1;
+
+				$current.html(i);
+				$total.html(slick.slideCount);
+
+			});
+
+			$(this).slick({
+				slidesToShow: 1,
+				infinite: false,
+				prevArrow: '<button type="button" class="carsimilar-btn prev-main"></button>',
+				nextArrow: '<button type="button" class="carsimilar-btn next-main"></button>',
+			});
+
+		});
+
+
+
+		$('a.fancybox-img').fancybox({
+			//selector: '.slick-slide:not(.slick-cloned)',
+			autoSize: true,
+			arrows: true,
+			buttons: [
+				'close',
+			]
+
+			// backFocus: false,
+			// afterShow: function (instance, current) {
+			// 	current.opts.$orig.closest(".slick-initialized").slick('slickGoTo', parseInt(current.index), true);
+			// }
+
+		});
+
+
+
+
+		// * скрол 
+
+		$(".mobile-bottom .basic-data").click(function () { // ID откуда кливаем
+			var destination = $("#mainData").offset().top - $('.header').outerHeight();
+			$('html, body').animate({ scrollTop: destination }, 1000); // Скорость прокрутки
+		});
+
+		$(".mobile-bottom .advanced-data").click(function () { // ID откуда кливаем
+			var destination = $("#advData").offset().top - $('.header').outerHeight();
+			$('html, body').animate({ scrollTop: destination }, 1000); // Скорость прокрутки
+		});
+
+		// * ================= end detail.html ===============================
+
+
+		// * закр/відкп блоки голловний даних авто та додаткових
+		$('.car__info-name-wrapper').on('click', function () {
+			$(this).toggleClass('p-11-20');
+			$(this).next('.car__block-content').toggleClass('close');
+			$(this).find('svg').toggleClass('rotate');
+			$(this).parent().parent().toggleClass('addmargin');
+		})
 
 
 
@@ -211,7 +417,7 @@ jQuery(function ($) {
 			const $a = $(this).closest('.options-container');
 			$a.find('.select').removeClass('select');
 			$(this).addClass('select');
-			
+
 		});
 
 		//закриваєм фільтр якщо клікаєм не на елементі фільтра
@@ -221,164 +427,183 @@ jQuery(function ($) {
 				$('.select-box .options-container').removeClass('active');
 			}
 		});
-	});
 
 
 
-	function arrowUpVisible() {
-		var arrow = $('.main-arrow-up');
-		var windowHeight = $(window).outerHeight();
-		opacityVision = pageYOffset / windowHeight;
-		arrow.css('opacity', opacityVision);
-		arrow.on('click', function (e) {
-			e.preventDefault();
-			e.stopPropagation();
-			var winHeight = $(document).height();
-			var step = 12;
-			var timeToScroll = winHeight / step;
-			$('html, body').stop().animate({
-				scrollTop: 0
-			}, timeToScroll);
+
+
+
+		function arrowUpVisible() {
+			var arrow = $('.main-arrow-up');
+			var windowHeight = $(window).outerHeight();
+			opacityVision = pageYOffset / windowHeight;
+			arrow.css('opacity', opacityVision);
+			arrow.on('click', function (e) {
+				e.preventDefault();
+				e.stopPropagation();
+				var winHeight = $(document).height();
+				var step = 12;
+				var timeToScroll = winHeight / step;
+				$('html, body').stop().animate({
+					scrollTop: 0
+				}, timeToScroll);
+			});
+		}
+
+		function filterBtnFixed() {
+			var filterHeight = $('.filter.filter-open').outerHeight();
+			var btnFixed = $('.filter-wrapper-btn').outerHeight();
+			var headerHeight = $('.header').outerHeight()
+			var footerHeight = $('.footer').outerHeight();
+
+			var posBtnRemove = filterHeight - footerHeight + btnFixed + headerHeight;
+			var posBtnActive = filterHeight - footerHeight + btnFixed;
+
+			if (posBtnRemove < $(window).scrollTop()) {
+				$('.filter-wrapper-btn').removeClass('fixed');
+			}
+
+			if (posBtnActive > $(window).scrollTop()) {
+				$('.filter-wrapper-btn').addClass('fixed');
+			}
+		}
+
+		function stikyPriceMobile() {
+
+			// * добавляємо stiky блоку price-mobile
+
+
+			if ($(window).scrollTop() + $('.header').outerHeight() >= $('#mainData').offset().top) {
+				$('.price-mobile').addClass('sticky');
+			} else {
+				$('.price-mobile').removeClass('sticky');
+			}
+
+
+		}
+
+		$(window).scroll(function () {
+
+			if ($(this).scrollTop() > 0) {
+				$('.header__bottom').css('background-color', 'rgba(255,255,255,0.8)')
+			}
+			if ($(this).scrollTop() === 0) {
+				$('.header__bottom').css('background-color', 'rgba(255,255,255,0.2)')
+			}
+
+			if ($('#mainData').length) {
+				stikyPriceMobile();
+			}
+
+			arrowUpVisible();
 		});
-	}
-
-	function filterBtnFixed() {
-		var filterHeight = $('.filter.filter-open').outerHeight();
-		var btnFixed = $('.filter-wrapper-btn').outerHeight();
-		var headerHeight = $('.header').outerHeight()
-		var footerHeight = $('.footer').outerHeight();
-
-		var posBtnRemove = filterHeight - footerHeight + btnFixed + headerHeight;
-		var posBtnActive = filterHeight - footerHeight + btnFixed;
-
-		if (posBtnRemove < $(window).scrollTop()) {
-			$('.filter-wrapper-btn').removeClass('fixed');
-		}
-
-		if (posBtnActive > $(window).scrollTop()) {
-			$('.filter-wrapper-btn').addClass('fixed');
-		}
-	}
-
-	$(window).scroll(function () {
 
 
-		arrowUpVisible();
-
-		filterBtnFixed();
-
-		if ($(this).scrollTop() > 0) {
-			$('.header__bottom').css('background-color', 'rgba(255,255,255,0.8)')
-		}
-		if ($(this).scrollTop() === 0) {
-			$('.header__bottom').css('background-color', 'rgba(255,255,255,0.2)')
-		}
-	});
+		$('.benefits__top-item-wrapper').hover(function () {
+			$(this).next('.benefits__tooltip').addClass('active');
+		}, function () {
+			$(this).next('.benefits__tooltip').removeClass('active');
+		});
 
 
-	$('.benefits__top-item-wrapper').hover(function () {
-		$(this).next('.benefits__tooltip').addClass('active');
-	}, function () {
-		$(this).next('.benefits__tooltip').removeClass('active');
-	});
-
-
-	$('.bottom-filter').on('click', function () {
-		$('.filter').toggleClass('filter-open');
-		console.log($(window).width());
+		$('.bottom-filter').on('click', function () {
+			$('.filter').toggleClass('filter-open');
+			console.log($(window).width());
 
 
 
-		if ($(window).width() > 768) {
-			$('.benefits__news').addClass('hide');
-		}
-
-		if ($(window).width() < 768) {
-			$('.header__bottom-news-mobile').addClass('hide');
-		}
-
-	});
-
-	$('.filter-btn-close').on('click', function (e) {
-		e.preventDefault();
-		$('.car-item__img-container').slick('refresh');
-
-		if ($('.filter').hasClass('filter-open')) {
-			$('.filter').removeClass('filter-open');
 			if ($(window).width() > 768) {
-				if ($('.benefits__news').hasClass('hide')) {
-					$('.benefits__news').removeClass('hide')
-				};
+				$('.benefits__news').addClass('hide');
 			}
 
 			if ($(window).width() < 768) {
-
-				if ($('.header__bottom-news-mobile').hasClass('hide')) {
-					$('.header__bottom-news-mobile').removeClass('hide')
-				};
-				;
+				$('.header__bottom-news-mobile').addClass('hide');
 			}
 
+		});
+
+		//* закриваємо фільтр 
+		$('.filter-btn-close').on('click', function (e) {
+			e.preventDefault();
+			$('.car-item__img-container').slick('refresh');
+
+			if ($('.filter').hasClass('filter-open')) {
+				$('.filter').removeClass('filter-open');
+				if ($(window).width() > 768) {
+					if ($('.benefits__news').hasClass('hide')) {
+						$('.benefits__news').removeClass('hide')
+					};
+				}
+
+				if ($(window).width() < 768) {
+
+					if ($('.header__bottom-news-mobile').hasClass('hide')) {
+						$('.header__bottom-news-mobile').removeClass('hide')
+					};
+					;
+				}
+
+			}
+		});
+
+		$('.filter__item-title').click(function (e) {
+			e.preventDefault();
+			$(this).toggleClass('close');
+		});
+
+		$('.filter-body__item-title.advanced').click(function (e) {
+			e.preventDefault();
+			$(this).toggleClass('close');
+		});
+
+
+
+
+
+		// * ============ rangeSlider ============== * //
+
+		if ($('.filter').length) {
+			const filterYear = document.querySelector('.filter-year'),
+				filterKm = document.querySelector('.filter-km'),
+				filterPower = document.querySelector('.filter-power');
+
+			noUiSlider.create(filterYear, {
+				start: [1990, 2020],
+				connect: true,
+				step: 1,
+				tooltips: [wNumb({ decimals: 0 }), wNumb({ decimals: 0 })],
+				range: {
+					'min': 1990,
+					'max': 2020
+				}
+			});
+
+			noUiSlider.create(filterKm, {
+				start: [0, 300000],
+				connect: true,
+				step: 10000,
+				tooltips: [wNumb({ decimals: 0 }), wNumb({ decimals: 0 })],
+				range: {
+					'min': 0,
+					'max': 300000
+				}
+			});
+
+			noUiSlider.create(filterPower, {
+				start: [50, 1000],
+				connect: true,
+				step: 10,
+				tooltips: [wNumb({ decimals: 0 }), wNumb({ decimals: 0 })],
+				range: {
+					'min': 50,
+					'max': 1000
+				}
+			});
 		}
+
 	});
-
-	$('.filter__item-title').click(function (e) {
-		e.preventDefault();
-		$(this).toggleClass('close');
-	});
-
-	$('.filter-body__item-title.advanced').click(function (e) {
-		e.preventDefault();
-		$(this).toggleClass('close');
-	});
-
-
-
-
-
-	// * ============ rangeSlider ============== * //
-
-	const filterYear = document.querySelector('.filter-year'),
-		filterKm = document.querySelector('.filter-km'),
-		filterPower = document.querySelector('.filter-power');
-
-	noUiSlider.create(filterYear, {
-		start: [1990, 2020],
-		connect: true,
-		step: 1,
-		tooltips: [wNumb({ decimals: 0 }), wNumb({ decimals: 0 })],
-		range: {
-			'min': 1990,
-			'max': 2020
-		}
-	});
-
-	noUiSlider.create(filterKm, {
-		start: [0, 300000],
-		connect: true,
-		step: 10000,
-		tooltips: [wNumb({ decimals: 0 }), wNumb({ decimals: 0 })],
-		range: {
-			'min': 0,
-			'max': 300000
-		}
-	});
-
-	noUiSlider.create(filterPower, {
-		start: [50, 1000],
-		connect: true,
-		step: 10,
-		tooltips: [wNumb({ decimals: 0 }), wNumb({ decimals: 0 })],
-		range: {
-			'min': 50,
-			'max': 1000
-		}
-	});
-
-
-
 
 });
 
 
-console.log($(window).width());
+

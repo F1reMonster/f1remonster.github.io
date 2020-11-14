@@ -25,6 +25,33 @@
 		border-bottom: 6px solid $science-blue;
 	}
 
+	// ** properties ** //
+	&__vehicle-info {
+		margin-left: 10px;
+		//width: 380px;
+
+		@media only screen and (max-width: 992px) {
+			//width: 310px;
+		}
+
+		@media only screen and (max-width: 768px) {
+			//width: 280px;
+		}
+	}
+
+	&__vehicle-title {
+		overflow: hidden;
+		font-size: 16px;
+		line-height: 20px;
+		text-overflow: ellipsis;
+		cursor: pointer;
+	}
+
+	&__properties {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
 	&.new {
 		.car-item__new {
 			display: block;
@@ -62,6 +89,27 @@
 		position: relative;
 		overflow: hidden;
 		min-width: 260px;
+
+		.fav-icon {
+			display: none;
+
+			@media only screen and (max-width: 414px) {
+				position: absolute;
+				right: 10px;
+				top: 10px;
+				display: block;
+			}
+		}
+
+		.fav-icon-img {
+			margin-right: 10px;
+			margin-left: 10px;
+			font-size: 20px;
+			fill: $white;
+			stroke: $science-blue;
+			stroke-width: 4px;
+			cursor: pointer;
+		}
 
 		.paging-info {
 			position: absolute;
@@ -129,7 +177,7 @@
 		}
 
 		@media only screen and (max-width: 414px) {
-			padding: 10px;
+			padding: 0px;
 		}
 
 		@media only screen and (max-width: 320px) {
@@ -362,6 +410,13 @@
 			box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
 		}
 
+		&.right {
+			border-radius: 0;
+			height: 37px;
+			line-height: 37px;
+			text-transform: uppercase;
+		}
+
 		@media only screen and (max-width: 414px) {
 			display: none;
 		}
@@ -410,6 +465,9 @@
 	}
 }
 
+
+
+
 .carslider-btn {
 	position: absolute;
 	top: 210px;
@@ -457,7 +515,6 @@
 				height: 40px;
 				background-image: url("../img/svg/slider_arrow_right.svg");
 				background-position: center;
-				background-size: covecontainr;
 				background-repeat: no-repeat;
 				transform: rotate(180deg);
 			}

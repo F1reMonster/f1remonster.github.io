@@ -1,4 +1,220 @@
 .details {
 	position: relative;
 	margin-top: 87px;
+	font-family: "SF-Med";
+	color: $mine-shaft;
+
+	&__body {
+		margin: 0 auto;
+		padding: 0;
+		max-width: 1170px;
+	}
+
+	&__wrapper {
+		display: flex;
+
+		@media only screen and (max-width: 992px) {
+			flex-direction: column;
+		}
+	}
+
+	&__info {
+		flex: 0 0 66.6667%;
+		padding-right: 7.5px;
+		padding-left: 7.5px;
+		min-height: 1px;
+		max-width: 66.6667%;
+
+		.price-mobile {
+			display: none;
+
+			.price-mobile-title {
+				padding: 10px 20px;
+				background-color: $white;
+
+				.car__name {
+					margin-bottom: 0;
+				}
+			}
+
+			.car__right-price {
+				margin-top: 10px;
+				margin-bottom: 20px;
+				border: 1px solid hsla(0, 0%, 84.3%, 0.5);
+				padding: 20px;
+				box-shadow: 0 0 5px 0 rgba(21, 21, 21, 0.2);
+				background-color: $white;
+			}
+
+			.price-inner {
+				padding-top: 0;
+			}
+
+			.mobile-btn {
+				display: flex;
+			}
+
+			.car-item__btn {
+				border-radius: 0;
+				height: 36px;
+				line-height: 33px;
+				text-transform: uppercase;
+
+				&.mobile-right {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					border: 2px solid $science-blue;
+					color: $science-blue;
+					background-color: $white;
+
+					.phone-icon {
+						margin-right: 5px;
+						fill: $science-blue;
+					}
+				}
+
+				@media only screen and (max-width: 414px) {
+					display: block;
+				}
+			}
+
+			.car-item__btn:first-child {
+				margin-right: 20px;
+			}
+
+			.mobile-bottom {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				width: 100%;
+				font-family: "SF-Med";
+				font-size: 12px;
+				text-transform: uppercase;
+
+				.separator {
+					border-left: 1px solid $science-blue;
+					width: 1px;
+					height: 30px;
+				}
+
+				.basic-data,
+				.advanced-data {
+					text-align: center;
+					width: 100%;
+				}
+			}
+
+			&.sticky {
+				position: sticky;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				z-index: 10;
+
+				.car__right-price {
+					padding: 10px;
+				}
+
+				.car__right-id {
+					padding-bottom: 0;
+				}
+			}
+		}
+
+		@media only screen and (max-width: 992px) {
+			padding: 0;
+			max-width: 100%;
+
+			.price-mobile {
+				display: block;
+			}
+		}
+	}
+
+	&__image {
+		margin-bottom: 20px;
+
+		@media only screen and (max-width: 992px) {
+			margin-bottom: 0;
+		}
+	}
+
+	&__image-inner {
+		position: relative;
+		//max-width: 716px;
+
+		.fav-icon {
+			position: absolute;
+			right: 10px;
+			top: 10px;
+			display: block;
+		}
+
+		.fav-icon-img {
+			margin-right: 10px;
+			margin-left: 10px;
+			font-size: 20px;
+			fill: $white;
+			stroke: $science-blue;
+			stroke-width: 4px;
+			cursor: pointer;
+		}
+
+		@media only screen and (max-width: 992px) {
+			max-width: 100%;
+		}
+
+		img {
+			width: 100%;
+		}
+	}
+
+	&__slider {
+		position: relative;
+	}
+
+	&__right {
+		//position: relative;
+		flex: 0 0 33.3333%;
+		margin-left: 0%;
+		padding-right: 7.5px;
+		padding-left: 7.5px;
+		min-height: 1px;
+		max-width: 33.3333%;
+
+		@media only screen and (max-width: 992px) {
+			display: none;
+		}
+	}
+
+	&__right-wrapper {
+		position: sticky;
+		top: 100px;
+		border: 1px solid hsla(0, 0%, 84.3%, 0.5);
+		border-radius: 3px;
+		padding: 15px;
+		background-color: $white;
+
+		@media only screen and (max-width: 992px) {
+			position: relative;
+			top: 0;
+
+			.car__name,
+			.car__right-ttx,
+			.car__right-favorite,
+			.car__right-attention,
+			.car__right-after-prepaid {
+				display: none;
+			}
+		}
+	}
+
+	&__img {
+		max-width: 800px;
+	}
+
+	@media only screen and (max-width: 1200px) {
+		margin-top: 55px;
+	}
 }

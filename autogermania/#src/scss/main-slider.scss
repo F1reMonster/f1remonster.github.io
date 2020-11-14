@@ -12,7 +12,7 @@
 
 	@media only screen and (max-width: 1244px) {
 		margin-bottom: 530px;
-		padding: 80px 0 20px; // was 110 0 20 - 8-11-2020
+		padding: 110px 0 20px; // was 110 0 20 - 8-11-2020
 	}
 
 	@media only screen and (max-width: 768px) {
@@ -99,11 +99,15 @@
 	}
 
 	&__car {
-		margin-top: 93px;
+		//margin-top: 93px;
+
+		img {
+			width: 625px;
+		}
 
 		@media only screen and (max-width: 855px) {
 			margin: 0 auto;
-			margin-top: 50px;
+			//margin-top: 50px;
 
 			img {
 				width: 550px;
@@ -168,7 +172,7 @@
 	&__price {
 		position: absolute;
 		right: 10px;
-		bottom: -55px;
+		bottom: 0;
 		width: 300px;
 		font-family: "SF-Reg", serif;
 		font-size: 18px;
@@ -177,9 +181,13 @@
 
 		@media only screen and (max-width: 855px) {
 			right: 50%;
-			bottom: 0;
+			bottom: 140px;
 			text-align: center;
 			transform: translate(50%, 110%);
+		}
+
+		@media only screen and (max-width: 414px) {
+			bottom: 50px;
 		}
 	}
 

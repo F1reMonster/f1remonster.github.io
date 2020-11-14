@@ -87,7 +87,7 @@
 		padding: 3px 10px;
 		font-family: "SF-Bold";
 		color: $white;
-		background-color: $pistacio;
+		background-color: $green;
 	}
 
 	&__slider {
@@ -109,7 +109,7 @@
 	&__slider-btn {
 		position: absolute;
 		top: 155px;
-		z-index: 5;
+		z-index: 55;
 		outline: none;
 		border: none;
 		border-radius: 4px;
@@ -117,6 +117,10 @@
 		height: 8px;
 		background-color: $science-blue;
 		cursor: pointer;
+
+		&.slick-disabled {
+			background-color: $alto;
+		}
 
 		&.prev,
 		&.next {
@@ -132,10 +136,12 @@
 
 		&.next {
 			right: 5px;
+			z-index: 60;
 		}
 
 		&.prev {
 			left: 5px;
+			z-index: 60;
 		}
 	}
 
