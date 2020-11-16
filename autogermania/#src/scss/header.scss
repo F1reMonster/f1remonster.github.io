@@ -29,13 +29,13 @@
 	}
 
 	&__menu {
-		font-family: "SF-Reg", serif;
-		font-size: 16px;
+		font-family: Arial, serif;
+		font-size: 13px;
 		background-color: $science-blue;
 
 		@media only screen and (max-width: 1200px) {
 			position: fixed;
-			top: 55px;
+			top: 50px; // було 55, після зміни висоти хередара
 			z-index: 2;
 			border-right: 1px solid $alto;
 			padding: 10px 20px;
@@ -100,7 +100,7 @@
 
 	&__bottom {
 		border-bottom: 1px solid $silver;
-		padding: 10px 0;
+		padding: 8px 0; // була висота хедера 55 (10пікс 0)
 		background-color: rgba(255, 255, 255, 0.2);
 
 		@media only screen and (max-width: 1200px) {
@@ -196,6 +196,14 @@
 
 		&:last-child {
 			margin-right: 0;
+		}
+
+		&.m-dis {
+			margin: 0;
+		}
+
+		&.disable {
+			display: none;
 		}
 
 		// @media only screen and (max-width: 855px) {
@@ -352,6 +360,10 @@
 		font-family: "SF-Bold", serif;
 	}
 
+	&__account-link {
+		color: $mine-shaft;
+	}
+
 	&__account:hover {
 		.header__account-sign {
 			display: block;
@@ -467,7 +479,7 @@
 	&__account-sign-mobile {
 		position: fixed;
 		right: 0;
-		top: 55px;
+		top: 50px; // було 55пікс, після зміни висоти хередра (паддінг 10 0)
 		z-index: 10;
 		border-left: 1px solid $alto;
 		width: 216px;

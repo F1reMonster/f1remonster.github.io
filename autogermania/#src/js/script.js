@@ -21,7 +21,9 @@ jQuery(function ($) {
 			slidesToShow: 1,
 			slidesToScroll: 1,
 			autoplay: true,
-			autoplaySpeed: 3000,
+			cssEase: 'linear',
+			autoplaySpeed: 5000,
+			
 			prevArrow: '<button type="button" class="slider__btn prev"><svg><use xlink:href="img/sprite.svg#slider_arrow_left"></use></svg></button>',
 			nextArrow: '<button type="button" class="slider__btn next"><svg><use xlink:href="img/sprite.svg#slider_arrow_right"></use></svg></button>',
 			responsive: [
@@ -108,11 +110,11 @@ jQuery(function ($) {
 
 
 
+		
 
 
 
-
-		// * =============== search.html slider ================ * //
+		// * =============== search.html & favorites.html slider ================ * //
 
 
 		var numSlick = 0;
@@ -131,63 +133,18 @@ jQuery(function ($) {
 			newSlider.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
 				//currentSlide is undefined on init -- set it to 0 in this case (currentSlide is 0 based)
 				var i = (currentSlide ? currentSlide : 0) + 1;
-				status.text(i + ' | ' + slick.slideCount);
+
+
+				if ($(window).width() >= 768) {
+					status.text(i + ' | ' + slick.slideCount);
+				} else {
+					status.html('&lsaquo;&lsaquo;&nbsp;' + i + '&nbsp;<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20px" height="17px"> <path fill-rule="evenodd" fill="rgb(255, 255, 255)" d="M10.000,12.277 C8.343,12.277 7.000,11.009 7.000,9.444 C7.000,7.879 8.343,6.611 10.000,6.611 C11.657,6.611 13.000,7.879 13.000,9.444 C13.000,11.009 11.657,12.277 10.000,12.277 ZM18.000,1.888 C19.100,1.888 20.000,2.738 20.000,3.777 L20.000,15.111 C20.000,16.149 19.100,17.000 18.000,17.000 L2.000,17.000 C0.900,17.000 -0.000,16.149 -0.000,15.111 L-0.000,3.777 C-0.000,2.738 0.900,1.888 2.000,1.888 L5.170,1.888 L6.400,0.613 C6.780,0.226 7.320,-0.001 7.880,-0.001 L12.120,-0.001 C12.680,-0.001 13.220,0.226 13.590,0.613 L14.830,1.888 L18.000,1.888 ZM10.000,14.166 C12.760,14.166 15.000,12.051 15.000,9.444 C15.000,6.837 12.760,4.722 10.000,4.722 C7.240,4.722 5.000,6.837 5.000,9.444 C5.000,12.051 7.240,14.166 10.000,14.166 Z" /></svg>&nbsp;' + slick.slideCount + '&nbsp;&rsaquo;&rsaquo;');
+				}
+
 			})
 
 
 			newSlider.slick({
-				infinite: true,
-				slidesToShow: 1,
-				slidesToScroll: 1,
-				prevArrow: '<button type="button" class="carslider-btn prev"></button>',
-				nextArrow: '<button type="button" class="carslider-btn next"></button>',
-
-			});
-
-		});
-
-
-		// * =============== favorites.html slider ================ * //
-
-		//console.log($(window).width());
-
-		var numFavSlick = 0;
-		var favSlider = $('.favorites__slider');
-		//var paginInfo = $('.paging-info');
-
-		numFavSlick = 0;
-		favSlider.each(function () {
-
-			numFavSlick++;
-
-			var windowWidth = $(window).width();
-
-			var newFavSlider = $(this).addClass('slider-' + numFavSlick);
-
-			if (windowWidth > 768)  {
-				var paging = newFavSlider.next('.paging-info').addClass('page-' + numFavSlick);
-				pagingToShow = paging.text(i + ' | ' + slick.slideCount)
-			} else {
-
-			}
-
-			
-			
-
-		//	var pagingMobile
-
-			// $current = $('.details-pagination.current'),
-			// 	$total = $('.details-pagination.total');
-
-			newFavSlider.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
-				//currentSlide is undefined on init -- set it to 0 in this case (currentSlide is 0 based)
-				var i = (currentSlide ? currentSlide : 0) + 1;
-				//paging.text(i + ' | ' + slick.slideCount);
-				pagingToShow;
-			})
-
-
-			newFavSlider.slick({
 				infinite: true,
 				slidesToShow: 1,
 				slidesToScroll: 1,
@@ -316,6 +273,9 @@ jQuery(function ($) {
 		});
 
 
+		// $('#modal-open').on('click', function(){
+		// 	$.fancybox.open($('#modal'));
+		// })
 
 
 		// * скрол 
@@ -378,15 +338,15 @@ jQuery(function ($) {
 		});
 
 		// меню логіна
-		userMobile.on('click', function (e) {
-			e.preventDefault();
-			accountSignMobile.toggleClass('header__account-mobile-open');
+		// userMobile.on('click', function (e) {
+		// 	e.preventDefault();
+		// 	accountSignMobile.toggleClass('header__account-mobile-open');
 
-			if (headerMenu.hasClass('open')) {
-				burgerMenu.removeClass('burger-active');
-				headerMenu.removeClass('open');
-			}
-		});
+		// 	if (headerMenu.hasClass('open')) {
+		// 		burgerMenu.removeClass('burger-active');
+		// 		headerMenu.removeClass('open');
+		// 	}
+		// });
 
 		//обробник подій у фільтрі
 		$('.select-box .selected').on('click', function () {
@@ -508,8 +468,6 @@ jQuery(function ($) {
 
 		$('.bottom-filter').on('click', function () {
 			$('.filter').toggleClass('filter-open');
-			console.log($(window).width());
-
 
 
 			if ($(window).width() > 768) {

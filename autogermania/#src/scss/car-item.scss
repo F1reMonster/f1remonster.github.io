@@ -113,34 +113,42 @@
 
 		.paging-info {
 			position: absolute;
-			left: 50%;
-			top: 205px;
-			z-index: 5;
 			display: flex;
 			align-items: center;
+			justify-content: center;
+			left: 50%;
+			top: 205px;
+			width: 100px;
+			height: 20px;
+			z-index: 5;
 			border-radius: 3px;
 			padding: 2px 7px;
 			background-color: $white;
+			text-align: center;
 			transform: translateX(-50%);
 
 			@media only screen and (max-width: 768px) {
-				left: 25px;
-				top: 330px;
+				left: 60px;
+				
+				top: 510px;
+				color: $white;
+				background-color: rgba(81, 81, 81, 0.502);
 			}
 
 			@media only screen and (max-width: 414px) {
-				left: 25px;
-				top: 275px;
+				left: 60px;
+				top: 265px;
+
 			}
 
 			@media only screen and (max-width: 375px) {
-				left: 25px;
-				top: 245px;
+				left: 60px;
+				top: 235px;
 			}
 
 			@media only screen and (max-width: 320px) {
-				left: 25px;
-				top: 210px;
+				left: 60px;
+				top: 200px;
 			}
 		}
 	}
@@ -464,9 +472,6 @@
 		background-color: $red;
 	}
 }
-
-
-
 
 .carslider-btn {
 	position: absolute;

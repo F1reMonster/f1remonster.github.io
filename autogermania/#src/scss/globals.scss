@@ -488,6 +488,8 @@ hr {
 	}
 }
 
+// ** .car ** //
+
 .car {
 	&__name {
 		margin-bottom: 20px;
@@ -1001,9 +1003,9 @@ hr {
 		height: 60px;
 
 		&::after {
-			transform: rotate(180deg);
 			right: 3px;
 			top: 10px;
+			transform: rotate(180deg);
 		}
 	}
 

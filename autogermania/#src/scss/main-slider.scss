@@ -1,18 +1,18 @@
-.slick-slider {
-	position: static;
-}
-
 .main-slider {
 	position: relative;
-	padding: 113px 0 150px; // was 85 0 150 - 8-11-2020
+	padding: 113px 0 70px; // was 85 0 150 - 8-11-2020
 	background-image: url("../img/header-bg.jpg");
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
 
+	.slick-slider {
+		position: static;
+	}
+
 	@media only screen and (max-width: 1244px) {
 		margin-bottom: 530px;
-		padding: 110px 0 20px; // was 110 0 20 - 8-11-2020
+		padding: 110px 0 50px; // was 110 0 20 - 8-11-2020
 	}
 
 	@media only screen and (max-width: 768px) {
@@ -87,10 +87,19 @@
 
 	&__brand {
 		margin-right: 32px;
+		max-width: 80px;
+		
+
 
 		@media only screen and (max-width: 767px) {
 			display: none;
 		}
+	}
+
+	&__brand-img {
+		width: 70px;
+		height: auto;
+		
 	}
 
 	&__car-wrapper {
@@ -172,7 +181,7 @@
 	&__price {
 		position: absolute;
 		right: 10px;
-		bottom: 0;
+		bottom: 45px;
 		width: 300px;
 		font-family: "SF-Reg", serif;
 		font-size: 18px;
@@ -181,13 +190,21 @@
 
 		@media only screen and (max-width: 855px) {
 			right: 50%;
-			bottom: 140px;
+			bottom: 75px;
 			text-align: center;
 			transform: translate(50%, 110%);
 		}
 
+		@media only screen and (max-width: 768px) {
+			bottom: 130px;
+		}
+
+		@media only screen and (max-width: 588px) {
+			bottom: 75px;
+		}
+
 		@media only screen and (max-width: 414px) {
-			bottom: 50px;
+			bottom: 45px;
 		}
 	}
 

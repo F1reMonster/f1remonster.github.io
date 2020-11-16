@@ -54,6 +54,10 @@
 		&.mr10 {
 			margin-right: 10px;
 		}
+
+		&.disable {
+			display: none;
+		}
 	}
 
 	&__filter-placeholder {
