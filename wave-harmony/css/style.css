@@ -2170,6 +2170,7 @@ h6 {
 }
 
 .gallery__item-hover-tags {
+    display: block;
     margin-top: 20px;
 }
 
