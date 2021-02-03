@@ -2482,6 +2482,10 @@ h6 {
                 flex: 0 1 100%;
     }
 
+    .gallery .container {
+        padding: 0 5px;
+    }
+
     .gallery__item:nth-child(odd) {
         margin-right: 10px;
     }
@@ -2553,6 +2557,15 @@ h6 {
     .gallery__item-link {
         width: 180px;
         height: 180px;
+    }
+
+    .gallery__item-hover-text {
+        padding: 10px;
+        font-size: 9px;
+    }
+
+    .gallery__item-hover-tags {
+        margin-top: 5px;
     }
 
     .gallery {
