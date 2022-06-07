@@ -1,5 +1,5 @@
 @font-face {
-	src: url("_fonts/Sifon-Pro.woff") format("woff"), url("../fonts/Sifon-Pro.woff2") format("woff2");
+	src: url("./_fonts/Sifon-Pro.woff") format("woff"), url("../fonts/Sifon-Pro.woff2") format("woff2");
 	font-family: "Sifon Pro";
 	font-weight: 700;
 	font-style: normal;
