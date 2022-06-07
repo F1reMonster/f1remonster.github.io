@@ -1,0 +1,132 @@
+@font-face {
+	src: url("_fonts/Sifon-Pro.woff") format("woff"), url("../fonts/Sifon-Pro.woff2") format("woff2");
+	font-family: "Sifon Pro";
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+
+* {
+	box-sizing: border-box;
+	/* font-family: 'Sifon Pro', sans-serif; */
+}
+
+body {
+	/* font-family: 'Montserrat', sans-serif; */
+	font-family: "Sifon Pro", sans-serif;
+	font-size: 16px;
+}
+
+h1,
+h2,
+p {
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+svg,
+img {
+	display: block;
+}
+
+.container {
+	max-width: 1370px;
+	margin: 0 auto;
+}
+
+.flex {
+	display: flex;
+}
+
+.aling-center {
+	align-items: center;
+}
+
+.f-spacer-1 {
+	gap: 0.5rem;
+}
+
+.fs-2 {
+	font-size: 1.5rem;
+}
+
+.text-wild-blue-yonder {
+	color: #7d94b9;
+}
+
+.font-montserrat {
+	font-family: "Montserrat", sans-serif;
+	font-weight: 400;
+}
+
+.completed-pages-list {
+	list-style-type: none;
+	column-count: 3;
+}
+
+.completed-pages-list li {
+	padding: 10px 0;
+	page-break-inside: avoid;
+}
+
+.completed-pages-list li a {
+	/* font-family: "Sifon Pro", sans-serif; */
+	font-weight: 700;
+	font-size: 22px;
+	line-height: 29px;
+	letter-spacing: -0.03em;
+	color: #475366;
+	transition: all 0.2s ease-out;
+}
+
+.completed-pages-list li a:hover {
+	color: #2c333f;
+}
+
+.completed-pages-list li a span {
+	color: #ef0d33;
+}
+
+.index-header {
+	padding: 40px 0;
+	/* font-size: 62px; */
+	color: #2c333f;
+	font-size: calc(24px + 38 * ((100vw - 320px)/ 1600));
+}
+
+.index-header span {
+	color: #ef0d33;
+}
+
+.link-icon svg {
+	width: 32px;
+}
+
+.blink {
+	animation: blinked 1s infinite;
+}
+
+@keyframes blinked {
+	0% {
+		color: #ef0d33;
+	}
+
+	50% {
+		color: transparent;
+	}
+
+	100% {
+		color: #ef0d33;
+	}
+}
+
+
+@media (max-width: 992px) {
+	.completed-pages-list {
+		column-count: 1;
+	}
+}
