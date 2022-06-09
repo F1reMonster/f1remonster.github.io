@@ -1275,6 +1275,39 @@ img {
 	line-height: 120%;
 }
 
+.footer__socials {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	margin-top: 33px;
+	gap: 20px;
+}
+
+.footer__social-item {
+	-webkit-mask-position: center;
+	mask-position: center;
+	-webkit-mask-repeat: no-repeat;
+	mask-repeat: no-repeat;
+	width: 34px;
+	height: 34px;
+	background-color: #b0a1b0;
+}
+
+.footer__social-item--facebook {
+	-webkit-mask-image: url("../img/svg/facebook.svg");
+	mask-image: url("../img/svg/facebook.svg");
+}
+
+.footer__social-item--youtube {
+	-webkit-mask-image: url("../img/svg/youtube.svg");
+	mask-image: url("../img/svg/youtube.svg");
+}
+
+.footer__social-item--instagram {
+	-webkit-mask-image: url("../img/svg/instagram.svg");
+	mask-image: url("../img/svg/instagram.svg");
+}
+
 .card__empty {
 	width: 100%;
 	height: 100%;
