@@ -3,10 +3,6 @@
 // new WOW({
 // 	animateClass: "animate__animated",
 // }).init();
-function windowWidth() {
-  var $windowWidth = $(window).innerWidth();
-}
-
 $(document).ready(function () {
   var $windowWidth = $(window).innerWidth();
 
@@ -25,22 +21,27 @@ $(document).ready(function () {
     if (!$(this).hasClass("menugroup-opened")) {
       $(".has-menugroup").removeClass("menugroup-opened");
       $(this).addClass("menugroup-opened");
+      $(".menu-group").removeClass("opened");
+      $('.menu-group').eq(idxMenu).addClass('opened');
     } else {
       $(this).removeClass("menugroup-opened");
-    }
+      $(".menu-group").removeClass("opened");
+    } // $(".menu-group").each(function (el) {
+    // 	if (el === idxMenu) {
+    // 		console.log($(this));
+    // 		if ($(this).hasClass("opened").length === 0) {
+    // 			$(".menu-group").removeClass("opened");
+    // 			$(this).addClass("opened");
+    // 		} else {
+    // 			$(this).removeClass("opened");
+    // 		}
+    // 	}
+    // });
 
-    $(".menu-group").each(function (el) {
-      if (el === idxMenu) {
-        console.log(idxMenu);
-
-        if (!$(this).hasClass("opened")) {
-          $(".menu-group").removeClass("opened");
-          $(this).addClass("opened");
-        } else {
-          $(this).removeClass("opened");
-        }
-      }
-    });
+  });
+  $(".menu-group-close").click(function () {
+    $(this).parent().removeClass("opened");
+    $(".has-menugroup").removeClass("menugroup-opened");
   });
   $(".dropdown__item").click(function (e) {
     e.stopPropagation();
@@ -65,9 +66,17 @@ $(document).ready(function () {
 });
 $(document).scroll(function () {});
 $(document).on("click", function (e) {
-  if (!$(e.target).is(".menu-group") && $(".menu-group").hasClass("opened")) {
-    $(".menu-group").removeClass("opened");
-    $(".has-menugroup").removeClass("menugroup-opened");
+  var $windowWidth = $(window).innerWidth();
+
+  if ($windowWidth > 1023) {
+    // if (!$(e.target).is(".menu-group") && $(".menu-group").hasClass("opened")) {
+    // 	$(".menu-group").removeClass("opened");
+    // 	$(".has-menugroup").removeClass("menugroup-opened");
+    // }
+    if ($(e.target).closest('.menu-group, .menu-group__list, .menu-group__item, .menu-group__link').length === 0) {
+      $(".menu-group").removeClass("opened");
+      $(".has-menugroup").removeClass("menugroup-opened");
+    }
   }
 });
 $(window).resize(function () {
