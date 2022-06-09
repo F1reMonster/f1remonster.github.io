@@ -8,7 +8,6 @@ function windowWidth() {
 }
 
 $(document).ready(function () {
-  var ps = new PerfectScrollbar(".menu-group__body", {});
   var $windowWidth = $(window).innerWidth();
 
   if ($windowWidth > 1023) {
