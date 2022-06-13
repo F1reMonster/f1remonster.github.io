@@ -83,6 +83,30 @@ $(document).ready(function () {
     navigation: {
       nextEl: ".newest-btn-next",
       prevEl: ".newest-btn-prev"
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 2,
+        grid: {
+          fill: "row",
+          rows: 2
+        }
+      },
+      652: {
+        slidesPerView: 3,
+        spaceBetween: 10,
+        grid: {
+          fill: "row",
+          rows: 1
+        }
+      },
+      920: {
+        slidesPerView: 4,
+        grid: {
+          fill: "row",
+          rows: 1
+        }
+      }
     }
   });
   var popularGoods = new Swiper(".popular-goods", {
@@ -92,6 +116,30 @@ $(document).ready(function () {
     navigation: {
       nextEl: ".popular-btn-next",
       prevEl: ".popular-btn-prev"
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 2,
+        grid: {
+          fill: "row",
+          rows: 2
+        }
+      },
+      652: {
+        slidesPerView: 3,
+        spaceBetween: 10,
+        grid: {
+          fill: "row",
+          rows: 1
+        }
+      },
+      920: {
+        slidesPerView: 4,
+        grid: {
+          fill: "row",
+          rows: 1
+        }
+      }
     }
   }); // $(".block__main-slider").css("height", "calc(100vh - " + $("header").outerHeight() + "px)");
 });
