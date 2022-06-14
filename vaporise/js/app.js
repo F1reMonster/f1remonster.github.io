@@ -3,25 +3,6 @@
 // new WOW({
 // 	animateClass: "animate__animated",
 // }).init();
-// var b = document.getElementsByTagName("BODY")[0];
-$(".block__background").on("mousemove", function (event) {
-  parallaxedBackground(event);
-});
-
-function parallaxedBackground(e) {
-  var amountMovedX = e.clientX * -0.3 / 8;
-  var amountMovedY = e.clientY * -0.3 / 8; // var x = $(".parallaxed-backround");
-  // var i;
-  // for (i = 0; i < x.length; i++) {
-  // 	x[i].style.transform =
-  // 		"translate(" + amountMovedX + "px," + amountMovedY + "px)  rotate(15deg) scale(0.85)";
-  // }
-
-  $(".parallaxed-background").each(function (el) {
-    $(this).css("transform", "translate(" + amountMovedX + "px," + amountMovedY + "px)  rotate(15deg) scale(0.85)");
-  });
-}
-
 $(document).ready(function () {
   var $windowWidth = $(window).innerWidth();
 
@@ -160,6 +141,61 @@ $(document).ready(function () {
         }
       }
     }
+  });
+  var discountGoods = new Swiper(".discount-goods", {
+    slidesPerView: 4,
+    speed: 600,
+    spaceBetween: 30,
+    navigation: {
+      nextEl: ".discount-btn-next",
+      prevEl: ".discount-btn-prev"
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 2,
+        grid: {
+          fill: "row",
+          rows: 2
+        }
+      },
+      652: {
+        slidesPerView: 3,
+        spaceBetween: 10,
+        grid: {
+          fill: "row",
+          rows: 1
+        }
+      },
+      920: {
+        slidesPerView: 4,
+        grid: {
+          fill: "row",
+          rows: 1
+        }
+      }
+    }
+  });
+  var newsSlider = new Swiper(".news-list", {
+    slidesPerView: "auto",
+    speed: 600,
+    breakpoints: {
+      0: {
+        spaceBetween: 20
+      },
+      1025: {
+        spaceBetween: 30
+      }
+    }
+  });
+  $('.parallaxed-background').on("mousemove", function (e) {
+    var amountMovedX = e.clientX * -0.3 / 8;
+    var amountMovedY = e.clientY * -0.3 / 8;
+    $(this).css('transform', 'translate(' + amountMovedX + 'px,' + amountMovedY + 'px)  rotate(15deg) scale(0.85)');
+  });
+  $('.block__main-slider').on("mousemove", function (e) {
+    var amountMovedX = e.clientX * -0.3 / 8;
+    var amountMovedY = e.clientY * -0.3 / 8;
+    $('.block__main-slider-background img').css('transform', 'translate(' + amountMovedX + 'px,' + amountMovedY + 'px) scale(0.7)');
   }); // $(".block__main-slider").css("height", "calc(100vh - " + $("header").outerHeight() + "px)");
 });
 $(document).scroll(function () {});
