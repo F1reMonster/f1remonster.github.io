@@ -1,0 +1,42 @@
+[
+	{
+		"label": "Jessica H",
+		"photoJPG": "../img/models/model-01_.jpg",
+		"photoWEBp": "../img/models/model-01_.webp"
+	},
+	{
+		"label": "Amber",
+		"photoJPG": "../img/models/model-06.jpg",
+		"photoWEBp": "../img/models/model-06.webp"
+	},
+	{
+		"label": "Nelson",
+		"photoJPG": "../img/models/model-07.jpg",
+		"photoWEBp": "../img/models/model-07.webp"
+	},
+	{
+		"label": "Casey",
+		"photoJPG": "../img/models/model-08.jpg",
+		"photoWEBp": "../img/models/model-08.webp"
+	},
+	{
+		"label": "Annamarie",
+		"photoJPG": "../img/models/model-09.jpg",
+		"photoWEBp": "../img/models/model-09.webp"
+	},
+	{
+		"label": "Michael",
+		"photoJPG": "../img/models/model-10.jpg",
+		"photoWEBp": "../img/models/model-10.webp"
+	},
+	{
+		"label": "Christina",
+		"photoJPG": "../img/models/model-05.jpg",
+		"photoWEBp": "../img/models/model-05.webp"
+	},
+	{
+		"label": "Chris",
+		"photoJPG": "../img/models/model-11.jpg",
+		"photoWEBp": "../img/models/model-11.webp"
+	}
+]

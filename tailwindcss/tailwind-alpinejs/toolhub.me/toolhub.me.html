@@ -1,0 +1,483 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="shortcut icon" href="https://toolhub.me/imgs/tools.png" type="image/x-icon" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?&family=Inter:opsz,wght@14..32,100..900&display=swap" rel="stylesheet" />
+		<script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.10.3/cdn.min.js" defer></script>
+		<script src="https://cdn.tailwindcss.com"></script>
+
+		<title>ToolHub - The Best Software Tools for your Business</title>
+		<script>
+			tailwind.config = {
+				theme: {
+					extend: {
+						fontFamily: {
+							inter: "Inter, sans-serif",
+						},
+					},
+				},
+			};
+
+			function navigationMenu() {
+				return {
+					isMobMenuOpen: false,
+					showMenu: window.innerWidth >= 1280,
+					toggleMenu() {
+						this.isMobMenuOpen = !this.isMobMenuOpen;
+						this.updateMenuVisibility();
+					},
+					updateMenuVisibility() {
+						this.showMenu = window.innerWidth >= 1280 || this.isMobMenuOpen;
+					},
+					init() {
+						this.updateMenuVisibility();
+						window.addEventListener("resize", () => {
+							this.updateMenuVisibility();
+						});
+					},
+				};
+			}
+		</script>
+		<style>
+			.scrollbar-hide::-webkit-scrollbar {
+				display: none;
+			}
+
+			[x-cloak] {
+				display: none;
+			}
+		</style>
+	</head>
+	<!-- transform translate-x-full sm:translate-x-full xl:translate-x-0 -->
+	<body class="font-inter" x-data="{ isModalOpen: false }">
+		<main>
+			<div class="flex dark:bg-black" x-data="navigationMenu()">
+				<!-- nav -->
+				<div x-show="showMenu" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="transform translate-x-full" x-transition:enter-end="transform translate-x-0" x-transition:leave="transition ease-in duration-300" x-transition:leave-start="transform translate-x-0" x-transition:leave-end="transform translate-x-full" class="fixed bottom-0 right-0 z-20 flex flex-col justify-start w-screen max-h-screen gap-2 px-2 pt-5 pb-2 overflow-y-auto text-left transition ease-in-out bg-white border-r scrollbar-hide sm:fixed xl:static xl:flex-shrink-0 md:w-56 dark:border-r-dark-400 duration-400 top-20 min-w-56 border-r-slate-100 dark:bg-black">
+					<div class="py-2 pr-2 rounded-xl">
+						<a class="flex items-center ml-2 text-sm dark:text-white" href="/">
+							<img class="mr-1.5 inline max-w-5" src="https://toolhub.me/imgs/home.png" />
+							<span>Home</span>
+						</a>
+					</div>
+					<div class="my-1 border-b border-light-200 dark:border-dark-400"></div>
+
+					<div x-data="{ isSubOpen: false }">
+						<div x-on:click="isSubOpen = !isSubOpen" class="flex items-center justify-between w-full py-2 pr-2 transition duration-200 ease-in-out select-none hover:bg-slate-100 dark:hover:bg-dark-400 text-dark-500 rounded-xl dark:text-white">
+							<a class="flex items-center gap-1 mx-1 cursor-pointer w-fit rounded-xl hover:underline" href="/ai/"> <img src="https://toolhub.me/imgs/ai.png" width="22" height="22" alt="" /><span class="pl-2 text-base font-bold leading-3 capitalize">AI</span> </a>
+							<span>
+								<svg x-show="!isSubOpen" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+									<path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"></path>
+								</svg>
+								<svg x-show="isSubOpen" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4" x-cloak>
+									<path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14"></path>
+								</svg>
+							</span>
+						</div>
+						<!-- submenu -->
+						<div x-show="isSubOpen" x-collapse>
+							<div>
+								<div class="relative">
+									<div>
+										<div class="flex items-center px-2 py-1 mb-1 ml-4 transition duration-200 ease-in-out select-none hover:bg-slate-100 text-dark-500 dark:hover:bg-dark-400 rounded-xl dark:text-white">
+											<a class="flex items-center gap-1 py-1 mx-1 text-sm font-medium capitalize cursor-pointer w-fit rounded-xl hover:underline" href="/ai/business/"> <img class="mr-1" src="https://toolhub.me/imgs/business.png" width="22" height="22" alt="" />business</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div>
+								<div class="relative">
+									<div>
+										<div class="flex items-center px-2 py-1 mb-1 ml-4 transition duration-200 ease-in-out select-none hover:bg-slate-100 text-dark-500 dark:hover:bg-dark-400 rounded-xl dark:text-white">
+											<a class="flex items-center gap-1 py-1 mx-1 text-sm font-medium capitalize cursor-pointer w-fit rounded-xl hover:underline" href="/ai/career/"><img class="mr-1" src="https://toolhub.me/imgs/career.png" width="22" height="22" alt="" />career</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div>
+								<div class="relative">
+									<div>
+										<div class="flex items-center px-2 py-1 mb-1 ml-4 transition duration-200 ease-in-out select-none hover:bg-slate-100 text-dark-500 dark:hover:bg-dark-400 rounded-xl dark:text-white">
+											<a class="flex items-center gap-1 py-1 mx-1 text-sm font-medium capitalize cursor-pointer w-fit rounded-xl hover:underline" href="/ai/chatbot/"><img class="mr-1" src="https://toolhub.me/imgs/chatbot.png" width="22" height="22" alt="" />chatbot</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div>
+								<div class="relative">
+									<div>
+										<div class="flex items-center px-2 py-1 mb-1 ml-4 transition duration-200 ease-in-out select-none hover:bg-slate-100 text-dark-500 dark:hover:bg-dark-400 rounded-xl dark:text-white">
+											<a class="flex items-center gap-1 py-1 mx-1 text-sm font-medium capitalize cursor-pointer w-fit rounded-xl hover:underline" href="/ai/content-generation/"><img class="mr-1" src="https://toolhub.me/imgs/content-generation.png" width="22" height="22" alt="" />content generation</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div>
+								<div class="relative">
+									<div>
+										<div class="flex items-center px-2 py-1 mb-1 ml-4 transition duration-200 ease-in-out select-none hover:bg-slate-100 text-dark-500 dark:hover:bg-dark-400 rounded-xl dark:text-white">
+											<a class="flex items-center gap-1 py-1 mx-1 text-sm font-medium capitalize cursor-pointer w-fit rounded-xl hover:underline" href="/ai/copywriting/"><img class="mr-1" src="https://toolhub.me/imgs/ai-copywriting.png" width="22" height="22" alt="" />copywriting</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- ./submenu -->
+					</div>
+
+					<div x-data="{ isSubOpen: false }">
+						<div x-on:click="isSubOpen = !isSubOpen" class="flex items-center justify-between w-full py-2 pr-2 transition duration-200 ease-in-out select-none hover:bg-slate-100 dark:hover:bg-dark-400 text-dark-500 rounded-xl dark:text-white">
+							<a class="flex items-center gap-1 mx-1 cursor-pointer w-fit rounded-xl hover:underline" href="/business/">
+								<img src="https://toolhub.me/imgs/business.png" width="22" height="22" alt="" />
+								<span class="pl-2 text-base font-bold leading-3 capitalize">business</span>
+							</a>
+							<span>
+								<svg x-show="!isSubOpen" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+									<path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"></path>
+								</svg>
+								<svg x-show="isSubOpen" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4" x-cloak>
+									<path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14"></path>
+								</svg>
+							</span>
+						</div>
+						<!-- submenu -->
+						<div x-show="isSubOpen" x-collapse>
+							<div>
+								<div class="relative">
+									<div>
+										<div class="flex items-center px-2 py-1 mb-1 ml-4 transition duration-200 ease-in-out select-none hover:bg-slate-100 text-dark-500 dark:hover:bg-dark-400 rounded-xl dark:text-white">
+											<a class="flex items-center gap-1 py-1 mx-1 text-sm font-medium capitalize cursor-pointer w-fit rounded-xl hover:underline" href="/ai/business/"> <img class="mr-1" src="https://toolhub.me/imgs/business.png" width="22" height="22" alt="" />Item 1</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div>
+								<div class="relative">
+									<div>
+										<div class="flex items-center px-2 py-1 mb-1 ml-4 transition duration-200 ease-in-out select-none hover:bg-slate-100 text-dark-500 dark:hover:bg-dark-400 rounded-xl dark:text-white">
+											<a class="flex items-center gap-1 py-1 mx-1 text-sm font-medium capitalize cursor-pointer w-fit rounded-xl hover:underline" href="/ai/career/"><img class="mr-1" src="https://toolhub.me/imgs/career.png" width="22" height="22" alt="" />Item 2</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- ./submenu -->
+					</div>
+
+					<div class="my-1 border-b border-light-200 dark:border-dark-400"></div>
+					<a href="/add/">
+						<button class="w-full px-3 py-2 text-sm font-normal text-white bg-orange-600 rounded-full dark:text-primary-400 hover:bg-orange-400 dark:bg-white">
+							<span>Suggest Tool</span>
+						</button>
+					</a>
+					<div class="my-1 border-b border-light-200 dark:border-dark-400"></div>
+				</div>
+
+				<div  class="w-full max-h-screen overflow-y-auto scrollbar-hide">
+					<div class="fixed top-0 left-0 right-0 z-10 flex items-center justify-between w-full h-20 px-5 bg-white border-b border-b-light-100 sm:fixed xl:static">
+						<a class="user h-fit w-fit" href="/"><img src="https://toolhub.me/imgs/logo-300.png" width="150" /></a>
+
+						<div class="flex items-center justify-end">
+							<div class="items-center justify-center hidden bg-white xl:flex">
+								<form class="relative w-full border rounded-full bg-light-50 border-light-100">
+									<input type="text" placeholder="Search" class="w-full py-2 pl-8 text-sm transition-all bg-transparent rounded-full outline-none focus:bg-light-100" />
+									<div class="absolute left-2 top-[50%] translate-y-[-50%]">
+										<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 text-light-500 dark:text-dark-500">
+											<path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.873-4.873"></path>
+											<circle cx="10" cy="10" r="7"></circle>
+										</svg>
+									</div>
+								</form>
+								<a class="px-5 py-2 ml-2 text-sm rounded-full" href="/">Home</a><a class="hidden px-5 py-2 ml-2 text-sm rounded-full" href="/pricing/">Pricing</a><a class="px-5 py-2 text-sm rounded-full whitespace-nowrap" href="/dashboard/">Sign In</a><a class="px-5 py-2 ml-2 text-sm text-white bg-orange-600 rounded-full whitespace-nowrap hover:bg-orange-400" href="/add/">Suggest Tool</a>
+							</div>
+							<!-- mob search btn -->
+							<button x-on:click="isModalOpen = !isModalOpen" class="block px-3 py-2 ml-2 text-sm text-black rounded-full md:block lg:block xl:hidden">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+									<path fill-rule="evenodd" d="M10.5 3.75a6.75 6.75 0 100 13.5 6.75 6.75 0 000-13.5zM2.25 10.5a8.25 8.25 0 1114.59 5.28l4.69 4.69a.75.75 0 11-1.06 1.06l-4.69-4.69A8.25 8.25 0 012.25 10.5z" clip-rule="evenodd"></path>
+								</svg>
+							</button>
+							<!-- ./mob search btn -->
+
+							<a class="block px-3 py-2 ml-2 text-sm text-black rounded-full md:block lg:block xl:hidden" href="/dashboard/">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+									<path fill-rule="evenodd" d="M7.5 6a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM3.751 20.105a8.25 8.25 0 0 1 16.498 0 .75.75 0 0 1-.437.695A18.683 18.683 0 0 1 12 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 0 1-.437-.695Z" clip-rule="evenodd"></path>
+								</svg>
+							</a>
+							<!-- burder -->
+							<button @click="toggleMenu()" class="block px-3 py-2 ml-2 text-sm text-black rounded-full md:block lg:block xl:hidden">
+								<svg x-show="!isMobMenuOpen" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+									<path fill-rule="evenodd" d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z" clip-rule="evenodd"></path>
+								</svg>
+								<svg x-show="isMobMenuOpen" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6" x-cloak>
+									<path fill-rule="evenodd" d="M5.47 5.47a.75.75 0 011.06 0L12 10.94l5.47-5.47a.75.75 0 111.06 1.06L13.06 12l5.47 5.47a.75.75 0 11-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 01-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 010-1.06z" clip-rule="evenodd"></path>
+								</svg>
+							</button>
+							<!-- burder -->
+						</div>
+
+						
+						
+					</div>
+
+					<div class="sm:flex-col md:flex-col lg:flex-row xl:mt-0 xl:px-8 mb-5 mt-16 flex flex-col justify-between gap-10 bg-[url('https://toolhub.me/imgs/heading-back.jpg')] bg-cover bg-top px-2 py-4">
+						<div class="w-full p-5 pt-6 pb-4 text-center sm:px-8">
+							<h1 class="lg:text-5xl md:text-5xl mb-3 bg-gradient-to-tl bg-clip-text pt-2 text-4xl font-bold leading-[1] text-transparent text-white">Discover the Best Software Tools</h1>
+							<p class="text-lg text-white">
+								92 Software Tools to Drive your Business Growth <br />
+								<span class="text-sm italic">More added daily!</span>
+							</p>
+
+							<div class="flex flex-col items-center justify-center gap-2 mt-5 md:flex-row">
+								<a class="flex items-center gap-2 px-5 py-2 text-sm text-black bg-white border rounded-full border-1 border-neutral-300 hover:text-orange-500" href="/marketing/">
+									<img src="https://toolhub.me/imgs/marketing.png" width="20" height="20" />
+									Marketing Tools
+								</a>
+								<a class="flex items-center gap-2 px-5 py-2 text-sm text-black bg-white border rounded-full border-1 border-neutral-300 hover:text-orange-500" href="/seo/">
+									<img src="https://toolhub.me/imgs/seo.png" width="20" height="20" />
+									SEO Tools
+								</a>
+								<a class="flex items-center gap-2 px-5 py-2 text-sm text-black bg-white border rounded-full border-1 border-neutral-300 hover:text-orange-500" href="/ai/">
+									<img src="https://toolhub.me/imgs/ai.png" width="20" height="20" />
+									AI Tools
+								</a>
+								<a class="flex items-center gap-2 px-5 py-2 text-sm text-black bg-white border rounded-full border-1 border-neutral-300 hover:text-orange-500" href="/developer/">
+									<img src="https://toolhub.me/imgs/developer.png" width="20" height="20" />
+									Developer Tools
+								</a>
+							</div>
+							<p class="mt-6 text-sm text-white">See more product categories in the menu</p>
+						</div>
+					</div>
+					<h2 class="px-10 mt-10 text-2xl font-bold dark:text-gray-600">Featured Software Tools</h2>
+					<p class="px-10 mb-2 text-dark-200 dark:text-gray-400">Discover the best tools</p>
+
+					<div class="p-5 md:p-8 md:px-10">
+						<div role="list" class="flex flex-col items-center justify-center gap-8 md:grid md:grid-cols-3">
+							<div role="list-item" class="relative rounded-xl">
+								<a class="transition hover:opacity-90" href="/hosting/cloud-hosting/digitalocean/">
+									<div class="" alt="">
+										<img src="https://image.thum.io/get/width/1400/crop/700/allowJPG/https://www.digitalocean.com/" class="object-cover w-full border min-w-52 rounded-xl" />
+									</div>
+									<div class="absolute right-2 top-2 rounded-full bg-orange-500 px-2 py-1 text-[.5rem] font-semibold uppercase tracking-wider text-white shadow-lg shadow-orange-500/10 backdrop-blur-lg">Featured</div>
+								</a>
+
+								<div class="items-center w-full pl-2 pr-2 mt-2">
+									<a class="capitalize transition duration-200 text-dark-500 hover:text-dark-300 dark:hover:text-dark-100 dark:text-white" href="/hosting/cloud-hosting/digitalocean/">
+										<span class="font-bold">DigitalOcean</span>
+									</a>
+									<span class="text-xs italic dark:text-white">&nbsp;in&nbsp;</span>
+									<a class="italic transition duration-200 text-dark-500 hover:text-dark-300 dark:hover:text-dark-100 dark:text-white" href="/hosting/cloud-hosting/">
+										<span class="text-xs">cloud hosting tools</span>
+									</a>
+									<div class="flex justify-end float-right gap-2 font-normal">
+										<a href="https://go.toolhub.me/digitalocean" target="_blank" class="relative text-sm transition duration-200 text-dark-300 hover:text-dark-500 dark:hover:text-dark-100 group dark:text-white">
+											<span>Visit website</span>
+											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-1 inline w-3.5">
+												<path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+												<polyline points="15 3 21 3 21 9"></polyline>
+												<line x1="10" y1="14" x2="21" y2="3"></line>
+											</svg>
+											<span class="absolute z-20 hidden px-2 py-2 text-xs text-center text-white transition-all duration-200 transform -translate-x-1/2 -translate-y-2 bg-black w-100 bottom-full left-1/2 rounded-xl group-hover:block"> https://www.digitalocean.com/ </span>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div role="list-item" class="relative rounded-xl">
+								<a class="transition hover:opacity-90" href="/hosting/cloud-hosting/vultr/">
+									<div class="" alt="">
+										<img src="https://filedn.com/ltoiYn1tWYGJEC13T0XsBk4/toolhub/vultr.jpg" class="object-cover w-full border min-w-52 rounded-xl" />
+									</div>
+									<div class="absolute right-2 top-2 rounded-full bg-orange-500 px-2 py-1 text-[.5rem] font-semibold uppercase tracking-wider text-white shadow-lg shadow-orange-500/10 backdrop-blur-lg">Featured</div>
+								</a>
+								<div class="items-center w-full pl-2 pr-2 mt-2">
+									<a class="capitalize transition duration-200 text-dark-500 hover:text-dark-300 dark:hover:text-dark-100 dark:text-white" href="/hosting/cloud-hosting/vultr/">]<span class="font-bold">Vultr</span> </a>
+									<span class="text-xs italic dark:text-white">&nbsp;in&nbsp;</span>
+									<a class="italic transition duration-200 text-dark-500 hover:text-dark-300 dark:hover:text-dark-100 dark:text-white" href="/hosting/cloud-hosting/">
+										<span class="text-xs">cloud hosting tools</span>
+									</a>
+									<div class="flex justify-end float-right gap-2 font-normal">
+										<a href="https://go.toolhub.me/vultr" target="_blank" class="relative text-sm transition duration-200 text-dark-300 hover:text-dark-500 dark:hover:text-dark-100 group dark:text-white">
+											<span>Visit website</span>
+											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-1 inline w-3.5">
+												<path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+												<polyline points="15 3 21 3 21 9"></polyline>
+												<line x1="10" y1="14" x2="21" y2="3"></line>
+											</svg>
+											<span class="absolute z-20 hidden px-2 py-2 text-xs text-center text-white transition-all duration-200 transform -translate-x-1/2 -translate-y-2 bg-black w-100 bottom-full left-1/2 rounded-xl group-hover:block"> https://www.vultr.com/</span>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div role="list-item" class="relative rounded-xl">
+								<a class="transition hover:opacity-90" href="/design/graphics/svgbackgrounds/">
+									<div class="" alt="">
+										<img src="https://image.thum.io/get/width/1400/crop/700/allowJPG/https://www.svgbackgrounds.com/" class="object-cover w-full border min-w-52 rounded-xl" />
+									</div>
+									<div class="absolute right-2 top-2 rounded-full bg-orange-500 px-2 py-1 text-[.5rem] font-semibold uppercase tracking-wider text-white shadow-lg shadow-orange-500/10 backdrop-blur-lg">Featured</div>
+								</a>
+								<div class="items-center w-full pl-2 pr-2 mt-2">
+									<a class="capitalize transition duration-200 text-dark-500 hover:text-dark-300 dark:hover:text-dark-100 dark:text-white" href="/design/graphics/svgbackgrounds/">
+										<span class="font-bold">SVG Backgrounds</span>
+									</a>
+									<span class="text-xs italic dark:text-white">&nbsp;in&nbsp;</span>
+									<a class="italic transition duration-200 text-dark-500 hover:text-dark-300 dark:hover:text-dark-100 dark:text-white" href="/design/graphics/">
+										<span class="text-xs">graphics tools</span>
+									</a>
+									<div class="flex justify-end float-right gap-2 font-normal">
+										<a href="https://www.svgbackgrounds.com/?utm_source=toolhub.me" target="_blank" class="relative text-sm transition duration-200 text-dark-300 hover:text-dark-500 dark:hover:text-dark-100 group dark:text-white">
+											<span>Visit website</span>
+											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-1 inline w-3.5">
+												<path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+												<polyline points="15 3 21 3 21 9"></polyline>
+												<line x1="10" y1="14" x2="21" y2="3"></line>
+											</svg>
+											<span class="absolute z-20 hidden px-2 py-2 text-xs text-center text-white transition-all duration-200 transform -translate-x-1/2 -translate-y-2 bg-black w-100 bottom-full left-1/2 rounded-xl group-hover:block">https://www.svgbackgrounds.com/</span></a
+										>
+									</div>
+								</div>
+							</div>
+							<div role="list-item" class="relative rounded-xl">
+								<a class="transition hover:opacity-90" href="/ai/marketing/evercopy/">
+									<div class="" alt="">
+										<img src="https://image.thum.io/get/width/1400/crop/700/allowJPG/https://www.evercopy.ai/" class="object-cover w-full border min-w-52 rounded-xl" />
+									</div>
+									<div class="absolute right-2 top-2 rounded-full bg-orange-500 px-2 py-1 text-[.5rem] font-semibold uppercase tracking-wider text-white shadow-lg shadow-orange-500/10 backdrop-blur-lg">Featured</div>
+								</a>
+								<div class="items-center w-full pl-2 pr-2 mt-2">
+									<a class="capitalize transition duration-200 text-dark-500 hover:text-dark-300 dark:hover:text-dark-100 dark:text-white" href="/ai/marketing/evercopy/">
+										<span class="font-bold">Evercopy</span>
+									</a>
+									<span class="text-xs italic dark:text-white">&nbsp;in&nbsp;</span><a class="italic transition duration-200 text-dark-500 hover:text-dark-300 dark:hover:text-dark-100 dark:text-white" href="/ai/marketing/"><span class="text-xs">marketing tools</span> </a>
+									<div class="flex justify-end float-right gap-2 font-normal">
+										<a href="https://go.toolhub.me/evercopy" target="_blank" class="relative text-sm transition duration-200 text-dark-300 hover:text-dark-500 dark:hover:text-dark-100 group dark:text-white">
+											<span>Visit website</span>
+											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-1 inline w-3.5">
+												<path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+												<polyline points="15 3 21 3 21 9"></polyline>
+												<line x1="10" y1="14" x2="21" y2="3"></line>
+											</svg>
+											<span class="absolute z-20 hidden px-2 py-2 text-xs text-center text-white transition-all duration-200 transform -translate-x-1/2 -translate-y-2 bg-black w-100 bottom-full left-1/2 rounded-xl group-hover:block">https://www.evercopy.ai/</span></a
+										>
+									</div>
+								</div>
+							</div>
+							<div role="list-item" class="relative rounded-xl">
+								<a class="transition hover:opacity-90" href="/seo/keyword-research/seoarcade/">
+									<div class="" alt="">
+										<img src="https://image.thum.io/get/width/1400/crop/700/allowJPG/https://seoarcade.com" class="object-cover w-full border min-w-52 rounded-xl" />
+									</div>
+									<div class="absolute right-2 top-2 rounded-full bg-orange-500 px-2 py-1 text-[.5rem] font-semibold uppercase tracking-wider text-white shadow-lg shadow-orange-500/10 backdrop-blur-lg">Featured</div>
+								</a>
+								<div class="items-center w-full pl-2 pr-2 mt-2">
+									<a class="capitalize transition duration-200 text-dark-500 hover:text-dark-300 dark:hover:text-dark-100 dark:text-white" href="/seo/keyword-research/seoarcade/">
+										<span class="font-bold">SEO Arcade</span>
+									</a>
+									<span class="text-xs italic dark:text-white">&nbsp;in&nbsp;</span
+									><a class="italic transition duration-200 text-dark-500 hover:text-dark-300 dark:hover:text-dark-100 dark:text-white" href="/seo/keyword-research/">
+										<span class="text-xs">keyword research tools</span>
+									</a>
+									<div class="flex justify-end float-right gap-2 font-normal">
+										<a href="https://seoarcade.com?utm_source=toolhub.me" target="_blank" class="relative text-sm transition duration-200 text-dark-300 hover:text-dark-500 dark:hover:text-dark-100 group dark:text-white">
+											<span>Visit website</span>
+											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-1 inline w-3.5">
+												<path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+												<polyline points="15 3 21 3 21 9"></polyline>
+												<line x1="10" y1="14" x2="21" y2="3"></line>
+											</svg>
+											<span class="absolute z-20 hidden px-2 py-2 text-xs text-center text-white transition-all duration-200 transform -translate-x-1/2 -translate-y-2 bg-black w-100 bottom-full left-1/2 rounded-xl group-hover:block">https://seoarcade.com</span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="px-10 mt-10 dark:text-gray-400"></div>
+					<section class="py-10 mt-20 sm:pt-16 lg:pt-24 bg-slate-50">
+						<div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+							<div class="grid grid-cols-2 md:col-span-3 lg:grid-cols-6 gap-x-12 gap-y-16">
+								<div class="col-span-2 md:col-span-3 lg:col-span-2 lg:pr-8">
+									<a class="user h-fit w-fit" href="/">
+										<img src="https://toolhub.me/imgs/logo-300.png" width="150" />
+									</a>
+									<p class="mt-3 text-base leading-relaxed text-gray-600">Discover the ultimate collection of business software tools with ToolHub. Streamline your operations, enhance productivity, and drive growth with our curated selection of the best software solutions for businesses of all sizes.</p>
+									<ul class="flex items-center space-x-3 mt-9">
+										<li>
+											<a href="#" title="" class="flex items-center justify-center text-white transition-all duration-200 bg-gray-800 rounded-full h-7 w-7 hover:bg-orange-600 focus:bg-orange-600">
+												<svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+													<path d="M19.633 7.997c.013.175.013.349.013.523 0 5.325-4.053 11.461-11.46 11.461-2.282 0-4.402-.661-6.186-1.809.324.037.636.05.973.05a8.07 8.07 0 0 0 5.001-1.721 4.036 4.036 0 0 1-3.767-2.793c.249.037.499.062.761.062.361 0 .724-.05 1.061-.137a4.027 4.027 0 0 1-3.23-3.953v-.05c.537.299 1.16.486 1.82.511a4.022 4.022 0 0 1-1.796-3.354c0-.748.199-1.434.548-2.032a11.457 11.457 0 0 0 8.306 4.215c-.062-.3-.1-.611-.1-.923a4.026 4.026 0 0 1 4.028-4.028c1.16 0 2.207.486 2.943 1.272a7.957 7.957 0 0 0 2.556-.973 4.02 4.02 0 0 1-1.771 2.22 8.073 8.073 0 0 0 2.319-.624 8.645 8.645 0 0 1-2.019 2.083z"></path>
+												</svg>
+											</a>
+										</li>
+										<li>
+											<a href="#" title="" class="flex items-center justify-center text-white transition-all duration-200 bg-gray-800 rounded-full h-7 w-7 hover:bg-orange-600 focus:bg-orange-600">
+												<svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+													<path d="M13.397 20.997v-8.196h2.765l.411-3.209h-3.176V7.548c0-.926.258-1.56 1.587-1.56h1.684V3.127A22.336 22.336 0 0 0 14.201 3c-2.444 0-4.122 1.492-4.122 4.231v2.355H7.332v3.209h2.753v8.202h3.312z"></path>
+												</svg>
+											</a>
+										</li>
+										<li>
+											<a href="#" title="" class="flex items-center justify-center text-white transition-all duration-200 bg-gray-800 rounded-full h-7 w-7 hover:bg-orange-600 focus:bg-orange-600">
+												<svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+													<path d="M11.999 7.377a4.623 4.623 0 1 0 0 9.248 4.623 4.623 0 0 0 0-9.248zm0 7.627a3.004 3.004 0 1 1 0-6.008 3.004 3.004 0 0 1 0 6.008z"></path>
+													<circle cx="16.806" cy="7.207" r="1.078"></circle>
+													<path
+														d="M20.533 6.111A4.605 4.605 0 0 0 17.9 3.479a6.606 6.606 0 0 0-2.186-.42c-.963-.042-1.268-.054-3.71-.054s-2.755 0-3.71.054a6.554 6.554 0 0 0-2.184.42 4.6 4.6 0 0 0-2.633 2.632 6.585 6.585 0 0 0-.419 2.186c-.043.962-.056 1.267-.056 3.71 0 2.442 0 2.753.056 3.71.015.748.156 1.486.419 2.187a4.61 4.61 0 0 0 2.634 2.632 6.584 6.584 0 0 0 2.185.45c.963.042 1.268.055 3.71.055s2.755 0 3.71-.055a6.615 6.615 0 0 0 2.186-.419 4.613 4.613 0 0 0 2.633-2.633c.263-.7.404-1.438.419-2.186.043-.962.056-1.267.056-3.71s0-2.753-.056-3.71a6.581 6.581 0 0 0-.421-2.217zm-1.218 9.532a5.043 5.043 0 0 1-.311 1.688 2.987 2.987 0 0 1-1.712 1.711 4.985 4.985 0 0 1-1.67.311c-.95.044-1.218.055-3.654.055-2.438 0-2.687 0-3.655-.055a4.96 4.96 0 0 1-1.669-.311 2.985 2.985 0 0 1-1.719-1.711 5.08 5.08 0 0 1-.311-1.669c-.043-.95-.053-1.218-.053-3.654 0-2.437 0-2.686.053-3.655a5.038 5.038 0 0 1 .311-1.687c.305-.789.93-1.41 1.719-1.712a5.01 5.01 0 0 1 1.669-.311c.951-.043 1.218-.055 3.655-.055s2.687 0 3.654.055a4.96 4.96 0 0 1 1.67.311 2.991 2.991 0 0 1 1.712 1.712 5.08 5.08 0 0 1 .311 1.669c.043.951.054 1.218.054 3.655 0 2.436 0 2.698-.043 3.654h-.011z"
+													></path>
+												</svg>
+											</a>
+										</li>
+										<li>
+											<a href="#" title="" class="flex items-center justify-center text-white transition-all duration-200 bg-gray-800 rounded-full h-7 w-7 hover:bg-orange-600 focus:bg-orange-600">
+												<svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.582 9.582 0 0 1 2.496-.336 9.554 9.554 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2z"></path>
+												</svg>
+											</a>
+										</li>
+									</ul>
+								</div>
+								<div>
+									<p class="text-sm font-semibold tracking-widest text-gray-400 uppercase">Popular</p>
+									<ul class="mt-6 space-y-4">
+										<li><a class="py-2" href="/seo/tools/">SEO Tools</a></li>
+									</ul>
+								</div>
+								<div>
+									<p class="text-sm font-semibold tracking-widest text-gray-400 uppercase">More</p>
+								</div>
+								<div class="col-span-2 md:col-span-1 lg:col-span-2 lg:pl-8">
+									<p class="text-sm font-semibold tracking-widest text-gray-400 uppercase"></p>
+								</div>
+							</div>
+							<hr class="mt-16 mb-10 border-gray-200" />
+							<p class="text-sm text-center text-gray-600">
+								© ToolHub Software Directory. All Rights Reserved. Built by
+								<a href="https://twitter.com/robertodigital_" target="_blank">Roberto Robles</a>.
+							</p>
+						</div>
+					</section>
+				</div>
+			</div>
+		</main>
+
+		<div x-show="isModalOpen" role="modal" class="fixed inset-0 z-20" x-cloak>
+			<div x-on:click="isModalOpen = !isModalOpen" class="absolute w-full h-full bg-black modal-bg opacity-60"></div>
+			<div class="sm:w-[90%] md:w-[90%] lg:w-2/4 xl:w-2/5 2xl:w-2/5 sm:h-fit md:h-fit absolute left-1/2 top-1/2 h-fit max-h-96 w-[90%] max-w-lg -translate-x-1/2 -translate-y-1/2 transform rounded-xl bg-white px-2 py-3 shadow-2xl transition-transform">
+				<form class="relative flex items-center w-full border rounded-full bg-light-50 border-slate-100">
+					<input type="text" placeholder="Search" class="w-full py-2 pl-8 text-sm transition-all bg-transparent rounded-full outline-none focus:bg-slate-100" /><button type="submit" class="absolute top-0 bottom-0 right-0 px-4 text-white bg-orange-500 rounded-full">Search</button>
+					<div class="absolute left-2 top-2/4 -translate-y-2/4">
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 text-slate-500 dark:text-dark-500">
+							<path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.873-4.873"></path>
+							<circle cx="10" cy="10" r="7"></circle>
+						</svg>
+					</div>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>

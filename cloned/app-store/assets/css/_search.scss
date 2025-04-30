@@ -1,0 +1,124 @@
+.search {
+	position: fixed;
+	inset: 0;
+	width: 100%;
+	z-index: 9999;
+	display: none;
+	pointer-events: none;
+
+	&--active {
+		display: block;
+		pointer-events: all;
+	}
+
+	&__overlay {
+		position: absolute;
+		inset: 0;
+		z-index: 1;
+		background-color: rgba(0, 0, 0, 0.1);
+		backdrop-filter: blur(5px);
+		opacity: 0;
+		transition: opacity 0.3s ease-out;
+
+		&--visible {
+			opacity: 1;
+		}
+	}
+
+	&__body {
+		position: relative;
+		z-index: 2;
+		padding: rem(20) 0;
+		background-color: rgba(255, 255, 255);
+		transform: translateY(-100%);
+		transition: transform 0.3s ease-out;
+
+		&--visible {
+			transform: translateY(0);
+		}
+	}
+
+	&__clear {
+		display: none;
+		position: absolute;
+		right: 10px;
+		top: 50%;
+		transform: translateY(-50%);
+		background: none;
+		border: none;
+		font-size: 18px;
+		cursor: pointer;
+		color: #333;
+	}
+
+	&__field {
+		display: flex;
+		align-items: center;
+		gap: rem(16);
+	}
+
+	&__input {
+		position: relative;
+		flex-grow: 1;
+		display: flex;
+		align-items: center;
+		border-radius: rem(15);
+		background-color: var(--iron);
+		padding: rem(10) rem(15);
+		gap: rem(10);
+
+		.icon {
+			width: rem(20);
+			height: rem(20);
+			background-color: var(--jumbo);
+		}
+
+		input {
+			width: 100%;
+			background-color: transparent;
+			appearance: none;
+			border: none;
+			font-family: var(--font-primary);
+			font-size: rem(16);
+
+			&:not(:placeholder-shown) + #clear-btn {
+				display: block;
+			}
+		}
+	}
+
+	&__cancel {
+		font-size: rem(16);
+		font-weight: 500;
+		color: var(--dodger-blue);
+	}
+
+	&__examples {
+		margin-top: rem(16);
+
+		a {
+			display: inline-flex;
+			align-items: center;
+			gap: rem(8);
+			font-weight: 500;
+			letter-spacing: 0.25px;
+			height: rem(32);
+			border-radius: rem(9999);
+			padding: rem(6) rem(16);
+			border: 1px solid var(--iron);
+			font-size: rem(14);
+			color: var(--dodger-blue);
+			background-color: var(--white);
+			transition: all 0.2s ease-in;
+			margin-right: rem(4);
+
+			&:last-child {
+				margin-right: 0;
+			}
+
+			@include hover-supported {
+				background-color: var(--athens-gray);
+			}
+		}
+	}
+}

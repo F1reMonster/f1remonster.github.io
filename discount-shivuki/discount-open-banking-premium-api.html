@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="he" class="dark-mode">
+	<head>
+		<title>Discount - Open bank - On Discount Page</title>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="./assets/css/autoComplete.css" />
+		<link href="./assets/css/sections/base.css" rel="stylesheet" />
+		<link rel="stylesheet" href="./assets/css/sections/breadcrumbs.css" />
+		<link href="./assets/css/sections/header.css" rel="stylesheet" />
+		<link href="./assets/css/sections/intro-section.css" rel="stylesheet" />
+		<link href="./assets/css/sections/intro-section-discount-pages.css" rel="stylesheet" />
+		<link href="./assets/css/sections/text-section.css" rel="stylesheet" />
+		<link href="./assets/css/sections/footer.css" rel="stylesheet" />
+		<link href="./assets/css/sections/contact-form-2-columns.css" rel="stylesheet" />
+		<link href="./assets/css/sections/discount-open-banking-global.css" rel="stylesheet" />
+		<link href="./assets/css/sections/catalogue-cards.css" rel="stylesheet" />
+
+		<link href="./assets/css/sections/dark-mode.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<script>
+	function set_vh_var() {
+		document.querySelector(':root').style.setProperty('--vh', window.innerHeight / 100 + 'px');
+	}
+	set_vh_var();
+	window.addEventListener('resize', set_vh_var);
+</script>
+
+<header id="main-header" class="site-header">
+	<div class="header-container">
+		<div class="logo-lang-wrap">
+			<a class="header-logo" href="#"><img src="./assets/img/header-logo.svg" alt="header logo"></a>
+			<div id="lang-switcher" class="lang-switcher">
+				<label class="visually-hidden" id="langs-label">Language select</label>
+				<button id="langs-btn" class="label" aria-controls="ul-langs" aria-expanded="false"
+					aria-labelledby="langs-label" aria-haspopup="ul-langs" role="combobox" aria-activedescendant="">
+					<span class="cur-name">עברית</span>
+					<span class="lang-tick">
+						<svg width="12" height="10" viewBox="0 0 12 10 " version="1.1" xmlns="http://www.w3.org/2000/svg"
+							xmlns:xlink="http://www.w3.org/1999/xlink">
+							<polyline id="Path-4" stroke="#363D50" stroke-width="1.35" stroke-linecap="round" fill="none"
+								stroke-linejoin="round" points="9.86153846 1.91666667 5.43076923 7.125 1 1.91666667"></polyline>
+						</svg>
+
+					</span>
+				</button>
+				<ul id="ul-langs" class="langs" tabindex="-1" aria-labelledby="langs-label" role="listbox">
+					<li aria-selected="true" id="lang-1" role="option" class="selected"><span data-lang_code="he" href="#">
+							עברית
+						</span></li>
+					<li aria-selected="false" id="lang-2" role="option"><span data-lang_code="en" href="#">
+							English
+						</span></li>
+					<li aria-selected="false" id="lang-3" role="option"><span data-lang_code="ar" href="#">
+							عربيه
+						</span></li>
+					<li aria-selected="false" id="lang-4" role="option"><span data-lang_code="fr" href="#">
+							Français
+						</span></li>
+					<li aria-selected="false" id="lang-5" role="option"><span data-lang_code="ru" href="#">
+							Русский
+						</span></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="header-container">
+		<nav class="main-navigation panel">
+			<label class="visually-hidden" id="custom-hamburger-label" for="custom-hamburger">תפריט ראשי</label>
+			<button id="custom-hamburger" class="custom-hamburger" aria-labelledby="custom-hamburger-label"
+				aria-controls="header-menu" aria-expanded="false">
+				<span class="stick stick-1"></span>
+				<span class="stick stick-2"></span>
+				<span class="stick stick-3"></span>
+				<span data-closed_state="תפריט" data-opened_state="סגירה" class="btn-txt">תפריט</span>
+			</button>
+			<ul class="top-menu-items">
+				<li class="selected">
+					<a data-title="לקוח פרטי" href="#">לקוח פרטי</a>
+				</li>
+				<li>
+					<a data-title="לקוח עסקי" href="#">לקוח עסקי</a>
+				</li>
+				<li>
+					<a data-title="בנקאות אישית" href="#">בנקאות אישית</a>
+				</li>
+			</ul>
+			<button class="tablet-search-trigger" type="button">
+				<!-- <img src="./assets/img/glass.svg" alt="glass"> -->
+				<svg width="17px" height="17px" viewBox="0 0 17 17" version="1.1"
+				xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+				<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+					<g class="svg-glass" transform="translate(-808.000000, -93.000000)" stroke="#3C3F45"
+						stroke-width="2">
+						<g transform="translate(40.000000, 0.000000)">
+							<g transform="translate(0.000000, 62.000000)">
+								<g transform="translate(752.000000, 16.000000)">
+									<g transform="translate(16.000000, 15.000000)">
+										<path
+											d="M7.2012205,0.997368864 C8.91356184,0.997368864 10.4637638,1.69196627 11.585901,2.81488271 C12.7082893,3.93805048 13.402441,5.48970911 13.402441,7.20359021 C13.402441,8.9174713 12.7082893,10.4691299 11.585901,11.5922977 C10.4637638,12.7152141 8.91356184,13.4098116 7.2012205,13.4098116 C5.48887916,13.4098116 3.93867718,12.7152141 2.81654,11.5922977 C1.69415166,10.4691299 1,8.9174713 1,7.20359021 C1,5.48970911 1.69415166,3.93805048 2.81654,2.81488271 C3.93867718,1.69196627 5.48887916,0.997368864 7.2012205,0.997368864 Z">
+										</path>
+										<line x1="12.15048" y1="12.15787" x2="15.97052" y2="15.97791"
+											stroke-linecap="round" stroke-linejoin="round"></line>
+									</g>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+			</svg>
+
+			</button>
+			<form action="search-results.html" class="search-input js-search-input" autocomplete="off"
+				data-article-titles='["כל המידע לגמלאי","זכויות גמלאי דיסקונט","גמלאים ונהנים","מפגש נציגות ועד גמלאי הבנק","זכויות גמלאי דיסקונט","גמלאים בצמרת","הצגה מומלצת לגמלאים","ביטוח וזכויות הגמלאי","lorem ipsum","Dollar wmmt","Littera mare","post lorem","dollar lorem isplor","loram ires"]'>
+				<div class="search-input-inner">
+					<label for="autoComplete" class="visually-hidden">Search</label>
+					<input id="autoComplete" type="search" name="search" placeholder="מה מחפשים?">
+					<button type="submit">
+						<!-- <img src="./assets/img/glass.svg" alt="Search icon"> -->
+						<svg width="17px" height="17px" viewBox="0 0 17 17" version="1.1"
+						xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+						<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+							<g class="svg-glass" transform="translate(-808.000000, -93.000000)" stroke="#3C3F45"
+								stroke-width="2">
+								<g transform="translate(40.000000, 0.000000)">
+									<g transform="translate(0.000000, 62.000000)">
+										<g transform="translate(752.000000, 16.000000)">
+											<g transform="translate(16.000000, 15.000000)">
+												<path
+													d="M7.2012205,0.997368864 C8.91356184,0.997368864 10.4637638,1.69196627 11.585901,2.81488271 C12.7082893,3.93805048 13.402441,5.48970911 13.402441,7.20359021 C13.402441,8.9174713 12.7082893,10.4691299 11.585901,11.5922977 C10.4637638,12.7152141 8.91356184,13.4098116 7.2012205,13.4098116 C5.48887916,13.4098116 3.93867718,12.7152141 2.81654,11.5922977 C1.69415166,10.4691299 1,8.9174713 1,7.20359021 C1,5.48970911 1.69415166,3.93805048 2.81654,2.81488271 C3.93867718,1.69196627 5.48887916,0.997368864 7.2012205,0.997368864 Z">
+												</path>
+												<line x1="12.15048" y1="12.15787" x2="15.97052" y2="15.97791"
+													stroke-linecap="round" stroke-linejoin="round"></line>
+											</g>
+										</g>
+									</g>
+								</g>
+							</g>
+						</g>
+					</svg>
+					</button>
+				</div>
+			</form>
+
+			<!-- Search tags -->
+			<div id="search-tags" class="menu-dropdown is-search" aria-hidden="true">
+				<div class="search-wrapper">
+					<div class="container">
+						<div class="inner">
+							<h2 class="search-tags__title">חיפושים נפוצים באתר</h2>
+							<ul class="list-reset search-tags">
+								<li><a href="/">שחזור קוד סודי</a></li>
+								<li><a href="/">חניה חינם</a></li>
+								<li><a href="/">פתיחת חשבון</a></li>
+								<li><a href="/">שחזור קוד סודי</a></li>
+								<li><a href="/">שחזור קוד סודי</a></li>
+								<li><a href="/">שחזור קוד סודי</a></li>
+								<li><a href="/">חניה חינם</a></li>
+								<li><a href="/">פתיחת חשבון</a></li>
+								<li><a href="/">שחזור קוד סודי</a></li>
+								<li><a href="/">שחזור קוד סודי</a></li>
+								<li><a href="/">שחזור קוד סודי</a></li>
+								<li><a href="/">חניה חינם</a></li>
+								<li><a href="/">פתיחת חשבון</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Search hints -->
+			<div id="search-hints" class="menu-dropdown is-search" aria-hidden="true">
+				<div class="search-wrapper">
+					<div class="container">
+						<div class="inner">
+							<h2 class="search-tags__title"> נמצאו <span class="js-search-count">0</span> תוצאות עבור
+								גמלאות </h2>
+							<ul class="list-reset search-hints js-search-hints">
+							</ul>
+							<p class="all-search-results"><a href="/"> לכל התוצאות (<span class="js-search-count">0</span>)
+									></a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<button id="close-search-form" class="close-search-form" type="button"
+				aria-label="CLOSE SEARCH FIELD">&#x2715</button>
+
+			<a class="goto-discounts header-btn" href="#">
+				כניסה לפורטל המפתחים
+				<img src="./assets/img/go.svg" alt="arrow icon">
+			</a>
+		</nav>
+	</div>
+
+	<div id="header-menu-bg" class="header-menu-bg"></div>
+
+	<div id="header-menu" class="header-menu">
+		<div class="header-container">
+			<div class="submenus-wrap">
+				<div class="submenu">
+					<h4>
+						לקוח פרטי
+					</h4>
+					<ul>
+						<li><a href="#">פתיחת חשבון</a></li>
+						<li><a href="#">דיסקונט בדיגיטל</a></li>
+						<li><a href="#">הלוואות</a></li>
+						<li><a href="#">משכנתאות</a></li>
+						<li><a href="#">חיסכון והשקעות</a></li>
+						<li><a href="#">כרטיסי אשראי</a></li>
+					</ul>
+				</div>
+
+				<div class="submenu">
+					<h4>
+						לקוח עסקי
+					</h4>
+					<ul>
+						<li><a href="#">הלוואות</a></li>
+						<li><a href="#">משכנתאות</a></li>
+						<li><a href="#">חיסכון והשקעות</a></li>
+						<li><a href="#">כרטיסי אשרא</a></li>
+					</ul>
+				</div>
+
+				<div class="submenu">
+					<h4>
+						בנקאות פרטית
+					</h4>
+					<ul>
+						<li><a href="#">פתיחת חשבון</a></li>
+						<li><a href="#">דיסקונט בדיגיטל</a></li>
+						<li><a href="#">הלוואות</a></li>
+						<li><a href="#">משכנתאות</a></li>
+						<li><a href="#">חיסכון והשקעות</a></li>
+						<li><a href="#">כרטיסי אשראי</a></li>
+					</ul>
+				</div>
+
+				<div class="menu-block">
+					<ul class="menu-in-menu-block">
+						<li><a href="#">איך אפשר לעזור?</a></li>
+						<li><a href="#">איך אפשר לעזור?</a></li>
+						<li><a href="#">מידע כללי</a></li>
+						<li><a href="#">עולם הידע</a></li>
+					</ul>
+					<article class="article">
+						<div class="img-part">
+							<div class="img-inner">
+								<img src="./assets/img/some-post-img.png" alt="article image">
+							</div>
+						</div>
+						<div class="txt-part">
+							<h4 class="article-header">
+								פורסמו הדוחות השנתיים
+							</h4>
+							<div class="txt">
+								טקסט משני אם יש יופיע כאן
+							</div>
+							<div class="link-wrap">
+								<a class="more" href="#">להורדה</a>
+							</div>
+						</div>
+					</article>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+
+<header class="mobile-header">
+
+	<div class="top">
+		<label id="mobile-menu-label" class="visually-hidden" for="custom-hamburger-mobile">תפריט ראשי לנייד</label>
+		<button id="custom-hamburger-mobile" aria-labelledby="mobile-menu-label" class="custom-hamburger mobile-hamburger"
+			aria-expanded="false" aria-controls="header-menu-mobile">
+			<span class="stick stick-1"></span>
+			<span class="stick stick-2"></span>
+			<span class="stick stick-3"></span>
+		</button>
+		<a class="header-mobile-logo" href="#">
+			<img src="./assets/img/header-logo-mobile.svg" alt="header mobile logo">
+		</a>
+		<button class="mobile-search-open">
+			<!-- <img src="./assets/img/glass-mobile.svg" alt="magnifying glass"> -->
+			<svg width="17px" height="17px" viewBox="0 0 17 17" version="1.1"
+						xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+						<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+							<g class="svg-glass" transform="translate(-808.000000, -93.000000)" stroke="#3C3F45"
+								stroke-width="2">
+								<g transform="translate(40.000000, 0.000000)">
+									<g transform="translate(0.000000, 62.000000)">
+										<g transform="translate(752.000000, 16.000000)">
+											<g transform="translate(16.000000, 15.000000)">
+												<path
+													d="M7.2012205,0.997368864 C8.91356184,0.997368864 10.4637638,1.69196627 11.585901,2.81488271 C12.7082893,3.93805048 13.402441,5.48970911 13.402441,7.20359021 C13.402441,8.9174713 12.7082893,10.4691299 11.585901,11.5922977 C10.4637638,12.7152141 8.91356184,13.4098116 7.2012205,13.4098116 C5.48887916,13.4098116 3.93867718,12.7152141 2.81654,11.5922977 C1.69415166,10.4691299 1,8.9174713 1,7.20359021 C1,5.48970911 1.69415166,3.93805048 2.81654,2.81488271 C3.93867718,1.69196627 5.48887916,0.997368864 7.2012205,0.997368864 Z">
+												</path>
+												<line x1="12.15048" y1="12.15787" x2="15.97052" y2="15.97791"
+													stroke-linecap="round" stroke-linejoin="round"></line>
+											</g>
+										</g>
+									</g>
+								</g>
+							</g>
+						</g>
+					</svg>
+		</button>
+		<div class="mobile-search">
+			<div class="mobile-search-inner">
+				<button type="button" class="close-mobile-search" aria-label="CLOSE MOBILE SEARCH FIELD">
+					&#x2715
+				</button>
+				<form action="search-results.html" class="search-input js-search-input" autocomplete="off"
+					data-article-titles='["כל המידע לגמלאי","זכויות גמלאי דיסקונט","גמלאים ונהנים","מפגש נציגות ועד גמלאי הבנק","זכויות גמלאי דיסקונט","גמלאים בצמרת","הצגה מומלצת לגמלאים","ביטוח וזכויות הגמלאי","lorem ipsum","Dollar wmmt","Littera mare","post lorem","dollar lorem isplor","loram ires"]'>
+					<div class="search-input-inner">
+						<label for="autoComplete-mobile" class="visually-hidden">Search</label>
+						<input id="autoComplete-mobile" type="search" name="search">
+						<button type="submit">
+							<svg width="17px" height="17px" viewBox="0 0 17 17" version="1.1"
+								xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+								<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+									<g class="svg-glass" transform="translate(-808.000000, -93.000000)" stroke="#3C3F45"
+										stroke-width="2">
+										<g transform="translate(40.000000, 0.000000)">
+											<g transform="translate(0.000000, 62.000000)">
+												<g transform="translate(752.000000, 16.000000)">
+													<g transform="translate(16.000000, 15.000000)">
+														<path
+															d="M7.2012205,0.997368864 C8.91356184,0.997368864 10.4637638,1.69196627 11.585901,2.81488271 C12.7082893,3.93805048 13.402441,5.48970911 13.402441,7.20359021 C13.402441,8.9174713 12.7082893,10.4691299 11.585901,11.5922977 C10.4637638,12.7152141 8.91356184,13.4098116 7.2012205,13.4098116 C5.48887916,13.4098116 3.93867718,12.7152141 2.81654,11.5922977 C1.69415166,10.4691299 1,8.9174713 1,7.20359021 C1,5.48970911 1.69415166,3.93805048 2.81654,2.81488271 C3.93867718,1.69196627 5.48887916,0.997368864 7.2012205,0.997368864 Z">
+														</path>
+														<line x1="12.15048" y1="12.15787" x2="15.97052" y2="15.97791"
+															stroke-linecap="round" stroke-linejoin="round"></line>
+													</g>
+												</g>
+											</g>
+										</g>
+									</g>
+								</g>
+							</svg>
+						</button>
+					</div>
+					<div class="close-search-form" role="button" aria-label="CLOSE MOBILE SEARCH FIELD">&#x2715</div>
+				</form>
+				<!-- Search tags -->
+				<div id="search-tags-mobile" class="menu-dropdown is-search" aria-hidden="true">
+					<div class="search-wrapper">
+						<div class="container">
+							<div class="inner">
+								<h2 class="search-tags__title">חיפושים נפוצים באתר</h2>
+								<ul class="list-reset search-tags">
+									<li><a href="/">שחזור קוד סודי</a></li>
+									<li><a href="/">חניה חינם</a></li>
+									<li><a href="/">פתיחת חשבון</a></li>
+									<li><a href="/">שחזור קוד סודי</a></li>
+									<li><a href="/">שחזור קוד סודי</a></li>
+									<li><a href="/">שחזור קוד סודי</a></li>
+									<li><a href="/">חניה חינם</a></li>
+									<li><a href="/">פתיחת חשבון</a></li>
+									<li><a href="/">שחזור קוד סודי</a></li>
+									<li><a href="/">שחזור קוד סודי</a></li>
+									<li><a href="/">שחזור קוד סודי</a></li>
+									<li><a href="/">חניה חינם</a></li>
+									<li><a href="/">פתיחת חשבון</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Search hints -->
+				<div id="search-hints-mobile" class="menu-dropdown is-search" aria-hidden="true">
+					<div class="search-wrapper">
+						<div class="container">
+							<div class="inner">
+								<h2 class="search-tags__title"> נמצאו <span class="js-search-count_mobile">0</span>
+									תוצאות עבור גמלאות </h2>
+								<ul class="list-reset search-hints js-search-hints_mobile">
+								</ul>
+								<p class="all-search-results"><a href="/"> לכל התוצאות (<span
+											class="js-search-count_mobile">0</span>) ></a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="bottom">
+		<div id="client-switcher" class="client-switcher">
+			<label id="client-label" class="visually-hidden" for="">Client type select</label>
+			<button class="label" aria-controls="ul-langs" aria-expanded="false" aria-labelledby="client-label"
+				aria-haspopup="ul-clients" role="combobox" aria-activedescendant="">
+				<span class="cur-name">לקוח פרטי</span>
+				<span class="client-tick"><img src="./assets/img/client-tick.svg" alt="tick"></span>
+			</button>
+			<ul id="ul-clients" class="clients">
+				<li aria-selected="true" id="client-1" role="option" class="selected"><span data-client_type="a" href="#">
+						לקוח פרטי
+					</span></li>
+				<li aria-selected="false" id="client-2" role="option"><span data-client_type="b" href="#">
+						לקוח עסקי
+					</span></li>
+				<li aria-selected="false" id="client-3" role="option"><span data-client_type="c" href="#">
+						בנקאות אישית
+					</span></li>
+			</ul>
+		</div>
+		<a class="goto-discounts-mobile" href="#">
+			<span>כניסה לחשבון</span>
+			<img src="./assets/img/go-mobile.svg" alt="arrow">
+		</a>
+	</div>
+
+</header>
+
+<div id="header-menu-mobile" class="header-menu-mobile">
+	<div class="inner">
+		<ul class="horizontal-menu">
+			<li><a href="#">איך אפשר לעזור?</a></li>
+			<li><a href="#">סניפים</a></li>
+			<li><a href="#">מידע כללי</a></li>
+			<li><a href="#">עולם הידע</a></li>
+		</ul>
+
+		<div class="submenu">
+			<h4 class="accordeon-title opened">
+				<button aria-controls="mobile-menu-1" aria-expanded="true">
+					לקוח פרטי
+				</button>
+			</h4>
+			<ul id="mobile-menu-1" style="display: block;" class="accordeon-content">
+				<li><a href="#">פתיחת חשבון</a></li>
+				<li><a href="#">דיסקונט בדיגיטל</a></li>
+				<li><a href="#">הלוואות</a></li>
+				<li><a href="#">משכנתאות</a></li>
+				<li><a href="#">חיסכון והשקעות</a></li>
+				<li><a href="#">כרטיסי אשראי</a></li>
+			</ul>
+		</div>
+
+		<div class="submenu">
+			<h4 class="accordeon-title">
+				<button aria-expanded="false" aria-controls="mobile-menu-2">
+					לקוח עסקי
+				</button>
+			</h4>
+			<ul id="mobile-menu-2" class="accordeon-content">
+				<li><a href="#">הלוואות</a></li>
+				<li><a href="#">משכנתאות</a></li>
+				<li><a href="#">חיסכון והשקעות</a></li>
+				<li><a href="#">כרטיסי אשרא</a></li>
+			</ul>
+		</div>
+
+		<div class="submenu">
+			<h4 class="accordeon-title">
+				<button aria-expanded="false" aria-controls="mobile-menu-3">
+					בנקאות פרטית
+				</button>
+			</h4>
+			<ul id="mobile-menu-3" class="accordeon-content">
+				<li><a href="#">פתיחת חשבון</a></li>
+				<li><a href="#">דיסקונט בדיגיטל</a></li>
+				<li><a href="#">הלוואות</a></li>
+				<li><a href="#">משכנתאות</a></li>
+				<li><a href="#">חיסכון והשקעות</a></li>
+				<li><a href="#">כרטיסי אשראי</a></li>
+			</ul>
+		</div>
+
+		<div class="join-wrap">
+			<a class="join" href="#">להצטרפות</a>
+		</div>
+		<ul class="languages">
+			<li><a class="selected" href="#">עברית</a></li>
+			<li><a href="#">English</a></li>
+			<li><a href="#">Русский</a></li>
+			<li><a href="#">Français</a></li>
+			<li><a href="#">عربيه</a></li>
+		</ul>
+		<div class="card-mobile-menu">
+			<div class="img-wrap">
+				<img src="./assets/img/some-post-img.png" alt="some post image">
+			</div>
+			<div class="txt-wrap">
+				<h4 class="card-header">
+					פורסמו הדוחות השנתיים
+				</h4>
+				<div class="txt">
+					טקסט משני אם יש יופיע כאן
+				</div>
+				<div class="link-wrap">
+					<a class="more" href="#">להורדה</a>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+</div>
+
+		<main id="main">
+			<!-- breadcrumbs -->
+			<!-- ראשי  >  אודות   -->
+			<div class="main-container">
+				<ul class="site-pagination responsive">
+					<li>
+						<a href="#">ראשי</a>
+					</li>
+
+					<li>API פרימיום</li>
+				</ul>
+			</div>
+			<!-- ./breadcrumbs -->
+
+			<!-- intro section -->
+			<section class="intro-section intro-section--discount-pages section">
+				<div class="main-container">
+					<div class="wrap">
+						<div class="txt-part">
+							<h1 class="header">API פרימיום</h1>
+							<p class="msg-mid msg-w-full">הממשקים החדשניים והמאובטחים של פלטפורמת הבנקאות הפתוחה של דיסקונט</p>
+							<div class="btns-wrap">
+								<a class="primary-btn" href="#">להצטרפות</a>
+								<a class="secondary-btn-purple" href="#">פרטים נוספים</a>
+							</div>
+						</div>
+						<div class="img-part">
+							<img src="assets/img/discount-open-banking-premium-api.png" alt="img" />
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- ./intro section -->
+
+			<!-- text-section -->
+			<section class="text-section text-section--regulatory-api section">
+				<div class="main-container">
+					<ul class="text-section__list">
+						<li class="text-section__item">
+							<h2 class="typical-header">שירותי API בתקן בריטי</h2>
+							<p>הממשקים החדשניים והמאובטחים של פלטפורמת הבנקאות הפתוחה של דיסקונט מאפשרים לכם לבנות ולהרחיב את המוצרים והשירותים שלכם.</p>
+							<p>אנחנו מזמינים אתכם להשתמש ב-API שלנו כדי לפתח את האפליקציות שלכם, להגדיל את מאגר הלקוחות וליצור עוד הזדמנויות הכנסה.</p>
+						</li>
+						<li class="text-section__item text-section__item--with-bullets">
+							<h2 class="typical-header">למה כדאי לבחור ב- API פרימיום?</h2>
+							<p><span>תאימות לתקן אירופאי </span></p>
+							<p><span>אבטחה מקסימלית</span></p>
+							<p><span>שליטת הלקוח </span>- הגישה מתאפשרת רק לאחר אישור הלקוח וביצוע הפעולה על ידו באתר/ אפליקציית הבנק</p>
+						</li>
+					</ul>
+				</div>
+				<img class="text-section__background-bottom" src="assets/img/discount-open-banking-reg-api-bottom-background.svg" alt="background-bottom" />
+			</section>
+			<!-- ./text-section -->
+
+			<!-- catalogue-cards -->
+			<section class="catalogue-cards section">
+				<div class="main-container">
+					<h2 class="typical-header">דוגמאות מקטלוג ה- API פרימיום</h2>
+					<div class="wrap">
+						<a href="#" class="typical-card">
+							<div class="img-wrap">
+								<img src="./assets/img/discount-catalogue-img-01.png" alt="couple with notebook" />
+							</div>
+							<div class="txt-wrap">
+								<h4 class="card-header">תנועות ויתרות בעו״ש</h4>
+								<div class="txt typical-txt">מידע על התנועות, היתרות ומסגרת האשראי בחשבון העובר בשב</div>
+							</div>
+						</a>
+
+						<a href="#" class="typical-card">
+							<div class="img-wrap">
+								<img src="./assets/img/discount-catalogue-img-03.png" alt="boy" />
+							</div>
+							<div class="txt-wrap">
+								<h4 class="card-header">תנועות בכרטיסי אשראי</h4>
+								<div class="txt typical-txt">פירוט העסקאות שבוצעו בכרטיסי האשראי הבנקאיים</div>
+							</div>
+						</a>
+
+						<a href="#" class="typical-card">
+							<div class="img-wrap">
+								<img src="./assets/img/discount-catalogue-img-02.png" alt="know it all" />
+							</div>
+							<div class="txt-wrap">
+								<h4 class="card-header">פקדונות</h4>
+								<div class="txt typical-txt">פירוט הפקדונות הקיימים בחשבון, כולל ההפקדות והיתרות</div>
+							</div>
+						</a>
+						<a href="#" class="typical-card">
+							<div class="img-wrap">
+								<img src="./assets/img/discount-catalogue-img-05.png" alt="know it all" />
+							</div>
+							<div class="txt-wrap">
+								<h4 class="card-header">תוכניות חיסכון</h4>
+								<div class="txt typical-txt">פירוט תוכניות החיסכון הקיימות בחשבון, כולל ההפקדות והיתרות</div>
+							</div>
+						</a>
+					</div>
+				</div>
+			</section>
+			<!-- ./catalogue-cards -->
+
+			<!-- text-section -->
+			<section class="text-section text-section--regulatory-api-bottom section">
+				<div class="main-container">
+					<h2 class="typical-header">לקטלוג ה- API המלא של דיסקונט</h2>
+					<a class="primary-btn" href="#">לקטלוג API המלא</a>
+				</div>
+			</section>
+			<!-- ./text-section -->
+
+			<!-- intro section -->
+			<section class="intro-section intro-section--discount-pages reverse reverse-offset section">
+				<div class="main-container">
+					<div class="wrap">
+						<div class="txt-part">
+							<div class="msg-big">
+								<p>כל מסע מתחיל בצעד קטן...</p>
+								<p>כאן מתחיל המסע שלכם לעולם</p>
+								<p>הבנקאות הפתוחה של דיסקונט.</p>
+								<p>מלאו את הפרטים וניצור איתכם קשר.</p>
+							</div>
+						</div>
+						<div class="img-part">
+							<img src="assets/img/discount-open-banking-premium-api-img-02.png" alt="img" />
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- ./intro section -->
+
+			<!-- contact-form -->
+			<div class="discount-open-banking__contact-form">
+				<section id="contact-form-section" class="section contact-form-section">
+					<div class="main-container">
+						<h2 class="typical-header">הצטרפו לבנקאות הפתוחה של דיסקונט</h2>
+						<form class="contact-form">
+							<img class="cf-icon desktop" src="assets/img/contact-form-icon-desktop.svg" alt="blue icon with toy plane" />
+							<img class="cf-icon mobile" src="assets/img/contact-form-icon.svg" alt="blue icon with toy plane" />
+							<canvas id="cf-shadow-canvas"></canvas>
+							<canvas id="cf-canvas"></canvas>
+							<h3 class="mobile-collapsed-msg">דברו איתנו</h3>
+							<div class="form-inner">
+								<div class="fields-wrap">
+									<div class="group-1">
+										<div class="field-row two-fields">
+											<div class="field-wrap success pure">
+												<label class="input-label" for="id1">שם פרטי*</label>
+												<input aria-describedby="err-1 success-1" class="input" id="id1" type="text" name="name" value="" />
+												<span id="err-1" class="error-msg">שגיאה בשדה הטופס</span>
+												<span id="success-1" class="success-msg">אימות תקין בשדה הטופס</span>
+											</div>
+
+											<div class="field-wrap error pure">
+												<label class="input-label" for="id2">שם משפחה*</label>
+												<input aria-describedby="err-2 success-2" class="input" id="id2" type="text" name="surname" value="" />
+												<span id="err-2" class="error-msg">שגיאה בשדה הטופס</span>
+												<span id="success-2" class="success-msg">אימות תקין בשדה הטופס</span>
+											</div>
+										</div>
+
+										<div class="field-row">
+											<div class="field-wrap pure">
+												<label class="input-label" for="id3">מספר טלפון*</label>
+												<input aria-describedby="err-3 success-3" class="input" id="id3" type="tel" name="phone" value="" />
+												<span id="err-3" class="error-msg">שגיאה בשדה הטופס</span>
+												<span id="success-3" class="success-msg">אימות תקין בשדה הטופס</span>
+											</div>
+										</div>
+
+										<div class="field-row">
+											<div class="field-wrap pure">
+												<label class="input-label" for="id4">דוא״ל*</label>
+												<input aria-describedby="err-4 success-4" class="input" id="id4" type="text" name="id" value="" />
+												<span id="err-4" class="error-msg">שגיאה בשדה הטופס</span>
+												<span id="success-4" class="success-msg">אימות תקין בשדה הטופס</span>
+											</div>
+										</div>
+
+										<div class="field-row">
+											<div class="field-wrap pure">
+												<label class="input-label" for="id5">ת.ז</label>
+												<input aria-describedby="err-5 success-5" class="input" id="id5" type="text" name="id" value="" />
+												<span id="err-5" class="error-msg">שגיאה בשדה הטופס</span>
+												<span id="success-5" class="success-msg">אימות תקין בשדה הטופס</span>
+											</div>
+										</div>
+									</div>
+
+									<div class="flexible-margin"></div>
+
+									<div class="group-2">
+										<div class="field-row two-fields">
+											<div class="field-wrap wrap-custom-field">
+												<label class="custom-input-label" for="custom">לקוח הבנק:</label>
+												<input id="custom" class="visually-hidden" type="checkbox" name="client_of_bank" checked />
+												<div aria-hidden="true" class="input-appearence">
+													<div class="yes">כן</div>
+													<div class="switcher"></div>
+													<div class="no">לא</div>
+												</div>
+											</div>
+											<div class="field-wrap pure">
+												<label class="input-label" for="id6">סניף</label>
+												<input aria-describedby="err-6 success-6" class="input" d="id6" type="text" name="department" value="" />
+												<span id="err-6" class="error-msg">שגיאה בשדה הטופס</span>
+												<span id="success-6" class="success-msg">אימות תקין בשדה הטופס</span>
+											</div>
+										</div>
+
+										<div class="field-row">
+											<div class="field-wrap input-with-autocomplete success">
+												<label class="label-autocomplete" for="id7">
+													<img class="glass" src="./assets/img/glass.svg" alt="glass icon" />
+													<span> עיר</span>
+												</label>
+												<input aria-describedby="err-7 success-7" class="autocomplete-input" id="id7" dir="rtl" type="search" name="town" spellcheck="false" autocorrect="off" autocomplete="off" autocapitalize="off" value="" />
+												<span id="err-7" class="error-msg">שגיאה בשדה הטופס</span>
+												<span id="success-7" class="success-msg">אימות תקין בשדה הטופס</span>
+											</div>
+										</div>
+
+										<div class="textarea-wrap">
+											<label class="textarea-label" for="id8">תיאור הפניה</label>
+											<textarea aria-describedby="textarea-note" id="id8" class="textarea" rows="4" cols="40"></textarea>
+											<span id="textarea-note" class="textarea-note">נותרו 500 תווים</span>
+										</div>
+									</div>
+								</div>
+
+								<div class="remark-and-captcha">
+									<div class="remark">מידע שיתקבל <a href="#">יישמר במאגרי המידע של הבנק</a> ויחולו עליו הוראות מדיניות הפרטיות בשינויים המחויבים</div>
+									<img class="captcha" src="assets/img/captchaPlaceholder.gif" alt="captcha" />
+								</div>
+							</div>
+
+							<button id="cf-submit" type="submit" class="typical-btn-bigger submit-contact-form">שליחה</button>
+						</form>
+					</div>
+				</section>
+			</div>
+			<!-- ./contact-form -->
+		</main>
+
+		<footer class="footer footer--discount section">
+	<div class="main-container">
+		<div class="wrap">
+			<div class="footer-item">
+				<h4 class="accordeon-title">
+					<button class="mobile-btn" aria-expanded="false" aria-controls="footer-menu-1">
+						בנק דיסקונט
+						<img class="footer-tick" src="./assets/img/footer-tick.svg" alt="footer-tick" />
+					</button>
+					<span class="desktop-title">בנק דיסקונט</span>
+				</h4>
+				<ul id="footer-menu-1" class="accordeon-content">
+					<li><a href="#">אודות</a></li>
+					<li><a href="#">בנקאות פתוחה בדיסקונט</a></li>
+					<li><a href="#">חנות API</a></li>
+					<li><a href="#">API לתאגידים</a></li>
+					<li><a href="#">שאלות ותשובות</a></li>
+				</ul>
+			</div>
+			<div class="footer-item">
+				<h4 class="accordeon-title">
+					<button class="mobile-btn" aria-expanded="false" aria-controls="footer-menu-2">
+						דיסקונט דיגיטל לעסקים
+						<img class="footer-tick" src="./assets/img/footer-tick.svg" alt="footer-tick" />
+					</button>
+					<span class="desktop-title">דיסקונט דיגיטל לעסקים</span>
+				</h4>
+				<ul id="footer-menu-2" class="accordeon-content">
+					<li><a href="#">אתר עסקים+</a></li>
+					<li><a href="#">אפליקציית עסקים+</a></li>
+					<li><a href="#">הלוואות לעסקים</a></li>
+					<li><a href="#">סחר חוץ בדיגיטל</a></li>
+					<li><a href="#">שוק ההון באינטרנט</a></li>
+				</ul>
+			</div>
+			<div class="footer-item">
+				<h4 class="accordeon-title">
+					<button class="mobile-btn" aria-expanded="false" aria-controls="footer-menu-3">
+						דיסקונט לעסקים קטנים
+						<img class="footer-tick" src="./assets/img/footer-tick.svg" alt="footer-tick" />
+					</button>
+					<span class="desktop-title">דיסקונט לעסקים קטנים</span>
+				</h4>
+				<ul id="footer-menu-3" class="accordeon-content">
+					<li><a href="#">תעריפון עמלות</a></li>
+					<li><a href="#">משרות</a></li>
+					<li><a href="#">מדיניות הפרטיות</a></li>
+					<li><a href="#">תנאי שימוש</a></li>
+					<li><a href="#">אבטחת מידע</a></li>
+					<li><a href="#">תנאי שימוש</a></li>
+					<li><a href="#">הצהרת נגישות</a></li>
+				</ul>
+			</div>
+			<div class="footer-item">
+				<h4 class="accordeon-title">
+					<button class="mobile-btn" aria-controls="footer-menu-4" aria-expanded="false">
+						דיסקונט לעסקים בינוניים
+						<img class="footer-tick" src="./assets/img/footer-tick.svg" alt="footer-tick" />
+					</button>
+					<span class="desktop-title">דיסקונט לעסקים בינוניים</span>
+				</h4>
+				<ul class="accordeon-content">
+					<li><a href="#">שירותים לעסקים בינוניים</a></li>
+					<li><a href="#">מרכזי העסקים של דיסקונט</a></li>
+					<li><a href="#">סחר חוץ ומט"ח</a></li>
+				</ul>
+			</div>
+			<div class="footer-item">
+				<h4 class="accordeon-title">
+					<button class="mobile-btn" aria-controls="footer-menu-4" aria-expanded="false">
+						דיסקונט לחברות גדולות
+						<img class="footer-tick" src="./assets/img/footer-tick.svg" alt="footer-tick" />
+					</button>
+					<span class="desktop-title">דיסקונט לחברות גדולות</span>
+				</h4>
+				<ul class="accordeon-content">
+					<li><a href="#">בנקאות לחברות גדולות</a></li>
+					<li><a href="#">אגף חברות גדולות</a></li>
+					<li><a href="#">אגף נדל"ן ותשתיות</a></li>
+				</ul>
+			</div>
+
+			<div class="footer-item footer-item-with-logo">
+				<a class="footer-logo" href="#">
+					<svg width="112px" height="40px" viewBox="0 0 112 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+						<title>2C2D1494-E258-4E81-8C45-27131E12612C</title>
+						<g id="ui" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+							<g id="Desktop-1920_DISCOUNT_lobby-page---Credit-Card" transform="translate(-234.000000, -5511.000000)" fill="#FFFFFF">
+								<g id="footer-desktop-1920" transform="translate(0.000000, 5421.000000)">
+									<g id="Group-5" transform="translate(180.000000, 90.000000)">
+										<g id="logo-landing-1" transform="translate(54.000000, 0.000000)">
+											<path
+												d="M10.804551,19.9078759 C16.883936,19.9078759 20.8092241,17.5519142 20.8092241,10.9028669 L20.8092241,5.66034886 C20.8092241,1.48204083 20.078495,0.00100682121 17.1926666,0.00100682121 L10.6491833,0.00100682121 L10.6491833,4.97671726 L12.4965546,4.97671726 C13.4969217,4.97671726 13.6121944,5.39454806 13.6121944,7.7505097 L13.6121944,11.5492461 C13.6121944,13.5628886 12.68901,14.8546402 10.8035486,14.8546402 C8.87899471,14.8546402 7.87862764,13.639407 7.87862764,11.5492461 L7.87862764,0.00100682121 L0.798875508,0.00100682121 L0.798875508,10.9018601 C0.798875508,17.4753958 4.8394363,19.906869 10.804551,19.906869 L10.804551,19.9078759 Z M30.1282748,19.4135266 C31.7060081,19.4135266 32.4758296,18.4268419 32.4758296,14.4368094 L32.4758296,6.9148481 C32.4758296,1.93813084 31.9365536,0.00100682121 28.7039045,0.00100682121 L22.162426,0.00100682121 L22.162426,4.97772408 L24.12507,4.97772408 C25.1184205,4.97772408 25.2316885,5.95031337 25.2397075,7.16554658 L25.2397075,12.5369378 C25.2397075,14.2847794 25.0492568,14.4368094 24.5480709,14.4368094 L21.1239688,14.4368094 L21.1239688,19.4135266 L30.1292772,19.4135266 L30.1282748,19.4135266 Z M41.750776,19.4135266 L41.750776,3.76148405 C41.750776,1.52030003 40.5970461,0.00100682121 37.8645805,0.00100682121 L33.5543817,0.00100682121 L33.5543817,4.97671726 C34.2470206,4.97671726 34.5547488,5.35729568 34.5547488,6.07918649 L34.5547488,19.4135266 L41.7517784,19.4135266 L41.750776,19.4135266 Z M53.8393801,19.4135266 C57.6864832,19.4135266 62.8426838,17.057565 62.8426838,8.16733369 C62.8426838,1.40753606 61.1887703,0.00201364243 57.4178475,0.00201364243 L42.9095179,0.00201364243 L42.9095179,4.9787309 L53.453467,4.9787309 C55.0692904,4.9787309 55.4542011,5.39656171 55.4542011,8.96674973 C55.4542011,12.7654862 53.8764679,14.4378162 51.6451882,14.4378162 L51.6451882,19.4145335 L53.8383778,19.4145335 L53.8393801,19.4135266 Z M74.0050963,19.906869 C79.1993871,19.906869 83.9716793,18.0835158 83.9716793,11.0559037 L83.9716793,4.14105565 C83.9716793,0.873920814 82.5483113,0.00100682121 80.7781227,0.00100682121 L67.1157948,0.00100682121 C65.2313358,0.00100682121 63.8841481,0.950439226 63.8841481,4.14105565 L63.8841481,11.0559037 C63.8841481,17.9314858 69.0403487,19.906869 74.0050963,19.906869 L74.0050963,19.906869 Z M93.2105403,11.2079338 L93.2105403,3.76148405 C93.2105403,1.52030003 92.4417211,0 89.7092556,0 L85.0532385,0 L85.0532385,4.97671726 C85.82306,4.97671726 86.0155154,5.35729568 86.0155154,6.07918649 L86.0155154,11.2079338 L93.2115427,11.2079338 L93.2105403,11.2079338 Z M108.652078,19.4135266 L108.652078,8.77646052 C108.652078,6.8010773 109.036989,5.47106648 109.80681,4.97671726 L112,4.97671726 L112,0.00100682121 L94.2219335,0.00100682121 L94.2219335,4.97671726 L103.918878,4.97671726 C102.841329,5.66135568 101.494141,7.40819049 101.494141,10.2202421 L101.494141,19.4125198 L108.652078,19.4125198 L108.652078,19.4135266 Z M74.0050963,14.8536334 C72.1186326,14.8536334 71.0029927,13.639407 71.0029927,11.5492461 L71.0029927,6.99136651 C71.0029927,5.39555488 71.1563556,4.97772408 72.1577251,4.97772408 L75.7361925,4.97772408 C76.7365595,4.97772408 76.8518323,5.39555488 76.8518323,6.99136651 L76.8518323,11.5492461 C76.8518323,13.6766594 75.8905577,14.8536334 74.0050963,14.8536334 L74.0050963,14.8536334 Z M50.1055451,26.3344157 L50.1055451,8.31634323 L43.0638831,8.31634323 L43.0638831,26.3344157 L50.1055451,26.3344157 Z M54.9500081,39.9989932 C70.8616583,39.9989932 94.2931019,37.0993481 107.313912,27.5355534 C107.391094,27.4791714 108.255139,26.8418536 108.563869,26.5619573 C108.650073,26.4834252 108.803436,26.304211 108.926728,26.1189559 C109.083098,25.8843666 109.155269,25.741398 109.249492,25.4735835 C109.500085,24.7567268 109.486051,24.2956027 109.443952,23.5384732 C109.401852,22.7702686 109.302617,22.1691963 109.02897,21.6094037 C108.966823,21.4835511 108.923721,21.3979713 108.798424,21.3315211 C108.77255,21.317681 108.744888,21.3075157 108.71623,21.3013164 L108.630026,21.2942687 C108.456616,21.298296 108.277191,21.4090463 108.198004,21.4714692 C96.3549807,30.7261698 69.777092,32.9029173 54.9349725,32.9029173 L54.5340238,32.9029173 C39.6888972,32.9029173 13.1130133,30.7261698 1.26999026,21.4714692 C1.16823928,21.3910811 1.05020486,21.3340356 0.924171985,21.3043369 L0.837968009,21.2942687 C0.779255723,21.2918984 0.720922415,21.3047263 0.668567172,21.3315211 C0.544273067,21.3969644 0.501171079,21.4835511 0.439024026,21.6094037 C0.166378892,22.1681895 0.0661417108,22.7702686 0.0240420946,23.5384732 C-0.0180575217,24.2956027 -0.0320907271,24.7567268 0.218502227,25.4735835 C0.311722806,25.741398 0.384895948,25.8843666 0.541265951,26.1179491 C0.664557685,26.304211 0.817920573,26.4834252 0.904124549,26.5609504 C1.21285507,26.8428604 2.07689957,27.4791714 2.1540822,27.5355534 C15.1748921,37.0993481 38.6063357,40 54.5179859,40 L54.9500081,39.9989932 Z"
+												id="Shape"
+											></path>
+										</g>
+									</g>
+								</g>
+							</g>
+						</g>
+					</svg>
+				</a>
+				<ul class="footer-socials">
+					<li>
+						<a href="#"><img src="./assets/img/twitter-icon.svg" alt="twitter" /></a>
+					</li>
+					<li>
+						<a href="#"><img src="./assets/img/instagram-icon.svg" alt="intagram" /></a>
+					</li>
+					<li>
+						<a href="#"><img src="./assets/img/youtube-icon.svg" alt="youtube" /></a>
+					</li>
+					<li>
+						<a href="#"><img src="./assets/img/facebook-icon.svg" alt="facebook" /></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="footer__bottom">
+			<ul class="footer__bottom-list">
+				<li><a href="#">לאתר דיסקונט</a></li>
+				<li><a href="#">Discount Open Banking</a></li>
+				<li><a href="#">אבטחת מידע</a></li>
+				<li><a href="#">תנאי שימוש וחיסיון המידע ֿ מדיניות הפרטיות</a></li>
+
+			</ul>
+
+		</div>
+	</div>
+</footer>
+
+
+		<script src="./assets/js/common.js"></script>
+		<script src="./assets/js/sections/header.js"></script>
+		<script src="./assets/js/sections/footer.js"></script>
+		<script type="text/javascript" src="./assets/js/autoComplete.js"></script>
+		<script type="text/javascript" src="./assets/js/sections/contact-form.js"></script>
+	</body>
+</html>

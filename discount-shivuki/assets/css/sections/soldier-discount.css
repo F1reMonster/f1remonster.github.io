@@ -1,0 +1,70 @@
+.soldier-discount {
+  padding: 4.6875em 0 2.625em;
+}
+@media screen and (max-width: 767px) {
+  .soldier-discount {
+    padding: 2em 0 42px;
+  }
+}
+.soldier-discount .wrap {
+  display: flex;
+}
+@media screen and (max-width: 767px) {
+  .soldier-discount .wrap {
+    display: block;
+  }
+}
+.soldier-discount .txt-part {
+  flex-basis: 35em;
+  margin-top: 3.75em;
+  margin-inline-end: 1.25em;
+}
+@media screen and (max-width: 767px) {
+  .soldier-discount .txt-part {
+    text-align: center;
+    margin-top: 1.25em;
+  }
+}
+@media screen and (max-width: 767px) {
+  .soldier-discount .txt {
+    font-size: 1em;
+    line-height: 1.625;
+  }
+}
+.soldier-discount .typical-header {
+  letter-spacing: -0.9px;
+  margin-bottom: 10px;
+  text-align: initial;
+}
+@media screen and (max-width: 767px) {
+  .soldier-discount .typical-header {
+    text-align: center;
+  }
+}
+.soldier-discount .img-part {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (max-width: 767px) {
+  .soldier-discount .img-part {
+    display: none;
+  }
+}
+.soldier-discount .img-part img {
+  display: block;
+}
+.soldier-discount .link-wrap {
+  margin-top: 3.125em;
+}
+@media screen and (max-width: 767px) {
+  .soldier-discount .link-wrap {
+    margin-top: 2.0625em;
+  }
+}
+@media screen and (max-width: 767px) {
+  .soldier-discount .link-wrap .typical-btn-bigger {
+    min-width: 11.25em;
+  }
+}

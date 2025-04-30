@@ -1,0 +1,47 @@
+.index-list {
+	.title-1 {
+		+ ul {
+			margin-top: 20px;
+		}
+	}
+
+	ul {
+		column-count: 2;
+		gap: 20px;
+
+		li {
+			page-break-inside: avoid;
+			padding-bottom: 20px;
+
+			> a {
+				display: flex;
+				flex-flow: column;
+
+				.title,
+				.subtitle {
+					transition: text-shadow 0.2s ease-out;
+				}
+
+				.title {
+					font-size: rem(28);
+					font-weight: 700;
+					color: var(--accent);
+				}
+
+				.subtitle {
+					color: var(--text-muted);
+				}
+
+				@include hover-supported {
+					.title {
+						text-shadow: 0 0 0.5px var(--accent), 0 0 0.5px var(--accent);
+					}
+
+					.subtitle {
+						text-shadow: 0 0 0.5px var(--black), 0 0 0.5px var(--black);
+					}
+				}
+			}
+		}
+	}
+}

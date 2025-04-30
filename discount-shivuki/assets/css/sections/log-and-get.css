@@ -1,0 +1,98 @@
+.log-and-get {
+  position: relative;
+  text-align: center;
+  padding: 3.4375em 0px 4.6875em;
+}
+@media (max-width: 767px) {
+  .log-and-get {
+    padding: 1.875em 0 2.5em;
+    background-clip: content-box;
+    background-color: #ecf8e6;
+  }
+}
+.log-and-get .log-and-get-header {
+  font: 2.75em/1.1 "rubik-bold", sans-serif;
+  color: #00a661;
+  margin: 0 0 0.6818181818em;
+}
+@media (max-width: 767px) {
+  .log-and-get .log-and-get-header {
+    font-size: 1.875em;
+    line-height: 1.0666666667;
+    margin: 1em 0 0.6em;
+  }
+}
+.log-and-get .log-and-get-header span {
+  display: block;
+  font-size: 0.5454545455em;
+  line-height: 1.3333333333;
+  color: #000;
+}
+@media (max-width: 767px) {
+  .log-and-get .log-and-get-header span {
+    font-size: 0.6666666667em;
+    line-height: 1.6;
+  }
+}
+.log-and-get .wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.75em;
+}
+.log-and-get .wrap img:first-of-type {
+  transform: rotate(-180deg);
+}
+@media (max-width: 767px) {
+  .log-and-get .wrap {
+    margin-bottom: 1.875em;
+  }
+}
+.log-and-get .arr-img {
+  width: 6.3125em;
+}
+@media (max-width: 767px) {
+  .log-and-get .arr-img {
+    width: 4.5625em;
+  }
+}
+.log-and-get .log-btn {
+  font: 1.3125em/1.1363636364 "rubik-bold", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 5.5238095238em;
+  height: 5.5238095238em;
+  border-radius: 50%;
+  background: linear-gradient(130.67deg, #8FE600 0.1%, #6924E8 12.94%, #A07CE1 100%);
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.5);
+}
+@media (max-width: 767px) {
+  .log-and-get .log-btn {
+    font-size: 1em;
+    width: 5.75em;
+    height: 5.75em;
+  }
+}
+.log-and-get .bg-wrap {
+  position: relative;
+}
+@media (max-width: 767px) {
+  .log-and-get .bg-wrap {
+    display: none;
+  }
+}
+.log-and-get .log-bg {
+  position: absolute;
+  z-index: -1;
+  top: -9.1875em;
+  left: 50%;
+  max-width: none;
+  transform: translateX(-50%);
+}
+html[dir=ltr] .log-and-get .log-bg {
+  transform: translateX(-50%) scaleX(-1);
+}

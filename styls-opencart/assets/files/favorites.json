@@ -1,0 +1,50 @@
+[
+	{
+		"productImage": "assets/img/product-cards/1.png",
+		"productTitle": "Парфумована вода Tom Ford Oud Wood унісекс",
+		"productPrice": "<span>від</span> 6 272 грн",
+		"productLink": "#",
+		"productFavoriteTrue": true,
+		"productFavoriteFalse": false
+	},
+	{
+		"productImage": "assets/img/product-cards/2.png",
+		"productTitle": "Парфумована вода Zarkoperfume Pink Molécule 090.09 унісекс",
+		"productPrice": "<span>від</span> 2 272 грн",
+		"productLink": "#",
+		"productFavoriteTrue": true,
+		"productFavoriteFalse": false
+	},
+	{
+		"productImage": "assets/img/product-cards/3.png",
+		"productTitle": "Духи Tiziana Terenzi Luna Collection Andromeda для чоловіків та жінок",
+		"productPrice": "<span>від</span> 4 964 грн",
+		"productLink": "#",
+		"productFavoriteTrue": true,
+		"productFavoriteFalse": false
+	},
+	{
+		"productImage": "assets/img/product-cards/1.png",
+		"productTitle": "Парфумована вода Tom Ford Oud Wood унісекс",
+		"productPrice": "<span>від</span> 6 272 грн",
+		"productLink": "#",
+		"productFavoriteTrue": true,
+		"productFavoriteFalse": false
+	},
+	{
+		"productImage": "assets/img/product-cards/2.png",
+		"productTitle": "Парфумована вода Zarkoperfume Pink Molécule 090.09 унісекс",
+		"productPrice": "<span>від</span> 2 272 грн",
+		"productLink": "#",
+		"productFavoriteTrue": true,
+		"productFavoriteFalse": false
+	},
+	{
+		"productImage": "assets/img/product-cards/1.png",
+		"productTitle": "Парфумована вода Tom Ford Oud Wood унісекс",
+		"productPrice": "<span>від</span> 6 272 грн",
+		"productLink": "#",
+		"productFavoriteTrue": true,
+		"productFavoriteFalse": false
+	}
+]

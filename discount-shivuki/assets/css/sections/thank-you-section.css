@@ -1,0 +1,88 @@
+.thank-you-page-wrap {
+  overflow: hidden;
+}
+
+.thank-you {
+  position: relative;
+  padding: 2.8125em 0 7.5em;
+}
+@media screen and (max-width: 767px) {
+  .thank-you {
+    padding: 3.625em 0 1.875em;
+  }
+}
+.thank-you .wrap {
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 767px) {
+  .thank-you .wrap {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+}
+.thank-you .img-wrap {
+  margin-inline-start: auto;
+}
+@media screen and (max-width: 767px) {
+  .thank-you .img-wrap {
+    margin-inline-start: 0;
+  }
+}
+.thank-you .img-wrap img {
+  display: block;
+  margin: 0 auto;
+}
+.thank-you .txt-wrap {
+  padding-top: 2.5em;
+  margin-inline-end: 20px;
+  max-width: 35.0625em;
+}
+@media screen and (max-width: 767px) {
+  .thank-you .txt-wrap {
+    padding-top: 2.5em;
+    margin-inline-end: 0;
+    max-width: none;
+    width: 100%;
+  }
+}
+.thank-you .msg {
+  margin-top: 0.9333333333em;
+  font: 1.875em/1.4 "rubik-reg", sans-serif;
+  color: #3c3f45;
+}
+@media screen and (max-width: 767px) {
+  .thank-you .msg {
+    font-size: 1em;
+    line-height: 1.5;
+    margin-top: 0.9375em;
+  }
+}
+.thank-you .msg p {
+  margin: 0;
+}
+.thank-you .btn-wrap {
+  margin-top: 2.125em;
+}
+@media screen and (max-width: 767px) {
+  .thank-you .btn-wrap {
+    display: flex;
+    justify-content: center;
+  }
+}
+.thank-you .thank-you-bg {
+  position: absolute;
+  inset-inline-end: -12.3958333333vw;
+  bottom: -14.7395833333vw;
+  z-index: -1;
+  width: 54vw;
+}
+html[dir=ltr] .thank-you .thank-you-bg {
+  transform: scaleX(-1);
+}
+
+@media screen and (max-width: 767px) {
+  .thank-you .thank-you-bg {
+    display: none;
+  }
+}

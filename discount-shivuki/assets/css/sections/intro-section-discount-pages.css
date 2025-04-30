@@ -1,0 +1,42 @@
+.intro-section--discount-pages .main-container {
+  position: relative;
+  z-index: 1;
+}
+.intro-section--discount-pages .header {
+  font-family: "rubik-medium", sans-serif;
+  font-size: 5em;
+  letter-spacing: -0.02em;
+}
+@media (max-width: 767px) {
+  .intro-section--discount-pages .header {
+    font-size: 3.125em;
+    letter-spacing: -0.0625em;
+  }
+}
+.intro-section--discount-pages .typical-header {
+  margin-bottom: 0.34em;
+  text-align: unset;
+}
+@media (max-width: 767px) {
+  .intro-section--discount-pages .typical-header {
+    margin-bottom: 17, 30;
+  }
+}
+.intro-section--discount-pages .btns-wrap {
+  display: flex;
+  gap: 1.25em;
+  margin-top: 2.5em;
+}
+.intro-section--discount-pages .btns-wrap .primary-btn,
+.intro-section--discount-pages .btns-wrap .secondary-btn-purple {
+  min-width: 11.25em;
+}
+@media (max-width: 767px) {
+  .intro-section--discount-pages .btns-wrap {
+    gap: 1em;
+  }
+  .intro-section--discount-pages .btns-wrap .primary-btn,
+.intro-section--discount-pages .btns-wrap .secondary-btn-purple {
+    min-width: 7.75em;
+  }
+}

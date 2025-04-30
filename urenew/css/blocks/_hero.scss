@@ -1,0 +1,150 @@
+.hero {
+	// min-height: rem(800);
+	color: var(--text-white);
+
+	&__wrapper {
+		display: flex;
+		flex-flow: column;
+	}
+
+	&--feijoa {
+		background-color: var(--feijoa);
+	}
+
+	&--hackaton {
+		overflow: clip;
+
+		padding-top: clamp(1.25rem, -0.3125rem + 7.8125vw, 9.0625rem);
+		padding-bottom: clamp(1.25rem, 0.25rem + 5vw, 6.25rem);
+
+		.section__subtitle {
+			padding: rem(60) 0;
+			max-width: rem(800);
+
+			@media (max-width: em(1023)) {
+				padding: rem(30) 0;
+			}
+		}
+
+		.hero {
+			&__wrapper {
+				position: relative;
+				z-index: 1;
+			}
+
+			&__image {
+				position: absolute;
+				z-index: -1;
+				top: 50%;
+				right: -40%;
+				transform: translateY(-50%);
+
+				@media (max-width: em(1023)) {
+					display: none;
+				}
+			}
+		}
+
+		@media (max-width: em(1023)) {
+			background-image: url("../img/icons/line-zigzag.svg");
+			background-position: left center;
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+	}
+
+	&--projects {
+		overflow: clip;
+
+		padding-top: clamp(1.25rem, -0.3125rem + 7.8125vw, 9.0625rem);
+		padding-bottom: clamp(1.25rem, -0.0625rem + 6.5625vw, 7.8125rem);
+		// min-height: rem(555);
+
+		.section__title {
+			line-height: 99%;
+		}
+
+		.hero {
+			&__wrapper {
+				position: relative;
+				z-index: 1;
+			}
+
+			&__image {
+				position: absolute;
+				z-index: -1;
+				width: clamp(6.25rem, 1.875rem + 21.875vw, 28.125rem);
+				aspect-ratio: 0.93;
+				top: rem(-110);
+				right: rem(30);
+
+				img {
+					width: 100%;
+					height: 100%;
+					object-fit: contain;
+				}
+
+				@media (max-width: em(1365)) {
+					top: 50%;
+					right: 0;
+					transform: translateY(-50%);
+				}
+			}
+		}
+	}
+
+	&--project {
+		padding-top: clamp(1.25rem, -0.3125rem + 7.8125vw, 9.0625rem);
+		padding-bottom: clamp(1.25rem, -0.0625rem + 6.5625vw, 7.8125rem);
+		// min-height: rem(555);
+
+		.section__subtitle {
+			padding: rem(60) 0;
+			max-width: rem(800);
+
+			@media (max-width: em(1023)) {
+				padding: rem(30) 0;
+			}
+		}
+
+		.hero {
+			&__wrapper {
+				display: flex;
+				flex-flow: row;
+				align-items: center;
+				gap: rem(60);
+
+				@media (max-width: em(1023)) {
+					gap: rem(20);
+				}
+
+				@media (max-width: em(767)) {
+					flex-flow: column;
+
+					.section__title  {
+						text-align: center;
+					}
+				}
+			}
+
+			&__image {
+				flex-shrink: 0;
+				border-radius: 50%;
+				width: rem(280);
+				aspect-ratio: 1;
+				overflow: clip;
+
+				img {
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+					object-position: center;
+				}
+
+				@media (max-width: em(1023)) {
+					width: rem(200);
+				}
+			}
+		}
+	}
+}

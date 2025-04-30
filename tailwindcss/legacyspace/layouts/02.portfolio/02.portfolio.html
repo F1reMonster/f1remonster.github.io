@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+<title>Legacy space - Portfolio page</title>
+<meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=yes">
+<link rel="canonical" href='' />
+<meta name="MobileOptimized" content="width"/>
+<meta name="HandheldFriendly" content="True"/>
+<meta name="viewport" content="initial-scale=1.0, width=device-width">
+<link rel="stylesheet" type="text/css" href="../../css/style.css" />
+
+	</head>
+
+	<body class="flex flex-col h-full font-inter">
+		<header class="border-b border-neutral-black-5">
+	<div class="container">
+		<div class="flex items-center justify-between py-3 lg:py-7">
+			<button id="burgerMenu" class="flex items-center justify-center flex-shrink-0 w-10 h-10 rounded-6lx bg-neutral-black-3 text-primary-black lg:hidden">
+				<span class="icon icon--burger"></span>
+			</button>
+			<a href="../../index.html" class="flex-shrink-0 hidden lg:block">
+				<img decoding="async" src="../../img/svg/logo.svg" title="" alt="" loading="lazy" class="w-25.5 lg:w-35" />
+			</a>
+			<div class="flex items-center lg:gap-2.5 gap-2">
+				<a href="#" class="flex h-10 w-full items-center justify-center rounded-xl bg-primary px-4 py-2.5 font-semibold text-primary-100 transition-all duration-300 hover:bg-primary-hover lg:hidden"><span>Upgrade plan</span></a>
+				<button class="items-center justify-center flex-shrink-0 hidden transition-all duration-300 lg:flex lg:w-12 lg:h-12 rounded-6lx bg-neutral-black-3 text-primary-black lg:hover:bg-neutral-black-5">
+					<span class="icon icon--search"></span>
+				</button>
+				<button class="flex items-center justify-center flex-shrink-0 w-10 h-10 transition-all duration-300 lg:w-12 lg:h-12 rounded-6lx lg:bg-neutral-black-3 text-primary-black lg:hover:bg-neutral-black-5">
+					<span class="icon icon--notification"></span>
+				</button>
+				<div class="relative items-center flex-shrink-0 hidden gap-3 cursor-pointer lg:flex group">
+					<div class="flex items-center justify-center flex-shrink-0 w-12 h-12 rounded-6lx bg-neutral-black-3 text-primary-black">
+						<span>A</span>
+					</div>
+					<div class="">
+						<div class="flex items-center gap-1.5">
+							<div>Andrii</div>
+							<span class="transition-all duration-300 transform icon icon--chevron-down group-hover:rotate-x-180"></span>
+						</div>
+					</div>
+					<div class="pt-4 mt-8 opacity-0 lg:pointer-events-none lg:absolute lg:right-0 lg:top-0 lg:z-50 lg:transition-all lg:duration-300 lg:group-hover:pointer-events-auto lg:group-hover:translate-y-4 lg:group-hover:opacity-100">
+						<div class="bg-white w-68 rounded-3xl shadow-header-menu">
+							<div class="px-6 pt-6 pb-5 text-lg font-bold border-b border-b-neutral-black-5 text-primary-black">Andrii Chernov</div>
+							<ul class="flex flex-col px-3 pt-5 pb-6">
+								<li>
+									<a href="#" class="flex items-center gap-5 px-3 py-3 transition-all duration-300 rounded-xl text-primary-black hover:bg-neutral-black-3">
+										<span class="icon icon--user"></span>
+										<span class="text-sm font-medium">Profile Details</span>
+									</a>
+								</li>
+								<li>
+									<a href="#" class="flex items-center gap-5 px-3 py-3 transition-all duration-300 rounded-xl text-primary-black hover:bg-neutral-black-3">
+										<span class="icon icon--checklist-money"></span>
+										<span class="text-sm font-medium">My plan</span>
+									</a>
+								</li>
+								<li>
+									<a href="#" class="flex items-center gap-5 px-3 py-3 transition-all duration-300 rounded-xl text-primary-black hover:bg-neutral-black-3">
+										<span class="icon icon--exit"></span>
+										<span class="text-sm font-medium">Log Out</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+
+		<main class="flex-grow py-4 lg:py-12">
+			<div class="container">
+				<div class="flex gap-13">
+					<aside class="hidden w-fit max-w-50 lg:block">
+	<a href="#" class="flex h-10 w-full items-center justify-center gap-2 rounded-xl bg-primary px-4 py-2.5 text-sm font-semibold text-primary-100 transition-all duration-300 hover:bg-primary-hover">
+		<span class="w-5 h-5 icon icon--arrow-nav"></span>
+		<span>Upgrade plan</span>
+	</a>
+
+	<ul class="flex flex-col gap-2 mt-10">
+		<li>
+			<a href="#" class="flex items-center gap-4.5 rounded-xl px-4 py-2.5 text-neutral-black-70 transition-all duration-300 hover:bg-neutral-black-3">
+				<span class="icon icon--dashboard"></span>
+				<span class="leading-150">Dashboard</span>
+			</a>
+		</li>
+		<li>
+			<a href="#" class="flex items-center gap-4.5 rounded-xl px-4 py-2.5 font-medium text-primary-black transition-all duration-300 hover:bg-neutral-black-3">
+				<span class="icon icon--portfolio"></span>
+				<span class="leading-150">Portfolio</span>
+			</a>
+		</li>
+		<li>
+			<a href="#" class="flex items-center gap-4.5 rounded-xl px-4 py-2.5 text-neutral-black-70 transition-all duration-300 hover:bg-neutral-black-3">
+				<span class="icon icon--collections"></span>
+				<span class="leading-150">Collections</span>
+			</a>
+		</li>
+		<li>
+			<a href="#" class="flex items-center gap-4.5 rounded-xl px-4 py-2.5 text-neutral-black-70 transition-all duration-300 hover:bg-neutral-black-3">
+				<span class="icon icon--identification"></span>
+				<span class="leading-150">Identification</span>
+			</a>
+		</li>
+		<li>
+			<a href="#" class="flex items-center gap-4.5 rounded-xl px-4 py-2.5 text-neutral-black-70 transition-all duration-300 hover:bg-neutral-black-3">
+				<span class="icon icon--requests"></span>
+				<span class="leading-150">Requests</span>
+			</a>
+		</li>
+	</ul>
+</aside>
+
+					<div class="flex-grow">
+						<div class="mx-auto max-w-225">
+							<div class="flex flex-col gap-6 md:flex-row md:gap-2">
+								<div>
+									<h1 class="font-semibold tracking-tight text-sm2x leading-125 text-primary-black lg:text-base2x">Portfolio</h1>
+									<p class="mt-1 text-sm leading-150 text-neutral-black-70 lg:text-base">Short text description</p>
+								</div>
+
+								<div class="relative flex-shrink-0 order-1 group w-fit md:order-none md:ml-auto">
+									<button class="flex items-center gap-1 text-sm font-medium md:h-12 md:px-5 md:py-3.5">
+										<span>All collections</span>
+										<span class="transition-all duration-300 transform icon icon--chevron-down group-hover:rotate-x-180"></span>
+									</button>
+									<div class="absolute top-0 left-0 pt-4 transition-all duration-300 opacity-0 pointer-events-none z-2 group-hover:pointer-events-auto group-hover:translate-y-4 group-hover:opacity-100 md:left-1/2 md:mt-4 md:-translate-x-1/2">
+										<div class="bg-white border w-55 rounded-xl border-neutral-black-5 shadow-custom">
+											<ul class="flex flex-col py-2">
+												<li>
+													<a href="#" class="flex items-center gap-2 px-4 py-2.5 text-primary-black transition-all duration-300 hover:bg-neutral-black-3">
+														<span class="icon icon--archive"></span>
+														<span class="text-sm font-medium">Archive</span>
+													</a>
+												</li>
+												<li>
+													<a href="#" class="flex items-center gap-2 px-4 py-2.5 text-primary-black transition-all duration-300 hover:bg-neutral-black-3">
+														<span class="icon icon--share"></span>
+														<span class="text-sm font-medium">Transfer ownership</span>
+													</a>
+												</li>
+												<li>
+													<a href="#" class="flex items-center gap-2 px-4 py-2.5 text-error-60 transition-all duration-300 hover:bg-neutral-black-3">
+														<span class="icon icon--trash-bin"></span>
+														<span class="text-sm font-medium">Delete</span>
+													</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+
+								<button class="relative z-10 flex h-12 flex-shrink-0 items-center justify-center gap-2 rounded-xl bg-primary px-5 py-3.5 text-sm font-semibold text-primary-100 transition-all duration-300 hover:bg-primary-hover md:w-fit">
+									<span class="icon icon--plus"></span>
+									<span>Add an Asset</span>
+								</button>
+							</div>
+
+							<div class="mt-9 grid grid-cols-2 gap-x-3.75 gap-y-5 md:grid-cols-3 lg:mt-13 lg:gap-x-7.5 lg:gap-y-7.5">
+								<div class="relative group">
+									<div class="relative w-full h-30 overflow-clip rounded-xl xs:h-51">
+										<a href="#" class="absolute inset-0 block z-1"></a>
+										<div class="absolute inset-0 -z-1">
+											<img decoding="async" class="object-cover w-full h-full" src="../../img/portfolio/empty.webp" title="" alt="" loading="lazy" />
+										</div>
+
+										<img decoding="async" class="object-cover object-top w-full h-full transition-all duration-500 transform group-hover:scale-110" src="../../img/portfolio/img-01.webp" title="" alt="" loading="lazy" />
+									</div>
+									<div class="mt-3">
+										<div class="flex">
+											<span class="text-lg font-medium leading-133">
+												United Arab Coin
+												<span class="relative group/tooltip z-2 -mt-0.5 inline-block">
+													<svg class="inline-block w-5 h-5 lg:w-6 lg:h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+														<path d="M12 3.1001C16.667 8.0271 16.667 15.9731 12 20.9001" stroke="#9754EC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+														<path d="M11.9998 20.9001C7.33276 15.9731 7.33276 8.0271 11.9998 3.1001" stroke="#9754EC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+														<path d="M12 3C16.982 3 21 7.018 21 12C21 16.982 16.982 21 12 21" stroke="#9754EC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+														<path d="M12 21C7.018 21 3 16.982 3 12C3 7.018 7.018 3 12 3" stroke="#9754EC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+														<path d="M3.50977 9H20.4898" stroke="#9754EC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+														<path d="M3.50977 15H20.4898" stroke="#9754EC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+													</svg>
+
+													<span class="pointer-events-none absolute -top-10.5 left-1/2 -translate-x-1/2 rounded-xl bg-white px-3 py-2.5 opacity-0 shadow-header-menu transition-all duration-300 group-hover/tooltip:opacity-100 text-xs">
+														<span class="">Shared</span>
+														<span class="icon icon--triangle-down absolute -bottom-3.75 left-1/2 z-1 h-4 w-4 -translate-x-1/2 text-white"></span>
+													</span>
+												</span>
+											</span>
+										</div>
+
+										<div class="relative inline-flex mt-1">
+											<span class="opacity-90">$1.00/20.00</span>
+											<div class="absolute top-0 -right-5 z-2">
+												<span class="icon icon--info h-3.5 w-3.5 lg:h-4 lg:w-4"></span>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="relative group">
+									<div class="relative w-full h-30 overflow-clip rounded-xl xs:h-51">
+										<a href="#" class="absolute inset-0 block z-1"></a>
+										<div class="absolute inset-0 -z-1">
+											<img decoding="async" class="object-cover w-full h-full" src="../../img/portfolio/empty.webp" title="" alt="" loading="lazy" />
+										</div>
+
+										<img decoding="async" class="object-cover w-full h-full transition-all duration-500 transform group-hover:scale-110" src="../../img/portfolio/img-02.webp" title="" alt="" loading="lazy" />
+									</div>
+									<div class="mt-3">
+										<div class="">
+											<span class="text-lg font-medium leading-133"> United Arab Coin</span>
+										</div>
+
+										<div class="relative inline-flex mt-1">
+											<span class="opacity-90">$1.00/20.00</span>
+											<div class="absolute top-0 -right-5 z-2">
+												<span class="icon icon--info h-3.5 w-3.5 lg:h-4 lg:w-4"></span>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="relative group">
+									<div class="relative w-full h-30 overflow-clip rounded-xl xs:h-51">
+										<a href="#" class="absolute inset-0 block z-1"></a>
+										<div class="absolute inset-0 -z-1">
+											<img decoding="async" class="object-cover w-full h-full" src="../../img/portfolio/empty.webp" title="" alt="" loading="lazy" />
+										</div>
+
+										<img decoding="async" class="object-cover w-full h-full transition-all duration-500 transform group-hover:scale-110" src="../../img/portfolio/img-03.webp" title="" alt="" loading="lazy" />
+									</div>
+									<div class="mt-3">
+										<div class="">
+											<span class="text-lg font-medium leading-133"> United Arab Coin</span>
+										</div>
+
+										<div class="relative inline-flex mt-1">
+											<span class="opacity-90">$1.00/20.00</span>
+											<div class="absolute top-0 -right-5 z-2">
+												<span class="icon icon--info h-3.5 w-3.5 lg:h-4 lg:w-4"></span>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="relative group">
+									<div class="relative w-full h-30 overflow-clip rounded-xl xs:h-51">
+										<a href="#" class="absolute inset-0 block z-1"></a>
+										<div class="absolute inset-0 -z-1">
+											<img decoding="async" class="object-cover w-full h-full" src="../../img/portfolio/empty.webp" title="" alt="" loading="lazy" />
+										</div>
+
+										<img decoding="async" class="object-cover w-full h-full transition-all duration-500 transform group-hover:scale-110" src="../../img/portfolio/img-02.webp" title="" alt="" loading="lazy" />
+									</div>
+									<div class="mt-3">
+										<div class="flex items-center gap-1">
+											<div class="text-lg font-medium leading-133">United Arab Coin</div>
+										</div>
+
+										<div class="relative inline-flex mt-1">
+											<span class="opacity-90">$1.00/20.00</span>
+											<div class="absolute top-0 -right-5 z-2">
+												<span class="icon icon--info h-3.5 w-3.5 lg:h-4 lg:w-4"></span>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="relative group">
+									<div class="relative w-full h-30 overflow-clip rounded-xl xs:h-51">
+										<a href="#" class="absolute inset-0 block z-1"></a>
+										<div class="absolute inset-0 -z-1">
+											<img decoding="async" class="object-cover w-full h-full" src="../../img/portfolio/empty.webp" title="" alt="" loading="lazy" />
+										</div>
+
+										<img decoding="async" class="object-cover w-full h-full transition-all duration-500 transform group-hover:scale-110" src="../../img/portfolio/img-03.webp" title="" alt="" loading="lazy" />
+									</div>
+									<div class="mt-3">
+										<div class="">
+											<span class="text-lg font-medium leading-133"> United Arab Coin</span>
+										</div>
+
+										<div class="relative inline-flex mt-1">
+											<span class="opacity-90">$1.00/20.00</span>
+											<div class="absolute top-0 -right-5 z-2">
+												<span class="icon icon--info h-3.5 w-3.5 lg:h-4 lg:w-4"></span>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="relative group">
+									<div class="relative w-full h-30 overflow-clip rounded-xl xs:h-51">
+										<a href="#" class="absolute inset-0 block z-1"></a>
+										<div class="absolute inset-0 -z-1">
+											<img decoding="async" class="object-cover w-full h-full" src="../../img/portfolio/empty.webp" title="" alt="" loading="lazy" />
+										</div>
+
+										<img decoding="async" class="object-cover object-top w-full h-full transition-all duration-500 transform group-hover:scale-110" src="../../img/portfolio/img-01.webp" title="" alt="" loading="lazy" />
+									</div>
+									<div class="mt-3">
+										<div class="">
+											<span class="text-lg font-medium leading-133"> United Arab Coin</span>
+										</div>
+
+										<div class="relative inline-flex mt-1">
+											<span class="opacity-90">$1.00/20.00</span>
+											<div class="absolute top-0 -right-5 z-2">
+												<span class="icon icon--info h-3.5 w-3.5 lg:h-4 lg:w-4"></span>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="relative group">
+									<div class="relative w-full h-30 overflow-clip rounded-xl xs:h-51">
+										<a href="#" class="absolute inset-0 block z-1"></a>
+										<div class="absolute inset-0 -z-1">
+											<img decoding="async" class="object-cover w-full h-full" src="../../img/portfolio/empty.webp" title="" alt="" loading="lazy" />
+										</div>
+									</div>
+									<div class="mt-3">
+										<div class="flex items-center gap-1">
+											<div class="text-lg font-medium leading-133">United Arab Coin</div>
+										</div>
+
+										<div class="relative inline-flex mt-1">
+											<span class="opacity-90">$1.00/20.00</span>
+											<div class="absolute top-0 -right-5 z-2">
+												<span class="icon icon--info h-3.5 w-3.5 lg:h-4 lg:w-4"></span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<div id="menuMobile" class="fixed top-0 bottom-0 left-0 z-50 w-full px-8 py-4 transition-all duration-300 bg-white -translate-x-p110 shadow-header-menu sd:w-90 lg:-translate-x-p110">
+	<div class="flex flex-col items-start">
+		<button id="closeMenuMobile" class="flex items-center justify-center">
+			<span class="icon icon--chevron-left"></span>
+		</button>
+		<div class="mt-8 h-[calc(var(--app-height)-5.5rem)] w-full flex-grow overflow-auto">
+			<div class="flex items-center gap-5">
+				<div class="flex items-center justify-center flex-shrink-0 rounded-full h-13 w-13 bg-neutral-black-3">
+					<span class="icon icon--user"></span>
+				</div>
+				<div class="text-2xl font-semibold">Andrii Chernov</div>
+			</div>
+			<div class="flex flex-wrap items-center gap-3 mt-5">
+				<a href="#" class="flex h-9 items-center gap-1 rounded-6.5lx border border-neutral-black-5 px-3 py-2 transition-all duration-300 hover:bg-neutral-black-3">
+					<span class="w-5 h-5 icon icon--user"></span>
+					<span class="text-sm font-medium">Profile Details</span>
+				</a>
+				<a href="#" class="flex h-9 items-center gap-1 rounded-6.5lx border border-neutral-black-5 px-3 py-2 transition-all duration-300 hover:bg-neutral-black-3">
+					<span class="w-5 h-5 icon icon--checklist-money"></span>
+					<span class="text-sm font-medium">My Plan</span>
+				</a>
+			</div>
+
+			<a href="#" class="mt-9 flex h-12 w-full items-center justify-center gap-2 rounded-xl bg-primary px-5 py-3.5 text-sm font-semibold text-primary-100 transition-all duration-300 hover:bg-primary-hover">
+				<span class="w-5 h-5 icon icon--arrow-nav"></span>
+				<span>Upgrade plan</span>
+			</a>
+
+			<ul class="mt-9">
+				<li class="pb-3 mb-3 border-b border-b-neutral-black-3">
+					<a href="#" class="flex items-center gap-5 py-2.5 font-medium">
+						<span class="icon icon--dashboard"></span>
+						<span class="leading-150">Dashboard</span>
+						<span class="ml-auto icon icon--chevron-right"></span>
+					</a>
+				</li>
+				<li class="pb-3 mb-3 border-b border-b-neutral-black-3">
+					<a href="#" class="flex items-center gap-5 py-2.5">
+						<span class="icon icon--portfolio"></span>
+						<span class="leading-150">Portfolio</span>
+						<span class="ml-auto icon icon--chevron-right"></span>
+					</a>
+				</li>
+				
+				<li class="pb-3 mb-3 border-b border-b-neutral-black-3">
+					<a href="#" class="flex items-center gap-5 py-2.5">
+						<span class="icon icon--collections"></span>
+						<span class="leading-150">Collections</span>
+						<span class="ml-auto icon icon--chevron-right"></span>
+					</a>
+				</li>
+				<li class="pb-3 mb-3 border-b border-b-neutral-black-3">
+					<a href="#" class="flex items-center gap-5 py-2.5">
+						<span class="icon icon--identification"></span>
+						<span class="leading-150">Identification</span>
+						<span class="ml-auto icon icon--chevron-right"></span>
+					</a>
+				</li>
+				<li class="pb-3 mb-3">
+					<a href="#" class="flex items-center gap-5 py-2.5">
+						<span class="icon icon--requests"></span>
+				<span class="leading-150">Requests</span>
+						<span class="ml-auto icon icon--chevron-right"></span>
+					</a>
+				</li>
+			</ul>
+
+			<a href="#" class="flex items-center justify-center h-12 gap-1 px-3 py-2 transition-all duration-300 border rounded-xl border-neutral-black-5 hover:bg-neutral-black-3">
+				<span class="text-sm font-medium">Sign Out</span>
+			</a>
+		</div>
+	</div>
+	<div class="z-30 invisible hidden overflow-clip bg-neutral-black-1/50 backdrop-blur-sm"></div>
+</div>
+
+ <script src="../../js/app.js"></script>
+
+	</body>
+</html>

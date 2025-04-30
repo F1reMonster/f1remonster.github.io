@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+<title>Legacy space - Portfolio page</title>
+<meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=yes">
+<link rel="canonical" href='' />
+<meta name="MobileOptimized" content="width"/>
+<meta name="HandheldFriendly" content="True"/>
+<meta name="viewport" content="initial-scale=1.0, width=device-width">
+<link rel="stylesheet" type="text/css" href="../../css/style.css" />
+
+	</head>
+
+	<body class="flex flex-col h-full font-inter">
+		<header class="border-b border-neutral-black-5">
+	<div class="container">
+		<div class="flex items-center justify-between py-3 lg:py-7">
+			<button id="burgerMenu" class="flex items-center justify-center flex-shrink-0 w-10 h-10 rounded-6lx bg-neutral-black-3 text-primary-black lg:hidden">
+				<span class="icon icon--burger"></span>
+			</button>
+			<a href="../../index.html" class="flex-shrink-0 hidden lg:block">
+				<img decoding="async" src="../../img/svg/logo.svg" title="" alt="" loading="lazy" class="w-25.5 lg:w-35" />
+			</a>
+			<div class="flex items-center lg:gap-2.5 gap-2">
+				<a href="#" class="flex h-10 w-full items-center justify-center rounded-xl bg-primary px-4 py-2.5 font-semibold text-primary-100 transition-all duration-300 hover:bg-primary-hover lg:hidden"><span>Upgrade plan</span></a>
+				<button class="items-center justify-center flex-shrink-0 hidden transition-all duration-300 lg:flex lg:w-12 lg:h-12 rounded-6lx bg-neutral-black-3 text-primary-black lg:hover:bg-neutral-black-5">
+					<span class="icon icon--search"></span>
+				</button>
+				<button class="flex items-center justify-center flex-shrink-0 w-10 h-10 transition-all duration-300 lg:w-12 lg:h-12 rounded-6lx lg:bg-neutral-black-3 text-primary-black lg:hover:bg-neutral-black-5">
+					<span class="icon icon--notification"></span>
+				</button>
+				<div class="relative items-center flex-shrink-0 hidden gap-3 cursor-pointer lg:flex group">
+					<div class="flex items-center justify-center flex-shrink-0 w-12 h-12 rounded-6lx bg-neutral-black-3 text-primary-black">
+						<span>A</span>
+					</div>
+					<div class="">
+						<div class="flex items-center gap-1.5">
+							<div>Andrii</div>
+							<span class="transition-all duration-300 transform icon icon--chevron-down group-hover:rotate-x-180"></span>
+						</div>
+					</div>
+					<div class="pt-4 mt-8 opacity-0 lg:pointer-events-none lg:absolute lg:right-0 lg:top-0 lg:z-50 lg:transition-all lg:duration-300 lg:group-hover:pointer-events-auto lg:group-hover:translate-y-4 lg:group-hover:opacity-100">
+						<div class="bg-white w-68 rounded-3xl shadow-header-menu">
+							<div class="px-6 pt-6 pb-5 text-lg font-bold border-b border-b-neutral-black-5 text-primary-black">Andrii Chernov</div>
+							<ul class="flex flex-col px-3 pt-5 pb-6">
+								<li>
+									<a href="#" class="flex items-center gap-5 px-3 py-3 transition-all duration-300 rounded-xl text-primary-black hover:bg-neutral-black-3">
+										<span class="icon icon--user"></span>
+										<span class="text-sm font-medium">Profile Details</span>
+									</a>
+								</li>
+								<li>
+									<a href="#" class="flex items-center gap-5 px-3 py-3 transition-all duration-300 rounded-xl text-primary-black hover:bg-neutral-black-3">
+										<span class="icon icon--checklist-money"></span>
+										<span class="text-sm font-medium">My plan</span>
+									</a>
+								</li>
+								<li>
+									<a href="#" class="flex items-center gap-5 px-3 py-3 transition-all duration-300 rounded-xl text-primary-black hover:bg-neutral-black-3">
+										<span class="icon icon--exit"></span>
+										<span class="text-sm font-medium">Log Out</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+
+		<main class="flex-grow py-4 lg:py-12">
+			<div class="container">
+				<div class="flex gap-13">
+					<aside class="hidden w-fit max-w-50 lg:block">
+	<a href="#" class="flex h-10 w-full items-center justify-center gap-2 rounded-xl bg-primary px-4 py-2.5 text-sm font-semibold text-primary-100 transition-all duration-300 hover:bg-primary-hover">
+		<span class="w-5 h-5 icon icon--arrow-nav"></span>
+		<span>Upgrade plan</span>
+	</a>
+
+	<ul class="flex flex-col gap-2 mt-10">
+		<li>
+			<a href="#" class="flex items-center gap-4.5 rounded-xl px-4 py-2.5 text-neutral-black-70 transition-all duration-300 hover:bg-neutral-black-3">
+				<span class="icon icon--dashboard"></span>
+				<span class="leading-150">Dashboard</span>
+			</a>
+		</li>
+		<li>
+			<a href="#" class="flex items-center gap-4.5 rounded-xl px-4 py-2.5 font-medium text-primary-black transition-all duration-300 hover:bg-neutral-black-3">
+				<span class="icon icon--portfolio"></span>
+				<span class="leading-150">Portfolio</span>
+			</a>
+		</li>
+		<li>
+			<a href="#" class="flex items-center gap-4.5 rounded-xl px-4 py-2.5 text-neutral-black-70 transition-all duration-300 hover:bg-neutral-black-3">
+				<span class="icon icon--collections"></span>
+				<span class="leading-150">Collections</span>
+			</a>
+		</li>
+		<li>
+			<a href="#" class="flex items-center gap-4.5 rounded-xl px-4 py-2.5 text-neutral-black-70 transition-all duration-300 hover:bg-neutral-black-3">
+				<span class="icon icon--identification"></span>
+				<span class="leading-150">Identification</span>
+			</a>
+		</li>
+		<li>
+			<a href="#" class="flex items-center gap-4.5 rounded-xl px-4 py-2.5 text-neutral-black-70 transition-all duration-300 hover:bg-neutral-black-3">
+				<span class="icon icon--requests"></span>
+				<span class="leading-150">Requests</span>
+			</a>
+		</li>
+	</ul>
+</aside>
+
+					<div class="flex-grow">
+						<div class="mx-auto max-w-225">
+							<div class="flex items-center justify-between gap-6">
+								<div>
+									<h1 class="font-semibold tracking-tight text-sm2x leading-125 text-primary-black lg:text-base2x">Asset details</h1>
+								</div>
+								<div class="flex items-center gap-2 lg:hidden">
+									<button class="flex items-center justify-center flex-shrink-0 w-10 h-10 transition-all duration-300 rounded-6lx bg-neutral-black-3 text-primary-black hover:bg-neutral-black-5">
+										<span class="icon icon--share-arrow"></span>
+									</button>
+									<div class="relative group">
+										<button class="flex items-center justify-center flex-shrink-0 w-10 h-10 transition-all duration-300 rounded-6lx bg-neutral-black-3 text-primary-black hover:bg-neutral-black-5">
+											<span class="icon icon--dots-menu"></span>
+										</button>
+										<div class="absolute top-0 right-0 z-50 pt-4 mt-4 transition-all duration-300 opacity-0 pointer-events-none group-hover:pointer-events-auto group-hover:translate-y-4 group-hover:opacity-100 lg:mt-8">
+											<div class="py-2 bg-white border w-50 rounded-xl border-neutral-black-5 shadow-custom">
+												<div class="overflow-auto max-h-66 scrollbar-thin">
+													<ul class="flex flex-col">
+														<li>
+															<a href="#" class="flex items-center gap-2 px-4 py-2.5 text-primary-black transition-all duration-300 hover:bg-neutral-black-3">
+																<span class="icon icon--pen-edit"></span>
+																<span class="text-sm font-medium">Edit</span>
+															</a>
+														</li>
+														<li>
+															<a href="#" class="flex items-center gap-2 px-4 py-2.5 text-primary-black transition-all duration-300 hover:bg-neutral-black-3">
+																<span class="icon icon--mailbox-archive"></span>
+																<span class="text-sm font-medium">Archive</span>
+															</a>
+														</li>
+														<li>
+															<a href="#" class="flex items-center gap-2 px-4 py-2.5 text-primary-black transition-all duration-300 hover:bg-neutral-black-3">
+																<span class="icon icon--hand-coins"></span>
+																<span class="text-sm font-medium">Transfer ownership</span>
+															</a>
+														</li>
+														<li>
+															<a href="#" class="flex items-center gap-2 px-4 py-2.5 text-error-60 transition-all duration-300 hover:bg-neutral-black-3">
+																<span class="icon icon--trash-bin"></span>
+																<span class="text-sm font-medium">Delete</span>
+															</a>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="mt-6">
+								<div class="flex items-center gap-5 lg:gap-8">
+									<div class="flex-shrink-0 w-20 h-20 rounded-full overflow-clip lg:h-28 lg:w-28">
+										<img decoding="async" class="object-cover w-full h-full" src="../../img/portfolio/img-02.webp" title="" alt="" loading="lazy" />
+									</div>
+									<div class="flex-grow">
+										<h2 class="text-xl font-semibold tracking-tight leading-125 text-primary-black lg:text-2xl">United Arab Coin</h2>
+										<div class="flex flex-wrap items-center justify-between gap-2 mt-4">
+											<ul class="flex flex-wrap gap-2">
+												<li class="flex h-10.5 w-fit flex-col justify-center rounded-xl border border-dashed border-neutral-black-30 px-2 text-xs lg:h-12 lg:px-3 lg:text-sm">
+													<p class="font-semibold">$20.00</p>
+													<p class="text-neutral-black-50">Cost</p>
+												</li>
+												<li class="flex h-10.5 w-fit flex-col justify-center rounded-xl border border-dashed border-neutral-black-30 px-2 text-xs lg:h-12 lg:px-3 lg:text-sm">
+													<p class="font-semibold">$20.00</p>
+													<p class="text-neutral-black-50">Evaluation</p>
+												</li>
+											</ul>
+											<div class="flex-shrink-0 hidden gap-2 lg:flex">
+												<a href="#" class="flex h-12 w-fit items-center justify-center gap-2 rounded-xl border border-neutral-black-5 px-5 py-3.5 text-sm transition-all duration-300 hover:bg-neutral-black-1">
+													<span class="icon icon--share-arrow"></span>
+													<span>Share</span>
+												</a>
+												<button class="flex h-12 w-12 items-center justify-center gap-2 rounded-xl border border-neutral-black-5 px-5 py-3.5 text-sm transition-all duration-300 hover:bg-neutral-black-1">
+													<span class="icon icon--pen-edit"></span>
+												</button>
+												<div class="relative group">
+													<button class="flex h-12 w-12 items-center justify-center gap-2 rounded-xl border border-neutral-black-5 px-5 py-3.5 text-sm transition-all duration-300 hover:bg-neutral-black-1">
+														<span class="icon icon--dots-menu"></span>
+													</button>
+													<div class="absolute top-0 right-0 z-50 pt-4 mt-4 transition-all duration-300 opacity-0 pointer-events-none group-hover:pointer-events-auto group-hover:translate-y-4 group-hover:opacity-100 lg:mt-8">
+														<div class="py-2 bg-white border w-50 rounded-xl border-neutral-black-5 shadow-custom">
+															<div class="overflow-auto max-h-66 scrollbar-thin">
+																<ul class="flex flex-col">
+																	<li>
+																		<a href="#" class="flex items-center gap-2 px-4 py-2.5 text-primary-black transition-all duration-300 hover:bg-neutral-black-3">
+																			<span class="icon icon--mailbox-archive"></span>
+																			<span class="text-sm font-medium">Archive</span>
+																		</a>
+																	</li>
+																	<li>
+																		<a href="#" class="flex items-center gap-2 px-4 py-2.5 text-primary-black transition-all duration-300 hover:bg-neutral-black-3">
+																			<span class="icon icon--hand-coins"></span>
+																			<span class="text-sm font-medium">Transfer ownership</span>
+																		</a>
+																	</li>
+																	<li>
+																		<a href="#" class="flex items-center gap-2 px-4 py-2.5 text-error-60 transition-all duration-300 hover:bg-neutral-black-3">
+																			<span class="icon icon--trash-bin"></span>
+																			<span class="text-sm font-medium">Delete</span>
+																		</a>
+																	</li>
+																</ul>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="mt-8 lg:mt-12">
+								<ul class="flex flex-wrap gap-2 lg:justify-between lg:gap-0 lg:border-b lg:border-b-neutral-black-3/80 lg:pb-3">
+									<li>
+										<button class="group relative h-7.5 rounded-3xl border border-neutral-black-5 px-2.5 py-1 text-sm leading-150 transition-all duration-300 lg:h-auto lg:border-0 lg:bg-transparent lg:px-2 lg:py-0 lg:text-base lg:hover:text-shadow-mid">
+											<span>Overview</span>
+											<span class="pointer-events-none absolute -bottom-3 left-0 right-0 hidden h-0.5 rounded-tl-sm rounded-tr-sm bg-primary-100 opacity-0 transition-all duration-300 group-hover:opacity-100 lg:block"></span>
+										</button>
+									</li>
+									<li>
+										<button class="group relative h-7.5 rounded-3xl border border-neutral-black-5 px-2.5 py-1 text-sm leading-150 transition-all duration-300 lg:h-auto lg:border-0 lg:bg-transparent lg:px-2 lg:py-0 lg:text-base lg:hover:text-shadow-mid">
+											<span>Gallery</span>
+											<span class="pointer-events-none absolute -bottom-3 left-0 right-0 hidden h-0.5 rounded-tl-sm rounded-tr-sm bg-primary-100 opacity-0 transition-all duration-300 group-hover:opacity-100 lg:block"></span>
+										</button>
+									</li>
+									<li>
+										<button class="group relative h-7.5 rounded-3xl border border-primary bg-primary px-2.5 py-1 text-sm leading-150 transition-all duration-300 text-shadow-mid lg:h-auto lg:border-0 lg:bg-transparent lg:px-2 lg:py-0 lg:text-base">
+											<span>Moments</span>
+											<span class="pointer-events-none absolute -bottom-3 left-0 right-0 hidden h-0.5 rounded-tl-sm rounded-tr-sm bg-primary-100 opacity-100 transition-all duration-300 lg:block"></span>
+										</button>
+									</li>
+
+									<li>
+										<button class="group relative h-7.5 rounded-3xl border border-neutral-black-5 px-2.5 py-1 text-sm leading-150 transition-all duration-300 lg:h-auto lg:border-0 lg:bg-transparent lg:px-2 lg:py-0 lg:text-base lg:hover:text-shadow-mid">
+											<span>Evaluations</span>
+											<span class="pointer-events-none absolute -bottom-3 left-0 right-0 hidden h-0.5 rounded-tl-sm rounded-tr-sm bg-primary-100 opacity-0 transition-all duration-300 group-hover:opacity-100 lg:block"></span>
+										</button>
+									</li>
+									<li>
+										<button class="group relative h-7.5 rounded-3xl border border-neutral-black-5 px-2.5 py-1 text-sm leading-150 transition-all duration-300 lg:h-auto lg:border-0 lg:bg-transparent lg:px-2 lg:py-0 lg:text-base lg:hover:text-shadow-mid">
+											<span>Documents</span>
+											<span class="pointer-events-none absolute -bottom-3 left-0 right-0 hidden h-0.5 rounded-tl-sm rounded-tr-sm bg-primary-100 opacity-0 transition-all duration-300 group-hover:opacity-100 lg:block"></span>
+										</button>
+									</li>
+									<li>
+										<button class="group relative h-7.5 rounded-3xl border border-neutral-black-5 px-2.5 py-1 text-sm leading-150 transition-all duration-300 lg:h-auto lg:border-0 lg:bg-transparent lg:px-2 lg:py-0 lg:text-base lg:hover:text-shadow-mid">
+											<span>Identifications</span>
+											<span class="pointer-events-none absolute -bottom-3 left-0 right-0 hidden h-0.5 rounded-tl-sm rounded-tr-sm bg-primary-100 opacity-0 transition-all duration-300 group-hover:opacity-100 lg:block"></span>
+										</button>
+									</li>
+								</ul>
+							</div>
+
+							<div class="mt-8 lg:mt-9">
+								<div class="flex flex-col justify-between gap-6 md:flex-row md:gap-13">
+									<div>
+										<h2 class="text-2xl font-semibold tracking-tight leading-125 text-primary-black">Moments</h2>
+										<p class="mt-1 text-sm leading-150 text-neutral-black-70 lg:text-base">Keep memories of items from your collection</p>
+									</div>
+									<div class="flex flex-col gap-2 md:flex-row">
+										<a href="#" class="flex h-12 md:w-fit items-center justify-center gap-2 rounded-xl border border-neutral-black-5 px-5 py-3.5 text-sm font-medium transition-all duration-300 hover:bg-neutral-black-1">
+											<span class="w-5 h-5 icon icon--upload-cloud"></span>
+											<span class="whitespace-nowrap">Upload from computer</span>
+										</a>
+
+										<a href="#" class="flex h-12 md:w-fit items-center justify-center gap-2 rounded-xl bg-primary px-5 py-3.5 text-sm font-semibold text-primary-100 transition-all duration-300 hover:bg-primary-hover md:order-none -order-1">
+											<span class="w-5 h-5 icon icon--microphone"></span>
+											<span class="whitespace-nowrap">Start recording</span>
+										</a>
+									</div>
+								</div>
+								
+								<div class="flex flex-col items-center justify-center lg:mt-13 mt-9">
+									<div class="lg:w-45 lg:h-45 w-35.5 h-35.5">
+										<img decoding="async" class="object-cover w-full h-full" src="../../img/moments.webp" title="Moments" alt="Moments" loading="lazy">
+									</div>
+									<h3 class="mt-3 text-lg font-medium text-center">What are moments?</h3>
+									<p class="mt-3 text-sm text-center max-w-96">A "moment" on our platform is the personal history or story behind a asset. It highlights significant experiences or memories connected to the item, creating a unique timeline of interactions or milestones that give it deeper meaning. Moments bring the story of an asset to life, reflecting the user’s journey with it.</p>
+								</div>
+
+								<!-- record -->
+								<div class="pb-6 mt-8 border-b border-b-neutral-black-3">
+									<div class="relative flex flex-col items-center justify-center px-10 py-8 rounded-3xl bg-primary-green-gray">
+										<p class="text-lg font-medium">Name moment</p>
+										<p class="mt-1 text-sm text-neutral-black-70">0:00:00</p>
+
+										<div class="mt-8">
+											<div class="relative flex flex-col items-center justify-center">
+												<button class="transition-all duration-300 peer active:scale-95">
+													<div class="h-12.5 w-12.5 rounded-full bg-red-orange shadow-record-big"></div>
+												</button>
+												<div class="mt-1 text-xs font-medium lg:pointer-events-none lg:absolute lg:-top-12 lg:left-1/2 lg:mt-0 lg:-translate-x-1/2 lg:rounded-xl lg:bg-white lg:px-3 lg:py-2.5 lg:opacity-0 lg:shadow-header-menu lg:transition-all lg:duration-300 lg:peer-hover:opacity-100">
+													<span>Start&nbsp;recording</span>
+													<span class="icon icon--triangle-down absolute -bottom-3.75 left-1/2 hidden h-4 w-4 -translate-x-1/2 text-white lg:block"></span>
+												</div>
+											</div>
+										</div>
+										<div class="mt-4 lg:absolute lg:bottom-8 lg:right-10 lg:mt-0">
+											<button class="flex flex-col items-center gap-1 text-purple lg:flex-row">
+												<div class="flex items-center justify-center rounded-full h-9 w-9 bg-purple/10 lg:h-auto lg:w-auto lg:bg-transparent">
+													<span class="w-5 h-5 icon icon--microphone2"></span>
+												</div>
+												<span class="text-xs font-medium lg:text-base lg:font-semibold">Microphone test</span>
+											</button>
+										</div>
+										<div class="absolute right-4 top-4">
+											<button class="flex items-center justify-center w-5 h-5">
+												<span class="w-4 h-4 icon icon--close"></span>
+											</button>
+										</div>
+									</div>
+								</div>
+								<!-- ./record -->
+
+								<!-- play -->
+								<div class="pb-6 mt-8 border-b border-b-neutral-black-3">
+									<div class="relative flex flex-col items-center justify-center px-10 py-8 rounded-3xl bg-primary-green-gray">
+										<p class="text-lg font-medium">Name moment</p>
+										<p class="mt-1 text-sm text-neutral-black-70">0:00:00</p>
+
+										<div class="mt-8">
+											<div class="relative flex items-center py-3 border-2 rounded-6lx border-neutral-black-50 lg:rounded-3xl lg:py-0 lg:h-12.5">
+												<div class="pointer-events-none absolute left-1/2 top-1/2 h-4.5 w-0.5 -translate-x-1/2 -translate-y-1/2 rounded-sm bg-neutral-black-5"></div>
+
+												<div class="relative flex flex-col items-center justify-center lg:p-1">
+													<button class="peer flex w-22 items-center justify-center transition-all duration-300 active:scale-95 lg:h-10.5 lg:hover:bg-neutral-black-5 rounded-3lx">
+														<span class="icon icon--pause h-4.5 w-4.5"></span>
+													</button>
+													<div class="mt-1 text-xs font-medium lg:pointer-events-none lg:absolute lg:-top-8 lg:left-1/2 lg:mt-0 lg:-translate-x-1/2 lg:rounded-xl lg:bg-white lg:px-3 lg:py-2.5 lg:opacity-0 lg:shadow-header-menu lg:transition-all lg:duration-300 lg:peer-hover:opacity-100">
+														<span class="font-semibold uppercase lg:font-normal lg:normal-case">Pause</span>
+														<span class="icon icon--triangle-down absolute -bottom-3.75 left-1/2 hidden h-4 w-4 -translate-x-1/2 text-white lg:block"></span>
+													</div>
+												</div>
+												<div class="relative flex flex-col items-center justify-center lg:p-1">
+													<button class="peer flex w-22 items-center justify-center text-red-orange transition-all duration-300 active:scale-95 lg:h-10.5 lg:hover:bg-neutral-black-5 rounded-3lx">
+														<span class="icon icon--stop h-4.5 w-4.5"></span>
+													</button>
+													<div class="mt-1 text-xs font-medium lg:pointer-events-none lg:absolute lg:-top-8 lg:left-1/2 lg:mt-0 lg:-translate-x-1/2 lg:rounded-xl lg:bg-white lg:px-3 lg:py-2.5 lg:opacity-0 lg:shadow-header-menu lg:transition-all lg:duration-300 lg:peer-hover:opacity-100">
+														<span class="font-semibold uppercase text-red-orange lg:font-normal lg:normal-case lg:text-current">Stop</span>
+														<span class="icon icon--triangle-down absolute -bottom-3.75 left-1/2 z-1 hidden h-4 w-4 -translate-x-1/2 text-white lg:block"></span>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="mt-4 lg:absolute lg:bottom-8 lg:right-10 lg:mt-0">
+											<button class="flex flex-col items-center gap-1 text-purple lg:flex-row">
+												<div class="flex items-center justify-center rounded-full h-9 w-9 bg-purple/10 lg:h-auto lg:w-auto lg:bg-transparent">
+													<span class="w-5 h-5 icon icon--microphone2"></span>
+												</div>
+												<span class="text-xs font-medium lg:text-base lg:font-semibold">Microphone test</span>
+											</button>
+										</div>
+										<div class="absolute right-4 top-4">
+											<button class="flex items-center justify-center w-5 h-5">
+												<span class="w-4 h-4 icon icon--close"></span>
+											</button>
+										</div>
+									</div>
+								</div>
+								<!-- ./play -->
+
+								<!-- resume -->
+								<div class="pb-6 mt-8 border-b border-b-neutral-black-3">
+									<div class="relative flex flex-col items-center justify-center px-10 py-8 rounded-3xl bg-primary-green-gray">
+										<p class="text-lg font-medium">Name moment</p>
+										<p class="mt-1 text-sm text-neutral-black-70">0:00:00</p>
+
+										<div class="mt-8">
+											<div class="relative flex items-center py-3 border-2 rounded-6lx border-neutral-black-50 lg:rounded-3xl lg:py-0 lg:h-12.5">
+												<div class="pointer-events-none absolute left-1/2 top-1/2 h-4.5 w-0.5 -translate-x-1/2 -translate-y-1/2 rounded-sm bg-neutral-black-5"></div>
+
+												<div class="relative flex flex-col items-center justify-center lg:p-1">
+													<button class="peer flex w-22 items-center justify-center transition-all duration-300 active:scale-95 lg:h-10.5 lg:hover:bg-neutral-black-5 rounded-3lx">
+														<span class="icon icon--resume h-4.5 w-6"></span>
+													</button>
+													<div class="mt-1 text-xs font-medium lg:pointer-events-none lg:absolute lg:-top-8 lg:left-1/2 lg:mt-0 lg:-translate-x-1/2 lg:rounded-xl lg:bg-white lg:px-3 lg:py-2.5 lg:opacity-0 lg:shadow-header-menu lg:transition-all lg:duration-300 lg:peer-hover:opacity-100">
+														<span class="font-semibold uppercase lg:font-normal lg:normal-case">Resume</span>
+														<span class="icon icon--triangle-down absolute -bottom-3.75 left-1/2 hidden h-4 w-4 -translate-x-1/2 text-white lg:block"></span>
+													</div>
+												</div>
+												<div class="relative flex flex-col items-center justify-center lg:p-1">
+													<button class="peer flex w-22 items-center justify-center text-red-orange transition-all duration-300 active:scale-95 lg:h-10.5 lg:hover:bg-neutral-black-5 rounded-3lx">
+														<span class="icon icon--stop h-4.5 w-4.5"></span>
+													</button>
+													<div class="mt-1 text-xs font-medium lg:pointer-events-none lg:absolute lg:-top-8 lg:left-1/2 lg:mt-0 lg:-translate-x-1/2 lg:rounded-xl lg:bg-white lg:px-3 lg:py-2.5 lg:opacity-0 lg:shadow-header-menu lg:transition-all lg:duration-300 lg:peer-hover:opacity-100">
+														<span class="font-semibold uppercase text-red-orange lg:font-normal lg:normal-case lg:text-current">Stop</span>
+														<span class="icon icon--triangle-down absolute -bottom-3.75 left-1/2 z-1 hidden h-4 w-4 -translate-x-1/2 text-white lg:block"></span>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="mt-4 lg:absolute lg:bottom-8 lg:right-10 lg:mt-0">
+											<button class="flex flex-col items-center gap-1 text-purple lg:flex-row">
+												<div class="flex items-center justify-center rounded-full h-9 w-9 bg-purple/10 lg:h-auto lg:w-auto lg:bg-transparent">
+													<span class="w-5 h-5 icon icon--microphone2"></span>
+												</div>
+												<span class="text-xs font-medium lg:text-base lg:font-semibold">Microphone test</span>
+											</button>
+										</div>
+										<div class="absolute right-4 top-4">
+											<button class="flex items-center justify-center w-5 h-5">
+												<span class="w-4 h-4 icon icon--close"></span>
+											</button>
+										</div>
+									</div>
+								</div>
+								<!-- ./resume -->
+
+								<div class="mt-6">
+									<div class="flex flex-col gap-6">
+										<div class="pb-6 border-b border-b-neutral-black-3">
+											<div class="flex gap-5">
+												<button class="flex h-12.5 w-12.5 items-center justify-center rounded-full bg-neutral-black-5 transition-all duration-200 active:scale-95">
+													<span class="icon icon--play ml-0.5"></span>
+												</button>
+												<div class="flex-1">
+													<div class="flex justify-between gap-4">
+														<h6 class="font-medium leading-150">The History of the Golden Book</h6>
+														<div class="relative group">
+															<button class="flex"><span class="icon icon--dots-menu"></span></button>
+															<div class="absolute top-0 right-0 pt-4 transition-all duration-300 opacity-0 pointer-events-none z-1 group-hover:pointer-events-auto group-hover:translate-y-4 group-hover:opacity-100">
+																<div class="w-56 py-2 bg-white border rounded-xl border-neutral-black-5 shadow-header-menu">
+																	<div class="overflow-auto max-h-66 scrollbar-thin">
+																		<p class="px-4 pt-2 pb-1 text-xs text-neutral-black-70">Actions</p>
+																		<ul class="flex flex-col">
+																			<li>
+																				<a href="#" class="flex items-center gap-2 px-4 py-2.5 text-primary-black transition-all duration-300 hover:bg-neutral-black-3">
+																					<span class="icon icon--input"></span>
+																					<span class="text-sm font-medium">Rename</span>
+																				</a>
+																			</li>
+																			<li>
+																				<a href="#" class="flex items-center gap-2 px-4 py-2.5 text-primary-black transition-all duration-300 hover:bg-neutral-black-3">
+																					<span class="icon icon--download"></span>
+																					<span class="text-sm font-medium">Download</span>
+																				</a>
+																			</li>
+
+																			<li>
+																				<a href="#" class="flex items-center gap-2 px-4 py-2.5 text-error-60 transition-all duration-300 hover:bg-neutral-black-3">
+																					<span class="icon icon--trash-bin"></span>
+																					<span class="text-sm font-medium">Delete</span>
+																				</a>
+																			</li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="flex justify-between gap-4 mt-1 text-sm text-neutral-black-70">
+														<p>4 min. 20 sec</p>
+														<p>24 May 2024</p>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="pb-6 border-b border-b-neutral-black-3">
+											<div class="flex gap-5">
+												<button class="flex h-12.5 w-12.5 items-center justify-center rounded-full bg-primary-black text-white transition-all duration-200 active:scale-95">
+													<span class="icon icon--playing"></span>
+												</button>
+												<div class="flex-1">
+													<div class="flex justify-between gap-4">
+														<h6 class="font-medium leading-150">The History of the Golden Book</h6>
+														<div class="relative group">
+															<button class="flex"><span class="icon icon--dots-menu"></span></button>
+															<div class="absolute top-0 right-0 pt-4 transition-all duration-300 opacity-0 pointer-events-none z-1 group-hover:pointer-events-auto group-hover:translate-y-4 group-hover:opacity-100">
+																<div class="w-56 py-2 bg-white border rounded-xl border-neutral-black-5 shadow-header-menu">
+																	<div class="overflow-auto max-h-66 scrollbar-thin">
+																		<p class="px-4 pt-2 pb-1 text-xs text-neutral-black-70">Actions</p>
+																		<ul class="flex flex-col">
+																			<li>
+																				<a href="#" class="flex items-center gap-2 px-4 py-2.5 text-primary-black transition-all duration-300 hover:bg-neutral-black-3">
+																					<span class="icon icon--input"></span>
+																					<span class="text-sm font-medium">Rename</span>
+																				</a>
+																			</li>
+																			<li>
+																				<a href="#" class="flex items-center gap-2 px-4 py-2.5 text-primary-black transition-all duration-300 hover:bg-neutral-black-3">
+																					<span class="icon icon--download"></span>
+																					<span class="text-sm font-medium">Download</span>
+																				</a>
+																			</li>
+
+																			<li>
+																				<a href="#" class="flex items-center gap-2 px-4 py-2.5 text-error-60 transition-all duration-300 hover:bg-neutral-black-3">
+																					<span class="icon icon--trash-bin"></span>
+																					<span class="text-sm font-medium">Delete</span>
+																				</a>
+																			</li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="flex justify-between gap-4 mt-1 text-sm text-neutral-black-70">
+														<p>4 min. 20 sec</p>
+														<p>24 May 2024</p>
+													</div>
+												</div>
+											</div>
+											<div class="mt-6">
+												<div class="relative flex flex-col items-center justify-center px-10 py-8 rounded-3xl bg-primary-green-gray">
+													<div class="absolute right-4 top-4">
+														<button class="flex items-center justify-center w-5 h-5">
+															<span class="w-4 h-4 icon icon--close"></span>
+														</button>
+													</div>
+													<div class="mx-auto max-w-167.5">
+														<div id="text" class="flex flex-col gap-3 overflow-hidden text-2xl font-semibold text-center h-80 text-neutral-black-30 gradient-mask-b-50 md:h-36">
+															<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+															<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius assumenda, porro similique facilis voluptatibus in natus animi consectetur corrupti mollitia soluta et aut laboriosam quas dolor quidem distinctio doloribus provident, autem veniam non. Repellendus repudiandae vero labore omnis nihil ipsum architecto ad ut soluta nesciunt sapiente aperiam optio, pariatur possimus.</p>
+														</div>
+													</div>
+													<div class="relative flex items-center justify-between w-full gap-3 py-4 mt-4 text-sm font-semibold">
+														<div>0:00 / 1:23</div>
+														<div class="absolute top-0 w-full lg:static lg:flex-1">
+															<div class="h-2 overflow-hidden rounded-full bg-neutral-black-10" style="--progress: 20">
+																<div class="h-full w-[calc(var(--progress)*1%)] rounded-full bg-neutral-black-80"></div>
+															</div>
+														</div>
+														<div class="flex items-center gap-2">
+															<span>1.25x</span>
+															<button class="flex transition-all duration-300 active:scale-95">
+																<span class="icon icon--volume h-5.5 w-5.5"></span>
+															</button>
+														</div>
+													</div>
+													<div class="flex items-center justify-center gap-6">
+														<button class="flex transition-all duration-300 active:scale-95">
+															<span class="w-8 h-8 icon icon--seek-backward-15"></span>
+														</button>
+														<button class="flex transition-all duration-300 active:scale-95">
+															<span class="w-10 h-10 icon icon--play"></span>
+														</button>
+														<button class="flex transition-all duration-300 active:scale-95">
+															<span class="w-8 h-8 icon icon--seek-forward-15"></span>
+														</button>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="">
+											<div class="flex gap-5">
+												<button class="flex h-12.5 w-12.5 items-center justify-center rounded-full bg-neutral-black-5 transition-all duration-200 active:scale-95">
+													<span class="icon icon--play ml-0.5"></span>
+												</button>
+												<div class="flex-1">
+													<div class="flex justify-between gap-4">
+														<h6 class="font-medium leading-150">The History of the Golden Book</h6>
+														<div class="relative group">
+															<button class="flex"><span class="icon icon--dots-menu"></span></button>
+															<div class="absolute top-0 right-0 pt-4 transition-all duration-300 opacity-0 pointer-events-none z-1 group-hover:pointer-events-auto group-hover:translate-y-4 group-hover:opacity-100">
+																<div class="w-56 py-2 bg-white border rounded-xl border-neutral-black-5 shadow-header-menu">
+																	<div class="overflow-auto max-h-66 scrollbar-thin">
+																		<p class="px-4 pt-2 pb-1 text-xs text-neutral-black-70">Actions</p>
+																		<ul class="flex flex-col">
+																			<li>
+																				<a href="#" class="flex items-center gap-2 px-4 py-2.5 text-primary-black transition-all duration-300 hover:bg-neutral-black-3">
+																					<span class="icon icon--input"></span>
+																					<span class="text-sm font-medium">Rename</span>
+																				</a>
+																			</li>
+																			<li>
+																				<a href="#" class="flex items-center gap-2 px-4 py-2.5 text-primary-black transition-all duration-300 hover:bg-neutral-black-3">
+																					<span class="icon icon--download"></span>
+																					<span class="text-sm font-medium">Download</span>
+																				</a>
+																			</li>
+
+																			<li>
+																				<a href="#" class="flex items-center gap-2 px-4 py-2.5 text-error-60 transition-all duration-300 hover:bg-neutral-black-3">
+																					<span class="icon icon--trash-bin"></span>
+																					<span class="text-sm font-medium">Delete</span>
+																				</a>
+																			</li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="flex justify-between gap-4 mt-1 text-sm text-neutral-black-70">
+														<p>4 min. 20 sec</p>
+														<p>24 May 2024</p>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<div id="menuMobile" class="fixed top-0 bottom-0 left-0 z-50 w-full px-8 py-4 transition-all duration-300 bg-white -translate-x-p110 shadow-header-menu sd:w-90 lg:-translate-x-p110">
+	<div class="flex flex-col items-start">
+		<button id="closeMenuMobile" class="flex items-center justify-center">
+			<span class="icon icon--chevron-left"></span>
+		</button>
+		<div class="mt-8 h-[calc(var(--app-height)-5.5rem)] w-full flex-grow overflow-auto">
+			<div class="flex items-center gap-5">
+				<div class="flex items-center justify-center flex-shrink-0 rounded-full h-13 w-13 bg-neutral-black-3">
+					<span class="icon icon--user"></span>
+				</div>
+				<div class="text-2xl font-semibold">Andrii Chernov</div>
+			</div>
+			<div class="flex flex-wrap items-center gap-3 mt-5">
+				<a href="#" class="flex h-9 items-center gap-1 rounded-6.5lx border border-neutral-black-5 px-3 py-2 transition-all duration-300 hover:bg-neutral-black-3">
+					<span class="w-5 h-5 icon icon--user"></span>
+					<span class="text-sm font-medium">Profile Details</span>
+				</a>
+				<a href="#" class="flex h-9 items-center gap-1 rounded-6.5lx border border-neutral-black-5 px-3 py-2 transition-all duration-300 hover:bg-neutral-black-3">
+					<span class="w-5 h-5 icon icon--checklist-money"></span>
+					<span class="text-sm font-medium">My Plan</span>
+				</a>
+			</div>
+
+			<a href="#" class="mt-9 flex h-12 w-full items-center justify-center gap-2 rounded-xl bg-primary px-5 py-3.5 text-sm font-semibold text-primary-100 transition-all duration-300 hover:bg-primary-hover">
+				<span class="w-5 h-5 icon icon--arrow-nav"></span>
+				<span>Upgrade plan</span>
+			</a>
+
+			<ul class="mt-9">
+				<li class="pb-3 mb-3 border-b border-b-neutral-black-3">
+					<a href="#" class="flex items-center gap-5 py-2.5 font-medium">
+						<span class="icon icon--dashboard"></span>
+						<span class="leading-150">Dashboard</span>
+						<span class="ml-auto icon icon--chevron-right"></span>
+					</a>
+				</li>
+				<li class="pb-3 mb-3 border-b border-b-neutral-black-3">
+					<a href="#" class="flex items-center gap-5 py-2.5">
+						<span class="icon icon--portfolio"></span>
+						<span class="leading-150">Portfolio</span>
+						<span class="ml-auto icon icon--chevron-right"></span>
+					</a>
+				</li>
+				
+				<li class="pb-3 mb-3 border-b border-b-neutral-black-3">
+					<a href="#" class="flex items-center gap-5 py-2.5">
+						<span class="icon icon--collections"></span>
+						<span class="leading-150">Collections</span>
+						<span class="ml-auto icon icon--chevron-right"></span>
+					</a>
+				</li>
+				<li class="pb-3 mb-3 border-b border-b-neutral-black-3">
+					<a href="#" class="flex items-center gap-5 py-2.5">
+						<span class="icon icon--identification"></span>
+						<span class="leading-150">Identification</span>
+						<span class="ml-auto icon icon--chevron-right"></span>
+					</a>
+				</li>
+				<li class="pb-3 mb-3">
+					<a href="#" class="flex items-center gap-5 py-2.5">
+						<span class="icon icon--requests"></span>
+				<span class="leading-150">Requests</span>
+						<span class="ml-auto icon icon--chevron-right"></span>
+					</a>
+				</li>
+			</ul>
+
+			<a href="#" class="flex items-center justify-center h-12 gap-1 px-3 py-2 transition-all duration-300 border rounded-xl border-neutral-black-5 hover:bg-neutral-black-3">
+				<span class="text-sm font-medium">Sign Out</span>
+			</a>
+		</div>
+	</div>
+	<div class="z-30 invisible hidden overflow-clip bg-neutral-black-1/50 backdrop-blur-sm"></div>
+</div>
+
+ <script src="../../js/app.js"></script>
+
+		<script>
+			const container = document.getElementById("text");
+			const paragraphs = container.querySelectorAll("p");
+			let charCount = 0; // Лічильник для відстеження кількості символів
+
+			paragraphs.forEach((paragraph) => {
+				const text = paragraph.textContent; // Отримуємо текст із параграфа
+
+				// Розбиваємо текст на символи та обгортаємо кожен у <span>
+				const wrappedText = Array.from(text)
+					.map((letter) => {
+						if (letter === " ") {
+							return " "; // Зберігаємо пробіли
+						}
+						charCount++; // Збільшуємо лічильник
+						if (charCount <= 58) {
+							return `<span class="text-neutral-black-70">${letter}</span>`; // Додаємо клас до перших 100 символів
+						} else {
+							return `<span>${letter}</span>`; // Без класу
+						}
+					})
+					.join("");
+
+				paragraph.innerHTML = wrappedText; // Оновлюємо HTML вміст параграфа
+			});
+		</script>
+	</body>
+</html>

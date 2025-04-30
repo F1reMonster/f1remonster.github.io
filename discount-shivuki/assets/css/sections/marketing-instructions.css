@@ -1,0 +1,70 @@
+.markketing-instructions .list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.markketing-instructions {
+  padding: 1.0625em 0 3.125em;
+}
+@media screen and (max-width: 767px) {
+  .markketing-instructions {
+    padding: 2.3125em 0 2.5em;
+  }
+}
+.markketing-instructions .list-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 3.625em;
+}
+@media screen and (max-width: 767px) {
+  .markketing-instructions .list-wrap {
+    display: block;
+    margin-top: 1.9375em;
+  }
+}
+.markketing-instructions .typical-header {
+  text-align: initial;
+}
+@media screen and (max-width: 767px) {
+  .markketing-instructions .typical-header {
+    text-align: center;
+  }
+}
+.markketing-instructions .list:last-child {
+  padding-inline-start: 1.25em;
+}
+@media screen and (max-width: 767px) {
+  .markketing-instructions .list:last-child {
+    padding-inline-start: 0;
+  }
+}
+.markketing-instructions li {
+  position: relative;
+  padding-inline-start: 1.6875em;
+}
+@media (max-width: 767px) {
+  .markketing-instructions li {
+    padding-inline-start: 1.75em;
+  }
+}
+.markketing-instructions li:not(:last-child) {
+  margin-bottom: 0.6875em;
+}
+@media (max-width: 767px) {
+  .markketing-instructions li:not(:last-child) {
+    margin-bottom: 1.3125em;
+  }
+}
+.markketing-instructions li span {
+  display: block;
+  font: 1.125em/1.5555555556 "rubik-reg", sans-serif;
+  max-width: 30.8333333333em;
+  color: #000;
+}
+.markketing-instructions li .bullet {
+  position: absolute;
+  top: 0.3125em;
+  inset-inline-start: 0;
+  width: 1.1875em;
+}

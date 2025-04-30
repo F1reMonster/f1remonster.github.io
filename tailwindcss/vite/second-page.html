@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Tailwindcss+Alpinejs+Vitejs Project Starter</title>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.10.3/cdn.min.js" defer></script>
+		<style>
+			[x-cloak] {
+				display: none !important;
+			}
+		</style>
+		<script type="module" crossorigin src="assets/js/index-zH6fNZsS.js"></script>
+		<link rel="stylesheet" crossorigin href="assets/css/index-EbBxgxsl.css">
+	</head>
+	<body class="bg-gray-100">
+		<div x-data="{ isOpen: false }">
+			<nav class="fixed z-10 w-full bg-white shadow">
+				<div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+					<div class="flex justify-between h-16">
+						<div class="flex">
+							<div class="flex items-center flex-shrink-0">
+								<span class="text-xl font-bold">Лого</span>
+							</div>
+						</div>
+						<div class="flex items-center">
+							<button @click="isOpen = !isOpen" type="button" class="inline-flex items-center justify-center p-2 text-gray-400 rounded-md hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-controls="mobile-menu" aria-expanded="false">
+								<span class="sr-only">Відкрити головне меню</span>
+								<svg class="w-6 h-6" x-show="!isOpen" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+								</svg>
+								<svg class="w-6 h-6" x-show="isOpen" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" x-cloak>
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+								</svg>
+							</button>
+						</div>
+					</div>
+				</div>
+			</nav>
+
+			<div x-show="isOpen" x-transition:enter="transition ease-in-out duration-300 transform" x-transition:enter-start="translate-x-full" x-transition:enter-end="translate-x-0" x-transition:leave="transition ease-in-out duration-300 transform" x-transition:leave-start="translate-x-0" x-transition:leave-end="translate-x-full" class="fixed inset-y-0 right-0 z-20 w-full max-w-xs overflow-y-auto bg-white shadow-xl" x-cloak>
+				<div class="px-4 py-6">
+					<a href="#" class="block px-3 py-2 text-base font-medium text-gray-700 rounded-md hover:text-gray-900 hover:bg-gray-50">Головна</a>
+					<a href="#" class="block px-3 py-2 text-base font-medium text-gray-700 rounded-md hover:text-gray-900 hover:bg-gray-50">Про нас</a>
+					<a href="#" class="block px-3 py-2 text-base font-medium text-gray-700 rounded-md hover:text-gray-900 hover:bg-gray-50">Послуги</a>
+					<a href="#" class="block px-3 py-2 text-base font-medium text-gray-700 rounded-md hover:text-gray-900 hover:bg-gray-50">Контакти</a>
+				</div>
+			</div>
+		</div>
+
+		<main class="py-6 pt-20 mx-auto max-w-7xl sm:px-6 lg:px-8">
+			<div class="px-4 py-6 sm:px-0">
+				<h1 class="text-2xl font-semibold text-gray-900">Ласкаво просимо на наш сайт!</h1>
+
+				<div x-data="{ open: false }" class="relative mt-4">
+					<button @click="open = !open" class="inline-flex items-center px-4 py-2 text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+						<span>Оберіть опцію</span>
+						<svg :class="{'rotate-180': open}" class="w-5 h-5 ml-2 transition-transform duration-200 transform" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+							<path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+						</svg>
+					</button>
+
+					<div x-show="open" @click.away="open = false" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="absolute z-10 w-full mt-2 bg-white rounded-md shadow-lg" x-cloak>
+						<div class="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
+							<a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900" role="menuitem">Опція 1</a>
+							<a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900" role="menuitem">Опція 2</a>
+							<a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900" role="menuitem">Опція 3</a>
+						</div>
+					</div>
+				</div>
+
+				<p class="mt-2 text-gray-600">Це приклад бургер-меню та дропдауна з використанням Tailwind CSS і Alpine.js, яке плавно виїжджає справа наліво.</p>
+			</div>
+
+			<div class="max-w-2xl mx-auto">
+				<div x-data="imageSlider" class="relative">
+					<div class="relative h-64 overflow-hidden sm:h-80 md:h-96">
+						<template x-for="(image, index) in images" :key="index">
+							<div x-show="currentIndex === index" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 transform scale-90" x-transition:enter-end="opacity-100 transform scale-100" x-transition:leave="transition ease-in duration-300" x-transition:leave-start="opacity-100 transform scale-100" x-transition:leave-end="opacity-0 transform scale-90" class="absolute inset-0">
+								<img :src="image.src" :alt="image.alt" class="object-cover w-full h-full" />
+								<div class="absolute bottom-0 left-0 right-0 p-2 text-sm text-white bg-black bg-opacity-50">
+									Photo by
+									<a :href="image.photographerUrl" target="_blank" class="underline">
+										<span x-text="image.photographer"></span>
+									</a>
+									on <a href="https://www.pexels.com" target="_blank" class="underline">Pexels</a>
+								</div>
+							</div>
+						</template>
+					</div>
+
+					<div class="absolute inset-y-0 left-0 flex items-center">
+						<button @click="prev()" class="flex items-center justify-center w-8 h-8 text-gray-800 bg-white bg-opacity-50 rounded-full hover:bg-opacity-75 hover:text-gray-900 focus:outline-none">&#10094;</button>
+					</div>
+
+					<div class="absolute inset-y-0 right-0 flex items-center">
+						<button @click="next()" class="flex items-center justify-center w-8 h-8 text-gray-800 bg-white bg-opacity-50 rounded-full hover:bg-opacity-75 hover:text-gray-900 focus:outline-none">&#10095;</button>
+					</div>
+
+					<div class="absolute left-0 right-0 bottom-12">
+						<div class="flex items-center justify-center">
+							<template x-for="(image, index) in images" :key="index">
+								<button @click="currentIndex = index" :class="{'bg-white': currentIndex === index, 'bg-gray-300': currentIndex !== index}" class="w-3 h-3 mx-1 rounded-full focus:outline-none"></button>
+							</template>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<p class="mt-8 text-center text-gray-600">Це приклад слайдера зображень з Pexels, використовуючи Tailwind CSS і Alpine.js.</p>
+
+			<script>
+				document.addEventListener("alpine:init", () => {
+					Alpine.data("imageSlider", () => ({
+						currentIndex: 0,
+						images: [
+							{
+								src: "https://images.pexels.com/photos/1287145/pexels-photo-1287145.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+								alt: "Scenic Mountain Landscape",
+								photographer: "eberhard grossgasteiger",
+								photographerUrl: "https://www.pexels.com/@eberhardgross",
+							},
+							{
+								src: "https://images.pexels.com/photos/36717/amazing-animal-beautiful-beautifull.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+								alt: "Butterfly on Yellow Flower",
+								photographer: "Pixabay",
+								photographerUrl: "https://www.pexels.com/@pixabay",
+							},
+							{
+								src: "https://images.pexels.com/photos/3225517/pexels-photo-3225517.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+								alt: "Person on Mountain Overlooking Body of Water",
+								photographer: "Michael Block",
+								photographerUrl: "https://www.pexels.com/@michael-block-1691617",
+							},
+							{
+								src: "https://images.pexels.com/photos/1770809/pexels-photo-1770809.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+								alt: "Waterfalls during Daytime",
+								photographer: "Luis del Río",
+								photographerUrl: "https://www.pexels.com/@luisdelrio",
+							},
+						],
+						next() {
+							this.currentIndex = this.currentIndex === this.images.length - 1 ? 0 : this.currentIndex + 1;
+						},
+						prev() {
+							this.currentIndex = this.currentIndex === 0 ? this.images.length - 1 : this.currentIndex - 1;
+						},
+					}));
+				});
+			</script>
+		</main>
+
+	</body>
+</html>

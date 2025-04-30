@@ -1,0 +1,38 @@
+@media screen and (max-width: 767px) {
+  .video-gallery-intro-section {
+    padding-top: 1.25em;
+  }
+}
+.video-gallery-intro-section .msg {
+  max-width: 28.4em;
+}
+@media screen and (max-width: 767px) {
+  .video-gallery-intro-section .msg {
+    line-height: 1.5;
+  }
+}
+.video-gallery-intro-section .img-part {
+  margin-inline: auto 6.25em;
+}
+@media screen and (max-width: 767px) {
+  .video-gallery-intro-section .img-part {
+    margin-inline: 0 0;
+    margin-top: 1.5em;
+  }
+}
+.video-gallery-intro-section .img-part img {
+  margin-top: -1.25em;
+}
+@media screen and (max-width: 767px) {
+  .video-gallery-intro-section .img-part img {
+    margin-top: 0;
+  }
+}
+.video-gallery-intro-section .header {
+  margin-top: 0.52em;
+}
+@media screen and (max-width: 767px) {
+  .video-gallery-intro-section .header {
+    margin: 0.1833333333em 0 0.05em;
+  }
+}

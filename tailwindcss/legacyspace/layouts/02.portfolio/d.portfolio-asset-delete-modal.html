@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+<title>Legacy space - Portfolio page</title>
+<meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=yes">
+<link rel="canonical" href='' />
+<meta name="MobileOptimized" content="width"/>
+<meta name="HandheldFriendly" content="True"/>
+<meta name="viewport" content="initial-scale=1.0, width=device-width">
+<link rel="stylesheet" type="text/css" href="../../css/style.css" />
+
+	</head>
+
+	<body class="flex flex-col h-full overflow-clip font-inter">
+		<main class="flex-grow py-4 lg:py-12"></main>
+		
+		<!-- quick help modal -->
+<div class="fixed inset-0 z-50 p-4">
+	<div class="absolute inset-0 bg-primary-black/60"></div>
+
+	<div class="flex items-center justify-center w-full h-full">
+		<div class="relative z-20 p-6 bg-white border shadow-lg w-110 rounded-3xl border-neutral-black-5">
+			<div class="flex items-center justify-center w-12 h-12 border-8 rounded-full border-provincial-pink bg-cinderella">
+				<span class="icon icon--info text-error-100"></span>
+			</div>
+			<p class="mt-5 text-lg font-medium">Delete an asset</p>
+			<p class="mt-2 text-sm text-neutral-black-70">Are you sure you want to delate this asset? This action cannot be undone. Write word “DELETE” in this field</p>
+			<input type="text" class="mt-4 h-12 w-full rounded-xl border border-primary-green-gray bg-primary-green-gray px-3.5 py-3 text-primary-black transition-all duration-300 placeholder:text-neutral-black-50 focus:border-secondary focus:bg-white focus:shadow-input" placeholder="DELETE" />
+			<div class="mt-8 flex gap-2.5 sd:flex-row flex-col">
+				<button class="flex h-12 w-full items-center justify-center gap-2 rounded-xl border border-neutral-black-5 px-5 py-3.5 text-sm transition-all duration-300 hover:bg-neutral-black-1">
+					<span>Cancel</span>
+				</button>
+				<button class="flex h-12 w-full items-center justify-center gap-2 rounded-xl bg-error-60/50 px-5 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:bg-error-60 sd:order-none -order-1">
+					<span>Delete</span>
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- ./quick help modal -->
+ 
+		<script src="../../js/app.js"></script>
+
+	</body>
+</html>

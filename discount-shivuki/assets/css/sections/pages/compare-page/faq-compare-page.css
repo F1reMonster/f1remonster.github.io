@@ -1,0 +1,28 @@
+.compare-page-wrap .faq {
+  padding-top: 3.75em;
+  padding-bottom: 8.375em;
+}
+@media screen and (max-width: 767px) {
+  .compare-page-wrap .faq {
+    padding-top: 25px;
+    padding-bottom: 3.75em;
+  }
+}
+.compare-page-wrap .faq-cloud {
+  display: none;
+}
+.compare-page-wrap .faq-compare-bg {
+  position: absolute;
+  bottom: -29.7395833333vw;
+  inset-inline-end: 0;
+  z-index: -1;
+}
+html[dir=ltr] .compare-page-wrap .faq-compare-bg {
+  transform: scaleX(-1);
+}
+
+@media screen and (max-width: 767px) {
+  .compare-page-wrap .faq-compare-bg {
+    display: none;
+  }
+}

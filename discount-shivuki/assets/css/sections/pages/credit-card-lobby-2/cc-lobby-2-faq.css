@@ -1,0 +1,22 @@
+.faq--cc-lobby-2 {
+  position: relative;
+  padding: 1.25em 0 6.5625em;
+}
+.faq--cc-lobby-2 .bg-img-01 {
+  position: absolute;
+  top: 5em;
+  left: 0;
+  z-index: -1;
+}
+.faq--cc-lobby-2 .bg-img-02 {
+  position: absolute;
+  bottom: -18.75em;
+  right: 0;
+  z-index: -1;
+  width: 40.625em;
+}
+@media (max-width: 767px) {
+  .faq--cc-lobby-2 .bg-img-01, .faq--cc-lobby-2 .bg-img-02 {
+    display: none;
+  }
+}

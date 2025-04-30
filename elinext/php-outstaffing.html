@@ -1,0 +1,3317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Landing page_PHP Outstaffing</title>
+<link
+	rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"
+/>
+<link
+	rel="stylesheet"
+	id="wp-block-library-css"
+	href="wp-includes/css/dist/block-library/style.min.css"
+	type="text/css"
+	media="all"
+/>
+<link
+	rel="stylesheet"
+	id="contact-form-7-css"
+	href="wp-content/plugins/contact-form-7/includes/css/styles.css"
+	type="text/css"
+	media="all"
+/>
+<link
+	rel="stylesheet"
+	id="menu-image-css"
+	href="wp-content/plugins/menu-image/includes/css/menu-image.css?ver=3.0.4"
+	type="text/css"
+	media="all"
+/>
+<link
+	rel="stylesheet"
+	id="dashicons-css"
+	href="wp-includes/css/dashicons.min.css"
+	type="text/css"
+	media="all"
+/>
+<link
+	rel="stylesheet"
+	id="wpcf7-redirect-script-frontend-css"
+	href="wp-content/plugins/wpcf7-redirect/build/css/wpcf7-redirect-frontend.min.css"
+	type="text/css"
+	media="all"
+/>
+<link
+	rel="stylesheet"
+	id="addtoany-css"
+	href="wp-content/plugins/add-to-any/addtoany.min.css"
+	type="text/css"
+	media="all"
+/>
+
+<link
+	rel="stylesheet"
+	id="elinext/vendor/perfect-scrollbar.css-css"
+	href="wp-content/themes/elinext/public/css/perfect-scrollbar.css"
+	type="text/css"
+	media="all"
+/>
+<link
+	rel="stylesheet"
+	id="elinext/vendor/hidden-popups.css-css"
+	href="wp-content/themes/elinext/public/css/hidden-popups.css"
+	type="text/css"
+	media="all"
+/>
+<link
+	rel="stylesheet"
+	id="elinext/vendor/magnific-popup.css-css"
+	href="wp-content/themes/elinext/public/css/magnific-popup.css"
+	type="text/css"
+	media="all"
+/>
+<link
+	rel="stylesheet"
+	id="elinext/swiper.min.css-css"
+	href="wp-content/themes/elinext/public/css/swiper.min.css"
+	type="text/css"
+	media="all"
+/>
+<link
+	rel="stylesheet"
+	id="elinext/vendor/style.css-css"
+	href="wp-content/themes/elinext/public/css/style.css"
+	type="text/css"
+	media="all"
+/>
+<link
+	rel="stylesheet"
+	id="elinext/vendor/style-media.css-css"
+	href="wp-content/themes/elinext/public/css/style-media.css"
+	type="text/css"
+	media="all"
+/>
+<link
+	rel="stylesheet"
+	id="elinext/custom-style.css-css"
+	href="wp-content/themes/elinext/resources/style.css"
+	type="text/css"
+	media="all"
+/>
+<link
+	rel="stylesheet"
+	id="css/intlTelInput.css-css"
+	href="wp-content/themes/elinext/public/intl-tel/css/intlTelInput.css"
+	type="text/css"
+	media="all"
+/>
+
+<link rel="stylesheet" href="css/style.min.css" />
+
+<script
+	type="text/javascript"
+	src="wp-content/themes/elinext/public/js/jquery-3.2.1.min.js"
+	id="jquery-js"
+></script>
+<script
+	type="text/javascript"
+	src="wp-content/plugins/add-to-any/addtoany.min.js"
+	id="addtoany-js"
+></script>
+<link rel="https://api.w.org/" href="https://www.elinext.com/wp-json/" />
+<link
+	rel="alternate"
+	type="application/json"
+	href="https://www.elinext.com/wp-json/wp/v2/pages/523"
+/>
+
+<style>
+	input:checked ~ .c-check-box:after {
+		opacity: 1;
+	}
+
+	
+
+	.wpcf7-acceptance label {
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+	}
+
+	.wpcf7-acceptance label .c-check-box {
+		order: 0;
+	}
+
+	.wpcf7-acceptance label span {
+		order: 1;
+		font-size: 10px;
+		line-height: 12px;
+		letter-spacing: 0.05em;
+		color: #929baa;
+	}
+
+	.wpcf7-acceptance label input {
+		visibility: hidden;
+		display: none;
+		opacity: 0;
+		order: 2;
+	}
+
+	.contactsus .contact-form-field--textarea,
+	.contactsus
+		.contact-form-group
+		.contact-form-field.contact-form-field--textarea {
+		min-height: 124px;
+		height: auto;
+		overflow: initial;
+	}
+
+	.contact-form-field--textarea,
+	.contact-form-group .contact-form-field.contact-form-field--textarea {
+		min-height: 124px;
+		height: 124px;
+		overflow-y: auto;
+		overflow-x: hidden;
+	}
+
+	.contact-form-field textarea {
+		line-height: 29px;
+		resize: none;
+		overflow: hidden;
+		max-width: 600px;
+	}
+
+	.testarea {
+		line-height: 29px;
+		max-width: 600px;
+		word-break: break-word;
+		top: 0;
+	}
+
+	.wpcf7-form-control-wrap {
+		position: relative;
+		display: block;
+	}
+
+	.grecaptcha-badge {
+		visibility: hidden;
+		z-index: -999;
+	}
+
+	@media (max-width: 600px) {
+		.testarea {
+			font-size: 12px;
+			line-height: 22px;
+		}
+
+		.contact-form-field--textarea textarea,
+		.contact-form-group
+			.contact-form-field.contact-form-field--textarea
+			textarea {
+			line-height: 22px;
+		}
+	}
+</style>
+
+</head>
+
+<body class="home">
+	<div class="m-menu">
+	<div class="m-menu-wrapper">
+		<div class="m-menu-close">
+			<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path
+					d="M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z"
+					fill="#2C333F"
+				></path>
+			</svg>
+		</div>
+		<div class="m-menu-main">
+			<ul class="m-menu-list">
+				<div class="m-menu-item m-menu-item--drop" data-id="10762">
+					Services
+				</div>
+				<div class="m-menu-item m-menu-item--drop" data-id="10872">
+					Industries
+				</div>
+				<div class="m-menu-item m-menu-item--drop" data-id="10773">Domains</div>
+				<div class="m-menu-item m-menu-item--drop" data-id="10873">
+					Technologies
+				</div>
+				<a class="m-menu-item" href="https://www.elinext.com/case-study/">Case Studies</a>
+				<div class="m-menu-item m-menu-item--drop" data-id="10871">
+					About Us
+				</div>
+				<div class="m-menu-item m-menu-item--drop" data-id="10863">
+					Resources
+				</div>
+				<a class="m-menu-item" href="https://www.elinext.com/careers/">Careers</a>
+			</ul>
+		</div>
+		<div class="m-menu-lvl">
+			<div class="m-menu-back">
+				<svg width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg" >
+					<path d="M7.5 14L1 7.5L7.5 1" stroke="#2C333F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+				</svg>
+				<span>Back to main menu</span>
+			</div>
+			<div class="s-menu">
+				<div class="s-menu-wrapper" data-id="10762">
+					<ul class="s-menu-container ps">
+						<li class="s-menu-item s-menu-item--main">
+							<div class="s-menu-item-wrap">
+								<a class="s-menu-link" href="https://www.elinext.com/services/">Services</a>
+							</div>
+						</li>
+						<li class="s-menu-item">
+							<div class="s-menu-item-wrap" data-url="wp-content/uploads/2020/06/custom-development-img.png">
+								<a class="s-menu-link" href="https://www.elinext.com/services/custom-software-development/">Custom Software Development</a>
+							</div>
+						</li>
+						<li class="s-menu-item">
+							<div
+								class="s-menu-item-wrap"
+								data-url="wp-content/uploads/2020/06/business-analysis-img.png"
+							>
+								<a
+									class="s-menu-link"
+									href="https://www.elinext.com/services/business-analysis/"
+									>Business Analysis</a
+								>
+							</div>
+						</li>
+						<li class="s-menu-item">
+							<div
+								class="s-menu-item-wrap"
+								data-url="img/services/ux-ui/menu.png"
+							>
+								<a
+									class="s-menu-link"
+									href="https://www.elinext.com/services/ui-ux-design/"
+									>UI &amp; UX Design</a
+								>
+							</div>
+						</li>
+						<li class="s-menu-item">
+							<div
+								class="s-menu-item-wrap"
+								data-url="wp-content/uploads/2020/06/devops-img.png"
+							>
+								<a
+									class="s-menu-link"
+									href="https://www.elinext.com/services/devops/"
+									>DevOps</a
+								>
+								<div class="s-menu-arr">
+									<svg
+										width="15"
+										height="9"
+										viewBox="0 0 15 9"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											d="M14 1L7.5 7.5L1 1"
+											stroke="#F2C53D"
+											stroke-width="2"
+											stroke-linecap="round"
+											stroke-linejoin="round"
+										></path>
+									</svg>
+								</div>
+							</div>
+							<ul class="t-menu">
+								<li
+									class="t-menu-item"
+									data-url="wp-content/uploads/2020/06/сloud-development-img.png"
+								>
+									<a
+										class="t-menu-link"
+										href="https://www.elinext.com/services/cloud/"
+										>Cloud Computing Architecture</a
+									>
+								</li>
+								<li
+									class="t-menu-item"
+									data-url="wp-content/uploads/2020/06/saas-img.png"
+								>
+									<a
+										class="t-menu-link"
+										href="https://www.elinext.com/services/saas-development/"
+										>SaaS Delivery</a
+									>
+								</li>
+							</ul>
+						</li>
+						<li class="s-menu-item">
+							<div
+								class="s-menu-item-wrap"
+								data-url="wp-content/uploads/2020/06/web-development-img.png"
+							>
+								<a
+									class="s-menu-link"
+									href="https://www.elinext.com/services/web-development/"
+									>Web</a
+								>
+							</div>
+						</li>
+						<li class="s-menu-item">
+							<div
+								class="s-menu-item-wrap"
+								data-url="wp-content/uploads/2020/06/mobile-development-img.png"
+							>
+								<a
+									class="s-menu-link"
+									href="https://www.elinext.com/services/app-development/"
+									>Mobile</a
+								>
+								<div class="s-menu-arr">
+									<svg
+										width="15"
+										height="9"
+										viewBox="0 0 15 9"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											d="M14 1L7.5 7.5L1 1"
+											stroke="#F2C53D"
+											stroke-width="2"
+											stroke-linecap="round"
+											stroke-linejoin="round"
+										></path>
+									</svg>
+								</div>
+							</div>
+							<ul class="t-menu">
+								<li
+									class="t-menu-item"
+									data-url="wp-content/uploads/2020/06/android-development-img.png"
+								>
+									<a
+										class="t-menu-link"
+										href="https://www.elinext.com/services/android-development/"
+										>Android</a
+									>
+								</li>
+								<li
+									class="t-menu-item"
+									data-url="wp-content/uploads/2020/06/ios-development-img.png"
+								>
+									<a
+										class="t-menu-link"
+										href="https://www.elinext.com/services/ios-development/"
+										>iOS</a
+									>
+								</li>
+								<li
+									class="t-menu-item"
+									data-url="wp-content/uploads/2020/06/cross-platform-development-img.png"
+								>
+									<a
+										class="t-menu-link"
+										href="https://www.elinext.com/services/cross-platform/"
+										>Cross-platform</a
+									>
+								</li>
+							</ul>
+						</li>
+						<li class="s-menu-item">
+							<div
+								class="s-menu-item-wrap"
+								data-url="https://www.elinext.com/wp-content/uploads/2020/06/qa-testing-img.png"
+							>
+								<a
+									class="s-menu-link"
+									href="https://www.elinext.com/qa-testing/"
+									>QA &amp; Testing</a
+								>
+							</div>
+						</li>
+						<li class="s-menu-item">
+							<div
+								class="s-menu-item-wrap"
+								data-url="https://www.elinext.com/wp-content/uploads/2020/06/maintenance-support-img.png"
+							>
+								<a
+									class="s-menu-link"
+									href="https://www.elinext.com/services/application-maintenance-and-support/"
+									>Maintenance &amp; Support</a
+								>
+							</div>
+						</li>
+						<li class="s-menu-item">
+							<div
+								class="s-menu-item-wrap"
+								data-url="https://www.elinext.com/wp-content/uploads/2020/06/product-engineering-img.png"
+							>
+								<a
+									class="s-menu-link"
+									href="https://www.elinext.com/services/software-product-engineering/"
+									>Software Product Engineering</a
+								>
+							</div>
+						</li>
+						<div class="ps__rail-x" style="left: 0px; bottom: 0px">
+							<div
+								class="ps__thumb-x"
+								tabindex="0"
+								style="left: 0px; width: 0px"
+							></div>
+						</div>
+						<div class="ps__rail-y" style="top: 0px; right: 0px">
+							<div
+								class="ps__thumb-y"
+								tabindex="0"
+								style="top: 0px; height: 0px"
+							></div>
+						</div>
+					</ul>
+					<div class="s-menu-img">
+						<img src="img/menu/services-img.png" alt="Services" data-defaut="img/menu/services-img.png"/>
+					</div>
+				</div>
+				<div class="s-menu-wrapper" data-id="10872">
+					<ul class="s-menu-container ps ps--active-y">
+						<li class="s-menu-item s-menu-item--main">
+							<div class="s-menu-item-wrap">
+								<a
+									class="s-menu-link"
+									href="https://www.elinext.com/industries/"
+									>Industries</a
+								>
+							</div>
+						</li>
+						<li class="s-menu-item">
+							<div
+								class="s-menu-item-wrap"
+								data-url="https://www.elinext.com/wp-content/uploads/2020/06/healthcare-img.png"
+							>
+								<a
+									class="s-menu-link"
+									href="https://www.elinext.com/industries/healthcare/"
+									>Healthcare</a
+								>
+								<div class="s-menu-arr">
+									<svg
+										width="15"
+										height="9"
+										viewBox="0 0 15 9"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											d="M14 1L7.5 7.5L1 1"
+											stroke="#F2C53D"
+											stroke-width="2"
+											stroke-linecap="round"
+											stroke-linejoin="round"
+										></path>
+									</svg>
+								</div>
+							</div>
+							<ul class="t-menu">
+								<li
+									class="t-menu-item"
+									data-url="https://www.elinext.com/wp-content/uploads/2020/06/clinical-workforce-img.png"
+								>
+									<a
+										class="t-menu-link"
+										href="https://www.elinext.com/industries/healthcare/clinical-workforce-management-solutions/"
+										>Clinical &amp; Workforce Management</a
+									>
+								</li>
+								<li
+									class="t-menu-item"
+									data-url="https://www.elinext.com/wp-content/uploads/2020/06/сare-delivery-img.png"
+								>
+									<a
+										class="t-menu-link"
+										href="https://www.elinext.com/industries/healthcare/care-delivery-management-solutions/"
+										>Care Delivery Management</a
+									>
+								</li>
+								<li
+									class="t-menu-item"
+									data-url="https://www.elinext.com/wp-content/uploads/2020/06/mhealth-img.png"
+								>
+									<a
+										class="t-menu-link"
+										href="https://www.elinext.com/industries/healthcare/mhealth-app-development/"
+										>mHealth</a
+									>
+								</li>
+								<li
+									class="t-menu-item"
+									data-url="https://www.elinext.com/wp-content/uploads/2020/06/healthcare-analytics-img.png"
+								>
+									<a
+										class="t-menu-link"
+										href="https://www.elinext.com/industries/healthcare/analytics/"
+										>Healthcare Analytics</a
+									>
+								</li>
+							</ul>
+						</li>
+						<li class="s-menu-item">
+							<div
+								class="s-menu-item-wrap"
+								data-url="https://www.elinext.com/wp-content/uploads/2020/06/financial-services-img.png"
+							>
+								<a
+									class="s-menu-link"
+									href="https://www.elinext.com/industries/financial/"
+									>Financial Services &amp; Banking</a
+								>
+								<div class="s-menu-arr">
+									<svg
+										width="15"
+										height="9"
+										viewBox="0 0 15 9"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											d="M14 1L7.5 7.5L1 1"
+											stroke="#F2C53D"
+											stroke-width="2"
+											stroke-linecap="round"
+											stroke-linejoin="round"
+										></path>
+									</svg>
+								</div>
+							</div>
+							<ul class="t-menu">
+								<li
+									class="t-menu-item"
+									data-url="https://www.elinext.com/wp-content/uploads/2020/06/custom-accounting-software-img.png"
+								>
+									<a
+										class="t-menu-link"
+										href="https://www.elinext.com/industries/financial/custom-accounting-software/"
+										>Accounting</a
+									>
+								</li>
+								<li
+									class="t-menu-item"
+									data-url="https://www.elinext.com/wp-content/uploads/2020/06/banking-img.png"
+								>
+									<a
+										class="t-menu-link"
+										href="https://www.elinext.com/industries/financial/banking-software-development/"
+										>Banking</a
+									>
+								</li>
+								<li
+									class="t-menu-item"
+									data-url="https://www.elinext.com/wp-content/uploads/2020/06/payments-processing-img.png"
+								>
+									<a
+										class="t-menu-link"
+										href="https://www.elinext.com/industries/financial/payment-processing-software-development/"
+										>Payment Processing</a
+									>
+								</li>
+								<li
+									class="t-menu-item"
+									data-url="https://www.elinext.com/wp-content/uploads/2020/06/trading-img.png"
+								>
+									<a
+										class="t-menu-link"
+										href="https://www.elinext.com/industries/financial/trading-software-development/"
+										>Trading</a
+									>
+								</li>
+								<li
+									class="t-menu-item"
+									data-url="https://www.elinext.com/wp-content/uploads/2020/06/insurtech-img.png"
+								>
+									<a
+										class="t-menu-link"
+										href="https://www.elinext.com/industries/insurance/"
+										>Insurtech</a
+									>
+								</li>
+							</ul>
+						</li>
+						<li class="s-menu-item">
+							<div
+								class="s-menu-item-wrap"
+								data-url="https://www.elinext.com/wp-content/uploads/2020/06/manufacturing-img.png"
+							>
+								<a
+									class="s-menu-link"
+									href="https://www.elinext.com/industries/manufacturing/"
+									>Manufacturing</a
+								>
+								<div class="s-menu-arr">
+									<svg
+										width="15"
+										height="9"
+										viewBox="0 0 15 9"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											d="M14 1L7.5 7.5L1 1"
+											stroke="#F2C53D"
+											stroke-width="2"
+											stroke-linecap="round"
+											stroke-linejoin="round"
+										></path>
+									</svg>
+								</div>
+							</div>
+							<ul class="t-menu">
+								<li
+									class="t-menu-item"
+									data-url="https://www.elinext.com/wp-content/uploads/2020/06/predictive-maintenance-img.png"
+								>
+									<a
+										class="t-menu-link"
+										href="https://www.elinext.com/industries/manufacturing/predictive-maintenance-software-development/"
+										>Predictive Maintenance</a
+									>
+								</li>
+								<li
+									class="t-menu-item"
+									data-url="https://www.elinext.com/wp-content/uploads/2020/06/smart-manufacturing-img.png"
+								>
+									<a
+										class="t-menu-link"
+										href="https://www.elinext.com/industries/manufacturing/smart-manufacturing/"
+										>Smart Manufacturing</a
+									>
+								</li>
+							</ul>
+						</li>
+						<li class="s-menu-item">
+							<div
+								class="s-menu-item-wrap"
+								data-url="https://www.elinext.com/wp-content/uploads/2020/06/retail-ecommerce-img.png"
+							>
+								<a
+									class="s-menu-link"
+									href="https://www.elinext.com/industries/retail/"
+									>Retail &amp; eCommerce</a
+								>
+							</div>
+						</li>
+						<li class="s-menu-item">
+							<div
+								class="s-menu-item-wrap"
+								data-url="https://www.elinext.com/wp-content/uploads/2020/06/telecom-img.png"
+							>
+								<a
+									class="s-menu-link"
+									href="https://www.elinext.com/industries/telecom/"
+									>Telecom</a
+								>
+							</div>
+						</li>
+						<li class="s-menu-item">
+							<div
+								class="s-menu-item-wrap"
+								data-url="https://www.elinext.com/wp-content/uploads/2020/06/automotive-development-img.png"
+							>
+								<a
+									class="s-menu-link"
+									href="https://www.elinext.com/industries/automotive/"
+									>Automotive</a
+								>
+							</div>
+						</li>
+						<li class="s-menu-item">
+							<div
+								class="s-menu-item-wrap"
+								data-url="https://www.elinext.com/wp-content/uploads/2020/06/education-software-img.png"
+							>
+								<a
+									class="s-menu-link"
+									href="https://www.elinext.com/industries/education/"
+									>Education</a
+								>
+							</div>
+						</li>
+						<li class="s-menu-item">
+							<div
+								class="s-menu-item-wrap"
+								data-url="https://www.elinext.com/wp-content/uploads/2020/06/logistics-transportation-img.png"
+							>
+								<a
+									class="s-menu-link"
+									href="https://www.elinext.com/industries/logistics/"
+									>Logistics &amp; Transportation</a
+								>
+							</div>
+						</li>
+						<li class="s-menu-item">
+							<div
+								class="s-menu-item-wrap"
+								data-url="https://www.elinext.com/wp-content/uploads/2020/06/real-estate-img.png"
+							>
+								<a
+									class="s-menu-link"
+									href="https://www.elinext.com/industries/real-estate/"
+									>Real Estate</a
+								>
+							</div>
+						</li>
+						<li class="s-menu-item">
+							<div
+								class="s-menu-item-wrap"
+								data-url="https://www.elinext.com/wp-content/uploads/2020/06/travel-app-development-img.png"
+							>
+								<a
+									class="s-menu-link"
+									href="https://www.elinext.com/industries/travel/"
+									>Travel</a
+								>
+							</div>
+						</li>
+						<li class="s-menu-item">
+							<div
+								class="s-menu-item-wrap"
+								data-url="https://www.elinext.com/wp-content/uploads/2020/06/media-entertainment-img.png"
+							>
+								<a
+									class="s-menu-link"
+									href="https://www.elinext.com/industries/media-entertainment/"
+									>Media &amp; Entertainment</a
+								>
+							</div>
+						</li>
+						<div class="ps__rail-x" style="left: 0px; bottom: 0px">
+							<div
+								class="ps__thumb-x"
+								tabindex="0"
+								style="left: 0px; width: 0px"
+							></div>
+						</div>
+						<div class="ps__rail-y" style="top: 0px; height: 452px; right: 0px">
+							<div
+								class="ps__thumb-y"
+								tabindex="0"
+								style="top: 0px; height: 434px"
+							></div>
+						</div>
+					</ul>
+					<div class="s-menu-img">
+						<img
+							src="wp-content/uploads/2020/06/industries-img.png"
+							alt="Industries"
+							data-defaut="wp-content/uploads/2020/06/industries-img.png"
+						/>
+					</div>
+				</div>
+				<div class="s-menu-wrapper" data-id="10773">
+					<ul class="s-menu-container ps ps--active-y">
+						<li class="s-menu-item s-menu-item--main">
+							<div class="s-menu-item-wrap">
+								<a class="s-menu-link" href="https://www.elinext.com/solutions/"
+									>Domains</a
+								>
+							</div>
+						</li>
+						<li class="s-menu-item">
+							<div
+								class="s-menu-item-wrap"
+								data-url="https://www.elinext.com/wp-content/uploads/2020/06/crm-development-img.png"
+							>
+								<a
+									class="s-menu-link"
+									href="https://www.elinext.com/solutions/crm/"
+									>CRM &amp; Customer Engagement</a
+								>
+							</div>
+						</li>
+						<li class="s-menu-item">
+							<div
+								class="s-menu-item-wrap"
+								data-url="https://www.elinext.com/wp-content/uploads/2020/06/erp-solutions-img.png"
+							>
+								<a
+									class="s-menu-link"
+									href="https://www.elinext.com/solutions/erp/"
+									>ERP &amp; Asset Management</a
+								>
+							</div>
+						</li>
+						<li class="s-menu-item">
+							<div
+								class="s-menu-item-wrap"
+								data-url="https://www.elinext.com/wp-content/uploads/2020/06/data-analytics-img.png"
+							>
+								<a
+									class="s-menu-link"
+									href="https://www.elinext.com/solutions/data-analytics/"
+									>Data Analytics</a
+								>
+								<div class="s-menu-arr">
+									<svg
+										width="15"
+										height="9"
+										viewBox="0 0 15 9"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											d="M14 1L7.5 7.5L1 1"
+											stroke="#F2C53D"
+											stroke-width="2"
+											stroke-linecap="round"
+											stroke-linejoin="round"
+										></path>
+									</svg>
+								</div>
+							</div>
+							<ul class="t-menu">
+								<li
+									class="t-menu-item"
+									data-url="https://www.elinext.com/wp-content/uploads/2020/06/business-intelligence-img.png"
+								>
+									<a
+										class="t-menu-link"
+										href="https://www.elinext.com/solutions/data-analytics/business-intelligence/"
+										>Business Intelligence</a
+									>
+								</li>
+								<li
+									class="t-menu-item"
+									data-url="https://www.elinext.com/wp-content/uploads/2020/06/data-visualisation-img.png"
+								>
+									<a
+										class="t-menu-link"
+										href="https://www.elinext.com/solutions/data-analytics/visualization/"
+										>Data Visualization</a
+									>
+								</li>
+								<li
+									class="t-menu-item"
+									data-url="https://www.elinext.com/wp-content/uploads/2020/06/gis-img.png"
+								>
+									<a
+										class="t-menu-link"
+										href="https://www.elinext.com/services/gis-development/"
+										>GIS &amp; Mapping</a
+									>
+								</li>
+								<li
+									class="t-menu-item"
+									data-url="https://www.elinext.com/wp-content/uploads/2020/06/big-data-img.png"
+								>
+									<a
+										class="t-menu-link"
+										href="https://www.elinext.com/solutions/data-analytics/big-data/"
+										>Big Data</a
+									>
+								</li>
+							</ul>
+						</li>
+						<li class="s-menu-item">
+							<div
+								class="s-menu-item-wrap"
+								data-url="https://www.elinext.com/wp-content/uploads/2020/06/hrm-img.png"
+							>
+								<a
+									class="s-menu-link"
+									href="https://www.elinext.com/solutions/hrm/"
+									>HR Management</a
+								>
+								<div class="s-menu-arr">
+									<svg
+										width="15"
+										height="9"
+										viewBox="0 0 15 9"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											d="M14 1L7.5 7.5L1 1"
+											stroke="#F2C53D"
+											stroke-width="2"
+											stroke-linecap="round"
+											stroke-linejoin="round"
+										></path>
+									</svg>
+								</div>
+							</div>
+							<ul class="t-menu">
+								<li
+									class="t-menu-item"
+									data-url="https://www.elinext.com/wp-content/uploads/2021/03/solutions-img.png"
+								>
+									<a
+										class="t-menu-link"
+										href="https://www.elinext.com/solutions/help-desk/"
+										>Help Desk &amp; Ticket Management</a
+									>
+								</li>
+							</ul>
+						</li>
+						<li class="s-menu-item">
+							<div
+								class="s-menu-item-wrap"
+								data-url="https://www.elinext.com/wp-content/uploads/2020/06/infrastructure-img.png"
+							>
+								<a
+									class="s-menu-link"
+									href="https://www.elinext.com/solutions/infrastructure-management/"
+									>Infrastructure Management</a
+								>
+							</div>
+						</li>
+						<li class="s-menu-item">
+							<div
+								class="s-menu-item-wrap"
+								data-url="https://www.elinext.com/wp-content/uploads/2020/06/cybersecurity-img.png"
+							>
+								<a
+									class="s-menu-link"
+									href="https://www.elinext.com/solutions/cybersecurity/"
+									>Cybersecurity</a
+								>
+							</div>
+						</li>
+						<li class="s-menu-item">
+							<div
+								class="s-menu-item-wrap"
+								data-url="https://www.elinext.com/wp-content/uploads/2020/06/iot-img.png"
+							>
+								<a
+									class="s-menu-link"
+									href="https://www.elinext.com/embedded/iot/"
+									>Internet of Things</a
+								>
+							</div>
+						</li>
+						<li class="s-menu-item">
+							<div
+								class="s-menu-item-wrap"
+								data-url="https://www.elinext.com/wp-content/uploads/2020/06/ai-img.png"
+							>
+								<a
+									class="s-menu-link"
+									href="https://www.elinext.com/solutions/ai/"
+									>Artificial Intelligence</a
+								>
+							</div>
+						</li>
+						<li class="s-menu-item">
+							<div
+								class="s-menu-item-wrap"
+								data-url="https://www.elinext.com/wp-content/uploads/2020/06/blockchain-img.png"
+							>
+								<a
+									class="s-menu-link"
+									href="https://www.elinext.com/solutions/blockchain/"
+									>Blockchain</a
+								>
+							</div>
+						</li>
+						<li class="s-menu-item">
+							<div
+								class="s-menu-item-wrap"
+								data-url="https://www.elinext.com/wp-content/uploads/2020/06/ar-vr-img.png"
+							>
+								<a
+									class="s-menu-link"
+									href="https://www.elinext.com/services/augmented-reality/"
+									>Augmented &amp; Virtual Reality</a
+								>
+							</div>
+						</li>
+						<li class="s-menu-item">
+							<div
+								class="s-menu-item-wrap"
+								data-url="https://www.elinext.com/wp-content/uploads/2020/06/social-media-img.png"
+							>
+								<a
+									class="s-menu-link"
+									href="https://www.elinext.com/solutions/social-media-app-development/"
+									>Social Media Community</a
+								>
+							</div>
+						</li>
+						<div class="ps__rail-x" style="left: 0px; bottom: 0px">
+							<div
+								class="ps__thumb-x"
+								tabindex="0"
+								style="left: 0px; width: 0px"
+							></div>
+						</div>
+						<div class="ps__rail-y" style="top: 0px; height: 452px; right: 0px">
+							<div
+								class="ps__thumb-y"
+								tabindex="0"
+								style="top: 0px; height: 435px"
+							></div>
+						</div>
+					</ul>
+					<div class="s-menu-img">
+						<img
+							src="wp-content/uploads/2020/06/solutions-img.png"
+							alt="Domains"
+							data-defaut="wp-content/uploads/2020/06/solutions-img.png"
+						/>
+					</div>
+				</div>
+				<div class="s-menu-wrapper" data-id="10873">
+					<ul class="s-menu-container ps">
+						<li class="s-menu-item s-menu-item--main">
+							<div class="s-menu-item-wrap">
+								<a
+									class="s-menu-link"
+									href="https://www.elinext.com/technologies/"
+									>Technologies</a
+								>
+							</div>
+						</li>
+						<li class="s-menu-item">
+							<div
+								class="s-menu-item-wrap"
+								data-url="https://www.elinext.com/wp-content/uploads/2020/06/java-dev-img.png"
+							>
+								<a
+									class="s-menu-link"
+									href="https://www.elinext.com/services/java-development/"
+									>Java</a
+								>
+							</div>
+						</li>
+						<li class="s-menu-item">
+							<div
+								class="s-menu-item-wrap"
+								data-url="https://www.elinext.com/wp-content/uploads/2020/06/net-development-img.png"
+							>
+								<a
+									class="s-menu-link"
+									href="https://www.elinext.com/services/dot-net-development/"
+									>.NET</a
+								>
+							</div>
+						</li>
+						<li class="s-menu-item">
+							<div
+								class="s-menu-item-wrap"
+								data-url="https://www.elinext.com/wp-content/uploads/2020/06/php-development-img.png"
+							>
+								<a
+									class="s-menu-link"
+									href="https://www.elinext.com/services/php-development/"
+									>PHP</a
+								>
+							</div>
+						</li>
+						<li class="s-menu-item">
+							<div
+								class="s-menu-item-wrap"
+								data-url="https://www.elinext.com/wp-content/uploads/2020/06/c-dev-img.png"
+							>
+								<a
+									class="s-menu-link"
+									href="https://www.elinext.com/services/cpp-development/"
+									>C++</a
+								>
+							</div>
+						</li>
+						<li class="s-menu-item">
+							<div
+								class="s-menu-item-wrap"
+								data-url="https://www.elinext.com/wp-content/uploads/2020/06/web-development-img.png"
+							>
+								<a
+									class="s-menu-link"
+									href="https://www.elinext.com/services/front-end-development/"
+									>Front-end</a
+								>
+							</div>
+						</li>
+						<div class="ps__rail-x" style="left: 0px; bottom: 0px">
+							<div
+								class="ps__thumb-x"
+								tabindex="0"
+								style="left: 0px; width: 0px"
+							></div>
+						</div>
+						<div class="ps__rail-y" style="top: 0px; right: 0px">
+							<div
+								class="ps__thumb-y"
+								tabindex="0"
+								style="top: 0px; height: 0px"
+							></div>
+						</div>
+					</ul>
+					<div class="s-menu-img">
+						<img
+							src="wp-content/uploads/2020/06/technologies-img.png"
+							alt="Technologies"
+							data-defaut="wp-content/uploads/2020/06/technologies-img.png"
+						/>
+					</div>
+				</div>
+				<div class="s-menu-wrapper" data-id="10871">
+					<ul class="s-menu-container ps">
+						<li class="s-menu-item s-menu-item--main">
+							<div class="s-menu-item-wrap">
+								<a class="s-menu-link" href="https://www.elinext.com/about-us/"
+									>About Us</a
+								>
+							</div>
+						</li>
+						<li class="s-menu-item">
+							<div
+								class="s-menu-item-wrap"
+								data-url="https://www.elinext.com/wp-content/uploads/2020/06/how-we-work-img.png"
+							>
+								<a
+									class="s-menu-link"
+									href="https://www.elinext.com/working-models/"
+									>Working Models</a
+								>
+							</div>
+						</li>
+						<li class="s-menu-item">
+							<div
+								class="s-menu-item-wrap"
+								data-url="https://www.elinext.com/wp-content/uploads/2020/06/testimonials-img.png"
+							>
+								<a
+									class="s-menu-link"
+									href="https://www.elinext.com/testimonials/"
+									>Testimonials</a
+								>
+							</div>
+						</li>
+						<li class="s-menu-item">
+							<div
+								class="s-menu-item-wrap"
+								data-url="https://www.elinext.com/wp-content/uploads/2020/06/our-values-img.png"
+							>
+								<a
+									class="s-menu-link"
+									href="https://www.elinext.com/our-values/"
+									>Our Values</a
+								>
+							</div>
+						</li>
+						<li class="s-menu-item">
+							<div
+								class="s-menu-item-wrap"
+								data-url="https://www.elinext.com/wp-content/uploads/2020/06/csr-img.png"
+							>
+								<a
+									class="s-menu-link"
+									href="https://www.elinext.com/corporate-social-responsibility/"
+									>Corporate Social Responsibility</a
+								>
+							</div>
+						</li>
+						<div class="ps__rail-x" style="left: 0px; bottom: 0px">
+							<div
+								class="ps__thumb-x"
+								tabindex="0"
+								style="left: 0px; width: 0px"
+							></div>
+						</div>
+						<div class="ps__rail-y" style="top: 0px; right: 0px">
+							<div
+								class="ps__thumb-y"
+								tabindex="0"
+								style="top: 0px; height: 0px"
+							></div>
+						</div>
+					</ul>
+					<div class="s-menu-img">
+						<img
+							src="wp-content/uploads/2020/06/about-us-img.png"
+							alt="About Us"
+							data-defaut="wp-content/uploads/2020/06/about-us-img.png"
+						/>
+					</div>
+				</div>
+				<div class="s-menu-wrapper" data-id="10863">
+					<ul class="s-menu-container ps">
+						<li class="s-menu-item s-menu-item--main">
+							<div class="s-menu-item-wrap">
+								<a class="s-menu-link" href="https://www.elinext.com/resources/"
+									>Resources</a
+								>
+							</div>
+						</li>
+						<li class="s-menu-item">
+							<div
+								class="s-menu-item-wrap"
+								data-url="https://www.elinext.com/wp-content/uploads/2020/06/data-visualisation-img.png"
+							>
+								<a class="s-menu-link" href="https://www.elinext.com/blog/"
+									>Blog</a
+								>
+							</div>
+						</li>
+						<li class="s-menu-item">
+							<div
+								class="s-menu-item-wrap"
+								data-url="https://www.elinext.com/wp-content/uploads/2020/06/solutions-img.png"
+							>
+								<a class="s-menu-link" href="https://www.elinext.com/news/"
+									>News</a
+								>
+							</div>
+						</li>
+						<li class="s-menu-item">
+							<div
+								class="s-menu-item-wrap"
+								data-url="https://www.elinext.com/wp-content/uploads/2020/06/our-values-img.png"
+							>
+								<a
+									class="s-menu-link"
+									href="https://www.elinext.com/presentations/"
+									>Presentations</a
+								>
+							</div>
+						</li>
+						<li class="s-menu-item">
+							<div
+								class="s-menu-item-wrap"
+								data-url="https://www.elinext.com/wp-content/uploads/2021/05/researches-menu-img.png"
+							>
+								<a
+									class="s-menu-link"
+									href="https://www.elinext.com/researches/"
+									>Researches</a
+								>
+							</div>
+						</li>
+						<div class="ps__rail-x" style="left: 0px; bottom: 0px">
+							<div
+								class="ps__thumb-x"
+								tabindex="0"
+								style="left: 0px; width: 0px"
+							></div>
+						</div>
+						<div class="ps__rail-y" style="top: 0px; right: 0px">
+							<div
+								class="ps__thumb-y"
+								tabindex="0"
+								style="top: 0px; height: 0px"
+							></div>
+						</div>
+					</ul>
+					<div class="s-menu-img">
+						<img
+							src="wp-content/uploads/2021/05/resources-menu-img.png"
+							alt="Resources"
+							data-defaut="wp-content/uploads/2021/05/resources-menu-img.png"
+						/>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="menu hidden" id="menu">
+	<div class="menu-background"></div>
+	<div class="menu-wrapper">
+		<div class="menu-container">
+			<div class="menu-header">
+				<div class="menu-logo">
+					<a class="link" href="./">
+						<img
+							class="link-img"
+							src="wp-content/themes/elinext/public/img/elinext_logo.png"
+						/>
+					</a>
+				</div>
+				<div class="menu-close">
+					<img
+						class="close-img"
+						src="wp-content/themes/elinext/public/img/menu-close-cross.png"
+					/>
+				</div>
+			</div>
+			<div class="menu-body">
+				<div class="menu-line"></div>
+				<div class="menu-items">
+					<div class="menu-item">
+						<a class="menu-link" href="https://www.elinext.com/services/"
+							>Services</a
+						>
+					</div>
+					<div class="menu-item">
+						<a
+							class="menu-link"
+							href="https://www.elinext.com/services/custom-software-development/"
+							>Custom Software Development</a
+						>
+					</div>
+					<div class="menu-item">
+						<a
+							class="menu-link"
+							href="https://www.elinext.com/services/business-analysis/"
+							>Business Analysis</a
+						>
+					</div>
+					<div class="menu-item">
+						<a
+							class="menu-link"
+							href="https://www.elinext.com/services/ui-ux-design/"
+							>UI &amp; UX</a
+						>
+					</div>
+					<div class="menu-item">
+						<a class="menu-link" href="https://www.elinext.com/services/devops/"
+							>DevOps</a
+						>
+					</div>
+					<div class="menu-item">
+						<a class="menu-link" href="https://www.elinext.com/services/cloud/"
+							>Cloud Computing Architecture</a
+						>
+					</div>
+					<div class="menu-item">
+						<a
+							class="menu-link"
+							href="https://www.elinext.com/services/saas-development/"
+							>SaaS Delivery</a
+						>
+					</div>
+					<div class="menu-item">
+						<a
+							class="menu-link"
+							href="https://www.elinext.com/services/web-development/"
+							>Web</a
+						>
+					</div>
+					<div class="menu-item">
+						<a
+							class="menu-link"
+							href="https://www.elinext.com/services/app-development/"
+							>Mobile</a
+						>
+					</div>
+					<div class="menu-item">
+						<a
+							class="menu-link"
+							href="https://www.elinext.com/services/android-development/"
+							>Android</a
+						>
+					</div>
+					<div class="menu-item">
+						<a
+							class="menu-link"
+							href="https://www.elinext.com/services/ios-development/"
+							>iOS</a
+						>
+					</div>
+					<div class="menu-item">
+						<a
+							class="menu-link"
+							href="https://www.elinext.com/services/cross-platform/"
+							>Cross-platform</a
+						>
+					</div>
+					<div class="menu-item">
+						<a class="menu-link" href="https://www.elinext.com/qa-testing/"
+							>QA &amp; Testing</a
+						>
+					</div>
+					<div class="menu-item">
+						<a
+							class="menu-link"
+							href="https://www.elinext.com/services/application-maintenance-and-support/"
+							>Maintenance &amp; Support</a
+						>
+					</div>
+					<div class="menu-item">
+						<a
+							class="menu-link"
+							href="https://www.elinext.com/services/software-product-engineering/"
+							>Software Product Engineering</a
+						>
+					</div>
+					<div class="menu-item">
+						<a class="menu-link" href="https://www.elinext.com/industries/"
+							>Industries</a
+						>
+					</div>
+					<div class="menu-item">
+						<a
+							class="menu-link"
+							href="https://www.elinext.com/industries/healthcare/"
+							>Healthcare</a
+						>
+					</div>
+					<div class="menu-item">
+						<a
+							class="menu-link"
+							href="https://www.elinext.com/industries/healthcare/clinical-workforce-management-solutions/"
+							>Clinical &amp; Workforce Management</a
+						>
+					</div>
+					<div class="menu-item">
+						<a
+							class="menu-link"
+							href="https://www.elinext.com/industries/healthcare/care-delivery-management-solutions/"
+							>Care Delivery Management</a
+						>
+					</div>
+					<div class="menu-item">
+						<a
+							class="menu-link"
+							href="https://www.elinext.com/industries/healthcare/mhealth-app-development/"
+							>mHealth</a
+						>
+					</div>
+					<div class="menu-item">
+						<a
+							class="menu-link"
+							href="https://www.elinext.com/industries/healthcare/analytics/"
+							>Healthcare Analytics</a
+						>
+					</div>
+					<div class="menu-item">
+						<a
+							class="menu-link"
+							href="https://www.elinext.com/industries/financial/"
+							>Financial Services &amp; Banking</a
+						>
+					</div>
+					<div class="menu-item">
+						<a
+							class="menu-link"
+							href="https://www.elinext.com/industries/financial/custom-accounting-software/"
+							>Accounting</a
+						>
+					</div>
+					<div class="menu-item">
+						<a
+							class="menu-link"
+							href="https://www.elinext.com/industries/financial/banking-software-development/"
+							>Banking</a
+						>
+					</div>
+					<div class="menu-item">
+						<a
+							class="menu-link"
+							href="https://www.elinext.com/industries/financial/payment-processing-software-development/"
+							>Payment Processing</a
+						>
+					</div>
+					<div class="menu-item">
+						<a
+							class="menu-link"
+							href="https://www.elinext.com/industries/financial/trading-software-development/"
+							>Trading</a
+						>
+					</div>
+					<div class="menu-item">
+						<a
+							class="menu-link"
+							href="https://www.elinext.com/industries/insurance/"
+							>Insurtech</a
+						>
+					</div>
+					<div class="menu-item">
+						<a
+							class="menu-link"
+							href="https://www.elinext.com/industries/manufacturing/"
+							>Manufacturing</a
+						>
+					</div>
+					<div class="menu-item">
+						<a
+							class="menu-link"
+							href="https://www.elinext.com/industries/manufacturing/predictive-maintenance-software-development/"
+							>Predictive Maintenance</a
+						>
+					</div>
+					<div class="menu-item">
+						<a
+							class="menu-link"
+							href="https://www.elinext.com/industries/manufacturing/smart-manufacturing/"
+							>Smart Manufacturing</a
+						>
+					</div>
+					<div class="menu-item">
+						<a
+							class="menu-link"
+							href="https://www.elinext.com/industries/retail/"
+							>Retail &amp; eCommerce</a
+						>
+					</div>
+					<div class="menu-item">
+						<a
+							class="menu-link"
+							href="https://www.elinext.com/industries/telecom/"
+							>Telecom</a
+						>
+					</div>
+					<div class="menu-item">
+						<a
+							class="menu-link"
+							href="https://www.elinext.com/industries/automotive/"
+							>Automotive</a
+						>
+					</div>
+					<div class="menu-item">
+						<a
+							class="menu-link"
+							href="https://www.elinext.com/industries/education/"
+							>Education</a
+						>
+					</div>
+					<div class="menu-item">
+						<a
+							class="menu-link"
+							href="https://www.elinext.com/industries/logistics/"
+							>Logistics &amp; Transportation</a
+						>
+					</div>
+					<div class="menu-item">
+						<a
+							class="menu-link"
+							href="https://www.elinext.com/industries/real-estate/"
+							>Real Estate</a
+						>
+					</div>
+					<div class="menu-item">
+						<a
+							class="menu-link"
+							href="https://www.elinext.com/industries/travel/"
+							>Travel</a
+						>
+					</div>
+					<div class="menu-item">
+						<a
+							class="menu-link"
+							href="https://www.elinext.com/industries/media-entertainment/"
+							>Media &amp; Entertainment</a
+						>
+					</div>
+					<div class="menu-item">
+						<a class="menu-link" href="https://www.elinext.com/solutions/"
+							>Domains</a
+						>
+					</div>
+					<div class="menu-item">
+						<a class="menu-link" href="https://www.elinext.com/solutions/crm/"
+							>CRM &amp; Customer Engagement</a
+						>
+					</div>
+					<div class="menu-item">
+						<a class="menu-link" href="https://www.elinext.com/solutions/erp/"
+							>ERP &amp; Asset Management</a
+						>
+					</div>
+					<div class="menu-item">
+						<a
+							class="menu-link"
+							href="https://www.elinext.com/solutions/data-analytics/"
+							>Data Analytics</a
+						>
+					</div>
+					<div class="menu-item">
+						<a
+							class="menu-link"
+							href="https://www.elinext.com/solutions/data-analytics/business-intelligence/"
+							>Business Intelligence</a
+						>
+					</div>
+					<div class="menu-item">
+						<a
+							class="menu-link"
+							href="https://www.elinext.com/solutions/data-analytics/visualization/"
+							>Data Visualization</a
+						>
+					</div>
+					<div class="menu-item">
+						<a
+							class="menu-link"
+							href="https://www.elinext.com/services/gis-development/"
+							>GIS &amp; Mapping</a
+						>
+					</div>
+					<div class="menu-item">
+						<a
+							class="menu-link"
+							href="https://www.elinext.com/solutions/data-analytics/big-data/"
+							>Big Data</a
+						>
+					</div>
+					<div class="menu-item">
+						<a class="menu-link" href="https://www.elinext.com/solutions/hrm/"
+							>HR Management</a
+						>
+					</div>
+					<div class="menu-item">
+						<a
+							class="menu-link"
+							href="https://www.elinext.com/solutions/help-desk/"
+							>Help Desk &amp; Ticket Management</a
+						>
+					</div>
+					<div class="menu-item">
+						<a
+							class="menu-link"
+							href="https://www.elinext.com/solutions/infrastructure-management/"
+							>Infrastructure Management</a
+						>
+					</div>
+					<div class="menu-item">
+						<a
+							class="menu-link"
+							href="https://www.elinext.com/solutions/cybersecurity/"
+							>Cybersecurity</a
+						>
+					</div>
+					<div class="menu-item">
+						<a class="menu-link" href="https://www.elinext.com/embedded/iot/"
+							>Internet of Things</a
+						>
+					</div>
+					<div class="menu-item">
+						<a class="menu-link" href="https://www.elinext.com/solutions/ai/"
+							>Artificial Intelligence</a
+						>
+					</div>
+					<div class="menu-item">
+						<a
+							class="menu-link"
+							href="https://www.elinext.com/solutions/blockchain/"
+							>Blockchain</a
+						>
+					</div>
+					<div class="menu-item">
+						<a
+							class="menu-link"
+							href="https://www.elinext.com/services/augmented-reality/"
+							>Augmented &amp; Virtual Reality</a
+						>
+					</div>
+					<div class="menu-item">
+						<a
+							class="menu-link"
+							href="https://www.elinext.com/solutions/social-media-app-development/"
+							>Social Media Community</a
+						>
+					</div>
+					<div class="menu-item">
+						<a class="menu-link" href="https://www.elinext.com/technologies/"
+							>Technologies</a
+						>
+					</div>
+					<div class="menu-item">
+						<a
+							class="menu-link"
+							href="https://www.elinext.com/services/java-development/"
+							>Java</a
+						>
+					</div>
+					<div class="menu-item">
+						<a
+							class="menu-link"
+							href="https://www.elinext.com/services/dot-net-development/"
+							>.NET</a
+						>
+					</div>
+					<div class="menu-item">
+						<a
+							class="menu-link"
+							href="https://www.elinext.com/services/php-development/"
+							>PHP</a
+						>
+					</div>
+					<div class="menu-item">
+						<a
+							class="menu-link"
+							href="https://www.elinext.com/services/cpp-development/"
+							>C++</a
+						>
+					</div>
+					<div class="menu-item">
+						<a
+							class="menu-link"
+							href="https://www.elinext.com/services/front-end-development/"
+							>Front-end</a
+						>
+					</div>
+					<div class="menu-item">
+						<a class="menu-link" href="https://www.elinext.com/case-study/"
+							>Case Studies</a
+						>
+					</div>
+					<div class="menu-item">
+						<a class="menu-link" href="https://www.elinext.com/about-us/"
+							>About Us</a
+						>
+					</div>
+					<div class="menu-item">
+						<a class="menu-link" href="https://www.elinext.com/working-models/"
+							>Working Models</a
+						>
+					</div>
+					<div class="menu-item">
+						<a class="menu-link" href="https://www.elinext.com/testimonials/"
+							>Testimonials</a
+						>
+					</div>
+					<div class="menu-item">
+						<a class="menu-link" href="https://www.elinext.com/our-values/"
+							>Our Values</a
+						>
+					</div>
+					<div class="menu-item">
+						<a
+							class="menu-link"
+							href="https://www.elinext.com/corporate-social-responsibility/"
+							>Corporate Social Responsibility</a
+						>
+					</div>
+					<div class="menu-item">
+						<a class="menu-link" href="https://www.elinext.com/resources/"
+							>Resources</a
+						>
+					</div>
+					<div class="menu-item">
+						<a class="menu-link" href="https://www.elinext.com/blog/">Blog</a>
+					</div>
+					<div class="menu-item">
+						<a class="menu-link" href="https://www.elinext.com/news/">News</a>
+					</div>
+					<div class="menu-item">
+						<a class="menu-link" href="https://www.elinext.com/presentations/"
+							>Presentations</a
+						>
+					</div>
+					<div class="menu-item">
+						<a class="menu-link" href="https://www.elinext.com/researches/"
+							>Researches</a
+						>
+					</div>
+					<div class="menu-item">
+						<a class="menu-link" href="https://www.elinext.com/careers/"
+							>Careers</a
+						>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+ <header class="header" id="header">
+	<div class="wrapper">
+		<div class="container">
+			<div class="logo" id="logo">
+				<a class="link" href="https://www.elinext.com"></a>
+			</div>
+			<div class="search" id="search">
+				<div class="search-wrapper">
+					<div class="search-input-container">
+						<form action="https://www.elinext.com">
+							<input
+								class="search-input"
+								name="s"
+								autocomplete="off"
+								value=""
+								type="text"
+								placeholder="Search"
+							/>
+							<img
+								class="search-icon fn-expand-search-input"
+								src="wp-content/themes/elinext/public/img/search_icon.svg"
+							/>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="burger-menu" id="burger-menu">
+				<div class="menu">
+					<div class="line"></div>
+					<div class="line"></div>
+					<div class="line"></div>
+				</div>
+				<div class="contact-us">
+					<a class="contact-us-btn" href="https://www.elinext.com/contacts/">
+						<div class="contact-us-btn-shadow"></div>
+						<div class="contact-us-btn-text">Contact Us</div>
+					</a>
+				</div>
+			</div>
+		</div>
+		<aside class="left-side-navigation" id="left-side-navigation">
+			<h4 class="title">Placeholder for Page Name</h4>
+		</aside>
+		<aside class="right-side-navigation" id="right-side-navigation">
+			<div class="items" onclick="onSwitch(event)">
+				<div class="item fn-scroll-top"></div>
+				<a class="item fn-scroll-to-item" href="#template-3"></a>
+				
+			</div>
+
+			<div class="scroll-top fn-scroll-top hovered">
+				<svg
+					width="16"
+					height="25"
+					viewBox="0 0 16 25"
+					fill="#475366"
+					xmlns="http://www.w3.org/2000/svg"
+				>
+					<path
+						d="M8.70711 0.292892C8.31658 -0.0976315 7.68342 -0.0976315 7.29289 0.292892L0.928932 6.65685C0.538408 7.04738 0.538408 7.68054 0.928932 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65685L8.70711 0.292892ZM9 25L9 1L7 1L7 25L9 25Z"
+					></path>
+				</svg>
+			</div>
+		</aside>
+	</div>
+</header>
+
+	<div class="wrapper">
+
+		<section class="template-2 template-2--outstaffing template-2--php-outstaffing" id="template-2">
+	<div class="template-2-lines lines-bg">
+		<div class="lines-bg-item"></div>
+		<div class="lines-bg-item"></div>
+		<div class="lines-bg-item"></div>
+		<div class="lines-bg-item"></div>
+		<div class="lines-bg-item"></div>
+		<div class="lines-bg-item"></div>
+		<div class="lines-bg-item"></div>
+		<div class="lines-bg-item"></div>
+		<div class="lines-bg-item"></div>
+		<div class="lines-bg-item"></div>
+	</div>
+	<div class="template-2-wrapper container">
+		<div class="template-2-image">
+			<img alt="Find your PHP Team Here" src="img/gennady-sergeenko.png">
+		</div>
+		<div class="template-2-content">
+			<h1 class="template-2-header"><span>Find Your</span><br><span>PHP Team </span><br><span>Here</span></h1>
+			<div class="custom-nav-header">Find Your Team</div>
+			<div class="template-2-text">
+				<h3>Hire experienced PHP developers for your project today. </h3>
+				<p>We have searched, checked, hired, and trained great PHP developers for years. You can hire them within a day.</p>
+				<div class="manager">
+					<div class="manager-title">Gennady Sergeenko,</div>
+					<div class="manager-position">Head of PHP Unit</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+		<section class="template-25 template-25--php template-25--outstaffing" id="template-25">
+	<div class="template-25-lines lines-bg">
+		<div class="lines-bg-item"></div>
+		<div class="lines-bg-item"></div>
+		<div class="lines-bg-item"></div>
+		<div class="lines-bg-item"></div>
+		<div class="lines-bg-item"></div>
+		<div class="lines-bg-item"></div>
+		<div class="lines-bg-item"></div>
+		<div class="lines-bg-item"></div>
+		<div class="lines-bg-item"></div>
+		<div class="lines-bg-item"></div>
+	</div>
+	<div class="template-25-wrapper container">
+		<div class="template-25-header"></div>
+		<div class="custom-nav-header">How to start</div>
+		<div class="template-25-caption"></div>
+		<div class="template-25-tabs tabs">
+			<div class="tabs-caption">
+				<div class="tabs-caption-item active">
+					<div class="tabs-caption-item-title">HOW TO START</div>
+					<div class="tabs-caption-item-link">
+						<span>More</span>
+
+					</div>
+				</div>
+				<div class="tabs-caption-item">
+					<div class="tabs-caption-item-title">HOW LONG DOES IT TAKE </div>
+					<div class="tabs-caption-item-link">
+						<span>More</span>
+
+					</div>
+				</div>
+				<div class="tabs-caption-item">
+					<div class="tabs-caption-item-title">HOW MUCH DOES IT COST</div>
+					<div class="tabs-caption-item-link">
+						<span>More</span>
+
+					</div>
+				</div>
+
+			</div>
+			<div class="tabs-content tab-content active">
+				<div class="tab-content-top">
+					<div class="tab-content-title">HOW TO START</div>
+					<div class="tab-content-num">/ 01.</div>
+				</div>
+				<div class="tab-content-text">
+					<p>
+						List the PHP web development services you need for your project, and we send you the CVs of available PHP developers who fit your tasks within one business day. Start interviews straight away or provide test tasks! Our available PHP developers could work on it for up to 2 business days without any charge.
+					</p>
+
+				</div>
+				<a class="tab-content-link" href="#"><span>Send us your request here</span>
+					<svg width="33" height="16" viewBox="0 0 33 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M32.7071 8.70711C33.0976 8.31658 33.0976 7.68342 32.7071 7.29289L26.3431 0.928932C25.9526 0.538408 25.3195 0.538408 24.9289 0.928932C24.5384 1.31946 24.5384 1.95262 24.9289 2.34315L30.5858 8L24.9289 13.6569C24.5384 14.0474 24.5384 14.6805 24.9289 15.0711C25.3195 15.4616 25.9526 15.4616 26.3431 15.0711L32.7071 8.70711ZM0 9H32V7H0V9Z" fill="#F2C53D"></path>
+					</svg>
+				</a>
+			</div>
+			<div class="tabs-content tab-content">
+				<div class="tab-content-top">
+					<div class="tab-content-title">HOW LONG DOES IT TAKE</div>
+					<div class="tab-content-num">/ 02.</div>
+				</div>
+				<div class="tab-content-text">
+					<p>
+						The team you choose will start with the PHP web development services within ten business days. During this time, we negotiate all the terms and conditions, and in the meantime, you can provide the project onboarding.
+					</p>
+
+				</div>
+				<a class="tab-content-link" href="#"><span>Send us your request here</span>
+					<svg width="33" height="16" viewBox="0 0 33 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M32.7071 8.70711C33.0976 8.31658 33.0976 7.68342 32.7071 7.29289L26.3431 0.928932C25.9526 0.538408 25.3195 0.538408 24.9289 0.928932C24.5384 1.31946 24.5384 1.95262 24.9289 2.34315L30.5858 8L24.9289 13.6569C24.5384 14.0474 24.5384 14.6805 24.9289 15.0711C25.3195 15.4616 25.9526 15.4616 26.3431 15.0711L32.7071 8.70711ZM0 9H32V7H0V9Z" fill="#F2C53D"></path>
+					</svg>
+				</a>
+			</div>
+			<div class="tabs-content tab-content">
+				<div class="tab-content-top">
+					<div class="tab-content-title">HOW MUCH DOES IT COST</div>
+					<div class="tab-content-num">/ 03.</div>
+				</div>
+				<div class="tab-content-text">
+					<p>
+						For PHP team augmentation, we offer the 'time and materials' working model. It allows you to stay flexible at any stage of the agile project development. Rates and conditions depend on the level and number of PHP specialists involved<br>
+						Together with invoices, we provide our clients with detailed hourly reports from Jira or other Project status tracking software with hours spent per each specialist. Once the customer approves the report, we issue the invoice.
+					</p>
+				</div>
+				<a class="tab-content-link" href="#"><span>Send us your request here</span>
+					<svg width="33" height="16" viewBox="0 0 33 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M32.7071 8.70711C33.0976 8.31658 33.0976 7.68342 32.7071 7.29289L26.3431 0.928932C25.9526 0.538408 25.3195 0.538408 24.9289 0.928932C24.5384 1.31946 24.5384 1.95262 24.9289 2.34315L30.5858 8L24.9289 13.6569C24.5384 14.0474 24.5384 14.6805 24.9289 15.0711C25.3195 15.4616 25.9526 15.4616 26.3431 15.0711L32.7071 8.70711ZM0 9H32V7H0V9Z" fill="#F2C53D"></path>
+					</svg>
+				</a>
+			</div>
+
+		</div>
+		<div class="template-25-tabs-nav">
+			<div class="tabs-nav">
+				<div class="tabs-nav-counter">
+					<span class="current">1</span>/<span>3</span>
+				</div>
+				<div class="tabs-nav-arrows">
+					<div class="tabs-nav-prev">
+						<svg
+							width="25"
+							height="8"
+							viewBox="0 0 25 8"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								d="M0.646446 3.64645C0.451185 3.84171 0.451185 4.15829 0.646446 4.35355L3.82843 7.53553C4.02369 7.7308 4.34027 7.7308 4.53553 7.53553C4.7308 7.34027 4.7308 7.02369 4.53553 6.82843L1.70711 4L4.53553 1.17157C4.7308 0.976311 4.7308 0.659728 4.53553 0.464466C4.34027 0.269204 4.02369 0.269204 3.82843 0.464466L0.646446 3.64645ZM25 3.5L1 3.5V4.5L25 4.5V3.5Z"
+								fill="#2C333F"
+							></path>
+						</svg>
+					</div>
+					<div class="tabs-nav-next">
+						<svg
+							width="25"
+							height="8"
+							viewBox="0 0 25 8"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								d="M24.3536 4.35356C24.5488 4.15829 24.5488 3.84171 24.3536 3.64645L21.1716 0.464468C20.9763 0.269206 20.6597 0.269206 20.4645 0.464468C20.2692 0.65973 20.2692 0.976313 20.4645 1.17157L23.2929 4L20.4645 6.82843C20.2692 7.02369 20.2692 7.34027 20.4645 7.53554C20.6597 7.7308 20.9763 7.7308 21.1716 7.53554L24.3536 4.35356ZM-4.37114e-08 4.5L24 4.5L24 3.5L4.37114e-08 3.5L-4.37114e-08 4.5Z"
+								fill="#2C333F"
+							></path>
+						</svg>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+		<!-- template-21--web-development -->
+<section class="template-21 template-21--outstaffing" id="template-21">
+	<div class="template-21-lines lines-bg">
+		<div class="lines-bg-item"></div>
+		<div class="lines-bg-item"></div>
+		<div class="lines-bg-item"></div>
+		<div class="lines-bg-item"></div>
+		<div class="lines-bg-item"></div>
+		<div class="lines-bg-item"></div>
+		<div class="lines-bg-item"></div>
+		<div class="lines-bg-item"></div>
+		<div class="lines-bg-item"></div>
+		<div class="lines-bg-item"></div>
+	</div>
+	<div class="template-21-wrapper container">
+		<div class="template-21-header">
+			Hire Skilled & Experienced <br>PHP Developers
+		</div>
+		<div class="custom-nav-header">PHP Developers</div>
+		<div class="template-21-caption">
+			Elinext has been a PHP web development company since its foundation back in 1997. If you need a web portal, or a more complex solution, such as ERP/CRM applications, we are ready to help your company with our top-notch expertise. <br><br>All these years, we developed and nailed proven hiring, skill assessment, and KPI systems. There are no 'black cats' among Elinext PHP developers. Each employee is involved in a complex process to prove, maintain and increase his or her expertise.
+
+		</div>
+		<div class="template-21-list-bars">
+			<div class="el-bar">
+				<div class="el-bar-num"><span>01.</span></div>
+				<div class="el-bar-main">
+					<div class="el-bar-title">Step 1</div>
+					<div class="el-bar-text">
+						We check and verify the applicants’ background, diplomas, and previous employment. Our HRs perform internal and external reference checks. We may also conduct criminal, credit, immigration, and security checks if that permits local labor law.
+					</div>
+				</div>
+
+				<div class="el-bar-line">
+
+				</div>
+			</div>
+			<div class="el-bar">
+				<div class="el-bar-num"><span>02.</span></div>
+				<div class="el-bar-main">
+					<div class="el-bar-title">Step 2</div>
+					<div class="el-bar-text">
+						We provide pre-interview testing and then multi-stage interviews oriented to assess PHP hard skills and soft skills (especially related to communication). The last-stage interviews are conducted by Senior PHP developers.
+					</div>
+				</div>
+
+				<div class="el-bar-line">
+
+				</div>
+			</div>
+			<div class="el-bar">
+				<div class="el-bar-num"><span>03.</span></div>
+				<div class="el-bar-main">
+					<div class="el-bar-title">Step 3</div>
+					<div class="el-bar-text">
+						We use KPI measurement to track actual performance against planned objectives. Elinext utilizes KPIs across the entire life cycle of a software project at three levels: Project-level, Team-level, and Developer-level.
+						<br><br>
+						Our standard set of Metrics is based on:<br>
+						- Methodology used (Agile, Scrum, Waterfall, Extreme Programming, SDLC, Feature Driven Development)<br>
+						- Development time<br>
+						- Complexity<br>
+						- Halstead measures<br>
+
+					</div>
+				</div>
+
+				<div class="el-bar-line">
+
+				</div>
+			</div>
+			<div class="el-bar">
+				<div class="el-bar-num"><span>04.</span></div>
+				<div class="el-bar-main">
+					<div class="el-bar-title">Step 4</div>
+					<div class="el-bar-text">
+						<p>We assign 3 managers for medium and large scale projects:</p>
+						<br>
+						<p><span>/ 01.</span> a delivery manager who supervises the whole software delivery process and is focused on your project success;</p>
+						<p><span>/ 02.</span>a project manager who tracks the fulfillment and quality of the project at the organizational level;</p>
+						<p><span>/ 03.</span>a team leader who helps to manage the team at the technical level.</p>
+
+
+
+					</div>
+				</div>
+
+				<div class="el-bar-line">
+
+				</div>
+			</div>
+			<div class="el-bar">
+				<div class="el-bar-num"><span>05.</span></div>
+				<div class="el-bar-main">
+					<div class="el-bar-title">Step 5</div>
+					<div class="el-bar-text">
+						We track the productivity indicators according to the action plan at weekly performance reviews with supervisors and team members. On a project management level, the progress is evaluated daily.
+					</div>
+				</div>
+
+				<div class="el-bar-line">
+
+				</div>
+			</div>
+			<div class="el-bar">
+				<div class="el-bar-num"><span>06.</span></div>
+				<div class="el-bar-main">
+					<div class="el-bar-title">Step 6</div>
+					<div class="el-bar-text">
+						Elinext supports all the initiatives of developers to increase the level of their technology and operational competence. Hence all the expenditures concerning getting certificates, getting further education, attending courses are covered by Elinext.
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</section>
+
+		<section class="template-22 template-22--php template-22--outstaffing" id="template-22">
+	<div class="template-22-lines lines-bg">
+		<div class="lines-bg-item"></div>
+		<div class="lines-bg-item"></div>
+		<div class="lines-bg-item"></div>
+		<div class="lines-bg-item"></div>
+		<div class="lines-bg-item"></div>
+		<div class="lines-bg-item"></div>
+		<div class="lines-bg-item"></div>
+		<div class="lines-bg-item"></div>
+		<div class="lines-bg-item"></div>
+		<div class="lines-bg-item"></div>
+	</div>
+	<div class="template-22-wrapper container">
+		<h1 class="template-22-header">
+			PHP Technologies Scope
+		</h1>
+		<div class="custom-nav-header">Tech stack</div>
+		<div class="template-22-caption">
+			Our frameworks and technologies include but are not limited to:
+		</div>
+		<div class="template-22-content">
+			<div class="template-22-list">
+				<div class="list">
+					<div class="list-col">
+						<div class="list-item">
+							<div class="list-item-num">/ 01.</div>
+							<div class="list-item-value">
+								<span>PHP frameworks:</span> Laravel, Symfony, Yii, Zend
+								Framework (ZF), CodeIgniter, Silex, Slim.
+							</div>
+						</div>
+						<div class="list-item">
+							<div class="list-item-num">/ 02.</div>
+							<div class="list-item-value">
+								<span>Online Store-Management <br />Software:</span> Magento,
+								WooCommerce, Zen Cart.
+							</div>
+						</div>
+					</div>
+					<div class="list-col">
+						<div class="list-item">
+							<div class="list-item-num">/ 03.</div>
+							<div class="list-item-value">
+								<span>CMS:</span> Joomla, WordPress.
+							</div>
+						</div>
+						<div class="list-item">
+							<div class="list-item-num">/ 04.</div>
+							<div class="list-item-value">
+								<span>Databases:</span> MySQL, PostgreSQL, MongoDB, DynamoDB,
+								Redis.
+							</div>
+						</div>
+						<div class="list-item">
+							<div class="list-item-num">/ 05.</div>
+							<div class="list-item-value">
+								<span>Search engines:</span> Solr, Elasticsearch, Sphinx.
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="template-22-list-wrapper">
+				<div class="list">
+					<div class="list-col">
+						<div class="list-title">Third-Party APIs:</div>
+						<div class="list-item">
+							<div class="list-item-num">/ 01.</div>
+							<div class="list-item-value">
+								<span>Social Networking -</span> Facebook, Twitter, LinkedIn,
+								Instagram.
+							</div>
+						</div>
+						<div class="list-item">
+							<div class="list-item-num">/ 02.</div>
+							<div class="list-item-value">
+								<span>Payment Systems -</span> PayPal, Braintree, Stripe,
+								Wirecard, SimplePay, Lemon Way, Mangopay Authorize.Net, Skrill.
+							</div>
+						</div>
+					</div>
+					<div class="list-col">
+						<div class="list-title"></div>
+						<div class="list-item">
+							<div class="list-item-num">/ 03.</div>
+							<div class="list-item-value">
+								<span>Geolocation -</span> Google Maps, Bing Maps, Yandex Maps.
+							</div>
+						</div>
+						<div class="list-item">
+							<div class="list-item-num">/ 04.</div>
+							<div class="list-item-value">
+								<span>File Storage -</span> DropBox, Google Drive.
+							</div>
+						</div>
+						<div class="list-item">
+							<div class="list-item-num">/ 05.</div>
+							<div class="list-item-value">
+								<span>Analytics -</span> Google Analytics, Chashlytics.
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+		<section class="template-11 template-11--java template-11--outstaffing" id="template-11">
+	<div class="template-11-lines lines-bg">
+		<div class="lines-bg-item"></div>
+		<div class="lines-bg-item"></div>
+		<div class="lines-bg-item"></div>
+		<div class="lines-bg-item"></div>
+		<div class="lines-bg-item"></div>
+		<div class="lines-bg-item"></div>
+		<div class="lines-bg-item"></div>
+		<div class="lines-bg-item"></div>
+		<div class="lines-bg-item"></div>
+		<div class="lines-bg-item"></div>
+	</div>
+	<div class="template-11-wrapper container">
+		<h1 class="template-11-header">Why Else Outsourcing With Elinext</h1>
+		<div class="custom-nav-header">Outsourcing</div>
+
+		<div class="template-11-tabs">
+			<div class="template-11-tabs-caption">
+				<div class="template-11-tabs-caption-item sq-block sq-block--is-active">
+					<div class="sq-block-top">
+						<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<g clip-path="url(#clip0_11940_105373)">
+							<path d="M11.8125 19.4063C11.8125 19.9241 11.3928 20.3438 10.875 20.3438C10.3572 20.3438 9.9375 19.9241 9.9375 19.4063C9.9375 18.8885 10.3572 18.4688 10.875 18.4688C11.3928 18.4688 11.8125 18.8885 11.8125 19.4063Z" fill="#2C333F"/>
+							<path d="M23.48 47.8426C23.6375 47.9474 23.8188 48.0001 24 48.0001C24.1813 48.0001 24.3626 47.9474 24.5201 47.8426L33.0458 42.1583C38.5354 38.4991 41.8126 32.3753 41.8126 25.7773V6.58851C41.8126 6.18568 41.5548 5.82753 41.1728 5.69972L24.2978 0.0483399C24.1044 -0.0161133 23.8953 -0.0161133 23.7023 0.0483399L6.82727 5.69972C6.44495 5.82753 6.1875 6.18568 6.1875 6.58851V25.7773C6.1875 32.3753 9.46473 38.4991 14.9542 42.1583L23.48 47.8426ZM8.0625 25.7773V7.26344L24 1.92591L39.9376 7.26344V25.7773C39.9376 31.7469 36.9724 37.2873 32.0058 40.5982L24 45.9358L15.9943 40.5982C11.0277 37.2877 8.0625 31.7469 8.0625 25.7773Z" fill="#2C333F"/>
+							<path d="M23.48 43.3358C23.6375 43.4406 23.8188 43.4933 24 43.4933C24.1813 43.4933 24.3626 43.4406 24.5201 43.3358L30.9654 39.0383C35.4094 36.0761 38.0626 31.119 38.0626 25.7782V9.29132C38.0626 8.88849 37.8051 8.53033 37.4232 8.40252L24.2981 4.00175C24.1048 3.93694 23.8953 3.93694 23.7019 4.00175L10.5769 8.40252C10.1949 8.53033 9.9375 8.88849 9.9375 9.29132V15.6561C9.9375 16.1735 10.3572 16.5936 10.875 16.5936C11.3925 16.5936 11.8125 16.1735 11.8125 15.6561V9.96588L24 5.87932L36.1876 9.96588V25.7782C36.1876 30.491 33.8464 34.8646 29.9253 37.4783L24 41.429L18.0747 37.4779C14.1533 34.8646 11.8125 30.4906 11.8125 25.7782V23.1561C11.8125 22.6383 11.3925 22.2186 10.875 22.2186C10.3572 22.2186 9.9375 22.6383 9.9375 23.1561V25.7782C9.9375 31.1194 12.5907 36.0764 17.0347 39.0383L23.48 43.3358Z" fill="#2C333F"/>
+							<path d="M20.1365 30.7695C20.6676 31.3009 21.374 31.5935 22.1251 31.5935C22.8762 31.5935 23.5822 31.3009 24.1136 30.7695L31.6136 23.2695C32.7126 22.1705 32.713 20.3918 31.6136 19.2928C30.5146 18.1938 28.7359 18.1934 27.6366 19.2924L22.1251 24.8043L20.3636 23.0428C19.265 21.9438 17.4859 21.9434 16.3865 23.0428C15.2872 24.1418 15.2872 25.9205 16.3865 27.0198L20.1365 30.7695ZM17.7122 24.3685C18.0788 24.0023 18.6713 24.0023 19.0375 24.3685L21.4619 26.7928C21.8281 27.1586 22.4217 27.1586 22.7879 26.7928L28.9623 20.6185C29.3288 20.2522 29.921 20.2522 30.2879 20.6185C30.6542 20.9847 30.6542 21.5772 30.2876 21.9438L22.7876 29.4438C22.6103 29.621 22.3752 29.7188 22.1251 29.7188C21.875 29.7188 21.6395 29.621 21.4622 29.4438L17.7122 25.6938C17.346 25.3276 17.3456 24.735 17.7122 24.3685Z" fill="#2C333F"/>
+							</g>
+							<defs>
+							<clipPath id="clip0_11940_105373">
+							<rect width="48" height="48" fill="white"/>
+							</clipPath>
+							</defs>
+						</svg>
+
+
+						<div class="sq-block-num">/ 01.</div>
+					</div>
+					<div class="sq-block-title">Security</div>
+					<div class="sq-block-link">More</div>
+				</div>
+				<div class="template-11-tabs-caption-item sq-block">
+					<div class="sq-block-top">
+						<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M18.125 32H13.875C13.1858 32 12.625 31.4392 12.625 30.75V28.884C11.449 28.5767 10.3267 28.1113 9.27734 27.4958L7.95679 28.8164C7.46924 29.3037 6.67627 29.3037 6.18896 28.8164L3.18359 25.811C2.69629 25.3237 2.69629 24.5308 3.18359 24.0435L4.50415 22.7227C3.88867 21.6733 3.42334 20.551 3.11597 19.375H1.25C0.560791 19.375 0 18.8142 0 18.125V13.875C0 13.1858 0.560791 12.625 1.25 12.625H3.11182C3.41821 11.447 3.88306 10.3228 4.49854 9.27148L3.18359 7.95654C2.69629 7.46924 2.69629 6.67627 3.18359 6.18896L6.18896 3.18359C6.67627 2.69629 7.46924 2.69629 7.95679 3.18359L9.26709 4.49414C10.3193 3.87573 11.4451 3.40845 12.625 3.1001V1.25C12.625 0.560791 13.1858 0 13.875 0H18.125C18.8142 0 19.375 0.560791 19.375 1.25V3.09595C20.5566 3.40332 21.6846 3.87012 22.7385 4.48828L24.0435 3.18359C24.5308 2.69629 25.3237 2.69629 25.811 3.18359L28.8164 6.18896C29.3037 6.67627 29.3037 7.46924 28.8164 7.95679L27.5117 9.26147C28.1299 10.3154 28.5967 11.4434 28.9041 12.625H30.75C31.4392 12.625 32 13.1858 32 13.875V18.125C32 18.8142 31.4392 19.375 30.75 19.375H28.8999C28.5916 20.5549 28.124 21.6807 27.5059 22.7329L28.8162 24.0435C29.3035 24.5308 29.3035 25.3237 28.8162 25.811L25.811 28.8164C25.3237 29.3037 24.5308 29.3037 24.0432 28.8164L22.7285 27.5015C21.677 28.1169 20.5527 28.5818 19.375 28.8882V30.75C19.375 31.4392 18.8142 32 18.125 32ZM9.18359 26.0806C9.2998 26.0806 9.41626 26.1128 9.51978 26.1787C10.709 26.938 12.0095 27.4773 13.385 27.7817C13.6714 27.8452 13.875 28.0989 13.875 28.3921V30.75H18.125V28.3955C18.125 28.1021 18.3291 27.8481 18.6157 27.7852C19.9932 27.4819 21.2957 26.9434 22.4868 26.1846C22.7339 26.0271 23.0574 26.0625 23.2646 26.2698L24.9272 27.9324L27.9324 24.9272L26.2734 23.2683C26.0659 23.0608 26.0308 22.7368 26.189 22.4895C26.9509 21.2981 27.4924 19.9944 27.7979 18.615C27.8611 18.3286 28.115 18.125 28.408 18.125H30.75V13.875H28.4114C28.1179 13.875 27.864 13.6709 27.801 13.3843C27.4971 12.0029 26.9565 10.6973 26.1946 9.50391C26.0369 9.25659 26.0723 8.93311 26.2795 8.72559L27.9324 7.07275L24.9272 4.06763L23.2744 5.72046C23.0671 5.92773 22.7434 5.96313 22.4961 5.80542C21.3027 5.04346 19.9971 4.50317 18.6157 4.19897C18.3291 4.13599 18.125 3.88208 18.125 3.58862V1.25H13.875V3.59204C13.875 3.88525 13.6714 4.13892 13.3853 4.20239C12.0056 4.50781 10.7019 5.04907 9.5105 5.81104C9.26343 5.96924 8.93921 5.93408 8.73193 5.72656L7.07275 4.06763L4.06763 7.07275L5.73022 8.7356C5.9375 8.94263 5.9729 9.26611 5.81543 9.51318C5.05664 10.7043 4.51807 12.0068 4.21484 13.3843C4.15186 13.6709 3.89795 13.875 3.60449 13.875H1.25V18.125H3.60791C3.90112 18.125 4.15479 18.3289 4.21826 18.615C4.52271 19.9907 5.06226 21.291 5.82129 22.4802C5.979 22.7275 5.94385 23.0513 5.73633 23.2585L4.06763 24.9272L7.07275 27.9326L8.74146 26.2637C8.8623 26.1431 9.02222 26.0806 9.18359 26.0806Z" fill="#2C333F"/>
+							<path d="M15.9999 25.1209C13.6633 25.1209 11.3266 24.2312 9.54755 22.4524C5.98969 18.8946 5.98969 13.1055 9.54755 9.54764C10.9826 8.11283 12.8022 7.21537 14.8095 6.95267C16.7531 6.69828 18.7597 7.08353 20.4604 8.03714C20.7614 8.20585 20.8686 8.58671 20.6999 8.88773C20.5309 9.189 20.1501 9.29618 19.8491 9.12723C16.7885 7.41092 12.9157 7.9473 10.4316 10.4317C7.36102 13.502 7.36102 18.4981 10.4316 21.5686C11.9667 23.1035 13.9836 23.8711 15.9999 23.8714C18.0168 23.8716 20.0331 23.104 21.5685 21.5686C23.9692 19.168 24.5637 15.5159 23.0475 12.481C22.8932 12.1722 23.0185 11.7967 23.3273 11.6424C23.6359 11.4881 24.0114 11.6136 24.1657 11.9224C25.9225 15.439 25.2341 19.6709 22.4523 22.4524C20.6733 24.2312 18.3366 25.1209 15.9999 25.1209Z" fill="#2C333F"/>
+							<path d="M22.147 10.7507C21.9819 10.7507 21.8213 10.6843 21.7043 10.5674C21.5881 10.4512 21.522 10.2905 21.522 10.1257C21.522 9.96118 21.5881 9.80005 21.7043 9.68384C21.8206 9.56738 21.9819 9.50073 22.147 9.50073C22.3113 9.50073 22.4724 9.56738 22.5889 9.68384C22.7051 9.80005 22.772 9.96118 22.772 10.1257C22.772 10.2905 22.7051 10.4512 22.5889 10.5674C22.4719 10.6843 22.3113 10.7507 22.147 10.7507Z" fill="#2C333F"/>
+							<path d="M15.1179 20.6042C14.9521 20.6042 14.7932 20.5383 14.676 20.4211L10.7236 16.4685C10.4795 16.2246 10.4795 15.8289 10.7236 15.5847L12.9653 13.3428C13.0825 13.2256 13.2415 13.1599 13.4072 13.1599C13.573 13.1599 13.7322 13.2256 13.8494 13.3428L15.1179 14.6116L18.1509 11.5789C18.3948 11.3347 18.7905 11.3347 19.0347 11.5789L21.2766 13.8208C21.5205 14.0647 21.5205 14.4604 21.2766 14.7046L15.5601 20.4211C15.4426 20.5383 15.2837 20.6042 15.1179 20.6042ZM12.0493 16.0266L15.1179 19.0952L19.9507 14.2627L18.5928 12.9048L15.5601 15.9375C15.4429 16.0547 15.2837 16.1206 15.1179 16.1206C14.9521 16.1206 14.7932 16.0547 14.676 15.9375L13.4072 14.6687L12.0493 16.0266Z" fill="#2C333F"/>
+							</svg>
+
+						<div class="sq-block-num">/ 02.</div>
+					</div>
+					<div class="sq-block-title">All Services at One Place</div>
+					<div class="sq-block-link">More</div>
+				</div>
+				<div class="template-11-tabs-caption-item sq-block">
+					<div class="sq-block-top">
+						<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M29.625 2.8125H27.6313C27.214 1.19691 25.7441 0 24 0C22.2559 0 20.786 1.19691 20.3687 2.8125H18.375C16.6309 2.8125 15.1611 4.00941 14.7437 5.625H7.125C6.60731 5.625 6.1875 6.04481 6.1875 6.5625V47.0625C6.1875 47.5802 6.60731 48 7.125 48H19.7813C20.299 48 20.7188 47.5802 20.7188 47.0625C20.7188 46.5448 20.299 46.125 19.7813 46.125H8.0625V7.5H14.625V9.375C14.625 9.89269 15.0448 10.3125 15.5625 10.3125H32.4375C32.9552 10.3125 33.375 9.89269 33.375 9.375V7.5H39.9375V46.125H28.2188C27.7012 46.125 27.2813 46.5448 27.2813 47.0625C27.2813 47.5802 27.7012 48 28.2188 48H40.875C41.3927 48 41.8125 47.5802 41.8125 47.0625V6.5625C41.8125 6.04481 41.3927 5.625 40.875 5.625H33.2563C32.8389 4.00941 31.3691 2.8125 29.625 2.8125ZM31.5 8.4375H16.5V6.5625C16.5 5.52863 17.3411 4.6875 18.375 4.6875H21.1875C21.7052 4.6875 22.125 4.26769 22.125 3.75C22.125 2.71613 22.9661 1.875 24 1.875C25.0339 1.875 25.875 2.71613 25.875 3.75C25.875 4.26769 26.2948 4.6875 26.8125 4.6875H29.625C30.6589 4.6875 31.5 5.52863 31.5 6.5625V8.4375Z" fill="#2C333F"/>
+							<path d="M19.038 34.5871C18.6718 34.2211 18.0784 34.2211 17.7121 34.5871L15.5626 36.7366L13.413 34.587C13.0468 34.221 12.4534 34.221 12.0871 34.587C11.721 34.9531 11.721 35.5467 12.0871 35.9129L14.2367 38.0625L12.0871 40.2121C11.721 40.5782 11.721 41.1718 12.0871 41.538C12.4534 41.9041 13.0467 41.904 13.413 41.538L15.5626 39.3884L17.7122 41.538C18.0784 41.9041 18.6718 41.904 19.0381 41.538C19.4042 41.1719 19.4042 40.5783 19.0381 40.2121L16.8885 38.0625L19.0381 35.9129C19.4042 35.5468 19.4042 34.9532 19.038 34.5871V34.5871Z" fill="#2C333F"/>
+							<path d="M28.9622 35.9129C29.3284 36.279 29.9218 36.2789 30.2881 35.9129L32.4376 33.7634L34.5872 35.913C34.9535 36.2791 35.5468 36.279 35.9131 35.913C36.2792 35.5469 36.2792 34.9533 35.9131 34.5871L33.7635 32.4375L35.9131 30.2879C36.2792 29.9218 36.2792 29.3282 35.9131 28.962C35.5469 28.596 34.9535 28.596 34.5872 28.962L32.4376 31.1116L30.288 28.962C29.9218 28.596 29.3284 28.596 28.9621 28.962C28.596 29.3281 28.596 29.9217 28.9621 30.2879L31.1117 32.4375L28.9621 34.5871C28.596 34.9532 28.596 35.5468 28.9622 35.9129V35.9129Z" fill="#2C333F"/>
+							<path d="M32.4375 22.125C34.5052 22.125 36.1875 20.4427 36.1875 18.375C36.1875 16.3073 34.5052 14.625 32.4375 14.625C30.3698 14.625 28.6875 16.3073 28.6875 18.375C28.6875 20.4427 30.3698 22.125 32.4375 22.125ZM32.4375 16.5C33.4714 16.5 34.3125 17.3411 34.3125 18.375C34.3125 19.4089 33.4714 20.25 32.4375 20.25C31.4036 20.25 30.5625 19.4089 30.5625 18.375C30.5625 17.3411 31.4036 16.5 32.4375 16.5Z" fill="#2C333F"/>
+							<path d="M20.5245 21.8504C20.8908 22.2165 21.4841 22.2164 21.8504 21.8504L24.6629 19.0379C25.029 18.6718 25.029 18.0782 24.6629 17.712L21.8504 14.8995C21.4842 14.5335 20.8908 14.5335 20.5245 14.8995C20.1584 15.2656 20.1584 15.8592 20.5245 16.2254L21.7689 17.4698C19.0251 17.7004 16.5717 19.1953 15.1048 21.5691C13.5061 24.1561 13.3638 27.3244 14.7239 30.0443C14.9556 30.5074 15.5187 30.695 15.9818 30.4635C16.4448 30.2319 16.6325 29.6687 16.401 29.2057C15.3335 27.0712 15.4453 24.5849 16.6999 22.5548C17.8076 20.7623 19.6321 19.6082 21.6868 19.3624L20.5246 20.5246C20.1583 20.8907 20.1583 21.4843 20.5245 21.8504Z" fill="#2C333F"/>
+							<path d="M24 48C24.5178 48 24.9375 47.5803 24.9375 47.0625C24.9375 46.5447 24.5178 46.125 24 46.125C23.4822 46.125 23.0625 46.5447 23.0625 47.0625C23.0625 47.5803 23.4822 48 24 48Z" fill="#2C333F"/>
+							</svg>
+
+
+
+						<div class="sq-block-num">/ 03.</div>
+					</div>
+					<div class="sq-block-title">Flexibility</div>
+					<div class="sq-block-link">More</div>
+				</div>
+				<div class="template-11-tabs-caption-item sq-block">
+					<div class="sq-block-top">
+						<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<g clip-path="url(#clip0_11940_105401)">
+							<path d="M24.021 47.9969C23.6294 47.9983 23.2698 47.7472 23.1358 47.3792C23.005 47.0203 23.1096 46.607 23.3963 46.3543C23.7031 46.0837 24.1621 46.0459 24.5103 46.2594C24.8414 46.4623 25.0157 46.8653 24.9374 47.2457C24.8486 47.676 24.4611 47.9953 24.021 47.9969Z" fill="#2C333F"/>
+							<path d="M46.7482 39.2254C46.0073 38.4845 45.0416 38.0501 44.005 37.9859C45.2715 36.7675 46.0606 35.0563 46.0605 33.1642C46.0601 29.4748 43.0585 26.4736 39.3698 26.474L39.3465 26.4741C37.5683 26.4803 35.8973 27.1758 34.6394 28.4343C33.376 29.6982 32.6804 31.3785 32.6806 33.1657C32.6808 35.0612 33.4731 36.7749 34.7438 37.9934C33.7403 38.0762 32.8081 38.5069 32.0881 39.2272C31.9777 39.3376 31.8742 39.453 31.7777 39.5728C31.0312 38.6455 29.9051 38.0362 28.6377 37.9832C29.9014 36.7651 30.6887 35.0558 30.6885 33.1661C30.6881 29.4766 27.6865 26.4755 23.9978 26.4758L23.9745 26.4759C22.1964 26.4821 20.5252 27.1778 19.2674 28.4362C18.004 29.7001 17.3084 31.3805 17.3086 33.1677C17.3088 35.0574 18.0963 36.7666 19.3604 37.9843C18.2901 38.0288 17.2903 38.4668 16.5285 39.2291C16.4181 39.3395 16.3146 39.4549 16.2181 39.5747C15.5073 38.6916 14.4522 38.097 13.2587 37.9964C13.292 37.9644 13.325 37.932 13.3578 37.8993C14.6212 36.6354 15.3167 34.9551 15.3166 33.1679C15.3162 29.4784 12.3146 26.4773 8.62585 26.4776L8.60257 26.4777C6.82447 26.4839 5.15332 27.1796 3.8955 28.438C2.63213 29.7019 1.93646 31.3823 1.93674 33.1695C1.93693 35.0616 2.72659 36.7728 3.99334 37.9908C1.76923 38.1308 0.00249777 39.9852 0.00268556 42.2443L0.00324893 47.0609C0.00334283 47.5795 0.423713 47.9999 0.942297 47.9998L19.7576 47.9975H19.7609C20.2779 47.9957 20.6966 47.5759 20.6965 47.0584C20.6964 46.5399 20.276 46.1195 19.7573 46.1196L17.1592 46.12L17.1587 42.2421C17.1586 41.6054 17.4065 41.0067 17.8565 40.5565C18.3046 40.1081 18.8997 39.8604 19.5332 39.8583H19.5416L23.9847 39.8577H23.9994L24.013 39.8576L28.4571 39.8571C29.7712 39.857 30.8404 40.9262 30.8406 42.2404L30.841 46.1183L28.2429 46.1186H28.2396C27.7226 46.1204 27.3039 46.5402 27.304 47.0577C27.3041 47.5762 27.7245 47.9966 28.2431 47.9965L47.0583 47.9941H47.0616C47.5786 47.9923 47.9972 47.5725 47.9972 47.0551L47.9966 42.2384C47.9965 41.1003 47.5531 40.0302 46.7482 39.2254ZM3.81465 33.1693C3.81446 31.8837 4.31483 30.6748 5.22365 29.7657C6.12842 28.8604 7.3301 28.3601 8.60924 28.3556L8.62595 28.3555C11.2793 28.3553 13.4383 30.5141 13.4386 33.168C13.4387 34.4537 12.9383 35.6625 12.0296 36.5717C11.1247 37.4769 9.92311 37.9773 8.64398 37.9817H8.63459H8.61985C5.96983 37.9779 3.81493 35.8207 3.81465 33.1693ZM1.88069 42.2443C1.88059 40.9324 2.94499 39.8649 4.2553 39.8603H4.26338L8.61947 39.8598H8.62745H8.63477L12.8975 39.8593C14.2115 39.8591 15.2807 40.9283 15.2809 42.2426L15.2813 46.1204L1.88106 46.122L1.88069 42.2443ZM19.1866 33.1674C19.1865 31.8818 19.6868 30.673 20.5956 29.7638C21.5004 28.8585 22.7021 28.3583 23.9812 28.3538L23.9979 28.3537C26.6513 28.3534 28.8103 30.5122 28.8106 33.1661C28.8109 35.8147 26.6615 37.9707 24.0155 37.9797H24.0128H23.9852C21.3382 37.9726 19.1869 35.8167 19.1866 33.1674ZM34.5586 33.1655C34.5584 31.88 35.0587 30.6712 35.9675 29.762C36.8723 28.8568 38.0741 28.3565 39.3531 28.352L39.3699 28.3519C42.0232 28.3516 44.1822 30.5104 44.1825 33.1643C44.1828 35.8129 42.0334 37.9689 39.3874 37.9779H39.3772H39.3649C36.7144 37.9749 34.5588 35.8174 34.5586 33.1655ZM46.1191 46.1166L32.719 46.1183L32.7185 42.2404C32.7184 41.6037 32.9663 41.005 33.4163 40.5548C33.8644 40.1065 34.4595 39.8588 35.093 39.8566H35.1014L39.3649 39.856H39.3714H39.3776L43.7354 39.8555C44.3718 39.8554 44.9704 40.1033 45.4206 40.5533C45.8707 41.0034 46.1188 41.602 46.1188 42.2389L46.1191 46.1166Z" fill="#2C333F"/>
+							<path d="M19.6073 16.846C20.0421 17.0896 20.326 17.5285 20.3706 18.0131H20.3233H20.3201C20.0722 18.014 19.8347 18.1129 19.6594 18.2883C19.4833 18.4644 19.3844 18.7032 19.3845 18.9522L19.3849 22.8723C19.385 23.3909 19.8054 23.8113 20.324 23.8112L27.671 23.8103H27.6742C27.9221 23.8095 28.1596 23.7106 28.3349 23.5352C28.511 23.3591 28.61 23.1203 28.6099 22.8713L28.6094 18.9512C28.6093 18.4326 28.1889 18.0122 27.6704 18.0123H27.6229C27.6668 17.5272 27.947 17.0903 28.3764 16.8504C31.3003 15.2171 33.0669 12.1227 32.9871 8.77478C32.9317 6.44805 31.9832 4.25812 30.3162 2.60848C28.6495 0.959109 26.4499 0.033018 24.1224 0.000999675C21.697 -0.0363707 19.4069 0.887279 17.6798 2.59082C15.9525 4.29456 15.0014 6.56898 15.0017 8.99487C15.0021 12.2473 16.7668 15.2557 19.6073 16.846ZM26.7318 21.9326L21.2627 21.9333L21.2624 19.891H21.3083C21.3108 19.891 21.3134 19.8911 21.316 19.8911L26.6781 19.8904H26.6813C26.6829 19.8904 26.6845 19.8903 26.6861 19.8903H26.7316L26.7318 21.9326ZM18.9985 3.9278C20.3649 2.57993 22.1779 1.85572 24.0964 1.87872C27.8735 1.93093 31.0196 5.0444 31.1096 8.81947C31.1728 11.4692 29.7745 13.9183 27.4604 15.211C26.4374 15.7825 25.7878 16.847 25.7415 18.0126L22.252 18.0131C22.2052 16.849 21.5524 15.783 20.5248 15.2076C18.2767 13.9489 16.8799 11.5684 16.8796 8.99496C16.8793 7.07546 17.6318 5.27595 18.9985 3.9278Z" fill="#2C333F"/>
+							<path d="M21.943 12.979C22.2406 12.979 22.5204 13.0948 22.7308 13.3053C22.9413 13.5157 23.0573 13.7955 23.0574 14.0932L23.0576 15.8156C23.0577 16.3341 23.478 16.7545 23.9966 16.7544H23.9999C24.517 16.7527 24.9356 16.3329 24.9355 15.8154L24.9353 14.0929V14.0928C24.9353 13.7951 25.0511 13.5153 25.2616 13.3049C25.471 13.0953 25.7493 12.9796 26.0455 12.9785H26.0527C26.5697 12.9767 26.9883 12.5569 26.9882 12.0395C26.9881 11.5209 26.5678 11.1005 26.0492 11.1006H26.0388C25.2725 11.1032 24.5509 11.3922 23.9961 11.9164C23.4385 11.3898 22.7128 11.1009 21.9427 11.1011H21.9395C21.4224 11.1029 21.0038 11.5227 21.0039 12.0402C21.0039 12.5587 21.4244 12.9791 21.943 12.979Z" fill="#2C333F"/>
+							<path d="M37.6109 10.4947C37.6097 10.4947 37.6087 10.4947 37.6077 10.4947L36.4086 10.4949C35.89 10.495 35.4696 10.0746 35.4695 9.55609C35.4694 9.03854 35.888 8.61883 36.4051 8.61695H36.4082L37.6073 8.61676C38.1259 8.61667 38.5463 9.03704 38.5464 9.55553C38.5465 10.0731 38.1279 10.4928 37.6109 10.4947Z" fill="#2C333F"/>
+							<path d="M35.1615 6.86517C34.9202 6.86602 34.6786 6.77447 34.4944 6.59025C34.1276 6.22368 34.1275 5.62923 34.4943 5.26238L35.3419 4.41441C35.7085 4.04766 36.303 4.04747 36.6698 4.41422C37.0366 4.78079 37.0367 5.37524 36.67 5.74209L35.8223 6.59006C35.6397 6.77269 35.4007 6.86433 35.1615 6.86517Z" fill="#2C333F"/>
+							<path d="M36.0104 14.9725C35.7691 14.9733 35.5275 14.8818 35.3433 14.6976L34.4953 13.8499C34.1286 13.4833 34.1285 12.8889 34.4952 12.522C34.8616 12.1553 35.4561 12.1553 35.823 12.5218L36.671 13.3695C37.0378 13.7361 37.0378 14.3305 36.6712 14.6974C36.4887 14.88 36.2497 14.9716 36.0104 14.9725Z" fill="#2C333F"/>
+							<path d="M11.5863 10.4979C11.5852 10.4979 11.5841 10.4979 11.5831 10.4979L10.384 10.4981C9.86538 10.4982 9.44492 10.0778 9.44482 9.55929C9.44473 9.04174 9.86332 8.62203 10.3804 8.62015H10.3836L11.5827 8.61996C12.1013 8.61987 12.5218 9.04024 12.5219 9.55873C12.522 10.0763 12.1034 10.496 11.5863 10.4979Z" fill="#2C333F"/>
+							<path d="M11.9889 14.9753C11.7476 14.9762 11.5059 14.8845 11.3218 14.7004C10.955 14.3338 10.9549 13.7393 11.3216 13.3725L12.1694 12.5246C12.5359 12.1578 13.1306 12.1577 13.4972 12.5244C13.864 12.891 13.8641 13.4855 13.4974 13.8523L12.6496 14.7002C12.4672 14.8828 12.2281 14.9745 11.9889 14.9753Z" fill="#2C333F"/>
+							<path d="M12.8356 6.86785C12.5943 6.8687 12.3527 6.77706 12.1685 6.59293L11.3205 5.74524C10.9538 5.37867 10.9537 4.78422 11.3203 4.41737C11.6868 4.05062 12.2813 4.05043 12.6482 4.41718L13.4962 5.26487C13.8629 5.63144 13.863 6.22589 13.4964 6.59274C13.3139 6.77527 13.0749 6.86701 12.8356 6.86785Z" fill="#2C333F"/>
+							</g>
+							<defs>
+							<clipPath id="clip0_11940_105401">
+							<rect width="48" height="48" fill="white"/>
+							</clipPath>
+							</defs>
+							</svg>
+
+
+						<div class="sq-block-num">/ 04.</div>
+					</div>
+					<div class="sq-block-title">Experience</div>
+					<div class="sq-block-link">More</div>
+				</div>
+
+
+
+			</div>
+			<div class="template-11-tabs-content template-11-tabs-content--is-active">
+				<div class="template-11-tabs-content-body content-body">
+					<div class="content-body-main">
+						<div class="content-body-caption">
+							<div class="content-body-title">SECURITY</div>
+						</div>
+						<div class="content-body-text">
+							<p class="ps ps--active-y">
+								We guarantee the highest level of security. NDA compliance and cybersecurity are a must-have for each project.
+								<br>
+								<br>
+								All hired PHP developers are required to execute a confidentiality agreement and acknowledge compliance with Elinext security policies. The confidentiality and privacy of customer information and data are emphasized in the policies and during employee onboarding.
+
+							</p>
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+			<div class="template-11-tabs-content">
+				<div class="template-11-tabs-content-body content-body">
+					<div class="content-body-main">
+						<div class="content-body-caption">
+							<div class="content-body-title">ALL SERVICES AT ONE PLACE</div>
+						</div>
+						<div class="content-body-text">
+							<p class="ps ps--active-y">
+								As an experienced custom PHP development company, we are ready to offer the best set of web development services from consulting to end-products. In addition to PHP web development services, you can order from the list of the following services:
+
+								<br>
+								<br>
+								PHP Web Development Consulting<br>
+								Re-Making Your Existing PHP Projects<br>
+								PHP App Development<br>
+								Business Analysis<br>
+								QA Services<br>
+								UI & UX<br>
+								Technical Writing<br>
+								Maintenance & Support<br>
+
+							</p>
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+			<div class="template-11-tabs-content">
+				<div class="template-11-tabs-content-body content-body">
+					<div class="content-body-main">
+						<div class="content-body-caption">
+							<div class="content-body-title">FLEXIBILITY</div>
+						</div>
+						<div class="content-body-text">
+							<p class="ps ps--active-y">
+								We are flexible in terms of keeping a fast response rate. We can manage our working hours in a way we have a fitting overlap with you to work efficiently despite time zone differences. Key Team players are available apart from standard working hours in urgent cases.
+							</p>
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+			<div class="template-11-tabs-content">
+				<div class="template-11-tabs-content-body content-body">
+					<div class="content-body-main">
+						<div class="content-body-caption">
+							<div class="content-body-title">EXPERIENCE</div>
+						</div>
+						<div class="content-body-text">
+							<p class="ps ps--active-y">
+								Our core domains are financial services and healthcare, but during these years we’ve developed 300+ projects for e-commerce, tourism, telecom, etc. <a class="content-body-link" href="https://www.elinext.com/case-study/?technologies=50">Check our latest case studies in PHP here. </a>
+							</p>
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+
+
+		</div>
+	</div>
+</section>
+
+		<section class="template-7 template-7--outstaffing template-7--php-outstaffing" id="template-7">
+	<div class="template-7-lines lines-bg">
+		<div class="lines-bg-item"></div>
+		<div class="lines-bg-item"></div>
+		<div class="lines-bg-item"></div>
+		<div class="lines-bg-item"></div>
+		<div class="lines-bg-item"></div>
+		<div class="lines-bg-item"></div>
+		<div class="lines-bg-item"></div>
+		<div class="lines-bg-item"></div>
+		<div class="lines-bg-item"></div>
+		<div class="lines-bg-item"></div>
+	</div>
+	<div class="template-7-bg-wrapper"></div>
+	<div class="template-7-wrapper container">
+		<div class="template-7-content-container">
+			<div class="template-7-header">Hire the Best PHP<br> Developers Today</div>
+			<div class="custom-nav-header">Contact Us</div>
+			<div
+				role="form"
+				class="wpcf7"
+				id="wpcf7-f10-p523-o1"
+				lang="en-US"
+				dir="ltr"
+			>
+				<div class="screen-reader-response">
+					<p role="status" aria-live="polite" aria-atomic="true"></p>
+					<ul></ul>
+				</div>
+
+				<form
+					action="/industries/financial/#wpcf7-f10-p523-o1"
+					method="post"
+					class="wpcf7-form template-7-form contact-form init"
+					enctype="multipart/form-data"
+					novalidate="novalidate"
+					data-status="init"
+					id="contact-us-form"
+				>
+					<div class="contact-form-group">
+						<div class="contact-form-field">
+							<div class="icon">
+								<svg
+									width="18"
+									height="24"
+									viewBox="0 0 18 24"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<path
+										d="M15.012 12.5705C14.6825 12.2115 14.1218 12.1869 13.7628 12.5164C13.4038 12.8459 13.3792 13.4066 13.7087 13.7656C14.7956 14.9508 15.3956 16.4902 15.3956 18.0984V21.9C15.3956 22.077 15.248 22.2246 15.071 22.2246H2.91853C2.74148 22.2246 2.59394 22.077 2.59394 21.9V18.0984C2.59394 14.5672 5.46607 11.7 8.9923 11.7C12.2185 11.7 14.8448 9.07377 14.8448 5.84754C14.8448 2.62131 12.2235 0 8.99722 0C5.77099 0 3.14476 2.62623 3.14476 5.85246C3.14476 6.81639 3.38575 7.77541 3.83821 8.62131C4.06935 9.0541 4.60542 9.21148 5.03821 8.98033C5.47099 8.74918 5.62837 8.21311 5.39722 7.78033C5.08247 7.19016 4.91525 6.52623 4.91525 5.85246C4.91525 3.6 6.74476 1.77049 8.99722 1.77049C11.2497 1.77049 13.0792 3.6 13.0792 5.85246C13.0792 8.10492 11.2497 9.93443 8.99722 9.93443C4.4923 9.93443 0.828369 13.5984 0.828369 18.1033V21.9049C0.828369 23.0607 1.76771 24 2.92345 24H15.0759C16.2316 24 17.171 23.0607 17.171 21.9049V18.1033C17.171 16.0475 16.4038 14.0852 15.012 12.5705Z"
+										fill="#929BAA"
+									></path>
+								</svg>
+							</div>
+							<p>
+								<span class="wpcf7-form-control-wrap first-name">
+									<input
+										type="text"
+										name="first-name"
+										value=""
+										size="40"
+										class="
+											wpcf7-form-control wpcf7-text wpcf7-validates-as-required
+										"
+										aria-required="true"
+										aria-invalid="false"
+										placeholder="First Name"
+									/>
+								</span>
+							</p>
+						</div>
+						<div class="contact-form-field">
+							<div class="icon">
+								<svg
+									width="18"
+									height="24"
+									viewBox="0 0 18 24"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<path
+										d="M15.012 12.5705C14.6825 12.2115 14.1218 12.1869 13.7628 12.5164C13.4038 12.8459 13.3792 13.4066 13.7087 13.7656C14.7956 14.9508 15.3956 16.4902 15.3956 18.0984V21.9C15.3956 22.077 15.248 22.2246 15.071 22.2246H2.91853C2.74148 22.2246 2.59394 22.077 2.59394 21.9V18.0984C2.59394 14.5672 5.46607 11.7 8.9923 11.7C12.2185 11.7 14.8448 9.07377 14.8448 5.84754C14.8448 2.62131 12.2235 0 8.99722 0C5.77099 0 3.14476 2.62623 3.14476 5.85246C3.14476 6.81639 3.38575 7.77541 3.83821 8.62131C4.06935 9.0541 4.60542 9.21148 5.03821 8.98033C5.47099 8.74918 5.62837 8.21311 5.39722 7.78033C5.08247 7.19016 4.91525 6.52623 4.91525 5.85246C4.91525 3.6 6.74476 1.77049 8.99722 1.77049C11.2497 1.77049 13.0792 3.6 13.0792 5.85246C13.0792 8.10492 11.2497 9.93443 8.99722 9.93443C4.4923 9.93443 0.828369 13.5984 0.828369 18.1033V21.9049C0.828369 23.0607 1.76771 24 2.92345 24H15.0759C16.2316 24 17.171 23.0607 17.171 21.9049V18.1033C17.171 16.0475 16.4038 14.0852 15.012 12.5705Z"
+										fill="#929BAA"
+									></path>
+								</svg>
+							</div>
+							<p>
+								<input name="last-name" type="text" placeholder="Last Name" />
+							</p>
+						</div>
+						<div class="contact-form-field">
+							<div class="icon">
+								<svg
+									width="24"
+									height="19"
+									viewBox="0 0 24 19"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<path
+										d="M22.6991 0H1.30579C0.584168 0 0 0.584168 0 1.30579V16.7985C0 17.5201 0.584168 18.1043 1.30579 18.1043H22.6942C23.4158 18.1043 24 17.5201 24 16.7985V1.30579C24.0049 0.589077 23.4158 0 22.6991 0ZM22.2327 16.3371H1.76723V1.76723H21.138L12.1252 9.47432L5.57168 3.86827C5.1986 3.54919 4.64389 3.59337 4.32481 3.96645C4.00572 4.33953 4.0499 4.89425 4.42299 5.21333L11.5508 11.3103C11.5606 11.3201 11.5705 11.325 11.5754 11.3299C11.5852 11.3397 11.595 11.3446 11.6048 11.3545C11.6195 11.3643 11.6392 11.379 11.6588 11.3888C11.6637 11.3937 11.6735 11.3986 11.6784 11.4035C11.703 11.4183 11.7275 11.433 11.757 11.4428C11.7619 11.4477 11.7717 11.4477 11.7766 11.4526C11.7963 11.4625 11.8159 11.4674 11.8404 11.4772C11.8503 11.4821 11.8552 11.4821 11.865 11.487C11.8846 11.4919 11.9043 11.4968 11.9239 11.5017C11.9337 11.5017 11.9435 11.5066 11.9484 11.5066C11.9681 11.5115 11.9926 11.5164 12.0123 11.5164C12.0221 11.5164 12.027 11.5164 12.0368 11.5214C12.0663 11.5263 12.0957 11.5263 12.1252 11.5263C12.1546 11.5263 12.1841 11.5263 12.2135 11.5214C12.2233 11.5214 12.2283 11.5214 12.2381 11.5164C12.2577 11.5115 12.2823 11.5115 12.3019 11.5066C12.3117 11.5066 12.3215 11.5017 12.3264 11.5017C12.3461 11.4968 12.3657 11.4919 12.3853 11.487C12.3952 11.4821 12.4001 11.4821 12.4099 11.4772C12.4295 11.4723 12.4541 11.4625 12.4737 11.4526C12.4786 11.4477 12.4884 11.4477 12.4933 11.4428C12.5179 11.433 12.5473 11.4183 12.5719 11.4035C12.5768 11.3986 12.5866 11.3937 12.5915 11.3888C12.6112 11.379 12.6259 11.3643 12.6455 11.3545C12.6553 11.3495 12.6652 11.3397 12.675 11.3299C12.6848 11.325 12.6946 11.3152 12.6995 11.3103L22.2327 3.15647V16.3371Z"
+										fill="#929BAA"
+									></path>
+								</svg>
+							</div>
+							<p>
+								<span class="wpcf7-form-control-wrap email">
+									<input
+										type="email"
+										name="email"
+										value=""
+										size="40"
+										class="
+											wpcf7-form-control
+											wpcf7-text
+											wpcf7-email
+											wpcf7-validates-as-required
+											wpcf7-validates-as-email
+										"
+										aria-required="true"
+										aria-invalid="false"
+										placeholder="E-mail"
+									/>
+								</span>
+							</p>
+						</div>
+						<div class="contact-form-field">
+							<div class="icon">
+								<svg
+									width="24"
+									height="19"
+									viewBox="0 0 24 19"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<path
+										d="M22.6991 0H1.30579C0.584168 0 0 0.584168 0 1.30579V16.7985C0 17.5201 0.584168 18.1043 1.30579 18.1043H22.6942C23.4158 18.1043 24 17.5201 24 16.7985V1.30579C24.0049 0.589077 23.4158 0 22.6991 0ZM22.2327 16.3371H1.76723V1.76723H21.138L12.1252 9.47432L5.57168 3.86827C5.1986 3.54919 4.64389 3.59337 4.32481 3.96645C4.00572 4.33953 4.0499 4.89425 4.42299 5.21333L11.5508 11.3103C11.5606 11.3201 11.5705 11.325 11.5754 11.3299C11.5852 11.3397 11.595 11.3446 11.6048 11.3545C11.6195 11.3643 11.6392 11.379 11.6588 11.3888C11.6637 11.3937 11.6735 11.3986 11.6784 11.4035C11.703 11.4183 11.7275 11.433 11.757 11.4428C11.7619 11.4477 11.7717 11.4477 11.7766 11.4526C11.7963 11.4625 11.8159 11.4674 11.8404 11.4772C11.8503 11.4821 11.8552 11.4821 11.865 11.487C11.8846 11.4919 11.9043 11.4968 11.9239 11.5017C11.9337 11.5017 11.9435 11.5066 11.9484 11.5066C11.9681 11.5115 11.9926 11.5164 12.0123 11.5164C12.0221 11.5164 12.027 11.5164 12.0368 11.5214C12.0663 11.5263 12.0957 11.5263 12.1252 11.5263C12.1546 11.5263 12.1841 11.5263 12.2135 11.5214C12.2233 11.5214 12.2283 11.5214 12.2381 11.5164C12.2577 11.5115 12.2823 11.5115 12.3019 11.5066C12.3117 11.5066 12.3215 11.5017 12.3264 11.5017C12.3461 11.4968 12.3657 11.4919 12.3853 11.487C12.3952 11.4821 12.4001 11.4821 12.4099 11.4772C12.4295 11.4723 12.4541 11.4625 12.4737 11.4526C12.4786 11.4477 12.4884 11.4477 12.4933 11.4428C12.5179 11.433 12.5473 11.4183 12.5719 11.4035C12.5768 11.3986 12.5866 11.3937 12.5915 11.3888C12.6112 11.379 12.6259 11.3643 12.6455 11.3545C12.6553 11.3495 12.6652 11.3397 12.675 11.3299C12.6848 11.325 12.6946 11.3152 12.6995 11.3103L22.2327 3.15647V16.3371Z"
+										fill="#929BAA"
+									></path>
+								</svg>
+							</div>
+							<p>
+								<input name="company" type="text" placeholder="Company" />
+							</p>
+						</div>
+						<div class="contact-form-field">
+							<div class="icon">
+								<svg
+									width="24"
+									height="26"
+									viewBox="0 0 24 26"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<path
+										d="M19.536 19.0084C19.2649 18.7015 18.984 18.4102 18.708 18.1292C18.57 17.9888 18.432 17.8431 18.294 17.6975L17.0914 16.4281C16.5788 15.8871 15.9775 15.601 15.3615 15.601C14.7404 15.601 14.1441 15.8871 13.6315 16.4281C13.5083 16.5582 13.3801 16.6882 13.2569 16.8183C12.9711 17.1148 12.6754 17.4217 12.3895 17.7443C11.8818 17.4842 11.3643 17.1252 10.763 16.6258C9.97939 15.9495 9.30909 15.2732 8.71273 14.5553C8.39237 14.1652 7.8305 14.1235 7.46085 14.4669C7.09121 14.805 7.05178 15.3981 7.37707 15.7882C8.0375 16.5894 8.78173 17.3437 9.64917 18.0876C9.6541 18.0876 9.6541 18.0928 9.65902 18.0928C10.5314 18.8211 11.2658 19.2997 12.0494 19.6379C12.0691 19.6483 12.0888 19.6535 12.1086 19.6587C12.2958 19.7263 12.8577 19.924 13.4097 19.3466C13.4196 19.3362 13.4344 19.3206 13.4442 19.3102C13.7794 18.9096 14.1342 18.5454 14.5088 18.1553C14.6369 18.0252 14.7651 17.8899 14.8932 17.7547C15.0115 17.6298 15.1939 17.4738 15.3713 17.4738C15.5487 17.4738 15.7262 17.6246 15.8494 17.7547L17.052 19.024C17.1949 19.1749 17.3428 19.3258 17.4808 19.4714C17.7568 19.7523 18.0131 20.0229 18.2595 20.2986C18.2644 20.309 18.2743 20.3142 18.2792 20.3194C18.4665 20.5171 18.6686 20.8292 18.2694 21.2766L16.7661 22.8633C16.4458 23.2014 16.0909 23.3783 15.6424 23.4199C14.8784 23.4875 14.0652 23.3315 13.0056 22.9153C11.2411 22.2286 9.59495 21.1829 7.81571 19.6223C5.66683 17.7235 3.97631 15.4449 2.78358 12.849C2.35971 11.9074 1.86192 10.6589 1.77814 9.3323C1.73378 8.59358 1.92107 8.06296 2.3745 7.61556C2.70472 7.32424 2.99551 7.00691 3.27151 6.70518C3.44894 6.50749 3.61652 6.32542 3.79395 6.15374L3.79888 6.14854C4.14881 5.79479 4.4396 5.78959 4.76489 6.13293L7.19471 8.69763C7.19964 8.70283 7.20456 8.70803 7.20949 8.71323C7.31299 8.81728 7.43621 8.97855 7.44114 9.15542C7.44114 9.3427 7.30806 9.52478 7.19964 9.64443L5.69147 11.2363C5.34647 11.6005 5.34647 12.1935 5.69147 12.5629C6.03648 12.927 6.59834 12.927 6.94827 12.5629L8.45644 10.971C8.96409 10.4352 9.2253 9.8057 9.22038 9.13981C9.21545 8.48954 8.9493 7.87568 8.45151 7.37106L6.02662 4.81157C5.01132 3.73991 3.6313 3.73471 2.5815 4.79596C2.3745 4.99885 2.18721 5.20694 1.99992 5.40982C1.73871 5.69595 1.49227 5.96646 1.22613 6.20056C1.21627 6.21097 1.20641 6.22137 1.19163 6.23177C0.329116 7.05893 -0.0651747 8.14099 0.00875481 9.45195C0.112256 11.0958 0.688907 12.5629 1.18177 13.6553V13.6605C2.48786 16.501 4.33117 18.9876 6.67227 21.0581C8.60923 22.754 10.423 23.9037 12.3796 24.6684C13.0992 24.9494 14.149 25.3031 15.3122 25.3031C15.465 25.3031 15.6227 25.2979 15.7804 25.2823H15.7853C16.6478 25.2043 17.397 24.8349 18.0131 24.1846L19.5212 22.5927C19.5262 22.5875 19.5311 22.5823 19.536 22.5771C20.507 21.5107 20.502 20.0437 19.536 19.0084Z"
+										fill="#929BAA"
+									></path>
+									<path
+										d="M19.1866 12.645C18.881 10.7514 18.0332 9.02422 16.737 7.65083C15.4506 6.28785 13.8143 5.39306 12.0154 5.07053C11.5324 4.98209 11.074 5.32544 10.9902 5.83525C10.9064 6.34507 11.2317 6.82888 11.7147 6.91732C13.144 7.17223 14.4501 7.89013 15.4851 8.9826C16.5202 10.0751 17.2003 11.4537 17.4418 12.9623C17.5157 13.4201 17.8903 13.7426 18.3142 13.7426C18.3635 13.7426 18.4128 13.7374 18.462 13.727C18.945 13.6386 19.2703 13.1548 19.1866 12.645Z"
+										fill="#929BAA"
+									></path>
+									<path
+										d="M23.9869 12.416C23.4891 9.31547 22.0992 6.49066 19.975 4.2485C17.8507 2.00634 15.1745 0.53931 12.237 0.0138847C11.754 -0.0745532 11.2957 0.268794 11.2119 0.778612C11.1281 1.28843 11.4534 1.77224 11.9364 1.86068C14.5091 2.32367 16.8552 3.60342 18.7182 5.56987C20.5812 7.53631 21.7986 10.0126 22.2323 12.7281C22.3062 13.1859 22.6808 13.5085 23.1047 13.5085C23.1539 13.5085 23.2032 13.5033 23.2525 13.4929C23.7454 13.4096 24.0707 12.9258 23.9869 12.416Z"
+										fill="#929BAA"
+									></path>
+								</svg>
+							</div>
+							<p>
+								<input
+									id="inTtelInput"
+									type="tel"
+									name="phone"
+									placeholder="Phone Number"
+									autocomplete="off"
+									data-intl-tel-input-id="0"
+								/>
+								<input type="hidden" name="full_number" />
+							</p>
+						</div>
+						<div class="contact-form-field contact-form-field--textarea">
+							<div class="icon">
+								<svg
+									width="24"
+									height="24"
+									viewBox="0 0 24 24"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<path
+										d="M19.6913 4.30407C19.3458 3.95854 18.7831 3.95854 18.4375 4.30407L4.84338 17.8982C4.49785 18.2438 4.49785 18.8065 4.84338 19.1569C5.01614 19.3297 5.2432 19.4186 5.47027 19.4186C5.69733 19.4186 5.92439 19.3297 6.09716 19.1569L19.6913 5.56279C20.0368 5.21726 20.0368 4.65454 19.6913 4.30407Z"
+										fill="#929BAA"
+									></path>
+									<path
+										d="M22.5688 1.58944L22.4157 1.43148C21.4927 0.508423 20.2685 0 18.9654 0C17.6622 0 16.4331 0.508423 15.515 1.43148L0.968168 15.9734C0.825019 16.1165 0.736169 16.3041 0.711488 16.5065L0.00561862 23.0123C-0.0239983 23.2789 0.0697885 23.5454 0.262298 23.7379C0.430127 23.9058 0.65719 23.9996 0.889189 23.9996C0.918806 23.9996 0.953359 23.9996 0.982976 23.9946L7.48882 23.2887C7.6912 23.269 7.87878 23.1752 8.02192 23.0321L19.3553 11.6987C19.7009 11.3531 19.7009 10.7904 19.3553 10.44C19.0098 10.0944 18.4471 10.0944 18.0966 10.44L6.99027 21.5512L1.89123 22.109L2.44408 17.01L16.7688 2.6902C17.3562 2.1028 18.1361 1.78195 18.9654 1.78195C19.7946 1.78195 20.5746 2.1028 21.162 2.6902L21.31 2.83829C21.8974 3.42569 22.2183 4.2056 22.2183 5.03487C22.2183 5.86414 21.8974 6.64406 21.31 7.23146L20.8312 7.71026C20.4857 8.05579 20.4857 8.61852 20.8312 8.96898C21.1768 9.31451 21.7395 9.31451 22.0899 8.96898L22.5688 8.49018C23.4918 7.56712 24.0002 6.34295 24.0002 5.03981C24.0002 3.73666 23.4918 2.50756 22.5688 1.58944Z"
+										fill="#929BAA"
+									></path>
+								</svg>
+							</div>
+							<p>
+								<span class="wpcf7-form-control-wrap message">
+									<textarea
+										name="message"
+										cols="40"
+										rows="3"
+										class="
+											wpcf7-form-control
+											wpcf7-textarea
+											wpcf7-validates-as-required
+										"
+										aria-required="true"
+										aria-invalid="false"
+										placeholder="Message"
+									></textarea>
+									<div
+										class="testarea"
+										style="position: absolute; width: 476px; visibility: hidden"
+									></div>
+								</span>
+							</p>
+						</div>
+					</div>
+					<p>
+						<br />
+					</p>
+					<div class="contact-form-attach">
+						<div class="contact-form-checks">
+							<span class="wpcf7-form-control-wrap acceptance-630">
+								<span
+									class="wpcf7-form-control wpcf7-acceptance"
+									aria-invalid="false"
+								>
+									<span class="wpcf7-list-item">
+										<label>
+											<input
+												type="checkbox"
+												name="acceptance-630"
+												value="1"
+												aria-invalid="false"
+												class="test"
+											/>
+											<span class="wpcf7-list-item-label"
+												>I agree with the use of my personal data and
+												information by Elinext as it is said in the Privacy and
+												Cookie Policy. I understand that due to the nature of
+												business held by Elinext, the use, and processing of my
+												personal information might take place outside the
+												jurisdiction of my home</span
+											>
+											<div class="c-check-box"></div>
+										</label>
+									</span>
+								</span>
+							</span>
+						</div>
+						<div class="contact-form-file fl-upload">
+							<label
+								><br />
+								<span class="wpcf7-form-control-wrap file">
+									<input
+										type="file"
+										name="file"
+										size="40"
+										class="wpcf7-form-control wpcf7-file fl-input"
+										accept=".jpg,.jpeg,.png,.gif,.pdf,.doc,.docx,.ppt,.pptx,.odt,.avi,.ogg,.m4a,.mov,.mp3,.mp4,.mpg,.wav,.wmv,.ai,.eps,.tif"
+										aria-invalid="false"
+									/> </span
+								><br />
+								<svg
+									width="24"
+									height="22"
+									viewBox="0 0 24 22"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<path
+										d="M13.7705 2.27199L13.7705 2.27199C15.9961 0.0463847 19.6052 0.0463775 21.8308 2.27199C24.0564 4.49761 24.0564 8.10675 21.8308 10.3323L22.1844 10.6858L21.8308 10.3323L10.8719 21.2912L10.8719 21.2912C10.765 21.3981 10.5903 21.3982 10.4833 21.2912L10.4833 21.2912C10.3764 21.1843 10.3763 21.0096 10.4833 20.9026L21.4422 9.94369L21.0886 9.59013L21.4422 9.94368C23.4538 7.93196 23.4539 4.67225 21.4422 2.6606L21.0886 3.01415L21.4422 2.66059C19.4305 0.648951 16.1708 0.648941 14.1591 2.6606L14.1591 2.66064L2.10452 14.7184C2.1045 14.7184 2.10449 14.7184 2.10447 14.7184C0.698854 16.1241 0.69887 18.4027 2.10452 19.8084C3.51018 21.214 5.78887 21.214 7.19454 19.8084L18.7016 8.30134C18.7018 8.3012 18.7019 8.30105 18.7021 8.30091C19.5037 7.50078 19.5029 6.20317 18.7021 5.40231C17.9019 4.60067 16.6043 4.60145 15.8035 5.4023L5.94029 15.2654L5.94025 15.2655C5.83337 15.3724 5.65869 15.3724 5.55169 15.2654L5.55165 15.2654C5.44475 15.1585 5.44469 14.9838 5.55169 14.8768L15.4149 5.0137L15.0613 4.66015L15.4149 5.0137C16.43 3.99856 18.0755 3.99856 19.0907 5.0137C20.1058 6.02884 20.1058 7.67437 19.0907 8.68951L7.03806 20.7421C7.03782 20.7424 7.03758 20.7426 7.03734 20.7429C6.99287 20.7865 6.93231 20.8131 6.85765 20.8168L6.74261 20.8226L6.6417 20.8782C5.06245 21.7475 3.04854 21.5282 1.71585 20.1955C0.0947123 18.5743 0.0947221 15.9477 1.71584 14.3266L13.7705 2.27199Z"
+										fill="#2C333F"
+										stroke="black"
+									></path>
+								</svg>
+								<div class="fl-name">Attach File</div>
+								<p></p>
+							</label>
+						</div>
+					</div>
+					<div style="float: left"></div>
+					<div class="contact-form-btn">
+						<button
+							class="wpcf7-form-control wpcf7-submit yel-btn"
+							type="submit"
+							disabled=""
+							aria-invalid="false"
+						>
+							<span>Send message</span>
+						</button>
+						<span class="ajax-loader"></span>
+					</div>
+					<input
+						type="hidden"
+						name="fullphone"
+						value=""
+						class="wpcf7-form-control wpcf7-hidden"
+						id="fullphone"
+						aria-invalid="false"/>
+					<br />
+					<div class="wpcf7-response-output" aria-hidden="true"></div>
+				</form>
+			</div>
+		</div>
+	</div>
+</section>
+
+	</div>
+	<footer class="footer" id="footer">
+	<div class="container">
+		<div class="columns">
+			<div class="column">
+				<div class="menu-footer-menu-services-container">
+					<ul id="menu-footer-menu-services" class="menu">
+						<li id="menu-item-641" class="column-link header-wrapper">
+							<a href="https://www.elinext.com/services/" class="header-link"
+								>Services</a
+							>
+						</li>
+						<li id="menu-item-646" class="column-link">
+							<a
+								href="https://www.elinext.com/services/custom-software-development/"
+								class="column-link"
+								>Custom Software Development</a
+							>
+						</li>
+						<li id="menu-item-648" class="column-link">
+							<a
+								href="https://www.elinext.com/services/business-analysis/"
+								class="column-link"
+								>Business Analysis</a
+							>
+						</li>
+						<li id="menu-item-651" class="column-link">
+							<a
+								href="https://www.elinext.com/services/ui-ux-design/"
+								class="column-link"
+								>UI and UX Design</a
+							>
+						</li>
+						<li id="menu-item-650" class="column-link">
+							<a
+								href="https://www.elinext.com/services/devops/"
+								class="column-link"
+								>DevOps as a Service</a
+							>
+						</li>
+						<li id="menu-item-644" class="column-link">
+							<a
+								href="https://www.elinext.com/services/cloud/"
+								class="column-link"
+								>Cloud Architecture</a
+							>
+						</li>
+						<li id="menu-item-642" class="column-link">
+							<a
+								href="https://www.elinext.com/services/web-development/"
+								class="column-link"
+								>Web Development</a
+							>
+						</li>
+						<li id="menu-item-643" class="column-link">
+							<a
+								href="https://www.elinext.com/services/app-development/"
+								class="column-link"
+								>Mobile Development</a
+							>
+						</li>
+						<li id="menu-item-645" class="column-link">
+							<a href="https://www.elinext.com/qa-testing/" class="column-link"
+								>QA and Software Testing</a
+							>
+						</li>
+						<li id="menu-item-647" class="column-link">
+							<a
+								href="https://www.elinext.com/services/application-maintenance-and-support/"
+								class="column-link"
+								>Support &amp; Maintenance</a
+							>
+						</li>
+						<li id="menu-item-649" class="column-link">
+							<a
+								href="https://www.elinext.com/services/software-product-engineering/"
+								class="column-link"
+								>Software Product Engineering</a
+							>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="column">
+				<div class="menu-footer-menu-domains-container">
+					<ul id="menu-footer-menu-domains" class="menu">
+						<li id="menu-item-627" class="column-link header-wrapper">
+							<a href="https://www.elinext.com/solutions/" class="header-link"
+								>Domains</a
+							>
+						</li>
+						<li id="menu-item-628" class="column-link">
+							<a
+								href="https://www.elinext.com/solutions/crm/"
+								class="column-link"
+								>CRM &amp; Customer Engagement</a
+							>
+						</li>
+						<li id="menu-item-12256" class="column-link">
+							<a
+								href="https://www.elinext.com/solutions/erp/"
+								class="column-link"
+								>ERP &amp; Asset Management</a
+							>
+						</li>
+						<li id="menu-item-632" class="column-link">
+							<a
+								href="https://www.elinext.com/solutions/data-analytics/"
+								class="column-link"
+								>Data Analytics</a
+							>
+						</li>
+						<li id="menu-item-633" class="column-link">
+							<a
+								href="https://www.elinext.com/solutions/hrm/"
+								class="column-link"
+								>HR Management</a
+							>
+						</li>
+						<li id="menu-item-635" class="column-link">
+							<a
+								href="https://www.elinext.com/solutions/help-desk/"
+								class="column-link"
+								>Help Desk Software</a
+							>
+						</li>
+						<li id="menu-item-640" class="column-link">
+							<a
+								href="https://www.elinext.com/solutions/infrastructure-management/"
+								class="column-link"
+								>Infrastructure Management</a
+							>
+						</li>
+						<li id="menu-item-637" class="column-link">
+							<a
+								href="https://www.elinext.com/solutions/cybersecurity/"
+								class="column-link"
+								>Cybersecurity</a
+							>
+						</li>
+						<li id="menu-item-630" class="column-link">
+							<a
+								href="https://www.elinext.com/embedded/iot/"
+								class="column-link"
+								>Internet of Things</a
+							>
+						</li>
+						<li id="menu-item-631" class="column-link">
+							<a
+								href="https://www.elinext.com/solutions/ai/"
+								class="column-link"
+								>Artifical Intelligence</a
+							>
+						</li>
+						<li id="menu-item-636" class="column-link">
+							<a
+								href="https://www.elinext.com/solutions/blockchain/"
+								class="column-link"
+								>Blockchain</a
+							>
+						</li>
+						<li id="menu-item-634" class="column-link">
+							<a
+								href="https://www.elinext.com/services/augmented-reality/"
+								class="column-link"
+								>Augmented &amp; Virtual Reality</a
+							>
+						</li>
+						<li id="menu-item-638" class="column-link">
+							<a
+								href="https://www.elinext.com/solutions/social-media-app-development/"
+								class="column-link"
+								>Social Media Community</a
+							>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="column">
+				<div class="menu-footer-menu-industries-container">
+					<ul id="menu-footer-menu-industries" class="menu">
+						<li id="menu-item-652" class="column-link header-wrapper">
+							<a href="https://www.elinext.com/industries/" class="header-link"
+								>Industries</a
+							>
+						</li>
+						<li id="menu-item-653" class="column-link">
+							<a
+								href="https://www.elinext.com/industries/healthcare/"
+								class="column-link"
+								>Healthcare</a
+							>
+						</li>
+						<li id="menu-item-654" class="column-link">
+							<a
+								href="https://www.elinext.com/industries/financial/"
+								class="column-link"
+								>Financial Services</a
+							>
+						</li>
+						<li id="menu-item-655" class="column-link">
+							<a
+								href="https://www.elinext.com/industries/manufacturing/"
+								class="column-link"
+								>Manufacturing</a
+							>
+						</li>
+						<li id="menu-item-10991" class="column-link">
+							<a
+								href="https://www.elinext.com/industries/retail/"
+								class="column-link"
+								>Shopping &amp; Commerce</a
+							>
+						</li>
+						<li id="menu-item-660" class="column-link">
+							<a
+								href="https://www.elinext.com/industries/telecom/"
+								class="column-link"
+								>Telecom</a
+							>
+						</li>
+						<li id="menu-item-659" class="column-link">
+							<a
+								href="https://www.elinext.com/industries/automotive/"
+								class="column-link"
+								>Automotive</a
+							>
+						</li>
+						<li id="menu-item-658" class="column-link">
+							<a
+								href="https://www.elinext.com/industries/education/"
+								class="column-link"
+								>Education</a
+							>
+						</li>
+						<li id="menu-item-656" class="column-link">
+							<a
+								href="https://www.elinext.com/industries/logistics/"
+								class="column-link"
+								>Logistics &amp; Transportation</a
+							>
+						</li>
+						<li id="menu-item-661" class="column-link">
+							<a
+								href="https://www.elinext.com/industries/real-estate/"
+								class="column-link"
+								>Real Estate</a
+							>
+						</li>
+						<li id="menu-item-663" class="column-link">
+							<a
+								href="https://www.elinext.com/industries/travel/"
+								class="column-link"
+								>Travel</a
+							>
+						</li>
+						<li id="menu-item-662" class="column-link">
+							<a
+								href="https://www.elinext.com/industries/media-entertainment/"
+								class="column-link"
+								>Media &amp; Entertainment</a
+							>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="column">
+				<div class="menu-footer-menu-about-us-container">
+					<ul id="menu-footer-menu-about-us" class="menu">
+						<li id="menu-item-664" class="column-link header-wrapper">
+							<a href="https://www.elinext.com/about-us/" class="header-link"
+								>About Us</a
+							>
+						</li>
+						<li id="menu-item-665" class="column-link">
+							<a
+								href="https://www.elinext.com/corporate-social-responsibility/"
+								class="column-link"
+								>Corporate Social Responsibility</a
+							>
+						</li>
+						<li id="menu-item-666" class="column-link">
+							<a href="https://www.elinext.com/our-values/" class="column-link"
+								>Our Values</a
+							>
+						</li>
+						<li id="menu-item-667" class="column-link">
+							<a
+								href="https://www.elinext.com/testimonials/"
+								class="column-link"
+								>Testimonials</a
+							>
+						</li>
+						<li id="menu-item-668" class="column-link">
+							<a
+								href="https://www.elinext.com/working-models/"
+								class="column-link"
+								>Working Models</a
+							>
+						</li>
+						<li id="menu-item-669" class="column-link header-wrapper">
+							<a href="https://www.elinext.com/case-study/" class="header-link"
+								>Case Studies</a
+							>
+						</li>
+						<li id="menu-item-670" class="column-link header-wrapper">
+							<a href="https://www.elinext.com/resources/" class="header-link"
+								>Resources</a
+							>
+						</li>
+						<li id="menu-item-671" class="column-link">
+							<a href="https://www.elinext.com/blog/" class="column-link"
+								>Blog</a
+							>
+						</li>
+						<li id="menu-item-14499" class="column-link">
+							<a href="https://www.elinext.com/news/" class="column-link"
+								>News</a
+							>
+						</li>
+						<li id="menu-item-14498" class="column-link">
+							<a
+								href="https://www.elinext.com/presentations/"
+								class="column-link"
+								>Presentations</a
+							>
+						</li>
+						<li id="menu-item-14500" class="column-link">
+							<a href="https://www.elinext.com/researches/" class="column-link"
+								>Researches</a
+							>
+						</li>
+						<li id="menu-item-672" class="column-link header-wrapper">
+							<a href="https://www.elinext.com/careers/" class="header-link"
+								>Careers</a
+							>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="columns-responsive">
+			<div class="column">
+				<div class="header-wrapper">
+					<a class="header-link" href="https://www.elinext.com/services/"
+						>Services</a
+					>
+				</div>
+				<div class="header-wrapper">
+					<a class="header-link" href="https://www.elinext.com/industries/"
+						>Industries</a
+					>
+				</div>
+				<div class="header-wrapper">
+					<a class="header-link" href="https://www.elinext.com/case-study/"
+						>Case Studies</a
+					>
+				</div>
+				<div class="header-wrapper">
+					<a class="header-link" href="https://www.elinext.com/careers/"
+						>Careers</a
+					>
+				</div>
+			</div>
+			<div class="column">
+				<div class="header-wrapper">
+					<a class="header-link" href="https://www.elinext.com/about-us/"
+						>About Us</a
+					>
+				</div>
+				<div class="header-wrapper">
+					<a class="header-link" href="https://www.elinext.com/resources/"
+						>Resources</a
+					>
+				</div>
+				<div class="header-wrapper">
+					<a class="header-link" href="https://www.elinext.com/solutions/"
+						>Solutions</a
+					>
+				</div>
+			</div>
+		</div>
+		<div class="columns-mobile">
+			<div class="column">
+				<div class="header-wrapper">
+					<a class="header-link" href="https://www.elinext.com/services/"
+						>Services</a
+					>
+				</div>
+				<div class="header-wrapper">
+					<a class="header-link" href="https://www.elinext.com/industries/"
+						>Industries</a
+					>
+				</div>
+			</div>
+			<div class="column">
+				<div class="header-wrapper">
+					<a class="header-link" href="https://www.elinext.com/case-study/"
+						>Case Studies</a
+					>
+				</div>
+				<div class="header-wrapper">
+					<a class="header-link" href="https://www.elinext.com/careers/"
+						>Careers</a
+					>
+				</div>
+			</div>
+			<div class="column">
+				<div class="header-wrapper">
+					<a class="header-link" href="https://www.elinext.com/about-us/"
+						>About Us</a
+					>
+				</div>
+				<div class="header-wrapper">
+					<a class="header-link" href="https://www.elinext.com/resources/"
+						>Resources</a
+					>
+				</div>
+			</div>
+			<div class="column">
+				<div class="header-wrapper">
+					<a class="header-link" href="https://www.elinext.com/solutions/"
+						>Solutions</a
+					>
+				</div>
+			</div>
+		</div>
+		<div class="contacts">
+			<div class="header-wrapper">
+				<a class="header-link" href="https://www.elinext.com/contact-us"
+					>Contacts</a
+				>
+			</div>
+			<div class="contacts-container">
+				<div class="contacts-link contacts-email">
+					<a class="link" href="mailto:info@elinext.com"
+						><img
+							src="wp-content/themes/elinext/public/img/contacts_email.svg"
+							alt="Email"
+						/>
+						<div class="text">info@elinext.com</div>
+					</a>
+				</div>
+				<div class="contacts-link contacts-phone">
+					<a class="link" href="tel:+1 (516) 447-0268"
+						><img
+							src="wp-content/themes/elinext/public/img/contacts_phone.svg"
+							alt="Phone"
+						/>
+						<div class="text">+1 (516) 447-0268</div>
+					</a>
+				</div>
+				<div class="contacts-link contacts-skype">
+					<a class="link" href="skype:elinext.group?call">
+						<img
+							src="wp-content/themes/elinext/public/img/contacts_skype.svg"
+							alt="Skype"
+						/>
+						<div class="text">elinext.group</div>
+					</a>
+				</div>
+				<div class="contacts-more">
+					<a class="link" href="https://www.elinext.com/contacts"
+						>More contacts</a
+					>
+				</div>
+				<div class="contacts-social">
+					<a
+						class="link link-facebook"
+						href="https://www.facebook.com/elinext/"
+						rel="noopener noreferrer"
+						target="_blank"
+					>
+						<img
+							src="wp-content/themes/elinext/public/img/social_facebook.svg"
+							alt="Facebook"
+						/>
+					</a>
+					<a
+						class="link link-linkedin"
+						href="https://www.linkedin.com/company/elinext/"
+						rel="noopener noreferrer"
+						target="_blank"
+					>
+						<img
+							src="wp-content/themes/elinext/public/img/social_linkedin.svg"
+							alt="Linkedin"
+						/>
+					</a>
+					<a
+						class="link link-instagram"
+						href="https://www.instagram.com/elinext_alliance/?hl=en"
+						rel="noopener noreferrer"
+						target="_blank"
+					>
+						<img
+							src="wp-content/themes/elinext/public/img/social_instagram.svg"
+							alt="Instagram"
+						/>
+					</a>
+					<a
+						class="link link-twitter"
+						href="https://twitter.com/elinext/"
+						rel="noopener noreferrer"
+						target="_blank"
+					>
+						<img
+							src="wp-content/themes/elinext/public/img/social_twitter.svg"
+							alt="Twitter"
+						/>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="copyright">
+			<div class="copyright-item">© 1997 - 2021 ELINEXT</div>
+			<div class="copyright-item">All Rights Reserved</div>
+			<a class="copyright-link" href="https://elinext.com/privacy-policy/"
+				>Privacy Policy</a
+			>
+		</div>
+	</div>
+</footer>
+
+
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="wp-content/themes/elinext/public/js/index.js"
+		id="elinext/index.js-js"></script>
+
+	<script>
+		document.querySelectorAll(".template-25 .tab-content-text p")
+			.forEach(function (t, e) {
+				new PerfectScrollbar(t, { maxScrollbarLength: 70 });
+			});
+
+		$('.template-25--outstaffing .tab-content-link').on('click', function (e) {
+			e.preventDefault();
+			let destination = $("#template-7").offset().top - $('.header').outerHeight();
+			$('html, body').animate({ scrollTop: destination }, 1000); // Скорость прокрутки
+
+		})
+	</script>
+</body>
+
+</html>

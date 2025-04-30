@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="384px" height="687px" viewBox="0 0 384 687" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>60F8EC21-E6D3-4FD3-83A1-32BA1A37BBBF</title>
+    <defs>
+        <linearGradient x1="39.4329379%" y1="31.0618099%" x2="106.405556%" y2="29.8061915%" id="linearGradient-1">
+            <stop stop-color="#8FE600" offset="0%"></stop>
+            <stop stop-color="#2FC059" offset="90.4556381%"></stop>
+            <stop stop-color="#218370" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Concept" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" fill-opacity="0.2">
+        <g id="Desktop-1920_DISCOUNT---Thank-you-page" transform="translate(-1536.000000, -1743.000000)" fill="url(#linearGradient-1)">
+            <path d="M1953.73837,2346.36963 C2116.30807,2346.36963 2263.83408,2014.92554 2263.83408,1878.555 C2263.83408,1742.18447 1933.82571,1698.36963 1771.25601,1698.36963 C1608.68632,1698.36963 1476.89754,1808.91979 1476.89754,1945.29033 C1476.89754,2081.66087 1791.16868,2346.36963 1953.73837,2346.36963 Z" id="Oval-Copy-3" transform="translate(1870.365812, 2022.369629) scale(-1, -1) rotate(-46.000000) translate(-1870.365812, -2022.369629) "></path>
+        </g>
+    </g>
+</svg>

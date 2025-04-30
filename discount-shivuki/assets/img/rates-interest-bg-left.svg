@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="249px" height="595px" viewBox="0 0 249 595" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>7796D00F-33DD-46EF-AD15-08A6EE0F7A22</title>
+    <defs>
+        <linearGradient x1="39.4329379%" y1="31.0618099%" x2="106.405556%" y2="29.8061915%" id="linearGradient-1">
+            <stop stop-color="#8FE600" offset="0%"></stop>
+            <stop stop-color="#2FC059" offset="90.4556381%"></stop>
+            <stop stop-color="#218370" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Concept" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" fill-opacity="0.2">
+        <g id="Desktop-1920_DISCOUNT_coin-rates-interest" transform="translate(-1671.000000, -688.000000)" fill="url(#linearGradient-1)">
+            <path d="M2043.96125,1219.34877 C2190.2238,1219.34877 2322.95168,921.151388 2322.95168,798.459995 C2322.95168,675.768601 2026.04599,636.348769 1879.78345,636.348769 C1733.5209,636.348769 1614.95168,735.809795 1614.95168,858.501189 C1614.95168,981.192583 1897.6987,1219.34877 2043.96125,1219.34877 Z" id="Oval-Copy-3" transform="translate(1968.951676, 927.848769) scale(-1, -1) rotate(-40.000000) translate(-1968.951676, -927.848769) "></path>
+        </g>
+    </g>
+</svg>

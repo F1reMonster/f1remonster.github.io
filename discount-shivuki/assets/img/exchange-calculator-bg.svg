@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="268px" height="995px" viewBox="0 0 268 995" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>C850CBC7-9B19-428E-8FDD-46C3F1E25BA1</title>
+    <defs>
+        <linearGradient x1="44.5246607%" y1="22.0701966%" x2="79.226625%" y2="20.2184266%" id="linearGradient-1">
+            <stop stop-color="#8FE600" offset="0%"></stop>
+            <stop stop-color="#2FC059" offset="90.4556381%"></stop>
+            <stop stop-color="#218370" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Concept" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" fill-opacity="0.2">
+        <g id="Desktop-1920_DISCOUNT_coin-rates" transform="translate(0.000000, -1628.000000)" fill="url(#linearGradient-1)">
+            <path d="M-136.177489,2821.88377 C51.4021622,2821.88377 221.623793,2176.68619 221.623793,1911.2238 C221.623793,1645.76141 -159.153551,1560.47032 -346.733203,1560.47032 C-534.312854,1560.47032 -686.376207,1775.67011 -686.376207,2041.1325 C-686.376207,2306.59489 -323.757141,2821.88377 -136.177489,2821.88377 Z" id="Oval-Copy-3" transform="translate(-232.376207, 2191.177045) rotate(10.000000) translate(232.376207, -2191.177045) "></path>
+        </g>
+    </g>
+</svg>

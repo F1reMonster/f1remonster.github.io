@@ -1,0 +1,139 @@
+.contact-channels {
+  padding: 1.875em 0 1.25em;
+}
+.contact-channels__list {
+  display: flex;
+  justify-content: center;
+  gap: 6.25em;
+  margin-top: 1.875em;
+}
+@media (max-width: 767px) {
+  .contact-channels__list {
+    gap: 2.5em;
+  }
+}
+@media (max-width: 389px) {
+  .contact-channels__list {
+    justify-content: space-between;
+    gap: 0.625em;
+  }
+}
+@media (max-width: 374px) {
+  .contact-channels__list {
+    flex-flow: column;
+  }
+}
+.contact-channels__item {
+  text-align: center;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+.contact-channels__item p {
+  margin: 0;
+}
+@media (max-width: 374px) {
+  .contact-channels__item {
+    justify-content: center;
+    flex-flow: row;
+    gap: 1.25em;
+  }
+}
+@media (max-width: 374px) {
+  .contact-channels__item-group {
+    width: 50%;
+  }
+  .contact-channels__item-group:nth-of-type(1) {
+    display: flex;
+    justify-content: center;
+  }
+}
+.contact-channels__item-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 7.9375em;
+  width: 7.9375em;
+  border: 0.72px solid rgba(60, 63, 69, 0.2);
+  background-color: #ffffff;
+  box-shadow: 0 2px 11px 0 rgba(56, 59, 64, 0.1);
+  border-radius: 50%;
+}
+@media (max-width: 767px) {
+  .contact-channels__item-icon {
+    height: 5.5em;
+    width: 5.5em;
+    padding: 1.25em;
+  }
+  .contact-channels__item-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+.contact-channels__item-title {
+  font: 1.25em/1.3 "rubik-reg", sans-serif;
+  margin-top: 0.4em;
+  margin-bottom: 0.25em;
+}
+@media (max-width: 767px) {
+  .contact-channels__item-title {
+    font: 1.125em/1 "rubik-reg", sans-serif;
+  }
+}
+.contact-channels .purple-link {
+  margin: 0;
+}
+@media (max-width: 767px) {
+  .contact-channels .purple-link {
+    font: 0.875em/1.0714285714 "rubik-reg", sans-serif;
+  }
+}
+
+.list-chevron-bullet-content--contact-channels {
+  transition: height 0.5s ease;
+  overflow: hidden;
+}
+.list-chevron-bullet-content--contact-channels:not(.active) {
+  display: none;
+}
+
+.list-chevron-bullet--contact-channels {
+  margin: 1.6666666667em auto 0;
+  font: 1.5em/1.5 "rubik-reg", sans-serif;
+}
+@media (max-width: 767px) {
+  .list-chevron-bullet--contact-channels {
+    font: 1.125em/1.3333333333 "rubik-reg", sans-serif;
+  }
+  .list-chevron-bullet--contact-channels li {
+    padding-right: 1.4444444444em;
+  }
+  .list-chevron-bullet--contact-channels li:not(:last-child) {
+    margin-bottom: 0.4444444444em;
+  }
+  .list-chevron-bullet--contact-channels li::before {
+    width: 1em;
+    height: 1em;
+  }
+}
+
+.show-more-btn--contact-channels {
+  margin-top: 2.75em;
+}
+.show-more-btn--contact-channels .show-more {
+  width: 2.2222222222em;
+  height: 2.2222222222em;
+  background: url("../../img/chevron-purple-down.svg") no-repeat;
+  background-size: contain;
+  transition: all 0.2s ease-out;
+}
+.show-more-btn--contact-channels .show-more.active {
+  background: url("../../img/chevron-purple-up.svg") no-repeat;
+  background-size: contain;
+}
+@media (max-width: 767px) {
+  .show-more-btn--contact-channels p {
+    font: 1.25em/1 "rubik-reg", sans-serif;
+  }
+}

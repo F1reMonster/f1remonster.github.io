@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+	<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Hospital Landing page</title>
+<link rel="stylesheet" href="css/style.min.css?_v=20230304123917" />
+</head>
+
+<body>
+	<div class="preloader">
+	<div class="preloader-content">
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+	</div>
+</div>
+
+	<div class="body-wrapper">
+		<!-- header -->
+<header class="header">
+	<div class="container">
+		<nav class="header__nav">
+			<div class="header__logo">
+				<picture>
+					<source srcset="img/logo-header-mobile.png" media="(max-width: 1023.98px)" />
+					<img src="img/logo-header-desktop.png" alt="logo" loading="lazy" />
+				</picture>
+			</div>
+			<ul class="header__menu">
+				<li><a href="#emergency">Екстрена госпіталізація</a></li>
+				<li><a href="#planned">Планова госпіталізації</a></li>
+				<li><a href="#transfer">Переведення</a></li>
+			</ul>
+			<div class="header__phones">
+				<a href="tel:1522" class="btn btn-white short-number">1522</a>
+				<a href="tel:+38044221522" class="btn btn-primary">
+					<span class="icon">
+						<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M5.38943 11.3289C7.41132 15.3025 10.6688 18.546 14.6424 20.5819L17.7314 17.4929C18.1105 17.1138 18.6721 16.9874 19.1635 17.1559C20.7361 17.6754 22.435 17.9562 24.1761 17.9562C24.9484 17.9562 25.5802 18.5881 25.5802 19.3603V24.2606C25.5802 25.0328 24.9484 25.6647 24.1761 25.6647C10.9917 25.6647 0.306641 14.9796 0.306641 1.7952C0.306641 1.02295 0.93848 0.391113 1.71073 0.391113H6.62503C7.39728 0.391113 8.02912 1.02295 8.02912 1.7952C8.02912 3.55031 8.30993 5.23521 8.82945 6.80779C8.9839 7.29922 8.87157 7.84681 8.47842 8.23996L5.38943 11.3289Z" fill="white" />
+						</svg>
+					</span>
+					<span>(044) 222-1522</span>
+				</a>
+			</div>
+		</nav>
+	</div>
+</header>
+<!-- ./header -->
+
+		<main class="main">
+			<!-- block__hero -->
+<section class="block block__hero">
+	<div class="container">
+		<div class="block__hero-image">
+			<picture>
+				<source srcset="img/hero-image.webp" type="image/webp" />
+				<img src="img/hero-image.png" alt="Hero image" loading="lazy" />
+			</picture>
+		</div>
+		<div class="block__hero-content">
+			<h1 class="block__title">Одужуйте під цілодобовою турботою лікарів</h1>
+
+			<div class="block__hero-btn">
+				<a href="#" class="btn btn-green">Замовити консультацію</a>
+			</div>
+			<ul>
+				<li class="title">Коли потрібна госпіталізація:</li>
+				<li class="emergency">
+					<a href="#emergency">Екстрена (невідкладна)</a>
+				</li>
+				<li class="planned">
+					<a href="#planned"> Планова </a>
+				</li>
+				<li class="transfer">
+					<a href="#transfer">Переведення з іншого медичного закладу</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</section>
+<!-- ./block__hero -->
+
+			<!-- block__emergency -->
+<section class="block block__emergency" id="emergency">
+	<div class="container">
+		<div class="block__row">
+			<div class="block__col image">
+				<picture>
+					<source srcset="img/img-01.webp" type="image/webp" />
+					<img src="img/img-01.png" alt="Emergency car" loading="lazy" />
+				</picture>
+			</div>
+			<div class="block__col description">
+				<h2 class="block__title">
+					<span>Екстрена гОСПІталізація</span>
+				</h2>
+				<p class="block__subtitle">Для дітей та дорослих</p>
+				<p class="block__description">Екстрена госпіталізація потрібна при невідкладних станах, що несуть загрозу життю та здоров’ю людини і можуть призвести до різкого погіршення стану в разі несвоєчасного надання медичної допомоги, що супроводжується станами:</p>
+			</div>
+		</div>
+
+		<div class="block__emergency-states">
+			<ul class="tags">
+				<li>Порушення/ втрата свідомості/ судоми</li>
+				<li>Кровотечі</li>
+				<li>Мозковий інсульт</li>
+				<li>Гострий коронарного синдрому – біль/дискомфорт у грудній клітці</li>
+				<li>Розлади дихання</li>
+				<li>Травми (перелами, вивихи, розтягення)</li>
+				<li>Загострення хронічних захворювань</li>
+				<li>Запаморочення</li>
+				<li>Головний біль, запаморочення, слабкість</li>
+				<li>Підвищення артеріального тиску</li>
+				<li>Больовий синдром будь-якого походження</li>
+				<li>Гостра хірургічна/гінекологічна патологія</li>
+			</ul>
+
+			<div class="block__emergency-phone-wrapper">
+				<div class="block__emergency-phone">
+					<div class="title">Вчасна медична допомога <span>рятує життя!</span></div>
+					<a href="tel:5288" class="btn btn-icon btn-border-left">
+						<img src="img/emergency-ambulance.png" alt="emergency-ambulance" />
+						<span>5288</span>
+					</a>
+					<p>Невідкладна допомога</p>
+					<div class="block__emergency-phone-bottom">
+						<img src="img/svg/twisted-arrow-up.svg" alt="twistet arrow" />
+						<p>Цілодобово</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="block__emergency-steps">
+			<h3 class="block__caption">Екстрена госпіталізація має 2 шляхи для звернення:</h3>
+			<ul class="steps-list">
+				<li class="call-emergency">
+					<div class="image">
+						<picture>
+							<source srcset="img/img-02.webp" type="image/webp" />
+							<img src="img/img-02.png" title="ВИКЛИК бригади невідкладної допомоги " alt="ВИКЛИК бригади невідкладної допомоги" loading="lazy" />
+						</picture>
+
+						<picture>
+							<source srcset="img/img-03.webp" type="image/webp" />
+							<img src="img/img-03.png" title="ВИКЛИК бригади невідкладної допомоги " alt="ВИКЛИК бригади невідкладної допомоги" loading="lazy" />
+						</picture>
+					</div>
+
+					<div class="mobile-content">
+						<h3 class="caption">Як відбувається екстрена госпіталізація</h3>
+						<ul>
+							
+							<li class="emergency">
+								<a href="#call-emergency">Виклик невідкладної</a>
+							</li>
+							<li class="hospitalization">
+								<a href="#call-hospitalization"> Дзвінок у відділ госпіталізації </a>
+							</li>
+							
+						</ul>
+					</div>
+
+					<div id="call-emergency" class="content">
+						<div class="title">ВИКЛИК бригади невідкладної допомоги</div>
+						<div class="description">
+							<p>Ви виклакаєте бригаду невідкладної допомоги “Добробут” за номером:</p>
+							<a href="tel:5288" class="btn btn-icon btn-light-red">
+								<svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M5.8451 12.6162L7.35844 12.0584C7.56147 11.985 7.78144 11.9721 7.99165 12.0213C8.20186 12.0705 8.39327 12.1796 8.54263 12.3355L9.57227 13.4217C9.72212 13.5816 9.82128 13.7823 9.85726 13.9985C9.89324 14.2146 9.86442 14.4366 9.77445 14.6364L8.70802 16.948C8.6445 17.0828 8.55435 17.2035 8.44299 17.3026C8.33163 17.4017 8.20137 17.4772 8.06005 17.5246C7.91872 17.5721 7.76926 17.5904 7.62066 17.5786C7.47207 17.5667 7.3274 17.5249 7.19538 17.4557C-1.39487 12.8254 0.27581 4.51261 1.26069 1.49057C1.30996 1.34259 1.39 1.20671 1.49556 1.09188C1.60111 0.977053 1.72978 0.885876 1.87311 0.824348C2.01643 0.762819 2.17116 0.732334 2.32711 0.734898C2.48306 0.737462 2.6367 0.773016 2.77792 0.839223L5.0109 1.86939C5.20989 1.96191 5.37665 2.11184 5.48973 2.2999C5.60282 2.48797 5.65705 2.70557 5.64546 2.9247L5.56712 4.4193C5.55737 4.6352 5.48422 4.84345 5.35681 5.01802C5.22941 5.19259 5.05339 5.32575 4.85074 5.40087L3.3374 5.9587C3.3374 5.9587 2.07181 10.2698 5.8451 12.6162Z"
+										fill="#EC3323"
+									/>
+								</svg>
+	
+								<span>5288</span></a
+							>
+							<ul>
+								<li>Надання екстреної допомоги та стабілізація пацієнта</li>
+								<li>Транспортування в стаціонар</li>
+								<li>Госпіталізація або стабілізація стану у відділенні невідкладної допомоги</li>
+							</ul>
+						</div>
+					</div>
+				</li>
+				<li class="call-hospitalization">
+					<div class="image">
+						<picture>
+							<source srcset="img/img-03.webp" type="image/webp" />
+							<img src="img/img-03.png" title="ДЗВІНОК у відділ госпіталізації" alt="ДЗВІНОК у відділ госпіталізації" loading="lazy" />
+						</picture>
+						<picture>
+							<source srcset="img/img-08.webp" type="image/webp" />
+							<img src="img/img-08.png" title="ДЗВІНОК у відділ госпіталізації" alt="ДЗВІНОК у відділ госпіталізації" loading="lazy" />
+						</picture>
+					</div>
+					<div id="call-hospitalization" class="content">
+						<div class="title">ДЗВІНОК у відділ госпіталізації</div>
+						<div class="description">
+							<p>Телефонуй цілодобово за номером:</p>
+							<a href="tel:1522" class="btn btn-icon btn-light-green">
+								<svg width="11" height="18" viewBox="0 0 11 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M6.08778 12.6963L7.60112 12.1384C7.80415 12.065 8.02412 12.0522 8.23433 12.1014C8.44454 12.1506 8.63594 12.2597 8.78531 12.4156L9.81494 13.5018C9.96479 13.6617 10.064 13.8624 10.0999 14.0785C10.1359 14.2947 10.1071 14.5167 10.0171 14.7165L8.9507 17.0281C8.88718 17.1629 8.79703 17.2835 8.68567 17.3826C8.57431 17.4817 8.44404 17.5573 8.30272 17.6047C8.1614 17.6521 8.01194 17.6705 7.86334 17.6586C7.71474 17.6468 7.57008 17.605 7.43806 17.5357C-1.1522 12.9055 0.518486 4.59269 1.50336 1.57065C1.55263 1.42266 1.63268 1.28679 1.73823 1.17196C1.84379 1.05713 1.97246 0.965954 2.11578 0.904426C2.25911 0.842897 2.41383 0.812412 2.56978 0.814976C2.72574 0.81754 2.87938 0.853094 3.0206 0.919301L5.25358 1.94947C5.45257 2.04198 5.61933 2.19192 5.73241 2.37998C5.84549 2.56805 5.89973 2.78564 5.88814 3.00478L5.80979 4.49938C5.80004 4.71528 5.7269 4.92352 5.59949 5.0981C5.47208 5.27267 5.29606 5.40583 5.09342 5.48095L3.58008 6.03878C3.58008 6.03878 2.31448 10.3499 6.08778 12.6963Z"
+										fill="#7FC241"
+									/>
+								</svg>
+	
+								<span>1522</span></a>
+							<ul>
+								<li>Отримай інформацію щодо умов, вартості перебування в стаціонарі  і орієнтовну вартість операції та можливий строк перебування у палаті</li>
+								<li>Консультація лікаря в приймальному відділенні/li></li>
+								<li>Госпіталізація або  призначення іншого лікування</li>
+							</ul>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</section>
+<!-- ./block__emergency -->
+
+			
+			<div class="gradient-grey-wrapper">
+
+				<!-- block__planned -->
+<section class="block block__planned" id="planned">
+	<div class="container">
+		<div class="block__title">ПЛАНОВА госпіталізація</div>
+		<div class="block__subtitle">Для дітей та дорослих</div>
+		<div class="block__planned-wrapper">
+			<div class="block__description">
+				<p>Планова госпіталізація здійснюється за направленням після консультації профільного лікаря та проводиться у наступних випадках:</p>
+				<ul class="tags">
+					<li>Планові операції</li>
+					<li>Стаціонарне лікування</li>
+					<li>Обстеження в стаціонарі</li>
+					<li>Реабілітація</li>
+				</ul>
+			</div>
+
+			<div class="block__planned-slider">
+				<div class="swiper">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="slide-item">
+								<picture>
+									<source srcset="img/slide-01.webp" type="image/webp" />
+									<img src="img/slide-01.jpg" alt="слайд" loading="lazy" />
+								</picture>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="slide-item">
+								<picture>
+									<source srcset="img/slide-02.webp" type="image/webp" />
+									<img src="img/slide-02.jpg" alt="слайд" loading="lazy" />
+								</picture>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="slide-item">
+								<picture>
+									<source srcset="img/slide-03.webp" type="image/webp" />
+									<img src="img/slide-03.jpg" alt="слайд" loading="lazy" />
+								</picture>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="slide-item">
+								<picture>
+									<source srcset="img/slide-04.webp" type="image/webp" />
+									<img src="img/slide-04.jpg" alt="слайд" loading="lazy" />
+								</picture>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="slide-item">
+								<picture>
+									<source srcset="img/slide-05.webp" type="image/webp" />
+									<img src="img/slide-05.jpg" alt="слайд" loading="lazy" />
+								</picture>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="slide-item">
+								<picture>
+									<source srcset="img/slide-06.webp" type="image/webp" />
+									<img src="img/slide-06.jpg" alt="слайд" loading="lazy" />
+								</picture>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="block__planned-slider-navigation">
+			<div class="btn-nav btn-nav-prev planned-btn-prev">
+				<svg fill="none" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+					<path d="M13 9L10 12L13 15" stroke="#1c5a8c" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+					<circle cx="12" cy="12" r="9" stroke="#1c5a8c" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+				</svg>
+			</div>
+
+			<div class="btn-nav btn-nav-next planned-btn-next">
+				<svg fill="none" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+					<circle cx="12" cy="12" r="9" stroke="#1c5a8c" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+					<path d="M11 9L14 12L11 15" stroke="#1c5a8c" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+				</svg>
+			</div>
+		</div>
+
+		<div class="block__planned-steps">
+			<h3 class="block__caption">Як відбувається планова госпіталізація</h3>
+			<ul>
+				<li><span>Консультація профільного лікаря</span> медичної мережі “Добробут”</li>
+				<li><span>Визначення типу лікування</span></li>
+				<li><span>Супроводження пацієнта</span> менеджером стаціонару, що передбачає прорахунок лікування, запис на зручну дату для госпіталізації, надання інформації щодо необхідних обстежень (аналізів) передопераційного пакету.</li>
+			</ul>
+		</div>
+	</div>
+</section>
+<!-- ./block__planned -->
+
+				<!-- block__transfer -->
+<section class="block block__transfer" id="transfer">
+	<div class="container">
+		<div class="block__transfer-wrapper">
+			<h3 class="block__caption">Переведення пацієнта з іншого медичного закладу</h3>
+			<ul>
+				<li>
+					<div class="step-num">
+						<span>Крок 1</span>
+						<svg width="60" height="19" viewBox="0 0 60 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<g opacity="0.2">
+								<path d="M0.00261279 9.74805H57.3168" stroke="black" stroke-width="2" />
+								<path d="M49.1576 1.21387L57.6918 9.7482L49.1576 18.2824" stroke="black" stroke-width="2" />
+							</g>
+						</svg>
+					</div>
+					<div class="image">
+						<picture>
+							<source srcset="img/img-04.webp" type="image/webp" />
+							<img src="img/img-04.png" alt="Крок 1" loading="lazy" />
+						</picture>
+					</div>
+					<p class="description">Звернення у відділ <br />госпіталізації</p>
+
+					<a href="tel:1522" class="btn btn-icon btn-light-green">
+						<svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M5.84095 12.6042L7.35429 12.0464C7.55732 11.973 7.77729 11.9601 7.9875 12.0093C8.19771 12.0585 8.38912 12.1677 8.53848 12.3236L9.56812 13.4098C9.71797 13.5697 9.81713 13.7703 9.85311 13.9865C9.88909 14.2027 9.86027 14.4246 9.7703 14.6245L8.70387 16.936C8.64035 17.0709 8.5502 17.1915 8.43884 17.2906C8.32748 17.3897 8.19722 17.4652 8.0559 17.5127C7.91457 17.5601 7.76511 17.5784 7.61651 17.5666C7.46792 17.5547 7.32325 17.5129 7.19123 17.4437C-1.39902 12.8134 0.27166 4.50065 1.25654 1.47861C1.30581 1.33062 1.38585 1.19475 1.49141 1.07992C1.59696 0.965091 1.72563 0.873913 1.86896 0.812385C2.01228 0.750856 2.16701 0.720371 2.32296 0.722935C2.47891 0.725499 2.63255 0.761053 2.77377 0.82726L5.00675 1.85743C5.20574 1.94994 5.3725 2.09988 5.48558 2.28794C5.59867 2.47601 5.6529 2.6936 5.64131 2.91274L5.56296 4.40734C5.55322 4.62324 5.48007 4.83148 5.35266 5.00605C5.22526 5.18063 5.04924 5.31379 4.84659 5.38891L3.33325 5.94674C3.33325 5.94674 2.06766 10.2579 5.84095 12.6042Z"
+								fill="#7FC241"
+							/>
+						</svg>
+
+						<span>1522</span></a>
+				</li>
+				<li>
+					<div class="step-num">
+						<span>Крок 2</span>
+						<svg width="60" height="19" viewBox="0 0 60 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<g opacity="0.2">
+								<path d="M0.00261279 9.74805H57.3168" stroke="black" stroke-width="2" />
+								<path d="M49.1576 1.21387L57.6918 9.7482L49.1576 18.2824" stroke="black" stroke-width="2" />
+							</g>
+						</svg>
+					</div>
+					<div class="image">
+						<picture>
+							<source srcset="img/img-05.webp" type="image/webp" />
+							<img src="img/img-05.png" alt="Крок 2" loading="lazy" />
+						</picture>
+					</div>
+					<p class="description">Отримання від менеджера списку необхідних документів для переведення в стаціонар Добробуту </p>
+				</li>
+				<li>
+					<div class="step-num">
+						<span>Крок 3</span>
+						<svg width="60" height="19" viewBox="0 0 60 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<g opacity="0.2">
+								<path d="M0.00261279 9.74805H57.3168" stroke="black" stroke-width="2" />
+								<path d="M49.1576 1.21387L57.6918 9.7482L49.1576 18.2824" stroke="black" stroke-width="2" />
+							</g>
+						</svg>
+					</div>
+					<div class="image">
+						<picture>
+							<source srcset="img/img-06.webp" type="image/webp" />
+							<img src="img/img-06.png" alt="Крок 2" loading="lazy" />
+						</picture>
+					</div>
+					<p class="description">Транспортування пацієнта в стаціонар Добробуту</p>
+					<p class="text-little">(за допомогою нашої невідкладної або самостійно)</p>
+				</li>
+			</ul>
+			<div class="block__trtansfer-bottom">
+				<a href="#" class="btn btn-primary">Подати заявку на переведення</a>
+				<p>Ми приймаємо пацієнтів з інших міст та країн</p>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- ./block__transfer -->
+
+				<!-- block__prices -->
+<section class="block block__prices">
+	<div class="container">
+		<div class="block__row">
+			<img class="coin-image" src="img/svg/coin.svg" alt="Coin" />
+			<div class="block__col">
+				<h3 class="block__caption">Скільки коштує стаціонар</h3>
+				<p>Вартість стаціонару <br>формується з урахуваням:</p>
+			</div>
+			<div class="block__col">
+				<ul>
+					<li><span>базової вартість</span> (добове перебування, догляд персоналу та харчування)</li>
+					<li><span>діагностики</span>, проведеної пацієнту під час находження у стаціонарі</li>
+					<li>та <span>медикаментів</span></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="block__prices-bottom">
+			<img src="img/img-07.png" alt="image" />
+
+			<p>Турбуйтеся про своє здоров’є під постійним <span>наглядом лікарів</span></p>
+			<a href="" class="btn btn-border-left"><span>Дізнатися вартість лікування</span></a>
+		</div>
+	</div>
+</section>
+<!-- ./block__prices -->
+
+				
+			</div>
+			
+			<!-- block__advantages -->
+<section class="block block__advantages">
+	<div class="container">
+		<h2 class="block__title">НАШІ ПЕРЕВАГИ</h2>
+	</div>
+	<div class="block__advantages-list">
+		<div class="swiper">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<div class="block__advantages-item">
+						<div class="icon">
+							<img src="img/icons/icon-01.svg" alt="icon" />
+						</div>
+						<p>
+							<span>140+</span>
+							<br />
+							комфортних палат стаціонару
+						</p>
+					</div>
+				</div>
+
+				<div class="swiper-slide">
+					<div class="block__advantages-item">
+						<div class="icon">
+							<img src="img/icons/icon-02.svg" alt="icon" />
+						</div>
+						<p>
+							Цілодобова діагностика (КТ, МРТ, лабораторії)
+						</p>
+					</div>
+				</div>
+				<div class="swiper-slide">
+					<div class="block__advantages-item">
+						<div class="icon">
+							<img src="img/icons/icon-03.svg" alt="icon" />
+						</div>
+						<p>
+							Координатори відділу госпіталізації мають медичну освіту та фахово консультують  при будь-яких зверненнях
+						</p>
+					</div>
+				</div>
+				<div class="swiper-slide">
+					<div class="block__advantages-item">
+						<div class="icon">
+							<img src="img/icons/icon-04.svg" alt="icon" />
+						</div>
+						<p>
+							Під час першого звернення ви отримаєте детальний план як діяти при плановій або екстреній госпіталізації
+						</p>
+					</div>
+				</div>
+				<div class="swiper-slide">
+					<div class="block__advantages-item">
+						<div class="icon">
+							<img src="img/icons/icon-05.svg" alt="icon" />
+						</div>
+						<p>
+							<span>Власна служба невідкладної допомоги 24/7</span>
+						</p>
+						<a href="tel:5288" class="btn btn-icon btn-light-red">
+							<svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M5.76453 12.5415L7.27787 11.9836C7.48091 11.9102 7.70088 11.8974 7.91109 11.9466C8.1213 11.9958 8.3127 12.1049 8.46207 12.2608L9.4917 13.347C9.64155 13.5069 9.74071 13.7076 9.77669 13.9238C9.81267 14.1399 9.78386 14.3619 9.69388 14.5617L8.62746 16.8733C8.56394 17.0081 8.47378 17.1288 8.36242 17.2279C8.25107 17.327 8.1208 17.4025 7.97948 17.4499C7.83816 17.4974 7.6887 17.5157 7.5401 17.5038C7.3915 17.492 7.24684 17.4502 7.11482 17.381C-1.47544 12.7507 0.195244 4.43791 1.18012 1.41586C1.22939 1.26788 1.30944 1.132 1.41499 1.01717C1.52055 0.902346 1.64922 0.811169 1.79254 0.74964C1.93586 0.688112 2.09059 0.657627 2.24654 0.660191C2.40249 0.662755 2.55613 0.698309 2.69736 0.764516L4.93033 1.79468C5.12932 1.8872 5.29608 2.03713 5.40917 2.2252C5.52225 2.41326 5.57648 2.63086 5.56489 2.85L5.48655 4.3446C5.4768 4.5605 5.40365 4.76874 5.27625 4.94331C5.14884 5.11788 4.97282 5.25105 4.77017 5.32617L3.25683 5.88399C3.25683 5.88399 1.99124 10.1951 5.76453 12.5415Z" fill="#EC3323"/>
+								</svg>
+								
+							<span>5288</span>
+						</a>
+						<p>з бригадами інтенсивної терапії, окремо <span>педіатричні бригади</span></p>
+					</div>
+				</div>
+
+				<div class="swiper-slide">
+					<div class="block__advantages-item">
+						<div class="icon">
+							<img src="img/icons/icon-06.svg" alt="icon" />
+						</div>
+						<p>
+							Приймальні відділення з протишоковими палатами та залами екстреної допомоги
+						</p>
+					</div>
+				</div>
+				<div class="swiper-slide">
+					<div class="block__advantages-item">
+						<div class="icon">
+							<img src="img/icons/icon-07.svg" alt="icon" />
+						</div>
+						<p>
+							Харчування відповідно до потреб пацієнта (індивідуальне та дієтичне)
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- ./block__advantages -->
+
+			
+				
+		</main>
+		<!-- footer -->
+<footer class="footer">
+	<div class="container">
+		<!-- block__testimonials -->
+<section class="block block__testimonials">
+	<div class="block__testimonials-header">
+		<h2 class="block__title">Відгуки</h2>
+		<div class="block__testimonials-navigation">
+			<div class="btn-nav btn-nav-prev testimonial-btn-prev">
+				<svg fill="none" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+					<path d="M13 9L10 12L13 15" stroke="#1c5a8c" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+					<circle cx="12" cy="12" r="9" stroke="#1c5a8c" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+				</svg>
+			</div>
+
+			<div class="btn-nav btn-nav-next testimonial-btn-next">
+				<svg fill="none" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+					<circle cx="12" cy="12" r="9" stroke="#1c5a8c" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+					<path d="M11 9L14 12L11 15" stroke="#1c5a8c" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+				</svg>
+			</div>
+		</div>
+	</div>
+	<div class="block__testimonials-list">
+		<div class="swiper">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<div class="block__testimonials-item">
+						<div class="testimonial">
+							<p>Вперше була на прийомі у Тетяни Сергіївни, дуже уважна та привітна до пацієнтів. Ставить багато питань, щоб дізнатися причину та призначити правильне лікування.</p>
+							<p>Професіонал своєї справи. Залишилась задоволена консультацією!</p>
+						</div>
+						<div class="author">Олег Володимирович</div>
+						<div class="author-info">Чоловік клієнта МС “Добробут-Патронаж”</div>
+					</div>
+				</div>
+				<div class="swiper-slide">
+					<div class="block__testimonials-item">
+						<div class="testimonial"><p>Отличный специалист, все качественно и быстро, профессионализм на уровне, всем рекомендую!</p></div>
+
+						<div class="author">Анлегіна Крамнікова</div>
+						<div class="author-info">Донька клієнта МС “Добробут”</div>
+					</div>
+				</div>
+				<div class="swiper-slide">
+					<div class="block__testimonials-item">
+						<div class="testimonial"><p>Врач все очень подробно и доступно обьяснила, ответила на все вопросы. Спасибо!</p></div>
+						<div class="author">Артем Кравченко</div>
+						<div class="author-info">Product Owner</div>
+					</div>
+				</div>
+				<div class="swiper-slide">
+					<div class="block__testimonials-item">
+						<div class="testimonial"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora asperiores exercitationem quo laborum deserunt aliquam dolore ullam sit et minus.</p>
+						<p>Lorem ipsum dolor sit amet.</p>
+						</div>
+						<div class="author">Артем Кравченко</div>
+						<div class="author-info">Product Owner</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="block__testimonials-mobile">
+		<div class="wrapper">
+
+			<div class="block__testimonials-item">
+				<div class="testimonial">
+					<p>Вперше була на прийомі у Тетяни Сергіївни, дуже уважна та привітна до пацієнтів. Ставить багато питань, щоб дізнатися причину та призначити правильне лікування.</p>
+					<p>Професіонал своєї справи. Залишилась задоволена консультацією!</p>
+				</div>
+				<div class="author">Олег Володимирович</div>
+			</div>
+			<div class="block__testimonials-item">
+				<div class="testimonial">
+					<p>Отличный специалист, все качественно и быстро, профессионализм на уровне, всем рекомендую!</p>
+				</div>
+				<div class="author">Анлегіна Крамнікова</div>
+			</div>
+		</div>
+
+		<button class="btn btn-secondary">ще відгуки</button>
+	</div>
+</section>
+<!-- ./block__testimonials -->
+
+
+		<div class="footer__top">
+			<picture>
+				<source srcset="img/logo-footer-desktop.webp" type="image/webp" />
+				<img src="img/logo-footer-desktop.png" alt="Footer Logo" loading="lazy" />
+			</picture>
+		</div>
+		<div class="footer__middle">
+			<div class="item">
+				<p class="copyright">МM «Добробут» 2012- 2022. Всі права захищені</p>
+				<a href="https://www.dobrobut.com/ua/terms-of-service">Умови надання онлайн послуг</a>
+				<a href="https://www.dobrobut.com/ua/vaccination">Умови надання послуг вакцинації</a>
+				<a href="https://www.dobrobut.com/ua/public-contract">Публічний договір надання медичних послуг</a>
+			</div>
+			<div class="item btns">
+				<a href="tel:+380670264488" class="btn btn-primary">+38 067 026-44-88</a>
+				<a href="#" class="btn btn-secondary">Задати запитання </a>
+				<p>безкоштовно, 24/7</p>
+			</div>
+		</div>
+		<div class="footer__bottom">
+			<ul class="footer__menu">
+				<li><a href="#">Головна</a></li>
+				<li><a href="#">Переваги</a></li>
+				<li><a href="#">Послуги</a></li>
+				<li><a href="#">Відгуки</a></li>
+				<li><a href="#">Як замовити</a></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<!-- ./footer -->
+
+	</div>
+	
+	<script src="js/vendors.js?_v=20230304123917"></script>
+<script src="js/app.min.js?_v=20230304123917"></script>
+
+
+</body>
+
+</html>

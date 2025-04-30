@@ -1,0 +1,105 @@
+.marketing-items-section .marketing-card .img-wrap img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.marketing-items-section {
+  padding: 3.6458333333vw 0 3.6458333333vw;
+  position: relative;
+  text-align: center;
+  color: #000;
+}
+@media (max-width: 767px) {
+  .marketing-items-section {
+    padding: 1.25em 0 2em;
+  }
+}
+.marketing-items-section .marketing-items-bg {
+  position: absolute;
+  max-width: none;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -5.25em;
+  z-index: -1;
+}
+html[dir=ltr] .marketing-items-section .marketing-items-bg {
+  transform: translateX(-50%) scaleX(-1);
+}
+
+@media (max-width: 767px) {
+  .marketing-items-section .marketing-items-bg {
+    display: none;
+  }
+}
+.marketing-items-section .subheader {
+  font: 1.125em/1.7777777778 "rubik-reg", sans-serif;
+  margin: 0.6666666667em 0 0;
+}
+@media (max-width: 767px) {
+  .marketing-items-section .subheader {
+    font-size: 1em;
+    line-height: 1.625;
+  }
+}
+.marketing-items-section .section-container {
+  max-width: 1210px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+.marketing-items-section .wrap {
+  display: flex;
+  gap: 6.6115702479%;
+  margin-top: 2.875em;
+}
+@media (max-width: 767px) {
+  .marketing-items-section .wrap {
+    display: block;
+    margin-top: 2.6875em;
+  }
+}
+.marketing-items-section .marketing-card {
+  flex-basis: 21.875em;
+  max-width: 21.875em;
+  background-color: #fff;
+  box-shadow: 0 1px 15px 0 rgba(60, 63, 69, 0.2);
+  border-radius: 0.75em;
+  display: flex;
+  flex-direction: column;
+  padding: 1.6875em 1.625em 1.8125em;
+  text-decoration: none;
+  color: inherit;
+}
+@media (max-width: 767px) {
+  .marketing-items-section .marketing-card {
+    padding: 1.625em 1.625em 29px;
+    margin: 1.625em auto 1.875em;
+  }
+  .marketing-items-section .marketing-card:last-child {
+    margin-bottom: 0;
+  }
+}
+.marketing-items-section .marketing-card .img-wrap {
+  padding-bottom: 73.1543624161%;
+}
+.marketing-items-section .marketing-card .card-header {
+  font: 1.5em/1.3333333333 "rubik-medium", sans-serif;
+  margin: 0.7083333333em 0 0.75em;
+}
+@media (max-width: 767px) {
+  .marketing-items-section .marketing-card .card-header {
+    line-height: 1.25;
+  }
+}
+.marketing-items-section .marketing-card .msg {
+  font: 1.125em/1.5555555556 "rubik-reg", sans-serif;
+  margin: auto 0 0;
+}
+@media (max-width: 767px) {
+  .marketing-items-section .marketing-card .msg {
+    font-size: 1em;
+    line-height: 1.5;
+  }
+}

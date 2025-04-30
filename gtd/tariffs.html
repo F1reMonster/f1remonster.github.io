@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+		<title>Getting Things Done© Ukraine</title>
+		<meta name="description" content="" />
+
+		<link rel="profile" href="https://gmpg.org/xfn/11" />
+		<link rel="pingback" href="https://gtd.com.ua/xmlrpc.php" />
+		<link rel="dns-prefetch" href="//fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+		<link rel="shortcut icon" type="image/x-icon" href="https://gtd.com.ua/wp-content/themes/astrum-theme/images/favicon.ico" />
+
+		<meta name="robots" content="max-image-preview:large" />
+
+		<title>Getting Things Done© Ukraine</title>
+		<meta name="description" content="Ваш розум для того, щоб генерувати ідеї, а не зберігати їх." />
+		<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+
+		<link rel="stylesheet" id="woocommerce-css" href="css/woocommerce.css" type="text/css" media="all" />
+		<link rel="stylesheet" id="slick-css-css" href="css/slick.css" type="text/css" media="all" />
+
+		
+		<link rel="stylesheet" href="style.css" type="text/css" media="all" />
+		<link rel="stylesheet" href="style-new-pages.css?v=202305171509" />
+
+		<style type="text/css">
+			#header {
+				height: 130px;
+			}
+
+		
+			a,
+			a:visited,
+			#not-found i,
+			.comment-by span.reply a:hover,
+			.comment-by span.reply a:hover i,
+			.categories a:hover,
+			.testimonials-author,
+			.happy-clients-author,
+			.dropcap,
+			.meta ul li a:hover,
+			.list-1 li:before,
+			.list-2 li:before,
+			.list-3 li:before,
+			.list-4 li:before,
+			.widget li.current_page_item a,
+			a.twitter-link,
+			.widget li.twitter-item a {
+				color: #000000;
+			}
+			#astrum_header_cart ul li img:hover,
+			ul.product_list_widget li img:hover,
+			.menu > ul > li.current-menu-item > a,
+			.menu ul li.current-menu-ancestor > a,
+			#current,
+			.menu ul li a:hover,
+			.menu ul > li:hover > a,
+			.flickr-widget-blog a:hover,
+			#footer .flickr-widget-blog a:hover,
+			.widget .flickr-widget-blog li a:hover {
+				border-color: #000000;
+			}
+			.menu ul ul {
+				border-top-color: #000000;
+			}
+			#filters a:hover,
+			.selected:not(.stars),
+			ul.product_list_widget li img:hover,
+			#astrum_header_cart ul li img:hover,
+			.quantity.buttons_added .plus:hover,
+			.quantity.buttons_added .minus:hover {
+				background-color: #000000 !important;
+			}
+			.wc-proceed-to-checkout .button,
+			.actions .wc-forward,
+			.premium .plan-price,
+			.premium .plan-features a.button:hover,
+			.cart_contents,
+			.price_slider_wrapper .button:hover {
+				background-color: #000000;
+			}
+			.featured-box:hover > .circle-2,
+			.featured-box:hover > .circle-3 {
+				box-shadow: 0 0 0 8px rgba(0, 0, 0, 0.3);
+			}
+			.variations_button .button,
+			.menu > ul > li.current-menu-item > a:after,
+			.current-menu-ancestor > a:after,
+			.wp-pagenavi .current,
+			.pagination .current,
+			.pagination a:hover,
+			.wp-pagenavi a:hover,
+			.tagcloud a:hover,
+			.button.gray:hover,
+			.button.light:hover,
+			.button.color,
+			input[type="button"],
+			input[type="submit"],
+			input[type="button"]:focus,
+			input[type="submit"]:focus,
+			#footer .tabs-nav li.active a,
+			.tabs-nav li.active a,
+			.ui-accordion .ui-accordion-header-active:hover,
+			.ui-accordion .ui-accordion-header-active,
+			.trigger.active a,
+			.woocommerce-MyAccount-navigation li.is-active a,
+			.trigger.active a:hover,
+			.skill-bar-value,
+			.highlight.color,
+			.notice-box:hover {
+				background: #000000;
+			}
+			.price_slider_wrapper .ui-widget-header,
+			span.onsale,
+			.tp-leftarrow:hover,
+			.tp-rightarrow:hover,
+			.flexslider .flex-next:hover,
+			.flexslider .flex-prev:hover,
+			.featured-box:hover > .circle,
+			.featured-box:hover > .circle span,
+			.featured-box:hover > .circle-2,
+			.featured-box:hover > .circle-3,
+			.portfolio-item:hover > figure > a .item-description,
+			.sb-navigation-left:hover,
+			.sb-navigation-right:hover,
+			.widget_ns_mailchimp input.button,
+			.newsletter-btn,
+			.search-btn,
+			.premium.plan h3,
+			.premium .plan-features a.button,
+			.pagination ul li a:hover {
+				background-color: #000000;
+			}
+
+			.container .eight.columns {
+				font-size: 12px;
+				text-align: center;
+				width: 100%;
+			}
+		</style>
+		<style type="text/css" id="custom-background-css">
+			body.custom-background {
+				background-color: #333333;
+				background-image: url("https://gtd.com.ua/wp-content/themes/astrum-theme/images/bg/noise.png");
+				background-position: left top;
+				background-size: auto;
+				background-repeat: repeat;
+				background-attachment: scroll;
+			}
+		</style>
+
+		<style>
+			/* =================================================================== */
+			/* Mobile Navigation
+====================================================================== */
+			#mobile-navigation {
+				display: none;
+			}
+
+			@media only screen and (max-width: 767px) {
+				#mobile-navigation {
+					display: block;
+				}
+				#astrum_header_cart,
+				#responsive,
+				.search-container {
+					display: none;
+				}
+
+				.container .columns.nav-menu-container {
+					width: 98%;
+				}
+
+				#header {
+					z-index: 999;
+					background-color: #fff;
+					height: 79px;
+					margin-top: 0;
+					position: relative;
+					width: 100%;
+				}
+
+				body {
+					padding-top: 0;
+				}
+				#header-full #logo,
+				#header #logo {
+					width: 124px;
+					/*  left: 0;
+    right: 0;
+    position: absolute; */
+					margin: 0 auto;
+					text-align: center;
+					margin-top: 21px;
+					z-index: 99;
+					float: none;
+				}
+				#blogdesc {
+					display: none;
+				}
+				#logo img {
+					max-height: 51px;
+					width: auto;
+				}
+
+				#header-full #contact-details {
+					float: left;
+					margin-top: 0px;
+				}
+				#header-full #contact-details ul {
+					margin-left: 0px;
+				}
+
+				a.menu-trigger {
+					color: #a0a0a0;
+					display: block;
+					font-size: 28px;
+					float: left;
+					background: #fff;
+					z-index: 100;
+					position: relative;
+				}
+
+				.search-trigger {
+					color: #a0a0a0;
+					display: block;
+					font-size: 28px;
+					float: right;
+					cursor: pointer;
+					background: #fff;
+					z-index: 100;
+					position: relative;
+				}
+
+				#menu-search {
+					display: none;
+				}
+
+				#menu-search input {
+					float: left;
+					box-shadow: none;
+					border: 0;
+					font-size: 16px;
+					color: #aaa;
+					width: 50%;
+					padding: 27px 0 23px 0;
+				}
+
+				a.menu-trigger,
+				.search-trigger {
+					padding: 25px 30px;
+				}
+
+				a.menu-trigger {
+					padding-left: 0;
+				}
+				.search-trigger {
+					padding-right: 0;
+				}
+
+				#menu-search input:focus {
+					color: #888;
+				}
+
+				#menu-search input::-webkit-input-placeholder {
+					color: #a0a0a0;
+					opacity: 1;
+				}
+				#menu-search input::-moz-placeholder {
+					color: #a0a0a0;
+					opacity: 1;
+				}
+				#menu-search input:-ms-input-placeholder {
+					color: #a0a0a0;
+					opacity: 1;
+				}
+				#menu-search input:focus::-webkit-input-placeholder {
+					color: #888;
+					opacity: 1;
+				}
+				#menu-search input:focus::-moz-placeholder {
+					color: #888;
+					opacity: 1;
+				}
+				#menu-search input:focus:-ms-input-placeholder {
+					color: #888;
+					opacity: 1;
+				}
+
+				.jPanelMenu-panel {
+					-webkit-box-shadow: 3px 0 20px 0 rgba(0, 0, 0, 0.28);
+					box-shadow: 3px 0 20px 0 rgba(0, 0, 0, 0.28);
+				}
+			}
+		</style>
+	</head>
+
+	<body class="home page-template page-template-front-page page-template-front-page-php page page-id-25 custom-background boxed group-blog has-mtsnb">
+		
+		<header id="header">
+			<!-- Container -->
+			<div class="container">
+				<!-- Logo / Mobile Menu -->
+				<div class="one columns nav-menu-container">
+					<div id="mobile-navigation">
+						<form method="get" id="menu-search" action="https://gtd.com.ua/">
+							<input type="text" name="s" id="s" placeholder="Start Typing..." />
+						</form>
+						<a href="#menu" class="menu-trigger"><i class="icon-reorder"></i></a>
+						<div class="visible-xs"><a class="fivestepstext header-btn" href="https://gtd.com.ua/gtd-q/">ПРОЙТИ ТЕСТ</a></div>
+					</div>
+
+					<div id="logo">
+						<h1>
+							<a href="https://gtd.com.ua/" title="Getting Things Done© Ukraine" rel="home"><img src="https://gtd.com.ua/wp-content/uploads/2018/02/getting-things-done-logo.png" alt="Getting Things Done© Ukraine" /></a>
+						</h1>
+					</div>
+				</div>
+
+				<!-- Navigation
+				================================================== -->
+				<div class="fifteen columns">
+					<nav id="navigation" class="menu">
+						<ul id="responsive" class="menu">
+							<li id="menu-item-527" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-527">
+								<a href="https://gtd.com.ua/pro-gtd/">ПРО GTD</a>
+								<ul class="sub-menu">
+									<li id="menu-item-2615" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2615"><a href="https://gtd.com.ua/pro-gtd/">Про GTD®</a></li>
+									<li id="menu-item-523" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-523"><a href="https://gtd.com.ua/gtd-dosvid/">Відгуки</a></li>
+									<li id="menu-item-670" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-670"><a href="https://gtd.com.ua/zustrichajte-devid/">Девід Аллен</a></li>
+									<li id="menu-item-540" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-540"><a href="https://gtd.com.ua/trener/">Тренер</a></li>
+								</ul>
+							</li>
+							<li id="menu-item-1837" class="hide-link menu-item menu-item-type-post_type menu-item-object-page menu-item-1837"><a href="https://gtd.com.ua/schedule-2022/">НАВЧАННЯ</a></li>
+							<li id="menu-item-1633" class="hide-link menu-item menu-item-type-post_type menu-item-object-page menu-item-1633"><a href="https://gtd.com.ua/pochnit-z-5-krokiv/">ПОЧНИ З П’ЯТИ КРОКІВ</a></li>
+							<li id="menu-item-541" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-541"><a href="https://gtd.com.ua/blog/">GTD блог</a></li>
+							<li id="menu-item-675" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-675"><a href="https://gtd.com.ua/gtd-podkast/">GTD Подкаст</a></li>
+							<li id="menu-item-3059" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3059"><a href="https://gtd.com.ua/shop/">GTD Shop</a></li>
+							<li id="menu-item-526" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-526"><a href="https://gtd.com.ua/kontakty/">Контакти</a></li>
+							<li id="menu-item-1134" class="nmr-logged-out menu-item menu-item-type-post_type menu-item-object-page menu-item-1134"><a href="#modal-login" data-modal>Увійти</a></li>
+						</ul>
+					</nav>
+					<!---->
+				</div>
+
+				<div class="main-menu">
+					<nav id="navigation" class="menu">
+						<ul id="responsive" class="menu">
+							<li id="menu-item-531" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-531"><a href="https://gtd.com.ua/pochnit-z-5-krokiv/">ПОЧНІТЬ З П’ЯТИ КРОКІВ</a></li>
+							<li id="menu-item-562" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-562"><a href="https://gtd.com.ua/gtd-q/"></a></li>
+							<li id="menu-item-368" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-368"><a href="https://gtd.com.ua/gtd-q/">GTD-Q® Самооцінювання</a></li>
+							<li id="menu-item-1834" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1834"><a href="https://gtd.com.ua/schedule-2022/">НАВЧАННЯ</a></li>
+							<li id="menu-item-3193" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3193"><a href="https://gtd.com.ua/corporate-case-sheriff/">КОРПОРАТИВНЕ НАВЧАННЯ</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+			<!-- Container / End -->
+
+			<div class="mtsnb mtsnb-shown mtsnb-top mtsnb-fixed" id="mtsnb-543" data-mtsnb-id="543" style="background-color: #e55300; color: #ffffff">
+				<style type="text/css">
+					body {
+						padding-top: 48px;
+					}
+
+					.mtsnb {
+						position: fixed;
+						-webkit-box-shadow: 0 3px 4px rgba(0, 0, 0, 0.05);
+						box-shadow: 0 3px 4px rgba(0, 0, 0, 0.05);
+					}
+					.mtsnb .mtsnb-container {
+						width: 720px;
+						font-size: 20px;
+					}
+					.mtsnb a {
+						color: #f4a700;
+					}
+					.mtsnb .mtsnb-button {
+						background-color: #f4a700;
+					}
+				</style>
+				<script>
+					window.onload = (event) => {
+						console.log("page is fully loaded");
+						barHeight = document.querySelector(".mtsnb").offsetHeight;
+						console.log("Top orange bar height is " + barHeight + "px");
+						document.querySelector("body").style.paddingTop = barHeight + "px";
+						document.querySelector("body").classList.add("has-mtsnb");
+					};
+				</script>
+				<div class="mtsnb-container-outer">
+					<div class="mtsnb-container mtsnb-clearfix">
+						<div class="mtsnb-button-type mtsnb-content"><span class="mtsnb-text">LIVE курс "Основи"</span><a href="https://bit.ly/3ElQZK6" class="mtsnb-link">TBA</a></div>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<div id="content-wrapper">
+			<div id="content" class="container">
+				<section class="tariffs">
+					<div class="tariffs__list">
+						<div class="tariff">
+							<div class="tariff__name">1 місяць</div>
+							<div class="tariff__price">1000 грн</div>
+							<div class="tariff__decription">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</div>
+							<ul>
+								<li>
+									<span>Lorem Ipsum</span>
+									<span class="tariff__condition-info" data-template="tarr_1_1">
+										<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M11.9528 10.7183H13.1732V19.7596H11.9528V10.7183ZM12.5716 8.74157C12.3195 8.74157 12.1075 8.65563 11.9356 8.48374C11.7637 8.31185 11.6777 8.10558 11.6777 7.86494C11.6777 7.63575 11.7637 7.43522 11.9356 7.26333C12.1075 7.09144 12.3195 7.00549 12.5716 7.00549C12.8237 7.00549 13.0357 7.09144 13.2075 7.26333C13.3794 7.42376 13.4654 7.61856 13.4654 7.84775C13.4654 8.09985 13.3794 8.31185 13.2075 8.48374C13.0357 8.65563 12.8237 8.74157 12.5716 8.74157Z" fill="#2F2E2E" />
+											<circle cx="12.9055" cy="13.1444" r="11.6" stroke="#2F2E2E" stroke-width="1.1" />
+										</svg>
+									</span>
+								</li>
+								<li>
+									<span>Lorem Ipsum</span>
+									<span class="tariff__condition-info" data-template="tarr_1_2">
+										<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M11.9528 10.7183H13.1732V19.7596H11.9528V10.7183ZM12.5716 8.74157C12.3195 8.74157 12.1075 8.65563 11.9356 8.48374C11.7637 8.31185 11.6777 8.10558 11.6777 7.86494C11.6777 7.63575 11.7637 7.43522 11.9356 7.26333C12.1075 7.09144 12.3195 7.00549 12.5716 7.00549C12.8237 7.00549 13.0357 7.09144 13.2075 7.26333C13.3794 7.42376 13.4654 7.61856 13.4654 7.84775C13.4654 8.09985 13.3794 8.31185 13.2075 8.48374C13.0357 8.65563 12.8237 8.74157 12.5716 8.74157Z" fill="#2F2E2E" />
+											<circle cx="12.9055" cy="13.1444" r="11.6" stroke="#2F2E2E" stroke-width="1.1" />
+										</svg>
+									</span>
+								</li>
+								<li>
+									<span>Lorem Ipsum</span>
+									<span class="tariff__condition-info" data-template="tarr_1_3">
+										<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M11.9528 10.7183H13.1732V19.7596H11.9528V10.7183ZM12.5716 8.74157C12.3195 8.74157 12.1075 8.65563 11.9356 8.48374C11.7637 8.31185 11.6777 8.10558 11.6777 7.86494C11.6777 7.63575 11.7637 7.43522 11.9356 7.26333C12.1075 7.09144 12.3195 7.00549 12.5716 7.00549C12.8237 7.00549 13.0357 7.09144 13.2075 7.26333C13.3794 7.42376 13.4654 7.61856 13.4654 7.84775C13.4654 8.09985 13.3794 8.31185 13.2075 8.48374C13.0357 8.65563 12.8237 8.74157 12.5716 8.74157Z" fill="#2F2E2E" />
+											<circle cx="12.9055" cy="13.1444" r="11.6" stroke="#2F2E2E" stroke-width="1.1" />
+										</svg>
+									</span>
+								</li>
+							</ul>
+
+							<a class="btn" href="#">Обрати</a>
+						</div>
+						<div class="tariff recommended">
+							<div class="tariff__name">1 рік</div>
+							<div class="tariff__price">8000 грн</div>
+							<div class="tariff__decription">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</div>
+							<ul>
+								<li>
+									<span>Lorem Ipsum</span>
+									<span class="tariff__condition-info" data-template="tarr_2_1">
+										<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M11.9528 10.7183H13.1732V19.7596H11.9528V10.7183ZM12.5716 8.74157C12.3195 8.74157 12.1075 8.65563 11.9356 8.48374C11.7637 8.31185 11.6777 8.10558 11.6777 7.86494C11.6777 7.63575 11.7637 7.43522 11.9356 7.26333C12.1075 7.09144 12.3195 7.00549 12.5716 7.00549C12.8237 7.00549 13.0357 7.09144 13.2075 7.26333C13.3794 7.42376 13.4654 7.61856 13.4654 7.84775C13.4654 8.09985 13.3794 8.31185 13.2075 8.48374C13.0357 8.65563 12.8237 8.74157 12.5716 8.74157Z" fill="#2F2E2E" />
+											<circle cx="12.9055" cy="13.1444" r="11.6" stroke="#2F2E2E" stroke-width="1.1" />
+										</svg>
+									</span>
+								</li>
+								<li>
+									<span>Lorem Ipsum</span>
+									<span class="tariff__condition-info" data-template="tarr_2_2">
+										<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M11.9528 10.7183H13.1732V19.7596H11.9528V10.7183ZM12.5716 8.74157C12.3195 8.74157 12.1075 8.65563 11.9356 8.48374C11.7637 8.31185 11.6777 8.10558 11.6777 7.86494C11.6777 7.63575 11.7637 7.43522 11.9356 7.26333C12.1075 7.09144 12.3195 7.00549 12.5716 7.00549C12.8237 7.00549 13.0357 7.09144 13.2075 7.26333C13.3794 7.42376 13.4654 7.61856 13.4654 7.84775C13.4654 8.09985 13.3794 8.31185 13.2075 8.48374C13.0357 8.65563 12.8237 8.74157 12.5716 8.74157Z" fill="#2F2E2E" />
+											<circle cx="12.9055" cy="13.1444" r="11.6" stroke="#2F2E2E" stroke-width="1.1" />
+										</svg>
+									</span>
+								</li>
+								<li>
+									<span>Lorem Ipsum</span>
+									<span class="tariff__condition-info" data-template="tarr_2_3">
+										<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M11.9528 10.7183H13.1732V19.7596H11.9528V10.7183ZM12.5716 8.74157C12.3195 8.74157 12.1075 8.65563 11.9356 8.48374C11.7637 8.31185 11.6777 8.10558 11.6777 7.86494C11.6777 7.63575 11.7637 7.43522 11.9356 7.26333C12.1075 7.09144 12.3195 7.00549 12.5716 7.00549C12.8237 7.00549 13.0357 7.09144 13.2075 7.26333C13.3794 7.42376 13.4654 7.61856 13.4654 7.84775C13.4654 8.09985 13.3794 8.31185 13.2075 8.48374C13.0357 8.65563 12.8237 8.74157 12.5716 8.74157Z" fill="#2F2E2E" />
+											<circle cx="12.9055" cy="13.1444" r="11.6" stroke="#2F2E2E" stroke-width="1.1" />
+										</svg>
+									</span>
+								</li>
+							</ul>
+
+							<a class="btn" href="#">Обрати</a>
+						</div>
+						<div class="tariff">
+							<div class="tariff__name">вільний</div>
+							<div class="tariff__price">₴₴₴ грн</div>
+							<div class="tariff__decription">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</div>
+							<ul>
+								<li>
+									<span>Lorem Ipsum</span>
+									<span class="tariff__condition-info" data-template="tarr_3_1">
+										<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M11.9528 10.7183H13.1732V19.7596H11.9528V10.7183ZM12.5716 8.74157C12.3195 8.74157 12.1075 8.65563 11.9356 8.48374C11.7637 8.31185 11.6777 8.10558 11.6777 7.86494C11.6777 7.63575 11.7637 7.43522 11.9356 7.26333C12.1075 7.09144 12.3195 7.00549 12.5716 7.00549C12.8237 7.00549 13.0357 7.09144 13.2075 7.26333C13.3794 7.42376 13.4654 7.61856 13.4654 7.84775C13.4654 8.09985 13.3794 8.31185 13.2075 8.48374C13.0357 8.65563 12.8237 8.74157 12.5716 8.74157Z" fill="#2F2E2E" />
+											<circle cx="12.9055" cy="13.1444" r="11.6" stroke="#2F2E2E" stroke-width="1.1" />
+										</svg>
+									</span>
+								</li>
+								<li>
+									<span>Lorem Ipsum</span>
+									<span class="tariff__condition-info" data-template="tarr_3_2">
+										<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M11.9528 10.7183H13.1732V19.7596H11.9528V10.7183ZM12.5716 8.74157C12.3195 8.74157 12.1075 8.65563 11.9356 8.48374C11.7637 8.31185 11.6777 8.10558 11.6777 7.86494C11.6777 7.63575 11.7637 7.43522 11.9356 7.26333C12.1075 7.09144 12.3195 7.00549 12.5716 7.00549C12.8237 7.00549 13.0357 7.09144 13.2075 7.26333C13.3794 7.42376 13.4654 7.61856 13.4654 7.84775C13.4654 8.09985 13.3794 8.31185 13.2075 8.48374C13.0357 8.65563 12.8237 8.74157 12.5716 8.74157Z" fill="#2F2E2E" />
+											<circle cx="12.9055" cy="13.1444" r="11.6" stroke="#2F2E2E" stroke-width="1.1" />
+										</svg>
+									</span>
+								</li>
+								<li>
+									<span>Lorem Ipsum</span>
+									<span class="tariff__condition-info" data-template="tarr_3_3">
+										<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M11.9528 10.7183H13.1732V19.7596H11.9528V10.7183ZM12.5716 8.74157C12.3195 8.74157 12.1075 8.65563 11.9356 8.48374C11.7637 8.31185 11.6777 8.10558 11.6777 7.86494C11.6777 7.63575 11.7637 7.43522 11.9356 7.26333C12.1075 7.09144 12.3195 7.00549 12.5716 7.00549C12.8237 7.00549 13.0357 7.09144 13.2075 7.26333C13.3794 7.42376 13.4654 7.61856 13.4654 7.84775C13.4654 8.09985 13.3794 8.31185 13.2075 8.48374C13.0357 8.65563 12.8237 8.74157 12.5716 8.74157Z" fill="#2F2E2E" />
+											<circle cx="12.9055" cy="13.1444" r="11.6" stroke="#2F2E2E" stroke-width="1.1" />
+										</svg>
+									</span>
+								</li>
+							</ul>
+
+							<a class="btn" href="#">Обрати</a>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+
+		<!-- Footer================================================== -->
+		<div id="footer" class="dark">
+			<!-- 960 Container -->
+			<div class="container">
+				<div class="four div1 columns">
+					<div id="text-6" class="widget footer-widget widget_text">
+						<div class="textwidget">
+							<p>
+								<img class="alignnone size-medium wp-image-266" src="https://gtd.com.ua/wp-content/uploads/2018/03/VS-Group_white.png" alt="" width="350" /><br />
+								<a style="color: transparent !important" href="http://china24-7.com/">Пополнение WeChat, Alipay в Украине? Оплата другом.</a>
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="four div2 columns">
+					<div id="nav_menu-2" class="widget footer-widget widget_nav_menu">
+						<h3>Цiкавi матерiали</h3>
+						<div class="menu-menu-footer-container">
+							<ul id="menu-menu-footer" class="menu">
+								<li id="menu-item-139" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-139"><a href="https://gtd.com.ua/gtd-q/">GTD-Q® Самооцінювання</a></li>
+								<li id="menu-item-173" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-173"><a href="https://gettingthingsdone.com/podcasts/">GTD Подкаст</a></li>
+								<li id="menu-item-185" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-185"><a href="https://gtd.com.ua/blog/">GTD Блог</a></li>
+							</ul>
+						</div>
+					</div>
+					<a href="https://gtd.com.ua/wp-content/uploads/2019/09/gtd_report_-_25.09.pdf" class="research-btn">Результати дослідження</a>
+				</div>
+
+				<div class="four div3 columns">
+					<div id="text-7" class="widget footer-widget widget_text">
+						<h3>КОНТАКТИ</h3>
+						<div class="textwidget">
+							<p style="margin-top: 5px; font-size: 16px; line-height: 22px">БЦ Сенатор, вул. Московська 32/2,</p>
+							<p style="margin-top: 5px; font-size: 16px; line-height: 22px">Київ, Україна</p>
+							<p style="margin-top: 5px; font-size: 16px; line-height: 22px"><a href="tel:+380443344909" rel="nofollow noopener">044 334 4909</a></p>
+							<p style="margin-top: 5px; font-size: 16px; line-height: 22px">
+								<a href="/cdn-cgi/l/email-protection#bbcfc9dad2d5d2d5dcfbdccfdf95d8d4d695ceda" target="_blank" rel="nofollow noopener"><span class="__cf_email__" data-cfemail="4a3e382b232423242d0a2d3e2e64292527643f2b">[email&#160;protected]</span></a>
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="four div4 columns">
+					<div id="custom_html-2" class="widget_text widget footer-widget widget_custom_html">
+						<h3>GTD Новини</h3>
+						<div class="textwidget custom-html-widget"><a href="https://gtd.com.ua/kontakty/" class="subscribe-modal">Слідкувати</a></div>
+					</div>
+				</div>
+			</div>
+			<!-- Container / End -->
+		</div>
+		<!-- Footer / End -->
+
+		<!-- Footer Bottom / Start -->
+		<div id="footer-bottom" class="dark">
+			<!-- Container -->
+			<div class="container">
+				<div class="eight columns">© 2018 David Allen Company. All Rights Reserved | <a href="/terms-and-conditions/">Terms & Conditions</a> | <a href="/privacy-policy/"> Privacy Policy </a> | <a href="/wp-content/themes/astrum-theme/uploads/Public-offer.pdf" target="_blank"> Public Offer </a> <br />ТОВ "ВС-Груп" є сертифікованим міжнародним партнером David Allen Company. Ми є єдиною сертифікованої організацією, що має право проводити ліцензійні тренінги по GTD® на території України.</div>
+				<div class="eight columns">
+					<ul class="social-icons-footer">
+						<li>
+							<a class="tooltip top" title="hfurhfur" href="https://www.instagram.com/gtd_ua/"><i class="icon-instagram"></i></a>
+						</li>
+						<li>
+							<a class="tooltip top" title="" href=""><i class="icon-twitter"></i></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- Container / End -->
+		</div>
+		<!-- Footer Bottom / Start -->
+
+		<!-- tooltip template -->
+		<div style="display: none">
+			<div id="tarr_1_1">Tariff 1, <span style="color: red; font-weight: 700">Condition 1</span> → Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</div>
+			<div id="tarr_1_2">Tariff 1, Condition 2 → ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</div>
+			<div id="tarr_1_3">Tariff 1, Condition 3 → ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</div>
+			<div id="tarr_2_1">Tariff 2, Condition 1 → ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</div>
+			<div id="tarr_2_2">Tariff 2, Condition 2 → ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</div>
+			<div id="tarr_2_3">Tariff 2, Condition 3 → ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</div>
+			<div id="tarr_3_1">Вільний, Condition 1 → Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</div>
+			<div id="tarr_3_2">Вільний, Condition 2 → Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</div>
+			<div id="tarr_3_3">Вільний, Condition 3 → Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</div>
+		</div>
+
+		<!-- modals -->
+		<div class="modal mfp-hide" id="modal-login">
+			<div class="modal__wrapper">
+				<div class="modal__content">
+					<button class="modal__close">
+						<svg fill="none" stroke="#2f2e2e" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+							<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+						</svg>
+					</button>
+					<form action="">
+						<div class="form__group error">
+							<input type="text" name="login" class="form__input" placeholder="Логін" value="skdlf" />
+						</div>
+						<div class="form__group">
+							<input type="password" name="password" class="form__input" placeholder="Пароль" />
+						</div>
+
+						<label class="checkbox">
+							<input type="checkbox" class="checkbox__input" name="remember" />
+							<span class="checkbox__box"></span>
+							<span class="checkbox__text">Запам'ятати</span>
+						</label>
+
+						<div class="form__error">Такий логін або пароль не існує, перевірте введені дані або скористайтеся <a href="#">відновленням пароля</a>...</div>
+						<button class="btn" type="submit" aria-label="submit" title="Увійти">Увійти</button>
+					</form>
+					<div class="forgot-password">Забули пароль? <a href="#">Відновити</a></div>
+				</div>
+			</div>
+		</div>
+
+		
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js?ver=3.6.0"></script>
+		<script type="text/javascript" src="https://gtd.com.ua/wp-content/plugins/gtdq-plugin/js/jquery-ui.min.js?ver=1.11.4"></script>
+
+		<script src="https://unpkg.com/@popperjs/core@2"></script>
+		<script src="https://unpkg.com/tippy.js@6"></script>
+
+		<script src="js/jquery.magnific-popup.min.js"></script>
+
+
+		<script>
+			const tariffConditions = document.querySelectorAll(".tariff__condition-info");
+			tariffConditions.forEach((item) => {
+				tippy(item, {
+					content(reference) {
+						const id = reference.getAttribute("data-template");
+						const template = document.getElementById(id);
+						return template.innerHTML;
+					},
+					allowHTML: true,
+				});
+			});
+
+
+			$(function () {
+				$(document).on("click", ".modal__close", function (e) {
+					e.preventDefault();
+					$.magnificPopup.close();
+				});
+			});
+
+			$("[data-modal]").click(function (e) {
+				e.preventDefault();
+				let modalSource = $(this).attr("href");
+				console.log(modalSource);
+				$.magnificPopup.open({
+					items: {
+						src: modalSource,
+					},
+					type: "inline",
+				});
+			});
+		</script>
+	</body>
+</html>

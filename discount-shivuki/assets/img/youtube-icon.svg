@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="34px" height="29px" viewBox="0 0 34 29" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>B377E601-321A-445B-A2BB-D132A5E9C8F8</title>
+    <defs>
+        <filter x="-26.2%" y="-26.2%" width="152.5%" height="152.5%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.211764706   0 0 0 0 0.239215686   0 0 0 0 0.31372549  0 0 0 0.231568663 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Design-system" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="footer" transform="translate(-243.000000, -619.000000)" fill-rule="nonzero">
+            <g id="footer-desktop-1920" transform="translate(0.000000, 443.000000)">
+                <g id="Group-5" transform="translate(180.000000, 90.000000)">
+                    <g id="Group-18" transform="translate(0.000000, 80.000000)">
+                        <g id="Group-14" filter="url(#filter-1)" transform="translate(60.000000, 0.000000)">
+                            <g id="youtube-(1)" transform="translate(11.000000, 14.000000)">
+                                <path d="M17.6292114,1.9720459 C17.4217071,1.20094298 16.8137512,0.593124398 16.0427856,0.385482797 C14.6342011,0 8.99986268,0 8.99986268,0 C8.99986268,0 3.36566162,0 1.95707704,0.370788574 C1.20094298,0.578292855 0.5781555,1.2010803 0.370651254,1.9720459 C0,3.38049316 0,6.30148317 0,6.30148317 C0,6.30148317 0,9.23716737 0.370651254,10.6309204 C0.578292855,11.401886 1.18611144,12.0098419 1.95721436,12.2174835 C3.38049316,12.6029663 9,12.6029663 9,12.6029663 C9,12.6029663 14.6342011,12.6029663 16.0427856,12.2321777 C16.8138886,12.0246735 17.4217071,11.4167175 17.6293487,10.645752 C18.0000757,9.23716737 18.0000757,6.31631468 18.0000757,6.31631468 C18.0000757,6.31631468 18.0148315,3.38049316 17.6292114,1.9720459 Z" id="Path" fill="#FFFFFF"></path>
+                                <polygon id="Path" fill="#65768C" points="7.20593262 9 11.8911896 6.30148317 7.20593262 3.60296631"></polygon>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

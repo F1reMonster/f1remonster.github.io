@@ -1,0 +1,55 @@
+.anchors-v2 {
+  padding: 2.8125em 0 1.5625em;
+}
+.anchors-v2__list {
+  max-width: 37.5em;
+  min-height: 3.125em;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.anchors-v2__list-item {
+  position: relative;
+  font: 1em/1.5 "rubik-reg", sans-serif;
+}
+.anchors-v2__list-item::after {
+  content: "";
+  position: absolute;
+  bottom: -0.625em;
+  inset-inline-end: 50%;
+  height: 0.25em;
+  width: 2.5em;
+  transform: translateX(-46%) scaleX(0);
+  transition: transform 0.2s;
+  background-color: #00a661;
+  border-radius: 2px;
+  opacity: 0;
+}
+@media (max-width: 767px) {
+  .anchors-v2__list-item::after {
+    bottom: -0.4375em;
+  }
+}
+.anchors-v2__list-item.selected::after, .anchors-v2__list-item:hover::after, .anchors-v2__list-item:focus-within::after {
+  transform: translateX(-46%) scaleX(1);
+  opacity: 1;
+}
+html[dir=ltr] .anchors-v2__list-item.selected::after, html[dir=ltr] .anchors-v2__list-item:hover::after, html[dir=ltr] .anchors-v2__list-item:focus-within::after {
+  transform: translateX(46%) scaleX(1);
+}
+
+.anchors-v2__list-item.selected a, .anchors-v2__list-item:hover a, .anchors-v2__list-item:focus-within a {
+  text-shadow: 0 0 0.1px #000;
+}
+.anchors-v2__list-item a {
+  color: #000;
+  text-decoration: none;
+  transition: all 0.2s ease-out;
+}
+.anchors-v2 .swiper {
+  overflow: visible;
+}
+.anchors-v2 .swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

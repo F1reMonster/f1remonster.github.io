@@ -1,0 +1,53 @@
+.nav-bottom {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 1000;
+	background-color: rgba(245, 245, 245, 0.97);
+	padding: rem(10) 0;
+
+	ul {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: rem(16);
+		li {
+			// flex-grow: 1;
+			// display: flex;
+			// justify-content: center;
+			a,
+			button {
+				display: flex;
+				flex-flow: column;
+				align-items: center;
+				justify-content: start;
+				width: fit-content;
+				text-align: center;
+
+				font-weight: 500;
+				gap: rem(4);
+				color: var(--gray);
+
+				@include hover-supported {
+					color: var(--dodger-blue);
+				}
+			}
+
+			&.active {
+				a,
+				button {
+					color: var(--dodger-blue);
+				}
+			}
+		}
+	}
+
+	&.fix {
+		padding-right: rem(16);
+
+		@media (max-width: em(1023)) {
+			padding-right: 0;
+		}
+	}
+}

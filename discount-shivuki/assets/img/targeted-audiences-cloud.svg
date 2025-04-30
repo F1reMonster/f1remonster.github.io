@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="382px" height="341px" viewBox="0 0 382 341" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>0D763460-859C-4F6A-98CC-ADBE73CB7DE1</title>
+    <defs>
+        <linearGradient x1="21.7619243%" y1="61.6952606%" x2="120.106908%" y2="20.3741166%" id="linearGradient-1">
+            <stop stop-color="#8FE600" offset="0%"></stop>
+            <stop stop-color="#2FC059" offset="47.8119537%"></stop>
+            <stop stop-color="#218370" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="ui" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" fill-opacity="0.2">
+        <g id="Desktop-1920_DISCOUNT_lobby-page---Credit-Card" transform="translate(0.000000, -2712.000000)" fill="url(#linearGradient-1)">
+            <path d="M158,2712 C216.326807,2712 264.852659,2755.19708 275.034522,2812.20869 C283.043937,2809.47725 291.605579,2808 300.5,2808 C345.511207,2808 382,2845.83194 382,2892.5 C382,2939.16806 345.511207,2977 300.5,2977 C289.843293,2977 279.664299,2974.87938 270.334163,2971.02294 C254.085483,3018.76259 209.926793,3053 158,3053 C106.683071,3053 62.9528486,3019.56208 46.2484939,2972.69714 C38.1557704,2975.48809 29.4981797,2977 20.5,2977 C-24.5112071,2977 -61,2939.16806 -61,2892.5 C-61,2845.83194 -24.5112071,2808 20.5,2808 C27.6647336,2808 34.6135329,2808.95856 41.2336071,2810.75872 C51.9722334,2754.46651 100.168518,2712 158,2712 Z" id="Combined-Shape-Copy"></path>
+        </g>
+    </g>
+</svg>

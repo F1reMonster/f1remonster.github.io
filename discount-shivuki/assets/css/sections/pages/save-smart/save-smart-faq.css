@@ -1,0 +1,12 @@
+.smart-save-wrap .faq-cloud {
+  display: none;
+}
+.smart-save-wrap .faq {
+  padding-bottom: 8.125em;
+  padding-top: 3.125em;
+}
+@media screen and (max-width: 767px) {
+  .smart-save-wrap .faq {
+    padding: 2.1875em 0 3.375em;
+  }
+}

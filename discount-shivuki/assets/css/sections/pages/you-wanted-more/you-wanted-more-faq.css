@@ -1,0 +1,11 @@
+.you-wanted-more-wrap .faq-cloud {
+  display: none;
+}
+.you-wanted-more-wrap .faq {
+  padding: 3.125em 0 3.125em;
+}
+@media screen and (max-width: 767px) {
+  .you-wanted-more-wrap .faq {
+    padding: 1.6875em 0 1.875em;
+  }
+}

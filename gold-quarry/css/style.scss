@@ -1,0 +1,272 @@
+@import "_style";
+
+header {
+	&.video-page {
+		background: rgba(87, 42, 5);
+	}
+}
+
+.btn {
+	&-arrow-prev {
+		display: inline-flex;
+		align-items: center;
+		padding: 0;
+		font-weight: 500;
+		font-size: 14px;
+		color: #fff;
+		gap: 10px;
+
+		svg {
+			transition: all 0.2s ease-out;
+		}
+
+		&:active,
+		&:focus {
+			box-shadow: none;
+		}
+
+		&:hover {
+			color: #fff;
+			svg {
+				transform: translateX(-5px);
+			}
+		}
+	}
+}
+
+.pagination {
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	margin-bottom: 60px;
+
+	span {
+		margin: 0 7px;
+	}
+
+	a {
+		margin: 0 7px;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 18px;
+		line-height: 40px;
+		text-align: center;
+		color: #666666;
+		background: #ffffff;
+		border: 1px solid transparent;
+		border-radius: 4px;
+		box-sizing: border-box;
+		width: 40px;
+		height: 40px;
+		display: block;
+
+		&:hover {
+			border: 1px solid #791e43;
+		}
+
+		&.active {
+			background: #791e43;
+			color: #fff;
+		}
+	}
+}
+.proj-header {
+	video {
+		width: 100%;
+
+		object-fit: cover;
+		vertical-align: middle;
+
+		@media (min-width: 992px) {
+			height: 100%;
+		}
+	}
+}
+
+.block {
+	&__title {
+		font-weight: 700;
+		font-size: 50px;
+		color: #fff;
+
+		@media (max-width: 992px) {
+			font-size: 36px;
+		}
+	}
+
+	&__video {
+		margin-top: 130px;
+		@media (max-width: 992px) {
+			margin-top: 59px;
+		}
+
+		&-header {
+			.container {
+				@media (max-width: 992px) {
+					padding-left: 0;
+					padding-right: 0;
+					max-width: 100%;
+				}
+			}
+		}
+
+		&-head {
+			position: relative;
+			display: flex;
+			flex-flow: column;
+			align-items: center;
+			justify-content: center;
+			gap: 50px;
+			padding: 25px;
+			width: 100%;
+			height: 350px;
+			background-image: url("../img/video/video-header.jpg");
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+
+			.btn-arrow-prev {
+				position: absolute;
+				top: 25px;
+				left: 25px;
+
+				@media (max-width: 992px) {
+					left: 16px;
+				}
+			}
+
+			@media (max-width: 992px) {
+				height: 250px;
+				padding: 25px 16px;
+				gap: 32px;
+			}
+		}
+
+		&-head-links {
+			display: flex;
+			flex-flow: wrap;
+			gap: 80px;
+
+			a {
+				overflow: hidden;
+				display: inline-flex;
+				position: relative;
+				font-weight: 500;
+				font-size: 18px;
+				color: #fff;
+				transition: all 0.2s ease-out;
+
+				&::before {
+					content: "";
+					position: absolute;
+					bottom: 0;
+					left: 0;
+					width: 100%;
+					height: 1px;
+					background-color: #fff;
+					transition: all 0.2s ease-out;
+				}
+
+				&:hover {
+					&::before {
+						transform: translateX(100%);
+					}
+				}
+			}
+
+			@media (max-width: 992px) {
+				gap: 56px;
+			}
+		}
+
+		&-list {
+			margin-top: 60px;
+		}
+
+		&-item {
+			padding: 25px;
+			border: 1px solid #e6e6e6;
+			border-radius: 16px;
+			margin-bottom: 50px;
+
+			h3 {
+				margin-bottom: 15px;
+				font-weight: 700;
+				font-size: 30px;
+				color: #1a1a1a;
+
+				@media (max-width: 992px) {
+					margin-top: 24px;
+					margin-bottom: 12px;
+				}
+			}
+
+			p {
+				font-size: 16px;
+				line-height: 150%;
+				color: #333333;
+			}
+
+			iframe {
+				width: 100%;
+				height: 100%;
+				min-height: 280px;
+
+				@media (max-width: 567px) {
+					min-height: 180px;
+				}
+			}
+
+			@media (max-width: 992px) {
+				margin-bottom: 32px;
+				padding: 16px;
+			}
+		}
+	}
+
+	&__metals {
+		.row {
+			margin-bottom: 60px;
+
+			&:nth-child(even) {
+				@media (min-width: 768px) {
+					flex-flow: row-reverse;
+				}
+			}
+
+			&:first-child {
+				padding-top: 60px;
+			}
+		}
+
+		.item {
+			margin-bottom: 30px;
+
+			h4 {
+				font-style: normal;
+				font-weight: bold;
+				font-size: 24px;
+				line-height: 30px;
+				color: #333333;
+				margin-bottom: 20px;
+			}
+
+			p {
+				font-size: 16px;
+				line-height: 150%;
+			}
+
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: contain;
+			}
+
+			@media (min-width: 768px) {
+				&:first-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+}

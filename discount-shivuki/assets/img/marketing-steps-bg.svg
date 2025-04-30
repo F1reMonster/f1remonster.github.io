@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1920px" height="646px" viewBox="0 0 1920 646" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>D1C8ABB5-7762-48E3-937E-759D524E1097</title>
+    <defs>
+        <linearGradient x1="-2.8467895%" y1="22.0701966%" x2="191.711901%" y2="22.0701966%" id="linearGradient-1">
+            <stop stop-color="#8FE600" offset="0%"></stop>
+            <stop stop-color="#2FC059" offset="47.8119537%"></stop>
+            <stop stop-color="#218370" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Concept" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" fill-opacity="0.1">
+        <g id="Desktop-1920_DISCOUNT---Marketing-pages---Side-feature" transform="translate(0.000000, -941.000000)" fill="url(#linearGradient-1)">
+            <g id="Group-38" transform="translate(0.000000, 941.093750)">
+                <path d="M0,83.90625 C321.145833,27.96875 610.4375,0 867.875,0 C1125.3125,0 1496.64583,27.96875 1981.875,83.90625 L2152.42188,490.90625 C1967.03993,594 1723.85764,645.546875 1422.875,645.546875 C1121.89236,645.546875 647.600694,604.03125 0,521 L0,83.90625 Z" id="Rectangle"></path>
+            </g>
+        </g>
+    </g>
+</svg>

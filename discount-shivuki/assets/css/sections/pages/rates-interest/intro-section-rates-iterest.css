@@ -1,0 +1,9 @@
+.intro-section--rates-interest .img-part img {
+  position: relative;
+  left: 6.625em;
+}
+@media (max-width: 1023px) {
+  .intro-section--rates-interest .img-part img {
+    left: 0;
+  }
+}

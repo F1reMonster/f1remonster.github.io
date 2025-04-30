@@ -1,0 +1,734 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Inconsolata:wght@200..900&display=swap" rel="stylesheet" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+		<script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.10.3/cdn.min.js" defer></script>
+		<script src="https://cdn.tailwindcss.com"></script>
+		<script>
+			tailwind.config = {
+				theme: {
+					extend: {
+						fontFamily: {
+							cutive: ["Cutive Mono", "monospace"],
+							inconsolata: ["Inconsolata", "monospace"],
+						},
+					},
+				},
+			};
+		</script>
+		<style></style>
+		<title>AeroPress Recipes - over 300 AeroPress recipes - AeroPrecipe</title>
+	</head>
+	<body class="font-cutive" x-data="{ isModalOpen: null }">
+		<div class="bg-white text-black">
+			<div class="flex w-full flex-col">
+				<header class="sm:px-5 lg:px-12 z-30 border-b border-gray-300 bg-white px-3 py-4">
+					<div class="flex w-full items-center justify-between">
+						<a class="font-inconsolata text-lg font-bold" title="AeroPrecipe - a home for AeroPress Recipes" aria-label="AeroPrecipe" href="/">AeroPrecipe.</a>
+
+						<nav x-data="{open: false}" class="lg:gap-x-5 font-inconsolata relative flex items-center gap-x-4 text-base font-bold">
+							<button class="lg:block hidden">Feeling Lucky?</button>
+
+							<a class="lg:block hidden" href="/activity">Activity</a>
+
+							<button class="lg:block hidden">Share Your Recipe</button>
+
+							<div class="lg:gap-x-5 lg:pl-5 lg:border-l relative flex items-center gap-x-4 border-gray-300">
+								<a class="lg:block hidden" href="#">Sign in</a>
+
+								<a class="md:px-3 md:py-1.5 md:text-base cursor-pointer items-center justify-between gap-3 rounded border-2 border-black bg-black px-2 py-1.5 text-xs text-white transition hover:border-black/80 hover:bg-black/80 hover:text-white hover:ring-black/30 focus:ring-2 focus:ring-black/40 active:ring-2 active:ring-black/50 disabled:cursor-not-allowed disabled:opacity-50" aria-label="Join AeroPrecipe" href="/join"><span class="">Sign up</span></a>
+
+								<button class="flex cursor-pointer items-center space-x-1" aria-label="Search" @click="isModalOpen = 'modalSearch'; isModalOpen ? document.body.classList.add('overflow-hidden', 'max-h-screen') : ''">
+									<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 256 256">
+										<path d="M232.49,215.51,185,168a92.12,92.12,0,1,0-17,17l47.53,47.54a12,12,0,0,0,17-17ZM44,112a68,68,0,1,1,68,68A68.07,68.07,0,0,1,44,112Z"></path>
+									</svg>
+								</button>
+
+								<div class="relative flex items-center">
+									<button @click="open = !open" class="focus:outline-none" type="button">
+										<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 256 256">
+											<path d="M144,128a16,16,0,1,1-16-16A16,16,0,0,1,144,128ZM60,112a16,16,0,1,0,16,16A16,16,0,0,0,60,112Zm136,0a16,16,0,1,0,16,16A16,16,0,0,0,196,112Z"></path>
+										</svg>
+									</button>
+								</div>
+							</div>
+
+							<div x-show="open" x-transition x-cloak :class="open ? '!visible' : ''" class="invisible absolute right-0 top-full z-30 mt-4 flex min-w-[230px] flex-col rounded-md border border-slate-100 bg-white shadow-lg shadow-gray-300/40">
+								<ul class="lg:hidden p-2 text-base">
+									<li>
+										<button class="block border-b border-gray-300 px-5 py-1.5 last:border-b-0 hover:bg-yellow-100/50 hover:text-gray-900">I'm feeling Lucky</button>
+									</li>
+									<li>
+										<a class="block border-b border-gray-300 px-5 py-1.5 last:border-b-0 hover:bg-yellow-100/50 hover:text-gray-900" href="#">Activity</a>
+									</li>
+									<li>
+										<button class="block border-b border-gray-300 px-5 py-1.5 last:border-b-0 hover:bg-yellow-100/50 hover:text-gray-900">Share Your Recipe</button>
+									</li>
+									<li>
+										<a class="block border-b border-gray-300 px-5 py-1.5 last:border-b-0 hover:bg-yellow-100/50 hover:text-gray-900" href="#">Sign In</a>
+									</li>
+								</ul>
+								<ul class="md:pt-2 lg:border-t-0 lg:text-base border-t border-gray-300 p-2 pt-0 text-sm text-black">
+									<li><a class="block px-5 py-1.5 hover:bg-yellow-100/50 hover:text-gray-900" target="_self" href="#">Contact</a></li>
+									<li><a class="block px-5 py-1.5 hover:bg-yellow-100/50 hover:text-gray-900" target="_blank" href="#">Instagram</a></li>
+									<li><a class="block px-5 py-1.5 hover:bg-yellow-100/50 hover:text-gray-900" target="_blank" href="#">Facebook</a></li>
+									<li><a class="block px-5 py-1.5 hover:bg-yellow-100/50 hover:text-gray-900" target="_blank" href="#">Twitter</a></li>
+									<li><a class="block px-5 py-1.5 hover:bg-yellow-100/50 hover:text-gray-900" target="_blank" href="#">Youtube</a></li>
+								</ul>
+							</div>
+						</nav>
+					</div>
+				</header>
+
+				<main class="pb-20">
+					<div>
+						<div class="block h-5 w-full"></div>
+						<div class="lg:h-56 sm:px-5 lg:px-12 relative h-40 w-full px-3">
+							<div class="sm:block sm:right-5 lg:right-12 lg:w-32 pointer-events-none absolute right-3 top-0 z-10 hidden h-full w-10 bg-gradient-to-l from-yellow-50"></div>
+							<div class="lg:flex sm:right-5 lg:right-12 button-next absolute right-3 top-1/2 z-20 hidden h-10 w-10 -translate-y-1/2 transform cursor-pointer items-center justify-center rounded-full bg-black text-white opacity-100 transition">
+								<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 256 256"><path d="M184.49,136.49l-80,80a12,12,0,0,1-17-17L159,128,87.51,56.49a12,12,0,1,1,17-17l80,80A12,12,0,0,1,184.49,136.49Z"></path></svg>
+							</div>
+							<div class="swiper lg:h-56 z-0 h-40">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide lg:h-56 h-40 w-full max-w-xl">
+										<a class="lg:pl-10 relative mr-5 flex h-full w-full flex-col items-start justify-center overflow-hidden rounded-lg bg-yellow-100 bg-opacity-50 pl-5" href="#">
+											<h4 class="lg:text-2xl font-inconsolata relative z-10 text-xl font-bold">Fast and furious</h4>
+											<p class="lg:pr-48 lg:text-base relative z-10 mt-2 pr-36 text-sm leading-5 text-black">In a rush? These recipes under 1:30 will help you get to where you're going, quicker.</p>
+											<div class="pointer-events-none absolute right-0 z-0 h-full w-full bg-no-repeat">
+												<div class="lg:w-20 lg:right-12 absolute right-10 top-1/2 w-14 -translate-y-1/2">
+													<img src="https://api.aeroprecipe.com:443/media/2021/01/25/fast.svg" alt="" class="h-auto w-full" />
+												</div>
+											</div>
+										</a>
+									</div>
+
+									<div class="swiper-slide lg:h-56 h-40 w-full max-w-xl">
+										<a class="lg:pl-10 relative mr-5 flex h-full w-full flex-col items-start justify-center overflow-hidden rounded-lg bg-yellow-100 bg-opacity-50 pl-5" href="#">
+											<h4 class="lg:text-2xl font-inconsolata relative z-10 text-xl font-bold">AeroPress espresso</h4>
+											<p class="lg:pr-48 lg:text-base relative z-10 mt-2 pr-36 text-sm leading-5 text-black">Yeah we know the AeroPress isn't made for espresso BUT these recipes will get you close.</p>
+											<div class="pointer-events-none absolute right-0 z-0 h-full w-full bg-no-repeat">
+												<div class="lg:w-32 lg:right-5 absolute right-0 top-1/2 w-36 -translate-y-1/2">
+													<img src="https://api.aeroprecipe.com:443/media/2021/01/25/espressoul.svg" alt="" class="h-auto w-full" />
+												</div>
+											</div>
+										</a>
+									</div>
+
+									<div class="swiper-slide lg:h-56 h-40 w-full max-w-xl">
+										<a class="lg:pl-10 relative mr-5 flex h-full w-full flex-col items-start justify-center overflow-hidden rounded-lg bg-yellow-100 bg-opacity-50 pl-5" href="#">
+											<h4 class="lg:text-2xl font-inconsolata relative z-10 text-xl font-bold">A dash of milk</h4>
+											<p class="lg:pr-48 lg:text-base relative z-10 mt-2 pr-36 text-sm leading-5 text-black">You put milk in your coffee?! Ok, ok - here's a few AeroPress recipes for milk coffee lovers.</p>
+											<div class="pointer-events-none absolute right-0 z-0 h-full w-full bg-no-repeat">
+												<div class="lg:w-28 lg:right-10 absolute right-5 top-1/2 w-36 -translate-y-1/2">
+													<img src="https://api.aeroprecipe.com:443/media/2021/04/15/a_dash_of_milk.svg" alt="" class="h-auto w-full" />
+												</div>
+											</div>
+										</a>
+									</div>
+
+									<div class="swiper-slide lg:h-56 h-40 w-full max-w-xl">
+										<a class="lg:pl-10 relative mr-5 flex h-full w-full flex-col items-start justify-center overflow-hidden rounded-lg bg-yellow-100 bg-opacity-50 pl-5" href="#">
+											<h4 class="lg:text-2xl font-inconsolata relative z-10 text-xl font-bold">Explore the latest</h4>
+											<p class="lg:pr-48 lg:text-base relative z-10 mt-2 pr-36 text-sm leading-5 text-black">Looking for something new? Explore the latest AeroPress recipes and get inspired!</p>
+											<div class="pointer-events-none absolute right-0 z-0 h-full w-full bg-no-repeat">
+												<div class="lg:w-24 lg:right-8 absolute right-10 top-1/2 w-28 -translate-y-1/2">
+													<img src="https://api.aeroprecipe.com:443/media/2021/04/15/explore_the_latest.svg" alt="" class="h-auto w-full" />
+												</div>
+											</div>
+										</a>
+									</div>
+
+									<div class="swiper-slide lg:h-56 h-40 w-full max-w-xl">
+										<a class="lg:pl-10 relative mr-5 flex h-full w-full flex-col items-start justify-center overflow-hidden rounded-lg bg-yellow-100 bg-opacity-50 pl-5" href="#">
+											<h4 class="lg:text-2xl font-inconsolata relative z-10 text-xl font-bold">Championship Recipes</h4>
+											<p class="lg:pr-48 lg:text-base relative z-10 mt-2 pr-36 text-sm leading-5 text-black">Brew like the best - here's a list of tried and true recipes from AeroPress Champions.</p>
+											<div class="pointer-events-none absolute right-0 z-0 h-full w-full bg-no-repeat">
+												<div class="lg:w-36 lg:right-10 absolute right-5 top-1/2 w-28 -translate-y-1/2">
+													<img src="https://api.aeroprecipe.com:443/media/2022/03/11/WAC.svg" alt="" class="h-auto w-full" />
+												</div>
+											</div>
+										</a>
+									</div>
+
+									<div class="swiper-slide lg:h-56 h-40 w-full max-w-xl">
+										<a class="lg:pl-10 relative mr-5 flex h-full w-full flex-col items-start justify-center overflow-hidden rounded-lg bg-yellow-100 bg-opacity-50 pl-5" href="#">
+											<h4 class="lg:text-2xl font-inconsolata relative z-10 text-xl font-bold">Share with a friend</h4>
+											<p class="lg:pr-48 lg:text-base relative z-10 mt-2 pr-36 text-sm leading-5 text-black">Coffee with friends - or two for you. Here's some recipes to get more coffee from your AeroPress.</p>
+											<div class="pointer-events-none absolute right-0 z-0 h-full w-full bg-no-repeat">
+												<div class="lg:w-36 lg:right-10 absolute right-5 top-1/2 w-28 -translate-y-1/2">
+													<img src="https://api.aeroprecipe.com:443/media/2021/01/25/friends.svg" alt="" class="h-auto w-full" />
+												</div>
+											</div>
+										</a>
+									</div>
+
+									<div class="swiper-slide lg:h-56 h-40 w-full max-w-xl">
+										<a class="lg:pl-10 relative mr-5 flex h-full w-full flex-col items-start justify-center overflow-hidden rounded-lg bg-yellow-100 bg-opacity-50 pl-5" href="#">
+											<h4 class="lg:text-2xl font-inconsolata relative z-10 text-xl font-bold">Low on beans</h4>
+											<p class="lg:pr-48 lg:text-base relative z-10 mt-2 pr-36 text-sm leading-5 text-black">Running low on beans? Don't worry! This collection showcases recipes big on flavour &amp; low on bean count.</p>
+											<div class="pointer-events-none absolute right-0 z-0 h-full w-full bg-no-repeat">
+												<div class="lg:w-20 lg:right-10 absolute right-5 top-1/2 w-14 -translate-y-1/2">
+													<img src="https://api.aeroprecipe.com:443/media/2021/01/25/lowOnBeans.svg" alt="" class="h-auto w-full" />
+												</div>
+											</div>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="block h-5 w-full border-b border-gray-200"></div>
+					</div>
+
+					<div class="w-full flex-1">
+						<div class="relative flex h-full">
+							<div class="sm:px-5 lg:pl-12 lg:pr-12 flex-1 px-3 pb-32">
+								<div class="lg:py-6 md:sticky top-0 z-10 flex items-start justify-between border-gray-200 bg-white/75 py-5 text-sm backdrop-blur">
+									<div class="lg:pt-1.5 flex flex-wrap items-start">
+										<h1 class="mr-4">AeroPress<sup>®</sup> recipes!</h1>
+										<div>Viewing: <span class="text-black">all recipes (300+)</span></div>
+									</div>
+									<div class="lg:flex hidden flex-shrink-0 items-center">
+										<span class="font-inconsolata mr-2 font-bold">Sort by:</span>
+										<label class="absolute hidden h-0 w-0 opacity-0" for="headerSort"></label>
+										<select class="recipeSort w-36 rounded border border-gray-400 p-0 py-1 pl-2 pr-0 text-sm focus:border-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-300">
+											<option value="votes" selected="">Most Votes</option>
+											<option value="votesDown">Least Votes</option>
+											<option value="date">Newest</option>
+											<option value="dateDown">Oldest</option>
+											<option value="title">Name A-Z</option>
+											<option value="titleDown">Name Z-A</option>
+											<option value="random">Shuffle</option>
+										</select>
+									</div>
+								</div>
+
+								<!-- grid recipes -->
+								<div class="lg:gap-10 sm:grid-cols-2 xl:grid-cols-3 grid gap-5">
+									<a class="flex flex-col border-t border-gray-200 pt-2 text-sm transition duration-200 hover:border-black" href="#">
+										<div class="flex w-full items-center justify-between">
+											<span class="flex flex-1 flex-shrink-0 items-center gap-2 bg-left bg-no-repeat text-gray-600">
+												<span class="h-4 w-4">
+													<img class="h-full w-full object-contain object-center" src="https://api.aeroprecipe.com:443/media/2019/05/31/noun_Tamper_1638547.svg" alt="" />
+												</span>
+												<span>From a Barista</span>
+											</span>
+											<div class="flex items-center">
+												<svg viewBox="0 0 92 92" class="mr-2 h-3 w-3">
+													<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+														<g id="np_play_943870_333333" fill="#333333" fill-rule="nonzero">
+															<path d="M46,0.5 C20.801,0.5 0.5,20.801 0.5,46 C0.5,71.199 20.801,91.5 46,91.5 C71.199,91.5 91.5,71.199 91.5,46 C91.5,20.801 71.199,0.5 46,0.5 Z M66.801,49.301 L36.5,67 C35.89844,67.39844 35.1992,67.5 34.6016,67.5 C34.00004,67.5 33.3008,67.39844 32.7032,67 C31.6016,66.39844 30.8048,65.1016 30.8048,63.6992 L30.800893,28.3012 C30.800893,26.9028 31.601673,25.602 32.699293,25.0004 C33.800893,24.39884 35.398493,24.39884 36.500093,25.0004 L66.898093,42.6994 C67.999693,43.30096 68.698893,44.5978 68.698893,46.0002 C68.698893,47.3986 67.898113,48.6994 66.800493,49.301 L66.801,49.301 Z" id="Shape"></path>
+														</g>
+													</g>
+												</svg>
+												<span title="Click to upvote" class="flex items-center text-gray-500 transition-colors duration-200">
+													<svg class="mr-1 h-3 w-3" viewBox="0 0 98 88">
+														<g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+															<g id="np_like_1555605_333333" fill="currentColor">
+																<path d="M19.277,35.727 L3.011,35.727 C1.4915,35.727 0.3001,36.9184 0.3001,38.4379 L0.3001,81.8089 C0.3001,83.3284 1.4915,84.5198 3.011,84.5198 L19.277,84.5198 C20.7965,84.5198 21.9879,83.3284 21.9879,81.8089 L21.983994,38.4379 C21.9879,36.9184 20.796494,35.727 19.276994,35.727 L19.277,35.727 Z" id="Path"></path>
+																<path
+																	d="M97.699,40.863 C97.699,36.445 94.6678,31.9763 88.8748,31.9763 L62.6128,31.9763 C66.3628,25.2654 67.4683,15.8283 64.8589,8.9213 C62.9448,3.8432 59.2808,0.8783 54.5469,0.5775 L54.468775,0.569687 C51.386775,0.382187 48.718775,2.690787 48.460975,5.768887 C47.785195,12.620487 44.785175,24.733887 40.484375,29.034887 C36.863275,32.655987 33.761675,34.175487 28.625375,36.687187 C27.883185,37.050467 27.070675,37.448907 26.211275,37.874687 C26.226899,38.062187 26.234712,38.245777 26.234712,38.437187 L26.234712,81.367187 C26.855802,81.578127 27.469112,81.789057 28.070612,81.996097 C36.551112,84.917997 43.882612,87.441397 55.086612,87.441397 L76.316612,87.441397 C82.109612,87.441397 85.140812,82.968697 85.140812,78.554697 C85.140812,77.242197 84.875192,75.929697 84.347842,74.726597 C86.277542,74.378937 87.965042,73.453197 89.218942,72.031297 C90.640842,70.417997 91.422042,68.273497 91.422042,65.992197 C91.422042,64.687497 91.156422,63.371097 90.632982,62.171897 C95.285282,61.367207 97.707182,57.374997 97.707182,53.429697 C97.707182,51.140597 96.890772,48.835897 95.300982,47.148497 C96.882982,45.457097 97.699382,43.152397 97.699382,40.863297 L97.699,40.863 Z"
+																	id="Path"
+																></path>
+															</g>
+														</g>
+													</svg>
+													<span>995</span>
+												</span>
+											</div>
+										</div>
+										<h4 class="font-inconsolata mt-2 text-balance text-lg font-bold leading-tight">James Hoffmann's Ultimate AeroPress Recipe</h4>
+										<p class="mt-2 text-base leading-5 text-black">James Hoffmann's Ultimate AeroPress Recipe</p>
+									</a>
+
+									<a class="flex-col border-t border-gray-200 pt-2 text-sm transition duration-200 hover:border-black" href="">
+										<div class="flex w-full items-center justify-between">
+											<span class="flex flex-1 flex-shrink-0 items-center gap-2 bg-left bg-no-repeat text-gray-600">
+												<span class="h-4 w-4">
+													<img class="h-full w-full object-contain object-center" src="https://api.aeroprecipe.com:443/media/2019/01/30/icon_enthusiast-1545200216737.svg" alt="" />
+												</span>
+												<span> From an Enthusiast </span>
+											</span>
+											<div class="flex items-center">
+												<svg width="92px" height="92px" viewBox="0 0 92 92" class="mr-2 h-3 w-3">
+													<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+														<g id="np_play_943870_333333" fill="#333333" fill-rule="nonzero"><path d="M46,0.5 C20.801,0.5 0.5,20.801 0.5,46 C0.5,71.199 20.801,91.5 46,91.5 C71.199,91.5 91.5,71.199 91.5,46 C91.5,20.801 71.199,0.5 46,0.5 Z M66.801,49.301 L36.5,67 C35.89844,67.39844 35.1992,67.5 34.6016,67.5 C34.00004,67.5 33.3008,67.39844 32.7032,67 C31.6016,66.39844 30.8048,65.1016 30.8048,63.6992 L30.800893,28.3012 C30.800893,26.9028 31.601673,25.602 32.699293,25.0004 C33.800893,24.39884 35.398493,24.39884 36.500093,25.0004 L66.898093,42.6994 C67.999693,43.30096 68.698893,44.5978 68.698893,46.0002 C68.698893,47.3986 67.898113,48.6994 66.800493,49.301 L66.801,49.301 Z" id="Shape"></path></g>
+													</g>
+												</svg>
+												<span class="flex items-center text-gray-500 transition-colors duration-200">
+													<svg class="mr-1 h-3 w-3" viewBox="0 0 98 88">
+														<g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+															<g id="np_like_1555605_333333" fill="currentColor">
+																<path d="M19.277,35.727 L3.011,35.727 C1.4915,35.727 0.3001,36.9184 0.3001,38.4379 L0.3001,81.8089 C0.3001,83.3284 1.4915,84.5198 3.011,84.5198 L19.277,84.5198 C20.7965,84.5198 21.9879,83.3284 21.9879,81.8089 L21.983994,38.4379 C21.9879,36.9184 20.796494,35.727 19.276994,35.727 L19.277,35.727 Z" id="Path"></path>
+																<path
+																	d="M97.699,40.863 C97.699,36.445 94.6678,31.9763 88.8748,31.9763 L62.6128,31.9763 C66.3628,25.2654 67.4683,15.8283 64.8589,8.9213 C62.9448,3.8432 59.2808,0.8783 54.5469,0.5775 L54.468775,0.569687 C51.386775,0.382187 48.718775,2.690787 48.460975,5.768887 C47.785195,12.620487 44.785175,24.733887 40.484375,29.034887 C36.863275,32.655987 33.761675,34.175487 28.625375,36.687187 C27.883185,37.050467 27.070675,37.448907 26.211275,37.874687 C26.226899,38.062187 26.234712,38.245777 26.234712,38.437187 L26.234712,81.367187 C26.855802,81.578127 27.469112,81.789057 28.070612,81.996097 C36.551112,84.917997 43.882612,87.441397 55.086612,87.441397 L76.316612,87.441397 C82.109612,87.441397 85.140812,82.968697 85.140812,78.554697 C85.140812,77.242197 84.875192,75.929697 84.347842,74.726597 C86.277542,74.378937 87.965042,73.453197 89.218942,72.031297 C90.640842,70.417997 91.422042,68.273497 91.422042,65.992197 C91.422042,64.687497 91.156422,63.371097 90.632982,62.171897 C95.285282,61.367207 97.707182,57.374997 97.707182,53.429697 C97.707182,51.140597 96.890772,48.835897 95.300982,47.148497 C96.882982,45.457097 97.699382,43.152397 97.699382,40.863297 L97.699,40.863 Z"
+																	id="Path"
+																></path>
+															</g>
+														</g>
+													</svg>
+													<span>741</span>
+												</span>
+											</div>
+										</div>
+										<h4 class="font-inconsolata mt-2 text-balance text-lg font-bold leading-tight">13g that makes you happy</h4>
+										<p class="mt-2 text-base leading-5 text-black">Quick &amp; simple. Guaranteed happiness with this clean, balanced and sweet cup.</p>
+									</a>
+
+									<a class="flex flex-col border-t border-gray-200 pt-2 text-sm transition duration-200 hover:border-black" href="#">
+										<div class="flex w-full items-center justify-between">
+											<span class="flex flex-1 flex-shrink-0 items-center gap-2 bg-left bg-no-repeat text-gray-600">
+												<span class="h-4 w-4">
+													<img class="h-full w-full object-contain object-center" src="https://api.aeroprecipe.com:443/media/2019/05/31/noun_Tamper_1638547.svg" alt="" />
+												</span>
+												<span>From a Barista</span>
+											</span>
+											<div class="flex items-center">
+												<svg viewBox="0 0 92 92" class="mr-2 h-3 w-3">
+													<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+														<g id="np_play_943870_333333" fill="#333333" fill-rule="nonzero">
+															<path d="M46,0.5 C20.801,0.5 0.5,20.801 0.5,46 C0.5,71.199 20.801,91.5 46,91.5 C71.199,91.5 91.5,71.199 91.5,46 C91.5,20.801 71.199,0.5 46,0.5 Z M66.801,49.301 L36.5,67 C35.89844,67.39844 35.1992,67.5 34.6016,67.5 C34.00004,67.5 33.3008,67.39844 32.7032,67 C31.6016,66.39844 30.8048,65.1016 30.8048,63.6992 L30.800893,28.3012 C30.800893,26.9028 31.601673,25.602 32.699293,25.0004 C33.800893,24.39884 35.398493,24.39884 36.500093,25.0004 L66.898093,42.6994 C67.999693,43.30096 68.698893,44.5978 68.698893,46.0002 C68.698893,47.3986 67.898113,48.6994 66.800493,49.301 L66.801,49.301 Z" id="Shape"></path>
+														</g>
+													</g>
+												</svg>
+												<span title="Click to upvote" class="flex items-center text-gray-500 transition-colors duration-200">
+													<svg class="mr-1 h-3 w-3" viewBox="0 0 98 88">
+														<g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+															<g id="np_like_1555605_333333" fill="currentColor">
+																<path d="M19.277,35.727 L3.011,35.727 C1.4915,35.727 0.3001,36.9184 0.3001,38.4379 L0.3001,81.8089 C0.3001,83.3284 1.4915,84.5198 3.011,84.5198 L19.277,84.5198 C20.7965,84.5198 21.9879,83.3284 21.9879,81.8089 L21.983994,38.4379 C21.9879,36.9184 20.796494,35.727 19.276994,35.727 L19.277,35.727 Z" id="Path"></path>
+																<path
+																	d="M97.699,40.863 C97.699,36.445 94.6678,31.9763 88.8748,31.9763 L62.6128,31.9763 C66.3628,25.2654 67.4683,15.8283 64.8589,8.9213 C62.9448,3.8432 59.2808,0.8783 54.5469,0.5775 L54.468775,0.569687 C51.386775,0.382187 48.718775,2.690787 48.460975,5.768887 C47.785195,12.620487 44.785175,24.733887 40.484375,29.034887 C36.863275,32.655987 33.761675,34.175487 28.625375,36.687187 C27.883185,37.050467 27.070675,37.448907 26.211275,37.874687 C26.226899,38.062187 26.234712,38.245777 26.234712,38.437187 L26.234712,81.367187 C26.855802,81.578127 27.469112,81.789057 28.070612,81.996097 C36.551112,84.917997 43.882612,87.441397 55.086612,87.441397 L76.316612,87.441397 C82.109612,87.441397 85.140812,82.968697 85.140812,78.554697 C85.140812,77.242197 84.875192,75.929697 84.347842,74.726597 C86.277542,74.378937 87.965042,73.453197 89.218942,72.031297 C90.640842,70.417997 91.422042,68.273497 91.422042,65.992197 C91.422042,64.687497 91.156422,63.371097 90.632982,62.171897 C95.285282,61.367207 97.707182,57.374997 97.707182,53.429697 C97.707182,51.140597 96.890772,48.835897 95.300982,47.148497 C96.882982,45.457097 97.699382,43.152397 97.699382,40.863297 L97.699,40.863 Z"
+																	id="Path"
+																></path>
+															</g>
+														</g>
+													</svg>
+													<span>506</span>
+												</span>
+											</div>
+										</div>
+										<h4 class="font-inconsolata mt-2 text-balance text-lg font-bold leading-tight">James Hoffmann</h4>
+										<p class="mt-2 text-base leading-5 text-black">James Hoffmann's AeroPress recipe for making a good milk based coffee at home.</p>
+									</a>
+
+									<a class="flex flex-col border-t border-gray-200 pt-2 text-sm transition duration-200 hover:border-black" href="#">
+										<div class="flex w-full items-center justify-between">
+											<span class="flex flex-1 flex-shrink-0 items-center gap-2 bg-left bg-no-repeat text-gray-600">
+												<span class="h-4 w-4">
+													<img class="h-full w-full object-contain object-center" src="https://api.aeroprecipe.com:443/media/2019/01/30/cat_crown-1544941267398.svg" alt="" />
+												</span>
+												<span>Championship</span>
+											</span>
+											<div class="flex items-center">
+												<svg viewBox="0 0 92 92" class="mr-2 h-3 w-3">
+													<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+														<g id="np_play_943870_333333" fill="#333333" fill-rule="nonzero">
+															<path d="M46,0.5 C20.801,0.5 0.5,20.801 0.5,46 C0.5,71.199 20.801,91.5 46,91.5 C71.199,91.5 91.5,71.199 91.5,46 C91.5,20.801 71.199,0.5 46,0.5 Z M66.801,49.301 L36.5,67 C35.89844,67.39844 35.1992,67.5 34.6016,67.5 C34.00004,67.5 33.3008,67.39844 32.7032,67 C31.6016,66.39844 30.8048,65.1016 30.8048,63.6992 L30.800893,28.3012 C30.800893,26.9028 31.601673,25.602 32.699293,25.0004 C33.800893,24.39884 35.398493,24.39884 36.500093,25.0004 L66.898093,42.6994 C67.999693,43.30096 68.698893,44.5978 68.698893,46.0002 C68.698893,47.3986 67.898113,48.6994 66.800493,49.301 L66.801,49.301 Z" id="Shape"></path>
+														</g>
+													</g>
+												</svg>
+												<span title="Click to upvote" class="flex items-center text-gray-500 transition-colors duration-200">
+													<svg class="mr-1 h-3 w-3" viewBox="0 0 98 88">
+														<g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+															<g id="np_like_1555605_333333" fill="currentColor">
+																<path d="M19.277,35.727 L3.011,35.727 C1.4915,35.727 0.3001,36.9184 0.3001,38.4379 L0.3001,81.8089 C0.3001,83.3284 1.4915,84.5198 3.011,84.5198 L19.277,84.5198 C20.7965,84.5198 21.9879,83.3284 21.9879,81.8089 L21.983994,38.4379 C21.9879,36.9184 20.796494,35.727 19.276994,35.727 L19.277,35.727 Z" id="Path"></path>
+																<path
+																	d="M97.699,40.863 C97.699,36.445 94.6678,31.9763 88.8748,31.9763 L62.6128,31.9763 C66.3628,25.2654 67.4683,15.8283 64.8589,8.9213 C62.9448,3.8432 59.2808,0.8783 54.5469,0.5775 L54.468775,0.569687 C51.386775,0.382187 48.718775,2.690787 48.460975,5.768887 C47.785195,12.620487 44.785175,24.733887 40.484375,29.034887 C36.863275,32.655987 33.761675,34.175487 28.625375,36.687187 C27.883185,37.050467 27.070675,37.448907 26.211275,37.874687 C26.226899,38.062187 26.234712,38.245777 26.234712,38.437187 L26.234712,81.367187 C26.855802,81.578127 27.469112,81.789057 28.070612,81.996097 C36.551112,84.917997 43.882612,87.441397 55.086612,87.441397 L76.316612,87.441397 C82.109612,87.441397 85.140812,82.968697 85.140812,78.554697 C85.140812,77.242197 84.875192,75.929697 84.347842,74.726597 C86.277542,74.378937 87.965042,73.453197 89.218942,72.031297 C90.640842,70.417997 91.422042,68.273497 91.422042,65.992197 C91.422042,64.687497 91.156422,63.371097 90.632982,62.171897 C95.285282,61.367207 97.707182,57.374997 97.707182,53.429697 C97.707182,51.140597 96.890772,48.835897 95.300982,47.148497 C96.882982,45.457097 97.699382,43.152397 97.699382,40.863297 L97.699,40.863 Z"
+																	id="Path"
+																></path>
+															</g>
+														</g>
+													</svg>
+													<span>415</span>
+												</span>
+											</div>
+										</div>
+										<h4 class="font-inconsolata mt-2 text-balance text-lg font-bold leading-tight">Love me some acid</h4>
+										<p class="mt-2 text-base leading-5 text-black">2018 Portugal Aeropress Champion shares a recipe to hero the acidy fruitiness of the coffee.</p>
+									</a>
+
+									<a class="flex flex-col border-t border-gray-200 pt-2 text-sm transition duration-200 hover:border-black" href="#">
+										<div class="flex w-full items-center justify-between">
+											<span class="flex flex-1 flex-shrink-0 items-center gap-2 bg-left bg-no-repeat text-gray-600">
+												<span class="h-4 w-4">
+													<img class="h-full w-full object-contain object-center" src="https://api.aeroprecipe.com:443/media/2019/05/31/noun_Tamper_1638547.svg" alt="" />
+												</span>
+												<span>From a Barista</span>
+											</span>
+											<div class="flex items-center">
+												<svg viewBox="0 0 92 92" class="mr-2 h-3 w-3">
+													<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+														<g id="np_play_943870_333333" fill="#333333" fill-rule="nonzero">
+															<path d="M46,0.5 C20.801,0.5 0.5,20.801 0.5,46 C0.5,71.199 20.801,91.5 46,91.5 C71.199,91.5 91.5,71.199 91.5,46 C91.5,20.801 71.199,0.5 46,0.5 Z M66.801,49.301 L36.5,67 C35.89844,67.39844 35.1992,67.5 34.6016,67.5 C34.00004,67.5 33.3008,67.39844 32.7032,67 C31.6016,66.39844 30.8048,65.1016 30.8048,63.6992 L30.800893,28.3012 C30.800893,26.9028 31.601673,25.602 32.699293,25.0004 C33.800893,24.39884 35.398493,24.39884 36.500093,25.0004 L66.898093,42.6994 C67.999693,43.30096 68.698893,44.5978 68.698893,46.0002 C68.698893,47.3986 67.898113,48.6994 66.800493,49.301 L66.801,49.301 Z" id="Shape"></path>
+														</g>
+													</g>
+												</svg>
+												<span title="Click to upvote" class="flex items-center text-gray-500 transition-colors duration-200">
+													<svg class="mr-1 h-3 w-3" viewBox="0 0 98 88">
+														<g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+															<g id="np_like_1555605_333333" fill="currentColor">
+																<path d="M19.277,35.727 L3.011,35.727 C1.4915,35.727 0.3001,36.9184 0.3001,38.4379 L0.3001,81.8089 C0.3001,83.3284 1.4915,84.5198 3.011,84.5198 L19.277,84.5198 C20.7965,84.5198 21.9879,83.3284 21.9879,81.8089 L21.983994,38.4379 C21.9879,36.9184 20.796494,35.727 19.276994,35.727 L19.277,35.727 Z" id="Path"></path>
+																<path
+																	d="M97.699,40.863 C97.699,36.445 94.6678,31.9763 88.8748,31.9763 L62.6128,31.9763 C66.3628,25.2654 67.4683,15.8283 64.8589,8.9213 C62.9448,3.8432 59.2808,0.8783 54.5469,0.5775 L54.468775,0.569687 C51.386775,0.382187 48.718775,2.690787 48.460975,5.768887 C47.785195,12.620487 44.785175,24.733887 40.484375,29.034887 C36.863275,32.655987 33.761675,34.175487 28.625375,36.687187 C27.883185,37.050467 27.070675,37.448907 26.211275,37.874687 C26.226899,38.062187 26.234712,38.245777 26.234712,38.437187 L26.234712,81.367187 C26.855802,81.578127 27.469112,81.789057 28.070612,81.996097 C36.551112,84.917997 43.882612,87.441397 55.086612,87.441397 L76.316612,87.441397 C82.109612,87.441397 85.140812,82.968697 85.140812,78.554697 C85.140812,77.242197 84.875192,75.929697 84.347842,74.726597 C86.277542,74.378937 87.965042,73.453197 89.218942,72.031297 C90.640842,70.417997 91.422042,68.273497 91.422042,65.992197 C91.422042,64.687497 91.156422,63.371097 90.632982,62.171897 C95.285282,61.367207 97.707182,57.374997 97.707182,53.429697 C97.707182,51.140597 96.890772,48.835897 95.300982,47.148497 C96.882982,45.457097 97.699382,43.152397 97.699382,40.863297 L97.699,40.863 Z"
+																	id="Path"
+																></path>
+															</g>
+														</g>
+													</svg>
+													<span>107</span>
+												</span>
+											</div>
+										</div>
+										<h4 class="font-inconsolata mt-2 text-balance text-lg font-bold leading-tight">For the sweetest cup</h4>
+										<p class="mt-2 text-base leading-5 text-black">Slow press for the sweetness. Bypass for the bright acidity.</p>
+									</a>
+								</div>
+								<!-- /./grid recipes -->
+
+								<div x-data="{ expanded: false }" class="md:p-5 mt-10 rounded-lg bg-yellow-100 bg-opacity-50 p-5">
+									<button @click="expanded = ! expanded" class="font-inconsolata flex w-full cursor-pointer items-center justify-between text-lg font-bold">
+										<h3>A little bit about AeroPrecipe.com</h3>
+										<div>
+											<div x-show="!expanded">+</div>
+											<div x-show="expanded">-</div>
+										</div>
+									</button>
+									<div x-show="expanded" x-collapse class="md:pr-20 mt-5 flex flex-col space-y-5 border-t border-gray-300 pt-5 text-base">
+										<p class="font-inconsolata font-bold">Why Aeroprecipe?</p>
+										<p>It's obvious to some, but not all - for those that don't understand the name, AeroPrecipe is the combination of the words AeroPress Recipe. AeroPrecipe!</p>
+										<p class="font-inconsolata font-bold">Ahhhh, now I get it!.... So why AeroPress Recipes?</p>
+										<p>The AeroPress is a simple device to look at - it's really just a big, plastic syringe - but the more you use it, the more you read about it, and the more coffee you drink from it you realise there is more than meets the eye. The AeroPress is a complex beast and there's a million different ways to brew coffee with it. All these different ways of brewing with the AeroPress are known within the coffee community as ‘AeroPress Recipes'.</p>
+										<p>We love the AeroPress and found ourselves constantly scouring the internet for new AeroPress Recipes. There are recipes from champions, heaps of recipes on youtube, reddit, different blogs with different articles about brewing with the AeroPress - it's endless; but it's scattered everywhere and hard to stay on top of.</p>
+										<p>So we created AeroPrecipe.com - a simple place to collate all our favourite AeroPress Recipes in one place. We built in some fun filters so we can find the right coffee to make based on the coffee we have and how we are feeling on this particular day. Visitors can upvote their favourite AeroPress Recipes, and even submit their own.</p>
+										<p>Currently we have 60+ recipes in our collection, but we know there's more out there so our collection of AeroPress Recipes will continue to grow.</p>
+										<p>We plan to add more features - ability to create your own recipe collections, an AeroPress Recipe Timer for each recipe, comment functionality etc... we know this little site isn't going to change the world, but we want it to be as fun and as useful as it can be - we all need coffee after all, so why not have a little inspiration!</p>
+										<p>To stay updated, you can join us on <a href="#" target="_blank">instagram</a>, <a href="#" target="_blank">twitter</a> and <a href="#" target="_blank">facebook</a>.</p>
+										<p class="font-inconsolata font-bold">Ok, I've read all this but I don't actually know what an AeroPress is!</p>
+										<p>Oops! The AeroPress is a simple tool to make really good coffee at home. It was invented by Mr Alan Adler, the same man that invented the very well known Aerobie Frisbee (hence the ‘Aero' in the name).</p>
+										<p>Alan could never come to terms with the inherent bitterness of coffee and set out to create something that made coffee in a simple way, and that taste the way he liked it. The result was the AeroPress - a simple plastic cylinder, with a plunger and a filter. It wasn't an instant success in coffee circles, but eventually it landed in the hands of Tim Wendelboe and friends who saw its potential, started experimenting, and thought ‘hey, you can actually make pretty decent coffee with this thing'.</p>
+										<p>In Norway, 2008, Wendelboe and friends thought they might have a fun competition between friends to see ‘who could brew the best cup of AeroPress coffee' and the World AeroPress Championship (WAC) was born. The competition has become a huge success and is now hosted in over 60 countries with over 3,000 competitors! The WAC has played a major part in boosting the popularity of the AeroPress.</p>
+									</div>
+								</div>
+							</div>
+
+							<div class="lg:transform-none lg:max-w-sm lg:relative lg:block lg:bg-[#F9F9F4] fixed left-0 top-0 z-30 w-full translate-x-full transform border-l border-gray-200 bg-yellow-50 transition duration-200 ease-in">
+								<div class="lg:pb-20 lg:sticky lg:pr-12 top-0 h-screen overflow-y-auto pb-32 pl-5 pr-5">
+									<div class="lg:h-20 lg:relative lg:bg-transparent sticky top-0 flex h-16 items-center justify-between border-b border-gray-300 bg-yellow-50">
+										<div class="flex items-center">
+											<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 256 256" class="mr-2 h-4 w-4"><path d="M200,136a8,8,0,0,1-8,8H64a8,8,0,0,1,0-16H192A8,8,0,0,1,200,136Zm32-56H24a8,8,0,0,0,0,16H232a8,8,0,0,0,0-16Zm-80,96H104a8,8,0,0,0,0,16h48a8,8,0,0,0,0-16Z"></path></svg><span class="font-display text-sm font-bold">Refine your recipe</span>
+										</div>
+									</div>
+									<div class="mt-5 flex flex-col">
+										<span class="font-display text-base font-bold">Category</span>
+										<ul class="mt-1">
+											<li class="group mb-1 flex cursor-pointer items-center justify-between rounded border border-transparent bg-yellow-100 px-2 py-1 transition duration-200 hover:border-yellow-100 hover:bg-orange-100">
+												<span class="flex items-center gap-2 bg-left bg-no-repeat">
+													<span class="h-4 w-4 flex-shrink-0">
+														<img src="https://api.aeroprecipe.com:443/media/2019/01/30/cat_crown-1544941267398.svg" alt="" class="h-full w-full object-contain object-center" />
+													</span>
+													<span>Championship</span>
+												</span>
+												<span class="h-3 w-3 rounded-full border border-gray-200 bg-white"></span>
+											</li>
+											<li class="group mb-1 flex cursor-pointer items-center justify-between rounded border border-transparent bg-yellow-100 px-2 py-1 transition duration-200 hover:border-yellow-100 hover:bg-orange-100">
+												<span class="flex items-center gap-2 bg-left bg-no-repeat">
+													<span class="h-4 w-4 flex-shrink-0">
+														<img src="https://api.aeroprecipe.com:443/media/2019/01/30/cat_experimental.svg" alt="" class="h-full w-full object-contain object-center" />
+													</span>
+													<span>Experimental</span>
+												</span>
+												<span class="h-3 w-3 rounded-full border border-gray-200 bg-white"></span>
+											</li>
+											<li class="group mb-1 flex cursor-pointer items-center justify-between rounded border border-transparent bg-yellow-100 px-2 py-1 transition duration-200 hover:border-yellow-100 hover:bg-orange-100">
+												<span class="flex items-center gap-2 bg-left bg-no-repeat">
+													<span class="h-4 w-4 flex-shrink-0">
+														<img src="https://api.aeroprecipe.com:443/media/2019/05/31/noun_Tamper_1638547.svg" alt="" class="h-full w-full object-contain object-center" />
+													</span>
+													<span>From a Barista</span>
+												</span>
+												<span class="h-3 w-3 rounded-full border border-gray-200 bg-white"></span>
+											</li>
+											<li class="group mb-1 flex cursor-pointer items-center justify-between rounded border border-transparent bg-yellow-100 px-2 py-1 transition duration-200 hover:border-yellow-100 hover:bg-orange-100">
+												<span class="flex items-center gap-2 bg-left bg-no-repeat">
+													<span class="h-4 w-4 flex-shrink-0">
+														<img src="https://api.aeroprecipe.com:443/media/2019/01/30/icon_enthusiast-1545200216737.svg" alt="" class="h-full w-full object-contain object-center" />
+													</span>
+													<span>From an Enthusiast</span>
+												</span>
+												<span class="h-3 w-3 rounded-full border border-gray-200 bg-white"></span>
+											</li>
+										</ul>
+									</div>
+									<div class="mt-4 flex flex-col">
+										<span class="font-display text-base font-bold">Orientation</span>
+										<ul class="mt-1 grid grid-cols-2 gap-x-2">
+											<li class="group mb-1 flex cursor-pointer items-center justify-between rounded border border-transparent bg-yellow-100 px-2 py-1 transition duration-200 hover:border-yellow-100 hover:bg-orange-100">
+												<span class="flex items-center gap-2 bg-left bg-no-repeat">
+													<span class="h-4 w-4 flex-shrink-0">
+														<img src="https://aeroprecipe.com//images/icons/icon_aeropress_standard.svg" alt="" class="h-full w-full object-contain object-center" />
+													</span>
+													<span>Standard</span>
+												</span>
+												<span class="h-3 w-3 rounded-full border border-gray-200 bg-white"></span>
+											</li>
+											<li class="group mb-1 flex cursor-pointer items-center justify-between rounded border border-transparent bg-yellow-100 px-2 py-1 transition duration-200 hover:border-yellow-100 hover:bg-orange-100">
+												<span class="flex items-center gap-2 bg-left bg-no-repeat">
+													<span class="h-4 w-4 flex-shrink-0">
+														<img src="https://aeroprecipe.com//images/icons/icon_aeropress_inverted.svg" alt="" class="h-full w-full object-contain object-center" />
+													</span>
+													<span>Inverted</span>
+												</span>
+												<span class="h-3 w-3 rounded-full border border-gray-200 bg-white"></span>
+											</li>
+										</ul>
+									</div>
+									<div class="mt-4 flex flex-col">
+										<span class="font-display text-base font-bold">Filter Type</span>
+										<ul class="mt-1 grid grid-cols-2 gap-x-2">
+											<li class="group mb-1 flex cursor-pointer items-center justify-between rounded border border-transparent bg-yellow-100 px-2 py-1 transition duration-200 hover:border-yellow-100 hover:bg-orange-100">
+												<span class="flex items-center gap-2 bg-left bg-no-repeat">
+													<span class="h-4 w-4 flex-shrink-0">
+														<img src="https://aeroprecipe.com//images/icons/icon_filter_paper.svg" alt="" class="h-full w-full object-contain object-center" />
+													</span>
+													<span>Paper</span>
+												</span>
+												<span class="h-3 w-3 rounded-full border border-gray-200 bg-white"></span>
+											</li>
+											<li class="group mb-1 flex cursor-pointer items-center justify-between rounded border border-transparent bg-yellow-100 px-2 py-1 transition duration-200 hover:border-yellow-100 hover:bg-orange-100">
+												<span class="flex items-center gap-2 bg-left bg-no-repeat">
+													<span class="h-4 w-4 flex-shrink-0">
+														<img src="https://aeroprecipe.com//images/icons/icon_filter_metal.svg" alt="" class="h-full w-full object-contain object-center" />
+													</span>
+													<span>Metal</span>
+												</span>
+												<span class="h-3 w-3 rounded-full border border-gray-200 bg-white"></span>
+											</li>
+										</ul>
+									</div>
+									<div class="mt-4 flex flex-col">
+										<span class="font-display text-base font-bold">Brew Time (minutes)</span>
+										<ul class="mt-1 grid grid-cols-3 gap-x-2">
+											<li class="group mb-1 flex cursor-pointer items-center justify-between rounded border border-transparent bg-yellow-100 px-2 py-1 transition duration-200 hover:border-yellow-100 hover:bg-orange-100">
+												<span class="flex items-center gap-2 bg-left bg-no-repeat">
+													<span class="h-4 w-4 flex-shrink-0">
+														<img src="https://aeroprecipe.com//images/icons/icon_timer_fast.svg" alt="" class="h-full w-full object-contain object-center" />
+													</span>
+													<span>&lt;2</span>
+												</span>
+												<span class="h-3 w-3 rounded-full border border-gray-200 bg-white"></span>
+											</li>
+											<li class="group mb-1 flex cursor-pointer items-center justify-between rounded border border-transparent bg-yellow-100 px-2 py-1 transition duration-200 hover:border-yellow-100 hover:bg-orange-100">
+												<span class="flex items-center gap-2 bg-left bg-no-repeat">
+													<span class="h-4 w-4 flex-shrink-0">
+														<img src="https://aeroprecipe.com//images/icons/icon_timer_medium.svg" alt="" class="h-full w-full object-contain object-center" />
+													</span>
+													<span>2-5</span>
+												</span>
+												<span class="h-3 w-3 rounded-full border border-gray-200 bg-white"></span>
+											</li>
+											<li class="group mb-1 flex cursor-pointer items-center justify-between rounded border border-transparent bg-yellow-100 px-2 py-1 transition duration-200 hover:border-yellow-100 hover:bg-orange-100">
+												<span class="flex items-center gap-2 bg-left bg-no-repeat">
+													<span class="h-4 w-4 flex-shrink-0">
+														<img src="https://aeroprecipe.com//images/icons/icon_timer_slow.svg" alt="" class="h-full w-full object-contain object-center" />
+													</span>
+													<span>5+</span>
+												</span>
+												<span class="h-3 w-3 rounded-full border border-gray-200 bg-white"></span>
+											</li>
+										</ul>
+									</div>
+									<div class="mt-4 flex flex-col">
+										<span class="font-display text-base font-bold">Amount of Coffee (grams)</span>
+										<ul class="mt-1 grid grid-cols-3 gap-x-2">
+											<li class="group mb-1 flex cursor-pointer items-center justify-between rounded border border-transparent bg-yellow-100 px-2 py-1 transition duration-200 hover:border-yellow-100 hover:bg-orange-100">
+												<span class="flex items-center">&lt;15g</span>
+												<span class="h-3 w-3 rounded-full border border-gray-200 bg-white"></span>
+											</li>
+											<li class="group mb-1 flex cursor-pointer items-center justify-between rounded border border-transparent bg-yellow-100 px-2 py-1 transition duration-200 hover:border-yellow-100 hover:bg-orange-100">
+												<span class="flex items-center">15-20g</span>
+												<span class="h-3 w-3 rounded-full border border-gray-200 bg-white"> </span>
+											</li>
+											<li class="group mb-1 flex cursor-pointer items-center justify-between rounded border border-transparent bg-yellow-100 px-2 py-1 transition duration-200 hover:border-yellow-100 hover:bg-orange-100">
+												<span class="flex items-center">&gt;20g</span>
+												<span class="h-3 w-3 rounded-full border border-gray-200 bg-white"></span>
+											</li>
+										</ul>
+									</div>
+									<div class="mt-4 flex flex-col">
+										<span class="font-display text-base font-bold">Tags</span>
+										<ul class="mt-1 flex flex-wrap">
+											<li class="group mb-2 mr-2 flex flex-shrink-0 cursor-pointer items-center justify-between rounded border border-transparent bg-yellow-100 px-2 py-1 transition duration-200 hover:border-yellow-100 hover:bg-orange-100">
+												<span class="flex items-center gap-2 bg-left bg-no-repeat">
+													<span class="h-4 w-4 flex-shrink-0">
+														<img src="https://api.aeroprecipe.com:443/media/2021/02/04/aeropressGo.svg" alt="" class="h-full w-full object-contain object-center" />
+													</span>
+													<span>AeroPress Go</span>
+												</span>
+											</li>
+
+											<li class="group mb-2 mr-2 flex flex-shrink-0 cursor-pointer items-center justify-between rounded border border-transparent bg-yellow-100 px-2 py-1 transition duration-200 hover:border-yellow-100 hover:bg-orange-100">
+												<span class="flex items-center gap-2 bg-left bg-no-repeat">
+													<span class="h-4 w-4 flex-shrink-0">
+														<img src="https://api.aeroprecipe.com:443/media/2021/02/04/icon_video.svg" alt="" class="h-full w-full object-contain object-center" />
+													</span>
+													<span>Has Video</span>
+												</span>
+											</li>
+											<li class="group mb-2 mr-2 flex flex-shrink-0 cursor-pointer items-center justify-between rounded border border-transparent bg-yellow-100 px-2 py-1 transition duration-200 hover:border-yellow-100 hover:bg-orange-100">
+												<span class="flex items-center gap-2 bg-left bg-no-repeat">
+													<span class="h-4 w-4 flex-shrink-0">
+														<img src="https://api.aeroprecipe.com:443/media/2021/02/04/icon_cold.svg" alt="" class="h-full w-full object-contain object-center" />
+													</span>
+													<span>Cold</span>
+												</span>
+											</li>
+											<li class="group mb-2 mr-2 flex flex-shrink-0 cursor-pointer items-center justify-between rounded border border-transparent bg-yellow-100 px-2 py-1 transition duration-200 hover:border-yellow-100 hover:bg-orange-100">
+												<span class="flex items-center gap-2 bg-left bg-no-repeat">
+													<span class="h-4 w-4 flex-shrink-0">
+														<img src="https://api.aeroprecipe.com:443/media/2021/02/04/fruitFilter.svg" alt="" class="h-full w-full object-contain object-center" />
+													</span>
+													<span>Fruit Filter</span>
+												</span>
+											</li>
+											<li class="group mb-2 mr-2 flex flex-shrink-0 cursor-pointer items-center justify-between rounded border border-transparent bg-yellow-100 px-2 py-1 transition duration-200 hover:border-yellow-100 hover:bg-orange-100">
+												<span class="flex items-center gap-2 bg-left bg-no-repeat">
+													<span class="h-4 w-4 flex-shrink-0">
+														<img src="https://api.aeroprecipe.com:443/media/2023/09/25/icon_aeropress_XL.svg" alt="" class="h-full w-full object-contain object-center" />
+													</span>
+													<span>AeroPress XL</span>
+												</span>
+											</li>
+											<li class="group mb-2 mr-2 flex flex-shrink-0 cursor-pointer items-center justify-between rounded border border-transparent bg-yellow-100 px-2 py-1 transition duration-200 hover:border-yellow-100 hover:bg-orange-100">
+												<span class="flex items-center gap-2 bg-left bg-no-repeat">
+													<span class="h-4 w-4 flex-shrink-0">
+														<img src="https://api.aeroprecipe.com:443/media/2024/07/04/icons-sweet.png" alt="" class="h-full w-full object-contain object-center" />
+													</span>
+													<span>Sweet</span>
+												</span>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="lg:hidden fixed bottom-0 z-30 grid w-full grid-cols-2 gap-x-px border-t border-white bg-white">
+						<select class="md:pb-3 md:p-3 border-none bg-gray-900 px-3 pb-4 pt-3 text-center text-white focus:outline-none focus:ring-0">
+							<option value="votes">Most Votes</option>
+							<option value="votesDown">Least Votes</option>
+							<option value="date">Newest</option>
+							<option value="dateDown">Oldest</option>
+							<option value="title">Name A-Z</option>
+							<option value="titleDown">Name Z-A</option>
+							<option value="random">Shuffle</option>
+						</select>
+						<button @click="isModalOpen = 'modalLogin'" class="md:pb-3 md:p-3 flex items-center justify-between border-none bg-gray-900 px-3 pb-4 pt-3 text-center text-white focus:outline-none">
+							<span>Filter</span>
+							<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 256 256" class="h-4 w-4">
+								<path d="M200,136a8,8,0,0,1-8,8H64a8,8,0,0,1,0-16H192A8,8,0,0,1,200,136Zm32-56H24a8,8,0,0,0,0,16H232a8,8,0,0,0,0-16Zm-80,96H104a8,8,0,0,0,0,16h48a8,8,0,0,0,0-16Z"></path>
+							</svg>
+						</button>
+					</div>
+				</main>
+
+				<footer class="md:flex sm:px-5 lg:px-12 fixed bottom-0 left-0 z-30 hidden w-screen items-center justify-between border-t border-gray-200 bg-white px-3 py-5">
+					<div class="relative flex items-center text-sm">
+						<span class="invisible absolute left-0 truncate opacity-0 transition-all duration-200">There's an Aeropress Movie! Follow the Aeropress story from Alan Adlers basement to World AeroPress Championships - aeropressmovie.com</span>
+						<span class="fact invisible absolute left-0 truncate opacity-0 transition-all duration-200">Brew an AeroPress on a plane? Join the Mile High (Aeropress) Club. It exists. Look it up.</span>
+						<span class="invisible absolute left-0 truncate opacity-0 transition-all duration-200">The AeroPress is made completely from polypropylene (except the rubber seal), and contains no BPA or phthalates.</span>
+						<span class="invisible absolute left-0 truncate opacity-0 transition-all duration-200">A Porlex Mini hand grinder fits perfectly into the AeroPress plunger - the perfect travel combo.</span>
+						<span class="fact invisible absolute left-0 truncate opacity-0 transition-all duration-200">There is a World AeroPress Championship - started in Norway in 2008 with just 3 contestants it now host competitions in 50 countries.</span>
+						<span class="visible absolute left-0 truncate opacity-100 transition-all duration-200">The AeroPress was invented by the same man that invented the Aerobie Frisbee, 84 year old Alan Adler.</span>
+					</div>
+					<div class="relative z-10 flex flex-shrink-0 items-center gap-x-0 bg-white">
+						<a class="flex-shrink-0 opacity-50 transition duration-200 hover:opacity-100" href="#" target="_blank">
+							<svg xmlns="http://www.w3.org/2000/svg" width="40" height="1em" fill="currentColor" viewBox="0 0 256 256">
+								<path d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,72a24,24,0,1,1,24-24A24,24,0,0,1,128,152ZM176,20H80A60.07,60.07,0,0,0,20,80v96a60.07,60.07,0,0,0,60,60h96a60.07,60.07,0,0,0,60-60V80A60.07,60.07,0,0,0,176,20Zm36,156a36,36,0,0,1-36,36H80a36,36,0,0,1-36-36V80A36,36,0,0,1,80,44h96a36,36,0,0,1,36,36ZM196,76a16,16,0,1,1-16-16A16,16,0,0,1,196,76Z"></path>
+							</svg>
+						</a>
+						<a class="flex-shrink-0 opacity-50 transition duration-200 hover:opacity-100" href="#" target="_blank">
+							<svg xmlns="http://www.w3.org/2000/svg" width="40" height="1em" fill="currentColor" viewBox="0 0 256 256">
+								<path d="M128,20A108,108,0,1,0,236,128,108.12,108.12,0,0,0,128,20Zm12,191.13V156h20a12,12,0,0,0,0-24H140V112a12,12,0,0,1,12-12h16a12,12,0,0,0,0-24H152a36,36,0,0,0-36,36v20H96a12,12,0,0,0,0,24h20v55.13a84,84,0,1,1,24,0Z"></path>
+							</svg>
+						</a>
+						<a class="flex-shrink-0 opacity-50 transition duration-200 hover:opacity-100" href="#" target="_blank">
+							<svg xmlns="http://www.w3.org/2000/svg" width="40" height="1em" fill="currentColor" viewBox="0 0 256 256">
+								<path d="M251.09,67.41A12,12,0,0,0,240,60H211.82a52.73,52.73,0,0,0-43.67-24,50.85,50.85,0,0,0-36.6,14.85A51.87,51.87,0,0,0,116,88v.78c-36.83-11.57-66.38-40.9-66.7-41.23a12,12,0,0,0-20.47,7.38C22.52,125.1,53.48,162.72,70.89,178.05,56.4,192.83,36,200.68,35.8,200.76A12,12,0,0,0,30,218.66C32,221.55,43.44,236,80,236c72.25,0,132.7-55.26,139.6-126.63l28.88-28.88A12,12,0,0,0,251.09,67.41ZM199.52,95.52a11.93,11.93,0,0,0-3.49,7.72C192.14,164.23,141.18,212,80,212a90.78,90.78,0,0,1-12.49-.79C78,204.55,89.72,195.07,98,182.66a12,12,0,0,0-3.9-17c-.12-.07-12.33-7.49-23.43-24.42s-17.26-37-18.46-59.78C69.37,94.4,96,110.79,126,115.84A12,12,0,0,0,140,104V88a28,28,0,0,1,8.41-20.07A27.07,27.07,0,0,1,167.86,60a28.83,28.83,0,0,1,25.82,16.81,12,12,0,0,0,11,7.19H211Z"></path>
+							</svg>
+						</a>
+						<a class="flex-shrink-0 opacity-50 transition duration-200 hover:opacity-100" href="#" target="_blank">
+							<svg xmlns="http://www.w3.org/2000/svg" width="40" height="1em" fill="currentColor" viewBox="0 0 256 256">
+								<path d="M170.49,117.91l-56-36A12,12,0,0,0,96,92v72a12,12,0,0,0,18.49,10.09l56-36a12,12,0,0,0,0-20.18ZM120,142V114l21.81,14Zm118.21-73.5a28.05,28.05,0,0,0-16.93-19.14C186.4,35.91,131.29,36,128,36s-58.4-.09-93.28,13.38A28.05,28.05,0,0,0,17.79,68.52C15.15,78.72,12,97.32,12,128s3.15,49.28,5.79,59.48a28.05,28.05,0,0,0,16.93,19.14C68.21,219.55,120.36,220,127.37,220h1.26c7,0,59.16-.45,92.65-13.38a28.05,28.05,0,0,0,16.93-19.14c2.64-10.2,5.79-28.8,5.79-59.48S240.85,78.72,238.21,68.52ZM215,181.46a4,4,0,0,1-2.34,2.77C182.78,195.76,132.27,196,128.32,196h-.39c-.53,0-53.64.17-84.56-11.77A4,4,0,0,1,41,181.46c-1.88-7.24-5-23.82-5-53.46s3.15-46.22,5-53.46a4,4,0,0,1,2.34-2.77C74.29,59.83,127.39,60,127.92,60h.15c.54,0,53.64-.17,84.56,11.77A4,4,0,0,1,215,74.54c1.88,7.24,5,23.82,5,53.46S216.85,174.22,215,181.46Z"></path>
+							</svg>
+						</a>
+						<a class="flex-shrink-0 opacity-50 transition duration-200 hover:opacity-100" href="#" target="_blank">
+							<svg xmlns="http://www.w3.org/2000/svg" width="40" height="1em" fill="currentColor" viewBox="0 0 256 256">
+								<path d="M224,44H32A12,12,0,0,0,20,56V192a20,20,0,0,0,20,20H216a20,20,0,0,0,20-20V56A12,12,0,0,0,224,44Zm-96,83.72L62.85,68h130.3ZM92.79,128,44,172.72V83.28Zm17.76,16.28,9.34,8.57a12,12,0,0,0,16.22,0l9.34-8.57L193.15,188H62.85ZM163.21,128,212,83.28v89.44Z"></path>
+							</svg>
+						</a>
+					</div>
+				</footer>
+			</div>
+		</div>
+
+		<!-- search modal -->
+		<div x-show="isModalOpen === 'modalSearch'" :class="isModalOpen ? '!visible' : ''" class="invisible fixed left-0 top-0 z-50 flex h-full w-screen flex-col items-center justify-start bg-yellow-50 bg-opacity-95 px-5 py-20" x-transition.opacity>
+			<div @click="isModalOpen = false; !isModalOpen ? document.body.classList.remove('overflow-hidden', 'max-h-screen') : ''" class="fixed left-0 top-0 z-0 h-full w-full"></div>
+			<div class="max-w-screen-sm relative z-10 flex max-h-full w-full flex-col items-center justify-center overflow-hidden rounded-xl border border-gray-300 bg-white text-center">
+				<div class="relative flex w-full items-center">
+					<input type="text" placeholder="Search recipes" class="lg:text-lg w-full border-x-0 border-b border-t-0 border-gray-400 border-opacity-50 bg-yellow-50 px-4 py-3 pl-12 text-base text-black placeholder:text-gray-800 focus:border-gray-400 focus:bg-yellow-100 focus:bg-opacity-50 focus:outline-none focus:ring-0" />
+					<svg class="absolute left-5 h-4 w-4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+						<path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+					</svg>
+				</div>
+				<div id="searchResults" class="flex w-full flex-1 flex-col items-start justify-start overflow-auto p-5 text-left">
+					<span class="text-sm">Popular search terms include<br /><i>James Hoffmann</i>, <i>Ethiopian</i>, <i>Tim Wendelboe</i></span>
+				</div>
+			</div>
+		</div>
+		<!-- ./search modal -->
+
+		<!-- modal -->
+		<div x-show="isModalOpen === 'modalLogin'" :class="isModalOpen ? '!visible' : ''" class="invisible fixed left-0 top-0 z-50 flex h-full w-screen flex-col items-center justify-center bg-yellow-50 bg-opacity-95 p-5" x-cloak x-transition.opacity>
+			<div @click="isModalOpen = false; !isModalOpen ? document.body.classList.remove('overflow-hidden', 'max-h-screen') : ''" class="fixed left-0 top-0 z-0 h-full w-full"></div>
+			<div class="max-w-screen-sm lg:p-10 lg:p-16 relative z-10 flex w-full flex-col items-center justify-center rounded-xl border border-gray-300 bg-white p-8 text-center">
+				<h3 class="lg:text-2xl font-display text-balance text-xl font-bold">Create an account to filter recipes</h3>
+				<p class="mt-3 text-center">Joining is free and allows you to upvote, save, comment, make private notes, create your own recipes and more.</p>
+				<div class="mt-7 flex items-center space-x-3">
+					<a class="flex cursor-pointer items-center justify-between gap-3 rounded border-2 border-black bg-black px-3 py-1.5 text-base text-white transition hover:border-black/80 hover:bg-black/80 hover:text-white hover:ring-black/30 focus:ring-2 focus:ring-black/40 active:ring-2 active:ring-black/50 disabled:cursor-not-allowed disabled:opacity-50" href="#">
+						<span class="">Become a member</span>
+					</a>
+					<a class="flex cursor-pointer items-center justify-between gap-3 rounded border-2 border-black bg-transparent px-3 py-1.5 text-black transition hover:border-black/80 hover:bg-yellow-100/50 hover:text-black hover:ring-2 hover:ring-yellow-100 focus:ring-2 focus:ring-black/40 active:ring-2 active:ring-black/50 disabled:cursor-not-allowed disabled:opacity-50" href="#">
+						<span class="">Sign in</span>
+					</a>
+				</div>
+			</div>
+		</div>
+		<!-- modal -->
+
+		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+		<script>
+			const swiper = new Swiper(".swiper", {
+				slidesPerView: "auto",
+				loop: true,
+				autoplay: {
+					delay: 2500,
+				},
+				speed: 700,
+
+				spaceBetween: 20,
+				// Navigation arrows
+				navigation: {
+					nextEl: ".button-next",
+					prevEl: ".button-prev",
+				},
+			});
+		</script>
+	</body>
+</html>

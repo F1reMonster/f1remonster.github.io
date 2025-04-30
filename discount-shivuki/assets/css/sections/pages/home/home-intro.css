@@ -1,0 +1,52 @@
+.intro-home {
+  padding-top: 4.5em;
+  padding-bottom: 0.9375em;
+}
+@media screen and (max-width: 767px) {
+  .intro-home {
+    padding-top: 2.0625em;
+    padding-bottom: 20px;
+  }
+}
+.intro-home .home-header {
+  font: 8.75em/0.6285714286 "mixtape-reg", sans-serif;
+  color: #3c3f45;
+  margin: 0.45em 0 0.3714285714em;
+}
+html[dir=ltr] .intro-home .home-header {
+  font-family: "mixtape-reg-latin", sans-serif;
+}
+
+@media screen and (max-width: 767px) {
+  .intro-home .home-header {
+    font-size: 3.75em;
+    line-height: 0.9166666667;
+    margin: 0 0 0.2666666667em;
+    color: #000;
+  }
+}
+.intro-home .home-header span {
+  font-size: 0.7142857143em;
+  line-height: 1.54;
+  color: #00a661;
+  display: block;
+}
+html[dir=ltr] .intro-home .home-header span {
+  line-height: 1.3;
+}
+
+@media screen and (max-width: 767px) {
+  .intro-home .home-header span {
+    font-size: 0.6666666667em;
+    line-height: 1.25;
+  }
+}
+.intro-home .btns-wrap {
+  display: flex;
+  gap: 1.375em;
+}
+@media screen and (max-width: 767px) {
+  .intro-home .img-part {
+    margin-top: 0;
+  }
+}

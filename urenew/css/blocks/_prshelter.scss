@@ -1,0 +1,108 @@
+.prshelter {
+	&--container {
+		background-color: #fbac18;
+		padding: 57px 80px;
+		border-radius: 60px;
+		position: relative;
+		overflow: hidden;
+		background-image: url("./../img/icons/pshelter_bg.webp");
+		background-repeat: no-repeat;
+		background-size: cover;
+		@include mediaMobile {
+			padding: 20px 10px;
+			border-radius: 30px;
+			background-size: 490px;
+			background-position: top center;
+		}
+		.desc {
+			font-size: 20px;
+			font-weight: bold;
+			margin-top: 15px;
+		}
+		.pshelter-des {
+			width: 320px;
+			height: 280px;
+			background-image: url("./../img/icons/pshelter_des.svg");
+			background-repeat: no-repeat;
+			background-position: left bottom;
+			background-size: contain;
+			position: absolute;
+			z-index: 1;
+			left: 0;
+			bottom: 0;
+			@include mediaMobile {
+				z-index: 0;
+			}
+		}
+	}
+	&-block {
+		width: 100%;
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+		margin-top: 50px;
+		@include mediaMobile {
+			flex-direction: column;
+		}
+	}
+	&-slider {
+		width: 45%;
+		position: relative;
+		display: flex;
+		align-items: center;
+		img {
+			border-radius: 20px;
+		}
+		@include mediaMobile {
+			width: 100%;
+		}
+		.swiper-prshelter-nav {
+			z-index: 10;
+		}
+		.pshelter-arrow {
+			position: absolute;
+			z-index: 1;
+			width: 25px;
+			height: 45px;
+			display: block;
+			background-image: url("./../img/icons/pshelter_arrow.svg");
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-position: center center;
+			opacity: 0.7;
+			transition: all 0.3s ease-in-out;
+			cursor: pointer;
+			&:hover {
+				opacity: 1;
+			}
+		}
+		.swiper-pshelter-next {
+			right: -50px;
+			top: 45%;
+			@include mediaMobile {
+				right: 10px;
+			}
+		}
+		.swiper-pshelter-prev {
+			left: -50px;
+			top: 45%;
+			transform: rotate(180deg);
+			@include mediaMobile {
+				left: 10px;
+			}
+		}
+	}
+	&-content {
+		width: 45%;
+		font-size: 24px;
+		@include mediaMobile {
+			width: 100%;
+			font-size: 20px;
+			margin-top: 20px;
+			z-index: 1;
+		}
+		p {
+			margin-bottom: 1rem;
+		}
+	}
+}

@@ -1,0 +1,96 @@
+@use "sass:math";
+
+// TO %
+@function prc($pxOne, $pxTwo) {
+	$result: math.div($pxOne, $pxTwo) * 100%;
+
+	@return $result;
+}
+
+// REM
+@function rem($px) {
+	$result: math.div($px, $fontSizeDefault) + rem;
+
+	@return $result;
+}
+
+// EM
+@function em($px) {
+	$result: math.div($px, $fontSizeDefault) + em;
+
+	@return $result;
+}
+
+// PX
+@function px($px) {
+	$result: $px + px;
+
+	@return $result;
+}
+
+@function fluid($max-size, $min-size, $unit: vw) {
+	$slope: math.div($max-size - $min-size, $maxWidthC - $minWidth);
+	$slope-to-unit: $slope * 100;
+	$intercept-rem: rem($min-size - $slope * $minWidth);
+	$min-size-rem: rem($min-size);
+	$max-size-rem: rem($max-size);
+
+	@return clamp(#{$min-size-rem}, #{$slope-to-unit}#{$unit} + #{$intercept-rem}, #{$max-size-rem});
+}
+
+@function decimal-round($number, $digits: 0, $mode: round) {
+	$n: 1;
+
+	// $number must be a number
+
+	@if type-of($number) != number {
+		@warn "#{ $number } is not a number.";
+
+		@return $number;
+	}
+
+	// $digits must be a unitless number
+
+	@if type-of($digits) != number {
+		@warn "#{ $digits } is not a number.";
+
+		@return $number;
+	} @else if not unitless($digits) {
+		@warn "#{ $digits } has a unit.";
+
+		@return $number;
+	}
+
+	@for $i from 1 through $digits {
+		$n: $n * 10;
+	}
+
+	@if $mode == round {
+		@return math.div(math.round($number * $n), $n);
+	} @else if $mode == ceil {
+		@return math.div(math.ceil($number * $n), $n);
+	} @else if $mode == floor {
+		@return math.div(math.floor($number * $n), $n);
+	} @else {
+		@warn "#{ $mode } is undefined keyword.";
+
+		@return $number;
+	}
+}
+
+@function decimal-ceil($number, $digits: 0) {
+	@return decimal-round($number, $digits, ceil);
+}
+
+@function decimal-floor($number, $digits: 0) {
+	@return decimal-round($number, $digits, floor);
+}
+
+// Function
+@function get-vw($target) {
+	// 1 vw is equal to 1% of the viewport width
+	
+	$vw-context: decimal-round(math.div($target, ($containerWidth * 0.01)), 4); // 1% viewport width
+
+	@return ($vw-context) * 1vw;
+}

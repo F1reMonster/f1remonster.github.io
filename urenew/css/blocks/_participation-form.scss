@@ -1,0 +1,39 @@
+.participation-form {
+	padding-top: rem(115);
+
+	&__actions {
+		display: flex;
+		margin-top: rem(66);
+		gap: rem(70);
+
+		.btn-donate {
+			flex: 1 1 0%;
+			max-width: unset;
+			gap: rem(50);
+		}
+
+		@media (max-width: em(1200)) {
+			gap: rem(10);
+
+			.btn-donate {
+				gap: rem(10);
+			}
+		}
+
+		@media (max-width: em(991)) {
+			margin-top: rem(20);
+			
+			.btn-donate {
+				font-size: rem(16);
+			}
+		}
+
+		@media (max-width: em(575)) {
+			flex-flow: column;
+		}
+	}
+
+	@media (max-width: em(1023)) {
+		padding-top: rem(70);
+	}
+}

@@ -1,0 +1,69 @@
+.smart-save-wrap {
+  overflow: hidden;
+  position: relative;
+}
+
+.smart-info-section {
+  padding: 4.25em 0;
+}
+@media screen and (max-width: 767px) {
+  .smart-info-section {
+    padding: 2.0625em 0;
+  }
+}
+.smart-info-section .typical-header {
+  text-align: initial;
+}
+@media screen and (max-width: 767px) {
+  .smart-info-section .typical-header {
+    line-height: 1.4em;
+  }
+}
+.smart-info-section .wrap {
+  display: flex;
+}
+@media screen and (max-width: 767px) {
+  .smart-info-section .wrap {
+    display: block;
+  }
+}
+.smart-info-section .txt-part {
+  flex-basis: 60.8333333333%;
+}
+.smart-info-section .txt {
+  font: 1.125em/1.7777777778 "rubik-reg", sans-serif;
+  color: #000;
+  margin-top: 2.375em;
+}
+@media screen and (max-width: 767px) {
+  .smart-info-section .txt {
+    font-size: 1em;
+    line-height: 1.5;
+    margin-top: 1.25em;
+  }
+}
+.smart-info-section .img-part {
+  flex-grow: 1;
+  padding-inline-end: 20px;
+}
+@media screen and (max-width: 767px) {
+  .smart-info-section .img-part {
+    display: none;
+  }
+}
+.smart-info-section .img-part .img {
+  margin-inline-end: auto;
+  max-width: 23.8125em;
+  display: block;
+}
+.smart-info-section.reverse .wrap {
+  flex-direction: row-reverse;
+}
+.smart-info-section.reverse .img-part {
+  padding-left: 0;
+  padding-inline-start: 20px;
+}
+.smart-info-section.reverse .img-part .img {
+  margin-inline-end: 0;
+  margin-inline-start: auto;
+}

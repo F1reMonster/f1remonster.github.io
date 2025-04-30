@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>SeaBot - Guide page</title>
+		<link rel="shortcut icon" href="img/svg/logo-little.svg" type="image/x-icon" />
+		<link rel="stylesheet" href="css/style.min.css?_v=20221024183154" />
+	</head>
+
+	<body>
+		<div class="body-wrapper">
+			<div class="preloader">
+	<div class="preloader-content">
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+	</div>
+</div>
+ <!-- header -->
+<header class="header">
+	<div class="container">
+		<div class="header__wrapper">
+			<div class="header__logo">
+				<a href="/" class="header__logo-full">
+					<img src="img/svg/logo.svg" alt="logo" />
+				</a>
+				<a href="/" class="header__logo-fixed">
+					<img src="img/svg/logo-little.svg" alt="logo" />
+				</a>
+			</div>
+			<div class="header__action">
+				<button data-modal="modalCountactUs" class="btn btn-primary header__action-item">
+					<svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M22.9168 8.96675V17.448C22.9169 18.3127 22.586 19.1447 21.9922 19.7732C21.3983 20.4018 20.5864 20.7793 19.7231 20.8282L19.5314 20.8334H5.46891C4.60419 20.8335 3.77222 20.5026 3.14367 19.9088C2.51513 19.3149 2.13766 18.503 2.0887 17.6397L2.0835 17.448V8.96675L12.1377 14.2334C12.2495 14.292 12.3739 14.3226 12.5002 14.3226C12.6264 14.3226 12.7508 14.292 12.8627 14.2334L22.9168 8.96675ZM5.46891 4.16675H19.5314C20.3706 4.16665 21.1798 4.4782 21.8023 5.04098C22.4247 5.60377 22.816 6.37767 22.9002 7.21258L12.5002 12.6605L2.10016 7.21258C2.18092 6.41082 2.54501 5.66416 3.12699 5.10681C3.70896 4.54947 4.47066 4.21798 5.27516 4.17196L5.46891 4.16675H19.5314H5.46891Z" fill="#072E5C" />
+					</svg>
+				</button>
+				<a href="#" class="btn btn-secondary header__action-item header-menu">
+					<svg width="25" height="18" viewBox="0 0 25 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path
+							fill-rule="evenodd"
+							clip-rule="evenodd"
+							d="M20.444 17.5558C18.1769 18.3164 14.7727 18.4136 11.2118 15.2621L11.2102 15.2607C8.97917 13.2802 7.09641 13.3055 5.77821 13.7149C5.07918 13.9321 4.49412 14.2743 4.07019 14.5791C3.65774 14.8757 3.42331 15.1183 3.41426 15.1277C3.41401 15.1279 3.41394 15.128 3.41403 15.1279L3.37209 15.1725L3.3264 15.2131C2.89503 15.5962 2.29732 15.8005 1.67061 15.668C1.06199 15.5394 0.613109 15.1344 0.347223 14.6852C0.0821663 14.2374 -0.0246815 13.7184 0.00473934 13.2264C0.0340858 12.7356 0.202508 12.2233 0.54125 11.8076L0.59028 11.7474L0.645667 11.6934C1.78184 10.5847 3.09448 9.76513 4.51491 9.3075C5.39518 9.01164 6.30492 8.86093 7.22149 8.86201C9.18836 8.86221 11.4469 9.56121 13.7484 11.602L13.749 11.6025C15.9801 13.583 17.8628 13.5577 19.181 13.1483C19.88 12.9311 20.4651 12.5888 20.889 12.2841C21.3015 11.9875 21.5359 11.7448 21.545 11.7355C21.5452 11.7352 21.5453 11.7352 21.5452 11.7353L21.5504 11.7297L21.5557 11.7243C21.9654 11.2979 22.5713 11.0304 23.2384 11.136C23.8889 11.239 24.3718 11.6599 24.6522 12.1306L24.6561 12.1371L24.6561 12.1372C24.9323 12.6067 25.0355 13.1543 24.9894 13.6688C24.9436 14.1812 24.7434 14.7184 24.3501 15.1328L24.3322 15.1516L24.3136 15.1698C23.1773 16.2786 21.8645 17.0982 20.444 17.5558ZM7.22149 8.86201C7.22177 8.86201 7.22205 8.86201 7.22233 8.86201L7.22066 10.2349L7.22066 8.86201C7.22094 8.86201 7.22122 8.86201 7.22149 8.86201ZM20.4439 8.6938C18.1769 9.45443 14.7727 9.55159 11.2118 6.40005L11.2102 6.39871C8.97917 4.41815 7.09641 4.44348 5.77821 4.85292C5.07918 5.07005 4.49412 5.41233 4.07019 5.71712C3.65773 6.01366 3.4233 6.25632 3.41426 6.26568C3.41401 6.26594 3.41394 6.26602 3.41403 6.26592L3.37209 6.31054L3.3264 6.35111C2.89503 6.73415 2.29732 6.93852 1.67061 6.80604C1.06199 6.67739 0.613107 6.2724 0.347222 5.82318C0.0821656 5.37536 -0.0246822 4.85644 0.00473857 4.3644C0.034085 3.87361 0.202508 3.36127 0.541249 2.9456L0.590279 2.88544L0.645667 2.83139C1.78183 1.7227 3.09446 0.903135 4.51488 0.445511C5.39489 0.14973 6.30436 -0.000976835 7.22066 5.36902e-06M20.4439 8.6938C21.8645 8.2362 23.1773 7.41659 24.3136 6.30779L24.369 6.25373L24.418 6.19357C24.7567 5.77791 24.9251 5.26557 24.9545 4.77477C24.9839 4.28273 24.8771 3.7638 24.612 3.31599C24.3461 2.86676 23.8972 2.46179 23.2886 2.33313C22.6619 2.20065 22.0642 2.40503 21.6328 2.78806L21.5871 2.82863L21.5452 2.87325C21.5453 2.87315 21.5452 2.87323 21.545 2.87349C21.5359 2.88283 21.3015 3.1255 20.889 3.42206C20.4651 3.72684 19.88 4.06913 19.181 4.28625C17.8628 4.6957 15.9801 4.72103 13.749 2.74047L13.7484 2.73996C11.4469 0.699207 9.18836 0.000201654 7.22149 5.36894e-06"
+							fill="#05B7EF"
+						/>
+					</svg>
+				</a>
+			</div>
+		</div>
+		<!--  header menu -->
+<div class="header__menu">
+	<div class="header__menu-close">
+		<img src="img/svg/close.svg" alt="close" />
+	</div>
+	<ul>
+		<li>
+			<a href="#about">about</a>
+		</li>
+		<li>
+			<a href="#advantages">advantages</a>
+		</li>
+		<li>
+			<a href="#tariffs">tariffs</a>
+		</li>
+		<li>
+			<a href="#whomFor">whom for</a>
+		</li>
+		<li>
+			<a href="#hiw">how works</a>
+		</li>
+		<li>
+			<a href="">payment</a>
+		</li>
+		<li>
+			<a href="#contact">contact us</a>
+		</li>
+	</ul>
+</div>
+<!-- ./header menu -->
+	</div>
+</header>
+<!-- ./header -->
+
+
+			<!-- block__guide -->
+			<section class="block block__guide">
+				<div class="block__guide-head">
+					<div class="container">
+						<a href="#" class="btn btn-primary btn-back">
+							<svg viewBox="0 0 46 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M1.23223 17.2322C0.255922 18.2085 0.255922 19.7915 1.23223 20.7678L17.1421 36.6777C18.1184 37.654 19.7014 37.654 20.6777 36.6777C21.654 35.7014 21.654 34.1184 20.6777 33.1421L6.53553 19L20.6777 4.85786C21.654 3.88155 21.654 2.29864 20.6777 1.32233C19.7014 0.34602 18.1184 0.34602 17.1421 1.32233L1.23223 17.2322ZM43 21.5C44.3807 21.5 45.5 20.3807 45.5 19C45.5 17.6193 44.3807 16.5 43 16.5V21.5ZM3 21.5H43V16.5H3V21.5Z" fill="white" />
+							</svg>
+						</a>
+						<h2 class="block__title">Guide</h2>
+					</div>
+					<div class="block__guide-navigation-mobile">
+						<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 427.773 427.773" >
+							<path
+								d="M421.504,357.406l-34.771-34.771c-3.839-3.836-8.771-5.905-13.789-6.222l-11.812-11.81
+				c17.547-27.896,14.189-65.271-10.076-89.535c-28.166-28.167-73.993-28.166-102.162,0c-28.162,28.166-28.162,73.995,0.004,102.161
+				c24.265,24.266,61.64,27.622,89.531,10.076l11.813,11.81c0.313,5.021,2.385,9.953,6.223,13.79l34.771,34.771
+				c8.358,8.359,21.909,8.357,30.27,0C429.861,379.318,429.863,365.766,421.504,357.406z M335.924,302.096
+				c-19.82,19.819-52.07,19.819-71.892,0c-19.819-19.82-19.819-52.069,0-71.891c19.818-19.82,52.066-19.82,71.892,0.001
+				C355.742,250.026,355.742,282.276,335.924,302.096z" fill="white"
+							/>
+							<path
+								d="M236.812,204.111c16.552-16.55,38.584-25.665,62.041-25.665s45.49,9.114,62.041,25.665
+				c14.13,14.128,23.068,32.854,25.173,52.733c1.618,15.289-0.81,30.8-7.021,44.875l0.211,0.211
+				c6.553,1.604,12.537,4.972,17.312,9.744l3.432,3.433V75.095c0-3.779-1.871-7.315-5-9.44
+				c-30.646-20.82-65.452-31.827-100.669-31.827c-32.813,0-65.27,9.561-94.332,27.711c-29.072-18.15-61.537-27.711-94.35-27.711
+				c-35.207,0-70.014,11.006-100.652,31.827C1.871,67.781,0,71.317,0,75.095v267.551c0,4.229,2.336,8.11,6.074,10.091
+				c3.738,1.979,8.258,1.728,11.758-0.647c26.836-18.235,57.207-27.879,87.822-27.879c30.617,0,60.994,9.644,87.84,27.881
+				c1.922,1.311,4.164,1.974,6.408,1.974c0.012,0,0.025-0.002,0.039-0.002c2.301,0.03,4.6-0.634,6.566-1.974
+				c11.48-7.801,23.611-14.016,36.129-18.59c-2.004-1.677-3.953-3.438-5.821-5.308C202.603,293.983,202.603,238.32,236.812,204.111z
+				 M233.032,110.767c21.408-14.636,50.663-16.821,66.198-16.821c15.534,0,44.791,2.186,66.198,16.821
+				c5.271,3.603,6.621,10.794,3.021,16.063c-3.603,5.269-10.797,6.621-16.064,3.019c-11.887-8.127-31.262-12.789-53.153-12.789
+				c-21.893,0-41.269,4.661-53.154,12.789c-1.994,1.363-4.266,2.018-6.512,2.018c-3.689,0-7.313-1.761-9.554-5.036
+				C226.411,121.562,227.764,114.37,233.032,110.767z M233.032,160.767c21.408-14.636,50.663-16.821,66.198-16.821
+				c15.534,0,44.791,2.186,66.198,16.821c5.271,3.603,6.621,10.794,3.021,16.063c-3.603,5.269-10.797,6.621-16.064,3.019
+				c-11.887-8.127-31.262-12.789-53.153-12.789c-21.893,0-41.269,4.661-53.154,12.789c-1.994,1.363-4.266,2.018-6.512,2.018
+				c-3.689,0-7.313-1.761-9.554-5.036C226.411,171.562,227.764,164.37,233.032,160.767z M169.986,276.831
+				c-3.602,5.27-10.795,6.621-16.064,3.02c-11.887-8.128-31.262-12.789-53.154-12.789s-41.268,4.661-53.154,12.789
+				c-1.994,1.362-4.266,2.019-6.512,2.019c-3.689,0-7.313-1.761-9.553-5.036c-3.602-5.27-2.25-12.461,3.02-16.062
+				c21.408-14.638,50.664-16.821,66.199-16.821s44.791,2.187,66.199,16.821C172.236,264.37,173.587,271.562,169.986,276.831z
+				 M169.986,226.831c-3.602,5.27-10.795,6.621-16.064,3.02c-11.887-8.128-31.262-12.789-53.154-12.789s-41.268,4.661-53.154,12.789
+				c-1.994,1.362-4.266,2.019-6.512,2.019c-3.689,0-7.313-1.761-9.553-5.036c-3.602-5.27-2.25-12.461,3.02-16.063
+				c21.408-14.636,50.664-16.821,66.199-16.821s44.791,2.186,66.199,16.821C172.236,214.37,173.587,221.562,169.986,226.831z
+				 M169.986,176.831c-3.602,5.269-10.795,6.621-16.064,3.019c-11.887-8.127-31.262-12.789-53.154-12.789
+				S59.5,171.722,47.614,179.85c-1.994,1.363-4.266,2.018-6.512,2.018c-3.689,0-7.313-1.761-9.553-5.036
+				c-3.602-5.269-2.25-12.461,3.02-16.063c21.408-14.636,50.664-16.821,66.199-16.821s44.791,2.186,66.199,16.821
+				C172.236,164.37,173.587,171.562,169.986,176.831z M169.986,126.831c-3.602,5.269-10.795,6.621-16.064,3.019
+				c-11.887-8.127-31.262-12.789-53.154-12.789S59.5,121.722,47.614,129.85c-1.994,1.363-4.266,2.018-6.512,2.018
+				c-3.689,0-7.313-1.761-9.553-5.036c-3.602-5.269-2.25-12.461,3.02-16.063c21.408-14.636,50.664-16.821,66.199-16.821
+				s44.791,2.186,66.199,16.821C172.236,114.37,173.587,121.562,169.986,126.831z" fill="white"
+							/>
+						</svg>
+					</div>
+					<div class="block__guide-navigation">
+						<div class="block__guide-navigation-group">
+							<h6>Admin guide</h6>
+							<ul>
+								<li>How to activate SCB in the right group</li>
+								<li>How to change the individual welcome message for new members</li>
+								<li>How to approve members</li>
+								<li>How to remove members from groups</li>
+								<li>How to block the entire SCB for an individual member</li>
+								<li>How to send an individual message to all group members</li>
+								<li>How to set the order of the buttons in the group list</li>
+								<li>How to export a list of companies from the SCB</li>
+								<li>How to import a list of companies into SCB</li>
+								<li>How to export a member list from SCB</li>
+								<li>How to import a member list into SCB</li>
+							</ul>
+						</div>
+						<div class="block__guide-navigation-group">
+							<h6>Guide for members</h6>
+							<ul>
+								<li>In what situations can SCB be useful</li>
+								<li>General description</li>
+								<li>SCB working conditions</li>
+								<li>How to activate SCB</li>
+								<li>Open SCB and enter into correspondence with it</li>
+								<li>How to join company groups</li>
+								<li>How to search for information about members through SCB</li>
+								<li>How to edit information about yourself</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<div class="container">
+					<div class="block__guide-content">
+						<div class="row">
+							<div class="col-lg-7">
+								<div class="block__guide-group">
+									<h3 id="adm-guide " class="block__title">
+										<i><b>A</b></i
+										>dmin guide
+									</h3>
+									<ul>
+										<li>
+											<h6>How to activate SCB in the right group</h6>
+											<p>Go to the desired <span>group</span>, add a <span>new user</span> SCB, and make it a <span>group admin</span>.</p>
+											<p>Go to the <span>admin panel</span> and check the <span>box</span> next to the desired group. SCB will then manage access to this group and start scanning participants. This means that when SCB is the group admin, new participants can only be added to the group through SCB (see below). If a participant joins the group via an invitation link, bypassing SCB, SCB will automatically remove that participant from the group. This does not apply to existing group participants, only new ones.</p>
+										</li>
+										<li>
+											<h6>How to change the individual welcome message for new members</h6>
+											<p>When new members register, SCB displays a message with a list of groups and a short description of them. This message can be set up in the admin panel.</p>
+										</li>
+										<li>
+											<h6>How to approve members</h6>
+											<p>Send an <span>SCB link</span> to the potential group members and ask them to <span>activate</span> it: all of them need to fill in corporate information such as first name, last name, company website and position.</p>
+											<p>There is no sensitive information such as phone number. For current group members, ask them to fill in the same information, and they will appear in the admin panel as approved members.</p>
+											<p>All group applications are displayed in your <span>admin panel</span>.</p>
+											<p>A decision should be made for each application:</p>
+											<p>- <span>approve</span> – SCB adds the member to the group and introduces the new member to all others</p>
+											<p>- <span>decline</span> – the application is rejected, although the person can reapply.</p>
+											<p>- <span>block</span> – the person cannot reapply for membership; they would need to be unblocked to do so.</p>
+										</li>
+										<li>
+											<h6>How to remove members from groups</h6>
+											<p>In the <span>admin pane</span>l find the desired user by ID or username and click "<span>exclude</span>" next to each group of which he is a member.</p>
+											<p>The SCB will remove him immediately.</p>
+										</li>
+										<li>
+											<h6>How to block the entire SCB for an individual member</h6>
+											<p>In the <span>admin panel</span> in the last column, mark the desired user as <span>blacklisted</span>, then click <span>save</span>.</p>
+										</li>
+										<li>
+											<h6>How to send an individual message to all group members</h6>
+											<p>In the <span>admin panel</span> click "<span>add mass mailing</span>," enter the text of the message, check "<span>start mailing</span>," and click "<span>save</span>."</p>
+											<p>The message will be sent to all members whose sites have green verification.</p>
+											<p>They will receive a personal message from the SCB.</p>
+											<p>You can see who it was sent to in the admin panel.</p>
+										</li>
+										<li>
+											<h6>How to set the order of the buttons in the group list</h6>
+											<p>When you click "<span>join groups</span>" in SCB, their list is shown in the form of buttons in random order. The group buttons can be put in a specific order in the <span>admin panel</span> by entering the desired order number against the name of the group (the "No. in the menu" column). It is important that the names of groups not be too long, otherwise the button will not fit the entire name. The recommended length of the group name is no more than 27 characters, including spaces.</p>
+										</li>
+										<li>
+											<h6>How to export a list of companies from the SCB</h6>
+											<p>In the <span>admin panel</span>, click "<span>export to CSV</span>" and open it as follows:</p>
+											<p>- <span>create</span> or open an empty document in Google Sheets <a href="https://www.google.com/sheets/about/">https:// www.google.com/sheets/about/</a></p>
+											<p>- <span>select</span> File, Import, Load from Google Sheets and select the CSV file previously exported</p>
+										</li>
+										<li>
+											<h6>How to import a list of companies into SCB</h6>
+											<p>- <span>create or open</span> an empty document in Google Sheets <a href="https://www.google.com/sheets/about/">https:// www.google.com/sheets/about/</a></p>
+											<p>Title the first <span>4</span> columns:</p>
+											<p><span>Company name, Website link, Profile link, City</span></p>
+											<p><span>Fill</span> in data into the table, then go to Menu, Download, and choose CSV format.</p>
+											<p>Open the <span>admin panel</span>, click on "<span>Import from CSV</span>" and <span>download</span> the prepared CSV file. The data to be downloaded is in addition to the data already present in the SCB.</p>
+										</li>
+										<li>
+											<h6>How to export a member list from SCB</h6>
+											<p>In the <span>admin panel</span> click "<span>export to CSV</span>" and <span>open</span> the file as follows</p>
+											<p>- <span>create or open</span> an empty document in Google Sheets <a href="https://www.google.com/sheets/about/">https:// www.google.com/sheets/about/</a></p>
+											<p>- <span>select</span> File, Import, Upload from the Google Sheets menu and select the CSV file you previously exported</p>
+											<p><span>Fill</span> in data into the table, then go to Menu, Download, and choose CSV format.</p>
+											<p>Open the <span>admin panel</span>, click on "<span>Import from CSV</span>" and <span>download</span> the prepared CSV file. The data to be downloaded is in addition to the data already present in the SCB.</p>
+										</li>
+										<li>
+											<h6>How to export a member list from SCB</h6>
+											<p>In the <span>admin panel</span> click "<span>export to CSV</span>" and <span>open</span> the file as follows</p>
+											<p>- <span>create or open</span> an empty document in Google Sheets <a href="https://www.google.com/sheets/about/">https:// www.google.com/sheets/about/</a></p>
+											<p>- <span>select</span> File, Import, Upload from the Google Sheets menu and select the CSV file you previously exported</p>
+										</li>
+										<li>
+											<h6>How to import a member list into SCB</h6>
+											<p>
+												<b>
+													<span>IMPORTANT!!! </span><br />
+													Before importing contacts SCB must be added to all groups you want.
+												</b>
+											</p>
+											<p>- <span>Create or open</span> an empty document in Google Sheets <a href="https://www.google.com/sheets/about/">https:// www.google.com/sheets/about/</a></p>
+											<p>Title the first <span>7</span> columns:</p>
+											<p><span>ID, First Name, Last Name, Telegram username, Website, Position </span></p>
+											<p><span>Fill</span> the data table, then select <span>Menu, Download</span>, and choose the format <span>CSV</span>. Members without an ID value will not be loaded. All uploaded data supplements already existing data in the SCB.</p>
+											<p>Open the <span>admin panel</span>, click "<span>Import from CSV</span>" and <span>download</span> the prepared CSV file.</p>
+										</li>
+									</ul>
+								</div>
+
+								<div class="block__guide-group">
+									<h3 id="adm-guide " class="block__title">
+										<i><b>G</b></i
+										>uide for members
+									</h3>
+									<ul>
+										<li>
+											<h6>In what situations can SCB be useful</h6>
+											<p>1. When you and another person are strangers—that is, you are not in each other's notebooks, but you share one or more groups, and you want to know who the other person is.</p>
+											<p>2. When you only know someone’s username, but want more information.</p>
+											<p>3. When you do not have any information other than a group message from a person of interest, but you want more information.</p>
+											<p>4. When you need to find representatives of a specific company in a company group.</p>
+											<p>5. When you need to know the groups in a company, which of them you are already a member of, and which you have not yet joined.</p>
+										</li>
+										<li>
+											<h6>General description</h6>
+											<p>Information about a person can be searched according to any of the following parameters:</p>
+											<p>- user</p>
+											<p>- username (username) in Telegram</p>
+											<p>- company website</p>
+										</li>
+										<li>
+											<h6>SCB working conditions</h6>
+											<p>1. You and the SCB are together in one or more company groups.</p>
+											<p>2. You filled in the primary information about yourself through SCB: first name, last name, position and company website.</p>
+										</li>
+										<li>
+											<h6>How to activate SCB</h6>
+											<p>Find SCB in the global Telegram search or in the list of group members named *****. You can also use the direct link ******.</p>
+										</li>
+										<li>
+											<h6>Open SCB and enter into correspondence with it</h6>
+											<p>After starting the SCB, you must click on the "<span>START</span>" button</p>
+											<p>A welcome text will appear with a general description of the SCB capabilities. You need to click on the "Start" button</p>
+											<p>The SCB will sequentially request information about you: <span>first name, last name, position and company website</span>.</p>
+											<p>When you fill in all the information about yourself, SCB will show it to you in the form in which other company members will see it when searching. Click on the "<span>Finish</span>" button, the information will be saved on our server and SCB will be activated for you.</p>
+										</li>
+										<li>
+											<h6>How to join company groups</h6>
+											<p>Access to groups becomes available only after activating the SCB (see <span>How to activate SCB</span>).</p>
+											<p>After activation, the SCB will send you a description of the groups that are available to you. Read the list of groups carefully and choose those that are of most interest to you. In the SCB menu, click "<span>Join Groups</span>" and follow the instructions.</p>
+											<p>For each group button, there are current statuses that you can have (written opposite each group name):</p>
+											<p>"<span>apply</span>" means that you are not in the group yet</p>
+											<p>"<span>application pending</span>" - means that your application for membership is under consideration by the group administrator</p>
+											<p>"<span>You are a member</span>" means that you are already a member of the group</p>
+											<p>"<span>blocked</span>" - means that for some reason the administrator has blocked you from joining the group</p>
+											<p>After the approval of the application for membership, SCB automatically adds you to the group and introduces you to the current participants in the format: #new member First name Last name, position, company website.</p>
+										</li>
+										<li>
+											<h6>How to search for information about members through SCB</h6>
+											<p>The easiest and fastest way is to forward any message of the member you are interested in to SCB. In the response message, the SCB will send information about the member of interest in the following format</p>
+											<p><span>First name: </span></p>
+											<p><span>Last name: </span></p>
+											<p><span>Position: </span></p>
+											<p><span>Company website: </span></p>
+											<p><span>Username: </span></p>
+											<p><span>Company name:</span></p>
+											<p><span>City: </span></p>
+											<p>If this member has logged out of all company groups, then his data will not be searchable.</p>
+											<p>Through the SCB menu, you can search using 2 parameters:</p>
+											<p><strong>Search by name</strong> (username) in Telegram means that you can find a member by a complete match of his username. Only 1 issue per search. Click on the "Search by name" button and follow the instructions.</p>
+											<p><strong>Site search</strong> means that you can search for several employees of 1 company on the site of this company. A search must have at least 5 characters. In the issue there will be no more than 3 random contacts per search. Click on the "Search site" button and follow the instructions.</p>
+										</li>
+										<li>
+											<h6>How to edit information about yourself</h6>
+											<p>You can change your information at any time. When it may be required:</p>
+											<p>- a typo or mistake was made during the initial filling of data about yourself;</p>
+											<p>- the position or site of the organisation has changed;</p>
+											<p>Find the SCB in the global Telegram search or in the list of group participants named ****.</p>
+											<p><span>Open</span> the SCB and start chatting with it.</p>
+											<p>After starting the SCB, you must click on the "<span>START</span>" button.</p>
+											<p>In the main menu that appears, click on the "<span>About me</span>" button.</p>
+											<p>SCB will give you the current information about yourself. Click on the "<span>Edit</span>" button.</p>
+											<p>Choose what you want to edit:</p>
+											<p><span>edit first name</span></p>
+											<p><span>edit last name </span></p>
+											<p><span>edit position</span></p>
+											<p><span>edit the site</span> (meaning the site of the company you represent).</p>
+											<p>You can check how SCB shows information about you to other group members by simply forwarding any of your messages to SCB.</p>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- ./block__guide -->
+
+			<footer id="contact" class="footer">
+	<div class="container">
+		<div class="footer__top">
+			<div class="row">
+				<div class="col-md-5">
+					<h2 class="block__title block__title--footer">Contact us</h2>
+					<form>
+						<div class="form__group">
+							<input type="text" class="form__control" placeholder="Name *" required />
+						</div>
+						<div class="form__group">
+							<input type="email" class="form__control" placeholder="Email *" required />
+						</div>
+
+						<button type="submit" class="btn btn-footer-submit">send</button>
+					</form>
+				</div>
+				<div class="col-md-7 footer-image">
+					<div class="footer__image">
+						<img src="img/contacts.png" title="Footer Image" alt="img" loading="lazy" />
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer__middle">
+			<div class="row">
+				<div class="col-md-9">
+					<ul class="footer__menu">
+						<li>
+							<a href="#advantages">advantages</a>
+							<img src="img/svg/drop-little.svg" alt="drop" />
+						</li>
+						<li>
+							<a href="#tariffs">tariffs</a>
+							<img src="img/svg/drop-little.svg" alt="drop" />
+						</li>
+						<li>
+							<a href="#whomFor">whom for</a>
+							<img src="img/svg/drop-little.svg" alt="drop" />
+						</li>
+						<li>
+							<a href="#hiw">how works</a>
+							<img src="img/svg/drop-little.svg" alt="drop" />
+						</li>
+						<li>
+							<a href="#">payment</a>
+							<img src="img/svg/drop-little.svg" alt="drop" />
+						</li>
+					</ul>
+				</div>
+				<div class="col-md-3">
+					<div class="footer__payment">
+						<div class="footer__payment-group">
+							<div class="footer__payment-item">
+								<img src="img/svg/paypal.svg" alt="paypal" />
+							</div>
+							<div class="fiiter__payment-item">
+								<img src="img/svg/apple-pay.svg" alt="apple pay" />
+							</div>
+						</div>
+						<div class="footer__payment-group">
+							<div class="footer__payment-item">
+								<img src="img/svg/g-pay.svg" alt="gogole pay" />
+							</div>
+							<div class="fiiter__payment-item">
+								<img src="img/svg/visa.svg" alt="visa" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer__bottom">
+			<div class="row">
+				<div class="col-sm-9">
+					<div class="row">
+						<div class="col-sm-6">
+							<div class="footer__bottom-item footer__bottom-item--copy">
+								<p><span>© 2022 sea contact bot</span></p>
+								
+							</div>
+						</div>
+						<div class="col-sm-6">
+							<div class="footer__bottom-item footer__bottom-item--dev">
+								<p>Developed by <a href="">Piramis.dev</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-3">
+					<div class="footer__bottom-item footer__bottom-item--payment-system">
+						<p>Convenient Payment System</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+ <button class="btn btn-arrow-up">
+	<svg width="30" height="18" viewBox="0 0 30 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<path d="M29.3397 17.3117C28.9167 17.7524 28.3431 18 27.7451 18C27.147 18 26.5735 17.7524 26.1505 17.3117L14.9864 5.67462L3.82223 17.3117C3.39686 17.7399 2.82714 17.9769 2.23579 17.9715C1.64443 17.9662 1.07875 17.7189 0.660585 17.283C0.24242 16.8472 0.00522598 16.2575 8.75318e-05 15.6411C-0.00505283 15.0247 0.222278 14.4309 0.633115 13.9875L13.3918 0.68832C13.8148 0.247591 14.3883 1.36481e-06 14.9864 1.31253e-06C15.5844 1.26025e-06 16.158 0.24759 16.5809 0.688319L29.3397 13.9875C29.7625 14.4283 30 15.0262 30 15.6496C30 16.273 29.7625 16.8708 29.3397 17.3117Z" fill="#072E5C"/>
+		</svg>
+		
+</button>
+		</div>
+
+		<!--  modal contact us -->
+<div id="modalCountactUs" class="modal" style="display: none">
+	<div class="modal__wrapper">
+		<h2 class="block__title block__title--center">Contact us</h2>
+		<p>Please, fill in this form and we will contact with you as soon as possible.</p>
+		<form>
+			<input type="text" name="form_name" hidden value="Contact us" />
+			<div class="form__group">
+				<input type="text" class="form__control" name="user_name" placeholder="Name *" required />
+			</div>
+			<div class="form__group">
+				<input type="email" class="form__control" name="user_email" placeholder="Email *" required />
+			</div>
+			<div class="form__group">
+				<label class="form__checkbox-label">
+					<!-- <span class="form__checkbox-div">
+						<input type="checkbox" class="form__checkbox-input" checked />
+						<span class="form__checkbox-box"></span>
+					</span> -->
+
+					<span class="form__checkbox-content">
+						<span class="form__checkbox-description"> We will only use this data to contact you, no advertising</span>
+					</span>
+				</label>
+			</div>
+
+			<button type="submit" class="btn btn-secondary btn-submit">send</button>
+		</form>
+	</div>
+</div>
+<!--  ./modal contact us -->
+
+<!--  modal read guide -->
+<div id="modalReadGuide" class="modal" style="display: none">
+	<div class="modal__wrapper">
+		<h2 class="block__title block__title--center">Read guide</h2>
+		<p>Please, fill in this form and we will contact with you as soon as possible.</p>
+		<form>
+			<input type="text" name="form_name" hidden value="Read guide" />
+			<div class="form__group">
+				<input type="text" class="form__control" name="user_name" placeholder="Name *" required />
+			</div>
+			<div class="form__group">
+				<input type="email" class="form__control" name="user_email" placeholder="Email *" required />
+			</div>
+			<div class="form__group">
+				<label class="form__checkbox-label">
+					<!-- <span class="form__checkbox-div">
+						<input type="checkbox" class="form__checkbox-input" checked />
+						<span class="form__checkbox-box"></span>
+					</span> -->
+
+					<span class="form__checkbox-content">
+						<span class="form__checkbox-description"> We will only use this data to contact you, no advertising</span>
+					</span>
+				</label>
+			</div>
+
+			<button type="submit" class="btn btn-secondary btn-submit">send</button>
+		</form>
+	</div>
+</div>
+<!--  ./modal read guide -->
+
+<!--  modal watch video -->
+<div id="modalWatchVideo" class="modal modal--video" style="display: none">
+	<div class="modal__wrapper">
+		<h2 class="block__title block__title--center">Watch video</h2>
+		<p>In this video you will see how easy and convenient it is to use our chat bot.</p>
+		<div class="modal__video">
+			<video loop id="video1" poster="img/video-poster.png">
+				<source src="files/mixkit-checking-an-item-on-a-sales-site-on-a-cell-42123.webm" type="video/webm" />
+			</video>
+			<button class="video-btn" data-video="video1"><img src="img/svg/video-play.svg" alt="play" /></button>
+			<button class="video-fullscreen" data-video="video1"><img src="img/svg/video-fullscreen.svg" alt="play" /></button>
+		</div>
+	</div>
+</div>
+<!--  ./modal watch video -->
+
+<!-- learn more tariff standart -->
+<div id="modal-learn-tariff-standart8" class="modal modal--tariff" style="display: none">
+	<div class="modal__background modal__background--bg1">
+		<img class="" src="img/svg/modal-bg1.svg" alt="bg" />
+	</div>
+	<div class="modal__background modal__background--android">
+		<img class="" src="img/andoid-head.png" alt="bg" />
+	</div>
+
+	<div class="modal__wrapper">
+		<div class="row">
+			<div class="col-sm-12">
+				<h2 class="block__title block__title--modal block__title--modal-drop">
+					<i><b>S</b></i
+					>tandart
+				</h2>
+				<div class="modal__text-content">
+					<ul>
+						<li>Find information about a group member by sending his Telegram message to SCB
+						</li>
+						<li>Search for group members by company website
+						</li>
+						<li>Search for group members by Telegram username</li>
+						<li>Members can edit information about themselves (first name, last name, company website, position at the company)</li>
+						<li>Navigate groups. SCB shows which groups members can join and gives them the opportunity to apply for membership. It also shows members their status in each such group (pending; member; blocked)</li>
+						<li>Make it so that SCB can be activated in certain groups only.</li>
+						<li>Make SCB work only for members of the same group where the SCB is.</li>
+						<li>Each new group member is immediately introduced by SCB to other group members after being added.</li>
+						<li>Blacklist group members. These members can’t use SCB for searching information about other members in your groups.</li>
+						<li>Multigroup. Use the same SCB in more than one group simultaneously.</li>
+						<li>Approve/disapprove new group members using a single admin control panel.</li>
+						<li>Admin members to SCB registration by whitelisting (verified) company websites.</li>
+						<li>Mass messaging via SCB to members with a verified website.</li>
+						<li>Mass upload and download of company list (website, name, city, link to company profile on association website).</li>
+						<li>Mass upload and download of member list (first name, last name, position, company website, Telegram ID, group IDs the user is a member of).</li>
+						<li>Enrich the information with additional data on companies and participants pre-loaded into the database.</li>
+						<li>Edit the SCB individual welcome message (once the participant is verified and added to the database, the participant will receive a message that can be edited, such as a description of available groups or rules).</li>
+						
+					</ul>
+				</div>
+			</div>
+			
+			<div class="row-bottom"></div>
+		</div>
+
+	</div>
+	<div class="modal__btns">
+		<a href="#" class="show-all">show all</a>
+		<button data-modal="modalTryDemo8" class="btn btn-secondary">try demo</button>
+	</div>
+</div>
+<!-- ./learn more tariff standart -->
+
+<!-- learn more tariff standart80 -->
+<div id="modal-learn-tariff-standart80" class="modal modal--tariff" style="display: none">
+	<div class="modal__background modal__background--bg1">
+		<img class="" src="img/svg/modal-bg1.svg" alt="bg" />
+	</div>
+	<div class="modal__background modal__background--android">
+		<img class="" src="img/andoid-head.png" alt="bg" />
+	</div>
+	<div class="modal__wrapper">
+		<div class="row">
+			<div class="col-sm-12">
+				<h2 class="block__title block__title--modal block__title--modal-drop">
+					<i><b>S</b></i
+					>tandart
+				</h2>
+				<div class="modal__text-content">
+					<ul>
+						<li>Find information about a group member by sending his Telegram message to SCB
+						</li>
+						<li>Search for group members by company website
+						</li>
+						<li>Search for group members by Telegram username</li>
+						<li>Members can edit information about themselves (first name, last name, company website, position at the company)</li>
+						<li>Navigate groups. SCB shows which groups members can join and gives them the opportunity to apply for membership. It also shows members their status in each such group (pending; member; blocked)</li>
+						<li>Make it so that SCB can be activated in certain groups only.</li>
+						<li>Make SCB work only for members of the same group where the SCB is.</li>
+						<li>Each new group member is immediately introduced by SCB to other group members after being added.</li>
+						<li>Blacklist group members. These members can’t use SCB for searching information about other members in your groups.</li>
+						<li>Multigroup. Use the same SCB in more than one group simultaneously.</li>
+						<li>Approve/disapprove new group members using a single admin control panel.</li>
+						<li>Admin members to SCB registration by whitelisting (verified) company websites.</li>
+						<li>Mass messaging via SCB to members with a verified website.</li>
+						<li>Mass upload and download of company list (website, name, city, link to company profile on association website).</li>
+						<li>Mass upload and download of member list (first name, last name, position, company website, Telegram ID, group IDs the user is a member of).</li>
+						<li>Enrich the information with additional data on companies and participants pre-loaded into the database.</li>
+						<li>Edit the SCB individual welcome message (once the participant is verified and added to the database, the participant will receive a message that can be edited, such as a description of available groups or rules).</li>
+						
+					</ul>
+				</div>
+			</div>
+			<div class="row-bottom"></div>
+		</div>
+	</div>
+	<div class="modal__btns">
+		<a href="#" class="show-all">show all</a>
+		<button data-modal="modalTryDemo80" class="btn btn-secondary">try demo</button>
+	</div>
+</div>
+<!-- ./learn more tariff standart80 -->
+
+<!-- learn more tariff corporate -->
+<div id="modal-learn-tariff-corporate" class="modal modal--tariff" style="display: none">
+	<div class="modal__background modal__background--bg2">
+		<img class="" src="img/svg/modal-bg2.svg" alt="bg" />
+	</div>
+	<div class="modal__background modal__background--android">
+		<img class="" src="img/andoid-head.png" alt="bg" />
+	</div>
+
+	<div class="modal__wrapper">
+		<div class="row">
+			<div class="col-sm-6">
+				<h2 class="block__title block__title--modal">standart</h2>
+				<div class="modal__text-content">
+					<ul>
+						<li>Make it so that SCB can be activated in certain groups only.</li>
+						<li>Make SCB work only for members of the same group where the SCB is.</li>
+						<li>Approve/disapprove new group members using a single admin control panel.</li>
+						<li>Admit members to SCB registration by whitelisting (verified) company websites.</li>
+						<li>Mass messaging via SCB to members with a verified website.</li>
+						<li>Mass upload and download of company list (website, name, city, link to company profile on association website).</li>
+						<li>Blacklist group members. These members can’t use SCB for searching information about other members in your groups.</li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-sm-6">
+				<h2 class="block__title block__title--modal block__title--modal-drop">
+					<i><b>c</b></i
+					>orporate
+				</h2>
+				<div class="modal__text-content">
+					<ul>
+						<li>Each new group member is immediately introduced by SCB to other group members after being added.</li>
+						<li>Multigroup. Use the same SCB in more than one group simultaneously.</li>
+						<li>Mass upload and download of member list (first name, last name, position, company website, Telegram ID, group IDs the user is a member of).</li>
+						<li>Edit the SCB individual welcome message (once the participant is verified and added to the database, the participant will receive a message that can be edited, such as a description of available groups or rules).</li>
+						<li>Enrich the information with additional data on companies and participants pre-loaded into the database.</li>
+					</ul>
+				</div>
+			</div>
+			<div class="row-bottom"></div>
+		</div>
+	</div>
+	<div class="modal__btns">
+		<a href="#" class="show-all">show all</a>
+		<button data-modal="modalTryDemo" class="btn btn-secondary">send request</button>
+	</div>
+</div>
+<!-- ./learn more tariff corporate -->
+
+<!--  modal try demo -->
+<div id="modalTryDemo" class="modal" style="display: none">
+	<div class="modal__wrapper">
+		<h2 class="block__title block__title--center">Try demo</h2>
+		<p>Please, fill in this form and we will contact with you as soon as possible.</p>
+		<form>
+			<input type="text" hidden name="form_name" value="Try demo" />
+			<div class="form__group">
+				<input type="text" class="form__control" name="user_name" placeholder="Name *" required />
+			</div>
+			<div class="form__group">
+				<input type="email" class="form__control" name="user_email" placeholder="Email *" required />
+			</div>
+			<div class="form__group">
+				<label class="form__checkbox-label">
+					<!-- <span class="form__checkbox-div">
+						<input type="checkbox" class="form__checkbox-input" checked />
+						<span class="form__checkbox-box"></span>
+					</span> -->
+
+					<span class="form__checkbox-content">
+						<span class="form__checkbox-description"> We will only use this data to contact you, no advertising</span>
+					</span>
+				</label>
+			</div>
+
+			<button type="submit" class="btn btn-secondary btn-submit">send</button>
+		</form>
+	</div>
+</div>
+<!--  ./modal try demo -->
+
+<!--  modal try demo tariff8-->
+<div id="modalTryDemo8" class="modal" style="display: none">
+	<div class="modal__wrapper">
+		<h2 class="block__title block__title--center">Try demo</h2>
+		<p>Please, fill in this form and we will contact with you as soon as possible.</p>
+		<form>
+			<input type="text" hidden name="form_name" value="Try demo" />
+			<input type="text" hidden name="tariff_name" value="$8/month" />
+			<div class="form__group">
+				<input type="text" class="form__control" name="user_name" placeholder="Name *" required />
+			</div>
+			<div class="form__group">
+				<input type="email" class="form__control" name="user_email" placeholder="Email *" required />
+			</div>
+			<div class="form__group">
+				<label class="form__checkbox-label">
+					<!-- <span class="form__checkbox-div">
+						<input type="checkbox" class="form__checkbox-input" checked />
+						<span class="form__checkbox-box"></span>
+					</span> -->
+
+					<span class="form__checkbox-content">
+						<span class="form__checkbox-description"> We will only use this data to contact you, no advertising</span>
+					</span>
+				</label>
+			</div>
+
+			<button type="submit" class="btn btn-secondary btn-submit">send</button>
+		</form>
+	</div>
+</div>
+<!--  ./modal try demo -->
+
+<!--  modal try demo tariff80-->
+<div id="modalTryDemo80" class="modal" style="display: none">
+	<div class="modal__wrapper">
+		<h2 class="block__title block__title--center">Try demo</h2>
+		<p>Please, fill in this form and we will contact with you as soon as possible.</p>
+		<form>
+			<input type="text" hidden name="form_name" value="Try demo" />
+			<input type="text" hidden name="tariff_name" value="$80/year" />
+			<div class="form__group">
+				<input type="text" class="form__control" name="user_name" placeholder="Name *" required />
+			</div>
+			<div class="form__group">
+				<input type="email" class="form__control" name="user_email" placeholder="Email *" required />
+			</div>
+			<div class="form__group">
+				<label class="form__checkbox-label">
+					<!-- <span class="form__checkbox-div">
+						<input type="checkbox" class="form__checkbox-input" checked />
+						<span class="form__checkbox-box"></span>
+					</span> -->
+
+					<span class="form__checkbox-content">
+						<span class="form__checkbox-description"> We will only use this data to contact you, no advertising</span>
+					</span>
+				</label>
+			</div>
+
+			<button type="submit" class="btn btn-secondary btn-submit">send</button>
+		</form>
+	</div>
+</div>
+<!--  ./modal try demo -->
+
+<!--  modal try demo tariff80-->
+<div id="modalContactCorporate" class="modal" style="display: none">
+	<div class="modal__wrapper">
+		<h2 class="block__title block__title--center">Contact Us</h2>
+		<p>Please, fill in this form and we will contact with you as soon as possible.</p>
+		<form>
+			<input type="text" hidden name="form_name" value="Contact Us" />
+			<input type="text" hidden name="tariff_name" value="Corporate" />
+			<div class="form__group">
+				<input type="text" class="form__control" name="user_name" placeholder="Name *" required />
+			</div>
+			<div class="form__group">
+				<input type="email" class="form__control" name="user_email" placeholder="Email *" required />
+			</div>
+			<div class="form__group">
+				<label class="form__checkbox-label">
+					<!-- <span class="form__checkbox-div">
+						<input type="checkbox" class="form__checkbox-input" checked />
+						<span class="form__checkbox-box"></span>
+					</span> -->
+
+					<span class="form__checkbox-content">
+						<span class="form__checkbox-description"> We will only use this data to contact you, no advertising</span>
+					</span>
+				</label>
+			</div>
+
+			<button type="submit" class="btn btn-secondary btn-submit">send</button>
+		</form>
+	</div>
+</div>
+<!--  ./modal try demo -->
+
+
+	</body>
+	<script src="js/vendors.js?_v=20221024183154"></script>
+	<script src="js/app.min.js?_v=20221024183154"></script>
+</html>

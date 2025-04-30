@@ -1,0 +1,40 @@
+.write-us {
+  padding: 1.5em 0;
+  text-align: center;
+}
+.write-us__note {
+  color: #3C3F45;
+  font: 1.125em/2.3333333333 "rubik-reg", sans-serif;
+  margin: 0.7222222222em 0 0;
+}
+@media (max-width: 767px) {
+  .write-us__note {
+    font: 0.875em/1.7142857143 "rubik-reg", sans-serif;
+  }
+}
+.write-us .typical-btn-bigger {
+  margin-top: 2.5em;
+}
+.write-us .subtitle--write-us {
+  margin: 0.3333333333em 0 0;
+}
+@media (max-width: 767px) {
+  .write-us .subtitle--write-us {
+    font: 1.125em/1.3333333333 "rubik-reg", sans-serif;
+  }
+}
+.write-us .list-chevron-bullet--write-us {
+  margin-top: 1.6666666667em;
+}
+@media (max-width: 767px) {
+  .write-us .list-chevron-bullet--write-us {
+    font: 1.125em/2 "rubik-reg", sans-serif;
+  }
+  .write-us .list-chevron-bullet--write-us li {
+    padding-right: 1.4444444444em;
+  }
+  .write-us .list-chevron-bullet--write-us li::before {
+    width: 1em;
+    height: 1em;
+  }
+}

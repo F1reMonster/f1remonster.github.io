@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="271px" height="598px" viewBox="0 0 271 598" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>4E99A460-5361-4461-A93D-A7345107D252</title>
+    <defs>
+        <linearGradient x1="39.4329379%" y1="31.0618099%" x2="106.405556%" y2="29.8061915%" id="linearGradient-1">
+            <stop stop-color="#8FE600" offset="0%"></stop>
+            <stop stop-color="#2FC059" offset="90.4556381%"></stop>
+            <stop stop-color="#218370" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Concept" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" fill-opacity="0.2">
+        <g id="Desktop-1920_DISCOUNT_bank-teams" transform="translate(-1649.000000, -2601.000000)" fill="url(#linearGradient-1)">
+            <path d="M2022.26598,3134.76607 C2168.52853,3134.76607 2301.25641,2836.56869 2301.25641,2713.8773 C2301.25641,2591.1859 2004.35073,2551.76607 1858.08818,2551.76607 C1711.82563,2551.76607 1593.25641,2651.2271 1593.25641,2773.91849 C1593.25641,2896.60989 1876.00343,3134.76607 2022.26598,3134.76607 Z" id="Oval-Copy-3" transform="translate(1947.256410, 2843.266073) scale(-1, -1) rotate(-40.000000) translate(-1947.256410, -2843.266073) "></path>
+        </g>
+    </g>
+</svg>

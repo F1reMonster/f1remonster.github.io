@@ -1,0 +1,48 @@
+.site-pagination {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-pagination {
+  padding-top: 2em;
+  font-family: "rubik-reg", sans-serif;
+  color: #3c3f45;
+}
+@media screen and (max-width: 767px) {
+  .site-pagination {
+    padding-top: 1.5em;
+  }
+}
+.site-pagination li {
+  display: inline-block;
+  font-size: 1.125em;
+  line-height: 1.2222222222;
+  position: relative;
+}
+@media screen and (max-width: 767px) {
+  .site-pagination li {
+    margin-top: -3px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .site-pagination li {
+    font-size: 1em;
+    line-height: 1.1875;
+    margin-bottom: 3px;
+  }
+}
+.site-pagination li::after {
+  content: ">";
+  margin: 0 5px;
+}
+.site-pagination li:last-child::after {
+  display: none;
+}
+.site-pagination a {
+  color: inherit;
+}
+.site-pagination a:focus-visible {
+  outline: 1px dashed #00a661;
+  outline-offset: 1px;
+}

@@ -1,0 +1,7201 @@
+@font-face {
+	src: url("../fonts/Montserrat-Black.woff") format("woff"), url("../fonts/Montserrat-Black.woff2") format("woff2");
+	font-family: "Monserrat";
+	font-weight: 900;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	src: url("../fonts/Montserrat-BlackItalic.woff") format("woff"), url("../fonts/Montserrat-BlackItalic.woff2") format("woff2");
+  font-family: "Monserrat";
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+	src: url("../fonts/Montserrat-Bold.woff") format("woff"), url("../fonts/Montserrat-Bold.woff2") format("woff2");
+  font-family: "Monserrat";
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+	src: url("../fonts/Montserrat-ExtraBoldItalic.woff") format("woff"), url("../fonts/Montserrat-ExtraBoldItalic.woff2") format("woff2");
+  font-family: "Monserrat";
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+	src: url("../fonts/Montserrat-BoldItalic.woff") format("woff"), url("../fonts/Montserrat-BoldItalic.woff2") format("woff2");
+  font-family: "Monserrat";
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+	src: url("../fonts/Montserrat-ExtraBold.woff") format("woff"), url("../fonts/Montserrat-ExtraBold.woff2") format("woff2");
+  font-family: "Monserrat";
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+	src: url("../fonts/Montserrat-ExtraLightItalic.woff") format("woff"), url("../fonts/Montserrat-ExtraLightItalic.woff2") format("woff2");
+  font-family: "Monserrat";
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+	src: url("../fonts/Montserrat-ExtraLight.woff") format("woff"), url("../fonts/Montserrat-ExtraLight.woff2") format("woff2");
+  font-family: "Monserrat";
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+	src: url("../fonts/Montserrat-Light.woff") format("woff"), url("../fonts/Montserrat-Light.woff2") format("woff2");
+  font-family: "Monserrat";
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+	src: url("../fonts/Montserrat-LightItalic.woff") format("woff"), url("../fonts/Montserrat-LightItalic.woff2") format("woff2");
+  font-family: "Monserrat";
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+	src: url("../fonts/Montserrat-Medium.woff") format("woff"), url("../fonts/Montserrat-Medium.woff2") format("woff2");
+  font-family: "Monserrat";
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+	src: url("../fonts/Montserrat-MediumItalic.woff") format("woff"), url("../fonts/Montserrat-MediumItalic.woff2") format("woff2");
+  font-family: "Monserrat";
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+	src: url("../fonts/Montserrat-SemiBoldItalic.woff") format("woff"), url("../fonts/Montserrat-SemiBoldItalic.woff2") format("woff2");
+  font-family: "Monserrat";
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+	src: url("../fonts/Montserrat-SemiBold.woff") format("woff"), url("../fonts/Montserrat-SemiBold.woff2") format("woff2");
+  font-family: "Monserrat";
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+	src: url("../fonts/Montserrat-Thin.woff") format("woff"), url("../fonts/Montserrat-Thin.woff2") format("woff2");
+  font-family: "Monserrat";
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+	src: url("../fonts/Montserrat-ThinItalic.woff") format("woff"), url("../fonts/Montserrat-ThinItalic.woff2") format("woff2");
+  font-family: "Monserrat";
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+	src: url("../fonts/Sifon-Pro.woff") format("woff"), url("../fonts/Sifon-Pro.woff2") format("woff2");
+  font-family: "SifonnPro";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+	src: url("../fonts/Montserrat-Italic.woff") format("woff"), url("../fonts/Montserrat-Italic.woff2") format("woff2");
+  font-family: "Monserrat";
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+	src: url("../fonts/Montserrat-Regular.woff") format("woff"), url("../fonts/Montserrat-Regular.woff2") format("woff2");
+  font-family: "Monserrat";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+.row {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	margin-right: -16px;
+	margin-left: -16px;
+}
+
+.row > * {
+	margin-right: 16px;
+	margin-left: 16px;
+	width: 100%;
+	max-width: 100%;
+}
+
+.col {
+	-webkit-box-flex: 1;
+	-ms-flex: 1 0 0%;
+	flex: 1 0 0%;
+}
+
+.btn {
+	display: -webkit-inline-box;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	border: 0;
+	padding: 0 4px;
+	height: 48px;
+	min-width: 200px;
+	text-transform: uppercase;
+}
+
+.btn span {
+	margin-right: 12px;
+	font-family: "SifonnPro", sans-serif;
+}
+
+.btn svg {
+	-ms-flex-negative: 0;
+	flex-shrink: 0;
+	-webkit-transition: all 0.2s ease-out;
+	-o-transition: all 0.2s ease-out;
+	transition: all 0.2s ease-out;
+}
+
+.btn:hover svg {
+	-webkit-transform: translateX(5px);
+	-ms-transform: translateX(5px);
+	transform: translateX(5px);
+}
+
+.btn-yellow {
+	padding: 0 24px;
+	font-weight: 700;
+	font-size: 16px;
+	color: #101214;
+	background: #f2c53d;
+}
+
+.btn-light {
+	border: 1px solid #475366;
+	padding: 14px 24px;
+	min-width: 242px;
+	font-weight: 600;
+	font-size: 16px;
+	text-transform: none;
+	color: #2c333f;
+	background: #fff;
+}
+
+.btn-light span {
+	margin-right: 0;
+	margin-left: 10px;
+}
+
+.btn.icon-left:hover svg {
+	-webkit-transform: translateX(-5px);
+	-ms-transform: translateX(-5px);
+	transform: translateX(-5px);
+}
+
+.row {
+	row-gap: 32px;
+}
+
+.template-2--outstaffing {
+	padding: 193px 0 90px;
+	background-image: none;
+}
+
+.template-2--outstaffing::after {
+	display: block;
+	content: "";
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+
+.template-2--outstaffing .template-2-image img {
+	position: absolute;
+	left: -273px;
+	top: -42px;
+}
+
+.template-2--outstaffing .template-2-content::before {
+	content: none;
+}
+
+.template-2--outstaffing .template-2-header {
+	margin-bottom: 27px;
+}
+
+.template-2--outstaffing .template-2-header span:first-child {
+	color: #2c333f;
+}
+
+.template-2--outstaffing .template-2-header span:nth-of-type(2) {
+	font-family: "SifonnPro", sans-serif;
+	color: #f2c53d;
+}
+
+.template-2--outstaffing .template-2-header::after {
+	content: none;
+}
+
+.template-2--outstaffing .template-2-text h3 {
+	font-weight: 500;
+	font-size: 28px;
+	line-height: 41px;
+	letter-spacing: 0.03em;
+	color: #505050;
+	margin-bottom: 61px;
+	max-width: 576px;
+}
+
+.template-2--outstaffing .template-2-text p {
+	max-width: 576px;
+}
+
+.template-2--outstaffing .template-2-text .manager {
+	margin-top: 60px;
+}
+
+.template-2--php-outstaffing::after {
+	width: 404px;
+	height: 152px;
+	background: url("../img/template_2_php_outstaffing_background_letters.png") no-repeat;
+}
+
+.template-2--php-outstaffing .template-2-header {
+	margin-bottom: 27px;
+}
+
+.template-2--php-outstaffing .template-2-header span:first-child {
+	color: #2c333f;
+}
+
+.template-2--php-outstaffing .template-2-header span:nth-of-type(2) {
+	font-family: "SifonnPro", sans-serif;
+	color: #f2c53d;
+}
+
+.template-2--php-outstaffing .template-2-header::after {
+	content: none;
+}
+
+.template-2--java-outstaffing::after {
+	width: 495px;
+	height: 152px;
+	right: -30px;
+	background: url("../img/template_2_java_outstaffing_background_letters.png") no-repeat;
+}
+
+.template-2--java-outstaffing .template-2-header {
+	margin-bottom: 27px;
+}
+
+.template-2--java-outstaffing .template-2-header span:first-child {
+	color: #2c333f;
+}
+
+.template-2--java-outstaffing .template-2-header span:nth-of-type(2) {
+	font-family: "SifonnPro", sans-serif;
+	color: #2c333f;
+}
+
+.template-2--java-outstaffing .template-2-header span:nth-of-type(3) {
+	color: #f2c53d;
+}
+
+.template-2--java-outstaffing .template-2-header::after {
+	content: none;
+}
+
+.template-2--net-outstaffing::after {
+	width: 421px;
+	height: 152px;
+	right: 0;
+	background: url("../img/template_2_net_outstaffing_background_letters.png") no-repeat;
+}
+
+.template-2--net-outstaffing .template-2-header {
+	font-size: 99px;
+}
+
+.template-3--nodejs {
+	padding: 141px 0 220px;
+}
+
+.template-3--nodejs::before {
+	background: none;
+}
+
+.template-3--nodejs::after {
+	background: none;
+}
+
+.template-3--nodejs .template-3-lines .lines-bg-item:nth-child(5)::before {
+	background: url("../img/java-background.png") no-repeat;
+	background-size: cover;
+}
+
+.template-3--nodejs .template-3-header {
+	margin-bottom: 32px;
+	max-width: 1020px;
+	font-size: 72px;
+	line-height: 74px;
+}
+
+.template-3--nodejs .tabs::before {
+	content: "";
+	position: absolute;
+	right: -123px;
+	top: -137px;
+	width: 252px;
+	height: 228px;
+	background: url("../img/triangle-nodejs.svg") no-repeat;
+	background-size: contain;
+}
+
+.template-3--nodejs .tabs::after {
+	right: -120px;
+	top: 97px;
+}
+
+.template-3--reactjs {
+	padding: 141px 0 220px;
+}
+
+.template-3--reactjs::before {
+	background: none;
+}
+
+.template-3--reactjs::after {
+	background: none;
+}
+
+.template-3--reactjs .template-3-lines .lines-bg-item:nth-child(5)::before {
+	background: url("../img/reactjs_background.png") no-repeat;
+	background-size: cover;
+}
+
+.template-3--reactjs .template-3-header {
+	margin-bottom: 32px;
+	max-width: 1020px;
+	font-size: 72px;
+	line-height: 74px;
+}
+
+.template-3--reactjs .template-3-caption {
+	max-width: 750px;
+}
+
+.template-3--reactjs .tabs::before {
+	content: "";
+	position: absolute;
+	right: -89px;
+	top: -164px;
+	width: 252px;
+	height: 228px;
+	background: url("../img/tabs-top--reactjs.png") no-repeat;
+	background-size: contain;
+}
+
+.template-3--reactjs .tabs::after {
+	right: -15px;
+	top: unset;
+	bottom: -151px;
+	width: 268px;
+	height: 288px;
+	background: url("../img/tabs-bottom--reactjs.png") no-repeat;
+}
+
+.template-3--python {
+	padding: 141px 0 220px;
+}
+
+.template-3--python::before {
+	background: none;
+}
+
+.template-3--python::after {
+	background: none;
+}
+
+.template-3--python .template-3-lines .lines-bg-item:nth-child(5)::before {
+	background: url("../img/python_background.png") no-repeat;
+	background-size: cover;
+}
+
+.template-3--python .template-3-header {
+	margin-bottom: 32px;
+	max-width: 930px;
+	font-size: 72px;
+	line-height: 74px;
+}
+
+.template-3--python .template-3-caption {
+	max-width: 633px;
+	font-size: 12px;
+}
+
+.template-3--python .tabs::before {
+	content: "";
+	position: absolute;
+	right: 21px;
+	top: -85px;
+	width: 186px;
+	height: 186px;
+	background: url("../img/template-3-python-tabs-top.png") no-repeat;
+	background-size: contain;
+}
+
+.template-3--python .tabs::after {
+	right: 64px;
+	top: unset;
+	bottom: -34px;
+	width: 103px;
+	height: 78px;
+	background: url("../img/template-3-python-tabs-bottom.png") no-repeat;
+}
+
+.template-3--react-native .template-3-lines .lines-bg-item:nth-child(5)::before {
+	background: url("../img/react-native-background.png") no-repeat;
+	background-size: cover;
+}
+
+.template-3--react-native .template-3-header {
+	max-width: unset;
+}
+
+.template-3--react-native .template-3-caption {
+	position: relative;
+	z-index: 5;
+	max-width: 600px;
+}
+
+.template-3--react-native .tabs::before {
+	content: "";
+	position: absolute;
+	right: 40px;
+	top: -80px;
+	width: 143px;
+	height: 183px;
+	background: url("../img/template-3-react-native-before.png") no-repeat;
+	background-size: contain;
+}
+
+.template-3--machine-learning {
+	padding: 141px 0 220px;
+}
+
+.template-3--machine-learning::before {
+	background: none;
+}
+
+.template-3--machine-learning::after {
+	background: none;
+}
+
+.template-3--machine-learning .template-3-lines .lines-bg-item:nth-child(5)::before {
+	background: url("../img/machine-learning-background.png") no-repeat;
+	background-size: cover;
+}
+
+.template-3--machine-learning .template-3-header {
+	position: relative;
+	margin-bottom: 32px;
+	max-width: 1120px;
+	font-size: 72px;
+	line-height: 74px;
+}
+
+.template-3--machine-learning .template-3-header::after {
+	content: "";
+	position: absolute;
+	right: 150px;
+	top: -100px;
+	width: 131px;
+	height: 131px;
+	background: url("../img/template-3-header-after.png") no-repeat;
+}
+
+.template-3--machine-learning .template-3-caption {
+	max-width: 750px;
+}
+
+.template-3--machine-learning .template-3-tabs {
+	height: 350px;
+}
+
+.template-3--machine-learning .tabs::before {
+	content: "";
+	position: absolute;
+	right: -350px;
+	top: -264px;
+	width: 252px;
+	height: 228px;
+	background: url("../img/template-3-ml-before.png") no-repeat;
+	background-size: contain;
+}
+
+.template-3--machine-learning .tabs::after {
+	right: -90px;
+	top: 100px;
+	width: 268px;
+	height: 64px;
+	background: url("../img/template-3-ml-after.png") no-repeat;
+}
+
+.template-3--machine-learning .tabs .tab-content::before {
+	content: none;
+}
+
+.template-3--machine-learning .tabs .tab-content-text {
+	height: 230px;
+}
+
+.template-3--flutter {
+	padding: 180px 0 140px;
+}
+
+.template-3--flutter::before {
+	background: none;
+}
+
+.template-3--flutter::after {
+	background: none;
+}
+
+.template-3--flutter .template-3-lines .lines-bg-item:nth-child(5)::before {
+	background: url("../img/flutter-background.png") no-repeat;
+	background-position: center center;
+	background-size: cover;
+}
+
+.template-3--flutter .template-3-header {
+	margin-bottom: 32px;
+	max-width: 1020px;
+	font-size: 72px;
+	line-height: 74px;
+}
+
+.template-3--flutter .template-3-caption {
+	max-width: 750px;
+}
+
+.template-3--flutter .tabs::before {
+	content: "";
+	position: absolute;
+	right: -71px;
+	top: -164px;
+	width: 252px;
+	height: 228px;
+	background: url("../img/template-3-flutter-top-right.svg") no-repeat;
+	background-size: contain;
+}
+
+.template-3--flutter .tabs::after {
+	right: -15px;
+	top: unset;
+	bottom: -151px;
+	width: 268px;
+	height: 288px;
+	background: url("../img/tabs-bottom--reactjs.png") no-repeat;
+}
+
+.template-3--flutter .tabs .tab-content {
+	height: 350px;
+}
+
+.template-3--flutter .tabs .tab-content-text {
+	height: 220px;
+}
+
+.template-3--flutter-de {
+	padding: 100px 0 140px;
+}
+
+.template-3--angular {
+	padding: 180px 0 140px;
+}
+
+.template-3--angular::before {
+	background: none;
+}
+
+.template-3--angular::after {
+	background: none;
+}
+
+.template-3--angular .template-3-lines .lines-bg-item:nth-child(5)::before {
+	background: url("../img/angular/angular-software-background.png") no-repeat;
+	background-position: center center;
+	background-size: cover;
+}
+
+.template-3--angular .template-3-header {
+	margin-bottom: 32px;
+	max-width: 1020px;
+	font-size: 72px;
+	line-height: 74px;
+}
+
+.template-3--angular .template-3-caption {
+	max-width: 750px;
+}
+
+.template-3--angular .tabs::before {
+	content: "";
+	position: absolute;
+	right: -55px;
+	top: -110px;
+	width: 297px;
+	height: 672px;
+	background: url("../img/angular/template-3-angular-software.svg") no-repeat;
+	background-size: contain;
+}
+
+.template-3--angular .tabs::after {
+	content: none;
+}
+
+.template-3--angular .tabs .tab-content {
+	height: 400px;
+}
+
+.template-3--angular .tabs .tab-content-text {
+	height: 220px;
+}
+
+.template-3--vuejs {
+	padding: 100px 0 140px;
+}
+
+.template-3--vuejs::before {
+	background: none;
+}
+
+.template-3--vuejs::after {
+	background: none;
+}
+
+.template-3--vuejs .template-3-lines .lines-bg-item:nth-child(5)::before {
+	background: url("../img/vuejs/vuejs-background.png") no-repeat;
+	background-position: center center;
+	background-size: cover;
+}
+
+.template-3--vuejs .template-3-header {
+	margin-bottom: 32px;
+	max-width: 1020px;
+	font-size: 72px;
+	line-height: 74px;
+}
+
+.template-3--vuejs .template-3-caption {
+	max-width: 750px;
+}
+
+.template-3--vuejs .template-3-tabs {
+	height: 477px;
+}
+
+.template-3--vuejs .tabs::before {
+	content: "";
+	position: absolute;
+	right: -75px;
+	top: -110px;
+	width: 297px;
+	height: 672px;
+	background: url("../img/vuejs/template-3-vuejs-before.svg") no-repeat;
+	background-size: contain;
+}
+
+.template-3--vuejs .tabs::after {
+	content: none;
+}
+
+.template-3--vuejs .tabs .tab-content {
+	height: 400px;
+}
+
+.template-3--vuejs .tabs .tab-content-text {
+	height: 220px;
+}
+
+.template-4 .ps--active-y > .ps__rail-y {
+	background-color: #fff;
+}
+
+.template-4 .ps__thumb-y {
+	background-color: #475366;
+}
+
+.template-4 .ps__rail-y.ps--clicking .ps__thumb-y,
+.template-4 .ps__rail-y:focus > .ps__thumb-y,
+.template-4 .ps__rail-y:hover > .ps__thumb-y {
+	background-color: #475366;
+}
+
+.template-4--nodejs .cases-slider-item-title,
+.template-4--reactjs .cases-slider-item-title {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-flow: column;
+	flex-flow: column;
+}
+
+.template-4--nodejs .cases-slider-item-subtitle,
+.template-4--reactjs .cases-slider-item-subtitle {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	margin-bottom: 16px;
+}
+
+.template-4--nodejs .cases-slider-item-subtitle svg,
+.template-4--reactjs .cases-slider-item-subtitle svg {
+	margin-right: 10px;
+	width: 16px;
+	height: 16px;
+}
+
+.template-4--nodejs .cases-slider-item-subtitle p,
+.template-4--reactjs .cases-slider-item-subtitle p {
+	margin-right: 30px;
+	color: #fff;
+}
+
+.template-4--nodejs .cases-slider-item-description p,
+.template-4--reactjs .cases-slider-item-description p {
+	position: relative;
+	padding-right: 20px;
+	max-height: 252px;
+}
+
+.template-7--nodejs {
+	padding: 115px 0 48px;
+}
+
+.template-7--nodejs .template-7-lines .lines-bg-item:nth-child(5)::before {
+	background: url("../img/dot-net-contact.png") no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.template-7--reactjs {
+	padding: 129px 0 48px;
+}
+
+.template-7--reactjs .template-7-lines .lines-bg-item:nth-child(5)::before {
+	background: url("../img/reactjs-contact.png") no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.template-7--python {
+	padding: 129px 0 48px;
+}
+
+.template-7--python .template-7-lines .lines-bg-item:nth-child(5)::before {
+	background: url("../img/python-contact.png") no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.template-7--outstaffing {
+	padding: 80px 0 48px;
+}
+
+.template-7--php-outstaffing .template-7-lines .lines-bg-item:nth-child(5)::before {
+	right: calc(-100% + 2px);
+	background: url("../img/template-7-php-outstaffing-background.png") no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.template-7--java-outstaffing .template-7-lines .lines-bg-item:nth-child(5)::before {
+	right: calc(-100% + 2px);
+	background: url("../img/template-7-java-outstaffing-background.png") no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.template-7--net-outstaffing .template-7-lines .lines-bg-item:nth-child(5)::before {
+	right: calc(-100% + 2px);
+	background: url("../img/template-7-net-outstaffing-background.png") no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.template-7--machine-learning {
+	padding: 129px 0 48px;
+}
+
+.template-7--machine-learning .template-7-lines .lines-bg-item:nth-child(5)::before {
+	background: url("../img/template-7-machine-learning-background.png") no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.template-7--flutter {
+	padding: 129px 0 48px;
+}
+
+.template-7--flutter .template-7-lines .lines-bg-item:nth-child(5)::before {
+	background: url("../img/flutter-contact.png") no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.template-7--angular {
+	padding: 129px 0 48px;
+}
+
+.template-7--angular .template-7-lines .lines-bg-item:nth-child(5)::before {
+	background: url("../img/angular/template-7-angular-software.png") no-repeat;
+	background-position: right center;
+	background-size: cover;
+}
+
+.template-7--angular {
+	padding: 129px 0 48px;
+}
+
+.template-7--angular .template-7-lines .lines-bg-item:nth-child(5)::before {
+	background: url("../img/vuejs/template-7-vuejs.png") no-repeat;
+	background-position: right center;
+	background-size: cover;
+}
+
+.template-8--nodejs {
+	padding: 296px 0 275px;
+	background-image: none;
+}
+
+.template-8--nodejs::before {
+	content: "";
+	position: absolute;
+	left: 70px;
+	top: 5px;
+	display: block;
+	width: 499px;
+	height: 433px;
+	background: url("../img/nodejs-top-left.png") no-repeat;
+}
+
+.template-8--nodejs::after {
+	right: 0;
+	bottom: 0;
+	width: 478px;
+	height: 155px;
+	background: url("../img/node.png") no-repeat;
+}
+
+.template-8--nodejs .template-8-header {
+	font-size: 110px;
+	line-height: 98%;
+}
+
+.template-8--nodejs .template-8-image {
+	position: inherit;
+}
+
+.template-8--nodejs .template-8-image::before {
+	display: none;
+}
+
+.template-8--nodejs .template-8-image img {
+	position: absolute;
+	right: -150px;
+	top: -120px;
+	display: block;
+}
+
+.template-8--reactjs {
+	padding: 296px 0 275px;
+	background-image: none;
+}
+
+.template-8--reactjs::after {
+	right: 0;
+	bottom: 0;
+	width: 478px;
+	height: 155px;
+	background: url("../img/react.png") no-repeat;
+}
+
+.template-8--reactjs .template-8-wrapper {
+	position: relative;
+}
+
+.template-8--reactjs .template-8-wrapper::before {
+	content: "";
+	position: absolute;
+	left: -150px;
+	top: -222px;
+	display: block;
+	width: 166px;
+	height: 280px;
+	background: url("../img/reactjs-lines-top-left.png") no-repeat;
+}
+
+.template-8--reactjs .template-8-wrapper::after {
+	content: "";
+	position: absolute;
+	right: -152px;
+	top: -222px;
+	display: block;
+	width: 70px;
+	height: 340px;
+	background: url("../img/reactjs-lines-top-right.png") no-repeat;
+}
+
+.template-8--reactjs .template-8-header {
+	font-size: 110px;
+	line-height: 98%;
+}
+
+.template-8--reactjs .template-8-image {
+	position: inherit;
+}
+
+.template-8--reactjs .template-8-image::before {
+	display: none;
+}
+
+.template-8--reactjs .template-8-image img {
+	position: absolute;
+	right: -150px;
+	top: -120px;
+	display: block;
+}
+
+.template-8--python {
+	padding: 296px 0 275px;
+	background-image: none;
+}
+
+.template-8--python::after {
+	right: 0;
+	bottom: 0;
+	width: 478px;
+	height: 195px;
+	background: url("../img/python.png") no-repeat;
+}
+
+.template-8--python .template-8-wrapper {
+	position: relative;
+}
+
+.template-8--python .template-8-wrapper::before {
+	content: "";
+	position: absolute;
+	left: -150px;
+	top: -274px;
+	display: block;
+	width: 68px;
+	height: 630px;
+	background: url("../img/python-lines-top-left.png") no-repeat;
+}
+
+.template-8--python .template-8-wrapper::after {
+	content: "";
+	position: absolute;
+	right: -152px;
+	top: -222px;
+	display: block;
+	width: 281px;
+	height: 281px;
+	background: url("../img/python-lines-top-right.png") no-repeat;
+}
+
+.template-8--python .template-8-header {
+	font-size: 110px;
+	line-height: 98%;
+}
+
+.template-8--python .template-8-text {
+	max-width: 473px;
+}
+
+.template-8--python .template-8-image {
+	position: inherit;
+}
+
+.template-8--python .template-8-image::before {
+	background: url(../img/python-img-before.png) no-repeat;
+	width: 143px;
+	height: 143px;
+	left: 685px;
+	top: 340px;
+}
+
+.template-8--python .template-8-image img {
+	position: absolute;
+	right: -242px;
+	top: -120px;
+	display: block;
+}
+
+.template-8--react-native {
+	padding: 296px 0 298px;
+}
+
+.template-8--react-native::after {
+	right: -75px;
+	bottom: 0;
+	width: 600px;
+	height: 155px;
+	background: url("../img/react-native.png") no-repeat;
+}
+
+.template-8--react-native .template-8-text {
+	max-width: 520px;
+}
+
+.template-8--machine-learning {
+	padding: 180px 0 190px;
+	background-image: none;
+}
+
+.template-8--machine-learning::before {
+	content: none;
+}
+
+.template-8--machine-learning::after {
+	right: 0;
+	bottom: 0;
+	width: 284px;
+	height: 155px;
+	background: url("../img/ml.png") no-repeat;
+}
+
+.template-8--machine-learning .template-8-wrapper {
+	position: relative;
+}
+
+.template-8--machine-learning .template-8-wrapper::before {
+	content: "";
+	position: absolute;
+	left: -150px;
+	top: -105px;
+	display: block;
+	width: 72px;
+	height: 341px;
+	background: url("../img/machine-learning-lines-top-left.png") no-repeat;
+}
+
+.template-8--machine-learning .template-8-wrapper::after {
+	content: none;
+}
+
+.template-8--machine-learning .template-8-header {
+	max-width: 800px;
+	font-size: 90px;
+	line-height: 98%;
+}
+
+.template-8--machine-learning .template-8-image {
+	position: inherit;
+}
+
+.template-8--machine-learning .template-8-image::before {
+	display: none;
+}
+
+.template-8--machine-learning .template-8-image img {
+	position: absolute;
+	right: -350px;
+	top: -220px;
+	display: block;
+}
+
+.template-8--flutter {
+	padding: 290px 0 171px;
+	background-image: none;
+}
+
+.template-8--flutter::after {
+	right: 0;
+	bottom: 0;
+	width: 450px;
+	height: 155px;
+	background: url("../img/flutter.png") no-repeat;
+}
+
+.template-8--flutter .template-8-wrapper {
+	position: relative;
+}
+
+.template-8--flutter .template-8-wrapper::before {
+	content: "";
+	position: absolute;
+	left: -150px;
+	top: -222px;
+	display: block;
+	width: 166px;
+	height: 280px;
+	background: url("../img/reactjs-lines-top-left.png") no-repeat;
+}
+
+.template-8--flutter .template-8-wrapper::after {
+	content: "";
+	position: absolute;
+	right: -152px;
+	top: -222px;
+	display: block;
+	width: 70px;
+	height: 340px;
+	background: url("../img/reactjs-lines-top-right.png") no-repeat;
+}
+
+.template-8--flutter .template-8-header {
+	font-size: 110px;
+	line-height: 98%;
+}
+
+.template-8--flutter .template-8-image {
+	position: inherit;
+}
+
+.template-8--flutter .template-8-image::before {
+	display: none;
+}
+
+.template-8--flutter .template-8-image img {
+	position: absolute;
+	right: -150px;
+	top: -120px;
+	display: block;
+}
+
+.template-8--flutter-de {
+	padding: 290px 0 270px;
+}
+
+.template-8--angular {
+	padding: 296px 0 298px;
+}
+
+.template-8--angular::after {
+	right: 0;
+	bottom: 0;
+	width: 700px;
+	height: 203px;
+	background: url("../img/angular/template-8-angular-software-text.svg") no-repeat;
+}
+
+.template-8--angular .template-8-wrapper::before {
+	background: url("../img/angular/template-8-angular-software-lines-left.svg") no-repeat;
+}
+
+.template-8--angular .template-8-wrapper::after {
+	right: -173px;
+	z-index: -1;
+	width: 186px;
+	height: 509px;
+	background: url("../img/angular/template-8-angular-software-lines-right.svg") no-repeat;
+}
+
+.template-8--angular .template-8-header {
+	margin-bottom: 76px;
+	max-width: 900px;
+}
+
+.template-8--angular .template-8-image img {
+	position: absolute;
+	right: 0;
+	top: 70px;
+}
+
+.template-8--angular .template-8-text {
+	max-width: 520px;
+}
+
+.template-8--angular-de .template-8-image img {
+	top: 30px;
+}
+
+.template-8--angular-de .template-8-header {
+	margin-bottom: 76px;
+	font-size: 80px;
+	max-width: 900px;
+}
+
+.template-8--vuejs {
+	padding: 248px 0 163px;
+}
+
+.template-8--vuejs::after {
+	right: -70px;
+	bottom: 0;
+	width: 671px;
+	height: 151px;
+	background: url("../img/vuejs/template-8-vuejs-text.svg") no-repeat;
+}
+
+.template-8--vuejs .template-8-wrapper::before {
+	top: -170px;
+	width: 200px;
+	height: 200px;
+	background: url("../img/vuejs/template-8-vuejs-left.svg") no-repeat;
+}
+
+.template-8--vuejs .template-8-wrapper::after {
+	right: -173px;
+	z-index: -1;
+	width: 186px;
+	height: 509px;
+	background: url("../img/vuejs/template-8-vuejs-right.svg") no-repeat;
+}
+
+.template-8--vuejs .template-8-header {
+	margin-bottom: 76px;
+	max-width: 700px;
+}
+
+.template-8--vuejs .template-8-image img {
+	position: absolute;
+	right: 0;
+	top: -80px;
+}
+
+.template-8--vuejs .template-8-text {
+	max-width: 520px;
+}
+
+.template-8--vuejs-de {
+	padding: 250px 0px 220px;
+}
+
+.template-8--vuejs-de .template-8-header span:nth-of-type(2) {
+	font-size: 60px;
+}
+
+.template-10--machine-learning .template-10-bg-wrapper {
+	background: url("../img/machine-learning-background.png");
+}
+
+.template-10--angular .template-10-bg-wrapper {
+	width: 45.6%;
+	background: url("../img/angular/angular-software-background.png");
+}
+
+.template-11--nodejs .content-body-text {
+	max-height: 170px;
+}
+
+.template-11--nodejs .template-11-lines .lines-bg-item:nth-child(5)::before {
+	background: url("../img/java-background.png") no-repeat;
+	background-size: cover;
+}
+
+.template-11--nodejs .template-11-tabs-caption-item:last-child {
+	width: 332px;
+}
+
+.template-11--nodejs .sq-block--is-active .sq-block-title {
+	max-width: none;
+}
+
+.template-11--reactjs .template-11-wrapper.container::after {
+	right: -380px;
+	top: -138px;
+	bottom: unset;
+	width: 396px;
+	height: 479px;
+	background: url("../img/template-11-reactjs--after.png") no-repeat;
+}
+
+.template-11--reactjs .content-body-text {
+	max-height: 180px;
+}
+
+.template-11--reactjs .template-11-lines .lines-bg-item:nth-child(5)::before {
+	background: url("../img/reactjs_background.png") no-repeat;
+	background-size: cover;
+}
+
+.template-11--outstaffing {
+	padding: 280px 0 144px;
+}
+
+.template-11--outstaffing .content-body-text {
+	max-height: 180px;
+}
+
+.template-11--outstaffing .template-11-wrapper.container::after {
+	width: 1165px;
+	height: 956.54px;
+	background: url("../img/template-11-php-outstaffing-background.svg") no-repeat;
+	bottom: 0;
+	right: -50px;
+	z-index: -1;
+}
+
+.template-11--outstaffing .template-11-lines .lines-bg-item:nth-child(5)::before {
+	background: url("../img/template-25-php-outstaffing-background.png") no-repeat;
+	background-size: cover;
+}
+
+.template-11--outstaffing .template-11-header {
+	max-width: unset;
+	margin-bottom: 56px;
+}
+
+.template-11--outstaffing .template-11-tabs-content::after {
+	width: 594px;
+	height: 532px;
+	background: url("../img/template-11-php-outstaffing.svg") no-repeat;
+	bottom: 0;
+	right: -325px;
+	top: unset;
+}
+
+.template-11--outstaffing .template-11-tabs-content {
+	-webkit-box-flex: 0;
+	-ms-flex: 0 0 600px;
+	flex: 0 0 600px;
+	height: 485px;
+}
+
+.template-11--outstaffing .template-11-tabs-caption {
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+}
+
+.template-11--outstaffing .sq-block {
+	width: 240px;
+	height: 240px;
+	padding: 32px 16px 32px 32px;
+}
+
+.template-11--outstaffing .content-body-main {
+	-webkit-box-pack: start;
+	-ms-flex-pack: start;
+	justify-content: flex-start;
+}
+
+.template-11--outstaffing .content-body-text {
+	max-height: 400px;
+}
+
+.template-11--outstaffing .content-body-text p {
+	max-height: 400px;
+	padding-right: 20px;
+}
+
+.template-11--outstaffing .content-body-link {
+	font-weight: 500;
+	color: #f2c53d;
+	-webkit-box-flex: unset;
+	-ms-flex: unset;
+	flex: unset;
+	max-width: unset;
+	background: none;
+	border: none;
+	display: inline-block;
+}
+
+.template-11--outstaffing .content-body-link:hover {
+	color: #f3f8ff;
+}
+
+.template-11--react-native .template-11-lines .lines-bg-item:nth-child(5)::before {
+	background: url("../img/react-native-background.png") no-repeat;
+	background-size: cover;
+}
+
+.template-11--react-native .template-11-tabs-content::after {
+	width: 255px;
+	height: 255px;
+	background: url("../img/template-11-react-native-tabs-content-after.svg") no-repeat;
+}
+
+.template-11--react-native .template-11-wrapper.container::after {
+	left: calc(50% - 230px);
+	top: 0;
+	z-index: -1;
+	width: 688px;
+	height: 644px;
+	background: url("../img/template-11-react-native.svg") no-repeat;
+}
+
+.template-11--machine-learning::after {
+	content: "";
+	position: absolute;
+	right: 230px;
+	top: 50px;
+	width: 187px;
+	height: 184px;
+	background: url("../img/template-11-machine-learning-after.png") no-repeat;
+}
+
+.template-11--machine-learning .template-11-header {
+	margin-bottom: 58px;
+	max-width: none;
+}
+
+.template-11--machine-learning .template-11-lines .lines-bg-item:nth-child(5)::before {
+	background: url("../img/machine-learning-background.png") no-repeat;
+	background-size: cover;
+}
+
+.template-11--machine-learning .template-11-tabs-content {
+	-webkit-box-flex: 0;
+	-ms-flex: 0 0 600px;
+	flex: 0 0 600px;
+	height: 400px;
+}
+
+.template-11--machine-learning .template-11-tabs-content::after {
+	content: none;
+}
+
+.template-11--machine-learning .template-11-wrapper.container::after {
+	right: -70px;
+	bottom: -115px;
+	width: 252px;
+	height: 228px;
+	background: url("../img/triangle-ml.svg") no-repeat;
+	background-size: contain;
+}
+
+.template-11--machine-learning .content-body-text {
+	max-height: unset;
+}
+
+.template-11--machine-learning .sq-block {
+	position: relative;
+	padding: 32px 15px 32px 32px;
+	width: 250px;
+	height: 200px;
+}
+
+.template-11--machine-learning .sq-block-top {
+	margin-bottom: 20px;
+}
+
+.template-11--machine-learning .sq-block-link {
+	position: absolute;
+	left: 32px;
+	bottom: 32px;
+}
+
+.template-11--flutter {
+	padding: 127px 0 83px;
+}
+
+.template-11--flutter .template-11-header {
+	margin-bottom: 58px;
+	max-width: none;
+}
+
+.template-11--flutter .template-11-lines .lines-bg-item:nth-child(5)::before {
+	background: url("../img/flutter-background.png") no-repeat;
+	background-position: center center;
+	background-size: cover;
+}
+
+.template-11--flutter .template-11-tabs-content {
+	-webkit-box-flex: 0;
+	-ms-flex: 0 0 600px;
+	flex: 0 0 600px;
+	height: 400px;
+}
+
+.template-11--flutter .template-11-tabs-content::after {
+	right: -120px;
+	top: -120px;
+	width: 255px;
+	height: 255px;
+	background: url("../img/template-11-flutter-tabs-conttent-after.svg") no-repeat;
+}
+
+.template-11--flutter .template-11-wrapper.container::after {
+	content: none;
+}
+
+.template-11--flutter .content-body-text {
+	max-height: unset;
+}
+
+.template-11--flutter .sq-block {
+	position: relative;
+	padding: 32px 15px 32px 32px;
+	width: 250px;
+	height: 200px;
+}
+
+.template-11--flutter .sq-block-top {
+	margin-bottom: 20px;
+}
+
+.template-11--flutter .sq-block-link {
+	position: absolute;
+	left: 32px;
+	bottom: 32px;
+}
+
+.template-11--flutter-de {
+	padding: 80px 0;
+}
+
+.template-11--flutter-de .template-11-header {
+	font-size: 64px;
+}
+
+.template-11--angular {
+	padding: 184px 0 144px;
+}
+
+.template-11--angular .content-body-text {
+	max-height: 170px;
+}
+
+.template-11--angular .template-11-lines .lines-bg-item:nth-child(5)::before {
+	background: url("../img/angular/angular-software-background.png") no-repeat;
+	background-size: cover;
+}
+
+.template-11--angular .template-11-wrapper.container::after {
+	content: none;
+}
+
+.template-11--angular .template-11-tabs-content::after {
+	right: -194px;
+	top: -127px;
+	width: 302px;
+	height: 578px;
+	background: url("../img/angular/template-11-angular-software.svg") no-repeat;
+	background-size: contain;
+}
+
+.template-11--angular .sq-block--is-active .sq-block-title {
+	max-width: none;
+}
+
+.template-11--vuejs {
+	padding: 100px 0 224px;
+}
+
+.template-11--vuejs .content-body-text {
+	max-height: 170px;
+}
+
+.template-11--vuejs .template-11-lines .lines-bg-item:nth-child(5)::before {
+	background: url("../img/vuejs/vuejs-background.png") no-repeat;
+	background-size: cover;
+}
+
+.template-11--vuejs .template-11-wrapper.container::after {
+	content: none;
+}
+
+.template-11--vuejs .template-11-tabs-content::after {
+	right: -145px;
+	top: -85px;
+	width: 305px;
+	height: 587px;
+	background: url("../img/vuejs/template-11-tabs-content-after-vuejs.svg") no-repeat;
+	background-size: contain;
+}
+
+.template-11--vuejs .sq-block--is-active .sq-block-title {
+	max-width: none;
+}
+
+.template-11--de .sq-block-title {
+	font-size: 14px;
+}
+
+.template-17--python {
+	padding: 50px 0 20px;
+}
+
+.template-17--python::before {
+	content: none;
+}
+
+.template-17--python .template-17-lines .lines-bg-item:nth-child(5)::before {
+	background: url("../img/python_background.png") no-repeat;
+	background-size: cover;
+}
+
+.template-17--python .template-17-wrapper::after {
+	content: "";
+	display: block;
+	background: url(../img/template-11-reactjs--after.png) no-repeat;
+	width: 396px;
+	height: 479px;
+	position: absolute;
+	right: 75px;
+	top: -120px;
+	z-index: -1;
+}
+
+.template-17--python .template-17-wrapper::before {
+	content: "";
+	display: block;
+	position: absolute;
+	background: url(../img/tabs-top--reactjs.png) no-repeat;
+	width: 212px;
+	height: 198px;
+	right: -200px;
+	bottom: 222px;
+	z-index: -1;
+}
+
+.template-17--python .template-17-header {
+	max-width: 800px;
+}
+
+.template-17--python .list-item {
+	width: calc(42.9% - 0.3rem);
+}
+
+.template-17--python .list-item.is-active .sq-block .sq-block-title {
+	max-width: unset;
+}
+
+.template-17--python .list-item-content {
+	width: unset;
+	height: 213px;
+}
+
+.template-17--angular {
+	padding: 50px 0 20px;
+}
+
+.template-17--angular::before {
+	content: none;
+}
+
+.template-17--angular .template-17-lines .lines-bg-item:nth-child(5)::before {
+	background: url("../img/angular/angular-software-background.png") no-repeat;
+	background-size: cover;
+}
+
+.template-17--angular .template-17-wrapper.container {
+	background: none;
+}
+
+.template-17--angular .template-17-wrapper::after {
+	content: "";
+	position: absolute;
+	top: -80px;
+	right: 85px;
+	z-index: -1;
+	display: block;
+	width: 621px;
+	height: 815px;
+	background: url("../img/angular/template-17-angular-software.png") no-repeat;
+}
+
+.template-17--angular .template-17-wrapper::before {
+	content: none;
+}
+
+.template-17--angular .list-item {
+	width: calc(25% - 0.3rem);
+}
+
+.template-17--angular .list-item.is-active .sq-block .sq-block-title {
+	max-width: unset;
+}
+
+.template-17--angular .list-item-content {
+	max-width: 586px;
+	height: 250px;
+}
+
+.template-19--reactjs {
+	padding: 153px 0 53px;
+}
+
+.template-19--reactjs::before {
+	content: none;
+}
+
+.template-19--reactjs .template-19-lines .lines-bg-item:nth-child(5)::before {
+	background: url("../img/reactjs_background.png") no-repeat;
+	background-size: cover;
+}
+
+.template-19--reactjs .template-19-wrapper::after {
+	left: unset;
+	right: -36px;
+	bottom: 0;
+	width: 510px;
+	height: 382px;
+	background: url("../img/template-19-reactjs.png") no-repeat;
+}
+
+.template-19--reactjs .template-19-list {
+	position: relative;
+}
+
+.template-19--reactjs .template-19-caption {
+	max-width: unset;
+}
+
+.template-19--reactjs .list-item {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	margin-bottom: 30px;
+	padding: 32px;
+	background: rgba(249, 250, 252, 0.9);
+}
+
+.template-19--reactjs .list-item-top {
+	margin-bottom: 25px;
+}
+
+.template-19--reactjs .list-item-text {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-flex: 1;
+	-ms-flex: 1 0 auto;
+	flex: 1 0 auto;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+}
+
+.template-19--python {
+	padding: 100px 0 53px;
+}
+
+.template-19--python::before {
+	content: none;
+}
+
+.template-19--python .template-19-lines .lines-bg-item:nth-child(5)::before {
+	background: url("../img/python_background.png") no-repeat;
+	background-size: cover;
+}
+
+.template-19--python .template-19-wrapper::after {
+	left: unset;
+	right: -93px;
+	bottom: 45px;
+	width: 477px;
+	height: 412px;
+	background: url("../img/template-19-python.svg") no-repeat;
+	z-index: -1;
+}
+
+.template-19--python .template-19-list {
+	position: relative;
+}
+
+.template-19--python .template-19-caption {
+	max-width: unset;
+}
+
+.template-19--python .list-item {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	margin-bottom: 30px;
+	padding: 32px;
+	background: rgba(249, 250, 252, 0.9);
+}
+
+.template-19--python .list-item-top {
+	margin-bottom: 25px;
+}
+
+.template-19--python .list-item-text {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-flex: 1;
+	-ms-flex: 1 0 auto;
+	flex: 1 0 auto;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+}
+
+.template-19--react-native {
+	padding: 153px 0 53px;
+}
+
+.template-19--react-native::before {
+	content: none;
+}
+
+.template-19--react-native .template-19-lines .lines-bg-item:nth-child(5)::before {
+	background: url("../img/react-native-background.png") no-repeat;
+	background-size: cover;
+}
+
+.template-19--react-native .template-19-wrapper::after {
+	left: unset;
+	right: -170px;
+	bottom: 30px;
+	z-index: -1;
+	width: 453px;
+	height: 416px;
+	background: url("../img/template-19-react-native.svg") no-repeat;
+}
+
+.template-19--react-native .template-19-list {
+	position: relative;
+}
+
+.template-19--react-native .template-19-caption {
+	max-width: unset;
+}
+
+.template-19--react-native .list-item {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	margin-bottom: 30px;
+	padding: 32px;
+	background: rgba(249, 250, 252, 0.9);
+}
+
+.template-19--react-native .list-item:nth-of-type(5) .list-item-title {
+	margin-top: 0;
+}
+
+.template-19--react-native .list-item-top {
+	margin-bottom: 25px;
+}
+
+.template-19--react-native .list-item-title::after {
+	content: none;
+}
+
+.template-19--react-native .list-item-text {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-flex: 1;
+	-ms-flex: 1 0 auto;
+	flex: 1 0 auto;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+}
+
+.template-19--machine-learning {
+	padding: 153px 0 53px;
+}
+
+.template-19--machine-learning::before {
+	content: none;
+}
+
+.template-19--machine-learning .template-19-lines .lines-bg-item:nth-child(5)::before {
+	background: url("../img/machine-learning-background.png") no-repeat;
+	background-size: cover;
+}
+
+.template-19--machine-learning .template-19-wrapper::after {
+	left: unset;
+	right: 30px;
+	bottom: 0;
+	width: 186px;
+	height: 192px;
+	background: url("../img/template-19-ml-after.svg") no-repeat;
+}
+
+.template-19--machine-learning .template-19-list {
+	position: relative;
+}
+
+.template-19--machine-learning .template-19-caption {
+	max-width: 790px;
+}
+
+.template-19--machine-learning .list-item {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	margin-bottom: 30px;
+	padding: 32px;
+	background: rgba(249, 250, 252, 0.9);
+}
+
+.template-19--machine-learning .list-item-top {
+	margin-bottom: 25px;
+}
+
+.template-19--machine-learning .list-item-text {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-flex: 1;
+	-ms-flex: 1 0 auto;
+	flex: 1 0 auto;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+}
+
+.template-19--flutter {
+	padding: 43px 0 273px;
+}
+
+.template-19--flutter::before {
+	content: none;
+}
+
+.template-19--flutter .template-19-lines .lines-bg-item:nth-child(5)::before {
+	background: url("../img/flutter-background.png") no-repeat;
+	background-size: cover;
+}
+
+.template-19--flutter .template-19-wrapper::before {
+	content: "";
+	position: absolute;
+	right: -80px;
+	top: -50px;
+	width: 250px;
+	height: 250px;
+	background: url("../img/template-22-header-react-native.svg") no-repeat;
+}
+
+.template-19--flutter .template-19-wrapper::after {
+	left: unset;
+	right: -63px;
+	bottom: -152px;
+	z-index: -1;
+	width: 330px;
+	height: 326px;
+	background: url("../img/template-19-flutter-before.svg") no-repeat;
+}
+
+.template-19--flutter .template-19-list {
+	position: relative;
+}
+
+.template-19--flutter .template-19-caption {
+	max-width: unset;
+}
+
+.template-19--flutter .list-item {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	margin-bottom: 30px;
+	padding: 32px;
+	background: rgba(249, 250, 252, 0.9);
+}
+
+.template-19--flutter .list-item-top {
+	margin-bottom: 25px;
+}
+
+.template-19--flutter .list-item-text {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-flex: 1;
+	-ms-flex: 1 0 auto;
+	flex: 1 0 auto;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+}
+
+.template-19--vuejs {
+	padding: 145px 0 273px;
+}
+
+.template-19--vuejs::before {
+	content: none;
+}
+
+.template-19--vuejs .template-19-lines .lines-bg-item:nth-child(5)::before {
+	background: url("../img/vuejs/vuejs-background.png") no-repeat;
+	background-size: cover;
+}
+
+.template-19--vuejs .template-19-wrapper::before {
+	content: "";
+	position: absolute;
+	left: -87px;
+	bottom: -80px;
+	width: 200px;
+	height: 250px;
+	background: url("../img/vuejs/template-19-list-vuejs-before.svg") no-repeat;
+}
+
+.template-19--vuejs .template-19-wrapper::after {
+	left: unset;
+	right: -125px;
+	bottom: -81px;
+	z-index: -1;
+	width: 273px;
+	height: 265px;
+	background: url("../img/vuejs/template-19-list-vuejs-after.svg") no-repeat;
+}
+
+.template-19--vuejs .template-19-list {
+	position: relative;
+}
+
+.template-19--vuejs .template-19-header {
+	font-weight: 700;
+	font-size: 72px;
+	line-height: 103%;
+}
+
+.template-19--vuejs .template-19-caption {
+	max-width: 952px;
+}
+
+.template-19--vuejs .list-item {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	margin-bottom: 30px;
+	padding: 32px;
+	background: rgba(249, 250, 252, 0.9);
+}
+
+.template-19--vuejs .list-item-top {
+	margin-bottom: 25px;
+}
+
+.template-19--vuejs .list-item-title {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	margin-top: 0;
+	max-width: 200px;
+}
+
+.template-19--vuejs .list-item-text {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-flex: 1;
+	-ms-flex: 1 0 auto;
+	flex: 1 0 auto;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+}
+
+.template-19--de .list-item-title {
+	font-size: 18px;
+}
+
+.template-21--outstaffing {
+	padding: 102px 0;
+}
+
+.template-21--outstaffing::before {
+	content: none;
+}
+
+.template-21--outstaffing .template-21-lines .lines-bg-item:nth-child(5)::before {
+	background: url("../img/template-25-php-outstaffing-background.png") no-repeat;
+	background-size: cover;
+}
+
+.template-21--outstaffing .template-21-header {
+	max-width: 100%;
+	font-size: 72px;
+	line-height: 74px;
+}
+
+.template-21--outstaffing .template-21-caption {
+	max-width: 835px;
+	margin-bottom: 32px;
+}
+
+.template-21--outstaffing .template-21-list-bars {
+	position: relative;
+}
+
+.template-21--outstaffing .el-bar {
+	padding: 0 0 61px;
+	min-height: 188px;
+	border-bottom: 3px solid #e0e4eb;
+}
+
+.template-21--outstaffing .el-bar:nth-child(2n+1) {
+	max-width: 870px;
+}
+
+.template-21--outstaffing .el-bar:nth-child(2n+2) {
+	max-width: 870px;
+}
+
+.template-21--outstaffing .el-bar::after {
+	content: none;
+}
+
+.template-21--outstaffing .el-bar-main {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+.template-21--outstaffing .el-bar-num {
+	position: relative;
+}
+
+.template-21--outstaffing .el-bar-num::after {
+	display: block;
+	content: "";
+	width: 38px;
+	height: 127px;
+	position: absolute;
+	top: 25px;
+	left: 0;
+	background: url(../img/template_21_background_dots.svg) no-repeat;
+	z-index: -1;
+}
+
+.template-21--outstaffing .el-bar-title {
+	max-width: 120px;
+	width: 100%;
+	margin: 0 39px 0 0;
+}
+
+.template-21--outstaffing .el-bar-text p {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+.template-21--outstaffing .el-bar-text span {
+	font-size: 14px;
+	white-space: nowrap;
+	font-family: "SifonnPro", sans-serif;
+	color: #929baa;
+	margin-right: 28px;
+}
+
+.template-22--nodejs {
+	padding: 229px 0 243px;
+}
+
+.template-22--nodejs::before {
+	background-image: none;
+}
+
+.template-22--nodejs .template-22-lines .lines-bg-item:nth-child(5)::before {
+	background: url("../img/java-background.png") no-repeat;
+	background-size: cover;
+}
+
+.template-22--nodejs .template-22-wrapper::after {
+	content: "";
+	position: absolute;
+	right: -217px;
+	bottom: -170px;
+	display: block;
+	width: 337px;
+	height: 300px;
+	background: url("../img/template-22--nodejs.png") no-repeat;
+	background-size: contain;
+}
+
+.template-22--reactjs {
+	padding: 229px 0 266px;
+}
+
+.template-22--reactjs::before {
+	background-image: none;
+}
+
+.template-22--reactjs .list-col:last-child {
+	-webkit-box-flex: 0;
+	-ms-flex: 0 0 592px;
+	flex: 0 0 592px;
+}
+
+.template-22--reactjs .template-22-lines .lines-bg-item:nth-child(5)::before {
+	background: url("../img/reactjs_background.png") no-repeat;
+	background-size: cover;
+}
+
+.template-22--reactjs .template-22-wrapper::before {
+	content: "";
+	position: absolute;
+	right: -60px;
+	top: -42px;
+	width: 123px;
+	height: 123px;
+	background: url("../img/template-22-reactjs-before.svg") no-repeat;
+	background-size: contain;
+}
+
+.template-22--reactjs .template-22-wrapper::after {
+	content: "";
+	position: absolute;
+	left: 150px;
+	right: unset;
+	bottom: -170px;
+	display: block;
+	width: 490px;
+	height: 169px;
+	background: url("../img/template-22-reactjs-after.svg") no-repeat;
+	background-size: contain;
+}
+
+.template-22--python {
+	padding: 229px 0 320px;
+}
+
+.template-22--python::before {
+	background-image: none;
+}
+
+.template-22--python .list-col:last-child {
+	-webkit-box-flex: 0;
+	-ms-flex: 0 0 592px;
+	flex: 0 0 592px;
+}
+
+.template-22--python .template-22-lines .lines-bg-item:nth-child(5)::before {
+	background: url("../img/python_background.png") no-repeat;
+	background-size: cover;
+}
+
+.template-22--python .template-22-wrapper::before {
+	content: "";
+	position: absolute;
+	right: -75px;
+	top: -96px;
+	width: 188px;
+	height: 202px;
+	background: url("../img/template-22-python-before.svg") no-repeat;
+	background-size: contain;
+}
+
+.template-22--python .template-22-wrapper::after {
+	content: "";
+	position: absolute;
+	left: 150px;
+	right: unset;
+	bottom: -250px;
+	display: block;
+	width: 615px;
+	height: 197px;
+	background: url("../img/template-22-python-after.svg") no-repeat;
+	background-size: contain;
+}
+
+.template-22--outstaffing {
+	padding: 102px 0 30px;
+}
+
+.template-22--outstaffing::before {
+	background-image: none;
+}
+
+.template-22--outstaffing .template-22-lines .lines-bg-item:nth-child(5)::before {
+	background: url("../img/template-25-php-outstaffing-background.png") no-repeat;
+	background-size: cover;
+}
+
+.template-22--outstaffing .list-item-value {
+	text-transform: unset;
+}
+
+.template-22--net-outstaffing .template-22-list-wrapper::after {
+	bottom: -30px;
+}
+
+.template-22--react-native {
+	padding: 229px 0 266px;
+	background-image: none;
+}
+
+.template-22--react-native::before {
+	background-image: none;
+}
+
+.template-22--react-native .list-col:last-child {
+	-webkit-box-flex: 0;
+	-ms-flex: 0 0 592px;
+	flex: 0 0 592px;
+}
+
+.template-22--react-native .list-item-value {
+	text-transform: none;
+}
+
+.template-22--react-native .template-22-lines .lines-bg-item:nth-child(5)::before {
+	background: url("../img/react-native-background.png") no-repeat;
+	background-size: cover;
+}
+
+.template-22--react-native .template-22-wrapper::before {
+	content: "";
+	position: absolute;
+	right: -60px;
+	top: -230px;
+	width: 76px;
+	height: 664px;
+	background: url("../img/template-22-wrapper-before-react-native.svg") no-repeat;
+	background-size: contain;
+}
+
+.template-22--react-native .template-22-wrapper::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	right: unset;
+	bottom: -250px;
+	display: block;
+	width: 446px;
+	height: 246px;
+	background: url("../img/template-22-wrapper-after-react-native.svg") no-repeat;
+	background-size: contain;
+}
+
+.template-22--react-native .template-22-header {
+	max-width: unset;
+	font-size: 72px;
+	line-height: 103%;
+}
+
+.template-22--react-native .template-22-header::after {
+	right: 98px;
+	top: -150px;
+	background: url("../img/template-22-header-react-native.svg") no-repeat;
+}
+
+.template-22--machine-learning {
+	padding-bottom: 130px;
+	background-image: none;
+}
+
+.template-22--machine-learning::before {
+	content: none;
+}
+
+.template-22--machine-learning .template-22-lines .lines-bg-item:nth-child(5)::before {
+	background: url("../img/machine-learning-background.png") no-repeat;
+	background-size: cover;
+}
+
+.template-22--machine-learning .template-22-header {
+	margin-bottom: 60px;
+}
+
+.template-22--machine-learning .template-22-header::after {
+	content: none;
+}
+
+.template-22--machine-learning .template-22-list .list-col {
+	-webkit-box-flex: 0;
+	-ms-flex: 0 0 49.5%;
+	flex: 0 0 49.5%;
+}
+
+.template-22--machine-learning .template-22-list .list-item-value {
+	font-size: 14px;
+	text-transform: none;
+}
+
+.template-22--machine-learning .template-22-list .list-item-value span {
+	margin-right: 20px;
+}
+
+.template-22--machine-learning .template-22-list-wrapper {
+	border: 1px solid #e0e4eb;
+	-webkit-box-shadow: 15px 15px 25px rgba(71, 83, 102, 0.1);
+	box-shadow: 15px 15px 25px rgba(71, 83, 102, 0.1);
+	background: #f0f2f5;
+}
+
+.template-22--machine-learning .template-22-list-wrapper::before {
+	left: unset;
+	right: -150px;
+	bottom: -150px;
+	width: 423px;
+	height: 423px;
+	background: url("../img/template-22-ml-after.png") no-repeat;
+}
+
+.template-22--machine-learning .template-22-list-wrapper .list-title {
+	color: #f2c53d;
+}
+
+.template-22--machine-learning .template-22-list-wrapper .list-item-value {
+	text-transform: none;
+}
+
+.template-22--flutter {
+	padding: 176px 0 327px;
+}
+
+.template-22--flutter::before {
+	background-image: none;
+}
+
+.template-22--flutter .list-col:last-child {
+	-webkit-box-flex: 0;
+	-ms-flex: 0 0 592px;
+	flex: 0 0 592px;
+}
+
+.template-22--flutter .template-22-lines .lines-bg-item:nth-child(5)::before {
+	background: url("../img/flutter-background.png") no-repeat;
+	background-size: cover;
+}
+
+.template-22--flutter .template-22-wrapper::before {
+	content: "";
+	position: absolute;
+	right: -60px;
+	top: -110px;
+	width: 250px;
+	height: 238px;
+	background: url("../img/template-22-flutter-before.png") no-repeat;
+	background-size: contain;
+}
+
+.template-22--flutter .template-22-wrapper::after {
+	content: "";
+	position: absolute;
+	left: 150px;
+	right: unset;
+	bottom: -250px;
+	display: block;
+	width: 490px;
+	height: 169px;
+	background: url("../img/template-22-reactjs-after.svg") no-repeat;
+	background-size: contain;
+}
+
+.template-22--flutter .template-22-header {
+	max-width: 900px;
+}
+
+.template-22--flutter-de {
+	padding: 140px 0 327px;
+}
+
+.template-22--angular {
+	padding: 229px 0 266px;
+	background-image: none;
+}
+
+.template-22--angular::before {
+	background-image: none;
+}
+
+.template-22--angular .list-col {
+	-webkit-box-flex: 0 !important;
+	-ms-flex: 0 0 390px !important;
+	flex: 0 0 390px !important;
+}
+
+.template-22--angular .list-item-value {
+	text-transform: none;
+}
+
+.template-22--angular .template-22-lines .lines-bg-item:nth-child(5)::before {
+	background: url("../img/angular/angular-software-background.png") no-repeat;
+	background-size: cover;
+}
+
+.template-22--angular .template-22-wrapper::before {
+	content: "";
+	position: absolute;
+	right: -17%;
+	top: -50px;
+	z-index: -1;
+	width: 1398px;
+	height: 530px;
+	background: url("../img/angular/template-22-angular-software.png") no-repeat;
+	background-size: contain;
+}
+
+.template-22--angular .template-22-wrapper::after {
+	content: none;
+}
+
+.template-22--angular .template-22-header {
+	max-width: unset;
+	font-size: 72px;
+	line-height: 103%;
+}
+
+.template-22--angular .template-22-header::after {
+	content: none;
+}
+
+.template-22--angular .template-22-caption {
+	max-width: unset;
+}
+
+.template-22--vuejs {
+	padding: 100px 0 400px;
+	background-image: none;
+}
+
+.template-22--vuejs::before {
+	background-image: none;
+}
+
+.template-22--vuejs .list-item-value {
+	text-transform: none;
+}
+
+.template-22--vuejs .template-22-lines .lines-bg-item:nth-child(5)::before {
+	background: url("../img/vuejs/vuejs-background.png") no-repeat;
+	background-size: cover;
+}
+
+.template-22--vuejs .template-22-wrapper::before {
+	content: "";
+	position: absolute;
+	right: -12%;
+	top: 0;
+	z-index: -1;
+	width: 829px;
+	height: 750px;
+	background: url("../img/vuejs/template-22-vuejs.svg") no-repeat;
+	background-size: contain;
+}
+
+.template-22--vuejs .template-22-wrapper::after {
+	content: none;
+}
+
+.template-22--vuejs .template-22-header {
+	max-width: unset;
+	font-size: 72px;
+	line-height: 103%;
+}
+
+.template-22--vuejs .template-22-header::after {
+	content: none;
+}
+
+.template-22--vuejs .template-22-caption {
+	max-width: unset;
+}
+
+.template-25--nodejs {
+	padding: 179px 0 164px;
+}
+
+.template-25--nodejs .template-25-lines .lines-bg-item:nth-child(5)::before {
+	background: url("../img/java-background.png") no-repeat;
+	background-size: cover;
+}
+
+.template-25--nodejs .tabs-caption-item-link {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: end;
+	-ms-flex-pack: end;
+	justify-content: flex-end;
+}
+
+.template-25--nodejs .tabs-caption-item-link span {
+	margin-right: 10px;
+}
+
+.template-25--outstaffing {
+	padding: 284px 0 252px;
+}
+
+.template-25--outstaffing::after {
+	content: none;
+}
+
+.template-25--outstaffing .template-25-lines .lines-bg-item:nth-child(5)::before {
+	background: url("../img/template-25-php-outstaffing-background.png") no-repeat;
+	background-size: cover;
+}
+
+.template-25--outstaffing .tabs-content::before {
+	right: -165px;
+	top: -185px;
+	width: 213px;
+	height: 198px;
+	background: url("../img/template-25-php-outstaffing-after.svg") no-repeat;
+}
+
+.template-25--outstaffing .tabs-content::after {
+	background: url("../img/template-25-php-outstaffing-before.svg") no-repeat;
+}
+
+.template-25--outstaffing .tab-content-text {
+	padding-right: 20px;
+	height: 195px;
+}
+
+.template-25--outstaffing .tab-content-link {
+	position: relative;
+	display: -webkit-inline-box;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+	-webkit-box-pack: start;
+	-ms-flex-pack: start;
+	justify-content: flex-start;
+	margin-top: 40px;
+	border: none;
+	width: unset;
+	max-width: unset;
+	background-image: none;
+}
+
+.template-25--outstaffing .tab-content-link:hover {
+	background-color: transparent;
+}
+
+.template-25--outstaffing .tabs-caption-item-link {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: end;
+	-ms-flex-pack: end;
+	justify-content: flex-end;
+}
+
+.template-25--outstaffing .tabs-caption-item-link span {
+	margin-right: 10px;
+}
+
+.template-25--machine-learning {
+	padding: 179px 0 164px;
+}
+
+.template-25--machine-learning::after {
+	content: none;
+}
+
+.template-25--machine-learning .template-25-lines .lines-bg-item:nth-child(5)::before {
+	background: url("../img/machine-learning-background.png") no-repeat;
+	background-size: cover;
+}
+
+.template-25--machine-learning .tabs-caption-item-link {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: end;
+	-ms-flex-pack: end;
+	justify-content: flex-end;
+}
+
+.template-25--machine-learning .tabs-caption-item-link span {
+	margin-right: 10px;
+}
+
+section {
+	min-height: 100vh;
+}
+
+.template-11--ux-ui .template-11-lines .lines-bg-item:nth-child(5)::before {
+	content: none;
+}
+
+.template-11--ux-ui .template-11-tabs-content .content-body-text p br {
+	content: "";
+	display: block;
+	margin-bottom: 10px;
+}
+
+.template-11--ux-ui::after {
+	content: none;
+}
+
+.template-24 .template-24-footer {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	margin-top: 65px;
+}
+
+.template-24--ux-ui .template-24-footer {
+	margin-top: 115px;
+}
+
+.template-24--ux-ui .template-24-text .manager {
+	margin-top: 0;
+}
+
+.template-54 {
+	position: relative;
+	padding: 44px 0 45px;
+	background-color: #f0f2f5;
+}
+
+.template-54-wrapper {
+	position: relative;
+	z-index: 1;
+}
+
+.template-54-item {
+	padding: 60px;
+	width: 100%;
+	height: 455px;
+	-webkit-box-shadow: 15px 15px 25px rgba(71, 83, 102, 0.1);
+	box-shadow: 15px 15px 25px rgba(71, 83, 102, 0.1);
+	background: #f9fafc;
+}
+
+.template-54-title {
+	margin-bottom: 16px;
+	font-size: 20px;
+	color: #222;
+}
+
+.template-54-subtitle {
+	position: relative;
+	padding-left: 32px;
+	font-weight: 600;
+	font-size: 12px;
+	text-transform: uppercase;
+	color: #929baa;
+}
+
+.template-54-subtitle::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 5px;
+	width: 24px;
+	height: 3px;
+	background-image: url("data:image/svg+xml,%3Csvg width='24' height='3' viewBox='0 0 24 3' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_13021_118965)'%3E%3Cpath d='M4 0.5H0V2.5H4V0.5Z' fill='%23F2C53D'/%3E%3Cpath d='M24 0.5H8V2.5H24V0.5Z' fill='%23F2C53D'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_13021_118965'%3E%3Crect width='24' height='2' fill='white' transform='translate(0 0.5)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E ");
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.template-54-content {
+	position: relative;
+	margin-top: 28px;
+	font-weight: 300;
+	font-size: 16px;
+	line-height: 200%;
+	color: #2c333f;
+}
+
+.template-54-content::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 32px;
+	height: 32px;
+	background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 32 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='0.2'%3E%3Cpath d='M8.95585 14.6926C10.5948 15.1844 11.9411 16.1066 12.9948 17.459C14.0484 18.8115 14.5752 20.4098 14.5752 22.2541C14.5752 24.4672 13.8728 26.3115 12.4679 27.7869C11.0631 29.2623 9.36559 30 7.3754 30C5.26815 30 3.5121 29.2623 2.10726 27.7869C0.70242 26.3115 0 24.4672 0 22.2541C0 20.041 0.526814 17.2131 1.58044 13.7705L7.3754 0H13.5216L8.95585 14.6926Z' fill='%23F2C53D'/%3E%3Cpath d='M26.3807 14.6926C28.0196 15.1844 29.3659 16.1066 30.4196 17.459C31.4732 18.8115 32 20.4098 32 22.2541C32 24.4672 31.2976 26.3115 29.8928 27.7869C28.4879 29.2623 26.7904 30 24.8002 30C22.693 30 20.9369 29.2623 19.5321 27.7869C18.1272 26.3115 17.4248 24.4672 17.4248 22.2541C17.4248 20.041 17.9516 17.2131 19.0052 13.7705L24.8002 0H30.9464L26.3807 14.6926Z' fill='%23F2C53D'/%3E%3C/g%3E%3C/svg%3E%0A");
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.template-54-content p {
+	position: relative;
+	overflow: hidden;
+	padding: 0 16px 0 26px;
+	max-height: 230px;
+}
+
+.template-55 {
+	position: relative;
+	padding: 45px 0;
+}
+
+.template-55-wrapper {
+	position: relative;
+	z-index: 1;
+}
+
+.template-55-header {
+	margin-bottom: 24px;
+	font-size: 72px;
+	line-height: 103%;
+	letter-spacing: -0.03em;
+}
+
+.template-55-item {
+	border: 1px solid #c2cad6;
+	height: 560px;
+	padding: 10px;
+	background: #fff;
+}
+
+.template-55-image {
+	width: 100%;
+	height: 378px;
+}
+
+.template-55-image img {
+	width: 100%;
+	height: 100%;
+	-o-object-fit: cover;
+	object-fit: cover;
+	-o-object-position: center;
+	object-position: center;
+}
+
+.template-55-content {
+	margin-top: 16px;
+	padding: 0 8px;
+}
+
+.template-55-content p {
+	position: relative;
+	overflow: hidden;
+	margin-top: 28px;
+	padding-right: 5px;
+	max-height: 96px;
+	font-size: 16px;
+	line-height: 200%;
+	color: #2c333f;
+}
+
+.template-55-head {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+}
+
+.template-55-title {
+	max-width: 70%;
+	margin-right: 10px;
+}
+
+.template-55-subtitle {
+	-ms-flex-item-align: center;
+	align-self: center;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 110%;
+	color: #929baa;
+}
+
+.template-55-buttons {
+	margin-top: 32px;
+	gap: 32px;
+}
+
+.template-55-buttons .btn {
+	min-width: 100%;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+}
+
+.template-55-buttons .btn-light {
+	padding: 0 10px;
+}
+
+.template-55 .row {
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+
+.template-56 {
+	position: relative;
+	padding: 50px 0;
+}
+
+.template-56-wrapper {
+	position: relative;
+	z-index: 1;
+}
+
+.template-56-header {
+	margin-bottom: 24px;
+	max-width: 888px;
+	font-size: 72px;
+	line-height: 103%;
+	letter-spacing: -0.03em;
+}
+
+.template-56-caption {
+	position: relative;
+	margin-bottom: 32px;
+	padding-left: 32px;
+	max-width: 853px;
+	font-weight: 600;
+	font-size: 12px;
+	letter-spacing: 0.03em;
+	text-transform: uppercase;
+	color: #929baa;
+}
+
+.template-56-caption::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 5px;
+	width: 24px;
+	height: 3px;
+	background-image: url("data:image/svg+xml,%3Csvg width='24' height='3' viewBox='0 0 24 3' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_13021_118965)'%3E%3Cpath d='M4 0.5H0V2.5H4V0.5Z' fill='%23F2C53D'/%3E%3Cpath d='M24 0.5H8V2.5H24V0.5Z' fill='%23F2C53D'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_13021_118965'%3E%3Crect width='24' height='2' fill='white' transform='translate(0 0.5)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E ");
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.template-56-item {
+	border: 1px solid #c2cad6;
+	padding: 28px;
+	height: 570px;
+	background: #f0f2f5;
+}
+
+.template-56-head {
+	position: relative;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+.template-56-head svg {
+	margin-right: 12px;
+}
+
+.template-56-title {
+	-ms-flex-item-align: end;
+	align-self: flex-end;
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 110%;
+}
+
+.template-56-content {
+	margin-top: 24px;
+	font-size: 16px;
+	line-height: 200%;
+	letter-spacing: 0.03em;
+	color: #2c333f;
+}
+
+.template-56-content p {
+	position: relative;
+	overflow: hidden;
+	padding-right: 5px;
+	max-height: 450px;
+}
+
+.template-56-num {
+	position: absolute;
+	right: 0;
+	top: 0;
+	font-family: "SifonnPro", sans-serif;
+	font-size: 12px;
+	line-height: 13px;
+	color: #929baa;
+}
+
+.template-56-explanation {
+	position: relative;
+	display: block;
+	margin-top: 16px;
+	padding-top: 16px;
+	max-width: 276px;
+	line-height: normal;
+	letter-spacing: normal;
+}
+
+.template-56-explanation::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 1px;
+	background: #929baa;
+}
+
+.template-56-explanation a {
+	font-size: 12px;
+	line-height: 15px;
+	-webkit-text-decoration-line: underline;
+	text-decoration-line: underline;
+	color: #929baa;
+}
+
+.template-56-buttons {
+	margin-top: 32px;
+}
+
+.template-56-buttons .btn {
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	min-width: 100%;
+}
+
+.template-57 {
+	position: relative;
+	padding: 50px 0;
+}
+
+.template-57-wrapper {
+	position: relative;
+	z-index: 1;
+}
+
+.template-57-header {
+	margin-bottom: 24px;
+	font-size: 72px;
+	line-height: 103%;
+	letter-spacing: -0.03em;
+}
+
+.template-57-caption {
+	position: relative;
+	margin-bottom: 32px;
+	padding-left: 32px;
+	font-weight: 600;
+	font-size: 12px;
+	letter-spacing: 0.03em;
+	text-transform: uppercase;
+	color: #929baa;
+}
+
+.template-57-caption::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 5px;
+	width: 24px;
+	height: 3px;
+	background-image: url("data:image/svg+xml,%3Csvg width='24' height='3' viewBox='0 0 24 3' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_13021_118965)'%3E%3Cpath d='M4 0.5H0V2.5H4V0.5Z' fill='%23F2C53D'/%3E%3Cpath d='M24 0.5H8V2.5H24V0.5Z' fill='%23F2C53D'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_13021_118965'%3E%3Crect width='24' height='2' fill='white' transform='translate(0 0.5)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E ");
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.template-57-list-group {
+	margin-top: 32px;
+	border: 1px solid #c2cad6;
+	padding: 30px;
+	background: #f0f2f5;
+}
+
+.template-57-head {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	gap: 8px;
+}
+
+.template-57-head span {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	width: 41px;
+	height: 41px;
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 24px;
+	color: #2c333f;
+	background: #f2c53d;
+}
+
+.template-57-title {
+	font-size: 18px;
+	-ms-flex-item-align: end;
+	align-self: flex-end;
+}
+
+.template-57-content {
+	margin-top: 12px;
+	font-size: 16px;
+	line-height: 200%;
+	letter-spacing: 0.03em;
+	color: #2c333f;
+}
+
+.template-58 {
+	position: relative;
+	padding: 50px 0;
+}
+
+.template-58-wrapper {
+	position: relative;
+	z-index: 1;
+}
+
+.template-58-header {
+	margin-bottom: 24px;
+	max-width: 888px;
+	font-size: 72px;
+	line-height: 103%;
+	letter-spacing: -0.03em;
+}
+
+.template-58-caption {
+	position: relative;
+	margin-bottom: 32px;
+	padding-left: 32px;
+	max-width: 888px;
+	font-weight: 600;
+	font-size: 12px;
+	letter-spacing: 0.03em;
+	text-transform: uppercase;
+	color: #929baa;
+}
+
+.template-58-caption::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 5px;
+	width: 24px;
+	height: 3px;
+	background-image: url("data:image/svg+xml,%3Csvg width='24' height='3' viewBox='0 0 24 3' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_13021_118965)'%3E%3Cpath d='M4 0.5H0V2.5H4V0.5Z' fill='%23F2C53D'/%3E%3Cpath d='M24 0.5H8V2.5H24V0.5Z' fill='%23F2C53D'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_13021_118965'%3E%3Crect width='24' height='2' fill='white' transform='translate(0 0.5)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E ");
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.template-58-title {
+	margin-bottom: 21px;
+}
+
+.template-58-list {
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+}
+
+.template-58-item {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-flow: column;
+	flex-flow: column;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	border: 1px solid #c2cad6;
+	padding: 16px;
+	min-height: 83px;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 120%;
+	letter-spacing: 0.05em;
+	text-align: center;
+	text-transform: uppercase;
+	background: #fff;
+}
+
+.template-58-item span {
+	text-transform: none;
+}
+
+.template-58--v2 .template-58-list {
+	-webkit-box-pack: start;
+	-ms-flex-pack: start;
+	justify-content: flex-start;
+}
+
+.template-58--v2 .template-58-item {
+	border: none;
+	padding: 0;
+	text-transform: none;
+	background: transparent;
+	gap: 8px;
+}
+
+@media (min-width: 0) {
+	.col-xs-1 {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 auto;
+		flex: 0 0 auto;
+		width: calc(8.3333333333% - 32px);
+	}
+
+	.col-xs-2 {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 auto;
+		flex: 0 0 auto;
+		width: calc(16.6666666667% - 32px);
+	}
+
+	.col-xs-3 {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 auto;
+		flex: 0 0 auto;
+		width: calc(25% - 32px);
+	}
+
+	.col-xs-4 {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 auto;
+		flex: 0 0 auto;
+		width: calc(33.3333333333% - 32px);
+	}
+
+	.col-xs-5 {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 auto;
+		flex: 0 0 auto;
+		width: calc(41.6666666667% - 32px);
+	}
+
+	.col-xs-6 {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 auto;
+		flex: 0 0 auto;
+		width: calc(50% - 32px);
+	}
+
+	.col-xs-7 {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 auto;
+		flex: 0 0 auto;
+		width: calc(58.3333333333% - 32px);
+	}
+
+	.col-xs-8 {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 auto;
+		flex: 0 0 auto;
+		width: calc(66.6666666667% - 32px);
+	}
+
+	.col-xs-9 {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 auto;
+		flex: 0 0 auto;
+		width: calc(75% - 32px);
+	}
+
+	.col-xs-10 {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 auto;
+		flex: 0 0 auto;
+		width: calc(83.3333333333% - 32px);
+	}
+
+	.col-xs-11 {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 auto;
+		flex: 0 0 auto;
+		width: calc(91.6666666667% - 32px);
+	}
+
+	.col-xs-12 {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 auto;
+		flex: 0 0 auto;
+		width: calc(100% - 32px);
+	}
+}
+
+@media (min-width: 374px) {
+	.col-mid-1 {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 auto;
+		flex: 0 0 auto;
+		width: calc(8.3333333333% - 32px);
+	}
+
+	.col-mid-2 {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 auto;
+		flex: 0 0 auto;
+		width: calc(16.6666666667% - 32px);
+	}
+
+	.col-mid-3 {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 auto;
+		flex: 0 0 auto;
+		width: calc(25% - 32px);
+	}
+
+	.col-mid-4 {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 auto;
+		flex: 0 0 auto;
+		width: calc(33.3333333333% - 32px);
+	}
+
+	.col-mid-5 {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 auto;
+		flex: 0 0 auto;
+		width: calc(41.6666666667% - 32px);
+	}
+
+	.col-mid-6 {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 auto;
+		flex: 0 0 auto;
+		width: calc(50% - 32px);
+	}
+
+	.col-mid-7 {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 auto;
+		flex: 0 0 auto;
+		width: calc(58.3333333333% - 32px);
+	}
+
+	.col-mid-8 {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 auto;
+		flex: 0 0 auto;
+		width: calc(66.6666666667% - 32px);
+	}
+
+	.col-mid-9 {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 auto;
+		flex: 0 0 auto;
+		width: calc(75% - 32px);
+	}
+
+	.col-mid-10 {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 auto;
+		flex: 0 0 auto;
+		width: calc(83.3333333333% - 32px);
+	}
+
+	.col-mid-11 {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 auto;
+		flex: 0 0 auto;
+		width: calc(91.6666666667% - 32px);
+	}
+
+	.col-mid-12 {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 auto;
+		flex: 0 0 auto;
+		width: calc(100% - 32px);
+	}
+}
+
+@media (min-width: 600px) {
+	.col-sm-1 {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 auto;
+		flex: 0 0 auto;
+		width: calc(8.3333333333% - 32px);
+	}
+
+	.col-sm-2 {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 auto;
+		flex: 0 0 auto;
+		width: calc(16.6666666667% - 32px);
+	}
+
+	.col-sm-3 {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 auto;
+		flex: 0 0 auto;
+		width: calc(25% - 32px);
+	}
+
+	.col-sm-4 {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 auto;
+		flex: 0 0 auto;
+		width: calc(33.3333333333% - 32px);
+	}
+
+	.col-sm-5 {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 auto;
+		flex: 0 0 auto;
+		width: calc(41.6666666667% - 32px);
+	}
+
+	.col-sm-6 {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 auto;
+		flex: 0 0 auto;
+		width: calc(50% - 32px);
+	}
+
+	.col-sm-7 {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 auto;
+		flex: 0 0 auto;
+		width: calc(58.3333333333% - 32px);
+	}
+
+	.col-sm-8 {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 auto;
+		flex: 0 0 auto;
+		width: calc(66.6666666667% - 32px);
+	}
+
+	.col-sm-9 {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 auto;
+		flex: 0 0 auto;
+		width: calc(75% - 32px);
+	}
+
+	.col-sm-10 {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 auto;
+		flex: 0 0 auto;
+		width: calc(83.3333333333% - 32px);
+	}
+
+	.col-sm-11 {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 auto;
+		flex: 0 0 auto;
+		width: calc(91.6666666667% - 32px);
+	}
+
+	.col-sm-12 {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 auto;
+		flex: 0 0 auto;
+		width: calc(100% - 32px);
+	}
+}
+
+@media (min-width: 768px) {
+	.col-md-1 {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 auto;
+		flex: 0 0 auto;
+		width: calc(8.3333333333% - 32px);
+	}
+
+	.col-md-2 {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 auto;
+		flex: 0 0 auto;
+		width: calc(16.6666666667% - 32px);
+	}
+
+	.col-md-3 {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 auto;
+		flex: 0 0 auto;
+		width: calc(25% - 32px);
+	}
+
+	.col-md-4 {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 auto;
+		flex: 0 0 auto;
+		width: calc(33.3333333333% - 32px);
+	}
+
+	.col-md-5 {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 auto;
+		flex: 0 0 auto;
+		width: calc(41.6666666667% - 32px);
+	}
+
+	.col-md-6 {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 auto;
+		flex: 0 0 auto;
+		width: calc(50% - 32px);
+	}
+
+	.col-md-7 {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 auto;
+		flex: 0 0 auto;
+		width: calc(58.3333333333% - 32px);
+	}
+
+	.col-md-8 {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 auto;
+		flex: 0 0 auto;
+		width: calc(66.6666666667% - 32px);
+	}
+
+	.col-md-9 {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 auto;
+		flex: 0 0 auto;
+		width: calc(75% - 32px);
+	}
+
+	.col-md-10 {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 auto;
+		flex: 0 0 auto;
+		width: calc(83.3333333333% - 32px);
+	}
+
+	.col-md-11 {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 auto;
+		flex: 0 0 auto;
+		width: calc(91.6666666667% - 32px);
+	}
+
+	.col-md-12 {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 auto;
+		flex: 0 0 auto;
+		width: calc(100% - 32px);
+	}
+}
+
+@media (min-width: 1054px) {
+	.col-lg-1 {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 auto;
+		flex: 0 0 auto;
+		width: calc(8.3333333333% - 32px);
+	}
+
+	.col-lg-2 {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 auto;
+		flex: 0 0 auto;
+		width: calc(16.6666666667% - 32px);
+	}
+
+	.col-lg-3 {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 auto;
+		flex: 0 0 auto;
+		width: calc(25% - 32px);
+	}
+
+	.col-lg-4 {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 auto;
+		flex: 0 0 auto;
+		width: calc(33.3333333333% - 32px);
+	}
+
+	.col-lg-5 {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 auto;
+		flex: 0 0 auto;
+		width: calc(41.6666666667% - 32px);
+	}
+
+	.col-lg-6 {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 auto;
+		flex: 0 0 auto;
+		width: calc(50% - 32px);
+	}
+
+	.col-lg-7 {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 auto;
+		flex: 0 0 auto;
+		width: calc(58.3333333333% - 32px);
+	}
+
+	.col-lg-8 {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 auto;
+		flex: 0 0 auto;
+		width: calc(66.6666666667% - 32px);
+	}
+
+	.col-lg-9 {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 auto;
+		flex: 0 0 auto;
+		width: calc(75% - 32px);
+	}
+
+	.col-lg-10 {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 auto;
+		flex: 0 0 auto;
+		width: calc(83.3333333333% - 32px);
+	}
+
+	.col-lg-11 {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 auto;
+		flex: 0 0 auto;
+		width: calc(91.6666666667% - 32px);
+	}
+
+	.col-lg-12 {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 auto;
+		flex: 0 0 auto;
+		width: calc(100% - 32px);
+	}
+}
+
+@media (min-width: 1200px) {
+	.col-xl-1 {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 auto;
+		flex: 0 0 auto;
+		width: calc(8.3333333333% - 32px);
+	}
+
+	.col-xl-2 {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 auto;
+		flex: 0 0 auto;
+		width: calc(16.6666666667% - 32px);
+	}
+
+	.col-xl-3 {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 auto;
+		flex: 0 0 auto;
+		width: calc(25% - 32px);
+	}
+
+	.col-xl-4 {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 auto;
+		flex: 0 0 auto;
+		width: calc(33.3333333333% - 32px);
+	}
+
+	.col-xl-5 {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 auto;
+		flex: 0 0 auto;
+		width: calc(41.6666666667% - 32px);
+	}
+
+	.col-xl-6 {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 auto;
+		flex: 0 0 auto;
+		width: calc(50% - 32px);
+	}
+
+	.col-xl-7 {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 auto;
+		flex: 0 0 auto;
+		width: calc(58.3333333333% - 32px);
+	}
+
+	.col-xl-8 {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 auto;
+		flex: 0 0 auto;
+		width: calc(66.6666666667% - 32px);
+	}
+
+	.col-xl-9 {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 auto;
+		flex: 0 0 auto;
+		width: calc(75% - 32px);
+	}
+
+	.col-xl-10 {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 auto;
+		flex: 0 0 auto;
+		width: calc(83.3333333333% - 32px);
+	}
+
+	.col-xl-11 {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 auto;
+		flex: 0 0 auto;
+		width: calc(91.6666666667% - 32px);
+	}
+
+	.col-xl-12 {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 auto;
+		flex: 0 0 auto;
+		width: calc(100% - 32px);
+	}
+}
+
+@media (min-width: 1400px) {
+	.col-xxl-1 {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 auto;
+		flex: 0 0 auto;
+		width: calc(8.3333333333% - 32px);
+	}
+
+	.col-xxl-2 {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 auto;
+		flex: 0 0 auto;
+		width: calc(16.6666666667% - 32px);
+	}
+
+	.col-xxl-3 {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 auto;
+		flex: 0 0 auto;
+		width: calc(25% - 32px);
+	}
+
+	.col-xxl-4 {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 auto;
+		flex: 0 0 auto;
+		width: calc(33.3333333333% - 32px);
+	}
+
+	.col-xxl-5 {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 auto;
+		flex: 0 0 auto;
+		width: calc(41.6666666667% - 32px);
+	}
+
+	.col-xxl-6 {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 auto;
+		flex: 0 0 auto;
+		width: calc(50% - 32px);
+	}
+
+	.col-xxl-7 {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 auto;
+		flex: 0 0 auto;
+		width: calc(58.3333333333% - 32px);
+	}
+
+	.col-xxl-8 {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 auto;
+		flex: 0 0 auto;
+		width: calc(66.6666666667% - 32px);
+	}
+
+	.col-xxl-9 {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 auto;
+		flex: 0 0 auto;
+		width: calc(75% - 32px);
+	}
+
+	.col-xxl-10 {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 auto;
+		flex: 0 0 auto;
+		width: calc(83.3333333333% - 32px);
+	}
+
+	.col-xxl-11 {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 auto;
+		flex: 0 0 auto;
+		width: calc(91.6666666667% - 32px);
+	}
+
+	.col-xxl-12 {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 auto;
+		flex: 0 0 auto;
+		width: calc(100% - 32px);
+	}
+}
+
+@media (max-width: 1650px) {
+	.template-10--angular .template-10-bg-wrapper {
+		width: 45%;
+	}
+
+	.template-11--machine-learning::after {
+		right: 100px;
+	}
+}
+
+@media (max-width: 1440px) {
+	.template-2--outstaffing .template-2-image img {
+		max-width: 531px;
+		left: -78px;
+		top: 0;
+	}
+
+	.template-2--outstaffing {
+		padding: 172px 0 30px;
+	}
+
+	.template-2--php-outstaffing::after {
+		width: 328px;
+		height: 147px;
+		background-size: cover;
+	}
+
+	.template-2--java-outstaffing::after {
+		width: 328px;
+		height: 147px;
+		background-size: cover;
+	}
+
+	.template-2--java-outstaffing .template-2-image img {
+		max-width: 550px;
+		left: -120px;
+	}
+
+	.template-2--net-outstaffing::after {
+		width: 328px;
+		height: 147px;
+		background-size: cover;
+	}
+
+	.template-2--net-outstaffing .template-2-image img {
+		max-width: 578px;
+		left: -120px;
+	}
+
+	.template-2--net-outstaffing .template-2-header {
+		font-size: 80px;
+		line-height: 88px;
+		margin-bottom: 30px;
+	}
+
+	.template-3--nodejs .template-3-lines .lines-bg-item:nth-child(4)::before {
+		background: url("../img/java-background.png") no-repeat;
+		background-size: cover;
+	}
+
+	.template-3--nodejs .template-3-header {
+		margin-bottom: 30px;
+		max-width: 980px;
+		font-size: 55px;
+		line-height: 57px;
+	}
+
+	.template-3--reactjs .template-3-lines .lines-bg-item:nth-child(4)::before {
+		background: url("../img/reactjs_background.png") no-repeat;
+		background-size: cover;
+	}
+
+	.template-3--reactjs .template-3-header {
+		margin-bottom: 30px;
+		max-width: 980px;
+		font-size: 55px;
+		line-height: 57px;
+	}
+
+	.template-3--python .template-3-lines .lines-bg-item:nth-child(4)::before {
+		background: url("../img/python_background.png") no-repeat;
+		background-size: cover;
+	}
+
+	.template-3--python .template-3-header {
+		margin-bottom: 30px;
+		max-width: 800px;
+		font-size: 55px;
+		line-height: 57px;
+	}
+
+	.template-3--python .tabs::before {
+		right: -41px;
+	}
+
+	.template-3--react-native .template-3-lines .lines-bg-item:nth-child(4)::before {
+		background: url("../img/react-native-background.png") no-repeat;
+		background-size: cover;
+	}
+
+	.template-3--react-native .tabs::before {
+		right: -10px;
+	}
+
+	.template-3--machine-learning .template-3-lines .lines-bg-item:nth-child(4)::before {
+		background: url("../img/machine-learning-background.png") no-repeat;
+		background-size: cover;
+	}
+
+	.template-3--machine-learning .template-3-header {
+		margin-bottom: 30px;
+		max-width: 980px;
+		font-size: 55px;
+		line-height: 57px;
+	}
+
+	.template-3--flutter .template-3-lines .lines-bg-item:nth-child(4)::before {
+		background: url("../img/flutter-background.png") no-repeat;
+		background-position: center center;
+		background-size: cover;
+	}
+
+	.template-3--flutter .template-3-header {
+		margin-bottom: 30px;
+		max-width: 980px;
+		font-size: 55px;
+		line-height: 57px;
+	}
+
+	.template-3--angular .template-3-lines .lines-bg-item:nth-child(4)::before {
+		background: url("../img/angular/angular-software-background.png") no-repeat;
+		background-position: center center;
+		background-size: cover;
+	}
+
+	.template-3--angular .template-3-header {
+		margin-bottom: 30px;
+		max-width: 980px;
+		font-size: 55px;
+		line-height: 57px;
+	}
+
+	.template-3--vuejs .template-3-lines .lines-bg-item:nth-child(4)::before {
+		background: url("../img/vuejs/vuejs-background.png") no-repeat;
+		background-position: center center;
+		background-size: cover;
+	}
+
+	.template-3--vuejs .template-3-header {
+		margin-bottom: 30px;
+		max-width: 980px;
+		font-size: 55px;
+		line-height: 57px;
+	}
+
+	.template-7--nodejs .template-7-lines .lines-bg-item:nth-child(4)::before {
+		background: url("../img/dot-net-contact.png") no-repeat;
+		background-position: right center;
+		background-size: contain;
+	}
+
+	.template-7--reactjs .template-7-lines .lines-bg-item:nth-child(4)::before {
+		background: url("../img/reactjs-contact.png") no-repeat;
+		background-position: right center;
+		background-size: contain;
+	}
+
+	.template-7--python .template-7-lines .lines-bg-item:nth-child(4)::before {
+		background: url("../img/python-contact.png") no-repeat;
+		background-position: right center;
+		background-size: contain;
+	}
+
+	.template-7--php-outstaffing .template-7-lines .lines-bg-item:nth-child(4)::before {
+		background: url("../img/template-7-php-outstaffing-background.png") no-repeat;
+		background-position: right center;
+		background-size: cover;
+	}
+
+	.template-7--java-outstaffing .template-7-lines .lines-bg-item:nth-child(4)::before {
+		background: url("../img/template-7-java-outstaffing-background.png") no-repeat;
+		background-position: right center;
+		background-size: cover;
+	}
+
+	.template-7--net-outstaffing .template-7-lines .lines-bg-item:nth-child(4)::before {
+		background: url("../img/template-7-net-outstaffing-background.png") no-repeat;
+		background-position: right center;
+		background-size: cover;
+	}
+
+	.template-7--machine-learning .template-7-lines .lines-bg-item:nth-child(4)::before {
+		background: url("../img/template-7-machine-learning-background.png") no-repeat;
+		background-position: right center;
+		background-size: contain;
+	}
+
+	.template-7--flutter .template-7-lines .lines-bg-item:nth-child(4)::before {
+		background: url("../img/flutter-contact.png") no-repeat;
+		background-position: right center;
+		background-size: contain;
+	}
+
+	.template-7--angular .template-7-lines .lines-bg-item:nth-child(4)::before {
+		background: url("../img/angular/template-7-angular-software.png") no-repeat;
+		background-position: right center;
+		background-size: contain;
+	}
+
+	.template-7--angular .template-7-lines .lines-bg-item:nth-child(4)::before {
+		background: url("../img/vuejs/template-7-vuejs.png") no-repeat;
+		background-position: right center;
+		background-size: contain;
+	}
+
+	.template-8--nodejs::before {
+		left: 68px;
+		width: 373px;
+		height: 435px;
+		background-size: cover;
+	}
+
+	.template-8--nodejs::after {
+		width: 328px;
+		height: 147px;
+		background-size: cover;
+	}
+
+	.template-8--nodejs .template-8-header {
+		margin-bottom: 88px;
+		font-size: 90px;
+		line-height: 88px;
+	}
+
+	.template-8--reactjs::after {
+		width: 328px;
+		height: 147px;
+		background-size: cover;
+	}
+
+	.template-8--reactjs .template-8-header {
+		margin-bottom: 88px;
+		font-size: 90px;
+		line-height: 88px;
+	}
+
+	.template-8--python::after {
+		width: 328px;
+		height: 147px;
+		background-size: cover;
+	}
+
+	.template-8--python .template-8-header {
+		margin-bottom: 88px;
+		font-size: 90px;
+		line-height: 88px;
+	}
+
+	.template-8--react-native::after {
+		width: 528px;
+		height: 147px;
+		background-size: cover;
+	}
+
+	.template-8--machine-learning .template-8-header {
+		margin-bottom: 88px;
+		font-size: 90px;
+		line-height: 88px;
+	}
+
+	.template-8--flutter::after {
+		width: 328px;
+		height: 147px;
+		background-size: cover;
+	}
+
+	.template-8--flutter .template-8-header {
+		margin-bottom: 88px;
+		font-size: 90px;
+		line-height: 88px;
+	}
+
+	.template-8--angular::after {
+		width: 528px;
+		height: 147px;
+		background-size: cover;
+	}
+
+	.template-8--angular-de .template-8-header {
+		font-size: 70px;
+	}
+
+	.template-8--vuejs::after {
+		width: 528px;
+		height: 147px;
+		background-size: cover;
+	}
+
+	.template-8--vuejs-de .template-8-header span:nth-of-type(2) {
+		font-size: 50px;
+	}
+
+	.template-10--angular .template-10-bg-wrapper {
+		width: 44.5%;
+	}
+
+	.template-11--nodejs .template-11-lines .lines-bg-item:nth-child(4)::before {
+		background: url("../img/java-background.png") no-repeat;
+		background-size: cover;
+	}
+
+	.template-11--nodejs .template-11-tabs-caption-item:last-child {
+		width: 304px;
+	}
+
+	.template-11--reactjs .template-11-lines .lines-bg-item:nth-child(4)::before {
+		background: url("../img/reactjs_background.png") no-repeat;
+		background-size: cover;
+	}
+
+	.template-11--outstaffing .template-11-wrapper.container::after {
+		content: none;
+	}
+
+	.template-11--outstaffing .template-11-lines .lines-bg-item:nth-child(4)::before {
+		background: url("../img/template-25-php-outstaffing-background.png") no-repeat;
+		background-size: cover;
+	}
+
+	.template-11--outstaffing .template-11-tabs-content::after {
+		content: none;
+	}
+
+	.template-11--outstaffing .template-11-tabs-content {
+		height: 407px;
+	}
+
+	.template-11--outstaffing .sq-block {
+		padding: 16px;
+		width: 200px;
+		height: 200px;
+	}
+
+	.template-11--outstaffing .content-body-text {
+		max-height: 350px;
+	}
+
+	.template-11--outstaffing .content-body-text p {
+		max-height: 300px;
+	}
+
+	.template-11--outstaffing {
+		padding: 30px 0 60px;
+	}
+
+	.template-11--react-native .template-11-lines .lines-bg-item:nth-child(4)::before {
+		background: url("../img/react-native-background.png") no-repeat;
+		background-size: cover;
+	}
+
+	.template-11--react-native .template-11-wrapper.container::after {
+		left: calc(50% - 265px);
+		height: 544px;
+	}
+
+	.template-11--machine-learning .template-11-lines .lines-bg-item:nth-child(4)::before {
+		background: url("../img/machine-learning-background.png") no-repeat;
+		background-size: cover;
+	}
+
+	.template-11--machine-learning .sq-block {
+		width: 228px;
+	}
+
+	.template-11--flutter .template-11-lines .lines-bg-item:nth-child(4)::before {
+		background: url("../img/flutter-background.png") no-repeat;
+		background-position: center center;
+		background-size: cover;
+	}
+
+	.template-11--flutter .sq-block {
+		width: 228px;
+	}
+
+	.template-11--flutter-de .template-11-header {
+		font-size: 55px;
+		line-height: 57px;
+	}
+
+	.template-11--angular .template-11-lines .lines-bg-item:nth-child(4)::before {
+		background: url("../img/angular/angular-software-background.png") no-repeat;
+		background-size: cover;
+	}
+
+	.template-11--vuejs .template-11-lines .lines-bg-item:nth-child(4)::before {
+		background: url("../img/vuejs/vuejs-background.png") no-repeat;
+		background-size: cover;
+	}
+
+	.template-17--python .template-17-lines .lines-bg-item:nth-child(4)::before {
+		background: url("../img/python_background.png") no-repeat;
+		background-size: cover;
+	}
+
+	.template-17--python .template-17-wrapper::after {
+		display: none;
+	}
+
+	.template-17--python .template-17-wrapper::before {
+		display: none;
+	}
+
+	.template-17--angular .template-17-lines .lines-bg-item:nth-child(4)::before {
+		background: url("../img/angular/angular-software-background.png") no-repeat;
+		background-size: cover;
+	}
+
+	.template-17--angular .template-17-wrapper::after {
+		display: none;
+	}
+
+	.template-17--angular .template-17-wrapper::before {
+		content: none;
+	}
+
+	.template-19--reactjs .template-19-lines .lines-bg-item:nth-child(4)::before {
+		background: url("../img/reactjs_background.png") no-repeat;
+		background-size: cover;
+	}
+
+	.template-19--reactjs .list-item-title {
+		max-width: 200px;
+	}
+
+	.template-19--reactjs {
+		padding: 96px 0 0;
+	}
+
+	.template-19--python .template-19-lines .lines-bg-item:nth-child(4)::before {
+		background: url("../img/python_background.png") no-repeat;
+		background-size: cover;
+	}
+
+	.template-19--python .list-item-title {
+		max-width: 200px;
+	}
+
+	.template-19--python {
+		padding: 96px 0 0;
+	}
+
+	.template-19--react-native .template-19-lines .lines-bg-item:nth-child(4)::before {
+		background: url("../img/react-native-background.png") no-repeat;
+		background-size: cover;
+	}
+
+	.template-19--react-native .list-item-title {
+		max-width: 200px;
+	}
+
+	.template-19--react-native {
+		padding: 96px 0 0;
+	}
+
+	.template-19--machine-learning .template-19-lines .lines-bg-item:nth-child(4)::before {
+		background: url("../img/machine-learning-background.png") no-repeat;
+		background-size: cover;
+	}
+
+	.template-19--machine-learning .list-item-title {
+		max-width: 200px;
+	}
+
+	.template-19--machine-learning {
+		padding: 96px 0 0;
+	}
+
+	.template-19--flutter .template-19-lines .lines-bg-item:nth-child(4)::before {
+		background: url("../img/flutter-background.png") no-repeat;
+		background-size: cover;
+	}
+
+	.template-19--flutter .template-19-wrapper::before {
+		content: none;
+	}
+
+	.template-19--flutter .list-item-title {
+		max-width: 200px;
+	}
+
+	.template-19--flutter {
+		padding: 96px 0;
+	}
+
+	.template-19--vuejs .template-19-lines .lines-bg-item:nth-child(4)::before {
+		background: url("../img/vuejs/vuejs-background.png") no-repeat;
+		background-size: cover;
+	}
+
+	.template-19--vuejs .template-19-wrapper::before {
+		content: none;
+	}
+
+	.template-19--vuejs {
+		padding: 96px 0;
+	}
+
+	.template-21--outstaffing .template-21-lines .lines-bg-item:nth-child(4)::before {
+		background: url("../img/template-25-php-outstaffing-background.png") no-repeat;
+		background-size: cover;
+	}
+
+	.template-21--outstaffing .template-21-header {
+		max-width: 970px;
+		font-size: 55px;
+		line-height: 57px;
+	}
+
+	.template-21--outstaffing .template-21-caption {
+		margin-bottom: 3px;
+	}
+
+	.template-21 {
+		padding: 103px 0 137px;
+	}
+
+	.template-22--nodejs .template-22-lines .lines-bg-item:nth-child(4)::before {
+		background: url("../img/java-background.png") no-repeat;
+		background-size: cover;
+	}
+
+	.template-22--nodejs .template-22-wrapper::after {
+		right: -130px;
+		width: 256px;
+		height: 231px;
+	}
+
+	.template-22--reactjs .list-col:last-child {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 520px;
+		flex: 0 0 520px;
+	}
+
+	.template-22--reactjs .template-22-lines .lines-bg-item:nth-child(4)::before {
+		background: url("../img/reactjs_background.png") no-repeat;
+		background-size: cover;
+	}
+
+	.template-22--reactjs .template-22-wrapper::after {
+		left: 255px;
+		width: 290px;
+	}
+
+	.template-22--python .list-col:last-child {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 520px;
+		flex: 0 0 520px;
+	}
+
+	.template-22--python .template-22-lines .lines-bg-item:nth-child(4)::before {
+		background: url("../img/python_background.png") no-repeat;
+		background-size: cover;
+	}
+
+	.template-22--outstaffing .template-22-lines .lines-bg-item:nth-child(4)::before {
+		background: url("../img/template-25-php-outstaffing-background.png") no-repeat;
+		background-size: cover;
+	}
+
+	.template-22--outstaffing {
+		padding: 20px 0 80px;
+	}
+
+	.template-22--react-native .list-col:last-child {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 520px;
+		flex: 0 0 520px;
+	}
+
+	.template-22--react-native .template-22-lines .lines-bg-item:nth-child(4)::before {
+		background: url("../img/react-native-background.png") no-repeat;
+		background-size: cover;
+	}
+
+	.template-22--react-native .template-22-wrapper::after {
+		bottom: -300px;
+		width: 290px;
+	}
+
+	.template-22--react-native .template-22-header::after {
+		right: 243px;
+		width: 177px;
+		height: 152px;
+	}
+
+	.template-22--react-native .template-22-header {
+		font-size: 55px;
+	}
+
+	.template-22--machine-learning .template-22-lines .lines-bg-item:nth-child(4)::before {
+		background: url("../img/machine-learning-background.png") no-repeat;
+		background-size: cover;
+	}
+
+	.template-22--flutter .list-col:last-child {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 520px;
+		flex: 0 0 520px;
+	}
+
+	.template-22--flutter .template-22-lines .lines-bg-item:nth-child(4)::before {
+		background: url("../img/flutter-background.png") no-repeat;
+		background-size: cover;
+	}
+
+	.template-22--flutter .template-22-wrapper::after {
+		left: 255px;
+		width: 290px;
+	}
+
+	.template-22--angular .template-22-lines .lines-bg-item:nth-child(4)::before {
+		background: url("../img/angular/angular-software-background.png") no-repeat;
+		background-size: cover;
+	}
+
+	.template-22--angular .template-22-header {
+		font-size: 55px;
+	}
+
+	.template-22--vuejs .template-22-lines .lines-bg-item:nth-child(4)::before {
+		background: url("../img/vuejs/vuejs-background.png") no-repeat;
+		background-size: cover;
+	}
+
+	.template-22--vuejs .template-22-header {
+		font-size: 55px;
+	}
+
+	.template-25--nodejs .template-25-lines .lines-bg-item:nth-child(4)::before {
+		background: url("../img/java-background.png") no-repeat;
+		background-size: cover;
+	}
+
+	.template-25--nodejs {
+		padding: 120px 0 112px;
+	}
+
+	.template-25--outstaffing .template-25-lines .lines-bg-item:nth-child(4)::before {
+		background: url("../img/template-25-php-outstaffing-background.png") no-repeat;
+		background-size: cover;
+	}
+
+	.template-25--outstaffing {
+		padding: 120px 0 112px;
+	}
+
+	.template-25--machine-learning .template-25-lines .lines-bg-item:nth-child(4)::before {
+		background: url("../img/machine-learning-background.png") no-repeat;
+		background-size: cover;
+	}
+
+	.template-25--machine-learning {
+		padding: 120px 0 112px;
+	}
+
+	.template-11--ux-ui .template-11-lines .lines-bg-item:nth-child(4)::before {
+		content: none;
+	}
+
+	.template-24--ux-ui .template-24-footer {
+		margin-top: 24px;
+	}
+
+	.template-24--ux-ui .template-24-image img {
+		top: -165px;
+	}
+
+	.template-55-header {
+		font-size: 55px;
+	}
+
+	.template-56-header {
+		font-size: 55px;
+	}
+
+	.template-56-item {
+		height: 630px;
+	}
+
+	.template-56-content p {
+		max-height: 520px;
+	}
+
+	.template-57-header {
+		font-size: 55px;
+	}
+
+	.template-58-header {
+		font-size: 55px;
+	}
+}
+
+@media (max-width: 1280px) {
+	.template-2--outstaffing .template-2-image img {
+		max-width: 435px;
+		left: 0;
+		top: 20px;
+	}
+
+	.template-2--outstaffing .template-2-header {
+		margin-bottom: 15px;
+	}
+
+	.template-2--outstaffing {
+		padding: 125px 0 0px;
+	}
+
+	.template-2--php-outstaffing::after {
+		width: 289px;
+		height: 130px;
+	}
+
+	.template-2--php-outstaffing .template-2-header {
+		margin-bottom: 15px;
+	}
+
+	.template-2--java-outstaffing::after {
+		width: 289px;
+		height: 130px;
+	}
+
+	.template-2--java-outstaffing .template-2-image img {
+		max-width: 450px;
+		left: -50px;
+	}
+
+	.template-2--java-outstaffing .template-2-header {
+		margin-bottom: 15px;
+	}
+
+	.template-2--net-outstaffing::after {
+		width: 289px;
+		height: 130px;
+	}
+
+	.template-2--net-outstaffing .template-2-image img {
+		max-width: 510px;
+		left: -90px;
+	}
+
+	.template-2--net-outstaffing .template-2-header {
+		font-size: 72px;
+		line-height: 71px;
+	}
+
+	.template-3--nodejs .template-3-header {
+		margin-bottom: 22px;
+		font-size: 42px;
+		line-height: 43px;
+	}
+
+	.template-3--reactjs .template-3-header {
+		margin-bottom: 22px;
+		font-size: 42px;
+		line-height: 43px;
+	}
+
+	.template-3--python .template-3-header {
+		margin-bottom: 22px;
+		max-width: 700px;
+		font-size: 42px;
+		line-height: 43px;
+	}
+
+	.template-3--python .tabs::before {
+		right: -81px;
+	}
+
+	.template-3--react-native .tabs::before {
+		right: -50px;
+	}
+
+	.template-3--machine-learning .template-3-header {
+		margin-bottom: 22px;
+		font-size: 42px;
+		line-height: 43px;
+	}
+
+	.template-3--flutter .template-3-header {
+		margin-bottom: 22px;
+		font-size: 42px;
+		line-height: 43px;
+	}
+
+	.template-3--angular .template-3-header {
+		margin-bottom: 22px;
+		font-size: 42px;
+		line-height: 43px;
+	}
+
+	.template-3--vuejs .template-3-header {
+		margin-bottom: 22px;
+		font-size: 42px;
+		line-height: 43px;
+	}
+
+	.template-8--nodejs::before {
+		left: 48px;
+		width: 329px;
+		height: 383px;
+	}
+
+	.template-8--nodejs::after {
+		width: 289px;
+		height: 130px;
+	}
+
+	.template-8--nodejs .template-8-header {
+		margin-bottom: 65px;
+		max-width: 620px;
+		font-size: 72px;
+		line-height: 71px;
+	}
+
+	.template-8--nodejs .template-8-image img {
+		right: -100px;
+		max-width: 596px;
+	}
+
+	.template-8--reactjs::after {
+		width: 289px;
+		height: 130px;
+	}
+
+	.template-8--reactjs .template-8-header {
+		margin-bottom: 65px;
+		max-width: 620px;
+		font-size: 72px;
+		line-height: 71px;
+	}
+
+	.template-8--reactjs .template-8-image img {
+		right: -100px;
+		max-width: 596px;
+	}
+
+	.template-8--python::after {
+		width: 289px;
+		height: 130px;
+	}
+
+	.template-8--python .template-8-header {
+		margin-bottom: 65px;
+		max-width: 620px;
+		font-size: 72px;
+		line-height: 71px;
+	}
+
+	.template-8--python .template-8-image img {
+		right: -100px;
+		max-width: 596px;
+	}
+
+	.template-8--react-native::after {
+		width: 489px;
+		height: 130px;
+	}
+
+	.template-8--machine-learning .template-8-header {
+		margin-bottom: 65px;
+		max-width: 500px;
+		font-size: 72px;
+		line-height: 71px;
+	}
+
+	.template-8--machine-learning .template-8-image img {
+		right: -50px;
+		top: 0;
+		max-width: 596px;
+	}
+
+	.template-8--flutter::after {
+		width: 289px;
+		height: 130px;
+	}
+
+	.template-8--flutter .template-8-header {
+		margin-bottom: 65px;
+		max-width: 620px;
+		font-size: 72px;
+		line-height: 71px;
+	}
+
+	.template-8--flutter .template-8-image img {
+		right: -100px;
+		max-width: 596px;
+	}
+
+	.template-8--angular::after {
+		width: 489px;
+		height: 130px;
+	}
+
+	.template-8--angular .template-8-image img {
+		right: 0;
+		top: 0px;
+	}
+
+	.template-8--angular-de .template-8-image img {
+		right: 0;
+		top: 0px;
+	}
+
+	.template-8--angular-de .template-8-header {
+		font-size: 60px;
+	}
+
+	.template-8--vuejs::after {
+		width: 489px;
+		height: 130px;
+	}
+
+	.template-8--vuejs .template-8-image img {
+		right: 0;
+	}
+
+	.template-11--nodejs .template-11-tabs-caption-item:last-child {
+		width: 290px;
+	}
+
+	.template-11--react-native .template-11-wrapper.container::after {
+		left: calc(50% - 305px);
+		height: 486px;
+	}
+
+	.template-11--machine-learning::after {
+		content: none;
+	}
+
+	.template-11--machine-learning .template-11-wrapper.container::after {
+		content: none;
+	}
+
+	.template-11--machine-learning .sq-block {
+		width: 217px;
+	}
+
+	.template-11--flutter .sq-block {
+		width: 217px;
+	}
+
+	.template-11--de .sq-block-title {
+		font-size: 12px;
+	}
+
+	.template-17--angular {
+		padding-bottom: 100px;
+	}
+
+	.template-19--reactjs .list-item {
+		padding: 22px;
+	}
+
+	.template-19--reactjs {
+		padding: 60px 0 0;
+	}
+
+	.template-19--python .list-item {
+		padding: 22px;
+	}
+
+	.template-19--python {
+		padding: 60px 0 0;
+	}
+
+	.template-19--react-native .list-item {
+		padding: 22px;
+	}
+
+	.template-19--react-native {
+		padding: 60px 0 0;
+	}
+
+	.template-19--machine-learning .list-item {
+		padding: 22px;
+	}
+
+	.template-19--machine-learning {
+		padding: 60px 0 0;
+	}
+
+	.template-19--flutter .list-item {
+		padding: 22px;
+	}
+
+	.template-19--flutter {
+		padding: 60px 0;
+	}
+
+	.template-19--vuejs .template-19-header {
+		font-size: 42px;
+		line-height: 43px;
+	}
+
+	.template-19--vuejs .list-item {
+		padding: 22px;
+	}
+
+	.template-19--vuejs {
+		padding: 60px 0;
+	}
+
+	.template-19--de .list-item-title {
+		font-size: 16px;
+	}
+
+	.template-21--outstaffing .template-21-header {
+		max-width: 750px;
+		font-size: 42px;
+		line-height: 43px;
+		margin-bottom: 22px;
+	}
+
+	.template-21--outstaffing .template-21-caption {
+		margin-bottom: 22px;
+	}
+
+	.template-21 {
+		padding: 112px 0 110px;
+	}
+
+	.template-22--nodejs .template-22-wrapper::after {
+		right: -100px;
+		width: 253px;
+		height: 231px;
+	}
+
+	.template-22--reactjs .list-col:last-child {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 494px;
+		flex: 0 0 494px;
+	}
+
+	.template-22--reactjs .template-22-wrapper::after {
+		left: 235px;
+	}
+
+	.template-22--python .list-col:last-child {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 494px;
+		flex: 0 0 494px;
+	}
+
+	.template-22--python .template-22-wrapper::after {
+		left: 235px;
+	}
+
+	.template-22--react-native .list-col:last-child {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 494px;
+		flex: 0 0 494px;
+	}
+
+	.template-22--react-native .template-22-header::after {
+		right: 330px;
+		width: 200px;
+		height: 120px;
+		background-size: contain;
+	}
+
+	.template-22--react-native .template-22-header {
+		font-size: 42px;
+	}
+
+	.template-22--flutter .list-col:last-child {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 494px;
+		flex: 0 0 494px;
+	}
+
+	.template-22--flutter .template-22-wrapper::after {
+		left: 235px;
+	}
+
+	.template-22--angular .template-22-header {
+		font-size: 42px;
+	}
+
+	.template-22--vuejs .template-22-header {
+		font-size: 42px;
+	}
+
+	.template-25--nodejs {
+		padding: 100px 0 60px;
+	}
+
+	.template-25--outstaffing .tabs-content::before {
+		content: none;
+	}
+
+	.template-25--outstaffing {
+		padding: 100px 0 60px;
+	}
+
+	.template-25--machine-learning {
+		padding: 100px 0 60px;
+	}
+
+	.template-24--ux-ui .template-24-image img {
+		top: -76px;
+	}
+
+	.template-24--ux-ui {
+		padding: 190px 0 100px;
+	}
+
+	.template-54-content p {
+		padding: 0 5px 0 0;
+	}
+
+	.template-55-header {
+		font-size: 42px;
+	}
+
+	.template-56-header {
+		font-size: 42px;
+	}
+
+	.template-56-buttons .col-lg-4 {
+		width: calc(33.3333% - 16px);
+	}
+
+	.template-56 .row {
+		margin-right: -8px;
+		margin-left: -8px;
+	}
+
+	.template-56 .row > * {
+		margin-right: 8px;
+		margin-left: 8px;
+	}
+
+	.template-56 .col-md-4 {
+		width: calc(33.33333% - 16px);
+	}
+
+	.template-57-header {
+		font-size: 42px;
+	}
+
+	.template-58-header {
+		font-size: 42px;
+	}
+}
+
+@media (max-width: 1057px) {
+	.template-2--outstaffing .template-2-content {
+		margin-top: -140px;
+	}
+
+	.template-2--net-outstaffing .template-2-content {
+		margin-top: -70px;
+	}
+}
+
+@media (max-width: 1054px) {
+	.template-2--outstaffing::after {
+		display: block;
+	}
+
+	.template-2--outstaffing .template-2-image img {
+		position: initial;
+		margin: 0 auto;
+	}
+
+	.template-2--outstaffing .template-2-header span:first-child {
+		color: #f3f8ff;
+		padding-bottom: 0;
+	}
+
+	.template-2--outstaffing .template-2-header span:nth-of-type(2) {
+		padding: 0 17px 10px 17px;
+	}
+
+	.template-2--outstaffing .template-2-header span:nth-of-type(3) {
+		padding: 0 17px 10px 0;
+	}
+
+	.template-2--outstaffing .template-2-header span {
+		display: inline-block;
+	}
+
+	.template-2--outstaffing .template-2-header br:nth-of-type(2) {
+		display: none;
+	}
+
+	.template-2--outstaffing .template-2-header {
+		font-size: 52px;
+		line-height: 60px;
+		margin-bottom: 20px;
+	}
+
+	.template-2--outstaffing .template-2-text h3 {
+		font-size: 24px;
+		line-height: 37px;
+		margin-bottom: 30px;
+	}
+
+	.template-2--outstaffing {
+		padding: 100px 0 52px;
+	}
+
+	.template-2--php-outstaffing .template-2-header span:first-child {
+		color: #f3f8ff;
+		padding-bottom: 0;
+	}
+
+	.template-2--php-outstaffing .template-2-header span:nth-of-type(2) {
+		padding: 0 17px 10px 17px;
+	}
+
+	.template-2--php-outstaffing .template-2-header span:nth-of-type(3) {
+		padding: 0 17px 10px 0;
+	}
+
+	.template-2--php-outstaffing .template-2-header span {
+		display: inline-block;
+	}
+
+	.template-2--php-outstaffing .template-2-header br:nth-of-type(2) {
+		display: none;
+	}
+
+	.template-2--php-outstaffing .template-2-header {
+		font-size: 52px;
+		line-height: 60px;
+		margin-bottom: 20px;
+	}
+
+	.template-2--java-outstaffing .template-2-header span:first-child {
+		color: #f3f8ff;
+		padding-bottom: 0;
+	}
+
+	.template-2--java-outstaffing .template-2-header span:nth-of-type(2) {
+		color: #f3f8ff;
+		padding: 10px 17px 0 0;
+	}
+
+	.template-2--java-outstaffing .template-2-header span:nth-of-type(3) {
+		padding: 0 17px 10px 17px;
+	}
+
+	.template-2--java-outstaffing .template-2-header span {
+		display: inline-block;
+	}
+
+	.template-2--java-outstaffing .template-2-header br:nth-of-type(1) {
+		display: none;
+	}
+
+	.template-2--java-outstaffing .template-2-header {
+		font-size: 52px;
+		line-height: 60px;
+		margin-bottom: 20px;
+	}
+
+	.template-2--net-outstaffing .template-2-header span:nth-of-type(3) {
+		padding: 0 17px 10px 17px;
+	}
+
+	.template-3--nodejs .template-3-header {
+		margin-bottom: 15px;
+		font-size: 40px;
+		line-height: 41px;
+	}
+
+	.template-3--nodejs {
+		padding: 60px 0;
+	}
+
+	.template-3--reactjs .template-3-header {
+		margin-bottom: 15px;
+		font-size: 40px;
+		line-height: 41px;
+	}
+
+	.template-3--reactjs {
+		padding: 60px 0;
+	}
+
+	.template-3--python .template-3-header {
+		margin-bottom: 15px;
+		max-width: 600px;
+		font-size: 40px;
+		line-height: 41px;
+	}
+
+	.template-3--python .tabs::before {
+		display: none;
+	}
+
+	.template-3--python {
+		padding: 60px 0;
+	}
+
+	.template-3--machine-learning .template-3-header::after {
+		content: none;
+	}
+
+	.template-3--machine-learning .template-3-header {
+		margin-bottom: 15px;
+		font-size: 40px;
+		line-height: 41px;
+	}
+
+	.template-3--machine-learning .tabs::before {
+		content: none;
+	}
+
+	.template-3--machine-learning .tabs::after {
+		content: none;
+	}
+
+	.template-3--machine-learning {
+		padding: 60px 0;
+	}
+
+	.template-3--flutter .template-3-header {
+		margin-bottom: 15px;
+		font-size: 40px;
+		line-height: 41px;
+	}
+
+	.template-3--flutter .tabs::before {
+		content: none;
+	}
+
+	.template-3--flutter {
+		padding: 60px 0;
+	}
+
+	.template-3--flutter-de {
+		padding: 60px 0;
+	}
+
+	.template-3--angular .template-3-header {
+		margin-bottom: 15px;
+		font-size: 40px;
+		line-height: 41px;
+	}
+
+	.template-3--angular .tabs::before {
+		content: none;
+	}
+
+	.template-3--angular {
+		padding: 60px 0;
+	}
+
+	.template-3--vuejs .template-3-header {
+		margin-bottom: 15px;
+		font-size: 40px;
+		line-height: 41px;
+	}
+
+	.template-3--vuejs .tabs::before {
+		content: none;
+	}
+
+	.template-3--vuejs {
+		padding: 60px 0;
+	}
+
+	.template-4--nodejs .cases-slider-item-description p,
+  .template-4--reactjs .cases-slider-item-description p {
+		max-height: 162px;
+	}
+
+	.template-8--nodejs::before {
+		left: 29px;
+		top: 120px;
+	}
+
+	.template-8--nodejs::after {
+		display: block;
+	}
+
+	.template-8--nodejs .template-8-header {
+		position: absolute;
+		top: 450px;
+		margin-bottom: 0;
+		max-width: 480px;
+		font-size: 52px;
+		line-height: 60px;
+	}
+
+	.template-8--nodejs .template-8-wrapper {
+		margin-top: 0;
+	}
+
+	.template-8--nodejs .template-8-image img {
+		position: initial;
+		margin: 0 auto;
+		width: 100%;
+		max-width: 596px;
+	}
+
+	.template-8--nodejs .template-8-image {
+		margin-bottom: 194px;
+	}
+
+	.template-8--nodejs {
+		padding: 200px 0 56px;
+	}
+
+	.template-8--reactjs::after {
+		display: block;
+	}
+
+	.template-8--reactjs .template-8-wrapper {
+		margin-top: 0;
+	}
+
+	.template-8--reactjs .template-8-header {
+		position: absolute;
+		top: 450px;
+		margin-bottom: 0;
+		max-width: 480px;
+		font-size: 52px;
+		line-height: 60px;
+	}
+
+	.template-8--reactjs .template-8-image img {
+		position: initial;
+		margin: 0 auto;
+		width: 100%;
+		max-width: 596px;
+	}
+
+	.template-8--reactjs .template-8-image {
+		margin-bottom: 194px;
+	}
+
+	.template-8--reactjs {
+		padding: 200px 0 56px;
+	}
+
+	.template-8--python::after {
+		display: block;
+	}
+
+	.template-8--python .template-8-wrapper {
+		margin-top: 0;
+	}
+
+	.template-8--python .template-8-header {
+		position: absolute;
+		top: 450px;
+		margin-bottom: 0;
+		max-width: 480px;
+		font-size: 52px;
+		line-height: 60px;
+	}
+
+	.template-8--python .template-8-image img {
+		position: initial;
+		margin: 0 auto;
+		width: 100%;
+		max-width: 596px;
+	}
+
+	.template-8--python .template-8-image {
+		margin-bottom: 194px;
+	}
+
+	.template-8--python {
+		padding: 200px 0 56px;
+	}
+
+	.template-8--react-native::after {
+		display: none;
+	}
+
+	.template-8--react-native {
+		padding: 200px 0 56px;
+	}
+
+	.template-8--machine-learning::after {
+		content: none;
+	}
+
+	.template-8--machine-learning .template-8-wrapper::before {
+		content: none;
+	}
+
+	.template-8--machine-learning .template-8-wrapper {
+		margin-top: 0;
+	}
+
+	.template-8--machine-learning .template-8-header {
+		position: absolute;
+		top: 450px;
+		margin-bottom: 0;
+		font-size: 52px;
+		line-height: 60px;
+	}
+
+	.template-8--machine-learning .template-8-image img {
+		position: initial;
+		margin: 0 auto;
+		width: 100%;
+		max-width: 596px;
+	}
+
+	.template-8--machine-learning .template-8-image {
+		margin-bottom: 164px;
+	}
+
+	.template-8--machine-learning {
+		padding: 80px 0 56px;
+	}
+
+	.template-8--flutter::after {
+		display: block;
+	}
+
+	.template-8--flutter .template-8-wrapper {
+		margin-top: 0;
+	}
+
+	.template-8--flutter .template-8-header {
+		position: absolute;
+		top: 450px;
+		margin-bottom: 0;
+		max-width: 480px;
+		font-size: 52px;
+		line-height: 60px;
+	}
+
+	.template-8--flutter .template-8-image img {
+		position: initial;
+		margin: 0 auto;
+		width: 100%;
+		max-width: 596px;
+	}
+
+	.template-8--flutter .template-8-image {
+		margin-bottom: 194px;
+	}
+
+	.template-8--flutter {
+		padding: 200px 0 56px;
+	}
+
+	.template-8--flutter-de {
+		padding: 200px 0 56px;
+	}
+
+	.template-8--angular::after {
+		display: none;
+	}
+
+	.template-8--angular {
+		padding: 100px 0 56px;
+	}
+
+	.template-8--angular-de .template-8-image {
+		margin-bottom: 100px;
+	}
+
+	.template-8--vuejs::after {
+		display: none;
+	}
+
+	.template-8--vuejs {
+		padding: 100px 0 56px;
+	}
+
+	.template-8--vuejs-de .template-8-header span:nth-of-type(2) {
+		font-size: 40px;
+	}
+
+	.template-11--nodejs .template-11-tabs-caption-item:last-child {
+		width: 100%;
+	}
+
+	.template-11--outstaffing .sq-block {
+		width: 100%;
+		height: 72px;
+		margin-bottom: 24px;
+		background-size: cover;
+		padding: 9px 15px;
+	}
+
+	.template-11--outstaffing .content-body-text {
+		max-height: unset;
+	}
+
+	.template-11--outstaffing .content-body-text p {
+		padding-right: 0;
+		max-height: unset;
+	}
+
+	.template-11--machine-learning .template-11-header br {
+		display: none;
+	}
+
+	.template-11--machine-learning .sq-block {
+		width: 100%;
+		height: auto;
+	}
+
+	.template-11--machine-learning .sq-block-title br {
+		display: none;
+	}
+
+	.template-11--machine-learning .sq-block-top {
+		margin-bottom: 0;
+	}
+
+	.template-11--flutter .template-11-header br {
+		display: none;
+	}
+
+	.template-11--flutter .sq-block {
+		width: 100%;
+		height: auto;
+	}
+
+	.template-11--flutter .sq-block-title br {
+		display: none;
+	}
+
+	.template-11--flutter .sq-block-top {
+		margin-bottom: 0;
+	}
+
+	.template-11--flutter-de .template-11-header {
+		font-size: 40px;
+		line-height: 41px;
+	}
+
+	.template-11--angular {
+		padding: 50px 0;
+	}
+
+	.template-11--vuejs {
+		padding: 50px 0;
+	}
+
+	.template-11--de .sq-block-title {
+		font-size: 18px;
+	}
+
+	.template-17--python .template-17-caption br {
+		display: none;
+	}
+
+	.template-17--python .list-item {
+		width: 100%;
+	}
+
+	.template-17--python .list-item-content {
+		height: unset;
+	}
+
+	.template-17--angular {
+		padding-bottom: 50px;
+	}
+
+	.template-17--angular .template-17-wrapper.container {
+		padding-bottom: 0;
+	}
+
+	.template-17--angular .list-item {
+		width: 100%;
+	}
+
+	.template-17--angular .list-item-content {
+		height: unset;
+	}
+
+	.template-19--reactjs .template-19-wrapper.container {
+		max-width: 790px;
+	}
+
+	.template-19--reactjs .template-19-list {
+		width: auto;
+		max-width: initial;
+	}
+
+	.template-19--reactjs .list {
+		margin: 0 0 0 -10px;
+	}
+
+	.template-19--reactjs .list-item {
+		margin-left: 10px;
+		width: calc(33.33333% - 10px);
+	}
+
+	.template-19--reactjs .list-item-top {
+		-webkit-box-align: start;
+		-ms-flex-align: start;
+		align-items: flex-start;
+		margin-bottom: 15px;
+		padding: 0;
+		height: auto;
+		-webkit-box-shadow: none;
+		box-shadow: none;
+		color: #2c333f;
+		background: 0 0;
+	}
+
+	.template-19--reactjs .list-item-top svg {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 32px;
+		flex: 0 0 32px;
+		width: 32px;
+		height: 32px;
+	}
+
+	.template-19--reactjs .list-item-top svg path {
+		fill: #2c333f;
+	}
+
+	.template-19--reactjs .list-item-num {
+		display: block;
+	}
+
+	.template-19--reactjs .list-item-title {
+		-ms-flex-item-align: end;
+		align-self: flex-end;
+		color: #2c333f;
+	}
+
+	.template-19--reactjs {
+		padding: 60px 0;
+	}
+
+	.template-19--python .template-19-wrapper.container {
+		max-width: 790px;
+	}
+
+	.template-19--python .template-19-list {
+		width: auto;
+		max-width: initial;
+	}
+
+	.template-19--python .list {
+		margin: 0 0 0 -10px;
+	}
+
+	.template-19--python .list-item {
+		margin-left: 10px;
+		width: calc(33.33333% - 10px);
+	}
+
+	.template-19--python .list-item-top {
+		-webkit-box-align: start;
+		-ms-flex-align: start;
+		align-items: flex-start;
+		margin-bottom: 15px;
+		padding: 0;
+		height: auto;
+		-webkit-box-shadow: none;
+		box-shadow: none;
+		color: #2c333f;
+		background: 0 0;
+	}
+
+	.template-19--python .list-item-top svg {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 32px;
+		flex: 0 0 32px;
+		width: 32px;
+		height: 32px;
+	}
+
+	.template-19--python .list-item-top svg path {
+		fill: #2c333f;
+	}
+
+	.template-19--python .list-item-num {
+		display: block;
+	}
+
+	.template-19--python .list-item-title {
+		-ms-flex-item-align: end;
+		align-self: flex-end;
+		color: #2c333f;
+	}
+
+	.template-19--python {
+		padding: 60px 0;
+	}
+
+	.template-19--react-native .template-19-wrapper.container {
+		max-width: 790px;
+	}
+
+	.template-19--react-native .template-19-list {
+		width: auto;
+		max-width: initial;
+	}
+
+	.template-19--react-native .list {
+		margin: 0 0 0 -10px;
+	}
+
+	.template-19--react-native .list-item {
+		margin-left: 10px;
+		width: calc(33.33333% - 10px);
+	}
+
+	.template-19--react-native .list-item-top {
+		-webkit-box-align: start;
+		-ms-flex-align: start;
+		align-items: flex-start;
+		margin-bottom: 15px;
+		padding: 0;
+		height: auto;
+		-webkit-box-shadow: none;
+		box-shadow: none;
+		color: #2c333f;
+		background: 0 0;
+	}
+
+	.template-19--react-native .list-item-top svg {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 32px;
+		flex: 0 0 32px;
+		width: 32px;
+		height: 32px;
+	}
+
+	.template-19--react-native .list-item-top svg path {
+		fill: #2c333f;
+	}
+
+	.template-19--react-native .list-item-num {
+		display: block;
+	}
+
+	.template-19--react-native .list-item-title {
+		-ms-flex-item-align: end;
+		align-self: flex-end;
+		color: #2c333f;
+	}
+
+	.template-19--react-native {
+		padding: 60px 0;
+	}
+
+	.template-19--machine-learning .template-19-wrapper.container {
+		max-width: 790px;
+	}
+
+	.template-19--machine-learning .template-19-list {
+		width: auto;
+		max-width: initial;
+	}
+
+	.template-19--machine-learning .list {
+		margin: 0 0 0 -10px;
+	}
+
+	.template-19--machine-learning .list-item {
+		margin-left: 10px;
+		width: calc(50% - 10px);
+	}
+
+	.template-19--machine-learning .list-item-top {
+		-webkit-box-align: start;
+		-ms-flex-align: start;
+		align-items: flex-start;
+		margin-bottom: 15px;
+		padding: 0;
+		height: auto;
+		-webkit-box-shadow: none;
+		box-shadow: none;
+		color: #2c333f;
+		background: 0 0;
+	}
+
+	.template-19--machine-learning .list-item-top svg {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 32px;
+		flex: 0 0 32px;
+		width: 32px;
+		height: 32px;
+	}
+
+	.template-19--machine-learning .list-item-top svg path {
+		fill: #2c333f;
+	}
+
+	.template-19--machine-learning .list-item-num {
+		display: block;
+	}
+
+	.template-19--machine-learning .list-item-title {
+		-ms-flex-item-align: end;
+		align-self: flex-end;
+		color: #2c333f;
+	}
+
+	.template-19--machine-learning {
+		padding: 60px 0;
+	}
+
+	.template-19--flutter .template-19-wrapper.container {
+		max-width: 790px;
+	}
+
+	.template-19--flutter .template-19-list {
+		width: auto;
+		max-width: initial;
+	}
+
+	.template-19--flutter .list {
+		margin: 0 0 0 -10px;
+	}
+
+	.template-19--flutter .list-item {
+		margin-left: 10px;
+		width: calc(33.33333% - 10px);
+	}
+
+	.template-19--flutter .list-item-top {
+		-webkit-box-align: start;
+		-ms-flex-align: start;
+		align-items: flex-start;
+		margin-bottom: 15px;
+		padding: 0;
+		height: auto;
+		-webkit-box-shadow: none;
+		box-shadow: none;
+		color: #2c333f;
+		background: 0 0;
+	}
+
+	.template-19--flutter .list-item-top svg {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 32px;
+		flex: 0 0 32px;
+		width: 32px;
+		height: 32px;
+	}
+
+	.template-19--flutter .list-item-top svg path {
+		fill: #2c333f;
+	}
+
+	.template-19--flutter .list-item-num {
+		display: block;
+	}
+
+	.template-19--flutter .list-item-title {
+		-ms-flex-item-align: end;
+		align-self: flex-end;
+		color: #2c333f;
+	}
+
+	.template-19--vuejs .template-19-wrapper.container {
+		max-width: 790px;
+	}
+
+	.template-19--vuejs .template-19-list {
+		width: auto;
+		max-width: initial;
+	}
+
+	.template-19--vuejs .list {
+		margin: 0 0 0 -10px;
+	}
+
+	.template-19--vuejs .list-item {
+		margin-left: 10px;
+		width: calc(33.33333% - 10px);
+	}
+
+	.template-19--vuejs .list-item-top {
+		-webkit-box-align: start;
+		-ms-flex-align: start;
+		align-items: flex-start;
+		margin-bottom: 15px;
+		padding: 0;
+		height: auto;
+		-webkit-box-shadow: none;
+		box-shadow: none;
+		color: #2c333f;
+		background: 0 0;
+	}
+
+	.template-19--vuejs .list-item-top svg {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 32px;
+		flex: 0 0 32px;
+		width: 32px;
+		height: 32px;
+	}
+
+	.template-19--vuejs .list-item-top svg path {
+		fill: #2c333f;
+	}
+
+	.template-19--vuejs .list-item-num {
+		display: block;
+	}
+
+	.template-19--vuejs .list-item-title {
+		-ms-flex-item-align: center;
+		align-self: center;
+		color: #2c333f;
+	}
+
+	.template-19--de .list-item-title {
+		font-size: 12px;
+	}
+
+	.template-21--outstaffing .template-21-header {
+		max-width: 595px;
+		font-size: 40px;
+		line-height: 41px;
+		margin-bottom: 15px;
+	}
+
+	.template-21--outstaffing .template-21-caption {
+		max-width: 595px;
+		margin: 0 auto 20px;
+	}
+
+	.template-21--outstaffing .el-bar-main {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 1 100%;
+		flex: 0 1 100%;
+		margin-right: 0;
+	}
+
+	.template-21 {
+		padding: 56px 0 64px;
+	}
+
+	.template-22--nodejs .template-22-wrapper::after {
+		display: none;
+	}
+
+	.template-22--nodejs {
+		padding: 60px 0;
+	}
+
+	.template-22--reactjs .list-col:last-child {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 1 100%;
+		flex: 0 1 100%;
+	}
+
+	.template-22--reactjs .template-22-wrapper::after {
+		display: none;
+	}
+
+	.template-22--reactjs {
+		padding: 60px 0;
+	}
+
+	.template-22--python .list-col:last-child {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 1 100%;
+		flex: 0 1 100%;
+	}
+
+	.template-22--python .template-22-wrapper::before {
+		background: none;
+	}
+
+	.template-22--python .template-22-wrapper::after {
+		display: none;
+	}
+
+	.template-22--python {
+		padding: 60px 0;
+	}
+
+	.template-22--react-native .list-col:last-child {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 1 100%;
+		flex: 0 1 100%;
+	}
+
+	.template-22--react-native .template-22-wrapper::before {
+		background: none;
+	}
+
+	.template-22--react-native .template-22-wrapper::after {
+		display: none;
+	}
+
+	.template-22--react-native .template-22-header::after {
+		content: none;
+	}
+
+	.template-22--react-native .template-22-header {
+		font-size: 40px;
+	}
+
+	.template-22--react-native {
+		padding: 60px 0;
+	}
+
+	.template-22--machine-learning .template-22-list .list-col {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 100%;
+		flex: 0 0 100%;
+	}
+
+	.template-22--machine-learning .template-22-list .list-item-value span {
+		margin-right: 8px;
+	}
+
+	.template-22--machine-learning .template-22-list .list-item-value span br {
+		display: none;
+	}
+
+	.template-22--machine-learning .template-22-list {
+		min-width: 100%;
+	}
+
+	.template-22--machine-learning .template-22-list-wrapper::before {
+		content: none;
+	}
+
+	.template-22--machine-learning .template-22-list-wrapper {
+		min-width: 100%;
+	}
+
+	.template-22--flutter .list-col:last-child {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 1 100%;
+		flex: 0 1 100%;
+	}
+
+	.template-22--flutter .template-22-wrapper::after {
+		display: none;
+	}
+
+	.template-22--flutter {
+		padding: 60px 0;
+	}
+
+	.template-22--flutter-de {
+		padding: 60px 0;
+	}
+
+	.template-22--angular .template-22-wrapper::before {
+		background: none;
+	}
+
+	.template-22--angular .template-22-header {
+		font-size: 40px;
+	}
+
+	.template-22--angular {
+		padding: 60px 0;
+	}
+
+	.template-22--vuejs .template-22-wrapper::before {
+		background: none;
+	}
+
+	.template-22--vuejs .template-22-header {
+		font-size: 40px;
+	}
+
+	.template-22--vuejs {
+		padding: 60px 0;
+	}
+
+	.template-25--nodejs {
+		padding: 60px 0;
+	}
+
+	.template-25--outstaffing .tab-content-text {
+		height: 140px;
+	}
+
+	.template-25--outstaffing .tab-content-link {
+		margin-top: 20px;
+		margin-left: unset;
+	}
+
+	.template-25--outstaffing {
+		padding: 60px 0;
+	}
+
+	.template-25--machine-learning {
+		padding: 60px 0;
+	}
+
+	.template-11--ux-ui {
+		background-image: none;
+	}
+
+	.template-24--ux-ui .template-24-header {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+	}
+
+	.template-24--ux-ui .template-24-header span {
+		padding: 10px 16px;
+	}
+
+	.template-24--ux-ui {
+		padding: 150px 0 53px;
+	}
+
+	.template-54-item {
+		height: auto;
+	}
+
+	.template-55-header {
+		font-size: 40px;
+	}
+
+	.template-55-item {
+		height: 490px;
+	}
+
+	.template-55-image {
+		height: 258px;
+	}
+
+	.template-56-header {
+		margin: 0 auto 24px;
+		max-width: 557px;
+		font-size: 40px;
+		text-align: center;
+	}
+
+	.template-56-caption {
+		margin: 0 auto 32px;
+		max-width: 526px;
+	}
+
+	.template-56-item {
+		border: none;
+		padding: 0;
+		height: unset;
+	}
+
+	.template-56-content p {
+		max-height: unset;
+	}
+
+	.template-56-buttons .btn {
+		min-width: 200px;
+	}
+
+	.template-56-buttons .col-lg-4 {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-pack: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+		width: 100%;
+	}
+
+	.template-56 .row {
+		margin-right: -16px;
+		margin-left: -16px;
+	}
+
+	.template-56 .row > * {
+		margin-right: 16px;
+		margin-left: 16px;
+	}
+
+	.template-56 .col-md-4 {
+		width: calc(33.33333% - 32px);
+	}
+
+	.template-57-header {
+		margin: 0 auto 24px;
+		max-width: 490px;
+		font-size: 40px;
+	}
+
+	.template-57-caption {
+		margin: 0 auto 32px;
+		max-width: 490px;
+	}
+
+	.template-58-header {
+		margin: 0 auto 24px;
+		max-width: 490px;
+		font-size: 40px;
+	}
+
+	.template-58-caption {
+		margin: 0 auto 32px;
+		max-width: 490px;
+	}
+}
+
+@media (max-width: 1053px) {
+	.template-57-list-group {
+		border: none;
+		padding: 0;
+	}
+
+	.template-57-group {
+		border: 1px solid #c2cad6;
+		padding: 30px;
+	}
+}
+
+@media (max-width: 1050px) {
+	.template-3--vuejs .template-3-tabs {
+		height: auto;
+	}
+
+	.template-8--vuejs .template-8-wrapper::before,
+  .template-8--vuejs .template-8-wrapper::after {
+		content: none;
+	}
+}
+
+@media (max-width: 790px) {
+	.template-19--reactjs .list-item {
+		width: calc(50% - 10px);
+	}
+
+	.template-19--python .list-item {
+		width: calc(50% - 10px);
+	}
+
+	.template-19--react-native .list-item {
+		width: calc(50% - 10px);
+	}
+
+	.template-19--flutter .list-item {
+		width: calc(50% - 10px);
+	}
+
+	.template-19--vuejs .list-item {
+		width: calc(50% - 10px);
+	}
+
+	.template-19--de .list-item-title {
+		font-size: 18px;
+	}
+}
+
+@media (max-width: 768px) {
+	.template-56-item {
+		padding: 40px;
+		-webkit-box-shadow: 15px 15px 25px rgba(71, 83, 102, 0.1);
+		box-shadow: 15px 15px 25px rgba(71, 83, 102, 0.1);
+		background: #f9fafc;
+	}
+
+	.template-56-explanation {
+		max-width: 90%;
+	}
+
+	.template-56 .col-md-4 {
+		width: 100%;
+	}
+}
+
+@media (max-width: 750px) {
+	.template-21--outstaffing .template-21-header {
+		font-size: 38px;
+		line-height: 40px;
+	}
+}
+
+@media (max-width: 600px) {
+	.template-2--outstaffing::after {
+		display: none;
+	}
+
+	.template-2--outstaffing .template-2-image {
+		height: auto;
+	}
+
+	.template-2--outstaffing .template-2-content {
+		margin-top: -102px;
+	}
+
+	.template-2--outstaffing .template-2-header {
+		font-size: 40px;
+		line-height: 41px;
+	}
+
+	.template-2--outstaffing .template-2-text h3 {
+		line-height: 30px;
+	}
+
+	.template-2--outstaffing {
+		padding: 80px 0 76px;
+	}
+
+	.template-2--php-outstaffing .template-2-header {
+		font-size: 40px;
+		line-height: 41px;
+	}
+
+	.template-2--java-outstaffing .template-2-header {
+		font-size: 40px;
+		line-height: 41px;
+	}
+
+	.template-2--net-outstaffing .template-2-content {
+		margin-top: -153px;
+	}
+
+	.template-3--nodejs .tabs::before {
+		display: none;
+	}
+
+	.template-3--reactjs .tabs::before {
+		display: none;
+	}
+
+	.template-3--react-native .tabs::before {
+		display: none;
+	}
+
+	.template-4--nodejs .cases-slider-item-subtitle svg,
+  .template-4--reactjs .cases-slider-item-subtitle svg {
+		margin-right: 6px;
+	}
+
+	.template-4--nodejs .cases-slider-item-subtitle p,
+  .template-4--reactjs .cases-slider-item-subtitle p {
+		margin-right: 20px;
+	}
+
+	.template-8--nodejs::before {
+		display: none;
+	}
+
+	.template-8--nodejs::after {
+		display: none;
+	}
+
+	.template-8--nodejs .template-8-header {
+		max-width: 320px;
+		font-size: 40px;
+		line-height: 41px;
+	}
+
+	.template-8--nodejs .template-8-wrapper {
+		max-width: 542px;
+	}
+
+	.template-8--nodejs .template-8-image img {
+		max-width: 480px;
+	}
+
+	.template-8--nodejs .template-8-image {
+		height: auto;
+	}
+
+	.template-8--nodejs {
+		padding: 80px 0 60px;
+	}
+
+	.template-8--reactjs::after {
+		display: none;
+	}
+
+	.template-8--reactjs .template-8-wrapper {
+		max-width: 542px;
+	}
+
+	.template-8--reactjs .template-8-header {
+		top: 400px;
+		max-width: 320px;
+		font-size: 40px;
+		line-height: 41px;
+	}
+
+	.template-8--reactjs .template-8-image img {
+		max-width: 480px;
+	}
+
+	.template-8--reactjs .template-8-image {
+		height: auto;
+	}
+
+	.template-8--reactjs {
+		padding: 80px 0 60px;
+	}
+
+	.template-8--python::after {
+		display: none;
+	}
+
+	.template-8--python .template-8-wrapper {
+		max-width: 542px;
+	}
+
+	.template-8--python .template-8-header {
+		top: 400px;
+		max-width: 320px;
+		font-size: 40px;
+		line-height: 41px;
+	}
+
+	.template-8--python .template-8-image img {
+		max-width: 480px;
+	}
+
+	.template-8--python .template-8-image {
+		height: auto;
+	}
+
+	.template-8--python {
+		padding: 80px 0 60px;
+	}
+
+	.template-8--react-native {
+		padding: 80px 0 60px;
+	}
+
+	.template-8--machine-learning .template-8-wrapper {
+		max-width: 542px;
+	}
+
+	.template-8--machine-learning .template-8-header {
+		top: 400px;
+		max-width: 400px;
+		font-size: 40px;
+		line-height: 41px;
+	}
+
+	.template-8--machine-learning .template-8-image img {
+		max-width: 480px;
+	}
+
+	.template-8--machine-learning .template-8-image {
+		margin-bottom: 190px;
+		height: auto;
+	}
+
+	.template-8--machine-learning {
+		padding: 0 0 60px;
+	}
+
+	.template-8--flutter::after {
+		display: none;
+	}
+
+	.template-8--flutter .template-8-wrapper {
+		max-width: 542px;
+	}
+
+	.template-8--flutter .template-8-header {
+		top: 400px;
+		max-width: 320px;
+		font-size: 40px;
+		line-height: 41px;
+	}
+
+	.template-8--flutter .template-8-image img {
+		max-width: 480px;
+	}
+
+	.template-8--flutter .template-8-image {
+		height: auto;
+	}
+
+	.template-8--flutter {
+		padding: 80px 0 60px;
+	}
+
+	.template-8--flutter-de {
+		padding: 80px 0 60px;
+	}
+
+	.template-8--angular .template-8-header {
+		max-width: 400px;
+	}
+
+	.template-8--angular .template-8-image {
+		margin-bottom: 130px;
+	}
+
+	.template-8--angular {
+		padding: 0 0 60px;
+	}
+
+	.template-8--angular-de .template-8-header {
+		max-width: 400px;
+	}
+
+	.template-8--angular-de .template-8-image {
+		margin-bottom: 70px;
+	}
+
+	.template-8--vuejs .template-8-header {
+		max-width: 400px;
+	}
+
+	.template-8--vuejs .template-8-image {
+		margin-bottom: 130px;
+	}
+
+	.template-8--vuejs {
+		padding: 0 0 60px;
+	}
+
+	.template-8--vuejs-de .template-8-header span:nth-of-type(2) {
+		font-size: 24px;
+	}
+
+	.template-19--reactjs .list-item {
+		margin-bottom: 20px;
+		width: 100%;
+	}
+
+	.template-19--python .list-item {
+		margin-bottom: 20px;
+		width: 100%;
+	}
+
+	.template-19--react-native .list-item {
+		margin-bottom: 20px;
+		width: 100%;
+	}
+
+	.template-19--machine-learning .list-item {
+		margin-bottom: 20px;
+		width: 100%;
+	}
+
+	.template-19--flutter .list-item {
+		margin-bottom: 20px;
+		width: 100%;
+	}
+
+	.template-19--vuejs .list-item {
+		margin-bottom: 20px;
+		width: 100%;
+	}
+
+	.template-19--de .template-19-header {
+		font-size: 28px;
+	}
+
+	.template-21--outstaffing .template-21-caption {
+		margin-bottom: 31px;
+	}
+
+	.template-21--outstaffing .el-bar:nth-child(2n+1) .el-bar-num {
+		margin-right: 10px;
+	}
+
+	.template-21--outstaffing .el-bar {
+		border-bottom: none;
+		min-height: auto;
+	}
+
+	.template-21--outstaffing .el-bar-main {
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-flow: column;
+		flex-flow: column;
+	}
+
+	.template-21--outstaffing .el-bar-num::after {
+		top: 20px;
+	}
+
+	.template-21--outstaffing .el-bar-title {
+		max-width: unset;
+		margin: 0 0 10px 0;
+	}
+
+	.template-22--de .template-22-header {
+		font-size: 28px;
+	}
+
+	.template-11--ux-ui .template-11-header {
+		font-size: 20px;
+		line-height: 103%;
+	}
+
+	.template-11--ux-ui {
+		padding: 30px 0;
+	}
+
+	.template-24--ux-ui .template-24-header {
+		-webkit-box-pack: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+		font-size: 26px;
+		line-height: normal;
+	}
+
+	.template-24--ux-ui .template-24-header span {
+		padding: 8px;
+	}
+
+	.template-24--ux-ui .template-24-image img {
+		left: -20px;
+	}
+
+	.template-24--ux-ui .template-24-image {
+		-webkit-box-pack: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+	}
+
+	.template-24--ux-ui {
+		padding: 120px 0 50px;
+	}
+
+	.template-24--ux-ui .btn-yellow {
+		padding: 10px;
+		font-size: 14px;
+	}
+
+	.template-24--ux-ui .btn-yellow svg {
+		width: 22px;
+	}
+
+	.template-54-title {
+		font-size: 18px;
+	}
+
+	.template-54-subtitle {
+		font-size: 10px;
+	}
+
+	.template-54-subtitle::before {
+		top: 4px;
+	}
+
+	.template-54-content {
+		font-size: 14px;
+	}
+
+	.template-55-header {
+		font-size: 20px;
+	}
+
+	.template-55-item {
+		height: auto;
+	}
+
+	.template-55-image {
+		height: 282px;
+	}
+
+	.template-55-content p {
+		max-height: unset;
+		font-size: 14px;
+		line-height: 229%;
+	}
+
+	.template-55-title {
+		font-size: 16px;
+	}
+
+	.template-55-subtitle {
+		font-size: 14px;
+	}
+
+	.template-55-buttons .row {
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: reverse;
+		-ms-flex-flow: row-reverse wrap;
+		flex-flow: row-reverse wrap;
+	}
+
+	.template-56-header {
+		margin-bottom: 18px;
+		font-size: 20px;
+		text-align: left;
+	}
+
+	.template-56-content {
+		font-size: 14px;
+	}
+
+	.template-57-header {
+		margin-bottom: 18px;
+		font-size: 20px;
+		text-align: left;
+	}
+
+	.template-57-content {
+		font-size: 14px;
+	}
+
+	.template-58-header {
+		margin-bottom: 18px;
+		font-size: 20px;
+		text-align: left;
+	}
+}
+
+@media (max-width: 599px) {
+	.template-57-group {
+		border: none;
+		padding: 0;
+	}
+
+	.template-57-item {
+		padding: 10px;
+		border: 1px solid #c2cad6;
+	}
+}
+
+@media (max-width: 580px) {
+	.template-11--flutter-de .template-11-header {
+		font-size: 36px;
+		line-height: 38px;
+	}
+}
+
+@media (max-width: 568px) {
+	.template-22--reactjs .template-22-wrapper::before {
+		background: none;
+	}
+
+	.template-22--flutter .template-22-wrapper::before {
+		background: none;
+	}
+}
+
+@media (max-width: 567px) {
+	.template-24--ux-ui .template-24-footer {
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: reverse;
+		-ms-flex-flow: column-reverse;
+		flex-flow: column-reverse;
+		gap: 10px;
+	}
+
+	.template-24--ux-ui .template-24-footer .btn {
+		-webkit-box-pack: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+	}
+
+	.template-54-item {
+		padding: 32px;
+	}
+}
+
+@media (max-width: 500px) {
+	.template-22--angular .list-col {
+		-webkit-box-flex: 0 !important;
+		-ms-flex: 0 0 100% !important;
+		flex: 0 0 100% !important;
+	}
+}
+
+@media (max-width: 480px) {
+	.template-2--outstaffing .template-2-image img {
+		max-width: 370px;
+	}
+
+	.template-2--outstaffing .template-2-content {
+		margin-top: -92px;
+	}
+
+	.template-2--outstaffing .template-2-header {
+		font-size: 34px;
+		line-height: 36px;
+	}
+
+	.template-2--outstaffing .template-2-text h3 {
+		font-size: 20px;
+		line-height: normal;
+		margin-bottom: 15px;
+	}
+
+	.template-2--outstaffing {
+		padding: 70px 0 50px;
+	}
+
+	.template-2--php-outstaffing .template-2-header {
+		font-size: 34px;
+		line-height: 36px;
+	}
+
+	.template-2--java-outstaffing .template-2-header {
+		font-size: 34px;
+		line-height: 36px;
+	}
+
+	.template-3--nodejs .template-3-header {
+		font-size: 36px;
+		line-height: 38px;
+	}
+
+	.template-3--reactjs .template-3-header {
+		font-size: 36px;
+		line-height: 38px;
+	}
+
+	.template-3--python .template-3-header {
+		font-size: 36px;
+		line-height: 38px;
+	}
+
+	.template-3--machine-learning .template-3-header {
+		font-size: 36px;
+		line-height: 38px;
+	}
+
+	.template-3--flutter .template-3-header {
+		font-size: 36px;
+		line-height: 38px;
+	}
+
+	.template-3--angular .template-3-header {
+		font-size: 36px;
+		line-height: 38px;
+	}
+
+	.template-3--vuejs .template-3-header {
+		font-size: 36px;
+		line-height: 38px;
+	}
+
+	.template-7--outstaffing .template-7-header {
+		font-size: 36px;
+		line-height: 38px;
+	}
+
+	.template-8--nodejs .template-8-header {
+		top: 350px;
+	}
+
+	.template-8--nodejs .template-8-image img {
+		max-width: 370px;
+	}
+
+	.template-8--nodejs {
+		padding: 80px 0 60px;
+	}
+
+	.template-8--reactjs .template-8-header {
+		top: 350px;
+	}
+
+	.template-8--reactjs .template-8-image img {
+		max-width: 370px;
+	}
+
+	.template-8--reactjs {
+		padding: 0 0 60px;
+	}
+
+	.template-8--python .template-8-header {
+		top: 350px;
+	}
+
+	.template-8--python .template-8-image img {
+		max-width: 370px;
+	}
+
+	.template-8--python {
+		padding: 0 0 60px;
+	}
+
+	.template-8--react-native {
+		padding: 80px 0 60px;
+	}
+
+	.template-8--machine-learning .template-8-header {
+		top: 350px;
+	}
+
+	.template-8--machine-learning .template-8-image img {
+		max-width: 370px;
+	}
+
+	.template-8--flutter .template-8-header {
+		top: 350px;
+	}
+
+	.template-8--flutter .template-8-image img {
+		max-width: 370px;
+	}
+
+	.template-8--flutter {
+		padding: 0 0 60px;
+	}
+
+	.template-8--flutter-de {
+		padding: 0 0 60px;
+	}
+
+	.template-8--angular-de .template-8-image {
+		margin-bottom: 120px;
+	}
+
+	.template-8--vuejs .template-8-header {
+		top: 300px;
+	}
+
+	.template-8--vuejs {
+		padding: 0 0 30px;
+	}
+
+	.template-19--vuejs .template-19-header {
+		font-size: 36px;
+		line-height: 38px;
+	}
+
+	.template-21--outstaffing .template-21-caption {
+		margin-bottom: 15px;
+	}
+
+	.template-21--outstaffing .el-bar:nth-child(2n+1) {
+		padding-left: 45px;
+		padding-bottom: 0;
+	}
+
+	.template-21--outstaffing .el-bar:nth-child(2n+1) .el-bar-num {
+		left: 5px;
+	}
+
+	.template-21--outstaffing .el-bar:nth-child(2n+2) {
+		padding-right: 45px;
+		padding-bottom: 0;
+	}
+
+	.template-21--outstaffing .el-bar:nth-child(2n+2) .el-bar-num {
+		right: 5px;
+	}
+
+	.template-21--outstaffing .el-bar-num {
+		position: absolute;
+	}
+}
+
+@media (max-width: 479px) {
+	.template-24--ux-ui .template-24-image img {
+		top: -60px;
+	}
+}
+
+@media (max-width: 450px) {
+	.template-11--flutter-de .template-11-header {
+		font-size: 28px;
+		line-height: 32px;
+	}
+}
+
+@media (max-width: 400px) {
+	.template-2--outstaffing .template-2-image img {
+		max-width: 290px;
+	}
+
+	.template-2--outstaffing .template-2-content {
+		margin-top: -74px;
+	}
+
+	.template-2--outstaffing .template-2-header {
+		font-size: 25px;
+		line-height: 27px;
+		margin-bottom: 15px;
+	}
+
+	.template-2--outstaffing .template-2-text h3 {
+		font-size: 18px;
+	}
+
+	.template-2--php-outstaffing .template-2-header {
+		font-size: 25px;
+		line-height: 27px;
+		margin-bottom: 15px;
+	}
+
+	.template-2--java-outstaffing .template-2-header {
+		font-size: 25px;
+		line-height: 27px;
+		margin-bottom: 15px;
+	}
+
+	.template-3--nodejs .template-3-header {
+		font-size: 32px;
+		line-height: 34px;
+	}
+
+	.template-3--reactjs .template-3-header {
+		font-size: 32px;
+		line-height: 34px;
+	}
+
+	.template-3--python .template-3-header {
+		font-size: 32px;
+		line-height: 34px;
+	}
+
+	.template-3--machine-learning .template-3-header {
+		font-size: 32px;
+		line-height: 34px;
+	}
+
+	.template-3--flutter .template-3-header {
+		font-size: 32px;
+		line-height: 34px;
+	}
+
+	.template-3--angular .template-3-header {
+		font-size: 32px;
+		line-height: 34px;
+	}
+
+	.template-3--vuejs .template-3-header {
+		font-size: 32px;
+		line-height: 34px;
+	}
+
+	.template-7--outstaffing .template-7-header {
+		font-size: 30px;
+		line-height: 32px;
+	}
+
+	.template-8--nodejs .template-8-header {
+		top: 300px;
+		max-width: 280px;
+		font-size: 32px;
+		line-height: 34px;
+	}
+
+	.template-8--reactjs .template-8-header {
+		top: 300px;
+		max-width: 280px;
+		font-size: 32px;
+		line-height: 34px;
+	}
+
+	.template-8--python .template-8-header {
+		top: 300px;
+		max-width: 280px;
+		font-size: 32px;
+		line-height: 34px;
+	}
+
+	.template-8--machine-learning .template-8-header {
+		top: 300px;
+		font-size: 32px;
+		line-height: 34px;
+	}
+
+	.template-8--machine-learning .template-8-image img {
+		max-width: 290px;
+	}
+
+	.template-8--flutter .template-8-header {
+		top: 300px;
+		max-width: 280px;
+		font-size: 32px;
+		line-height: 34px;
+	}
+
+	.template-8--angular-de .template-8-header {
+		top: 300px;
+		font-size: 28px;
+	}
+
+	.template-8--angular-de .template-8-image {
+		margin-bottom: 100px;
+	}
+
+	.template-21--outstaffing .template-21-header {
+		font-size: 32px;
+		line-height: 34px;
+	}
+}
+
+@media (max-width: 374px) {
+	.btn {
+		font-size: 14px;
+	}
+
+	.template-8--vuejs .template-8-header {
+		top: 250px;
+	}
+
+	.template-19--de .list-item-title {
+		font-size: 14px;
+	}
+
+	.template-22--de .template-22-header {
+		font-size: 24px;
+	}
+
+	.template-54-item {
+		padding: 16px;
+	}
+
+	.template-56-item {
+		padding: 24px;
+	}
+}
+
+@media (max-width: 320px) {
+	.template-3--nodejs .template-3-header {
+		font-size: 29px;
+		line-height: 31px;
+	}
+
+	.template-3--reactjs .template-3-header {
+		font-size: 29px;
+		line-height: 31px;
+	}
+
+	.template-3--python .template-3-header {
+		font-size: 29px;
+		line-height: 31px;
+	}
+
+	.template-3--machine-learning .template-3-header {
+		font-size: 29px;
+		line-height: 31px;
+	}
+
+	.template-3--flutter .template-3-header {
+		font-size: 29px;
+		line-height: 31px;
+	}
+
+	.template-3--angular .template-3-header {
+		font-size: 29px;
+		line-height: 31px;
+	}
+
+	.template-3--vuejs .template-3-header {
+		font-size: 29px;
+		line-height: 31px;
+	}
+
+	.template-19--vuejs .template-19-header {
+		font-size: 29px;
+		line-height: 31px;
+	}
+
+	.template-19--de .template-19-header {
+		font-size: 24px;
+	}
+}
+
+@media (max-width: 40px) {
+	.template-8--nodejs .template-8-image img {
+		max-width: 290px;
+	}
+
+	.template-8--reactjs .template-8-image img {
+		max-width: 290px;
+	}
+
+	.template-8--python .template-8-image img {
+		max-width: 290px;
+	}
+
+	.template-8--flutter .template-8-image img {
+		max-width: 290px;
+	}
+}

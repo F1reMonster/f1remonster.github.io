@@ -1,0 +1,25 @@
+.article-faq {
+  padding: 0 0 9.875em;
+  overflow: hidden;
+}
+@media (max-width: 767px) {
+  .article-faq {
+    padding: 0 0 3.6875em;
+  }
+}
+.article-faq-oval {
+  position: absolute;
+  inset-inline-start: 0;
+  bottom: 0;
+  transform: translateY(50%);
+  z-index: -1;
+}
+html[dir=ltr] .article-faq-oval {
+  transform: translateY(50%) scaleX(-1);
+}
+
+@media (max-width: 767px) {
+  .article-faq-oval {
+    display: none;
+  }
+}

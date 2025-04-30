@@ -1,0 +1,46 @@
+/* Base */
+@import "./base/reset";
+@import "./base/vars";
+@import "./base/mixins";
+@import "./base/functions";
+@import "./base/base";
+@import "./base/utils";
+@import "./base/containers";
+@import "./base/sticky-footer";
+@import "./base/typography";
+
+/* Blocks */
+@import "blocks/_aboutus.scss";
+@import "blocks/_footer-nav.scss";
+@import "blocks/_footer.scss";
+@import "blocks/_formfollow.scss";
+@import "blocks/_foundation.scss";
+@import "blocks/_fundraising.scss";
+@import "blocks/_header.scss";
+@import "blocks/_main.scss";
+@import "blocks/_mainslider.scss";
+@import "blocks/_maps.scss";
+@import "blocks/_mediab.scss";
+@import "blocks/_mobile-nav.scss";
+@import "blocks/_nav-icon.scss";
+@import "blocks/_nav.scss";
+@import "blocks/_ourgoals.scss";
+@import "blocks/_partners.scss";
+@import "blocks/_projectpage.scss";
+@import "blocks/_projects.scss";
+@import "blocks/_prshelter.scss";
+@import "blocks/_pupils.scss";
+@import "blocks/_scroll-down.scss";
+@import "blocks/_team.scss";
+@import "blocks/_timeline.scss";
+
+// new 20240508
+@import "blocks/_hero.scss";
+@import "blocks/_description.scss";
+@import "blocks/_participate.scss";
+@import "blocks/remuneration";
+@import "blocks/projects-eligibility";
+@import "blocks/urban-hackathon-participation";
+@import "blocks/participation-form";
+@import "blocks/projects-list";
+@import "blocks/project-team";

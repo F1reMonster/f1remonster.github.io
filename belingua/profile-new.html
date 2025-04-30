@@ -1,0 +1,1330 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="assets/style/style.css">
+	<link rel="stylesheet" href="assets/style/catalogue.css">
+	<link rel="stylesheet" href="assets/style/portfolio.css">
+	<link rel="stylesheet" href="assets/style/settings.css">
+	<link rel="stylesheet" href="assets/style/dropzone.css">
+	<link rel="stylesheet" href="assets/style/tasks.css">
+	<link rel="stylesheet" href="assets/style/profile-new.css">
+	<link rel="stylesheet" href="assets/style/new-style.css" />
+
+	<!-- Useful meta tags -->
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="robots" content="index, follow">
+	<meta name="google" content="notranslate">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="description" content="">
+	<link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"/>
+	<title>Портфолио</title>
+</head>
+<body>
+
+<div class="page settings_page profile-new">
+	<!-- Header -->
+	<header id="header">
+
+		<div class="container">
+				<div class="row align-center">
+					<a href="/" class="btn-back">
+						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M15.1499 18.3L8.3999 11.55L15.1499 4.80005" stroke="#3F4350" stroke-width="1.8"/>
+						</svg>
+
+					</a>
+					<div class="header__logo">
+
+						<a href="index.html">
+								<img class="hidden-mobile" src="assets/images/header/logo.png" alt="logo" />
+								<img class="mobile_logo" src="assets/images/header/logo_m.png" alt="logo" />
+						</a>
+					</div>
+
+
+					<nav class="menu">
+						<ul class="menu__items">
+								<li class="menu__item">
+
+									<a href="index.html" class="menu__link">
+										<i class="menu-icon">
+												<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M10.2174 3.95631C10.1593 3.90068 10.0819 3.86963 10.0014 3.86963C9.92094 3.86963 9.84356 3.90068 9.7854 3.95631L2.59399 10.8262C2.56345 10.8554 2.53916 10.8906 2.52257 10.9294C2.50599 10.9683 2.49746 11.0101 2.49751 11.0524L2.49634 17.5001C2.49634 17.8316 2.62803 18.1495 2.86245 18.3839C3.09687 18.6184 3.41482 18.7501 3.74634 18.7501H7.50024C7.666 18.7501 7.82498 18.6842 7.94219 18.567C8.0594 18.4498 8.12524 18.2908 8.12524 18.1251V12.8126C8.12524 12.7297 8.15817 12.6502 8.21677 12.5916C8.27538 12.533 8.35486 12.5001 8.43774 12.5001H11.5627C11.6456 12.5001 11.7251 12.533 11.7837 12.5916C11.8423 12.6502 11.8752 12.7297 11.8752 12.8126V18.1251C11.8752 18.2908 11.9411 18.4498 12.0583 18.567C12.1755 18.6842 12.3345 18.7501 12.5002 18.7501H16.2526C16.5841 18.7501 16.9021 18.6184 17.1365 18.3839C17.3709 18.1495 17.5026 17.8316 17.5026 17.5001V11.0524C17.5026 11.0101 17.4941 10.9683 17.4775 10.9294C17.4609 10.8906 17.4366 10.8554 17.4061 10.8262L10.2174 3.95631Z" fill=""/>
+													<path d="M19.1762 9.53712L16.2543 6.7418V2.5C16.2543 2.33424 16.1885 2.17527 16.0712 2.05806C15.954 1.94085 15.7951 1.875 15.6293 1.875H13.7543C13.5885 1.875 13.4296 1.94085 13.3124 2.05806C13.1952 2.17527 13.1293 2.33424 13.1293 2.5V3.75L10.8668 1.58672C10.6551 1.37266 10.3402 1.25 10 1.25C9.66095 1.25 9.34689 1.37266 9.13517 1.58711L0.826577 9.53634C0.583609 9.77071 0.55314 10.1563 0.774234 10.4102C0.829753 10.4743 0.897734 10.5264 0.974038 10.5634C1.05034 10.6003 1.13337 10.6214 1.21808 10.6253C1.30278 10.6292 1.38739 10.6158 1.46675 10.5859C1.54611 10.556 1.61856 10.5103 1.6797 10.4516L9.78517 2.70625C9.84333 2.65062 9.9207 2.61957 10.0012 2.61957C10.0817 2.61957 10.159 2.65062 10.2172 2.70625L18.3234 10.4516C18.4429 10.5661 18.6028 10.6286 18.7682 10.6254C18.9336 10.6221 19.091 10.5535 19.2059 10.4344C19.4457 10.1859 19.4258 9.77579 19.1762 9.53712Z" fill=""/>
+												</svg>
+										</i>
+										  Главная страница</a>
+								</li>
+								<li class="menu__item">
+
+									<a href="catalogue.html" class="menu__link active">
+										<i class="menu-icon">
+												<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M10.1267 0.935779C5.02896 0.866926 0.867292 5.02859 0.936145 10.1263C1.00413 15.0153 4.98494 18.9961 9.87392 19.0641C14.9725 19.1338 19.1333 14.9721 19.0636 9.87442C18.9965 4.98458 15.0156 1.00376 10.1267 0.935779ZM9.9663 7.56437C9.97545 7.51208 9.98548 7.45979 9.99724 7.40793C10.1073 6.89901 10.3525 6.42917 10.7071 6.04787C11.2688 5.44955 12.065 5.11923 12.9492 5.11923C13.3212 5.1177 13.6906 5.18051 14.0412 5.30487C14.4771 5.46004 14.8695 5.71701 15.186 6.05441C15.6516 6.55764 15.9288 7.20646 15.9704 7.89077C15.9825 8.05614 15.9825 8.22218 15.9704 8.38755C15.9369 8.85624 15.8157 9.31447 15.6131 9.73846C15.591 9.78465 15.5679 9.83041 15.5438 9.87573C15.4954 9.96593 15.4436 10.0544 15.3878 10.1398C15.2768 10.3103 15.1509 10.4707 15.0117 10.6192C14.44 11.2292 13.7079 11.5661 12.9501 11.5661C12.6659 11.5659 12.3837 11.5191 12.1147 11.4275C12.0243 11.3968 11.9356 11.3615 11.8489 11.3216C11.4857 11.1522 11.159 10.9136 10.8871 10.6192C10.3211 10.0053 9.98276 9.21594 9.92839 8.38276C9.92055 8.27004 9.91793 8.15848 9.92055 8.04808C9.92392 7.88623 9.93921 7.72485 9.9663 7.56524V7.56437ZM3.44142 8.62505C3.46263 8.31411 3.53938 8.00948 3.66803 7.72561C3.70432 7.64654 3.74476 7.56945 3.78917 7.49465C3.87801 7.3447 3.98308 7.20499 4.1025 7.07805C4.2794 6.88933 4.48536 6.73014 4.71258 6.60654C4.82607 6.54452 4.94423 6.49148 5.066 6.44791C5.53258 6.28472 6.03422 6.24877 6.51931 6.34376C7.03332 6.44318 7.50277 6.70246 7.86063 7.08458C8.28528 7.54298 8.52459 8.14273 8.53216 8.76755C8.53434 8.8595 8.53216 8.95188 8.52563 9.04558C8.49903 9.40436 8.41057 9.75584 8.26416 10.0845C8.19405 10.2427 8.11051 10.3946 8.01446 10.5385C7.82972 10.8177 7.59724 11.0621 7.32768 11.2606C7.26231 11.3073 7.19433 11.3508 7.12417 11.3944C6.98618 11.4766 6.84016 11.5445 6.68839 11.597C6.46146 11.6763 6.22282 11.717 5.98243 11.7173C5.94191 11.7173 5.90138 11.7173 5.86129 11.7138C5.78123 11.7094 5.7015 11.7004 5.62248 11.6868C5.54387 11.6731 5.46604 11.6552 5.38934 11.6332C5.27413 11.5999 5.16166 11.5578 5.05292 11.5073C5.01632 11.4903 4.98059 11.4724 4.94485 11.4537C4.16045 11.0401 3.56911 10.183 3.45319 9.18241C3.44796 9.13665 3.4436 9.0909 3.44055 9.0447C3.43071 8.90498 3.431 8.76473 3.44142 8.62505ZM5.79113 16.408C4.63085 15.6432 3.69837 14.5796 3.09193 13.3293C3.07212 13.2893 3.0684 13.2432 3.08154 13.2006C3.09467 13.1579 3.12366 13.1219 3.16253 13.1C3.9722 12.6447 5.0063 12.3967 5.98331 12.3967C6.72413 12.3967 7.32114 12.4838 7.84364 12.6529C7.90287 12.6724 7.95579 12.7075 7.99688 12.7544C8.03798 12.8013 8.06573 12.8583 8.07726 12.9196C8.08879 12.9809 8.08366 13.0442 8.06242 13.1028C8.04118 13.1614 8.00461 13.2133 7.9565 13.253C6.93896 14.081 6.28312 15.1068 5.97503 16.3361C5.97042 16.3549 5.96135 16.3723 5.9486 16.3869C5.93584 16.4015 5.91977 16.4127 5.90174 16.4198C5.88371 16.4268 5.86425 16.4295 5.845 16.4274C5.82575 16.4254 5.80727 16.4187 5.79113 16.408ZM10.0003 17.6696C9.01918 17.6706 8.04709 17.4824 7.13724 17.1153C7.10006 17.0999 7.06933 17.0722 7.05027 17.0368C7.03121 17.0013 7.02498 16.9604 7.03266 16.9209C7.05009 16.8316 7.06926 16.7501 7.08626 16.6821C7.39653 15.4432 8.16524 14.4161 9.30872 13.711C10.3236 13.0857 11.6183 12.7414 12.9483 12.7414C14.3062 12.7414 15.563 13.0717 16.5862 13.6962C16.6122 13.7125 16.6309 13.7383 16.6383 13.7681C16.6457 13.798 16.6413 13.8295 16.6258 13.8561C15.9511 15.0153 14.9842 15.9775 13.8217 16.6466C12.6592 17.3157 11.3416 17.6684 10.0003 17.6696Z" fill=""/>
+													<path d="M6.28901 11.5344C6.21725 11.5304 6.14578 11.5223 6.07495 11.5101C6.14578 11.5223 6.21725 11.5304 6.28901 11.5344Z" fill=""/>
+													<path d="M5.25938 6.95825C5.0557 7.06905 4.87107 7.21174 4.7125 7.38091C4.60546 7.4947 4.51127 7.61994 4.43164 7.75435C4.51127 7.61994 4.60546 7.4947 4.7125 7.38091C4.87107 7.21174 5.0557 7.06905 5.25938 6.95825Z" fill=""/>
+													<path d="M8.44434 10.0738C8.57558 9.77919 8.65487 9.46413 8.67871 9.14253C8.68457 9.05854 8.68652 8.97573 8.68457 8.89331C8.68665 8.97534 8.6847 9.05841 8.67871 9.14253C8.65487 9.46413 8.57558 9.77919 8.44434 10.0738Z" fill=""/>
+													<path d="M5.25952 6.95823C5.36125 6.90263 5.46717 6.85509 5.57632 6.81604C5.46717 6.85509 5.36125 6.90263 5.25952 6.95823Z" fill=""/>
+													<path d="M5.86748 11.4621C5.76421 11.4323 5.66339 11.3946 5.56592 11.3492C5.66339 11.3946 5.76421 11.4323 5.86748 11.4621Z" fill=""/>
+													<path d="M4.13208 9.26526C4.23599 10.1637 4.76724 10.9305 5.46919 11.3012C4.76567 10.9305 4.23599 10.1621 4.13208 9.26526Z" fill=""/>
+													<path d="M9.93516 8.55464C9.9839 9.30149 10.2872 10.0091 10.7945 10.5593C11.0383 10.8233 11.3311 11.0371 11.6567 11.189C11.3311 11.0371 11.0383 10.8233 10.7945 10.5593C10.2872 10.0091 9.9839 9.30149 9.93516 8.55464C9.92812 8.4536 9.92578 8.3536 9.92813 8.25464C9.92578 8.35229 9.92812 8.45229 9.93516 8.55464Z" fill=""/>
+													<path d="M11.8945 11.2821C11.8135 11.2545 11.734 11.2229 11.6562 11.1871C11.734 11.2229 11.8135 11.2545 11.8945 11.2821Z" fill=""/>
+													<path d="M9.99731 7.67739C10.096 7.2212 10.3158 6.80004 10.6336 6.45825C10.3158 6.80004 10.096 7.2212 9.99731 7.67739Z" fill=""/>
+													<path d="M14.6485 6.46326C15.0658 6.91435 15.3143 7.49594 15.3516 8.10935C15.3143 7.49594 15.0658 6.91435 14.6485 6.46326C14.3648 6.16082 14.013 5.93047 13.6223 5.79138C14.013 5.93047 14.3648 6.16082 14.6485 6.46326Z" fill=""/>
+													<path d="M15.3516 8.55469C15.3215 8.97482 15.2128 9.38557 15.0312 9.76562C15.2128 9.38557 15.3215 8.97482 15.3516 8.55469Z" fill=""/>
+													<path d="M9.92822 8.25278C9.93126 8.10691 9.9451 7.96146 9.96963 7.81763C9.9451 7.96146 9.93126 8.10691 9.92822 8.25278Z" fill=""/>
+													<path d="M14.9685 9.88904C14.9251 9.9699 14.8786 10.0492 14.8286 10.1258C14.8786 10.0492 14.9251 9.9699 14.9685 9.88904Z" fill=""/>
+													<path d="M8.08125 7.38477C8.4619 7.79567 8.67642 8.33328 8.6832 8.89336C8.67642 8.33328 8.4619 7.79567 8.08125 7.38477C7.76046 7.04224 7.33965 6.80982 6.87891 6.7207C7.33965 6.80982 7.76046 7.04224 8.08125 7.38477Z" fill=""/>
+													<path d="M7.42188 11.25C7.29818 11.3237 7.16729 11.3845 7.03125 11.4316C7.16729 11.3845 7.29818 11.3237 7.42188 11.25Z" fill=""/>
+													<path d="M4.12061 8.76755C4.13961 8.48883 4.20841 8.21576 4.32373 7.9613C4.20841 8.21576 4.13961 8.48883 4.12061 8.76755Z" fill=""/>
+													<path d="M7.60469 11.1282C7.5457 11.1719 7.48477 11.211 7.42188 11.25C7.48477 11.211 7.5457 11.1719 7.60469 11.1282Z" fill=""/>
+													<path d="M8.44429 10.0739C8.38145 10.2157 8.30656 10.3519 8.22046 10.4809C8.30656 10.3519 8.38145 10.2157 8.44429 10.0739Z" fill=""/>
+													<path d="M4.32397 7.9613C4.35651 7.89043 4.39275 7.82133 4.43257 7.75427C4.39275 7.82133 4.35651 7.89043 4.32397 7.9613Z" fill=""/>
+													<path d="M7.60474 11.1281C7.84637 10.9502 8.05477 10.7311 8.22036 10.4808C8.05477 10.7311 7.84637 10.9502 7.60474 11.1281Z" fill=""/>
+												</svg>
+
+										</i>
+										  Каталог переводчиков</a>
+								</li>
+								<li class="menu__item">
+									<a href="#" class="menu__link">
+										<i class="menu-icon">
+												<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M14.6 2.5H5.4C5.17909 2.5 5 2.67909 5 2.9V3.35C5 3.57091 5.17909 3.75 5.4 3.75H14.6C14.8209 3.75 15 3.57091 15 3.35V2.9C15 2.67909 14.8209 2.5 14.6 2.5Z" fill=""/>
+													<path d="M15.85 4.375H4.15C3.92909 4.375 3.75 4.55409 3.75 4.775V5.225C3.75 5.44591 3.92909 5.625 4.15 5.625H15.85C16.0709 5.625 16.25 5.44591 16.25 5.225V4.775C16.25 4.55409 16.0709 4.375 15.85 4.375Z" fill=""/>
+													<path d="M18.125 17.1C18.125 17.3209 17.9459 17.5 17.725 17.5H2.275C2.05409 17.5 1.875 17.3209 1.875 17.1V6.65C1.875 6.42909 2.05409 6.25 2.275 6.25H17.725C17.9459 6.25 18.125 6.42909 18.125 6.65V17.1Z" fill=""/>
+												</svg>
+
+										</i>
+										  Мои заказы</a>
+								</li>
+								<li class="menu__item">
+									<a href="#" class="menu__link">
+										<i class="menu-icon">
+												<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M1.52754 15.202C1.52754 15.2047 1.52754 15.2098 1.52441 15.2168C1.52559 15.2121 1.52637 15.207 1.52754 15.202ZM16.3502 15.8438C16.2216 15.841 16.0946 15.8145 15.9756 15.7656L13.7576 14.9793L13.7412 14.9727C13.6928 14.9525 13.6409 14.9424 13.5885 14.943C13.5402 14.943 13.4923 14.9518 13.4471 14.9688C13.3932 14.9891 12.9076 15.1715 12.3982 15.3113C12.1221 15.3871 11.1607 15.6344 10.3893 15.6344C8.41738 15.6344 6.57363 14.8766 5.19824 13.5004C4.52633 12.8326 3.99355 12.0382 3.63074 11.1631C3.26792 10.288 3.08229 9.34966 3.08457 8.40235C3.08455 7.90875 3.13773 7.41658 3.24316 6.93438C3.58652 5.34766 4.4959 3.9043 5.80371 2.87188C7.14526 1.81955 8.80141 1.24837 10.5064 1.25C12.5459 1.25 14.4463 2.03125 15.858 3.44453C17.1924 4.78321 17.9236 6.54336 17.9178 8.40039C17.9166 9.7803 17.5046 11.1286 16.7342 12.2734L16.7268 12.2844L16.6979 12.3234C16.6912 12.3324 16.6846 12.341 16.6783 12.35L16.6725 12.3605C16.6569 12.387 16.6428 12.4142 16.6303 12.4422L17.2451 14.6273C17.2723 14.7175 17.287 14.8109 17.2889 14.9051C17.289 15.0284 17.2648 15.1505 17.2177 15.2645C17.1706 15.3784 17.1015 15.482 17.0143 15.5692C16.9271 15.6564 16.8235 15.7255 16.7096 15.7726C16.5956 15.8197 16.4735 15.8439 16.3502 15.8438Z" fill=""/>
+													<path d="M10.8804 16.6167C10.8401 16.5382 10.7833 16.4693 10.7139 16.4147C10.6446 16.3601 10.5643 16.3211 10.4785 16.3003C10.2527 16.2405 9.98942 16.2507 9.78825 16.2358C7.88877 16.1038 6.10131 15.2886 4.75622 13.9409C3.56042 12.7518 2.78326 11.2064 2.54177 9.53738C2.48708 9.15691 2.48708 9.06238 2.48708 9.06238C2.48706 8.93544 2.44838 8.81152 2.37619 8.7071C2.30401 8.60268 2.20174 8.52271 2.083 8.47785C1.96425 8.43298 1.83466 8.42533 1.71146 8.45592C1.58826 8.48651 1.47729 8.5539 1.39333 8.6491C1.39333 8.6491 1.08552 8.98426 0.940205 9.32059C0.532658 10.2596 0.358856 11.2834 0.433693 12.3043C0.508529 13.3252 0.829771 14.3128 1.36989 15.1823C1.47145 15.3514 1.47145 15.4296 1.4488 15.6054C1.34216 16.1565 1.15544 17.1288 1.05817 17.6331C1.02597 17.7966 1.03795 17.9658 1.09288 18.1232C1.14781 18.2805 1.2437 18.4204 1.37067 18.5284L1.38864 18.5436C1.55661 18.677 1.76476 18.7497 1.97927 18.7499C2.09992 18.75 2.2194 18.7262 2.33083 18.68L4.42106 17.8733C4.49303 17.846 4.57253 17.846 4.6445 17.8733C5.46755 18.1796 6.32419 18.3421 7.13591 18.3421C8.14729 18.343 9.14643 18.1208 10.0621 17.6913C10.2754 17.5913 10.609 17.4827 10.8043 17.2569C10.8782 17.1693 10.9248 17.062 10.9383 16.9482C10.9519 16.8344 10.9317 16.7192 10.8804 16.6167Z" fill=""/>
+												</svg>
+										</i>
+										  Блог</a>
+								</li>
+						</ul>
+						<div class="mob-create-order">
+								<a href="create_order.html" class="btn primary small">Создать заказ</a>
+						</div>
+					</nav>
+					<div class="profile-menu">
+						<div class="profile-wrapper">
+								<div class="profile-descr">
+									<div class="profile-btn">
+										  EK
+									</div>
+									<div class="prof_wrapper">
+										<div class="prof-name">Полина Д.</div>
+										<div class="rating__details">
+												<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M5.60333 1.00045C5.63884 0.925247 5.69498 0.861686 5.76523 0.817172C5.83547 0.772658 5.91692 0.749023 6.00008 0.749023C6.08324 0.749023 6.16469 0.772658 6.23494 0.817172C6.30518 0.861686 6.36133 0.925247 6.39683 1.00045L7.80833 4.07545L11.2366 4.43845C11.6093 4.47745 11.7601 4.92895 11.4818 5.17495L8.92508 7.4377L9.63233 10.7369C9.70883 11.0954 9.31583 11.3744 8.99108 11.1922L6.00008 9.51595L3.00833 11.1922C2.68358 11.3752 2.29058 11.0954 2.36708 10.7369L3.07508 7.4377L0.517583 5.17495C0.240083 4.92895 0.390083 4.47745 0.762833 4.43845L4.19033 4.07545L5.60258 1.00045H5.60333Z" fill="#FFC642"/>
+												</svg>
+												5.0<span class="text-small-gray"><i class="middot">&#183;</i> 114 отзывов</span>
+										</div>
+									</div>
+									<a href="translator_page.html" class="prof_arrow">
+										<svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M1 14.75L7.75 8L1 1.25" stroke="#3F4350" stroke-width="1.8"/>
+										</svg>
+									</a>
+								</div>
+
+								<a class="profile-menu__item js-open-notify" href="">
+								<span class="item_icon">
+									<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M17.1905 13.3324C17.1256 13.2543 17.0619 13.1762 16.9994 13.1008C16.1401 12.0613 15.6201 11.434 15.6201 8.49141C15.6201 6.96797 15.2557 5.71797 14.5373 4.78047C14.0076 4.08789 13.2916 3.5625 12.3479 3.17422C12.3357 3.16746 12.3249 3.1586 12.3158 3.14805C11.9764 2.01133 11.0475 1.25 9.99983 1.25C8.95218 1.25 8.02366 2.01133 7.68421 3.14687C7.67515 3.15704 7.66445 3.16562 7.65257 3.17227C5.45022 4.07891 4.37991 5.81836 4.37991 8.49023C4.37991 11.434 3.86077 12.0613 3.00061 13.0996C2.93811 13.175 2.87444 13.2516 2.8096 13.3313C2.6421 13.5333 2.53597 13.779 2.50378 14.0394C2.47159 14.2999 2.51468 14.5641 2.62796 14.8008C2.86897 15.3086 3.38264 15.6238 3.96897 15.6238H16.035C16.6186 15.6238 17.1287 15.309 17.3705 14.8035C17.4843 14.5668 17.5278 14.3023 17.4959 14.0416C17.464 13.7809 17.358 13.5348 17.1905 13.3324ZM9.99983 18.75C10.5643 18.7495 11.1181 18.5963 11.6026 18.3066C12.087 18.0168 12.484 17.6014 12.7514 17.1043C12.764 17.0805 12.7702 17.0538 12.7695 17.0269C12.7687 16.9999 12.761 16.9736 12.7471 16.9506C12.7332 16.9275 12.7135 16.9084 12.69 16.8952C12.6666 16.8819 12.6401 16.875 12.6131 16.875H7.38733C7.36035 16.8749 7.3338 16.8818 7.31028 16.895C7.28675 16.9082 7.26705 16.9273 7.25308 16.9504C7.23912 16.9735 7.23137 16.9998 7.2306 17.0268C7.22982 17.0537 7.23605 17.0804 7.24866 17.1043C7.51606 17.6013 7.91298 18.0167 8.39733 18.3065C8.88169 18.5962 9.43543 18.7495 9.99983 18.75Z" fill="#3F4350"/>
+									</svg>
+								</span>
+									 Уведомления
+									<span class="notify-num">1</span>
+								</a>
+								<a class="profile-menu__item" href="profile_settings.html">
+								<span class="item_icon">
+									<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M9.99997 6.875C9.38191 6.875 8.77772 7.05828 8.26382 7.40166C7.74991 7.74504 7.34937 8.2331 7.11285 8.80411C6.87633 9.37513 6.81444 10.0035 6.93502 10.6097C7.0556 11.2158 7.35323 11.7727 7.79027 12.2097C8.2273 12.6467 8.78413 12.9444 9.39032 13.065C9.99651 13.1855 10.6248 13.1236 11.1959 12.8871C11.7669 12.6506 12.2549 12.2501 12.5983 11.7362C12.9417 11.2223 13.125 10.6181 13.125 10C13.1225 9.17196 12.7925 8.37854 12.207 7.79302C11.6214 7.20751 10.828 6.87747 9.99997 6.875ZM16.7468 10C16.7452 10.292 16.7238 10.5836 16.6828 10.8727L18.5847 12.3617C18.6676 12.4301 18.7234 12.5257 18.7422 12.6315C18.761 12.7373 18.7416 12.8463 18.6875 12.9391L16.8883 16.0453C16.8336 16.1373 16.7482 16.207 16.6472 16.2422C16.5461 16.2774 16.4359 16.2759 16.3359 16.2379L14.0996 15.3395C13.6339 15.698 13.1243 15.9956 12.5832 16.225L12.2488 18.5992C12.2301 18.7056 12.175 18.8021 12.093 18.8724C12.011 18.9426 11.9072 18.9822 11.7992 18.9844H8.20076C8.09476 18.9823 7.99259 18.9444 7.91093 18.8768C7.82928 18.8092 7.77295 18.7159 7.75115 18.6121L7.41677 16.2379C6.87414 16.0112 6.36418 15.7131 5.90036 15.3516L3.66404 16.25C3.56407 16.2881 3.45389 16.2896 3.35287 16.2545C3.25184 16.2193 3.16645 16.1497 3.11169 16.0578L1.31247 12.952C1.25832 12.8592 1.23891 12.7502 1.25774 12.6444C1.27656 12.5386 1.33237 12.443 1.41521 12.3746L3.31716 10.8855C3.27659 10.5921 3.25519 10.2963 3.2531 10C3.25472 9.708 3.27613 9.41645 3.31716 9.12734L1.41521 7.63828C1.33237 7.56988 1.27656 7.47426 1.25774 7.36849C1.23891 7.26272 1.25832 7.15371 1.31247 7.06094L3.11169 3.95469C3.16639 3.86273 3.25176 3.79301 3.35279 3.75779C3.45381 3.72256 3.56403 3.72409 3.66404 3.76211L5.90036 4.66055C6.36604 4.30196 6.87563 4.00436 7.41677 3.775L7.75115 1.40078C7.76986 1.29443 7.82493 1.19788 7.90693 1.12763C7.98894 1.05738 8.0928 1.01779 8.20076 1.01562H11.7992C11.9052 1.01769 12.0074 1.05562 12.089 1.12323C12.1707 1.19084 12.227 1.28414 12.2488 1.38789L12.5832 3.76211C13.1265 3.98866 13.6371 4.28674 14.1015 4.64844L16.3359 3.75C16.4359 3.71195 16.5461 3.71036 16.6471 3.74551C16.7481 3.78066 16.8335 3.8503 16.8883 3.94219L18.6875 7.04844C18.7416 7.14121 18.761 7.25023 18.7422 7.35599C18.7234 7.46176 18.6676 7.55738 18.5847 7.62578L16.6828 9.11484C16.7233 9.40819 16.7447 9.70387 16.7468 10Z" fill="#3F4350"/>
+									</svg>
+								</span>
+									 Настройки профиля
+								</a>
+								<a class="profile-menu__item exit" href="profile_settings.html">
+								<span class="item_icon">
+									<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M13.113 10.7158H6.82397V9.28418H13.113V2.66307C13.113 2.52069 13.0637 2.38414 12.9757 2.28346C12.8878 2.18278 12.7686 2.12622 12.6443 2.12622H1.70679C1.58247 2.12622 1.46324 2.18278 1.37533 2.28346C1.28742 2.38414 1.23804 2.52069 1.23804 2.66307V17.3369C1.23804 17.4793 1.28742 17.6158 1.37533 17.7165C1.46324 17.8172 1.58247 17.8737 1.70679 17.8737H12.6443C12.7686 17.8737 12.8878 17.8172 12.9757 17.7165C13.0637 17.6158 13.113 17.4793 13.113 17.3369V10.7158Z" fill="#ED0A34"/>
+										<path d="M16.6315 10.625L14.1315 13.125L15.0155 14.0089L19.0241 9.99995L15.0155 5.99097L14.1315 6.87495L16.6315 9.37495H13.0828V10.625H16.6315Z" fill="#ED0A34"/>
+									</svg>
+
+								</span>
+									 Выйти
+								</a>
+						</div>
+
+					</div>
+					<div class="notify-menu-wrapper">
+						<div class="notify-menu__header">
+								<p class="notify-menu__header-title" >Уведомления<span>6</span></p>
+						</div>
+						<div class="notify-menu__inner">
+								<a href="translator_page.html#reviews" class="notify-item new">
+									<span class="notify-item__header">
+										<span class="tag">
+													<span class="flags">
+														<img src="assets/images/translators/ru_flag.svg">
+														<img src="assets/images/translators/de_flag.svg">
+													</span>
+												<span class="notify-title">Последовательный п...</span>
+										</span>
+										<span class="text-small-gray">20 сен</span>
+									</span>
+									<span class="notify-item__inner">
+										<p class="notify-item__inner-title">Новый отзыв</p>
+										<p class="notify-item__inner-text">А. Семенов предложил вам выполнить заказ «Последовательный перевод» с Испанского на...</p>
+									</span>
+								</a>
+								<a href="translator_order.html" class="notify-item new">
+									<span class="notify-item__header">
+										<span class="tag">
+													<span class="flags">
+														<img src="assets/images/translators/ru_flag.svg">
+														<img src="assets/images/translators/de_flag.svg">
+													</span>
+												<span class="notify-title">Последовательный перевод</span>
+										</span>
+										<span class="text-small-gray">20 сен</span>
+									</span>
+									<span class="notify-item__inner">
+										<p class="notify-item__inner-title">Новый заказ</p>
+										<p class="notify-item__inner-text">А. Семенов предложил вам выполнить заказ «Последовательный перевод» с Испанского на...</p>
+									</span>
+								</a>
+								<a href="" class="notify-item">
+									<span class="notify-item__header">
+										<span class="tag">
+													<span class="flags">
+														<img src="assets/images/translators/ru_flag.svg">
+														<img src="assets/images/translators/de_flag.svg">
+													</span>
+												<span class="notify-title">Последовательный перевод</span>
+										</span>
+										<span class="text-small-gray">20 сен</span>
+									</span>
+									<div class="notify-item__inner">
+										<p class="notify-item__inner-title">Новый заказ</p>
+										<p class="notify-item__inner-text">А. Семенов предложил вам выполнить заказ «Последовательный перевод» с Испанского на...</p>
+									</div>
+								</a>
+								<a href="" class="notify-item">
+									<span class="notify-item__header">
+										<span class="tag">
+													<span class="flags">
+														<img src="assets/images/translators/ru_flag.svg">
+														<img src="assets/images/translators/de_flag.svg">
+													</span>
+											<span class="notify-title">Последовательный п...</span>
+										</span>
+										<span class="text-small-gray">20 сен</span>
+									</span>
+									<span class="notify-item__inner">
+										<p class="notify-item__inner-title">Выбран другой переводчик</p>
+										<p class="notify-item__inner-text">А. Семенов предложил вам выполнить заказ «Последовательный перевод» с Испанского на...</p>
+									</span>
+								</a>
+						</div>
+					</div>
+					<div class="header__actions">
+						<div class="enter have-acc">
+								<a href="#">Войти</a>
+						</div>
+						<div class="create-order">
+								<a href="create_order.html" class="btn primary small">Создать заказ</a>
+						</div>
+						<div class="notify ">
+								<i class="notify-icon js-open-notify">
+									<span class="notify-num">1</span>
+									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M20.6286 15.9989C20.5508 15.9052 20.4744 15.8114 20.3994 15.7209C19.3682 14.4736 18.7443 13.7208 18.7443 10.1897C18.7443 8.36156 18.3069 6.86156 17.4449 5.73656C16.8093 4.90547 15.95 4.275 14.8175 3.80906C14.803 3.80096 14.79 3.79032 14.7791 3.77766C14.3718 2.41359 13.2571 1.5 11.9999 1.5C10.7427 1.5 9.62849 2.41359 9.22114 3.77625C9.21027 3.78845 9.19744 3.79875 9.18318 3.80672C6.54036 4.89469 5.25599 6.98203 5.25599 10.1883C5.25599 13.7208 4.63302 14.4736 3.60083 15.7195C3.52583 15.81 3.44943 15.9019 3.37161 15.9975C3.17061 16.2399 3.04326 16.5348 3.00464 16.8473C2.96601 17.1598 3.01772 17.4769 3.15365 17.7609C3.44286 18.3703 4.05927 18.7486 4.76286 18.7486H19.2421C19.9424 18.7486 20.5546 18.3708 20.8447 17.7642C20.9813 17.4801 21.0335 17.1628 20.9952 16.8499C20.9569 16.537 20.8297 16.2417 20.6286 15.9989ZM11.9999 22.5C12.6773 22.4995 13.3418 22.3156 13.9232 21.9679C14.5045 21.6202 14.9809 21.1217 15.3018 20.5252C15.3169 20.4966 15.3244 20.4646 15.3234 20.4322C15.3225 20.3999 15.3133 20.3684 15.2966 20.3407C15.2799 20.313 15.2563 20.2901 15.2281 20.2742C15.2 20.2583 15.1682 20.25 15.1358 20.25H8.86489C8.83252 20.2499 8.80066 20.2582 8.77243 20.274C8.7442 20.2899 8.72055 20.3128 8.7038 20.3405C8.68704 20.3682 8.67774 20.3997 8.67681 20.4321C8.67588 20.4645 8.68335 20.4965 8.69849 20.5252C9.01936 21.1216 9.49567 21.6201 10.0769 21.9678C10.6581 22.3155 11.3226 22.4994 11.9999 22.5Z" fill=""/>
+									</svg>
+								</i>
+						</div>
+						<div class="profile-btn js-open-profile-menu">
+								EK
+						</div>
+					</div>
+
+					<button class="burger" type="button" id="sidebarToggle">
+						<span>Открыть навигацию</span>
+					</button>
+				</div>
+		</div>
+		<span class="header__line"></span>
+		<div class="menu-overlay"></div>
+	</header>
+
+	<!-- Main -->
+	<main class="main">
+		<div class="container">
+			<div class="settings_container">
+				<div class="settings-menu">
+					<ul class="settings_menu">
+						<!-- <li><a href="" data-page="page1" class="settings_nav_item settings_menu-item active">Главная</a></li> -->
+						<li><a href="" data-page="page1" class="settings_nav_item settings_menu-item  active"><span>1</span>Персональные данные</a></li>
+						<li><a href="" data-page="page2" class="settings_nav_item settings_menu-item "><span>2</span>Образование</a></li>
+						<li><a href="" data-page="page3" class="settings_nav_item settings_menu-item "><span>3</span>Специализация</a></li>
+						<li><a href="" data-page="page4" class="settings_nav_item settings_menu-item "><span>4</span>Услуги и тематики</a></li>
+					</ul>
+
+				</div>
+
+				<form class="settings_steps" method="post" enctype="multipart/form-data">
+
+					<div class="page1 settings-page step-personal-info">
+						<div class="page-wrapper">
+							<div class="page-step">Шаг 1 из 4</div>
+
+							<div class="page-wrapper_title">Укажите персональные данные</div>
+							<div class="wrapper">
+
+								<div class="input_image  page-person_photo js-no_photo">
+									<img class="input_image_icon" src="assets/images/input/photo_icon.svg">
+
+
+
+									<p>Добавить фото</p>
+								</div>
+								<div class="page-person_info">
+
+									<div class="form-group form_half-group">
+										<div class="form_half form_half_w65 city-group">
+											<label for="personLocation">Город</label>
+											<input type="text" id="forms-language__location" value="">
+										</div>
+										<div class="form_half form_half_w35 phone-group">
+											<label for="phone">Телефон</label>
+											<input type="text" id="phone" name="phone" value="" >
+										</div>
+									</div>
+
+
+									<div class="form-group">
+										<label>Дата рождения</label>
+										<div class="form_half-group">
+											<div class="form__col form__col--w65">
+
+												<div class="forms-language__group dropdown-group day-group ">
+													<input autocomplete="off" id="b_day-day" readonly class="forms-language__view dropdown" type="text" name="day" value="День"/>
+													<i class="dropdown"></i>
+													<ul class="dropdown-list">
+														<li class="dropdown-list__item"><span>01</span></li>
+														<li class="dropdown-list__item"><span>02</span></li>
+														<li class="dropdown-list__item"><span>03</span></li>
+														<li class="dropdown-list__item"><span>04</span></li>
+														<li class="dropdown-list__item"><span>05</span></li>
+														<li class="dropdown-list__item"><span>06</span></li>
+														<li class="dropdown-list__item"><span>07</span></li>
+														<li class="dropdown-list__item"><span>08</span></li>
+														<li class="dropdown-list__item"><span>09</span></li>
+														<li class="dropdown-list__item"><span>10</span></li>
+
+														<li class="dropdown-list__item"><span>11</span></li>
+														<li class="dropdown-list__item"><span>12</span></li>
+														<li class="dropdown-list__item"><span>13</span></li>
+														<li class="dropdown-list__item"><span>14</span></li>
+														<li class="dropdown-list__item"><span>15</span></li>
+														<li class="dropdown-list__item"><span>16</span></li>
+														<li class="dropdown-list__item"><span>17</span></li>
+														<li class="dropdown-list__item"><span>18</span></li>
+														<li class="dropdown-list__item"><span>19</span></li>
+														<li class="dropdown-list__item"><span>20</span></li>
+
+														<li class="dropdown-list__item"><span>21</span></li>
+														<li class="dropdown-list__item"><span>22</span></li>
+														<li class="dropdown-list__item"><span>23</span></li>
+														<li class="dropdown-list__item"><span>24</span></li>
+														<li class="dropdown-list__item"><span>25</span></li>
+														<li class="dropdown-list__item"><span>26</span></li>
+														<li class="dropdown-list__item"><span>27</span></li>
+														<li class="dropdown-list__item"><span>28</span></li>
+														<li class="dropdown-list__item"><span>29</span></li>
+														<li class="dropdown-list__item"><span>30</span></li>
+														<li class="dropdown-list__item"><span>31</span></li>
+													</ul>
+												</div>
+												<div class="forms-language__group dropdown-group month-group">
+													<input autocomplete="off" id="b_day-month" readonly type="text" class="forms-language__view dropdown" name="day" value="Месяц"/>
+													<i class="dropdown"></i>
+													<ul class="dropdown-list">
+														<li class="dropdown-list__item"><span>Январь</span></li>
+														<li class="dropdown-list__item"><span>Февраль</span></li>
+														<li class="dropdown-list__item"><span>Март</span></li>
+														<li class="dropdown-list__item"><span>Апрель</span></li>
+														<li class="dropdown-list__item"><span>Май</span></li>
+														<li class="dropdown-list__item"><span>Июнь</span></li>
+														<li class="dropdown-list__item"><span>Июль</span></li>
+														<li class="dropdown-list__item"><span>Август</span></li>
+														<li class="dropdown-list__item"><span>Сентябрь</span></li>
+														<li class="dropdown-list__item"><span>Октябрь</span></li>
+														<li class="dropdown-list__item"><span>Ноябрь</span></li>
+														<li class="dropdown-list__item"><span>Декабрь</span></li>
+													</ul>
+												</div>
+											</div>
+											<div class="form__col form__col--w35">
+
+												<div class="forms-language__group dropdown-group year-group">
+													<input autocomplete="off" id="b_day-year" readonly type="text" class="forms-language__view dropdown" name="day" value="Год"/>
+													<i class="dropdown"></i>
+													<ul class="dropdown-list">
+														<li class="dropdown-list__item"><span>1994</span></li>
+														<li class="dropdown-list__item"><span>1993</span></li>
+														<li class="dropdown-list__item"><span>1992</span></li>
+														<li class="dropdown-list__item"><span>1991</span></li>
+														<li class="dropdown-list__item"><span>1990</span></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="form-group radio-list_sex">
+										<label>Пол</label>
+										<div class="form-step__group_list">
+											<input name="sex" type="radio" id="fem"/>
+											<label for="fem">Женский</label>
+										</div>
+										<div class="form-step__group_list">
+											<input checked name="sex" type="radio" id="male"/>
+											<label for="male">Мужской</label>
+										</div>
+									</div>
+
+								</div>
+							</div>
+
+						</div>
+
+						<div class="step-element__btn fixed-bottom">
+							<a href="" class="btn tertiary big">
+								Вернуться в личный кабинет
+							</a>
+							<button type="button" class="btn primary" disabled>
+								К следующему шагу
+							</button>
+						</div>
+						<div class="mobile mobile-item__edit mobile-item-photo__edit" style="display: none">
+								<span class="edit-menu">
+									<span class="btn edit_btn edit_photo_btn">Изменить фотографию</span>
+									<span class="btn delete_btn js-delete-person_photo">Удалить фотографию</span>
+									<span class="btn gray js-cancel">Отмена</span>
+								</span>
+						</div>
+					</div>
+
+					<div style="display: none" class="page2 settings-page step-education">
+						<div class="page-wrapper">
+							<div class="page-step">Шаг 2 из 4</div>
+
+							<div class="page-wrapper_title with_button">Добавьте образование</div>
+
+							<div class="page-wrapper_subtitle">Добавьте образование и подтверждающий документ (диплом или сертификат), документы нужны для проверки модератором и не будут отражаться в анкете</div>
+							<div class="container-list education-container">
+								<div class="container-header">
+									<div class="container-header_list-title education_place-title">Обучение</div>
+									<div class="container-header_list-title education_years-title">Годы обучения</div>
+								</div>
+								<ul class="container-list-wrapper">
+									<li class="container-list__item">
+											<div class="list__item-place">СПбГУ, аспирантура. Германские языки</div>
+											<div class="list__item-years">2014 — 2017 гг.</div>
+											<a href="" class="item-edit education_item-edit">
+												<span class="edit-menu">
+														<button class="btn edit_btn edit_education">Редактировать</button>
+														<button class="btn delete_btn">Удалить</button>
+												</span>
+											</a>
+									</li>
+									<li class="container-list__item">
+											<div class="list__item-place">Collège universitaire français, СПб</div>
+											<div class="list__item-years">2013 — 2016 гг.</div>
+											<a href="" class="item-edit education_item-edit">
+												<span class="edit-menu">
+													<button class="btn edit_btn edit_education">Редактировать</button>
+													<button class="btn delete_btn">Удалить</button>
+												</span>
+											</a>
+									</li>
+									<li class="container-list__item">
+											<div class="list__item-place">СПбГУ, магистратура. Инновационные технологии перевода: английский язык</div>
+											<div class="list__item-years">2012 — 2014 гг.</div>
+											<a href="" class="item-edit education_item-edit">
+												<span class="edit-menu">
+														<button class="btn edit_btn edit_education">Редактировать</button>
+														<button class="btn delete_btn">Удалить</button>
+												</span>
+											</a>
+									</li>
+									<li class="container-list__item">
+											<div class="list__item-place">СПбГУ, бакалавриат. Теория перевода и межъязыковая коммуникация: английский язык</div>
+											<div class="list__item-years">2014 — 2017 гг.</div>
+											<a href="" class="item-edit education_item-edit">
+												<span class="edit-menu">
+														<button class="btn edit_btn edit_education">Редактировать</button>
+														<button class="btn delete_btn">Удалить</button>
+												</span>
+											</a>
+									</li>
+								</ul>
+								<div class="mobile mobile-item__edit mobile-item-education__edit" style="display: none">
+									<span class="edit-menu">
+											<span class="btn edit_btn edit_education">Редактировать образование</span>
+											<span class="btn delete_btn">Удалить образование</span>
+											<span class="btn gray js-cancel">Отмена</span>
+									</span>
+								</div>
+
+
+							</div>
+							<a class="btn-add add-education" href="">
+								<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M15.625 10H4.375M10 4.375V15.625V4.375Z" stroke="" stroke-width="1.6"/>
+								</svg>
+								Добавить образование
+							</a>
+					</div>
+
+
+
+						<div class="step-element__btn fixed-bottom">
+							<a href="" class="btn tertiary big">
+								Вернуться назад
+							</a>
+							<button type="button" class="btn primary" disabled>
+								К следующему шагу
+							</button>
+						</div>
+					</div>
+
+					<div  style="display: none" class="page3 settings-page step-spec">
+
+						<div class="page-wrapper">
+							<div class="page-step">Шаг 3 из 4</div>
+							<div class="page-wrapper_title">Подробнее расскажите о себе</div>
+							<div class="page-wrapper_subtitle">
+								Коротко опишите ваши сильные стороны и важные личные качества
+							</div>
+
+							<div class="form-group form_richtext">
+								<label for="pass">О себе</label>
+								<textarea class="richtext"></textarea>
+							</div>
+
+							<div class="form-group about-language">
+									<label for="nativeLang">Родной язык</label>
+									<input type="text" id="nativeLang" value="Русский">
+									<label for="visas">Открытые визы</label>
+									<div class="forms-language__group checkbox_dropdown ">
+										<input autocomplete="off" id="visas"
+													class="forms-language__view js-nonumbers"
+													type="text"
+													readonly
+													name="notifyType" value=""/>
+										<i class="dropdown"></i>
+										<ul class="checkbox-list">
+												<li class="list-item__checkbox__item">
+													<label class="list-item__checkbox">
+														<input type="checkbox" value="1"><span>Шенгенская виза</span>
+													</label>
+												</li>
+												<li class="list-item__checkbox__item">
+													<label class="list-item__checkbox">
+														<input type="checkbox" value="2"><span> Арабское Объединенное Королевство</span>
+													</label>
+												</li>
+												<li class="list-item__checkbox__item">
+													<label class="list-item__checkbox">
+														<input type="checkbox" value="2"><span> Королевство Саудовская Аравия</span>
+													</label>
+												</li>
+												<li class="list-item__checkbox__item">
+													<label class="list-item__checkbox">
+														<input type="checkbox" value="2"><span> Новая Зеландия</span>
+													</label>
+												</li>
+												<li class="list-item__checkbox__item">
+													<label class="list-item__checkbox">
+														<input type="checkbox" value="2"><span> США</span>
+													</label>
+												</li>
+												<li class="list-item__checkbox__item">
+													<label class="list-item__checkbox">
+														<input type="checkbox" value="2"><span> Икам</span>
+													</label>
+												</li>
+										</ul>
+									</div>
+								</div>
+
+								<div class="form_half group_checkbox">
+										<label class="list-item__checkbox list-item__checkbox--mb-none">
+												<input type="checkbox" value="1"><span>Готов к срочной работе</span>
+										</label>
+								</div>
+
+
+						</div>
+
+
+						<div class="step-element__btn fixed-bottom">
+							<a href="" class="btn tertiary big">
+								Вернуться назад
+							</a>
+							<button type="button" class="btn primary" disabled>
+								К следующему шагу
+							</button>
+						</div>
+					</div>
+
+					<div style="display: none" class="page4 settings-page step-service">
+
+						<div class="page-wrapper add-service">
+							<div class="page-step">Шаг 4 из 4</div>
+							<div class="page-wrapper_title">Добавьте услуги</div>
+							<a class="btn-add profile-new-add-service href="">
+								<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M15.625 10H4.375M10 4.375V15.625V4.375Z" stroke="" stroke-width="1.6"/>
+								</svg>
+								Добавить услугу
+							</a>
+
+							<div class="page-wrapper_subtitle">
+								Добавьте услуги, которые вы будете оказывать
+							</div>
+
+							<!-- <div class="service__list">
+								<div class="service__list-caption">
+									<p>Языковая пара</p>
+									<p>Метод перевода</p>
+									<p>Стоимость</p>
+								</div>
+
+								<div class="service__list-item">
+									<div class="service__list-item-body">
+										<div class="lang-pair">
+											<div class="flags">
+												<svg width="48" height="28" viewBox="0 0 48 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M14 26C20.6274 26 26 20.6274 26 14C26 7.37258 20.6274 2 14 2C7.37258 2 2 7.37258 2 14C2 20.6274 7.37258 26 14 26Z" fill="#F0F0F0"/>
+													<path d="M25.2536 18.1739C25.736 16.8739 26 15.4678 26 14C26 12.5322 25.736 11.1261 25.2536 9.82611H2.74639C2.26405 11.1261 2 12.5322 2 14C2 15.4678 2.26405 16.8739 2.74639 18.1739L14 19.2174L25.2536 18.1739Z" fill="#0052B4"/>
+													<path d="M13.9997 26C19.1593 26 23.5578 22.7435 25.2533 18.1739H2.74609C4.44161 22.7435 8.84012 26 13.9997 26Z" fill="#D80027"/>
+													<path d="M14 24C8.47715 24 4 19.5228 4 14H0C0 21.732 6.26801 28 14 28V24ZM24 14C24 19.5228 19.5228 24 14 24V28C21.732 28 28 21.732 28 14H24ZM14 4C19.5228 4 24 8.47715 24 14H28C28 6.26801 21.732 0 14 0V4ZM14 0C6.26801 0 0 6.26801 0 14H4C4 8.47715 8.47715 4 14 4V0Z" fill="white"/>
+													<g clip-path="url(#clip0_3457:3529)">
+													<path d="M34 26C40.6274 26 46 20.6274 46 14C46 7.37258 40.6274 2 34 2C27.3726 2 22 7.37258 22 14C22 20.6274 27.3726 26 34 26Z" fill="#F0F0F0"/>
+													<path d="M22.8942 5.47656C21.7945 6.90735 20.9653 8.55645 20.4824 10.348H27.7656L22.8942 5.47656Z" fill="#0052B4"/>
+													<path d="M47.5174 10.3479C47.0346 8.55646 46.2053 6.90735 45.1057 5.47656L40.2344 10.3479H47.5174Z" fill="#0052B4"/>
+													<path d="M20.4824 17.6522C20.9653 19.4437 21.7945 21.0928 22.8942 22.5235L27.7654 17.6522H20.4824Z" fill="#0052B4"/>
+													<path d="M42.5237 2.89413C41.0929 1.79442 39.4439 0.96519 37.6523 0.4823V7.76542L42.5237 2.89413Z" fill="#0052B4"/>
+													<path d="M25.4766 25.1059C26.9074 26.2056 28.5565 27.0349 30.3479 27.5177V20.2347L25.4766 25.1059Z" fill="#0052B4"/>
+													<path d="M30.3479 0.4823C28.5564 0.96519 26.9073 1.79442 25.4766 2.89407L30.3479 7.76536V0.4823Z" fill="#0052B4"/>
+													<path d="M37.6523 27.5177C39.4438 27.0349 41.0929 26.2056 42.5236 25.106L37.6523 20.2347V27.5177Z" fill="#0052B4"/>
+													<path d="M40.2344 17.6522L45.1057 22.5236C46.2053 21.0928 47.0346 19.4437 47.5174 17.6522H40.2344Z" fill="#0052B4"/>
+													<path d="M47.8815 12.1739H35.8262H35.8261V0.118508C35.2283 0.0406875 34.6189 0 34 0C33.381 0 32.7717 0.0406875 32.1739 0.118508V12.1738V12.1739H20.1185C20.0407 12.7717 20 13.3811 20 14C20 14.619 20.0407 15.2283 20.1185 15.8261H32.1738H32.1739V27.8815C32.7717 27.9593 33.381 28 34 28C34.6189 28 35.2283 27.9594 35.8261 27.8815V15.8262V15.8261H47.8815C47.9593 15.2283 48 14.619 48 14C48 13.3811 47.9593 12.7717 47.8815 12.1739Z" fill="#D80027"/>
+													<path d="M37.6523 17.6522L43.8996 23.8995C44.187 23.6123 44.461 23.312 44.7226 23.0007L39.374 17.6522H37.6523V17.6522Z" fill="#D80027"/>
+													<path d="M30.3479 17.6522H30.3478L24.1006 23.8994C24.3878 24.1868 24.6881 24.4609 24.9994 24.7224L30.3479 19.3737V17.6522Z" fill="#D80027"/>
+													<path d="M30.3476 10.3479V10.3478L24.1003 4.10046C23.813 4.38768 23.5389 4.68797 23.2773 4.99925L28.6259 10.3479H30.3476V10.3479Z" fill="#D80027"/>
+													<path d="M37.6523 10.3479L43.8997 4.10053C43.6125 3.8132 43.3122 3.53911 43.0009 3.27765L37.6523 8.62625V10.3479Z" fill="#D80027"/>
+													</g>
+													<path d="M34 24C28.4772 24 24 19.5228 24 14H20C20 21.732 26.268 28 34 28V24ZM44 14C44 19.5228 39.5228 24 34 24V28C41.732 28 48 21.732 48 14H44ZM34 4C39.5228 4 44 8.47715 44 14H48C48 6.26801 41.732 0 34 0V4ZM34 0C26.268 0 20 6.26801 20 14H24C24 8.47715 28.4772 4 34 4V0Z" fill="white"/>
+													<defs>
+													<clipPath id="clip0_3457:3529">
+													<path d="M22 14C22 7.37258 27.3726 2 34 2C40.6274 2 46 7.37258 46 14C46 20.6274 40.6274 26 34 26C27.3726 26 22 20.6274 22 14Z" fill="white"/>
+													</clipPath>
+													</defs>
+												</svg>
+											</div>
+											<div class="from-to">
+												<p>Русский</p>
+												<svg width="17" height="6" viewBox="0 0 17 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M13.0959 0.802308C13.0959 0.636652 13.2857 0.54281 13.4173 0.643417L16.2921 2.84106C16.3969 2.92111 16.3969 3.0788 16.2921 3.15885L13.4173 5.35649C13.2857 5.4571 13.0959 5.36326 13.0959 5.1976L13.0959 0.802308Z" fill="#3F4350" stroke="#3F4350" stroke-width="0.4" stroke-linecap="round" stroke-linejoin="round"/>
+													<path d="M15 3H1" stroke="#3F4350" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/>
+												</svg>
+												<p>Английский</p>
+											</div>
+										</div>
+										<div class="translate-type">
+											Синхронный перевод
+										</div>
+										<div class="translate-price">
+											<p>от <span>2 500 ₽</span></p>
+											<p>за час</p>
+										</div>
+									</div>
+
+									<div class="service__list-iten-action">
+										<svg width="20" height="6" viewBox="0 0 20 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M10 5.25C11.2426 5.25 12.25 4.24264 12.25 3C12.25 1.75736 11.2426 0.75 10 0.75C8.75736 0.75 7.75 1.75736 7.75 3C7.75 4.24264 8.75736 5.25 10 5.25Z" fill="#3F4350"/>
+											<path d="M17.5 5.25C18.7426 5.25 19.75 4.24264 19.75 3C19.75 1.75736 18.7426 0.75 17.5 0.75C16.2574 0.75 15.25 1.75736 15.25 3C15.25 4.24264 16.2574 5.25 17.5 5.25Z" fill="#3F4350"/>
+											<path d="M2.5 5.25C3.74264 5.25 4.75 4.24264 4.75 3C4.75 1.75736 3.74264 0.75 2.5 0.75C1.25736 0.75 0.25 1.75736 0.25 3C0.25 4.24264 1.25736 5.25 2.5 5.25Z" fill="#3F4350"/>
+										</svg>
+									</div>
+
+								</div>
+								<div class="service__list-item">
+									<div class="service__list-item-body">
+										<div class="lang-pair">
+											<div class="flags">
+												<svg width="48" height="28" viewBox="0 0 48 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M14 26C20.6274 26 26 20.6274 26 14C26 7.37258 20.6274 2 14 2C7.37258 2 2 7.37258 2 14C2 20.6274 7.37258 26 14 26Z" fill="#F0F0F0"/>
+													<path d="M25.2536 18.1739C25.736 16.8739 26 15.4678 26 14C26 12.5322 25.736 11.1261 25.2536 9.82611H2.74639C2.26405 11.1261 2 12.5322 2 14C2 15.4678 2.26405 16.8739 2.74639 18.1739L14 19.2174L25.2536 18.1739Z" fill="#0052B4"/>
+													<path d="M13.9997 26C19.1593 26 23.5578 22.7435 25.2533 18.1739H2.74609C4.44161 22.7435 8.84012 26 13.9997 26Z" fill="#D80027"/>
+													<path d="M14 24C8.47715 24 4 19.5228 4 14H0C0 21.732 6.26801 28 14 28V24ZM24 14C24 19.5228 19.5228 24 14 24V28C21.732 28 28 21.732 28 14H24ZM14 4C19.5228 4 24 8.47715 24 14H28C28 6.26801 21.732 0 14 0V4ZM14 0C6.26801 0 0 6.26801 0 14H4C4 8.47715 8.47715 4 14 4V0Z" fill="white"/>
+													<g clip-path="url(#clip0_3457:3529)">
+													<path d="M34 26C40.6274 26 46 20.6274 46 14C46 7.37258 40.6274 2 34 2C27.3726 2 22 7.37258 22 14C22 20.6274 27.3726 26 34 26Z" fill="#F0F0F0"/>
+													<path d="M22.8942 5.47656C21.7945 6.90735 20.9653 8.55645 20.4824 10.348H27.7656L22.8942 5.47656Z" fill="#0052B4"/>
+													<path d="M47.5174 10.3479C47.0346 8.55646 46.2053 6.90735 45.1057 5.47656L40.2344 10.3479H47.5174Z" fill="#0052B4"/>
+													<path d="M20.4824 17.6522C20.9653 19.4437 21.7945 21.0928 22.8942 22.5235L27.7654 17.6522H20.4824Z" fill="#0052B4"/>
+													<path d="M42.5237 2.89413C41.0929 1.79442 39.4439 0.96519 37.6523 0.4823V7.76542L42.5237 2.89413Z" fill="#0052B4"/>
+													<path d="M25.4766 25.1059C26.9074 26.2056 28.5565 27.0349 30.3479 27.5177V20.2347L25.4766 25.1059Z" fill="#0052B4"/>
+													<path d="M30.3479 0.4823C28.5564 0.96519 26.9073 1.79442 25.4766 2.89407L30.3479 7.76536V0.4823Z" fill="#0052B4"/>
+													<path d="M37.6523 27.5177C39.4438 27.0349 41.0929 26.2056 42.5236 25.106L37.6523 20.2347V27.5177Z" fill="#0052B4"/>
+													<path d="M40.2344 17.6522L45.1057 22.5236C46.2053 21.0928 47.0346 19.4437 47.5174 17.6522H40.2344Z" fill="#0052B4"/>
+													<path d="M47.8815 12.1739H35.8262H35.8261V0.118508C35.2283 0.0406875 34.6189 0 34 0C33.381 0 32.7717 0.0406875 32.1739 0.118508V12.1738V12.1739H20.1185C20.0407 12.7717 20 13.3811 20 14C20 14.619 20.0407 15.2283 20.1185 15.8261H32.1738H32.1739V27.8815C32.7717 27.9593 33.381 28 34 28C34.6189 28 35.2283 27.9594 35.8261 27.8815V15.8262V15.8261H47.8815C47.9593 15.2283 48 14.619 48 14C48 13.3811 47.9593 12.7717 47.8815 12.1739Z" fill="#D80027"/>
+													<path d="M37.6523 17.6522L43.8996 23.8995C44.187 23.6123 44.461 23.312 44.7226 23.0007L39.374 17.6522H37.6523V17.6522Z" fill="#D80027"/>
+													<path d="M30.3479 17.6522H30.3478L24.1006 23.8994C24.3878 24.1868 24.6881 24.4609 24.9994 24.7224L30.3479 19.3737V17.6522Z" fill="#D80027"/>
+													<path d="M30.3476 10.3479V10.3478L24.1003 4.10046C23.813 4.38768 23.5389 4.68797 23.2773 4.99925L28.6259 10.3479H30.3476V10.3479Z" fill="#D80027"/>
+													<path d="M37.6523 10.3479L43.8997 4.10053C43.6125 3.8132 43.3122 3.53911 43.0009 3.27765L37.6523 8.62625V10.3479Z" fill="#D80027"/>
+													</g>
+													<path d="M34 24C28.4772 24 24 19.5228 24 14H20C20 21.732 26.268 28 34 28V24ZM44 14C44 19.5228 39.5228 24 34 24V28C41.732 28 48 21.732 48 14H44ZM34 4C39.5228 4 44 8.47715 44 14H48C48 6.26801 41.732 0 34 0V4ZM34 0C26.268 0 20 6.26801 20 14H24C24 8.47715 28.4772 4 34 4V0Z" fill="white"/>
+													<defs>
+													<clipPath id="clip0_3457:3529">
+													<path d="M22 14C22 7.37258 27.3726 2 34 2C40.6274 2 46 7.37258 46 14C46 20.6274 40.6274 26 34 26C27.3726 26 22 20.6274 22 14Z" fill="white"/>
+													</clipPath>
+													</defs>
+												</svg>
+											</div>
+											<div class="from-to">
+												<p>Русский</p>
+												<svg width="17" height="6" viewBox="0 0 17 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M13.0959 0.802308C13.0959 0.636652 13.2857 0.54281 13.4173 0.643417L16.2921 2.84106C16.3969 2.92111 16.3969 3.0788 16.2921 3.15885L13.4173 5.35649C13.2857 5.4571 13.0959 5.36326 13.0959 5.1976L13.0959 0.802308Z" fill="#3F4350" stroke="#3F4350" stroke-width="0.4" stroke-linecap="round" stroke-linejoin="round"/>
+													<path d="M15 3H1" stroke="#3F4350" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/>
+												</svg>
+												<p>Английский</p>
+											</div>
+										</div>
+										<div class="translate-type">
+											Гид-переводчик
+										</div>
+										<div class="translate-price">
+											<p>от <span>2 500 ₽</span></p>
+											<p>за час</p>
+										</div>
+									</div>
+
+									<div class="service__list-iten-action">
+										<svg width="20" height="6" viewBox="0 0 20 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M10 5.25C11.2426 5.25 12.25 4.24264 12.25 3C12.25 1.75736 11.2426 0.75 10 0.75C8.75736 0.75 7.75 1.75736 7.75 3C7.75 4.24264 8.75736 5.25 10 5.25Z" fill="#3F4350"/>
+											<path d="M17.5 5.25C18.7426 5.25 19.75 4.24264 19.75 3C19.75 1.75736 18.7426 0.75 17.5 0.75C16.2574 0.75 15.25 1.75736 15.25 3C15.25 4.24264 16.2574 5.25 17.5 5.25Z" fill="#3F4350"/>
+											<path d="M2.5 5.25C3.74264 5.25 4.75 4.24264 4.75 3C4.75 1.75736 3.74264 0.75 2.5 0.75C1.25736 0.75 0.25 1.75736 0.25 3C0.25 4.24264 1.25736 5.25 2.5 5.25Z" fill="#3F4350"/>
+										</svg>
+									</div>
+
+								</div>
+								<div class="service__list-item">
+									<div class="service__list-item-body">
+										<div class="lang-pair">
+											<div class="flags">
+												<svg width="48" height="28" viewBox="0 0 48 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M14 26C20.6274 26 26 20.6274 26 14C26 7.37258 20.6274 2 14 2C7.37258 2 2 7.37258 2 14C2 20.6274 7.37258 26 14 26Z" fill="#F0F0F0"/>
+													<path d="M25.2536 18.1739C25.736 16.8739 26 15.4678 26 14C26 12.5322 25.736 11.1261 25.2536 9.82611H2.74639C2.26405 11.1261 2 12.5322 2 14C2 15.4678 2.26405 16.8739 2.74639 18.1739L14 19.2174L25.2536 18.1739Z" fill="#0052B4"/>
+													<path d="M13.9997 26C19.1593 26 23.5578 22.7435 25.2533 18.1739H2.74609C4.44161 22.7435 8.84012 26 13.9997 26Z" fill="#D80027"/>
+													<path d="M14 24C8.47715 24 4 19.5228 4 14H0C0 21.732 6.26801 28 14 28V24ZM24 14C24 19.5228 19.5228 24 14 24V28C21.732 28 28 21.732 28 14H24ZM14 4C19.5228 4 24 8.47715 24 14H28C28 6.26801 21.732 0 14 0V4ZM14 0C6.26801 0 0 6.26801 0 14H4C4 8.47715 8.47715 4 14 4V0Z" fill="white"/>
+													<g clip-path="url(#clip0_3457:3529)">
+													<path d="M34 26C40.6274 26 46 20.6274 46 14C46 7.37258 40.6274 2 34 2C27.3726 2 22 7.37258 22 14C22 20.6274 27.3726 26 34 26Z" fill="#F0F0F0"/>
+													<path d="M22.8942 5.47656C21.7945 6.90735 20.9653 8.55645 20.4824 10.348H27.7656L22.8942 5.47656Z" fill="#0052B4"/>
+													<path d="M47.5174 10.3479C47.0346 8.55646 46.2053 6.90735 45.1057 5.47656L40.2344 10.3479H47.5174Z" fill="#0052B4"/>
+													<path d="M20.4824 17.6522C20.9653 19.4437 21.7945 21.0928 22.8942 22.5235L27.7654 17.6522H20.4824Z" fill="#0052B4"/>
+													<path d="M42.5237 2.89413C41.0929 1.79442 39.4439 0.96519 37.6523 0.4823V7.76542L42.5237 2.89413Z" fill="#0052B4"/>
+													<path d="M25.4766 25.1059C26.9074 26.2056 28.5565 27.0349 30.3479 27.5177V20.2347L25.4766 25.1059Z" fill="#0052B4"/>
+													<path d="M30.3479 0.4823C28.5564 0.96519 26.9073 1.79442 25.4766 2.89407L30.3479 7.76536V0.4823Z" fill="#0052B4"/>
+													<path d="M37.6523 27.5177C39.4438 27.0349 41.0929 26.2056 42.5236 25.106L37.6523 20.2347V27.5177Z" fill="#0052B4"/>
+													<path d="M40.2344 17.6522L45.1057 22.5236C46.2053 21.0928 47.0346 19.4437 47.5174 17.6522H40.2344Z" fill="#0052B4"/>
+													<path d="M47.8815 12.1739H35.8262H35.8261V0.118508C35.2283 0.0406875 34.6189 0 34 0C33.381 0 32.7717 0.0406875 32.1739 0.118508V12.1738V12.1739H20.1185C20.0407 12.7717 20 13.3811 20 14C20 14.619 20.0407 15.2283 20.1185 15.8261H32.1738H32.1739V27.8815C32.7717 27.9593 33.381 28 34 28C34.6189 28 35.2283 27.9594 35.8261 27.8815V15.8262V15.8261H47.8815C47.9593 15.2283 48 14.619 48 14C48 13.3811 47.9593 12.7717 47.8815 12.1739Z" fill="#D80027"/>
+													<path d="M37.6523 17.6522L43.8996 23.8995C44.187 23.6123 44.461 23.312 44.7226 23.0007L39.374 17.6522H37.6523V17.6522Z" fill="#D80027"/>
+													<path d="M30.3479 17.6522H30.3478L24.1006 23.8994C24.3878 24.1868 24.6881 24.4609 24.9994 24.7224L30.3479 19.3737V17.6522Z" fill="#D80027"/>
+													<path d="M30.3476 10.3479V10.3478L24.1003 4.10046C23.813 4.38768 23.5389 4.68797 23.2773 4.99925L28.6259 10.3479H30.3476V10.3479Z" fill="#D80027"/>
+													<path d="M37.6523 10.3479L43.8997 4.10053C43.6125 3.8132 43.3122 3.53911 43.0009 3.27765L37.6523 8.62625V10.3479Z" fill="#D80027"/>
+													</g>
+													<path d="M34 24C28.4772 24 24 19.5228 24 14H20C20 21.732 26.268 28 34 28V24ZM44 14C44 19.5228 39.5228 24 34 24V28C41.732 28 48 21.732 48 14H44ZM34 4C39.5228 4 44 8.47715 44 14H48C48 6.26801 41.732 0 34 0V4ZM34 0C26.268 0 20 6.26801 20 14H24C24 8.47715 28.4772 4 34 4V0Z" fill="white"/>
+													<defs>
+													<clipPath id="clip0_3457:3529">
+													<path d="M22 14C22 7.37258 27.3726 2 34 2C40.6274 2 46 7.37258 46 14C46 20.6274 40.6274 26 34 26C27.3726 26 22 20.6274 22 14Z" fill="white"/>
+													</clipPath>
+													</defs>
+												</svg>
+											</div>
+											<div class="from-to">
+												<p>Русский</p>
+												<svg width="17" height="6" viewBox="0 0 17 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M13.0959 0.802308C13.0959 0.636652 13.2857 0.54281 13.4173 0.643417L16.2921 2.84106C16.3969 2.92111 16.3969 3.0788 16.2921 3.15885L13.4173 5.35649C13.2857 5.4571 13.0959 5.36326 13.0959 5.1976L13.0959 0.802308Z" fill="#3F4350" stroke="#3F4350" stroke-width="0.4" stroke-linecap="round" stroke-linejoin="round"/>
+													<path d="M15 3H1" stroke="#3F4350" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/>
+												</svg>
+												<p>Английский</p>
+											</div>
+										</div>
+										<div class="translate-type">
+											Шушутаж
+										</div>
+										<div class="translate-price">
+											<p>от <span>2 500 ₽</span></p>
+											<p>за час</p>
+										</div>
+									</div>
+
+									<div class="service__list-iten-action">
+										<svg width="20" height="6" viewBox="0 0 20 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M10 5.25C11.2426 5.25 12.25 4.24264 12.25 3C12.25 1.75736 11.2426 0.75 10 0.75C8.75736 0.75 7.75 1.75736 7.75 3C7.75 4.24264 8.75736 5.25 10 5.25Z" fill="#3F4350"/>
+											<path d="M17.5 5.25C18.7426 5.25 19.75 4.24264 19.75 3C19.75 1.75736 18.7426 0.75 17.5 0.75C16.2574 0.75 15.25 1.75736 15.25 3C15.25 4.24264 16.2574 5.25 17.5 5.25Z" fill="#3F4350"/>
+											<path d="M2.5 5.25C3.74264 5.25 4.75 4.24264 4.75 3C4.75 1.75736 3.74264 0.75 2.5 0.75C1.25736 0.75 0.25 1.75736 0.25 3C0.25 4.24264 1.25736 5.25 2.5 5.25Z" fill="#3F4350"/>
+										</svg>
+									</div>
+
+								</div>
+								<div class="service__list-item">
+									<div class="service__list-item-body">
+										<div class="lang-pair">
+											<div class="flags">
+												<svg width="48" height="28" viewBox="0 0 48 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M14 26C20.6274 26 26 20.6274 26 14C26 7.37258 20.6274 2 14 2C7.37258 2 2 7.37258 2 14C2 20.6274 7.37258 26 14 26Z" fill="#F0F0F0"/>
+													<path d="M25.2536 18.1739C25.736 16.8739 26 15.4678 26 14C26 12.5322 25.736 11.1261 25.2536 9.82611H2.74639C2.26405 11.1261 2 12.5322 2 14C2 15.4678 2.26405 16.8739 2.74639 18.1739L14 19.2174L25.2536 18.1739Z" fill="#0052B4"/>
+													<path d="M13.9997 26C19.1593 26 23.5578 22.7435 25.2533 18.1739H2.74609C4.44161 22.7435 8.84012 26 13.9997 26Z" fill="#D80027"/>
+													<path d="M14 24C8.47715 24 4 19.5228 4 14H0C0 21.732 6.26801 28 14 28V24ZM24 14C24 19.5228 19.5228 24 14 24V28C21.732 28 28 21.732 28 14H24ZM14 4C19.5228 4 24 8.47715 24 14H28C28 6.26801 21.732 0 14 0V4ZM14 0C6.26801 0 0 6.26801 0 14H4C4 8.47715 8.47715 4 14 4V0Z" fill="white"/>
+													<g clip-path="url(#clip0_3457:1721)">
+													<path d="M34 26C40.6274 26 46 20.6274 46 14C46 7.37258 40.6274 2 34 2C27.3726 2 22 7.37258 22 14C22 20.6274 27.3726 26 34 26Z" fill="#F0F0F0"/>
+													<path d="M45.9999 14C45.9999 8.84043 42.7434 4.44191 38.1738 2.7464V25.2537C42.7434 23.5581 45.9999 19.1596 45.9999 14Z" fill="#D80027"/>
+													<path d="M22 14C22 19.1596 25.2565 23.5581 29.8261 25.2536V2.7464C25.2565 4.44191 22 8.84043 22 14Z" fill="#0052B4"/>
+													</g>
+													<path d="M34 24C28.4772 24 24 19.5228 24 14H20C20 21.732 26.268 28 34 28V24ZM44 14C44 19.5228 39.5228 24 34 24V28C41.732 28 48 21.732 48 14H44ZM34 4C39.5228 4 44 8.47715 44 14H48C48 6.26801 41.732 0 34 0V4ZM34 0C26.268 0 20 6.26801 20 14H24C24 8.47715 28.4772 4 34 4V0Z" fill="white"/>
+													<defs>
+													<clipPath id="clip0_3457:1721">
+													<path d="M22 14C22 7.37258 27.3726 2 34 2V2C40.6274 2 46 7.37258 46 14V14C46 20.6274 40.6274 26 34 26V26C27.3726 26 22 20.6274 22 14V14Z" fill="white"/>
+													</clipPath>
+													</defs>
+												</svg>
+
+											</div>
+											<div class="from-to">
+												<p>Русский</p>
+												<svg width="17" height="6" viewBox="0 0 17 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M13.0959 0.802308C13.0959 0.636652 13.2857 0.54281 13.4173 0.643417L16.2921 2.84106C16.3969 2.92111 16.3969 3.0788 16.2921 3.15885L13.4173 5.35649C13.2857 5.4571 13.0959 5.36326 13.0959 5.1976L13.0959 0.802308Z" fill="#3F4350" stroke="#3F4350" stroke-width="0.4" stroke-linecap="round" stroke-linejoin="round"/>
+													<path d="M15 3H1" stroke="#3F4350" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/>
+												</svg>
+												<p>Английский</p>
+											</div>
+										</div>
+										<div class="translate-type">
+											Синхронный перевод
+										</div>
+										<div class="translate-price">
+											<p>от <span>4 500 ₽</span></p>
+											<p>за час</p>
+										</div>
+									</div>
+
+									<div class="service__list-iten-action">
+										<svg width="20" height="6" viewBox="0 0 20 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M10 5.25C11.2426 5.25 12.25 4.24264 12.25 3C12.25 1.75736 11.2426 0.75 10 0.75C8.75736 0.75 7.75 1.75736 7.75 3C7.75 4.24264 8.75736 5.25 10 5.25Z" fill="#3F4350"/>
+											<path d="M17.5 5.25C18.7426 5.25 19.75 4.24264 19.75 3C19.75 1.75736 18.7426 0.75 17.5 0.75C16.2574 0.75 15.25 1.75736 15.25 3C15.25 4.24264 16.2574 5.25 17.5 5.25Z" fill="#3F4350"/>
+											<path d="M2.5 5.25C3.74264 5.25 4.75 4.24264 4.75 3C4.75 1.75736 3.74264 0.75 2.5 0.75C1.25736 0.75 0.25 1.75736 0.25 3C0.25 4.24264 1.25736 5.25 2.5 5.25Z" fill="#3F4350"/>
+										</svg>
+									</div>
+
+								</div>
+								<div class="service__list-item">
+									<div class="service__list-item-body">
+										<div class="lang-pair">
+											<div class="flags">
+												<svg width="48" height="28" viewBox="0 0 48 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M14 26C20.6274 26 26 20.6274 26 14C26 7.37258 20.6274 2 14 2C7.37258 2 2 7.37258 2 14C2 20.6274 7.37258 26 14 26Z" fill="#F0F0F0"/>
+													<path d="M25.2536 18.1739C25.736 16.8739 26 15.4678 26 14C26 12.5322 25.736 11.1261 25.2536 9.82611H2.74639C2.26405 11.1261 2 12.5322 2 14C2 15.4678 2.26405 16.8739 2.74639 18.1739L14 19.2174L25.2536 18.1739Z" fill="#0052B4"/>
+													<path d="M13.9997 26C19.1593 26 23.5578 22.7435 25.2533 18.1739H2.74609C4.44161 22.7435 8.84012 26 13.9997 26Z" fill="#D80027"/>
+													<path d="M14 24C8.47715 24 4 19.5228 4 14H0C0 21.732 6.26801 28 14 28V24ZM24 14C24 19.5228 19.5228 24 14 24V28C21.732 28 28 21.732 28 14H24ZM14 4C19.5228 4 24 8.47715 24 14H28C28 6.26801 21.732 0 14 0V4ZM14 0C6.26801 0 0 6.26801 0 14H4C4 8.47715 8.47715 4 14 4V0Z" fill="white"/>
+													<g clip-path="url(#clip0_3457:1721)">
+													<path d="M34 26C40.6274 26 46 20.6274 46 14C46 7.37258 40.6274 2 34 2C27.3726 2 22 7.37258 22 14C22 20.6274 27.3726 26 34 26Z" fill="#F0F0F0"/>
+													<path d="M45.9999 14C45.9999 8.84043 42.7434 4.44191 38.1738 2.7464V25.2537C42.7434 23.5581 45.9999 19.1596 45.9999 14Z" fill="#D80027"/>
+													<path d="M22 14C22 19.1596 25.2565 23.5581 29.8261 25.2536V2.7464C25.2565 4.44191 22 8.84043 22 14Z" fill="#0052B4"/>
+													</g>
+													<path d="M34 24C28.4772 24 24 19.5228 24 14H20C20 21.732 26.268 28 34 28V24ZM44 14C44 19.5228 39.5228 24 34 24V28C41.732 28 48 21.732 48 14H44ZM34 4C39.5228 4 44 8.47715 44 14H48C48 6.26801 41.732 0 34 0V4ZM34 0C26.268 0 20 6.26801 20 14H24C24 8.47715 28.4772 4 34 4V0Z" fill="white"/>
+													<defs>
+													<clipPath id="clip0_3457:1721">
+													<path d="M22 14C22 7.37258 27.3726 2 34 2V2C40.6274 2 46 7.37258 46 14V14C46 20.6274 40.6274 26 34 26V26C27.3726 26 22 20.6274 22 14V14Z" fill="white"/>
+													</clipPath>
+													</defs>
+												</svg>
+
+											</div>
+											<div class="from-to">
+												<p>Русский</p>
+												<svg width="17" height="6" viewBox="0 0 17 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M13.0959 0.802308C13.0959 0.636652 13.2857 0.54281 13.4173 0.643417L16.2921 2.84106C16.3969 2.92111 16.3969 3.0788 16.2921 3.15885L13.4173 5.35649C13.2857 5.4571 13.0959 5.36326 13.0959 5.1976L13.0959 0.802308Z" fill="#3F4350" stroke="#3F4350" stroke-width="0.4" stroke-linecap="round" stroke-linejoin="round"/>
+													<path d="M15 3H1" stroke="#3F4350" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/>
+												</svg>
+												<p>Английский</p>
+											</div>
+										</div>
+										<div class="translate-type">
+											Гид-переводчик
+										</div>
+										<div class="translate-price">
+											<p>от <span>4 500 ₽</span></p>
+											<p>за час</p>
+										</div>
+									</div>
+
+									<div class="service__list-iten-action">
+										<svg width="20" height="6" viewBox="0 0 20 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M10 5.25C11.2426 5.25 12.25 4.24264 12.25 3C12.25 1.75736 11.2426 0.75 10 0.75C8.75736 0.75 7.75 1.75736 7.75 3C7.75 4.24264 8.75736 5.25 10 5.25Z" fill="#3F4350"/>
+											<path d="M17.5 5.25C18.7426 5.25 19.75 4.24264 19.75 3C19.75 1.75736 18.7426 0.75 17.5 0.75C16.2574 0.75 15.25 1.75736 15.25 3C15.25 4.24264 16.2574 5.25 17.5 5.25Z" fill="#3F4350"/>
+											<path d="M2.5 5.25C3.74264 5.25 4.75 4.24264 4.75 3C4.75 1.75736 3.74264 0.75 2.5 0.75C1.25736 0.75 0.25 1.75736 0.25 3C0.25 4.24264 1.25736 5.25 2.5 5.25Z" fill="#3F4350"/>
+										</svg>
+									</div>
+
+								</div>
+								<div class="service__list-item">
+									<div class="service__list-item-body">
+										<div class="lang-pair">
+											<div class="flags">
+												<svg width="48" height="28" viewBox="0 0 48 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M14 26C20.6274 26 26 20.6274 26 14C26 7.37258 20.6274 2 14 2C7.37258 2 2 7.37258 2 14C2 20.6274 7.37258 26 14 26Z" fill="#F0F0F0"/>
+													<path d="M25.2536 18.1739C25.736 16.8739 26 15.4678 26 14C26 12.5322 25.736 11.1261 25.2536 9.82611H2.74639C2.26405 11.1261 2 12.5322 2 14C2 15.4678 2.26405 16.8739 2.74639 18.1739L14 19.2174L25.2536 18.1739Z" fill="#0052B4"/>
+													<path d="M13.9997 26C19.1593 26 23.5578 22.7435 25.2533 18.1739H2.74609C4.44161 22.7435 8.84012 26 13.9997 26Z" fill="#D80027"/>
+													<path d="M14 24C8.47715 24 4 19.5228 4 14H0C0 21.732 6.26801 28 14 28V24ZM24 14C24 19.5228 19.5228 24 14 24V28C21.732 28 28 21.732 28 14H24ZM14 4C19.5228 4 24 8.47715 24 14H28C28 6.26801 21.732 0 14 0V4ZM14 0C6.26801 0 0 6.26801 0 14H4C4 8.47715 8.47715 4 14 4V0Z" fill="white"/>
+													<g clip-path="url(#clip0_3457:1721)">
+													<path d="M34 26C40.6274 26 46 20.6274 46 14C46 7.37258 40.6274 2 34 2C27.3726 2 22 7.37258 22 14C22 20.6274 27.3726 26 34 26Z" fill="#F0F0F0"/>
+													<path d="M45.9999 14C45.9999 8.84043 42.7434 4.44191 38.1738 2.7464V25.2537C42.7434 23.5581 45.9999 19.1596 45.9999 14Z" fill="#D80027"/>
+													<path d="M22 14C22 19.1596 25.2565 23.5581 29.8261 25.2536V2.7464C25.2565 4.44191 22 8.84043 22 14Z" fill="#0052B4"/>
+													</g>
+													<path d="M34 24C28.4772 24 24 19.5228 24 14H20C20 21.732 26.268 28 34 28V24ZM44 14C44 19.5228 39.5228 24 34 24V28C41.732 28 48 21.732 48 14H44ZM34 4C39.5228 4 44 8.47715 44 14H48C48 6.26801 41.732 0 34 0V4ZM34 0C26.268 0 20 6.26801 20 14H24C24 8.47715 28.4772 4 34 4V0Z" fill="white"/>
+													<defs>
+													<clipPath id="clip0_3457:1721">
+													<path d="M22 14C22 7.37258 27.3726 2 34 2V2C40.6274 2 46 7.37258 46 14V14C46 20.6274 40.6274 26 34 26V26C27.3726 26 22 20.6274 22 14V14Z" fill="white"/>
+													</clipPath>
+													</defs>
+												</svg>
+
+											</div>
+											<div class="from-to">
+												<p>Русский</p>
+												<svg width="17" height="6" viewBox="0 0 17 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M13.0959 0.802308C13.0959 0.636652 13.2857 0.54281 13.4173 0.643417L16.2921 2.84106C16.3969 2.92111 16.3969 3.0788 16.2921 3.15885L13.4173 5.35649C13.2857 5.4571 13.0959 5.36326 13.0959 5.1976L13.0959 0.802308Z" fill="#3F4350" stroke="#3F4350" stroke-width="0.4" stroke-linecap="round" stroke-linejoin="round"/>
+													<path d="M15 3H1" stroke="#3F4350" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/>
+												</svg>
+												<p>Английский</p>
+											</div>
+										</div>
+										<div class="translate-type">
+											Шушутаж
+										</div>
+										<div class="translate-price">
+											<p>от <span>4 500 ₽</span></p>
+											<p>за час</p>
+										</div>
+									</div>
+
+									<div class="service__list-iten-action">
+										<svg width="20" height="6" viewBox="0 0 20 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M10 5.25C11.2426 5.25 12.25 4.24264 12.25 3C12.25 1.75736 11.2426 0.75 10 0.75C8.75736 0.75 7.75 1.75736 7.75 3C7.75 4.24264 8.75736 5.25 10 5.25Z" fill="#3F4350"/>
+											<path d="M17.5 5.25C18.7426 5.25 19.75 4.24264 19.75 3C19.75 1.75736 18.7426 0.75 17.5 0.75C16.2574 0.75 15.25 1.75736 15.25 3C15.25 4.24264 16.2574 5.25 17.5 5.25Z" fill="#3F4350"/>
+											<path d="M2.5 5.25C3.74264 5.25 4.75 4.24264 4.75 3C4.75 1.75736 3.74264 0.75 2.5 0.75C1.25736 0.75 0.25 1.75736 0.25 3C0.25 4.24264 1.25736 5.25 2.5 5.25Z" fill="#3F4350"/>
+										</svg>
+									</div>
+
+								</div>
+							</div> -->
+
+							<div class="container-list service-container">
+								<div class="container-header">
+									<div class="container-header_list-title service_lang-title">Языковая пара</div>
+									<div class="container-header_list-title service_method-title">Метод перевода</div>
+									<div class="container-header_list-title service_price-title">Стоимость</div>
+								</div>
+								<ul class="container-list-wrapper">
+									<li class="container-list__item">
+											<div class="tag">
+												<span class="flags">
+														<img src="assets/images/translators/ru_flag.svg">
+														<img src="assets/images/translators/en_flag.svg">
+													</span>
+												<span>Русский</span>
+												<img src="assets/images/translators/icon_arrow2.svg">
+												<span>Английский</span>
+											</div>
+											<div class="sevice-item_title">Синхронный перевод</div>
+											<div class="sevice-item_price">
+												<p class="sevice-item_price-info"><span class="text-small-gray">от</span> 2500 ₽</p>
+												<p class="text-small-gray">за час</p>
+											</div>
+											<a href="" class="item-edit service_item-edit">
+												<span class="edit-menu">
+														<button class="btn edit_btn edit_service_btn">Редактировать</button>
+														<button class="btn delete_btn">Удалить</button>
+												</span>
+											</a>
+									</li>
+									<li class="container-list__item">
+											<div class="tag">
+												<span class="flags">
+														<img src="assets/images/translators/ru_flag.svg">
+														<img src="assets/images/translators/en_flag.svg">
+													</span>
+												<span>Русский</span>
+												<img src="assets/images/translators/icon_arrow2.svg">
+												<span>Английский</span>
+											</div>
+											<div class="sevice-item_title">Гид-переводчик</div>
+											<div class="sevice-item_price">
+												<p class="sevice-item_price-info"><span class="text-small-gray">от</span> 2500 ₽</p>
+												<p class="text-small-gray">за час</p>
+											</div>
+											<a href="" class="item-edit service_item-edit">
+												<span class="edit-menu">
+														<button class="btn edit_btn edit_service_btn">Редактировать</button>
+														<button class="btn delete_btn">Удалить</button>
+												</span>
+											</a>
+									</li>
+									<li class="container-list__item">
+											<div class="tag">
+												<span class="flags">
+														<img src="assets/images/translators/ru_flag.svg">
+														<img src="assets/images/translators/en_flag.svg">
+													</span>
+												<span>Русский</span>
+												<img src="assets/images/translators/icon_arrow2.svg">
+												<span>Английский</span>
+											</div>
+											<div class="sevice-item_title">Шушутаж</div>
+											<div class="sevice-item_price">
+												<p class="sevice-item_price-info"><span class="text-small-gray">от</span> 2500 ₽</p>
+												<p class="text-small-gray">за час</p>
+											</div>
+											<a href="" class="item-edit service_item-edit">
+												<span class="edit-menu">
+														<button class="btn edit_btn edit_service_btn">Редактировать</button>
+														<button class="btn delete_btn">Удалить</button>
+												</span>
+											</a>
+									</li>
+									<li class="container-list__item">
+											<div class="tag">
+												<span class="flags">
+														<img src="assets/images/translators/ru_flag.svg">
+														<img src="assets/images/translators/en_flag.svg">
+													</span>
+												<span>Русский</span>
+												<img src="assets/images/translators/icon_arrow2.svg">
+												<span>Английский</span>
+											</div>
+											<div class="sevice-item_title">Синхронный перевод</div>
+											<div class="sevice-item_price">
+												<p class="sevice-item_price-info"><span class="text-small-gray">от</span> 2500 ₽</p>
+												<p class="text-small-gray">за час</p>
+											</div>
+											<a href="" class="item-edit service_item-edit">
+												<span class="edit-menu">
+														<button class="btn edit_btn edit_service_btn">Редактировать</button>
+														<button class="btn delete_btn">Удалить</button>
+												</span>
+											</a>
+									</li>
+									<li class="container-list__item">
+											<div class="tag">
+												<span class="flags">
+														<img src="assets/images/translators/ru_flag.svg">
+														<img src="assets/images/translators/en_flag.svg">
+													</span>
+												<span>Русский</span>
+												<img src="assets/images/translators/icon_arrow2.svg">
+												<span>Английский</span>
+											</div>
+											<div class="sevice-item_title">Синхронный перевод</div>
+											<div class="sevice-item_price">
+												<p class="sevice-item_price-info"><span class="text-small-gray">от</span> 2500 ₽</p>
+												<p class="text-small-gray">за час</p>
+											</div>
+											<a href="" class="item-edit service_item-edit">
+												<span class="edit-menu">
+														<button class="btn edit_btn edit_service_btn">Редактировать</button>
+														<button class="btn delete_btn">Удалить</button>
+												</span>
+											</a>
+									</li>
+									<li class="container-list__item">
+											<div class="tag">
+												<span class="flags">
+														<img src="assets/images/translators/ru_flag.svg">
+														<img src="assets/images/translators/en_flag.svg">
+													</span>
+												<span>Русский</span>
+												<img src="assets/images/translators/icon_arrow2.svg">
+												<span>Английский</span>
+											</div>
+											<div class="sevice-item_title">Синхронный перевод</div>
+											<div class="sevice-item_price">
+												<p class="sevice-item_price-info"><span class="text-small-gray">от</span> 2500 ₽</p>
+												<p class="text-small-gray">за час</p>
+											</div>
+											<a href="" class="item-edit service_item-edit">
+												<span class="edit-menu">
+														<button class="btn edit_btn edit_service_btn">Редактировать</button>
+														<button class="btn delete_btn">Удалить</button>
+												</span>
+											</a>
+									</li>
+								</ul>
+							</div>
+
+						</div>
+
+						<div class="step-element__btn fixed-bottom">
+							<a href="" class="btn tertiary big">
+								Вернуться назад
+							</a>
+							<button type="button" class="btn primary send-to-check">
+								Отправить на проверку
+							</button>
+						</div>
+					</div>
+				</form>
+			</div>
+
+		</div>
+
+	</main>
+
+</div>
+<div id="modalEdit" class="modal modal-add-education" style="display: none">
+	<form action="">
+		<div class="modal_inner">
+			<div class="modal-wrapper edit-modal">
+				<div class="modal_close">
+					<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<g filter="url(#filter0_d)">
+							<rect x="6" y="2" width="36" height="36" rx="18" fill="white"/>
+							<path d="M30.75 14.8198L29.1802 13.25L24 18.4302L18.8198 13.25L17.25 14.8198L22.4302 20L17.25 25.1802L18.8198 26.75L24 21.5698L29.1802 26.75L30.75 25.1802L25.5698 20L30.75 14.8198Z" fill="#B5BABF"/>
+						</g>
+						<defs>
+							<filter id="filter0_d" x="0" y="0" width="48" height="48" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+								<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+								<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+								<feMorphology radius="2" operator="erode" in="SourceAlpha" result="effect1_dropShadow"/>
+								<feOffset dy="4"/>
+								<feGaussianBlur stdDeviation="4"/>
+								<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0.0666667 0 0 0 0 0.239216 0 0 0 0.08 0"/>
+								<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+								<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+							</filter>
+						</defs>
+					</svg>
+				</div>
+
+				<div class="modal_header">
+					<div class="modal_header-title"></div>
+					<div class="modal_header-subtitle">Укажите учебное заведение, название специальности, тип и дату обучения. Добавьте документ об образовании, чтобы модератор смог подтвердить вашу квалификацию, эти документы не будут отражаться в анкете.</div>
+				</div>
+				<div class="modal_body">
+
+
+					<div class="form-group form_half-group">
+						<div class="form_half education_place-title">
+							<label for="education">Образование</label>
+							<input type="text" id="education" value="СПбГУ, бакалавриат. Теория перевода и межъязыковая коммуникация: английский язык">
+						</div>
+						<div class="form_half education_place-year">
+							<label for="eduDate">Дата обучения</label>
+							<input type="text" id="eduDate" name="years" value="2008 — 2012">
+							<span class="custom_placeholder">гг.</span>
+						</div>
+					</div>
+					<div class="edu-doc-add-container"></div>
+					<div class="edu-doc-add">
+						<div class="edu-doc-add-wrapper">
+
+							<img class="edu-doc-icon" src="assets/images/input/icon-drop-files.svg">
+							<p>Нажмите или перетащите файлы</p>
+						</div>
+
+
+
+					</div>
+					<!-- <span class="loadfiles-btn mobile">
+						<svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M16.125 10H4.875M10.5 4.375V15.625V4.375Z" stroke="#636B75" stroke-width="1.6"></path>
+						</svg>
+						Добавить файл
+					</span> -->
+
+				</div>
+				<div class="modal_footer">
+					<div class="btn-wrapper">
+						<a href="" class="btn btn-blue btn-save">Сохранить образование</a>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+	</form>
+	<div class="modal-overlay"></div>
+</div>
+
+<div id="modalAddService" class="modal modal-add-service" style="display: none">
+	<div class="modal_inner">
+		<div class="modal-wrapper">
+			<div class="modal_close">
+				<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<g filter="url(#filter0_d)">
+						<rect x="6" y="2" width="36" height="36" rx="18" fill="white"/>
+						<path d="M30.75 14.8198L29.1802 13.25L24 18.4302L18.8198 13.25L17.25 14.8198L22.4302 20L17.25 25.1802L18.8198 26.75L24 21.5698L29.1802 26.75L30.75 25.1802L25.5698 20L30.75 14.8198Z" fill="#B5BABF"/>
+					</g>
+					<defs>
+						<filter id="filter0_d" x="0" y="0" width="48" height="48" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+							<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+							<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+							<feMorphology radius="2" operator="erode" in="SourceAlpha" result="effect1_dropShadow"/>
+							<feOffset dy="4"/>
+							<feGaussianBlur stdDeviation="4"/>
+							<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0.0666667 0 0 0 0 0.239216 0 0 0 0.08 0"/>
+							<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+							<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+						</filter>
+					</defs>
+				</svg>
+			</div>
+
+			<div class="modal_header">
+				<div class="modal_header-title">Добавить услугу</div>
+				<div class="modal_header-subtitle">Укажите: на каких языках вы оказываете услугу, вид перевода и стоимость</div>
+			</div>
+			<form action="">
+				<div class="modal_body">
+
+					<div class="form-group">
+						<div class="form-group__body">
+							<div class="form-group__item">
+								<label for="langOrininal">Язык оригинала</label>
+								<input type="text" id="langOrininal" value="Русский">
+							</div>
+							<div class="form-group__item">
+								<label for="langTranslate">Язык перевода</label>
+								<input type="text" id="langTranslate" value="Английский" >
+							</div>
+						</div>
+					</div>
+					<div class="form_half-group group_checkbox">
+						<label class="list-item__checkbox checkbox_tooltip">
+							<input type="checkbox" checked value="1"><span> Перевод в обе стороны</span>
+							<i class="tip_info">
+									<span class="tooltiptext">Вы осуществляете перевод с языка оригинала на язык перевода и наоборот</span>
+									<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M10 0.9375C5.00294 0.9375 0.9375 5.00294 0.9375 10C0.9375 14.9971 5.00294 19.0625 10 19.0625C14.9971 19.0625 19.0625 14.9971 19.0625 10C19.0625 5.00294 14.9971 0.9375 10 0.9375ZM10 4.65313C10.233 4.65313 10.4608 4.72222 10.6545 4.85168C10.8483 4.98113 10.9993 5.16513 11.0884 5.3804C11.1776 5.59568 11.2009 5.83256 11.1555 6.06109C11.11 6.28962 10.9978 6.49955 10.8331 6.66431C10.6683 6.82907 10.4584 6.94128 10.2298 6.98674C10.0013 7.0322 9.76443 7.00887 9.54915 6.9197C9.33388 6.83053 9.14988 6.67952 9.02042 6.48578C8.89097 6.29204 8.82188 6.06426 8.82188 5.83125C8.82188 5.51879 8.946 5.21913 9.16694 4.99819C9.38788 4.77725 9.68754 4.65313 10 4.65313ZM12.175 14.8938H8.1875C7.99522 14.8938 7.81081 14.8174 7.67485 14.6814C7.53888 14.5454 7.4625 14.361 7.4625 14.1688C7.4625 13.9765 7.53888 13.7921 7.67485 13.6561C7.81081 13.5201 7.99522 13.4438 8.1875 13.4438H9.45625V9.45625H8.73125C8.53897 9.45625 8.35456 9.37987 8.2186 9.2439C8.08263 9.10794 8.00625 8.92353 8.00625 8.73125C8.00625 8.53897 8.08263 8.35456 8.2186 8.2186C8.35456 8.08263 8.53897 8.00625 8.73125 8.00625H10.1813C10.3735 8.00625 10.5579 8.08263 10.6939 8.2186C10.8299 8.35456 10.9062 8.53897 10.9062 8.73125V13.4438H12.175C12.3673 13.4438 12.5517 13.5201 12.6877 13.6561C12.8236 13.7921 12.9 13.9765 12.9 14.1688C12.9 14.361 12.8236 14.5454 12.6877 14.6814C12.5517 14.8174 12.3673 14.8938 12.175 14.8938Z" fill=""></path>
+									</svg>
+							</i>
+						</label>
+
+					</div>
+
+					<div class="form-group form_half-group lang-form">
+						<div class="form_half type-dropdown">
+							<label for="tranlateType">Вид перевода</label>
+							<div class="forms-language__group dropdown-group">
+									<input autocomplete="off" id="tranlateType" class="forms-language__view dropdown" type="text" name="day" value="Устный, Последовательный перевод"/>
+									<i class="dropdown"></i>
+									<ul class="dropdown-list">
+										<li class="dropdown-list__item"><span>Устный</span></li>
+										<li class="dropdown-list__item"><span>Последовательный перевод</span></li>
+										<li class="dropdown-list__item"><span>Гид-переводчик</span></li>
+										<li class="dropdown-list__item"><span>Шушутаж</span></li>
+									</ul>
+							</div>
+						</div>
+						<div class="form-group">
+							<label>Стоимость услуги</label>
+
+							<div class="form_half-group">
+							<div class="form_half">
+
+									<div class="price-group">
+										<i class="price">₽</i>
+										<input id="form-step__price_end1" type="text" name="form-price-end" class="form-step__price" value="2 500">
+										<span class="custom_placeholder">от</span>
+									</div>
+
+							</div>
+							<div class="form_half">
+
+									<div class="forms-language__group dropdown-group">
+										<input disabled autocomplete="off" id="tranlatePriceTime" class="forms-language__view dropdown" type="text" name="day" value="В час"/>
+										<i class="dropdown"></i>
+										<ul class="dropdown-list">
+											<li class="dropdown-list__item"><span>В час</span></li>
+											<li class="dropdown-list__item"><span>В минуту</span></li>
+											<li class="dropdown-list__item"><span>за 1000 символов</span></li>
+										</ul>
+									</div>
+							</div>
+							</div>
+						</div>
+
+
+					</div>
+
+
+				</div>
+				<div class="modal_footer">
+					<div class="btn-wrapper">
+						<a href="" class="btn btn-blue btn-save">Сохранить услугу</a>
+					</div>
+
+				</div>
+			</form>
+
+		</div>
+	</div>
+	<div class="modal-overlay"></div>
+</div>
+
+<div id="modalAccountVerify" class="modal" style="display: none;">
+	<div class="modal_inner">
+		<div class="modal-wrapper">
+			<div class="modal_header">
+				<div class="modal_header-title">Аккаунт верифицируется</div>
+				<div class="modal_header-subtitle">Пока модераторы проверяют ваши данные, вы можете вернуться на страницу профиля, добавить резюме, тематики перевода и привязать карту, чтобы получать деньги за задания</div>
+			</div>
+			<div class="modal_footer">
+				<a href="" class="btn btn-blue btn-retrurn">Вернуться в мой профиль</a>
+			</div>
+		</div>
+
+	</div>
+	<div class="modal-overlay"></div>
+</div>
+<!-- JS -->
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+
+<script src="assets/js/slider.js"></script>
+<script src="assets/js/jquery.maskedinput.min.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/dropzone.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

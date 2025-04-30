@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.2.0/socket.io.min.js"></script>
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	<style type="text/css">
+
+		#gamefield {
+			background-image: url('assets/Desktop.png');
+			background-size: 100% 105%;
+  			background-repeat: no-repeat;
+			background-position: center;
+			background-opacity: 0.6;
+
+			transform: scaleX(-1) scaleY(-1);
+		}
+
+		.dice {
+			width: 25px;
+			height: 25px;
+		}
+
+		.point {
+			width: 24px;
+			height: 24px;
+		}
+
+		.dark {
+			width: 10px;
+			height: 10px;
+		}
+
+		.light {			
+			width: 10px;
+			height: 10px;
+		}
+
+		table {
+			border: 1px solid black;
+			font-size: 48px;
+			text-align: center;
+		}
+
+		.black {
+			color: white;
+		}
+
+		.dice-black {
+			background-color: black;
+			color: white;
+		}
+
+		.dice-white {
+			background-color: white;
+		}
+
+		td {
+			line-height: 12px;
+			border: 1px solid black;
+			width: 33px;
+			height: 33px;
+			cursor: pointer;
+			text-shadow: 0 0 10px white;
+			position: relative;
+			padding: 0;
+		}
+
+		/*td b {
+			position: absolute;
+			text-align: center;
+			font-size: 12px;
+			left: 0;
+			top: 50%;
+
+			transform: scaleX(-1) scaleY(-1);
+		}*/
+
+		td b {
+			position: absolute;
+			text-align: center;
+			font-size: 25%;
+			left: 30%;
+			top: 38%;
+
+			transform: scaleX(-1) scaleY(-1);
+		}
+
+		.bar b {
+			left: 35%;
+		}
+
+		.black {
+			color: white;
+		}
+
+		.container {
+			/*position: absolute;*/
+  			top: 50%;
+  			left: 50%;
+  			transform: translate(6%, 0%) scale(1);
+		}
+
+		.numbers {
+			font-size: 16px;
+			line-height: 10px;
+			padding: 0;
+			margin: 0;
+		}
+
+		.middle {
+			font-size: 16px;
+		}
+
+		.selected {
+			background-color: lightblue;
+		}
+
+		.bar {
+			font-size: 42px;
+			width: 10px;
+			padding: 0 18px;
+		}
+
+		.logger {
+			font-size: 16px;
+			width: inherit;
+			color: white;
+			text-shadow: unset;
+			position: absolute;
+		}
+
+		.bar > .point {
+			position: absolute;
+			width: 35px;
+			height: 35px;
+			top: 3px;
+    		left: 6px;
+    		padding: 5px;
+		}
+
+		/*.bar > img {
+			position: absolute;
+			width: 50px;
+			height: 50px;
+		}*/
+
+		/*#roll {
+			height: 100%;
+			width: 43px;
+			position: absolute;
+			top: 0;
+			left: -10px;
+		}*/
+
+		.game-info {
+			text-align: center;
+			margin: 0;
+			transform: translate(6%, 50%);
+		}
+
+	</style>
+</head>
+<body>
+	<div id="root">
+		<div class="pageComponent__container" >
+			<div class="wrapper">
+				<div class="svg-wrapper">
+					<div style="overflow: visible; height: 100%; width: 100%;">
+						<div class="pageComponent__svg-container___3GCGu">
+							<div viewBox="0 0 965 558" preserveAspectRatio="xMidYMin meet" class="pageComponent__svg___Nbj7d">
+								<h2 class="game-info black"><span>hello world</span><br><b class="timer">Timer: <i>228</i></b></h2>
+								<div class="container">
+		
+									<!-- <table onclick="outPoint()">
+									<tr class="numbers">
+										<td>1</td>
+										<td>2</td>
+										<td>3</td>
+										<td>4</td>
+										<td>5</td>
+										<td>6</td>
+
+										<td class="bar">|</td>
+
+										<td>7</td>
+										<td>8</td>
+										<td>9</td>
+										<td>10</td>
+										<td>11</td>
+										<td>12</td>
+									</tr>
+								</table> -->
+								<table id="gamefield">
+									
+								</table>
+								<table onclick="outPoint()">
+									<tr class="numbers">
+
+										<td></td>
+										<td colspan="13" class="logger"></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td style="width: 45px"></td>
+										<td>
+											<!-- <button id="pass">Pass</button> -->
+										</td>
+										<td>
+											<!-- <button id="roll">Roll</button> -->
+										</td>
+									</tr>
+								</table>
+
+
+								<br>
+								<br>
+								<!-- <div class="logger">
+									lmao
+								</div> -->
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="btn-wrapper btn-wrapper-mobile">
+					<!-- <div class="btn-item1">
+						<button>Roll</button>
+						<button>Pass</button>
+						<button>Undo</button>
+						<button>Share</button>
+					</div> -->
+				</div>
+				<div class="chat-wrapper">
+					<div class="chat-messages">
+						<div class="chat-message chat-message-from">
+							<p>
+								Lorem ipsum dolor sit amet.
+							</p>
+							<div class="chat-message-info">
+								<p class="chat-message-time">20:00</p>
+								<p class="chat-message-user">Marco</p>
+							</div>
+						</div>
+						<div class="chat-message chat-message-from">
+							<p>
+								Lorem ipsum dolor sit amet.
+							</p>
+							<div class="chat-message-info">
+								<p class="chat-message-time">20:00</p>
+								<p class="chat-message-user">Marco</p>
+							</div>
+						</div>
+						<div class="chat-message chat-message-to">
+							<p>
+								Lorem ipsum dolor sit amet consectetur adipisicing elit.
+							</p>
+							<div class="chat-message-info">
+								<p class="chat-message-user">Julia</p>
+								<p class="chat-message-time">20:00</p>
+							</div>
+						</div>
+
+					</div>
+					<div class="chat-input">
+						<input type="text">
+						<div class="btn-wrp">
+
+							<button>Send</button>
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<div class="btn-wrapper btn-wrapper-desktop">
+				<div class="btn-item1">
+					<button id="roll">Roll</button>
+					<button id="pass">Pass</button>
+					<button>Undo</button>
+				</div>
+				<!-- <div class="btn-item2">
+					<button>Share</button>
+				</div> -->
+			</div>
+		</div>
+	</div>
+</div>
+
+	<script type="text/javascript">
+
+		let gameState = {
+			bar: [],
+			out: [],
+			field: [
+				[{owner: 2}, {owner: 2}], [], [], [], [], [{owner: 1}, {owner: 1},{owner: 1}, {owner: 1},{owner: 1}],
+				[], [{owner: 1}, {owner: 1},{owner: 1}], [], [], [], [{owner: 2}, {owner: 2},{owner: 2}, {owner: 2},{owner: 2}],
+				[{owner: 1}, {owner: 1},{owner: 1}, {owner: 1},{owner: 1}], [], [], [], [{owner: 2}, {owner: 2},{owner: 2}], [],
+				[{owner: 2}, {owner: 2},{owner: 2}, {owner: 2},{owner: 2}], [], [], [], [], [{owner: 1}, {owner: 1}]
+			],
+			playerTurn: 1,
+			dice: [
+				{
+					number: null,
+					twice: false
+				},
+				{
+					number: null,
+					twice: false					
+				}
+			],
+			selectedPoint: {i: null, j: null}
+		};
+
+		function getRandomInt(min, max) {
+  			min = Math.ceil(min);
+  			max = Math.floor(max);
+  			return Math.floor(Math.random() * (max - min) + min);
+		}
+
+		function calcPoints(arr) {
+			
+			let count = arr.reduce((prev, el) => {
+				if (el.owner === 1) prev.p1++;
+				if (el.owner === 2) prev.p2++
+				return prev;
+			}, {p1: 0, p2: 0});
+
+			return count;
+		}
+
+		function throwDice() {
+			let {dice} = gameState;
+			for (let i = 0; i < dice.length; i++) {
+				dice[i].number = getRandomInt(1, 7);
+
+				try {
+				if (DICE) {
+					dice[i].number = +DICE.split(' ')[i];
+				}
+				} catch (e) {} 
+
+				if (i === 1 && dice[i].number === dice[0].number) {
+
+					dice[i].twice = true;
+					dice[0].twice = true;
+					dice.double = true;
+				}
+			}
+		}
+
+		const logger = $('.logger'),
+			throwDiceBtn = $('#roll'),
+			gamefield = $('#gamefield'),
+			passBtn = $('#pass');
+
+		function logView() {
+
+			let barCount = calcPoints(gameState.bar);
+
+			let outCount = calcPoints(gameState.out);
+
+			let log = `Player1: ${outCount.p1} <img class="point" src="assets/light.svg"> | Player2: ${outCount.p2} <img class="point" src="assets/dark.svg"> <br>\n`;
+			logger.html(log);
+		}
+
+		function selectPoint(selI, selJ) {
+			if (gameState.field[selI][selJ].owner !== gameState.playerTurn) return;
+
+			if (gameState.playerTurn === 1 && calcPoints(gameState.bar).p1) return;
+			if (gameState.playerTurn === 2 && calcPoints(gameState.bar).p2) return;
+
+			gameState.selectedPoint.i = selI;
+			gameState.selectedPoint.j = selJ;
+
+			fieldView();
+		}
+
+		function blurSelect() {			
+			gameState.selectedPoint.i = null;
+			gameState.selectedPoint.j = null;			
+			fieldView();
+		}
+
+		function makeMove(movI, movJ) {
+
+			let {selectedPoint, dice, bar, field, playerTurn, out} = gameState;
+
+			if (typeof selectedPoint.i !== 'number' || typeof selectedPoint.j !== 'number') {
+				selectedPoint.i = playerTurn === 1 ? 24 : -1;
+				selectedPoint.j = -1;
+			};
+
+
+			let minDice = dice.reduce((min, el) => min < el.number ? min : el.number, 7),
+				minDiceRestriction = true;
+
+			let pointsHomeCount = 0;
+
+			for (let i = 0; i < 6; i++) {
+				if (playerTurn === 1) {
+					let count = calcPoints(field[0 + i]);
+					pointsHomeCount += count.p1;
+				}
+				if (playerTurn === 2) {
+					let count = calcPoints(field[23 - i]);
+					pointsHomeCount += count.p2;
+				}
+			}			
+
+			if (playerTurn === 1) pointsHomeCount += calcPoints(out).p1;
+			else pointsHomeCount += calcPoints(out).p2;
+
+			if (pointsHomeCount >= 15) minDiceRestriction = false;
+
+			console.log(selectedPoint);
+
+			let hasBarPoint = calcPoints(bar);
+
+			if ((playerTurn === 1 && !hasBarPoint.p1 || playerTurn === 2 && !hasBarPoint.p2) && selectedPoint.i === -1) {
+				console.log('E');
+				return;
+			}
+
+			let canGo = dice.some((el, i) => {
+				if (!el.number) return;
+
+				if (playerTurn === 1) {
+					if (selectedPoint.i - el.number === movI) {
+						if (field[movI][1] && field[movI][0].owner !== 1) return false;
+						if (minDice === el.number && !dice.double && !minDiceRestriction) return false;
+
+						if (el.twice) el.twice = false;
+						else el.number = null;
+
+						logView();
+					 	return true;
+					}
+				} else if (playerTurn === 2) {
+					if (selectedPoint.i + el.number === movI) {
+						if (field[movI][1] && field[movI][0].owner !== 2) return false;
+						if (minDice === el.number && !dice.double && !minDiceRestriction) return false;
+
+						if (el.twice) el.twice = false;
+						else el.number = null;
+
+						logView();
+					 	return true; 
+					}				
+				}
+				
+			});
+
+			if (canGo) {
+
+				if (field[movI][0] && field[movI][0].owner !== playerTurn) {
+					let deleted = field[movI].splice(0, 1);
+					bar.push(deleted[0]);
+					logView();
+				}
+				if (selectedPoint.i === -1 || selectedPoint.i === 24) {
+					let foundOwn = bar.findIndex(el => el.owner === playerTurn);
+					bar.splice(foundOwn, 1);
+					logView();
+				} else field[selectedPoint.i].splice(0, 1);
+				
+				field[movI].push({owner: playerTurn});
+				selectedPoint.i = null;
+				selectedPoint.j = null;
+				fieldView();
+			}
+
+			if (dice.every(el => typeof el.number !== 'number')) {
+				throwDiceBtn.prop('disabled', false);
+				dice.double = false;
+				gameState.playerTurn = playerTurn === 1 ? 2 : 1;
+				logView();
+			}
+
+
+			AI();
+		}
+
+		function outPoint() {
+
+			console.log('Out');
+
+			let {dice, selectedPoint, playerTurn, field, out} = gameState;
+
+			if (dice.every(el => typeof el.number !== 'number')) return;
+
+			if (typeof selectedPoint.i !== 'number' || typeof selectedPoint.j !== 'number') return;
+
+			let pointsHomeCount = 0,
+				minDice = dice.reduce((min, el) => min < el.number ? min : el.number, 7);
+
+			for (let i = 0; i < 6; i++) {
+				if (playerTurn === 1) {
+					let count = calcPoints(field[0 + i]);
+					pointsHomeCount += count.p1;
+				}
+				if (playerTurn === 2) {
+					let count = calcPoints(field[23 - i]);
+					pointsHomeCount += count.p2;
+				}
+			}
+
+			if (playerTurn === 1) pointsHomeCount += calcPoints(out).p1;
+			else pointsHomeCount += calcPoints(out).p2;
+
+			if (pointsHomeCount < 15) return;
+
+			let result = dice.some(el => {
+				if (playerTurn === 1 && (el.number !== minDice || dice.double) && selectedPoint.i - el.number <= -1) {
+					let deleted = field[selectedPoint.i].splice(0, 1);
+					out.push(deleted[0]);
+
+					if (el.twice) el.twice = false;
+					else el.number = null;
+
+					return true;
+				}
+				if (playerTurn === 2 && (el.number !== minDice || dice.double) && selectedPoint.i + el.number >= 24) {
+					let deleted = field[selectedPoint.i].splice(0, 1);
+					out.push(deleted[0]);
+
+					if (el.twice) el.twice = false;
+					else el.number = null;
+
+					return true;
+				}
+			});
+
+			if (result) {
+
+				blurSelect();
+				logView();
+
+				let outCount = calcPoints(out);
+				if (outCount.p1 === 15) {
+					alert('Игрок №1 победил.');
+					window.reload();
+				}
+				if (outCount.p2 === 15) {
+					alert('Игрок №2 победил.');
+					window.reload();
+				}
+
+				if (dice.every(el => typeof el.number !== 'number')) {
+
+					throwDiceBtn.prop('disabled', false);
+					dice.double = false;
+
+					gameState.playerTurn = playerTurn === 1 ? 2 : 1;
+					logView();
+				}
+			}
+
+			AI();
+			
+		}
+
+		function fieldView() {
+			let {field, selectedPoint} = gameState;
+
+			console.log(gameState);
+
+			let view = '';
+
+			for (let i = 0; i < 10; i++) {
+
+				if (i === 5) {
+					view += '<tr class="middle">';
+
+					for (let j = 0;  j < 12; j++) {
+						let cellText = '';
+
+						if (j === 6) view += '<td class="bar" onclick="blurSelect()">|</td>';
+						if (j === 2 && gameState.playerTurn === 2) cellText = gameState.dice[0].number;			
+						if (j === 3 && gameState.playerTurn === 2) cellText = gameState.dice[1].number;
+
+						if (j === 8 && gameState.playerTurn === 1) cellText = gameState.dice[0].number;			
+						if (j === 9 && gameState.playerTurn === 1) cellText = gameState.dice[1].number;
+
+						let dice = `<img class="dice" src="assets/dice${cellText}.svg">`;
+						
+						view += `<td>${cellText ? dice : ''}</td>`;
+					}
+
+					view += '</tr>';
+				}
+
+				view += '<tr>';
+
+				for (let j = 0; j < 12; j++) {
+
+					
+					if (i === 2 && j === 6) {
+						let count = calcPoints(gameState.bar);
+						view += `<td class="bar" onclick="blurSelect()">`;
+						if (count.p2) {
+							let countEl = `<b class="black">+${count.p2-1}</b>`
+							view += `<img class="point ${!selectedPoint.i && gameState.playerTurn === 2 ? 'selected' : ''}" src="assets/dark.svg">${count.p2 - 1 ? countEl : ''}`;
+						} else view += '|';
+
+						view += '</td>';
+					}
+					else if (i === 7 && j === 6) {
+						let count = calcPoints(gameState.bar);
+						view += `<td class="bar" onclick="blurSelect()">`;
+						if (count.p1) {
+							let countEl = `<b>+${count.p1-1}</b>`
+							view += `<img class="point ${!selectedPoint.i && gameState.playerTurn === 1 ? 'selected' : ''}" src="assets/light.svg">${count.p1 - 1 ? countEl : ''}`;
+						} else view += '|';
+
+						view += '</td>';
+					}
+					else if (j === 6) view += '<td class="bar" onclick="blurSelect()">|</td>';
+
+					let currI = i < 5 ? j : 23 - j,
+						currJ = i < 5 ? i : 4 - i % 5;
+
+					let pointObj = field[currI][currJ],
+						point = '', handler = '', classes = '';
+					
+					if (pointObj && pointObj.owner === 1) point = '<img class="point" src="assets/light.svg">';
+					if (pointObj && pointObj.owner === 2) point = '<img class="point" src="assets/dark.svg">';
+
+					if (currJ === 4 && field[currI][currJ + 1]) { // multiple points
+						point += `<b class="${pointObj.owner === 1 ? 'white' : 'black'}">+${field[currI].length - 5}</b>`;
+						handler = `makeMove(${currI}, ${currJ})`;
+					}
+
+					if (point) handler = `selectPoint(${currI}, ${currJ})`;
+					else handler = `makeMove(${currI}, ${currJ})`;
+
+					if (currJ === 4 && typeof selectedPoint.j === 'number') { // make move on multi points
+					 	handler = `makeMove(${currI}, ${currJ})`;
+					}
+
+					if (currI === selectedPoint.i && currJ === selectedPoint.j) classes += ' selected';
+
+					view += `<td onclick="${handler}" class="${classes}">${point}</td>`;
+				}
+				view += '</tr>';
+			}
+
+			gamefield.html(view);
+		}
+		
+		throwDiceBtn.on('click', e => {
+
+			throwDice();
+			throwDiceBtn.prop('disabled', true);
+			logView();
+			fieldView();
+		});
+
+		passBtn.on('click', e => {
+			gameState.playerTurn = gameState.playerTurn === 1 ? 2 : 1;
+			gameState.dice.forEach(el => {
+				el.number = null;
+				el.twice = false;
+			});
+			gameState.selectedPoint = {i:null, j: null};
+			gameState.dice.double = false;
+			// gameState.isStartPointTaken = 0;
+
+			gameState.turnCount++;
+			throwDiceBtn.prop('disabled', false);
+			logView();
+			fieldView();
+
+			AI();
+		});
+
+		logView();
+
+		fieldView();
+
+		function AI() {
+			const AITurn = 2;
+
+			console.log(AITurn, gameState.playerTurn, AITurn !== gameState.playerTurn);
+
+			if (AITurn !== gameState.playerTurn) return;
+
+			let { isStartPointTaken, dice, turnCount, bar } = gameState;
+
+			let fieldBuffer = [...gameState.field],
+				avaluableTurns = [];
+
+			if (!throwDiceBtn.prop('disabled')) throwDiceBtn.trigger('click');
+
+			for (let i = 0; i < 24; i++) {
+				if (calcPoints(bar).p2) {
+					dice.forEach(d => {
+
+						if (typeof d.number !== 'number') return;
+						let nextPos = -1 + d.number;
+						if (nextPos > 23) return;
+
+						if (fieldBuffer[nextPos][1] && fieldBuffer[nextPos][1].owner !== AITurn) return;
+						avaluableTurns.push({ turnI: -1, nextPos, weight: 0, dice: d.number });
+					});
+					break;
+				}
+
+				if (fieldBuffer[i][0] && fieldBuffer[i][0].owner === AITurn) {
+					
+					if (dice.double && typeof dice[0].number === 'number') {
+						let nextPos = i + dice[0].number;
+						if (nextPos > 23) continue;
+
+						if (fieldBuffer[nextPos][1] && fieldBuffer[nextPos][1].owner !== AITurn) continue;
+						avaluableTurns.push({ turnI: i, nextPos, weight: 1, dice: dice[0].number });
+					} else {
+						dice.forEach(d => {
+
+							if (typeof d.number !== 'number') return;
+							let nextPos = i + d.number;
+							if (nextPos > 23) return;
+
+							if (fieldBuffer[nextPos][1] && fieldBuffer[nextPos][1].owner !== AITurn) return;
+							avaluableTurns.push({ turnI: i, nextPos, weight: 0, dice: d.number });
+						});
+					}
+
+				}
+			}
+
+			console.log(avaluableTurns);
+
+			if (!avaluableTurns.length) {
+				setTimeout(() => { passBtn.trigger('click'); }, 2000);
+				return;
+			}
+
+			avaluableTurns.forEach(turn => {				
+
+				turn.weight += (23 - turn.turnI) / 4;
+
+				if (fieldBuffer[turn.turnI] && fieldBuffer[turn.turnI][0] && fieldBuffer[turn.turnI][0].owner === AITurn) turn.weight -= 8;
+
+				if (fieldBuffer[turn.nextPos] && fieldBuffer[turn.nextPos][0] && fieldBuffer[turn.nextPos][0].owner === AITurn) turn.weight += 10;
+
+				if (fieldBuffer[turn.nextPos] && fieldBuffer[turn.nextPos][0] && fieldBuffer[turn.nextPos][0].owner !== AITurn) turn.weight += 15;
+			});
+
+			let maxTurn = -10, choosenTurn = {};
+
+			avaluableTurns.forEach(turn => {
+				if (turn.weight > maxTurn) {
+					maxTurn = turn.weight;
+					choosenTurn = turn;
+				} 
+			});
+
+			setTimeout(() => {
+				choosenTurn.turnI !== -1 ? selectPoint(choosenTurn.turnI, 0) : null;
+				setTimeout(makeMove, 1000, choosenTurn.nextPos, 4);
+			}, 1000);
+
+			// setTimeout(() => { passBtn.trigger('click'); }, 5000);
+
+		}
+
+
+	</script>
+
+</body>
+
+</html>

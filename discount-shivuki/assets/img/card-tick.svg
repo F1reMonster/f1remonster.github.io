@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="19px" viewBox="0 0 18 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>EDC061DE-7CFD-4F94-8BAD-0E6396D0A1BD</title>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#6F737A" stop-opacity="0.265679633" offset="0%"></stop>
+            <stop stop-color="#3C3F45" stop-opacity="0.265679633" offset="100%"></stop>
+        </linearGradient>
+        <path d="M338,0 C344.627417,-1.21743675e-15 350,5.372583 350,12 L350,508 C350,514.627417 344.627417,520 338,520 L277,520 L277,514.719999 C277,501.204045 266.152723,490.221609 252.688791,490.003312 L252.280001,490 L98.7199993,490 C85.0675207,490 74,501.067521 74,514.719999 L74,520 L12,520 C5.372583,520 2.58798134e-15,514.627417 0,508 L0,12 C-8.11624501e-16,5.372583 5.372583,1.36519346e-14 12,0 L338,0 Z" id="path-2"></path>
+        <filter x="-6.6%" y="-4.2%" width="113.1%" height="108.8%" filterUnits="objectBoundingBox" id="filter-4">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="7.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0.23574951   0 0 0 0 0.248700764   0 0 0 0 0.269134964  0 0 0 0.2 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <linearGradient x1="-67.3828125%" y1="-35.1025391%" x2="89.6909969%" y2="99.8586904%" id="linearGradient-5">
+            <stop stop-color="#8FE600" offset="0.0983391608%"></stop>
+            <stop stop-color="#6924E8" offset="43.9685315%"></stop>
+            <stop stop-color="#A07CE1" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Concept" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-1920_DISCOUNT--Savings-and-deposits---Tabs" transform="translate(-1500.000000, -1534.000000)">
+            <rect fill="#FFFFFF" x="0" y="0" width="1920" height="4171"></rect>
+            <g id="Group-14" transform="translate(0.000000, 1054.000000)">
+                <g id="Group-17" transform="translate(362.000000, 144.000000)">
+                    <g id="Group-49-Copy" transform="translate(844.000000, 0.000000)">
+                        <g id="plant-growing-coins-glass-jar-money-green-grass">
+                            <mask id="mask-3" fill="white">
+                                <use xlink:href="#path-2"></use>
+                            </mask>
+                            <g id="Mask">
+                                <use fill="black" fill-opacity="1" filter="url(#filter-4)" xlink:href="#path-2"></use>
+                                <path stroke="url(#linearGradient-1)" stroke-width="1" d="M338,0.5 C341.175637,0.5 344.050637,1.78718134 346.131728,3.86827202 C348.212819,5.94936269 349.5,8.82436269 349.5,12 L349.5,508 C349.5,511.175637 348.212819,514.050637 346.131728,516.131728 C344.050637,518.212819 341.175637,519.5 338,519.5 L277.5,519.5 L277.5,514.719999 C277.5,507.831167 274.738006,501.587437 270.26101,497.03577 C265.776384,492.476347 259.570885,489.614829 252.688802,489.503312 L98.7199993,489.5 C91.7556888,489.5 85.450689,492.322845 80.8867668,496.886767 C76.3228446,501.450689 73.5,507.755689 73.5,514.719999 L73.5,519.5 L12,519.5 C8.82436269,519.5 5.94936269,518.212819 3.86827202,516.131728 C1.78718134,514.050637 0.5,511.175637 0.5,508 L0.5,12 C0.5,8.82436269 1.78718134,5.94936269 3.86827202,3.86827202 C5.94936269,1.78718134 8.82436269,0.5 12,0.5 Z" stroke-linejoin="square" fill="#FFFFFF" fill-rule="evenodd"></path>
+                            </g>
+                        </g>
+                        <g id="Group-4" transform="translate(39.000000, 329.000000)">
+                            <g id="Group" transform="translate(255.000000, 7.005100)">
+                                <circle id="Oval" fill="url(#linearGradient-5)" cx="9" cy="9" r="9"></circle>
+                                <polyline id="Path-5" stroke="#FFFFFF" stroke-width="2.00000006" stroke-linecap="round" points="5.4 9.18534261 7.97354474 11.7 13.5 6.3"></polyline>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

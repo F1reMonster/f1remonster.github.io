@@ -1,0 +1,30 @@
+[
+	{
+		"iconHeartStroke": true,
+		"image": "img/photo_2023-07-29_22-15-03.jpg",
+		"discount": "-40%",
+		"price": "8000 <span class=\"hidden lg:inline-block\">грн</span><span class=\"inline-block lg:hidden\">₴</span>",
+		"oldPrice": "8300 <span class=\"hidden lg:inline-block\">грн</span><span class=\"inline-block lg:hidden\">₴</span>",
+		"title": "Компактний триммер для волосся, машинка для стрижки бороди Kemei KM-666",
+		"groupPrice": "275 <span class=\"hidden lg:inline-block\">грн</span><span class=\"inline-block lg:hidden\">₴</span> <span class=\"text-ms lg:text-sm\">від 5 шт. опт</span>",
+		"rate": "4.5",
+		"totalScores": "940 оцінок",
+		"category": "Бізнес",
+		"stateNew": true,
+		"deliveryState": true
+	},
+	{
+		"iconHeartFill": true,
+		"image": "img/photo_2023-07-29_22-17-00.jpg",
+		"discount": "-40%",
+		"price": "100999 <span class=\"hidden lg:inline-block\">грн</span><span class=\"inline-block lg:hidden\">₴</span>",
+		"oldPrice": "120999 <span class=\"hidden lg:inline-block\">грн</span><span class=\"inline-block lg:hidden\">₴</span>",
+		"title": "Шкаф кровать трансформер",
+		"groupPrice": "99999 <span class=\"hidden lg:inline-block\">грн</span><span class=\"inline-block lg:hidden\">₴</span> <span class=\"text-ms lg:text-sm\">від 5 шт. опт</span>",
+		"rate": "4.5",
+		"totalScores": "1940 оцінок",
+		"category": "Бізнес",
+		"stateNew": true,
+		"deliveryState": true
+	}
+]

@@ -1,0 +1,96 @@
+.personal-banker {
+  padding-top: 0;
+}
+.personal-banker .wrap {
+  align-items: flex-end;
+}
+@media screen and (max-width: 767px) {
+  .personal-banker .wrap {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+}
+.personal-banker .section-header {
+  color: #00a661;
+  font: 7.5em/0.95 "mixtape-reg", sans-serif;
+  margin: 0 0 0.2166666667em;
+}
+html[dir=ltr] .personal-banker .section-header {
+  font-family: "mixtape-reg-latin", sans-serif;
+}
+
+@media screen and (max-width: 900px) {
+  .personal-banker .section-header {
+    font-size: 7em;
+  }
+}
+@media screen and (max-width: 767px) {
+  .personal-banker .section-header {
+    font-size: 4.375em;
+    line-height: 1;
+    margin-bottom: 0.3285714286em;
+  }
+}
+.personal-banker .section-header span {
+  font-size: 0.75em;
+}
+@media screen and (max-width: 767px) {
+  .personal-banker .section-header span {
+    font-size: 0.7142857143em;
+  }
+}
+.personal-banker .msg {
+  font: 1.125em/1.7777777778 "rubik-reg", sans-serif;
+  color: #3c3f45;
+  max-width: 30.3888888889em;
+}
+@media screen and (max-width: 767px) {
+  .personal-banker .msg {
+    font-size: 1em;
+    line-height: 1.5;
+    color: #000;
+  }
+}
+.personal-banker .btns-wrap {
+  display: flex;
+  gap: 1.25em;
+  margin-top: 1.875em;
+  padding-bottom: 1em;
+}
+@media screen and (max-width: 767px) {
+  .personal-banker .btns-wrap {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1.6875em;
+    gap: 0.9375em;
+  }
+}
+@media screen and (max-width: 767px) {
+  .personal-banker .btns-wrap a {
+    min-width: 11.875em;
+  }
+}
+.personal-banker .main-container {
+  position: relative;
+}
+.personal-banker .img-part {
+  margin-inline-end: 6.1038961039%;
+  margin-bottom: auto;
+}
+@media screen and (max-width: 1300px) {
+  .personal-banker .img-part {
+    margin-inline-end: auto;
+  }
+}
+@media screen and (max-width: 767px) {
+  .personal-banker .img-part {
+    margin-top: 0;
+    margin-inline-start: 0;
+    margin-bottom: 0.625em;
+  }
+}
+.personal-banker .img-part img {
+  max-width: 62.4040920716vw;
+  margin-inline-end: auto;
+}

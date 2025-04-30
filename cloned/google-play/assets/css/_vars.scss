@@ -1,0 +1,63 @@
+@use "sass:math";
+
+:root {
+	--font-primary: "Roboto", sans-serif;
+	--font-secondary: "Google Sans", sans-serif;
+	--white: #fff;
+	--black: #000;
+	--shuttle-gray: #5f6368;
+	--iron: #dadce0;
+	--watercourse: #056449;
+	--aqua-squeeze: #e6f3ef;
+	--wild-sand: #f5f5f5;
+	--mystic: #dde9e6;
+	--deep-sea: #01875f;
+	--shark: #202124;
+	--athens-gray: #e8eaed;
+	--selago: #f6fafe;
+	--porcelain: #f1f3f4;
+}
+
+// змінні
+// параметри сітки
+// максимальна ширина контейнера
+// $container-max-width: 1140px !default;
+
+// кількість колонок
+$grid-columns: 12 !default;
+
+// відстань між елементами
+// $grid-gap: 20px !default;
+$grid-gap: 12;
+$grid-gap-side: math.div($grid-gap, 2); // migrate sass 5
+
+// контрольні точки сітки
+$grid-breakpoints: (
+	xs: 0,
+	sm: 576,
+	md: 768,
+	lg: 992,
+	xl: 1200,
+	xxl: 1400,
+) !default;
+$maxWidth: 1920;
+$minWidth: 320;
+$maxWidthContainer: 1304;
+$fontSizeDefault: 16;
+$containerPadding: 10;
+
+// Ширина спрацьовування першого брейкпоінту
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+// Брейк-поинты
+$pc: em($containerWidth); // ПК, ноутбуки, деякі планшети у горизонтальному положенні
+$tablet: em(991.98); // Планшети, деякі телефони в горизонтальному положенні
+$mobile: em(767.98); // Телефони L
+$mobileMiddle: em(575.98); // Телефони M
+$mobileSmall: em(479.98); // Телефони S
+
+// breakpoints
+$bp-xl: 1200;
+$bp-lg: 992;
+$bp-md: 768;
+$bp-sm: 576;

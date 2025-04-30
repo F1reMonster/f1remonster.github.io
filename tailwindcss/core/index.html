@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Core</title>
+	<link rel="stylesheet" href="css/tailwind.css">
+
+</head>
+
+<style>
+	
+	/* .mobile__menu {
+		width: 100%;
+	} */
+</style>
+
+<body class="box-border font-roboto">
+
+	<header class="flex items-center h-24 bg-blue-900">
+		<div class="container relative flex justify-between px-3 mx-auto">
+			<div class="flex items-center header__left">
+				<div class="pr-8 header__logo">
+					<img src="img/logo-core-header.svg" alt="logo-header">
+				</div>
+				<nav class="md-ext:hidden header__nav">
+					<ul class="flex space-x-4 text-lg text-white capitalize header__nav-list">
+						<li class="header__nav-item">
+							<a href="#" class="nav-link">overview</a>
+						</li>
+						<li class="header__nav-item dropdown">
+							<a href="#" class="nav-link dropdown__arrow">features</a>
+							<span class="absolute hidden w-48 dropdown__menu">
+								<ul class="z-10 bg-blue-900 border border-blue-700 rounded shadow-xl">
+									<li class="p-2 hover:bg-blue-800"><a class="block" href="#">Item 1 sdfsdfsdf sdfsdfsd</a></li>
+									<li class="p-2 hover:bg-blue-800"><a class="block" href="#">Item 2</a></li>
+									<li class="p-2 hover:bg-blue-800"><a class="block" href="#">Item 3</a></li>
+									<li class="p-2 hover:bg-blue-800"><a class="block" href="#">Item 4</a></li>
+									<li class="p-2 hover:bg-blue-800"><a class="block" href="#">Item 5</a></li>
+									<li class="p-2 hover:bg-blue-800"><a class="block" href="#">Item 6</a></li>
+								</ul>
+
+							</span>
+						</li>
+						<li class="header__nav-item">
+							<a href="#" class="nav-link">integrations</a>
+						</li>
+						<li class="header__nav-item">
+							<a href="#" class="nav-link">documentation</a>
+						</li>
+						<li class="header__nav-item">
+							<a href="#" class="nav-link">support</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+			<div class="flex items-center space-x-5 text-sm text-white uppercase md-ext:hidden header__right">
+				<div>pricing</div>
+				<div class="px-2 py-1 border">requesting demo</div>
+			</div>
+			<div class="relative items-center hidden text-white md-ext:flex mobile">
+				<button class="mobile-btn">
+					<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+						xmlns="http://www.w3.org/2000/svg">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+						</path>
+					</svg>
+				</button>
+			</div>
+			
+			<div class="absolute z-20 hidden bg-blue-800 mobile__menu">
+				<ul class="flex flex-col p-4 text-lg text-white capitalize">
+					<li class="">
+						<a href="#" class="nav-link">overview</a>
+					</li>
+					<li class="mobile__dropdown">
+						<a href="#" class="nav-link dropdown__arrow">features</a>
+						<span class="hidden mobile__submenu">
+							<ul class="">
+								<li class="p-2"><a class="block" href="#">Item 1 sdfsdfsdf sdfsdfsd</a></li>
+								<li class="p-2"><a class="block" href="#">Item 2</a></li>
+								<li class="p-2"><a class="block" href="#">Item 3</a></li>
+								<li class="p-2"><a class="block" href="#">Item 4</a></li>
+								<li class="p-2"><a class="block" href="#">Item 5</a></li>
+								<li class="p-2"><a class="block" href="#">Item 6</a></li>
+							</ul>
+		
+						</span>
+					</li>
+					<li class="">
+						<a href="#" class="nav-link">integrations</a>
+					</li>
+					<li class="">
+						<a href="#" class="nav-link">documentation</a>
+					</li>
+					<li class="">
+						<a href="#" class="nav-link">support</a>
+					</li>
+				</ul>			
+			</div>
+
+			
+		</div>
+	</header>
+	
+	
+
+	<div class="relative bg-gray-200 screen-1">
+		<div class="absolute top-0 left-0 w-full h-full">
+			<img class="object-cover object-right w-full h-full" src="img/bg-1.webp" alt="">
+		</div>
+		<div class="absolute top-0 left-0 w-full h-full bg-block-1"></div>
+		<div class="container relative flex flex-col items-center px-3 pt-48 pb-2 mx-auto xl:pt-2">
+			<div class="flex flex-wrap justify-between">
+				<div class="w-1/2 xl:w-full">
+					<div class="text-5xl mob-m:text-3xl">
+						Discovery and Asset Management
+					</div>
+					<div class="mt-20 xl:mt-10">
+						<span class="leading-7">
+							PlatOps Core is great and powerful configuration management database. Automatic,
+							agent-based/agentless discovery of infrastructure and applications. Provides the data you need to
+							manage, automate, transform, and optimize infrastructure in data centers and clouds.
+						</span>
+					</div>
+
+					<div class="flex mt-24 buttons space-x-7 xl:mt-10">
+						<button class="bg-blue-900 text-white uppercase py-2.5 px-14 btn-shadow">
+							<span class="text-xs font-bold">try now</span>
+						</button>
+						<button
+							class="border-2 border-blue-900 text-blue-900 uppercase py-2.5 px-9 flex items-center space-x-2">
+							<span class="text-xs font-bold">get prices</span>
+							<svg width="17" height="10" viewBox="0 0 17 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M0 5H15.5M15.5 5L11.5 1M15.5 5L11.5 9" stroke="#29298C" />
+							</svg>
+						</button>
+					</div>
+
+				</div>
+				<div class="w-1/2 xl:w-full xl:mt-10 xl:flex xl:flex-col xl:justify-center xl:items-center">
+					<div class="w-full bg-gray-700 shadow-xl block-543x345"></div>
+					<div class="flex buttons space-x-7 mt-9 xl:w-full">
+						<button class="w-1/2 bg-blue-900 text-white uppercase py-2.5 px-14 btn-shadow mob-m:px-5">
+							<span class="text-xs font-bold">user interface</span>
+						</button>
+						<button class="w-1/2 border-2 border-blue-900 text-blue-900 uppercase py-2.5 px-9 mob-m:px-1">
+							<span class="text-xs font-bold">command-line interface</span>
+						</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="mt-40 xl:mt-10">
+				<button class="border-b-2 border-blue-600 text-blue-600 uppercase py-2.5 px-6 flex items-center space-x-2">
+					<svg width="25" height="21" viewBox="0 0 25 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path
+							d="M9.19854 8.18347C9.04687 8.00069 8.84872 7.84784 8.6041 7.72429C8.35947 7.60264 8.05796 7.5415 7.7008 7.5415H5.00011V12.9982H6.61527V11.3475H7.56932C7.86776 11.3475 8.14297 11.308 8.39555 11.2277C8.6469 11.1494 8.86524 11.029 9.0481 10.8692C9.23096 10.7087 9.37345 10.5081 9.47375 10.2654C9.57405 10.0234 9.6242 9.73681 9.6242 9.405C9.6242 9.21075 9.59117 9.00568 9.52512 8.78532C9.45907 8.56751 9.35082 8.36626 9.19854 8.18347ZM8.02127 9.79094C7.9699 9.87055 7.90385 9.92915 7.82312 9.96736C7.74239 10.0049 7.65066 10.0285 7.54791 10.0355C7.44517 10.0425 7.34242 10.047 7.23968 10.047H6.61588V8.93881H7.33509C7.43294 8.93881 7.52834 8.94263 7.6213 8.95154C7.71426 8.95919 7.79621 8.9802 7.86715 9.01651C7.93809 9.05153 7.99436 9.10503 8.03595 9.177C8.07692 9.24769 8.09833 9.34513 8.09833 9.46677C8.09833 9.60434 8.07264 9.71261 8.02127 9.79094Z"
+							fill="#0057FF" />
+						<path
+							d="M14.6513 8.386C14.4654 8.1338 14.2226 7.92936 13.9223 7.77396C13.6214 7.61857 13.252 7.5415 12.8166 7.5415H10.1673V12.9982H12.501C12.956 12.9982 13.3523 12.9346 13.6905 12.8065C14.0275 12.6798 14.307 12.497 14.5259 12.2607C14.7461 12.0232 14.91 11.736 15.0189 11.3984C15.1265 11.059 15.1803 10.6807 15.1803 10.2629C15.1803 9.92278 15.1387 9.58587 15.0556 9.25788C14.9718 8.92925 14.8378 8.63884 14.6513 8.386ZM13.5254 10.6666C13.4985 10.8246 13.4441 10.9723 13.3639 11.1093C13.2826 11.2475 13.167 11.3628 13.0154 11.4576C12.8637 11.5525 12.6631 11.5984 12.4142 11.5984H11.783V8.93944H12.2968C12.5897 8.93944 12.8215 8.99039 12.9903 9.09229C13.1585 9.19419 13.2863 9.31647 13.3719 9.45913C13.4575 9.60243 13.512 9.74509 13.5334 9.89093C13.5554 10.0368 13.5676 10.1521 13.5676 10.2393C13.5658 10.366 13.5523 10.5087 13.5254 10.6666Z"
+							fill="#0057FF" />
+						<path
+							d="M15.8769 12.9982H17.4921V10.9201H19.5836V9.62026H17.4921V8.93944H19.9279V7.5415H15.8769V12.9982Z"
+							fill="#0057FF" />
+						<rect x="1.29401" y="1.15894" width="22" height="18" rx="1" stroke="#0057FF" stroke-width="2" />
+					</svg>
+					<span class="text-xs font-bold">download datasheet</span>
+				</button>
+			</div>
+		</div>
+	</div>
+
+	<div class="screen-2">
+		<div class="mt-12 xl:mt-6">
+
+			<p class="text-5xl font-bold leading-snug text-center mob-m:text-3xl">Struct <span class="text-blue-900">your
+					enviroments</span></p>
+			<p class="text-5xl font-bold leading-snug text-center mob-m:text-3xl">like your want</p>
+		</div>
+
+		<div class="container px-3 pt-24 pb-24 mx-auto xl:py-10">
+			<div class="flex pace-x-4 xl:flex-wrap xl:space-x-0">
+				<div class="w-1/2 xl:w-full xl:flex xl:justify-center">
+					<div class="w-full block-540x350"></div>
+				</div>
+				<div class="w-1/2 xl:w-full xl:flex xl:justify-center xl:mt-10">
+					<div class="w-full block-540x350"></div>
+				</div>
+			</div>
+
+
+			<div class="flex items-center justify-center mt-20 space-x-11 md-ext:hidden">
+				<svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path
+						d="M18.5 0C8.2742 0 0 8.27492 0 18.5C0 28.7258 8.27492 37 18.5 37C28.7258 37 37 28.7251 37 18.5C37 8.2742 28.7251 0 18.5 0ZM18.5 34.1094C9.87199 34.1094 2.89062 27.1274 2.89062 18.5C2.89062 9.87199 9.87257 2.89062 18.5 2.89062C27.128 2.89062 34.1094 9.87257 34.1094 18.5C34.1094 27.128 27.1274 34.1094 18.5 34.1094Z"
+						fill="#FF3D00" />
+					<path
+						d="M18.5 9.31348C17.7018 9.31348 17.0547 9.96054 17.0547 10.7588V20.0661C17.0547 20.8643 17.7018 21.5114 18.5 21.5114C19.2982 21.5114 19.9453 20.8643 19.9453 20.0661V10.7588C19.9453 9.96054 19.2982 9.31348 18.5 9.31348Z"
+						fill="#FF3D00" />
+					<path
+						d="M18.5 27.1833C19.5776 27.1833 20.4512 26.3098 20.4512 25.2322C20.4512 24.1546 19.5776 23.281 18.5 23.281C17.4224 23.281 16.5488 24.1546 16.5488 25.2322C16.5488 26.3098 17.4224 27.1833 18.5 27.1833Z"
+						fill="#FF3D00" />
+				</svg>
+
+
+				<img src="img/arrow-stroke.png" alt="arrow">
+
+				<svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path
+						d="M26.9888 12.0824C26.4347 11.4981 25.5108 11.4724 24.9256 12.0279L15.6085 20.864L11.1644 16.3012C10.6016 15.7238 9.67872 15.7111 9.10075 16.274C8.52328 16.8364 8.51111 17.7602 9.07347 18.3377L14.5221 23.9318C14.8077 24.2252 15.1871 24.373 15.5676 24.373C15.9286 24.373 16.2896 24.2397 16.5722 23.9727L26.9344 14.1457C27.5191 13.591 27.5439 12.6672 26.9888 12.0824Z"
+						fill="#00B912" />
+					<path
+						d="M18 0C8.07469 0 0 8.07469 0 18C0 27.9253 8.07469 36 18 36C27.9253 36 36 27.9253 36 18C36 8.07469 27.9253 0 18 0ZM18 33.0811C9.68449 33.0811 2.91888 26.3161 2.91888 18C2.91888 9.68449 9.68442 2.91888 18 2.91888C26.316 2.91888 33.0811 9.68442 33.0811 18C33.0811 26.316 26.316 33.0811 18 33.0811Z"
+						fill="#00B912" />
+				</svg>
+
+			</div>
+
+			<div class="flex mt-16 md-ext:flex-wrap">
+				<div class="flex flex-col items-center justify-center w-1/2 md-ext:w-full">
+					<div class="union border-l-red">
+						<div class="union-arrow"></div>
+
+						<p class="pb-4 text-lg font-bold text-center">Advanced auto-discovery system</p>
+						<p class="pb-3 text-sm">
+							<span class="font-bold text-red-500">✗</span>
+							<span class="p-2">Multi-cloud environment without central contact point</span>
+						</p>
+						<p class="pb-3 text-sm">
+							<span class="font-bold text-red-500">✗</span>
+							<span class="p-2">On-premise devices without structure models</span>
+						</p>
+						<p class="pb-3 text-sm">
+							<span class="font-bold text-red-500">✗</span>
+							<span class="p-2">Environment without any visual vision</span>
+						</p>
+
+
+					</div>
+					<button class="mt-6 text-white uppercase py-2.5 px-14 text-xs bg-red-500 btn-shadow">fix it</button>
+				</div>
+
+				<div class="flex flex-col items-center justify-center w-1/2 md-ext:w-full md-ext:mt-10">
+					<div class="union border-lh-green">
+						<div class="union-arrow"></div>
+
+						<p class="pb-4 text-lg font-bold text-center">Multi-platform structured environment</p>
+						<p class="pb-3 text-sm">
+							<span class="font-bold text-green-500">✓</span>
+							<span class="p-2">Multi-cloud environment with single point of struct</span>
+						</p>
+						<p class="pb-3 text-sm">
+							<span class="font-bold text-green-500">✓</span>
+							<span class="p-2">On-premise devices managed from one panel</span>
+						</p>
+						<p class="pb-3 text-sm">
+							<span class="font-bold text-green-500">✓</span>
+							<span class="p-2">Full visibility of your environment</span>
+						</p>
+
+					</div>
+					<button class="mt-6 text-white uppercase py-2.5 px-14 text-xs bg-green-500 btn-shadow">get it</button>
+				</div>
+			</div>
+
+
+		</div>
+
+	</div>
+
+	<div class="relative py-20 screen-3">
+		<div class="absolute top-0 left-0 w-full h-full">
+			<img class="object-cover w-full h-full" src="img/bg-2.webp" alt="">
+		</div>
+		<div class="absolute top-0 left-0 w-full h-full bg-block-2 z-5"></div>
+
+		<div class="container relative z-10 px-3 mx-auto">
+			<div class="flex xl:flex-col-reverse xl:justify-center xl:items-center">
+				<div class="brands-grid">
+					<div class="brand-item"><img src="img/brands/amazon.svg" alt=""></div>
+					<div class="brand-item"><img src="img/brands/grafana.svg" alt=""></div>
+					<div class="brand-item"><img src="img/brands/kubernetes.svg" alt=""></div>
+					<div class="brand-item"><img src="img/brands/google_cloud.svg" alt=""></div>
+					<div class="brand-item"><img src="img/brands/influxdata.svg" alt=""></div>
+					<div class="brand-item"><img src="img/brands/elastic.svg" alt=""></div>
+					<div class="brand-item"><img src="img/brands/microsoft_azure.svg" alt=""></div>
+					<div class="brand-item"><img src="img/brands/icinga.svg" alt=""></div>
+					<div class="brand-item"><img src="img/brands/prometheusio.svg" alt=""></div>
+				</div>
+				<div class="flex flex-col justify-center w-1/2 xl:text-center xl:w-full">
+					<p class="pl-10 text-4xl font-bold capitalize xl:pl-0">current integrations</p>
+					<p class="pt-4 pl-10 text-xl xl:pl-0 xl:pb-10">Currently supported modules and integrations</p>
+				</div>
+			</div>
+
+			<div class="flex mt-28 xl:flex-col">
+
+				<div class="flex flex-col justify-center w-1/2 xl:w-full xl:text-center">
+					<p class="text-4xl font-bold capitalize">Integrations in Active Development</p>
+					<p class="pt-4 text-xl xl:pb-10">Seamlessly integrate any trusted identity provider.</p>
+				</div>
+
+				<div class="brands-grid">
+					<div class="brand-item"><img src="img/brands/snort.svg" alt=""></div>
+					<div class="brand-item"><img src="img/brands/cri-oio.svg" alt=""></div>
+					<div class="brand-item"><img src="img/brands/nginx.svg" alt=""></div>
+					<div class="brand-item"><img src="img/brands/chefio.svg" alt=""></div>
+					<div class="brand-item"><img src="img/brands/istioio.svg" alt=""></div>
+					<div class="brand-item"><img src="img/brands/pcisecuritystandards.svg" alt=""></div>
+					<div class="brand-item"><img src="img/brands/nagios.svg" alt=""></div>
+					<div class="brand-item"><img src="img/brands/cisco.svg" alt=""></div>
+					<div class="brand-item"><img src="img/brands/zoho.svg" alt=""></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="py-20 screen-4 mob-m:py-10">
+		<div class="container px-3 mx-auto">
+			<div class="text-5xl font-bold text-center mob-m:text-4xl">
+				<span>More than</span>
+				<span class="text-blue-900">CMDB</span>
+			</div>
+			<div class="mt-8 text-lg text-center">
+				<p>PlatOps Core project is much more than simple CMDB which can be installed on on-premise environment. </p>
+				<p class="pt-3">Integrated features will allows you to get benefits which will be useful on administration
+					of your environment platforms.</p>
+			</div>
+
+			<div class="flex mt-28 xl:flex-wrap xl:mt-10">
+				<div class="flex flex-col w-1/2 xl:w-full xl:justify-center xl:items-center">
+					<div
+						class="flex items-center justify-center h-24 mb-8 border-2 rounded block-450 box-shadow border-l-gray xl:w-full">
+						<span class="text-lg font-bold">Advanced Auto-Discovery System</span>
+					</div>
+
+					<div
+						class="flex items-center justify-center h-24 mb-8 border-2 rounded block-450 box-shadow border-l-gray xl:w-full">
+						<span class="text-lg font-bold">Advanced Auto-Discovery System</span>
+					</div>
+
+					<div
+						class="flex items-center justify-center h-24 mb-8 border-2 rounded block-450 box-shadow border-l-gray xl:w-full">
+						<span class="text-lg font-bold">Advanced Auto-Discovery System</span>
+					</div>
+
+					<div
+						class="flex items-center justify-center h-24 mb-8 border-2 rounded block-450 box-shadow border-l-gray xl:w-full">
+						<span class="text-lg font-bold">Advanced Auto-Discovery System</span>
+					</div>
+				</div>
+				<div
+					class="relative w-1/2 p-6 overflow-y-auto text-2xl text-white bg-gray-800 h-100 font-cutive xl:w-full mob-m:text-lg mob-m:p-4">
+					<p>{</p>
+					<p class="pl-6">"version": 4,</p>
+					<p class="pl-6">"terraform_version": "0.14.0",</p>
+					<p class="pl-6">"serial": 26,</p>
+					<p class="pl-6">"lineage": "3c255742-debd-2c33-ff5f-53a5181f36b2",</p>
+					<p class="pl-6">"outputs": {},</p>
+					<p class="pl-6">"resources": []</p>
+					<p>}</p>
+
+					<button class="absolute top-3 right-3 focus:outline-none">
+						<img src="img/copy.svg" alt="copy-icon">
+					</button>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="bg-blue-900 screen-5">
+		<div class="container px-3 py-24 mx-auto sm:py-16">
+			<div class="flex sm:flex-wrap">
+				<div class="items-center w-1/2 text-5xl font-bold text-white sm:w-full sm:text-center">
+					<p>Ready to get</p>
+					<p>started?</p>
+
+				</div>
+
+				<div class="w-1/2 text-sm text-white sm:w-full sm:pt-10 sm:text-center">
+					<p class="leading-7">
+						Start by following a tutorial to deploy PlatOps Core app in your environment
+						or learn about how the project works by exploring the documentation.
+					</p>
+
+					<div class="flex mt-10 buttons space-x-7 xl:mt-10 sm:justify-center">
+						<button
+							class="border-2 bg-white text-blue-900 uppercase py-2.5 px-9 flex items-center space-x-2 mob-m:px-3">
+							<span class="text-xs font-bold">get started</span>
+							<svg width="17" height="10" viewBox="0 0 17 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M0 5H15.5M15.5 5L11.5 1M15.5 5L11.5 9" stroke="#29298C" />
+							</svg>
+						</button>
+						<button class="border-white border text-white uppercase py-2.5 px-4 mob-m:px-2">
+							<span class="text-xs font-bold">explore documentation</span>
+						</button>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer>
+		
+		<div class="container flex items-center justify-between px-3 py-5 pl-20 mx-auto footer__top xl:hidden">
+			<ul class="flex text-blue-900">
+				<li class="mx-6"><a href="#">Integration</a></li>
+				<li class="mx-6"><a href="#">Features</a></li>
+				<li class="mx-6"><a href="#">Documentation</a></li>
+				<li class="mx-6"><a href="#">Support</a></li>
+			</ul>
+			<button
+				class="border-2 border-blue-900 text-blue-900 uppercase py-2.5 px-9 flex items-center space-x-2 mob-m:px-3">
+				<span class="text-xs font-bold">request demo</span>
+				<svg width="17" height="10" viewBox="0 0 17 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M0 5H15.5M15.5 5L11.5 1M15.5 5L11.5 9" stroke="#29298C" />
+				</svg>
+			</button>
+		</div>
+
+		<div class="bg-gray-100 footer__bottom">
+			<div class="container flex flex-wrap items-center justify-between px-3 py-6 mx-auto mob-m:justify-center">
+				<div class="flex">
+					<img src="img/logo-platops-footer.svg" alt="">
+					<div class="ml-2 text-xs">
+						<p>CMDB</p>
+						<p class="text-blue-500">Platops Core</p>
+						<img src="img/logo-core-footer.svg" alt="">
+					</div>
+				</div>
+
+				<div class="flex items-center mob-m:mt-4">
+					<p class="text-xs text-blue-900">Follow Us</p>
+					<a class="flex items-center justify-center flex-shrink-0 w-8 h-8 ml-4 bg-blue-600 rounded-full" href="#">
+						<img src="img/facebook.svg" alt="">
+					</a>
+					<a class="flex items-center justify-center flex-shrink-0 w-8 h-8 ml-4 bg-blue-600 rounded-full" href="#">
+						<img src="img/linkedin.svg" alt="">
+					</a>
+					<a class="flex items-center justify-center flex-shrink-0 w-8 h-8 ml-4 bg-blue-600 rounded-full" href="#">
+						<img src="img/twitter.svg" alt="">
+					</a>
+				</div>
+			
+			</div>
+			
+			<div class="border-t-2 border-b-2">
+				<div class="container flex flex-wrap items-center justify-between px-3 py-10 mx-auto sm:flex-col">
+					<div class="footer__menu">
+						<ul class="flex sm:flex-col">
+							<li class="mr-10 sm:mr-0">
+								<ul class="text-sm sm:pb-2">
+									<li class="mb-2 sm:text-center"><span class="text-lg font-bold border-b-2 border-blue-600">Services</span></li>
+									<li class="pb-1"><a href="#">Managed Security</a></li>
+									<li class="pb-1"><a href="#">Infrastructure Monitoring</a></li>
+									<li class="pb-1"><a href="#">Cloud Transformation </a></li>
+									<li class="pb-1"><a href="#">Zero Trust Security</a></li>
+									<li class="pb-1"><a href="#">Email Security </a></li>
+								</ul>
+							</li>
+							<li class="mr-10 sm:mr-0">
+								<ul class="text-sm sm:pb-2">
+									<li class="mb-2 sm:text-center"><span class="text-lg font-bold border-b-2 border-blue-600">Solutions</span></li>
+									<li class="pb-1"><a href="#">Secure Log Management</a></li>
+									<li class="pb-1"><a href="#">Private Cloud</a></li>
+								</ul>
+							</li>
+							<li class="mr-10 sm:mr-0">
+								<ul class="text-sm sm:pb-2">
+									<li class="mb-2 sm:text-center"><span class="text-lg font-bold border-b-2 border-blue-600">Security</span></li>
+									<li class="pb-1"><a href="#">Cloud Native Security</a></li>
+									<li class="pb-1"><a href="#">Privacy & Data Protection</a></li>
+								</ul>
+							</li>
+							<li class="mr-10 sm:mr-0">
+								<ul class="text-sm sm:pb-2">
+									<li class="mb-2 sm:text-center"><span class="text-lg font-bold border-b-2 border-blue-600">Products</span></li>
+									<li class="pb-1"><a href="#">Platops Core CMDB</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<div class="flex-shrink-0 footer__subscribe md-ext:mt-5">
+						<p class="pb-2 text-lg">Subscribe To Our Newsletter</p>
+						<p class="text-ss">The latest news, articles, and resources,</p>
+						<p class="text-ss">sent to your inbox monthly.</p>
+						<div class="mt-6 form">
+							<input type="text" class="w-32 h-10 p-3 text-xs border outline-none focus:outline-none" placeholder="your@email.com">
+							<button class="w-24 h-10 text-xs text-white bg-blue-600">Subscribe</button>
+
+							<div class="mt-3">
+								<input type="checkbox" checked name="" id="">
+								<span class="text-xs">I agree to PlatOps’s <a class="text-blue-600 underline" href="#">Privacy policy</a></span>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="container flex flex-wrap items-center justify-between px-3 py-5 mx-auto text-sm footer__copy md:flex-col mob-s:text-xs">
+				<div class="md:mb-2">
+					(c) 2021 PlatOps Security, LLC. Washington, D.C. 
+				</div>
+				<div class="flex md:mb-2">
+					<img class="w-5 h-5 mr-2" src="img/circle-done.svg" alt="">
+					<span class="mr-10">System Status</span>
+					<span>Cookie Manager</span>
+				</div>
+				<div>
+					<span class="pr-2">Terms and Conditions</span>
+					<span class="pr-2">Privacy</span>
+					<span>Security</span>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<script src="app.js"></script>
+</body>
+</html>

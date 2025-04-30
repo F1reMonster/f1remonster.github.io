@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Backgammon Board</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Condensed:wght@300;500;400;600;700&display=swap" rel="stylesheet"/>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div class="body-wrapper">
+			<div class="backgammon">
+				<div class="users__block">
+					<div class="user user--active">
+						<div class="user__info user__info--top">
+							<div class="user__status"></div>
+							<div class="user__name">User1</div>
+						</div>
+						<div class="user__avatar">
+							<img src="static/avatars/evilbot-1.svg" alt="" />
+							<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="-100 -100 200 200">
+								<circle fill="none" stroke="#3f7be3" stroke-width="6px"/>
+							</svg>
+						</div>
+						<div class="user__text user__text--top">GR <span>2062</span></div>
+					</div>
+
+					<div class="users__middle">
+						<div class="user__text">lenght <span>11</span></div>
+						<div class="user__text user__text--top">stake <span>0</span></div>
+					</div>
+
+					<div class="user ">
+						<div class="user__text user__text--bottom">GR <span>2062</span></div>
+						<div class="user__avatar">
+							<img src="static/avatars/default.svg" alt="" />
+							<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="-100 -100 200 200">
+								<circle fill="none" stroke="#3f7be3" stroke-width="6px"/>
+							</svg>
+						</div>
+						<div class="user__info user__info--bottom">
+							<div class="user__status"></div>
+							<div class="user__name">User2sdfsdfsfgsdfgsdfgdfsd</div>
+						</div>
+					</div>
+				</div>
+				<div class="board">
+					<div class="board__wrapper">
+						<div class="board__board board__board--left">
+							<div class="board__col">
+								<div class="board__cell">1</div>
+								<div class="board__cell">
+									<p class="time1">6:00</p>
+									<p class="score">8</p>
+									<p class="time2">1:46</p>
+								</div>
+								<div class="board__cell">9</div>
+							</div>
+
+						</div>
+
+						<div class="board__board board__board--owner--1">
+							<div class="board__col board__col--1">
+								<div class="board__cell">
+									<img src="assets/dark.svg" alt="">
+								</div>
+								<div class="board__cell">
+									<img src="assets/dark.svg" alt="">
+								</div>
+								<div class="board__cell">
+									<img src="assets/dark.svg" alt="">
+								</div>
+								<div class="board__cell">
+									<img src="assets/dark.svg" alt="">
+								</div>
+								<div class="board__cell">
+									<img src="assets/dark.svg" alt="">
+								</div>
+								<div class="board__cell board__cell--empty"></div>
+								<div class="board__cell">
+									<img src="assets/light.svg" alt="">
+								</div>
+								<div class="board__cell">
+									<img src="assets/light.svg" alt="">
+								</div>
+								<div class="board__cell">
+									<img src="assets/light.svg" alt="">
+								</div>
+								<div class="board__cell">
+									<img src="assets/light.svg" alt="">
+								</div>
+								<div class="board__cell">
+									<img src="assets/light.svg" alt="">
+								</div>
+							</div>
+							<div class="board__col board__col--2">
+								<div class="board__cell"></div>
+								<div class="board__cell"></div>
+								<div class="board__cell"></div>
+								<div class="board__cell"></div>
+								<div class="board__cell"></div>
+								<div class="board__cell board__cell--empty"></div>
+								<div class="board__cell"></div>
+								<div class="board__cell"></div>
+								<div class="board__cell"></div>
+								<div class="board__cell"></div>
+								<div class="board__cell"></div>
+							</div>
+							<div class="board__col board__col--3">
+								<div class="board__cell"></div>
+								<div class="board__cell"></div>
+								<div class="board__cell"></div>
+								<div class="board__cell"></div>
+								<div class="board__cell"></div>
+								<div class="board__cell board__cell--empty"></div>
+								<div class="board__cell"></div>
+								<div class="board__cell"></div>
+								<div class="board__cell"></div>
+								<div class="board__cell"></div>
+								<div class="board__cell"></div>
+							</div>
+							<div class="board__col board__col--4">
+								<div class="board__cell"></div>
+								<div class="board__cell"></div>
+								<div class="board__cell"></div>
+								<div class="board__cell"></div>
+								<div class="board__cell"></div>
+								<div class="board__cell board__cell--empty"></div>
+								<div class="board__cell"></div>
+								<div class="board__cell"></div>
+								<div class="board__cell"></div>
+								<div class="board__cell"></div>
+								<div class="board__cell"></div>
+							</div>
+							<div class="board__col board__col--5">
+								<div class="board__cell">
+									<img src="assets/light.svg" alt="">
+								</div>
+								<div class="board__cell">
+									<img src="assets/light.svg" alt="">
+								</div>
+								<div class="board__cell">
+									<img src="assets/light.svg" alt="">
+								</div>
+								<div class="board__cell"></div>
+								<div class="board__cell"></div>
+								<div class="board__cell board__cell--empty"></div>
+								<div class="board__cell"></div>
+								<div class="board__cell"></div>
+								<div class="board__cell">
+									<img src="assets/dark.svg" alt="">
+								</div>
+								<div class="board__cell">
+									<img src="assets/dark.svg" alt="">
+								</div>
+								<div class="board__cell">
+									<img src="assets/dark.svg" alt="">
+								</div>
+							</div>
+							<div class="board__col board__col--6">
+								<div class="board__cell"></div>
+								<div class="board__cell"></div>
+								<div class="board__cell"></div>
+								<div class="board__cell"></div>
+								<div class="board__cell"></div>
+								<div class="board__cell board__cell--empty"></div>
+								<div class="board__cell"></div>
+								<div class="board__cell"></div>
+								<div class="board__cell"></div>
+								<div class="board__cell"></div>
+								<div class="board__cell"></div>
+							</div>
+						</div>
+
+						<div class="board__board board__board--middle">
+							<div class="board__col">
+								<div class="board__cell"></div>
+								<div class="board__cell board__cell--score-top">90</div>
+								<div class="board__cell board__cell--top"><img src="assets/dark.svg" alt=""></div>
+								<div class="board__cell"></div>
+								<div class="board__cell"></div>
+								<div class="board__cell board__cell--empty"></div>
+								<div class="board__cell"></div>
+								<div class="board__cell"></div>
+								<div class="board__cell board__cell--bottom"></div>
+								<div class="board__cell board__cell--score-bottom">102</div>
+								<div class="board__cell"></div>
+							</div>
+						</div>
+
+						<div class="board__board board__board--owner--2">
+							<div class="board__col board__col--1">
+								<div class="board__cell">
+									<img src="assets/light.svg" alt="">
+								</div>
+								<div class="board__cell">
+									<img src="assets/light.svg" alt="">
+								</div>
+								<div class="board__cell">
+									<img src="assets/light.svg" alt="">
+								</div>
+								<div class="board__cell">
+									<img src="assets/light.svg" alt="">
+								</div>
+								<div class="board__cell">
+									<img src="assets/light.svg" alt="">
+								</div>
+								<div class="board__cell board__cell--empty"></div>
+								<div class="board__cell">
+									<img src="assets/dark.svg" alt="">
+								</div>
+								<div class="board__cell">
+									<img src="assets/dark.svg" alt="">
+								</div>
+								<div class="board__cell">
+									<img src="assets/dark.svg" alt="">
+								</div>
+								<div class="board__cell">
+									<img src="assets/dark.svg" alt="">
+								</div>
+								<div class="board__cell">
+									<img src="assets/dark.svg" alt="">
+								</div>
+							</div>
+							<div class="board__col board__col--2">
+								<div class="board__cell"></div>
+								<div class="board__cell"></div>
+								<div class="board__cell"></div>
+								<div class="board__cell"></div>
+								<div class="board__cell"></div>
+								<div class="board__cell board__cell--empty"></div>
+								<div class="board__cell"></div>
+								<div class="board__cell"></div>
+								<div class="board__cell"></div>
+								<div class="board__cell"></div>
+								<div class="board__cell"></div>
+							</div>
+							<div class="board__col board__col--3">
+								<div class="board__cell"></div>
+								<div class="board__cell"></div>
+								<div class="board__cell"></div>
+								<div class="board__cell"></div>
+								<div class="board__cell"></div>
+								<div class="board__cell board__cell--empty">
+									<img src="assets/dice2.svg" alt="">
+								</div>
+								<div class="board__cell"></div>
+								<div class="board__cell"></div>
+								<div class="board__cell"></div>
+								<div class="board__cell"></div>
+								<div class="board__cell"></div>
+							</div>
+							<div class="board__col board__col--4">
+								<div class="board__cell"></div>
+								<div class="board__cell"></div>
+								<div class="board__cell"></div>
+								<div class="board__cell"></div>
+								<div class="board__cell"></div>
+								<div class="board__cell board__cell--empty">
+									<img src="assets/dice1.svg" alt="">
+								</div>
+								<div class="board__cell"></div>
+								<div class="board__cell"></div>
+								<div class="board__cell"></div>
+								<div class="board__cell"></div>
+								<div class="board__cell"></div>
+							</div>
+							<div class="board__col board__col--5">
+								<div class="board__cell"></div>
+								<div class="board__cell"></div>
+								<div class="board__cell"></div>
+								<div class="board__cell"></div>
+								<div class="board__cell"></div>
+								<div class="board__cell board__cell--empty"></div>
+								<div class="board__cell"></div>
+								<div class="board__cell"></div>
+								<div class="board__cell"></div>
+								<div class="board__cell"></div>
+								<div class="board__cell"></div>
+							</div>
+							<div class="board__col board__col--6">
+								<div class="board__cell">
+									<img src="assets/dark.svg" alt="">
+								</div>
+								<div class="board__cell">
+									<img src="assets/dark.svg" alt="">
+								</div>
+								<div class="board__cell"></div>
+								<div class="board__cell"></div>
+								<div class="board__cell"></div>
+								<div class="board__cell board__cell--empty"></div>
+								<div class="board__cell"></div>
+								<div class="board__cell"></div>
+								<div class="board__cell"></div>
+								<div class="board__cell">
+									<img src="assets/light.svg" alt="">
+								</div>
+								<div class="board__cell">
+									<img src="assets/light.svg" alt="">
+								</div>
+							</div>
+						</div>
+
+						<div class="board__board board__board--right">
+							<div class="board__col">
+								<div class="board__cell"></div>
+								<div class="board__cell"></div>
+								<div class="board__cell"></div>
+								<div class="board__cell"></div>
+								<div class="board__cell"></div>
+								<div class="board__cell board__cell--empty"></div>
+								<div class="board__cell"></div>
+								<div class="board__cell"></div>
+								<div class="board__cell"></div>
+								<div class="board__cell"></div>
+								<div class="board__cell"></div>
+							</div>
+
+						</div>
+
+					</div>
+					<div class="board__buttons">
+						<button class="btn">Roll</button>
+						<button class="btn">Pass</button>
+						<button class="btn">Undo</button>
+					</div>
+				</div>
+			</div>
+			<div class="chat">
+				<div class="chat__wrapper">
+					<div class="chat__messages">
+						<div class="chat__message chat__message--from">
+							<p>
+								Lorem ipsum dolor sit amet.
+							</p>
+							<div class="chat__message-info">
+								<p class="chat__message-time">20:00</p>
+								<p class="chat__message-user">Marco</p>
+							</div>
+						</div>
+						<div class="chat__message chat__message--from">
+							<p>
+								Lorem ipsum dolor sit amet.
+							</p>
+							<div class="chat__message-info">
+								<p class="chat__message-time">20:00</p>
+								<p class="chat__message-user">Marco</p>
+							</div>
+						</div>
+						<div class="chat__message chat__message--to">
+							<p>
+								Lorem ipsum dolor sit amet consectetur adipisicing elit.
+							</p>
+							<div class="chat__message-info">
+								<p class="chat__message-user">Julia</p>
+								<p class="chat__message-time">20:00</p>
+							</div>
+						</div>
+						<div class="chat__message chat__message--from">
+							<p>
+								Lorem ipsum dolor sit amet.
+							</p>
+							<div class="chat__message-info">
+								<p class="chat__message-time">20:00</p>
+								<p class="chat__message-user">Marco</p>
+							</div>
+						</div>
+						<div class="chat__message chat__message--to">
+							<p>
+								Lorem ipsum dolor sit amet consectetur adipisicing elit.
+							</p>
+							<div class="chat__message-info">
+								<p class="chat__message-user">Julia</p>
+								<p class="chat__message-time">20:00</p>
+							</div>
+						</div>
+
+						<div class="chat__message chat__message--from">
+							<p>
+								Lorem ipsum dolor sit amet.
+							</p>
+							<div class="chat__message-info">
+								<p class="chat__message-time">20:00</p>
+								<p class="chat__message-user">Marco</p>
+							</div>
+						</div>
+						<div class="chat__message chat__message--to">
+							<p>
+								Lorem ipsum dolor sit amet consectetur adipisicing elit.
+							</p>
+							<div class="chat__message-info">
+								<p class="chat__message-user">Julia</p>
+								<p class="chat__message-time">20:00</p>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="chat__input">
+						<form action="">
+							<input type="text" value="" class="input">
+							<div class="btn-wrp">
+								<button type="submit" class="btn">Send</button>
+							</div>
+						</form>
+					</div>
+				</div>
+
+				<div class="board__buttons">
+					<button class="btn">Share</button>
+
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

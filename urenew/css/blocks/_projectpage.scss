@@ -1,0 +1,261 @@
+.propage {
+	padding: 0;
+	&__all {
+		padding: 0;
+		.aboutus-precont {
+			ul {
+				margin-left: 30px;
+				margin-bottom: 20px;
+				margin-top: 10px;
+				li {
+					list-style-type: disc;
+				}
+			}
+		}
+		.sliced {
+			display: flex;
+			justify-content: space-between;
+			@include mediaTablet {
+				flex-direction: column-reverse;
+			}
+		}
+	}
+}
+.mt-30 {
+	margin-top: 30px;
+}
+#swiper-proj {
+	border-radius: 60px;
+	overflow: hidden;
+}
+.prop__picture {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	img {
+		width: 100vw;
+	}
+	&:before {
+		left: 0;
+		width: 50%;
+		height: 100%;
+		content: "";
+		display: block;
+		position: absolute;
+		background: linear-gradient(90deg, rgba(0, 0, 0, 0.84) 28.65%, rgba(0, 0, 0, 0) 100%);
+	}
+	&.v2 {
+		&:before {
+			display: none;
+		}
+	}
+}
+.promain_text {
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: flex;
+	height: 100%;
+	align-items: center;
+	width: 100%;
+	.container {
+		width: 100%;
+	}
+	.main__title {
+		display: flex;
+		flex-direction: column;
+		align-items: baseline;
+	}
+	.title-1 {
+		font-size: 64px;
+		margin-top: -80px;
+		width: auto;
+		display: inline-block;
+		@include mediaLaptop {
+			font-size: 47px;
+		}
+		@include mediaMobile {
+			font-size: 30px;
+		}
+		&_dop {
+			font-size: 20px;
+			color: #ffffff;
+			width: auto;
+			display: inline-block;
+			@include mediaMobile {
+				font-size: 17px;
+			}
+		}
+	}
+}
+.policy {
+	text-decoration: none !important;
+	font-weight: bold;
+}
+.projs {
+	.slice_left {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	img {
+		border-radius: 60px;
+		text-align: center;
+		margin: 50px 0;
+		@include mediaMobile {
+			border-radius: 30px;
+		}
+	}
+}
+.slice {
+	&_left {
+		max-width: 915px;
+		width: 70%;
+		&.w100 {
+			width: 100%;
+			max-width: none;
+		}
+		@include mediaTablet {
+			max-width: none;
+			width: 100%;
+		}
+		.main-slider {
+			position: relative;
+		}
+		.swiper-main-pag {
+			width: 100%;
+			position: absolute;
+			bottom: 30px;
+			z-index: 10;
+			display: flex;
+			justify-content: center;
+			.swiper-main-pagination {
+				display: flex;
+				justify-content: center;
+				flex-wrap: wrap;
+				width: 90%;
+				.swiper-pagination-bullet {
+					width: 10px;
+					height: 10px;
+					background-color: #ffffff;
+					margin-bottom: 10px;
+				}
+			}
+		}
+	}
+	&_right {
+		padding-top: 50px;
+		width: 27%;
+		@include mediaTablet {
+			width: 100%;
+		}
+	}
+}
+.sticky {
+	top: 10px;
+	border: 1px solid #000000;
+	border-radius: 30px;
+	@include mediaTablet {
+		position: relative !important;
+	}
+	&_in {
+		padding: 35px;
+		box-sizing: border-box;
+		@include mediaTablet {
+			padding-left: 20%;
+			padding-right: 20%;
+		}
+		@include mediaMobileD {
+			padding: 35px;
+		}
+	}
+	&_top {
+		display: flex;
+		justify-content: space-around;
+		padding-bottom: 5px;
+		border-bottom: 1px solid #000000;
+		font-size: 24px;
+	}
+	&_mon {
+		cursor: pointer;
+		&.active {
+			background-image: url("./../img/icons/ffact.svg");
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-position: center center;
+		}
+	}
+	&_cur {
+		position: relative;
+		width: 100%;
+		display: flex;
+		justify-content: space-around;
+		padding-bottom: 0px;
+		border-bottom: 1px solid #000000;
+		align-items: flex-end;
+		margin-top: 25px;
+	}
+	&_curr {
+		font-size: 67px;
+		min-width: 100px;
+		&::placeholder {
+			color: #000000;
+		}
+	}
+	&_dopc {
+		font-size: 40px;
+		color: #c8c8c8;
+		font-weight: bold;
+	}
+	&_chek {
+		display: flex;
+		justify-content: space-around;
+		margin: 10px 0 20px 0;
+	}
+	&_chekim {
+		font-size: 27px;
+		font-weight: bold;
+		border: 1px solid #000000;
+		border-radius: 75px;
+		padding: 7px 0;
+		width: 85px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		cursor: pointer;
+		&:hover {
+			color: #f5831f;
+			border-color: #ffc30d;
+		}
+		&.active {
+			color: #f5831f;
+			border-color: #ffc30d;
+		}
+		span {
+			color: #c8c8c8;
+			margin-left: 5px;
+		}
+	}
+}
+.shelterteam-item {
+	&.aboutus-ab-item {
+		padding: 0;
+		.btn-click-action {
+			color: #f5831f;
+			font-size: 14px;
+			text-align: right;
+			float: right;
+		}
+	}
+}
+.pupils-item {
+	&.aboutus-ab-item {
+		padding: 0;
+		.btn-click-action {
+			color: #f5831f;
+			font-size: 14px;
+			text-align: right;
+			float: right;
+		}
+	}
+}

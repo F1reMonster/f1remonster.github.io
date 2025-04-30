@@ -1,0 +1,196 @@
+/* stylelint-disable number-max-precision */
+/* stylelint-disable max-line-length */
+@use "sass:math";
+@use "sass:map";
+
+// міксини
+// ============== міксини для сітки ============== //
+// контейнер
+// @mixin container {
+// 	margin: 0 auto;
+// 	padding-right: $grid-gap-side;
+// 	padding-left: $grid-gap-side;
+// 	max-width: $container-max-width;
+// }
+
+// рядок сітки
+@mixin row {
+	display: flex;
+	flex-wrap: wrap;
+	margin-right: rem(-$grid-gap-side);
+	margin-left: rem(-$grid-gap-side);
+
+	> * {
+		margin-right: rem($grid-gap-side);
+		margin-left: rem($grid-gap-side);
+		width: 100%;
+		max-width: 100%;
+	}
+}
+
+// фіксована колонка
+@mixin col($size) {
+	flex: 0 0 auto;
+	width: calc(#{math.percentage(math.div($size, $grid-columns))} - #{rem($grid-gap)});
+}
+
+// медіа
+@mixin media($width) {
+	@media (min-width: $width) {
+		@content;
+	}
+}
+
+// контрольна точка
+@mixin bp($name) {
+	$width: map.get($grid-breakpoints, $name);
+
+	@include media($width) {
+		@content;
+	}
+}
+
+@mixin px($size) {
+	padding-top: rem($fontSizeDefault * ($size * 0.5));
+	padding-bottom: rem($fontSizeDefault * ($size * 0.5));
+}
+
+// ========================================== //
+// міксин для шрифтів
+// @mixin font($font_name, $file_name, $weight, $style) {
+// 	@font-face {
+// 		src:
+// 			url("../fonts/#{$file_name}.woff") format("woff"),
+// 			url("../fonts/#{$file_name}.woff2") format("woff2");
+// 		font-family: $font_name;
+// 		font-weight: #{$weight};
+// 		font-style: #{$style};
+// 		font-display: swap;
+// 	}
+// }
+
+// ========================================== //
+@mixin hover-supported {
+	// https://developer.mozilla.org/en-US/docs/Web/CSS/@media/pointer
+	// coarse: The primary input mechanism includes a pointing device of limited accuracy.
+
+	@media not all and (pointer: coarse) {
+		&:hover {
+			@content;
+		}
+	}
+}
+
+// адаптивний розмір напр.: @include adaptiveValue("font-size", 60, 20, 0)
+@mixin adaptiveCalcValue($property, $startSize, $minSize, $type) {
+	$addSize: $startSize - $minSize;
+
+	@if $type == 1 {
+		// тільки якщо менше контейнера
+		#{$property}: $startSize + px;
+
+		@media (max-width: #{$maxWidthContainer + px}) {
+			#{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}));
+		}
+	} @else if $type == 2 {
+		// тільки якщо більше контейнера
+		#{$property}: $startSize + px;
+
+		@media (min-width: #{$maxWidthContainer + px}) {
+			#{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
+		}
+	} @else {
+		//  завжди
+		#{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
+	}
+}
+
+@mixin adaptiveClampValue($property, $startValuePx, $minValuePx, $keepSize: 0) {
+	@if $startValuePx == 0 {
+		$startValuePx: 0.000001;
+	}
+
+	@if $minValuePx == 0 {
+		$minValuePx: 0.000001;
+	}
+
+	$minValueRem: math.div($minValuePx, $fontSizeDefault);
+	$maxValueRem: math.div($startValuePx, $fontSizeDefault);
+
+	$widthFrom: $containerWidth;
+	$widthTo: $minWidth;
+
+	// Формула плаваючого значення
+	// Джерело: https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/
+	$slope: math.div(($startValuePx - $minValuePx), ($widthFrom - $widthTo));
+	$yAxisIntersection: -$widthTo * $slope + $minValuePx;
+
+	@if $yAxisIntersection == 0 {
+		$yAxisIntersection: 0.000001;
+	}
+
+	$fluidValue: #{decimal-round((math.div($yAxisIntersection, $fontSizeDefault)), 4)}rem " + " #{decimal-round(($slope * 100), 4)}vw;
+
+	// для обчислення за допомогою calc()
+	$addSize: math.div($startValuePx - $minValuePx, 16);
+
+	// плаваюча величина
+	// значення властивості за замовчуванням
+	$propertyValue: clamp(#{$minValueRem + rem}, #{$fluidValue}, #{$maxValueRem + rem});
+
+	// якщо від'ємне значення
+	@if ($minValuePx > $startValuePx) {
+		$propertyValue: clamp(#{$maxValueRem + rem}, #{$fluidValue}, #{$minValueRem + rem});
+	}
+
+	@if $keepSize != 1 and $keepSize != 3 {
+		@media (min-width: em($widthFrom)) {
+			#{$property}: rem($startValuePx);
+		}
+	}
+
+	@media (min-width: em($widthTo)) and (max-width: em($widthFrom)) {
+		@supports (#{$property}: #{$propertyValue}) {
+			#{$property}: #{$propertyValue};
+		}
+
+		@supports not (#{$property}: #{$propertyValue}) {
+			#{$property}: calc(#{rem($minValuePx)} + #{$addSize} * (100vw - #{rem($widthTo)}) / #{math.div($maxWidthContainer, 16) - math.div($widthTo, 16)});
+		}
+	}
+
+	@if $keepSize != 1 and $keepSize != 2 {
+		@media (max-width: em($widthTo)) {
+			#{$property}: rem($minValuePx);
+		}
+	}
+}
+
+// Mixin
+@mixin vw($property, $sizeStartPx, $unit: 0) {
+	$wide-screen: "(min-width: #{em($containerWidth)})";
+
+	#{$property}: get-vw($sizeStartPx);
+	// Prevent font-size from getting too big
+
+	@if ($unit == 0) {
+		$unit: "px";
+		@media #{$wide-screen} {
+			#{$property}: #{$sizeStartPx}#{$unit};
+		}
+	}
+
+	@if ($unit == 1) {
+		$unit: "rem";
+		@media #{$wide-screen} {
+			#{$property}: #{math.div($sizeStartPx, $fontSizeDefault)}#{$unit};
+		}
+	}
+}
+
+@mixin line-clamp($line-number: 3) {
+	display: -webkit-box;
+	-webkit-line-clamp: $line-number;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+}

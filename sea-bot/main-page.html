@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>SeaBot - Main page</title>
+		<link rel="shortcut icon" href="img/svg/logo-little.svg" type="image/x-icon" />
+		<link rel="stylesheet" href="css/style.min.css?_v=20221024183154" />
+	</head>
+
+	<body>
+		<div class="body-wrapper">
+			<div class="preloader">
+	<div class="preloader-content">
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+	</div>
+</div>
+ 
+			<!-- header -->
+<header class="header">
+	<div class="container">
+		<div class="header__wrapper">
+			<div class="header__logo">
+				<a href="/" class="header__logo-full">
+					<img src="img/svg/logo.svg" alt="logo" />
+				</a>
+				<a href="/" class="header__logo-fixed">
+					<img src="img/svg/logo-little.svg" alt="logo" />
+				</a>
+			</div>
+			<div class="header__action">
+				<button data-modal="modalCountactUs" class="btn btn-primary header__action-item">
+					<svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M22.9168 8.96675V17.448C22.9169 18.3127 22.586 19.1447 21.9922 19.7732C21.3983 20.4018 20.5864 20.7793 19.7231 20.8282L19.5314 20.8334H5.46891C4.60419 20.8335 3.77222 20.5026 3.14367 19.9088C2.51513 19.3149 2.13766 18.503 2.0887 17.6397L2.0835 17.448V8.96675L12.1377 14.2334C12.2495 14.292 12.3739 14.3226 12.5002 14.3226C12.6264 14.3226 12.7508 14.292 12.8627 14.2334L22.9168 8.96675ZM5.46891 4.16675H19.5314C20.3706 4.16665 21.1798 4.4782 21.8023 5.04098C22.4247 5.60377 22.816 6.37767 22.9002 7.21258L12.5002 12.6605L2.10016 7.21258C2.18092 6.41082 2.54501 5.66416 3.12699 5.10681C3.70896 4.54947 4.47066 4.21798 5.27516 4.17196L5.46891 4.16675H19.5314H5.46891Z" fill="#072E5C" />
+					</svg>
+				</button>
+				<a href="#" class="btn btn-secondary header__action-item header-menu">
+					<svg width="25" height="18" viewBox="0 0 25 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path
+							fill-rule="evenodd"
+							clip-rule="evenodd"
+							d="M20.444 17.5558C18.1769 18.3164 14.7727 18.4136 11.2118 15.2621L11.2102 15.2607C8.97917 13.2802 7.09641 13.3055 5.77821 13.7149C5.07918 13.9321 4.49412 14.2743 4.07019 14.5791C3.65774 14.8757 3.42331 15.1183 3.41426 15.1277C3.41401 15.1279 3.41394 15.128 3.41403 15.1279L3.37209 15.1725L3.3264 15.2131C2.89503 15.5962 2.29732 15.8005 1.67061 15.668C1.06199 15.5394 0.613109 15.1344 0.347223 14.6852C0.0821663 14.2374 -0.0246815 13.7184 0.00473934 13.2264C0.0340858 12.7356 0.202508 12.2233 0.54125 11.8076L0.59028 11.7474L0.645667 11.6934C1.78184 10.5847 3.09448 9.76513 4.51491 9.3075C5.39518 9.01164 6.30492 8.86093 7.22149 8.86201C9.18836 8.86221 11.4469 9.56121 13.7484 11.602L13.749 11.6025C15.9801 13.583 17.8628 13.5577 19.181 13.1483C19.88 12.9311 20.4651 12.5888 20.889 12.2841C21.3015 11.9875 21.5359 11.7448 21.545 11.7355C21.5452 11.7352 21.5453 11.7352 21.5452 11.7353L21.5504 11.7297L21.5557 11.7243C21.9654 11.2979 22.5713 11.0304 23.2384 11.136C23.8889 11.239 24.3718 11.6599 24.6522 12.1306L24.6561 12.1371L24.6561 12.1372C24.9323 12.6067 25.0355 13.1543 24.9894 13.6688C24.9436 14.1812 24.7434 14.7184 24.3501 15.1328L24.3322 15.1516L24.3136 15.1698C23.1773 16.2786 21.8645 17.0982 20.444 17.5558ZM7.22149 8.86201C7.22177 8.86201 7.22205 8.86201 7.22233 8.86201L7.22066 10.2349L7.22066 8.86201C7.22094 8.86201 7.22122 8.86201 7.22149 8.86201ZM20.4439 8.6938C18.1769 9.45443 14.7727 9.55159 11.2118 6.40005L11.2102 6.39871C8.97917 4.41815 7.09641 4.44348 5.77821 4.85292C5.07918 5.07005 4.49412 5.41233 4.07019 5.71712C3.65773 6.01366 3.4233 6.25632 3.41426 6.26568C3.41401 6.26594 3.41394 6.26602 3.41403 6.26592L3.37209 6.31054L3.3264 6.35111C2.89503 6.73415 2.29732 6.93852 1.67061 6.80604C1.06199 6.67739 0.613107 6.2724 0.347222 5.82318C0.0821656 5.37536 -0.0246822 4.85644 0.00473857 4.3644C0.034085 3.87361 0.202508 3.36127 0.541249 2.9456L0.590279 2.88544L0.645667 2.83139C1.78183 1.7227 3.09446 0.903135 4.51488 0.445511C5.39489 0.14973 6.30436 -0.000976835 7.22066 5.36902e-06M20.4439 8.6938C21.8645 8.2362 23.1773 7.41659 24.3136 6.30779L24.369 6.25373L24.418 6.19357C24.7567 5.77791 24.9251 5.26557 24.9545 4.77477C24.9839 4.28273 24.8771 3.7638 24.612 3.31599C24.3461 2.86676 23.8972 2.46179 23.2886 2.33313C22.6619 2.20065 22.0642 2.40503 21.6328 2.78806L21.5871 2.82863L21.5452 2.87325C21.5453 2.87315 21.5452 2.87323 21.545 2.87349C21.5359 2.88283 21.3015 3.1255 20.889 3.42206C20.4651 3.72684 19.88 4.06913 19.181 4.28625C17.8628 4.6957 15.9801 4.72103 13.749 2.74047L13.7484 2.73996C11.4469 0.699207 9.18836 0.000201654 7.22149 5.36894e-06"
+							fill="#05B7EF"
+						/>
+					</svg>
+				</a>
+			</div>
+		</div>
+		<!--  header menu -->
+<div class="header__menu">
+	<div class="header__menu-close">
+		<img src="img/svg/close.svg" alt="close" />
+	</div>
+	<ul>
+		<li>
+			<a href="#about">about</a>
+		</li>
+		<li>
+			<a href="#advantages">advantages</a>
+		</li>
+		<li>
+			<a href="#tariffs">tariffs</a>
+		</li>
+		<li>
+			<a href="#whomFor">whom for</a>
+		</li>
+		<li>
+			<a href="#hiw">how works</a>
+		</li>
+		<li>
+			<a href="">payment</a>
+		</li>
+		<li>
+			<a href="#contact">contact us</a>
+		</li>
+	</ul>
+</div>
+<!-- ./header menu -->
+	</div>
+</header>
+<!-- ./header -->
+
+			<!-- block__hero -->
+<section  class="block block__hero">
+	<img class="block__background block__background--hero" src="img/svg/bg-1.svg" alt="bg">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6">
+				<h1 id="about" class="block__title block__title--hero">Emp<span></span>wer your<br />Telegram-group!</h1>
+				<p>Manage your corporate groups from a single web interface: approve and disapprove users, mass upload and download information about members and their companies, send individual messages to members.</p>
+				<p>Let members know who they are communicating with in your groups and help them navigate between your groups.</p>
+				<button data-modal="modalTryDemo" class="btn btn-primary btn-hero">try demo</button>
+			</div>
+			<div class="col-lg-6">
+				<div class="block__hero-image">
+					<img src="img/hero.png" title="Hero Image" alt="hero" loading="lazy">
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- ./block__hero -->
+
+			<!-- block__advantages -->
+<section  class="block block__advantages">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-5 col-md-6">
+				<h4 class="block__subtitle block__subtitle--drops6x">Our advantages</h4>
+				<h2 id="advantages" class="block__title">
+					Which problems<br />
+					does SCB solve?
+				</h2>
+
+				<ul class="block__advantages-tab-titles">
+					<li class="tab-title active">Understand who you are chatting with</li>
+					<li class="tab-title">Find the contact you need</li>
+					<li class="tab-title">Effective сhat management</li>
+				</ul>
+			</div>
+			<div class="col-lg-7 col-md-6">
+				<div class="block__advantages-tab-contents">
+					<div class="tab-content active">
+						<h6>Understand who you are chatting with</h6>
+						<p>With SCB your groups’ members can stay anonymous on Telegram in general (hide their phone number, photo, first and last name, and their Telegram username) but they will nonetheless be able to identify who is who in your groups. When members know each other (first name, last name, company and position at this company), greater trust is fostered in B2B communication.</p>
+					</div>
+
+					<div class="tab-content">
+						<h6>Find the contact you need</h6>
+						<p>
+							With SCB your groups’ members can find information about each other by using a Telegram username, company website, or by forwarding any member’s message to SBC.
+
+						</p>
+					</div>
+
+					<div class="tab-content">
+						<h6>Effective сhat management</h6>
+						<p>With SCB you can control your groups with a single control panel: approve/disapprove users, mass upload and download information about members, or send individual messages to members.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- ./block__advantages -->
+
+			<!-- block__tariffs -->
+<section class="block block__tariffs">
+	<div class="container">
+		<h2 id="tariffs" class="block__title block__title--center"><i><b>T</b></i>ariffs</h2>
+		<div class="clock__content block__content--tariffs">
+			<div class="row">
+				<div class="col-lg-4 col-sm-6">
+					<div class="card">
+						<div class="card__bg card__bg--1"></div>
+						<div class="card__body">
+							<h5 class="card__title">standart</h5>
+							<h4 class="card__price">$8/month</h4>
+							<ul class="card__info">
+								<li>15-day trial period</li>
+								<li>All functions</li>
+							</ul>
+							<div class="card__btns">
+								<button data-modal="modal-learn-tariff-standart8" class="btn btn-light tariff-standart">learn more</=>
+								<button data-modal="modalTryDemo8" class="btn btn-secondary">try demo</=>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-sm-6">
+					<div class="card card--recommended">
+						<div class="card__bg card__bg--2"></div>
+						<div class="card__body">
+							<h5 class="card__title">standart</h5>
+							<h4 class="card__price">$80/year</h4>
+							<ul class="card__info">
+								<li>Savings of <span>$16/year</span></li>
+								<li>15-day trial period</li>
+								<li>All functions</li>
+							</ul>
+							<div class="card__btns">
+								<button data-modal="modal-learn-tariff-standart80" class="btn btn-light tariff-standart2">learn more</button>
+								<button data-modal="modalTryDemo80" class="btn btn-secondary">try demo</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-sm-6">
+					<div class="card">
+						<div class="card__bg card__bg--3"></div>
+						<div class="card__body">
+							<h5 class="card__title">Corporate</h5>
+							<h4 class="card__price">Price on demand</h4>
+							<ul class="card__info">
+								<li>Customize SCB</li>
+								<li>Meet your needs</li>
+								<li>ALL functions + add YOURS</li>
+								
+							</ul>
+							<div class="card__btns">
+								<!-- <a href="#" data-modal="modal-learn-tariff-corporate" class="btn btn-light tariff-corporate">learn more</a> -->
+								<button data-modal="modalContactCorporate" class="btn btn-secondary">Contact Us</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</section>
+
+<!-- ./block__tariffs -->
+			<!-- block__users -->
+<section  class="block block__users">
+	<div class="container">
+		<h4 id="whomFor" class="block__subtitle block__subtitle--drops6x">Our users</h4>
+		<div class="block__content block__content--users">
+			<div class="row">
+				<div class="col-lg-5 col-md-6">
+					<h2 class="block__title">Who is SCB for?</h2>
+					<p class="block__users-text">
+						SCB is a powerful tool for moderation<br />
+						and group management in Telegram.
+					</p>
+				</div>
+	
+				<div class="col-lg-5 col-md-6">
+					<div class="card-users">
+						<div class="card-users__icon">
+							<img src="img/bussines.png" title="Business associations" alt="Business associations" loading="lazy" />
+						</div>
+						<div class="card-users__title">Business associations</div>
+						<div class="card-users__info">
+							<h6 class="card-users__info-title">Business associations</h6>
+							<p class="card-users__info-content">who use Telegram for their corporate communications in private groups with association members.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-2"></div>
+				<div class="col-lg-5 col-md-6">
+					<div class="card-users">
+						<div class="card-users__icon">
+							<img src="img/commercial.png" title="Commercial" alt="Commercial" loading="lazy" />
+						</div>
+						<div class="card-users__title">Commercial companies</div>
+						<div class="card-users__info">
+							<h6 class="card-users__info-title">Commercial companies</h6>
+							<p class="card-users__info-content">who use Telegram for their corporate communications in private groups with employees, clients, partners.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-5 col-md-6">
+					<div class="card-users">
+						<div class="card-users__icon">
+							<img src="img/group-admins.png" title="Group admins" alt="Group admins" loading="lazy" />
+						</div>
+						<div class="card-users__title">Group admins</div>
+						<div class="card-users__info">
+							<h6 class="card-users__info-title">Group admins</h6>
+							<p class="card-users__info-content"></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- ./block__users -->
+
+			<!-- block__howitworks -->
+<section  class="block block__howitworks">
+	<img class="block__background block__background--howitwork" src="img/svg/bg-2.svg" alt="bg" />
+	<div class="container">
+		<h2 id="hiw" class="block__title block__title--center">
+			<i><b>H</b></i>ow does it work?
+		</h2>
+		<div class="block__content block__content--howitworks">
+			<div class="row row-content">
+				<div class="col-md-6">
+					<div class="block__howitworks-item">
+						<ul>
+							<li></li>
+						</ul>
+						<h4 class="block__howitworks-title">Request demo.</h4>
+						<p class="block__howitworks-text">
+							We will send you access to SCB<br />
+							and the web interface.
+						</p>
+					</div>
+					<div class="block__howitworks-item">
+						<ul>
+							<li></li>
+							<li></li>
+						</ul>
+						<h4 class="block__howitworks-title">Add SCB to your groups.</h4>
+						<p class="block__howitworks-text">
+							Test all functions during the 15 days,<br />
+							free of charge.
+						</p>
+					</div>
+					<div class="block__howitworks-item">
+						<ul>
+							<li></li>
+							<li></li>
+							<li></li>
+						</ul>
+						<h4 class="block__howitworks-title">Choose plan.</h4>
+						<p class="block__howitworks-text">
+							Pay for a subscription and enjoy,<br />
+							or request a modification to SCB.
+						</p>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="block__howitworks-item">
+						<div class="block__howitworks-image">
+							<img src="img/how-does-it-work.png" title="howitworks image" alt="howitworks-image" loading="lazy" />
+						</div>
+						<div class="block__btns">
+							<!-- <div class="col-sm-6">
+								<a href="" data-modal="read guide" class="btn btn-secondary watch-video">
+									<span>watch video</span>
+									<svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M9.43911 7.85574V15.7297C9.43911 16.1909 9.96176 16.4609 10.3287 16.1797L15.5218 12.2427C15.822 12.0177 15.822 11.5678 15.5218 11.3428L10.3287 7.40579C10.2461 7.34312 10.1479 7.30496 10.045 7.29558C9.94221 7.2862 9.83882 7.30597 9.74646 7.35269C9.65411 7.3994 9.57644 7.4712 9.52215 7.56005C9.46787 7.6489 9.43911 7.75129 9.43911 7.85574ZM10.5511 1.92775C10.5511 1.20785 9.89504 0.656668 9.20559 0.814148C7.96014 1.10661 6.78141 1.60155 5.73613 2.27646C5.14676 2.65891 5.0578 3.5138 5.55821 4.01998C5.91405 4.37994 6.48117 4.46992 6.90373 4.19996C7.75998 3.64878 8.70519 3.24383 9.72823 3.01886C10.2175 2.90638 10.5511 2.44519 10.5511 1.92775ZM3.99027 5.61728C3.47875 5.11109 2.64475 5.18983 2.26666 5.79725C1.59946 6.85462 1.11018 8.04696 0.821053 9.3068C0.665372 10.0042 1.19914 10.6679 1.91082 10.6679C2.41122 10.6679 2.87827 10.3304 2.97835 9.83548C3.20075 8.81186 3.61219 7.84449 4.14596 6.9896C4.43508 6.5509 4.34612 5.97723 3.99027 5.61728ZM1.91082 12.9176C1.19914 12.9176 0.654252 13.5812 0.809933 14.2787C1.09905 15.5385 1.58834 16.7196 2.25554 17.7882C2.63363 18.3956 3.47875 18.4744 3.97916 17.9682C4.335 17.6082 4.42396 17.0345 4.14596 16.6071C3.60107 15.7522 3.20075 14.7961 2.97835 13.7612C2.87827 13.255 2.42234 12.9176 1.91082 12.9176ZM5.73613 21.2977C6.79253 21.9727 7.96014 22.4676 9.20559 22.7601C9.89504 22.9175 10.5511 22.3664 10.5511 21.6577C10.5511 21.1515 10.2175 20.6791 9.72823 20.5778C8.73008 20.3513 7.77824 19.9517 6.91486 19.3967C6.70399 19.2668 6.45549 19.2137 6.21068 19.2465C5.96588 19.2792 5.73954 19.3958 5.56933 19.5767C5.4493 19.6913 5.35679 19.8321 5.29891 19.9885C5.24103 20.1448 5.21931 20.3125 5.23541 20.4786C5.25152 20.6448 5.30502 20.805 5.39181 20.9469C5.4786 21.0889 5.59639 21.2089 5.73613 21.2977ZM22.7832 11.7927C22.7832 17.1133 19.1136 21.5902 14.1874 22.7488C13.4979 22.9175 12.8307 22.3664 12.8307 21.6464C12.8307 21.129 13.1755 20.6791 13.6647 20.5553C17.6124 19.633 20.5592 16.0559 20.5592 11.7927C20.5592 7.52953 17.6124 3.95249 13.6647 3.03011C13.1755 2.91763 12.8307 2.45644 12.8307 1.939C12.8307 1.2191 13.4979 0.667917 14.1874 0.836645C19.1136 1.99524 22.7832 6.47216 22.7832 11.7927Z" fill="white"/>
+										</svg>
+										
+								</a>
+							</div> -->
+							<!-- <div class="col-sm-6">
+								<a href="" data-modal="modalReadGuide" class="btn btn-secondary read-guide">read guide</a>
+							</div> -->
+							<a href="" data-modal="modalReadGuide" class="btn btn-secondary read-guide">read guide</a>
+
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- ./block__howitworks -->
+
+			<!-- block__faq -->
+<section id="faq" class="block block__faq">
+	<div class="container">
+		<h2 class="block__title block__title--center block__title--faq">
+			<i><b>F<u>A</u>Q</b></i>
+			for members
+		</h2>
+		<div class="block__content block__content--faq">
+			<div class="block__faq-item">
+				<h5 class="block__title block__title--faq">If I enter data through SCB, will it change in my Telegram account?</h5>
+				<p class="block__faq-content">No, it won't. When you register in Telegram, then in the account settings you yourself provide your username, first name, last name, description and visibility of the phone. When you enter data about yourself through SCB, this data is not recorded in Telegram, but in the SCB database, and exists separately from Telegram data. Thus, you can be incognito for all external users, but for those who are in your company groups you will be who you are in your company, which increases transparency and trust in business communication.</p>
+			</div>
+			<div class="block__faq-item">
+				<h5 class="block__title block__title--faq">Where is my data stored?</h5>
+				<p class="block__faq-content">The data is stored on a SCB server.</p>
+			</div>
+			<div class="block__faq-item">
+				<h5 class="block__title block__title--faq">Who can search for me through SCB?</h5>
+				<p class="block__faq-content">You can be found by other group members who previously left data about themselves through the same SCB or who are in the same company groups as you and SCB. For other users, SCB is not available and external requests through SCB will not give out your data.</p>
+			</div>
+			<div class="block__faq-item">
+				<h5 class="block__title block__title--faq">What happens if I leave a group in which SCB is present or if I am excluded from it?</h5>
+				<p class="block__faq-content">In this case, for SCB you will turn into an external user and will not be able to find anyone through SCB, just like other members will not be able to find anything about you through SCB.</p>
+			</div>
+			<div class="block__faq-item">
+				<h5 class="block__title block__title--faq">Can any user add SCB to their own group and thus gain access to its functionality?</h5>
+				<p class="block__faq-content">No, activating a SCB in non-whitelisted groups is prohibited. The SCB admin manually activates SCB functionality for each group where there is SCB. Automatic activation of SCB in third-party groups is not possible, which prevents it from being used by third parties.</p>
+			</div>
+			<div class="block__faq-item">
+				<h5 class="block__title block__title--faq">If I enter data through SCB, will it change in my Telegram account?</h5>
+				<p class="block__faq-content">No, it won't. When you register in Telegram, then in the account settings you yourself provide your username, first name, last name, description and visibility of the phone. When you enter data about yourself through SCB, this data is not recorded in Telegram, but in the SCB database, and exists separately from Telegram data. Thus, you can be incognito for all external users, but for those who are in your company groups you will be who you are in your company, which increases transparency and trust in business communication.</p>
+			</div>
+			<div class="block__faq-item">
+				<h5 class="block__title block__title--faq">I don't want anyone searching for me through SCB</h5>
+				<p class="block__faq-content">You need to delete information about yourself if you previously left it through SCB. To do this, contact the admin SCB. After deletion, you will not be able to search for other people, but if you change your mind, you can easily restore your data yourself and continue to use the functionality of SCB.</p>
+			</div>
+			<div class="block__faq-item">
+				<h5 class="block__title block__title--faq">Why do I get "No results found" when searching?</h5>
+				<p class="block__faq-content">Such a response can be received in a situation where the information you are looking for is not contained in the database, but this does not mean that the person you are looking for is not among the members of a company group. Most likely, the person did not enter information about himself through SCB. Otherwise, you will receive such a response when you leave all your groups where SCB is present. It will continue to work for you, but you will not be able to find anything through SCB.</p>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- ./block__faq -->
+
+			<footer id="contact" class="footer">
+	<div class="container">
+		<div class="footer__top">
+			<div class="row">
+				<div class="col-md-5">
+					<h2 class="block__title block__title--footer">Contact us</h2>
+					<form>
+						<div class="form__group">
+							<input type="text" class="form__control" placeholder="Name *" required />
+						</div>
+						<div class="form__group">
+							<input type="email" class="form__control" placeholder="Email *" required />
+						</div>
+
+						<button type="submit" class="btn btn-footer-submit">send</button>
+					</form>
+				</div>
+				<div class="col-md-7 footer-image">
+					<div class="footer__image">
+						<img src="img/contacts.png" title="Footer Image" alt="img" loading="lazy" />
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer__middle">
+			<div class="row">
+				<div class="col-md-9">
+					<ul class="footer__menu">
+						<li>
+							<a href="#advantages">advantages</a>
+							<img src="img/svg/drop-little.svg" alt="drop" />
+						</li>
+						<li>
+							<a href="#tariffs">tariffs</a>
+							<img src="img/svg/drop-little.svg" alt="drop" />
+						</li>
+						<li>
+							<a href="#whomFor">whom for</a>
+							<img src="img/svg/drop-little.svg" alt="drop" />
+						</li>
+						<li>
+							<a href="#hiw">how works</a>
+							<img src="img/svg/drop-little.svg" alt="drop" />
+						</li>
+						<li>
+							<a href="#">payment</a>
+							<img src="img/svg/drop-little.svg" alt="drop" />
+						</li>
+					</ul>
+				</div>
+				<div class="col-md-3">
+					<div class="footer__payment">
+						<div class="footer__payment-group">
+							<div class="footer__payment-item">
+								<img src="img/svg/paypal.svg" alt="paypal" />
+							</div>
+							<div class="fiiter__payment-item">
+								<img src="img/svg/apple-pay.svg" alt="apple pay" />
+							</div>
+						</div>
+						<div class="footer__payment-group">
+							<div class="footer__payment-item">
+								<img src="img/svg/g-pay.svg" alt="gogole pay" />
+							</div>
+							<div class="fiiter__payment-item">
+								<img src="img/svg/visa.svg" alt="visa" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer__bottom">
+			<div class="row">
+				<div class="col-sm-9">
+					<div class="row">
+						<div class="col-sm-6">
+							<div class="footer__bottom-item footer__bottom-item--copy">
+								<p><span>© 2022 sea contact bot</span></p>
+								
+							</div>
+						</div>
+						<div class="col-sm-6">
+							<div class="footer__bottom-item footer__bottom-item--dev">
+								<p>Developed by <a href="">Piramis.dev</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-3">
+					<div class="footer__bottom-item footer__bottom-item--payment-system">
+						<p>Convenient Payment System</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+
+			<button class="btn btn-arrow-up">
+	<svg width="30" height="18" viewBox="0 0 30 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<path d="M29.3397 17.3117C28.9167 17.7524 28.3431 18 27.7451 18C27.147 18 26.5735 17.7524 26.1505 17.3117L14.9864 5.67462L3.82223 17.3117C3.39686 17.7399 2.82714 17.9769 2.23579 17.9715C1.64443 17.9662 1.07875 17.7189 0.660585 17.283C0.24242 16.8472 0.00522598 16.2575 8.75318e-05 15.6411C-0.00505283 15.0247 0.222278 14.4309 0.633115 13.9875L13.3918 0.68832C13.8148 0.247591 14.3883 1.36481e-06 14.9864 1.31253e-06C15.5844 1.26025e-06 16.158 0.24759 16.5809 0.688319L29.3397 13.9875C29.7625 14.4283 30 15.0262 30 15.6496C30 16.273 29.7625 16.8708 29.3397 17.3117Z" fill="#072E5C"/>
+		</svg>
+		
+</button>
+			
+		</div>
+		
+		
+		<!--  modal contact us -->
+<div id="modalCountactUs" class="modal" style="display: none">
+	<div class="modal__wrapper">
+		<h2 class="block__title block__title--center">Contact us</h2>
+		<p>Please, fill in this form and we will contact with you as soon as possible.</p>
+		<form>
+			<input type="text" name="form_name" hidden value="Contact us" />
+			<div class="form__group">
+				<input type="text" class="form__control" name="user_name" placeholder="Name *" required />
+			</div>
+			<div class="form__group">
+				<input type="email" class="form__control" name="user_email" placeholder="Email *" required />
+			</div>
+			<div class="form__group">
+				<label class="form__checkbox-label">
+					<!-- <span class="form__checkbox-div">
+						<input type="checkbox" class="form__checkbox-input" checked />
+						<span class="form__checkbox-box"></span>
+					</span> -->
+
+					<span class="form__checkbox-content">
+						<span class="form__checkbox-description"> We will only use this data to contact you, no advertising</span>
+					</span>
+				</label>
+			</div>
+
+			<button type="submit" class="btn btn-secondary btn-submit">send</button>
+		</form>
+	</div>
+</div>
+<!--  ./modal contact us -->
+
+<!--  modal read guide -->
+<div id="modalReadGuide" class="modal" style="display: none">
+	<div class="modal__wrapper">
+		<h2 class="block__title block__title--center">Read guide</h2>
+		<p>Please, fill in this form and we will contact with you as soon as possible.</p>
+		<form>
+			<input type="text" name="form_name" hidden value="Read guide" />
+			<div class="form__group">
+				<input type="text" class="form__control" name="user_name" placeholder="Name *" required />
+			</div>
+			<div class="form__group">
+				<input type="email" class="form__control" name="user_email" placeholder="Email *" required />
+			</div>
+			<div class="form__group">
+				<label class="form__checkbox-label">
+					<!-- <span class="form__checkbox-div">
+						<input type="checkbox" class="form__checkbox-input" checked />
+						<span class="form__checkbox-box"></span>
+					</span> -->
+
+					<span class="form__checkbox-content">
+						<span class="form__checkbox-description"> We will only use this data to contact you, no advertising</span>
+					</span>
+				</label>
+			</div>
+
+			<button type="submit" class="btn btn-secondary btn-submit">send</button>
+		</form>
+	</div>
+</div>
+<!--  ./modal read guide -->
+
+<!--  modal watch video -->
+<div id="modalWatchVideo" class="modal modal--video" style="display: none">
+	<div class="modal__wrapper">
+		<h2 class="block__title block__title--center">Watch video</h2>
+		<p>In this video you will see how easy and convenient it is to use our chat bot.</p>
+		<div class="modal__video">
+			<video loop id="video1" poster="img/video-poster.png">
+				<source src="files/mixkit-checking-an-item-on-a-sales-site-on-a-cell-42123.webm" type="video/webm" />
+			</video>
+			<button class="video-btn" data-video="video1"><img src="img/svg/video-play.svg" alt="play" /></button>
+			<button class="video-fullscreen" data-video="video1"><img src="img/svg/video-fullscreen.svg" alt="play" /></button>
+		</div>
+	</div>
+</div>
+<!--  ./modal watch video -->
+
+<!-- learn more tariff standart -->
+<div id="modal-learn-tariff-standart8" class="modal modal--tariff" style="display: none">
+	<div class="modal__background modal__background--bg1">
+		<img class="" src="img/svg/modal-bg1.svg" alt="bg" />
+	</div>
+	<div class="modal__background modal__background--android">
+		<img class="" src="img/andoid-head.png" alt="bg" />
+	</div>
+
+	<div class="modal__wrapper">
+		<div class="row">
+			<div class="col-sm-12">
+				<h2 class="block__title block__title--modal block__title--modal-drop">
+					<i><b>S</b></i
+					>tandart
+				</h2>
+				<div class="modal__text-content">
+					<ul>
+						<li>Find information about a group member by sending his Telegram message to SCB
+						</li>
+						<li>Search for group members by company website
+						</li>
+						<li>Search for group members by Telegram username</li>
+						<li>Members can edit information about themselves (first name, last name, company website, position at the company)</li>
+						<li>Navigate groups. SCB shows which groups members can join and gives them the opportunity to apply for membership. It also shows members their status in each such group (pending; member; blocked)</li>
+						<li>Make it so that SCB can be activated in certain groups only.</li>
+						<li>Make SCB work only for members of the same group where the SCB is.</li>
+						<li>Each new group member is immediately introduced by SCB to other group members after being added.</li>
+						<li>Blacklist group members. These members can’t use SCB for searching information about other members in your groups.</li>
+						<li>Multigroup. Use the same SCB in more than one group simultaneously.</li>
+						<li>Approve/disapprove new group members using a single admin control panel.</li>
+						<li>Admin members to SCB registration by whitelisting (verified) company websites.</li>
+						<li>Mass messaging via SCB to members with a verified website.</li>
+						<li>Mass upload and download of company list (website, name, city, link to company profile on association website).</li>
+						<li>Mass upload and download of member list (first name, last name, position, company website, Telegram ID, group IDs the user is a member of).</li>
+						<li>Enrich the information with additional data on companies and participants pre-loaded into the database.</li>
+						<li>Edit the SCB individual welcome message (once the participant is verified and added to the database, the participant will receive a message that can be edited, such as a description of available groups or rules).</li>
+						
+					</ul>
+				</div>
+			</div>
+			
+			<div class="row-bottom"></div>
+		</div>
+
+	</div>
+	<div class="modal__btns">
+		<a href="#" class="show-all">show all</a>
+		<button data-modal="modalTryDemo8" class="btn btn-secondary">try demo</button>
+	</div>
+</div>
+<!-- ./learn more tariff standart -->
+
+<!-- learn more tariff standart80 -->
+<div id="modal-learn-tariff-standart80" class="modal modal--tariff" style="display: none">
+	<div class="modal__background modal__background--bg1">
+		<img class="" src="img/svg/modal-bg1.svg" alt="bg" />
+	</div>
+	<div class="modal__background modal__background--android">
+		<img class="" src="img/andoid-head.png" alt="bg" />
+	</div>
+	<div class="modal__wrapper">
+		<div class="row">
+			<div class="col-sm-12">
+				<h2 class="block__title block__title--modal block__title--modal-drop">
+					<i><b>S</b></i
+					>tandart
+				</h2>
+				<div class="modal__text-content">
+					<ul>
+						<li>Find information about a group member by sending his Telegram message to SCB
+						</li>
+						<li>Search for group members by company website
+						</li>
+						<li>Search for group members by Telegram username</li>
+						<li>Members can edit information about themselves (first name, last name, company website, position at the company)</li>
+						<li>Navigate groups. SCB shows which groups members can join and gives them the opportunity to apply for membership. It also shows members their status in each such group (pending; member; blocked)</li>
+						<li>Make it so that SCB can be activated in certain groups only.</li>
+						<li>Make SCB work only for members of the same group where the SCB is.</li>
+						<li>Each new group member is immediately introduced by SCB to other group members after being added.</li>
+						<li>Blacklist group members. These members can’t use SCB for searching information about other members in your groups.</li>
+						<li>Multigroup. Use the same SCB in more than one group simultaneously.</li>
+						<li>Approve/disapprove new group members using a single admin control panel.</li>
+						<li>Admin members to SCB registration by whitelisting (verified) company websites.</li>
+						<li>Mass messaging via SCB to members with a verified website.</li>
+						<li>Mass upload and download of company list (website, name, city, link to company profile on association website).</li>
+						<li>Mass upload and download of member list (first name, last name, position, company website, Telegram ID, group IDs the user is a member of).</li>
+						<li>Enrich the information with additional data on companies and participants pre-loaded into the database.</li>
+						<li>Edit the SCB individual welcome message (once the participant is verified and added to the database, the participant will receive a message that can be edited, such as a description of available groups or rules).</li>
+						
+					</ul>
+				</div>
+			</div>
+			<div class="row-bottom"></div>
+		</div>
+	</div>
+	<div class="modal__btns">
+		<a href="#" class="show-all">show all</a>
+		<button data-modal="modalTryDemo80" class="btn btn-secondary">try demo</button>
+	</div>
+</div>
+<!-- ./learn more tariff standart80 -->
+
+<!-- learn more tariff corporate -->
+<div id="modal-learn-tariff-corporate" class="modal modal--tariff" style="display: none">
+	<div class="modal__background modal__background--bg2">
+		<img class="" src="img/svg/modal-bg2.svg" alt="bg" />
+	</div>
+	<div class="modal__background modal__background--android">
+		<img class="" src="img/andoid-head.png" alt="bg" />
+	</div>
+
+	<div class="modal__wrapper">
+		<div class="row">
+			<div class="col-sm-6">
+				<h2 class="block__title block__title--modal">standart</h2>
+				<div class="modal__text-content">
+					<ul>
+						<li>Make it so that SCB can be activated in certain groups only.</li>
+						<li>Make SCB work only for members of the same group where the SCB is.</li>
+						<li>Approve/disapprove new group members using a single admin control panel.</li>
+						<li>Admit members to SCB registration by whitelisting (verified) company websites.</li>
+						<li>Mass messaging via SCB to members with a verified website.</li>
+						<li>Mass upload and download of company list (website, name, city, link to company profile on association website).</li>
+						<li>Blacklist group members. These members can’t use SCB for searching information about other members in your groups.</li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-sm-6">
+				<h2 class="block__title block__title--modal block__title--modal-drop">
+					<i><b>c</b></i
+					>orporate
+				</h2>
+				<div class="modal__text-content">
+					<ul>
+						<li>Each new group member is immediately introduced by SCB to other group members after being added.</li>
+						<li>Multigroup. Use the same SCB in more than one group simultaneously.</li>
+						<li>Mass upload and download of member list (first name, last name, position, company website, Telegram ID, group IDs the user is a member of).</li>
+						<li>Edit the SCB individual welcome message (once the participant is verified and added to the database, the participant will receive a message that can be edited, such as a description of available groups or rules).</li>
+						<li>Enrich the information with additional data on companies and participants pre-loaded into the database.</li>
+					</ul>
+				</div>
+			</div>
+			<div class="row-bottom"></div>
+		</div>
+	</div>
+	<div class="modal__btns">
+		<a href="#" class="show-all">show all</a>
+		<button data-modal="modalTryDemo" class="btn btn-secondary">send request</button>
+	</div>
+</div>
+<!-- ./learn more tariff corporate -->
+
+<!--  modal try demo -->
+<div id="modalTryDemo" class="modal" style="display: none">
+	<div class="modal__wrapper">
+		<h2 class="block__title block__title--center">Try demo</h2>
+		<p>Please, fill in this form and we will contact with you as soon as possible.</p>
+		<form>
+			<input type="text" hidden name="form_name" value="Try demo" />
+			<div class="form__group">
+				<input type="text" class="form__control" name="user_name" placeholder="Name *" required />
+			</div>
+			<div class="form__group">
+				<input type="email" class="form__control" name="user_email" placeholder="Email *" required />
+			</div>
+			<div class="form__group">
+				<label class="form__checkbox-label">
+					<!-- <span class="form__checkbox-div">
+						<input type="checkbox" class="form__checkbox-input" checked />
+						<span class="form__checkbox-box"></span>
+					</span> -->
+
+					<span class="form__checkbox-content">
+						<span class="form__checkbox-description"> We will only use this data to contact you, no advertising</span>
+					</span>
+				</label>
+			</div>
+
+			<button type="submit" class="btn btn-secondary btn-submit">send</button>
+		</form>
+	</div>
+</div>
+<!--  ./modal try demo -->
+
+<!--  modal try demo tariff8-->
+<div id="modalTryDemo8" class="modal" style="display: none">
+	<div class="modal__wrapper">
+		<h2 class="block__title block__title--center">Try demo</h2>
+		<p>Please, fill in this form and we will contact with you as soon as possible.</p>
+		<form>
+			<input type="text" hidden name="form_name" value="Try demo" />
+			<input type="text" hidden name="tariff_name" value="$8/month" />
+			<div class="form__group">
+				<input type="text" class="form__control" name="user_name" placeholder="Name *" required />
+			</div>
+			<div class="form__group">
+				<input type="email" class="form__control" name="user_email" placeholder="Email *" required />
+			</div>
+			<div class="form__group">
+				<label class="form__checkbox-label">
+					<!-- <span class="form__checkbox-div">
+						<input type="checkbox" class="form__checkbox-input" checked />
+						<span class="form__checkbox-box"></span>
+					</span> -->
+
+					<span class="form__checkbox-content">
+						<span class="form__checkbox-description"> We will only use this data to contact you, no advertising</span>
+					</span>
+				</label>
+			</div>
+
+			<button type="submit" class="btn btn-secondary btn-submit">send</button>
+		</form>
+	</div>
+</div>
+<!--  ./modal try demo -->
+
+<!--  modal try demo tariff80-->
+<div id="modalTryDemo80" class="modal" style="display: none">
+	<div class="modal__wrapper">
+		<h2 class="block__title block__title--center">Try demo</h2>
+		<p>Please, fill in this form and we will contact with you as soon as possible.</p>
+		<form>
+			<input type="text" hidden name="form_name" value="Try demo" />
+			<input type="text" hidden name="tariff_name" value="$80/year" />
+			<div class="form__group">
+				<input type="text" class="form__control" name="user_name" placeholder="Name *" required />
+			</div>
+			<div class="form__group">
+				<input type="email" class="form__control" name="user_email" placeholder="Email *" required />
+			</div>
+			<div class="form__group">
+				<label class="form__checkbox-label">
+					<!-- <span class="form__checkbox-div">
+						<input type="checkbox" class="form__checkbox-input" checked />
+						<span class="form__checkbox-box"></span>
+					</span> -->
+
+					<span class="form__checkbox-content">
+						<span class="form__checkbox-description"> We will only use this data to contact you, no advertising</span>
+					</span>
+				</label>
+			</div>
+
+			<button type="submit" class="btn btn-secondary btn-submit">send</button>
+		</form>
+	</div>
+</div>
+<!--  ./modal try demo -->
+
+<!--  modal try demo tariff80-->
+<div id="modalContactCorporate" class="modal" style="display: none">
+	<div class="modal__wrapper">
+		<h2 class="block__title block__title--center">Contact Us</h2>
+		<p>Please, fill in this form and we will contact with you as soon as possible.</p>
+		<form>
+			<input type="text" hidden name="form_name" value="Contact Us" />
+			<input type="text" hidden name="tariff_name" value="Corporate" />
+			<div class="form__group">
+				<input type="text" class="form__control" name="user_name" placeholder="Name *" required />
+			</div>
+			<div class="form__group">
+				<input type="email" class="form__control" name="user_email" placeholder="Email *" required />
+			</div>
+			<div class="form__group">
+				<label class="form__checkbox-label">
+					<!-- <span class="form__checkbox-div">
+						<input type="checkbox" class="form__checkbox-input" checked />
+						<span class="form__checkbox-box"></span>
+					</span> -->
+
+					<span class="form__checkbox-content">
+						<span class="form__checkbox-description"> We will only use this data to contact you, no advertising</span>
+					</span>
+				</label>
+			</div>
+
+			<button type="submit" class="btn btn-secondary btn-submit">send</button>
+		</form>
+	</div>
+</div>
+<!--  ./modal try demo -->
+
+
+	</body>
+	<script src="js/vendors.js?_v=20221024183154"></script>
+	<script src="js/app.min.js?_v=20221024183154"></script>
+</html>

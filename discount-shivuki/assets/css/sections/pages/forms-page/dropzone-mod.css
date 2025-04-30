@@ -1,0 +1,87 @@
+.files-container {
+  display: flex;
+  flex-flow: wrap;
+  gap: 1.25em;
+  justify-content: space-between;
+  margin-top: 1.25em;
+}
+
+.dz-preview {
+  width: calc(50% - 1.25em);
+  gap: 0.3125em;
+}
+@media (max-width: 767px) {
+  .dz-preview {
+    width: 100%;
+  }
+}
+
+.dz-success-mark,
+.dz-error-mark,
+.dz-error-message {
+  display: none;
+}
+
+.dz-details {
+  display: flex;
+  flex-flow: column-reverse;
+  gap: 0.3125em;
+}
+
+.dz-size {
+  direction: ltr;
+  font: 1em/1.1875 "rubik-reg", sans-serif;
+  letter-spacing: -0.004375em;
+  color: #a4a4a4;
+  align-self: flex-start;
+}
+.dz-size span strong {
+  font-weight: 400;
+}
+@media (max-width: 767px) {
+  .dz-size {
+    font: 0.75em/1.3333333333 "rubik-reg", sans-serif;
+    letter-spacing: -0.0058333333em;
+  }
+}
+
+.file-name,
+.dz-filename {
+  font: 1.125em/1.2222222222 "rubik-reg", sans-serif;
+  letter-spacing: -0.0044444444em;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: calc(0em + 400 * ((100vw - 320px) / 1600));
+}
+@media (max-width: 767px) {
+  .file-name,
+.dz-filename {
+    max-width: calc(8.125em + 870 * ((100vw - 320px) / 1600));
+    font: 1em/1.375 "rubik-reg", sans-serif;
+    letter-spacing: -0.005em;
+  }
+}
+@media (max-width: 575px) {
+  .file-name,
+.dz-filename {
+    max-width: calc(8.125em + 670 * ((100vw - 320px) / 1600));
+  }
+}
+@media (max-width: 495px) {
+  .file-name,
+.dz-filename {
+    max-width: 8.125em;
+  }
+}
+@media (max-width: 374px) {
+  .file-name,
+.dz-filename {
+    max-width: 5em;
+  }
+}
+
+.file-info.progress-show .file-name,
+.file-info.progress-show .dz-filename {
+  max-width: calc(0em + 400 * ((100vw - 320px) / 1600));
+}

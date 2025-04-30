@@ -1,0 +1,60 @@
+.marketing-2-btns-fixed {
+  position: fixed;
+  text-align: center;
+  z-index: 20;
+  bottom: 1.875em;
+  left: 0;
+  right: 0;
+}
+.marketing-2-btns-fixed .inner-wrap {
+  display: inline-flex;
+  column-gap: 2.5em;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+}
+@media screen and (max-width: 767px) {
+  .marketing-2-btns-fixed .inner-wrap {
+    flex-direction: column-reverse;
+    gap: 0.375em;
+  }
+}
+.marketing-2-btns-fixed .fixed-btn {
+  display: flex;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  column-gap: 0.6153846154em;
+  font: 1.625em/1.2307692308 "rubik-medium", sans-serif;
+  color: #fff;
+  min-width: 12.8461538462em;
+  height: 2.6923076923em;
+  border-radius: 2.0769230769em;
+  background: linear-gradient(130.67deg, #6924E8 0%, #A07CE1 100%);
+  box-shadow: 0 1px 21px 0 rgba(138, 145, 149, 0.3), 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+  padding: 0 0.3846153846em;
+  transition: opacity 0.3s;
+}
+.marketing-2-btns-fixed .fixed-btn:focus-visible {
+  opacity: 0.5;
+  outline: none;
+}
+@media screen and (max-width: 767px) {
+  .marketing-2-btns-fixed .fixed-btn {
+    font-size: 1.1875em;
+    line-height: 1.2105263158;
+    min-width: 10.6315789474em;
+    height: 1.9473684211em;
+    border-radius: 1.7368421053em;
+    box-shadow: 0 1px 14px 0 rgba(138, 145, 149, 0.3), 0 1px 2px 0 rgba(0, 0, 0, 0.5);
+  }
+}
+.marketing-2-btns-fixed .fixed-btn .btn-icon {
+  width: 1.4230769231em;
+}
+@media screen and (max-width: 767px) {
+  .marketing-2-btns-fixed .fixed-btn .btn-icon {
+    width: 1.1578947368em;
+  }
+}

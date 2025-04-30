@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en" class="font-robotomono h-full text-base leading-[1.15]">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/png" href="https://tailwindcss.com/favicons/favicon-32x32.png?v=3" sizes="32x32" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css?family=Roboto+Mono:700|Roboto+Mono:400,700&amp;display=swap" rel="stylesheet" />
+		<script src="https://cdn.tailwindcss.com"></script>
+
+		<title>Tailwind + Alpine.js</title>
+
+		<script>
+			tailwind.config = {
+				theme: {
+					extend: {
+						fontFamily: {
+							robotomono: "Roboto Mono, sans-serif",
+						},
+					},
+				},
+			};
+		</script>
+	</head>
+	<body class="flex flex-col h-full text-black bg-white">
+		<header>
+			<div class="mx-auto max-w-[67.5rem] px-4">
+				<h3 class="flex items-center justify-center gap-2 py-2 text-2xl font-bold">
+					<span class="flex items-center gap-1 text-sky-400">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" class="w-6 h-6">
+							<path d="M64.004 25.602c-17.067 0-27.73 8.53-32 25.597 6.398-8.531 13.867-11.73 22.398-9.597 4.871 1.214 8.352 4.746 12.207 8.66C72.883 56.629 80.145 64 96.004 64c17.066 0 27.73-8.531 32-25.602-6.399 8.536-13.867 11.735-22.399 9.602-4.87-1.215-8.347-4.746-12.207-8.66-6.27-6.367-13.53-13.738-29.394-13.738zM32.004 64c-17.066 0-27.73 8.531-32 25.602C6.402 81.066 13.87 77.867 22.402 80c4.871 1.215 8.352 4.746 12.207 8.66 6.274 6.367 13.536 13.738 29.395 13.738 17.066 0 27.73-8.53 32-25.597-6.399 8.531-13.867 11.73-22.399 9.597-4.87-1.214-8.347-4.746-12.207-8.66C55.128 71.371 47.868 64 32.004 64zm0 0" fill="#38bdf8" />
+						</svg>
+						<span>TailwindCSS</span>
+					</span>
+					+
+					<span class="flex items-center gap-1">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" class="w-6 h-6">
+							<path fill="#77c1d2" fill-rule="evenodd" d="M98.444 35.562 126 62.997 98.444 90.432 70.889 62.997z" clip-rule="evenodd" />
+							<path fill="#2d3441" fill-rule="evenodd" d="m29.556 35.562 57.126 56.876H31.571L2 62.997z" clip-rule="evenodd" />
+						</svg>
+						<span>Apline.js</span></span
+					>
+				</h3>
+			</div>
+		</header>
+		<main class="flex-grow">
+			<div class="mx-auto max-w-[67.5rem] px-4">
+				<ul class="grid gap-5 py-6">
+					<li>
+						<h2 class="text-2xl font-bold underline decoration-blue-600 underline-offset-4">neobanque.ch</h2>
+
+						<ul class="grid grid-cols-1 gap-4 mt-4 sm:grid-cols-2">
+							<li>
+								<a href="neobanque.ch/neobanque.ch.html" class="flex flex-col transition-all duration-200 hover:-translate-y-1">
+									<div class="text-blue-600">neobanque.ch | Main page</div>
+									<div class="text-sm">neobanque.ch.html</div>
+								</a>
+							</li>
+							<li>
+								<a href="neobanque.ch/neobanque.ch-app-traderepublic.html" class="flex flex-col transition-all duration-200 hover:-translate-y-1">
+									<div class="text-blue-600">neobanque.ch | App page | Trade Republic</div>
+									<div class="text-sm">neobanque.ch-app-traderepublic.html</div>
+								</a>
+							</li>
+						</ul>
+					</li>
+
+					<li>
+						<h2 class="text-2xl font-bold underline decoration-blue-600 underline-offset-4">bestwebdesigntools.com</h2>
+
+						<ul class="grid grid-cols-1 gap-4 mt-4 sm:grid-cols-2">
+							<li>
+								<a href="bestwebdesigntools.com/bestwebdesigntools.com.html" class="flex flex-col transition-all duration-200 hover:-translate-y-1">
+									<div class="text-blue-600">bestwebdesigntools.com | Main page</div>
+									<div class="text-sm">bestwebdesigntools.com.html</div>
+								</a>
+							</li>
+							<li>
+								<a href="bestwebdesigntools.com/bestwebdesigntools.com-web-design-tools-pixelums.html" class="flex flex-col transition-all duration-200 hover:-translate-y-1">
+									<div class="text-blue-600">bestwebdesigntools.com | Web Design Tools | Pixelums</div>
+									<div class="text-sm">bestwebdesigntools.com-web-design-tools-pixelums.html</div>
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<h2 class="text-2xl font-bold underline decoration-blue-600 underline-offset-4">designslist.com</h2>
+
+						<ul class="grid grid-cols-1 gap-4 mt-4 sm:grid-cols-2">
+							<li>
+								<a href="designslist.com/designslist.com.html" class="flex flex-col transition-all duration-200 hover:-translate-y-1">
+									<div class="text-blue-600">designslist.com | Main page</div>
+									<div class="text-sm">designslist.com.html</div>
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<h2 class="text-2xl font-bold underline decoration-blue-600 underline-offset-4">toolhub.me</h2>
+
+						<ul class="grid grid-cols-1 gap-4 mt-4 sm:grid-cols-2">
+							<li>
+								<a href="toolhub.me/toolhub.me.html" class="flex flex-col transition-all duration-200 hover:-translate-y-1">
+									<div class="text-blue-600">toolhub.me | Main page</div>
+									<div class="text-sm">toolhub.me.html</div>
+								</a>
+							</li>
+
+							<li>
+								<a href="toolhub.me/toolhub.me-productivity-calendar-tallycal.html" class="flex flex-col transition-all duration-200 hover:-translate-y-1">
+									<div class="text-blue-600">toolhub.me | Tallycal | Calendar Tool At ToolHub</div>
+									<div class="text-sm">toolhub.me-productivity-calendar-tallycal.html</div>
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<h2 class="text-2xl font-bold underline decoration-blue-600 underline-offset-4">etsy-seller-tools.com</h2>
+
+						<ul class="grid grid-cols-1 gap-4 mt-4 sm:grid-cols-2">
+							<li>
+								<a href="etsy-seller-tools.com/etsy-seller-tools.com.html" class="flex flex-col transition-all duration-200 hover:-translate-y-1">
+									<div class="text-blue-600">etsy-seller-tools.com | Main page</div>
+									<div class="text-sm">etsy-seller-tools.com.html</div>
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<h2 class="text-2xl font-bold underline decoration-blue-600 underline-offset-4">h1gallery.com</h2>
+
+						<ul class="grid grid-cols-1 gap-4 mt-4 sm:grid-cols-2">
+							<li>
+								<a href="h1gallery.com/h1gallery.com.html" class="flex flex-col transition-all duration-200 hover:-translate-y-1">
+									<div class="text-blue-600">h1gallery.com | Main page</div>
+									<div class="text-sm">h1gallery.com.html</div>
+								</a>
+							</li>
+							<li>
+								<a href="h1gallery.com/h1gallery-h1-chapter-one.com.html" class="flex flex-col transition-all duration-200 hover:-translate-y-1">
+									<div class="text-blue-600">h1gallery.com | h1 | chapter-one</div>
+									<div class="text-sm">h1gallery-h1-chapter-one.com.html</div>
+								</a>
+							</li>
+							<li>
+								<a href="h1gallery.com/h1gallery-h1-ramp.com.html" class="flex flex-col transition-all duration-200 hover:-translate-y-1">
+									<div class="text-blue-600">h1gallery.com | h1 | ramp</div>
+									<div class="text-sm">h1gallery-h1-ramp.com.html</div>
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<h2 class="text-2xl font-bold underline decoration-blue-600 underline-offset-4">funnyadsclub.com</h2>
+
+						<ul class="grid grid-cols-1 gap-4 mt-4 sm:grid-cols-2">
+							<li>
+								<a href="funnyadsclub.com/funnyadsclub.com.html" class="flex flex-col transition-all duration-200 hover:-translate-y-1">
+									<div class="text-blue-600">funnyadsclub.com | Main page</div>
+									<div class="text-sm">funnyadsclub.com.html</div>
+								</a>
+							</li>
+							
+						</ul>
+					</li>
+					<li>
+						<h2 class="text-2xl font-bold underline decoration-blue-600 underline-offset-4">404s.design</h2>
+
+						<ul class="grid grid-cols-1 gap-4 mt-4 sm:grid-cols-2">
+							<li>
+								<a href="404s.design/404s.design.html" class="flex flex-col transition-all duration-200 hover:-translate-y-1">
+									<div class="text-blue-600">404s.design | Main page</div>
+									<div class="text-sm">404s.design.html</div>
+								</a>
+							</li>
+							
+						</ul>
+					</li>
+					<li>
+						<h2 class="text-2xl font-bold underline decoration-blue-600 underline-offset-4">freelancethings.co</h2>
+
+						<ul class="grid grid-cols-1 gap-4 mt-4 sm:grid-cols-2">
+							<li>
+								<a href="freelancethings.co/freelancethings.co.html" class="flex flex-col transition-all duration-200 hover:-translate-y-1">
+									<div class="text-blue-600">freelancethings.co | Main page</div>
+									<div class="text-sm">freelancethings.co.html</div>
+								</a>
+							</li>
+							
+						</ul>
+					</li>
+					<li>
+						<h2 class="text-2xl font-bold underline decoration-blue-600 underline-offset-4">aeroprecipe.com</h2>
+
+						<ul class="grid grid-cols-1 gap-4 mt-4 sm:grid-cols-2">
+							<li>
+								<a href="aeroprecipe.com/aeroprecipe.com.html" class="flex flex-col transition-all duration-200 hover:-translate-y-1">
+									<div class="text-blue-600">aeroprecipe.com | Main page</div>
+									<div class="text-sm">aeroprecipe.com.html</div>
+								</a>
+							</li>
+							<li>
+								<a href="aeroprecipe.com/aeroprecipe.com-recipes-james-hoffmann-aeropress-recipe.html" class="flex flex-col transition-all duration-200 hover:-translate-y-1">
+									<div class="text-blue-600">aeroprecipe.com | Recipes | James Hoffmann's Ultimate AeroPress Recipe</div>
+									<div class="text-sm">aeroprecipe.com-recipes-james-hoffmann-aeropress-recipe.html</div>
+								</a>
+							</li>
+							
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</main>
+	</body>
+</html>

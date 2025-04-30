@@ -1,0 +1,455 @@
+<!doctype html>
+<html lang="en" class="scrollbar-thumb-japonica scrollbar-track-white scrollbar-thin">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" type="image/svg+xml" href="./img/svg/logo-small.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>around.xxx</title>
+	
+		<script src="https://unpkg.com/maplibre-gl@^5.4.0/dist/maplibre-gl.js"></script>
+		<link href="https://unpkg.com/maplibre-gl@^5.4.0/dist/maplibre-gl.css" rel="stylesheet" />
+		<script type="module" crossorigin src="./js/index.js"></script>
+		<link rel="stylesheet" crossorigin href="./css/styles.min.css">
+	</head>
+	<body>
+		<div class="mdx:h-screen mdx:w-screen mdx:overflow-hidden mdx:pb-0 relative flex flex-col pb-20">
+			<div class="mdx:absolute mdx:inset-0 mdx:aspect-auto relative aspect-video h-full w-full sm:aspect-[3/1]">
+				<div id="map" class="h-full w-full"></div>
+				<div class="mdx:bottom-0 mdx:right-7 mdx:left-auto mdx:top-auto mdx:translate-y-0 absolute top-1/2 right-auto left-0 z-20 -translate-y-1/2">
+					<button
+						class="bg-japonica mdx:rounded-tl-5 rounded-tr-5 rounded-br-5 mdx:rounded-br-none mdx:h-15 hover:shadow-hover-japonica flex h-12.5 w-12.5 items-center justify-center text-white transition-all"
+					>
+						<i class="icon icon--location h-7 w-7"></i>
+					</button>
+				</div>
+			</div>
+
+			<nav class="shadow-custom mdx:top-0 mdx:right-auto group navbar mdx:text-nowrap fixed right-0 bottom-0 left-0 z-[100] bg-white">
+				<div class="mdx:w-28 mdx:flex-col mdx:p-5.5 group-[.menu-opened]:mdx:w-77.5 flex h-full gap-4 px-4 py-4 transition-all duration-300">
+					<div class="mdx:flex hidden overflow-hidden pl-1.5">
+						<a href="/" class="h-16 w-53.5 shrink-0">
+							<img src="./img/svg/logo-full.svg" alt="Logo" class="h-full w-full object-cover" />
+						</a>
+					</div>
+			
+					<div class="mdx:overflow-hidden flex grow flex-col justify-center">
+						<div
+							class="mdx:flex border-b-scorpion/10 relative mb-3 hidden w-full items-center gap-4 border-b px-4 pb-4.5 opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-[.menu-opened]:opacity-100"
+						>
+							<div class="relative h-9 w-9">
+								<button id="closeMenu" class="absolute top-0 left-0 h-9 w-9 shrink-0 opacity-0 duration-300 group-[.menu-opened]:z-[2] group-[.menu-opened]:opacity-100">
+									<i class="icon icon--arrow-left h-9 w-9"></i>
+								</button>
+								<button id="openMenu" class="absolute top-0 left-0 z-[2] h-9 w-9 shrink-0 duration-300 group-[.menu-opened]:z-[1] group-[.menu-opened]:opacity-0">
+									<i class="icon icon--arrow-right h-9 w-9"></i>
+								</button>
+							</div>
+						</div>
+			
+						<ul class="mdx:flex-col mdx:gap-4.5 flex justify-between gap-2">
+			
+							<li
+								class="[.active]:text-emperor active flex text-japonica mdx:not-last:border-b-scorpion/10 mdx:not-last:border-b mdx:not-last:pb-4.5 not-last:border-r not-last:pr-2 mdx:pr-0 mdx:not-last:border-r-0 border-r-scorpion/10 group-[.menu-opened]:mdx:w-full group/nav-item flex-1 justify-center mdx:justify-start"
+							>
+								<a href="#" class="mdx:gap-4 mdx:px-4 mdx:flex-row relative flex flex-col items-center gap-1">
+									<div class="group-hover/nav-item:drop-shadow-custom group-[.active]/nav-item:drop-shadow-custom flex transition-all">
+										<div class="icon icon--play mdx:h-9 mdx:w-9 static z-[2] shrink-0 w-6 h-6"></div>
+									</div>
+									<span class="mid:block mdx:text-5.5 text-mine-shaft mdx:text-left grow text-center text-2.5 xs:text-xs font-semibold group-[.active]/nav-item:font-bold">Videos</span>
+								</a>
+							</li>
+			
+			
+							<li
+								class="[.active]:text-emperor  flex text-japonica mdx:not-last:border-b-scorpion/10 mdx:not-last:border-b mdx:not-last:pb-4.5 not-last:border-r not-last:pr-2 mdx:pr-0 mdx:not-last:border-r-0 border-r-scorpion/10 group-[.menu-opened]:mdx:w-full group/nav-item flex-1 justify-center mdx:justify-start"
+							>
+								<a href="#" class="mdx:gap-4 mdx:px-4 mdx:flex-row relative flex flex-col items-center gap-1">
+									<div class="group-hover/nav-item:drop-shadow-custom group-[.active]/nav-item:drop-shadow-custom flex transition-all">
+										<div class="icon icon--category mdx:h-9 mdx:w-9 static z-[2] shrink-0 w-6 h-6"></div>
+									</div>
+									<span class="mid:block mdx:text-5.5 text-mine-shaft mdx:text-left grow text-center text-2.5 xs:text-xs font-semibold group-[.active]/nav-item:font-bold">Categories</span>
+								</a>
+							</li>
+			
+			
+							<li
+								class="[.active]:text-emperor  flex text-japonica mdx:not-last:border-b-scorpion/10 mdx:not-last:border-b mdx:not-last:pb-4.5 not-last:border-r not-last:pr-2 mdx:pr-0 mdx:not-last:border-r-0 border-r-scorpion/10 group-[.menu-opened]:mdx:w-full group/nav-item flex-1 justify-center mdx:justify-start"
+							>
+								<a href="#" class="mdx:gap-4 mdx:px-4 mdx:flex-row relative flex flex-col items-center gap-1">
+									<div class="group-hover/nav-item:drop-shadow-custom group-[.active]/nav-item:drop-shadow-custom flex transition-all">
+										<div class="icon icon--board mdx:h-9 mdx:w-9 static z-[2] shrink-0 w-6 h-6"></div>
+									</div>
+									<span class="mid:block mdx:text-5.5 text-mine-shaft mdx:text-left grow text-center text-2.5 xs:text-xs font-semibold group-[.active]/nav-item:font-bold">Messages</span>
+								</a>
+							</li>
+			
+			
+							<li
+								class="[.active]:text-emperor  flex text-japonica mdx:not-last:border-b-scorpion/10 mdx:not-last:border-b mdx:not-last:pb-4.5 not-last:border-r not-last:pr-2 mdx:pr-0 mdx:not-last:border-r-0 border-r-scorpion/10 group-[.menu-opened]:mdx:w-full group/nav-item flex-1 justify-center mdx:justify-start"
+							>
+								<a href="#" class="mdx:gap-4 mdx:px-4 mdx:flex-row relative flex flex-col items-center gap-1">
+									<div class="group-hover/nav-item:drop-shadow-custom group-[.active]/nav-item:drop-shadow-custom flex transition-all">
+										<div class="icon icon--community mdx:h-9 mdx:w-9 static z-[2] shrink-0 w-6 h-6"></div>
+									</div>
+									<span class="mid:block mdx:text-5.5 text-mine-shaft mdx:text-left grow text-center text-2.5 xs:text-xs font-semibold group-[.active]/nav-item:font-bold">Community</span>
+								</a>
+							</li>
+			
+			
+							<li
+								class="[.active]:text-emperor  flex text-japonica mdx:not-last:border-b-scorpion/10 mdx:not-last:border-b mdx:not-last:pb-4.5 not-last:border-r not-last:pr-2 mdx:pr-0 mdx:not-last:border-r-0 border-r-scorpion/10 group-[.menu-opened]:mdx:w-full group/nav-item flex-1 justify-center mdx:justify-start"
+							>
+								<a href="#" class="mdx:gap-4 mdx:px-4 mdx:flex-row relative flex flex-col items-center gap-1">
+									<div class="group-hover/nav-item:drop-shadow-custom group-[.active]/nav-item:drop-shadow-custom flex transition-all">
+										<div class="icon icon--attention-triangle mdx:h-9 mdx:w-9 static z-[2] shrink-0 w-6 h-6"></div>
+									</div>
+									<span class="mid:block mdx:text-5.5 text-mine-shaft mdx:text-left grow text-center text-2.5 xs:text-xs font-semibold group-[.active]/nav-item:font-bold">Manifesto</span>
+								</a>
+							</li>
+			
+						</ul>
+					</div>
+			
+					<div class="group-[.menu-opened]:mdx:opacity-100 mdx:opacity-0 mdx:block group-[.menu-opened]:mdx:pointer-events-auto pointer-events-none hidden overflow-hidden transition-opacity">
+						<div class="border-scorpion/10 flex flex-col border-t border-b px-4 py-4">
+							<a href="#" class="font-semibold">DMCA 257</a>
+							<a href="#" class="font-semibold">Terms, privacy policy</a>
+						</div>
+						<div class="flex flex-col px-4 pt-4 text-sm">© 2025 AROUND.XXX</div>
+					</div>
+				</div>
+			</nav>
+			<div id="menuOverlay" class="bg-scorpion/50 pointer-events-none fixed inset-0 z-[30] opacity-0 transition-opacity"></div>
+			<header class="mdx:fixed top-0 mdx:right-0 mdx:left-28 mdx:order-none -order-1 sticky z-50">
+				<div class="bg-gray-nurse/80 mdx:px-7 mdx:py-6.5 mdx:h-25.5 flex flex-col justify-between gap-2 px-4 py-2.5 sm:flex-row sm:items-center backdrop-blur-sm">
+					<div class="flex items-center gap-2">
+						<a href="/" class="mdx:hidden shrink-0"><img src="data:image/svg+xml,%3csvg%20width='45'%20height='45'%20viewBox='0%200%2045%2045'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M16.2%2022.5C18.2%2022.5%2019.9%2020.8%2019.9%2018.8C19.9%2016.8%2018.2%2015.1%2016.2%2015.1C14.2%2015.1%2012.5%2016.8%2012.5%2018.8C12.5%2020.8%2014.2%2022.5%2016.2%2022.5Z'%20fill='%23E05151'%20/%3e%3cpath%20d='M34.5999%205.89997C40.6999%2012%2043.0999%2021.6%2039.6999%2030C37.5999%2035.3%2033.1999%2039.6%2027.6999%2042C22.1999%2044.3%2016.0999%2044.4%2010.7999%2042.3C10.3999%2042.1%2010.1999%2041.6%2010.2999%2041.2C10.4999%2040.8%2010.9999%2040.6%2011.3999%2040.7C16.2999%2042.7%2021.9999%2042.6%2026.9999%2040.4C32.0999%2038.2%2036.0999%2034.2%2038.0999%2029.3C42.2999%2019%2037.0999%206.69997%2026.6999%202.59997C26.2999%202.39997%2026.0999%201.89997%2026.1999%201.49997C26.3999%201.09997%2026.8999%200.899971%2027.2999%200.999971C29.9999%202.09997%2032.3999%203.69997%2034.4999%205.79997L34.5999%205.89997Z'%20fill='%23231F20'%20stroke='%23231F20'%20stroke-miterlimit='10'%20/%3e%3cpath%20d='M34.7002%205.8C37.8002%208.9%2039.9002%2012.8%2040.9002%2017.1C41.9002%2021.5%2041.5002%2026%2039.9002%2030.1C37.8002%2035.4%2033.4002%2039.8%2027.9002%2042.1C22.4002%2044.4%2016.2002%2044.5%2010.9002%2042.4C10.4002%2042.2%2010.2002%2041.6%2010.4002%2041.1C10.4002%2040.9%2010.7002%2040.7%2010.9002%2040.6H11.6002C16.5002%2042.6%2022.1002%2042.5%2027.1002%2040.3C32.1002%2038.2%2036.1002%2034.2%2038.1002%2029.3C39.1002%2026.8%2039.6002%2024.1%2039.5002%2021.4C39.5002%2018.8%2038.9002%2016.2%2037.8002%2013.7C36.8002%2011.2%2035.3002%209%2033.4002%207.2C31.5002%205.3%2029.2002%203.8%2026.7002%202.7C26.5002%202.7%2026.3002%202.4%2026.2002%202.2C26.2002%202%2026.1002%201.7%2026.2002%201.5C26.2002%201.3%2026.5002%201.1%2026.7002%201H27.4002C30.1002%202.1%2032.5002%203.7%2034.6002%205.8H34.7002ZM10.7002%2042C10.7002%2042%2010.8002%2042.1%2010.9002%2042.1C16.1002%2044.2%2022.3002%2044.1%2027.7002%2041.8C33.1002%2039.5%2037.5002%2035.2%2039.6002%2029.9C41.2002%2025.9%2041.6002%2021.4%2040.6002%2017.1C39.7002%2012.9%2037.6002%209%2034.5002%206C32.4002%203.9%2030.1002%202.4%2027.4002%201.3H26.9002C26.7002%201.3%2026.6002%201.5%2026.5002%201.7V2.2C26.5002%202.4%2026.7002%202.5%2026.9002%202.6C29.4002%203.6%2031.6002%205.1%2033.6002%207C35.5002%208.9%2037.0002%2011.1%2038.0002%2013.6C39.1002%2016.1%2039.6002%2018.7%2039.7002%2021.4C39.7002%2024.2%2039.3002%2026.9%2038.2002%2029.4C36.2002%2034.3%2032.1002%2038.4%2027.0002%2040.5C21.9002%2042.7%2016.2002%2042.8%2011.2002%2040.8H10.7002C10.5002%2040.8%2010.4002%2041%2010.3002%2041.2C10.2002%2041.5%2010.3002%2041.7%2010.4002%2041.9H10.7002V42Z'%20fill='%23231F20'%20stroke='%23231F20'%20stroke-miterlimit='10'%20/%3e%3cpath%20d='M30.2998%2010.6C36.3998%2016.7%2036.3998%2026.7%2030.2998%2032.9C24.1998%2039%2014.1998%2039%207.9998%2032.9C1.8998%2026.8%201.8998%2016.8%207.9998%2010.6C14.0998%204.50002%2024.0998%204.50002%2030.2998%2010.6ZM8.19981%2032.6C14.1998%2038.6%2023.9998%2038.6%2030.0998%2032.6C36.0998%2026.6%2036.0998%2016.8%2030.0998%2010.7C24.0998%204.70003%2014.2998%204.70003%208.19981%2010.7C2.19981%2016.7%202.19981%2026.5%208.19981%2032.6ZM29.0998%2011.7C34.5998%2017.2%2034.5998%2026.2%2029.0998%2031.7C23.5998%2037.2%2014.5998%2037.2%209.0998%2031.7C3.5998%2026.2%203.5998%2017.2%209.0998%2011.7C14.5998%206.20003%2023.5998%206.20003%2029.0998%2011.7ZM9.39981%2031.5C14.7998%2036.9%2023.4998%2036.9%2028.8998%2031.5C34.2998%2026.1%2034.2998%2017.4%2028.8998%2012C23.4998%206.60003%2014.7998%206.60003%209.39981%2012C3.99981%2017.4%203.99981%2026.1%209.39981%2031.5Z'%20fill='%23231F20'%20stroke='%23231F20'%20stroke-miterlimit='10'%20/%3e%3cpath%20d='M30.1999%2010.7C36.2999%2016.8%2036.2999%2026.7%2030.1999%2032.8C24.0999%2038.9%2014.1999%2038.9%208.0999%2032.8C1.9999%2026.7%201.9999%2016.8%208.0999%2010.7C14.1999%204.6%2024.0999%204.6%2030.1999%2010.7ZM9.2999%2031.6C14.6999%2037%2023.5999%2037%2028.9999%2031.6C34.3999%2026.2%2034.3999%2017.3%2028.9999%2011.9C23.5999%206.5%2014.6999%206.5%209.2999%2011.9C3.8999%2017.3%203.8999%2026.2%209.2999%2031.6Z'%20fill='%23231F20'%20stroke='%23231F20'%20stroke-miterlimit='10'%20/%3e%3c/svg%3e" alt="Logo" class="h-8 w-8" /></a>
+						<h2 class="title mdx:text-4xl mdx:line-clamp-1 text-2xl font-semibold">TALLINN, EE</h2>
+					</div>
+					<div class="mdx:gap-4.5 flex shrink-0 items-center gap-2">
+						<button class="rounded-5 bg-scorpion mdx:text-5.5 mdx:h-12.5 flex h-8 flex-1 items-center justify-center gap-2.5 px-3 text-sm xs:text-base font-bold text-white sm:flex-none transition-all hover:shadow-hover-scorpion">
+							<i class="icon icon--user h-5 w-5 opacity-50"></i>
+							<span>Login</span>
+						</button>
+						<button class="rounded-5 bg-japonica mdx:text-5.5 mdx:h-12.5 flex h-8 flex-1 items-center justify-center gap-2.5 px-3 text-sm xs:text-base font-bold text-white sm:flex-none transition-all hover:shadow-hover-japonica">
+							<i class="icon icon--location h-5 w-5 opacity-50"></i>
+							<span>Join the fun</span>
+						</button>
+					</div>
+				</div>
+				<div class="mdx:hidden overflow-hidden px-4 py-2 text-center text-xl  sm bg-white/90">
+					You’re with
+					<span class="relative inline-flex mask-y-from-60% mask-y-to-90% font-bold">
+						<span>4</span>
+						<span class="pr-3.5">3</span>
+						<span class="absolute right-0 inline-block -translate-y-2.5">8</span>
+						<span class="absolute right-0 inline-block translate-y-2.5">9</span>
+						<!-- <span class="absolute right-0">8</span> -->
+					</span>
+					others watching now!
+				</div>
+			</header>
+			<div id="subHeader" class="mdx:fixed mdx:top-25.5 mdx:right-0 mdx:left-28 mdx:h-15.5 sticky top-[var(--header-height)] z-30">
+				<div class="mdx:bg-gray-nurse/40 mdx:justify-between mdx:px-7 flex items-center justify-center px-4 py-2.5 bg-white/90">
+					<p class="mdx:text-7 line-clamp-1 text-xl font-bold">Now popular in Tallinn</p>
+					<p class="text-5.5 mdx:block hidden shrink-0 overflow-hidden">
+						You’re with
+						<span class="relative inline-flex mask-y-from-60% mask-y-to-90% font-bold">
+							<span>4</span>
+							<span class="pr-3.5">3</span>
+							<span class="absolute right-0 inline-block -translate-y-2.5">8</span>
+							<span class="absolute right-0 inline-block translate-y-2.5">9</span>
+							<!-- <span class="absolute right-0">8</span> -->
+						</span>
+						others watching now!
+					</p>
+				</div>
+			</div>
+			<div class="mdx:fixed mdx:block mdx:top-41 mdx:right-0 mdx:bottom-0 mdx:left-28 mdx:w-[62%] hidden">
+				
+				<div class="userpic-wrapper mdx:bg-scorpion/80 mdx:rounded-tr-5 mdx:rounded-br-5 mdx:absolute mdx:top-1/2 mdx:-right-40 mdx:h-9/10 mdx:w-40 mdx:-translate-y-1/2 mdx:flex-col bg-scorpion relative">
+					<button class="userpic-prev mdx:left-1/2 mdx:-translate-x-1/2 mdx:top-4 mdx:translate-y-0 absolute top-1/2 left-2 z-[2] flex -translate-y-1/2 text-white">
+						<i class="icon icon--arrow-up mdx:rotate-0 h-8 w-8 -rotate-90"></i>
+					</button>
+					<button class="userpic-next mdx:left-1/2 mdx:-translate-x-1/2 mdx:bottom-4 mdx:top-auto mdx:translate-y-0 mdx:right-auto absolute top-1/2 right-2 z-[2] flex -translate-y-1/2 text-white">
+						<i class="icon icon--arrow-down mdx:rotate-0 h-8 w-8 -rotate-90"></i>
+					</button>
+				
+					<ul
+						class="userpic-list scrollbar-none mdx:h-full mdx:flex-col mdx:mask-y-from-80% mdx:mask-y-to-90% mdx:py-20 mdx:px-0 flex items-center gap-4 overflow-auto mask-x-from-70% mask-x-to-90% px-[14%] py-2"
+					>
+						<li>
+							<a href="#" class="mdx:h-25 mdx:w-25 block h-20 w-20 overflow-hidden rounded-full">
+								<img src="./img/ai-generated-7930794_1280.webp" class="h-full w-full object-cover" alt="image 01" />
+							</a>
+						</li>
+						<li>
+							<a href="#" class="mdx:h-25 mdx:w-25 block h-20 w-20 overflow-hidden rounded-full">
+								<img src="./img/ai-art-girl-pink-hair-cyberpunk-portrait.webp" class="h-full w-full object-cover" alt="image 016" />
+							</a>
+						</li>
+						<li>
+							<a href="#" class="mdx:h-25 mdx:w-25 block h-20 w-20 overflow-hidden rounded-full">
+								<img src="./img/ai-generated-8990176_1280.webp" class="h-full w-full object-cover" alt="image 02" />
+							</a>
+						</li>
+						<li>
+							<a href="#" class="mdx:h-25 mdx:w-25 block h-20 w-20 overflow-hidden rounded-full">
+								<img src="./img/cyber-8066486_1280.webp" class="h-full w-full object-cover" alt="image 03" />
+							</a>
+						</li>
+						<li>
+							<a href="#" class="mdx:h-25 mdx:w-25 block h-20 w-20 overflow-hidden rounded-full">
+								<img src="./img/cyber-punk-8504498_1920.webp" class="h-full w-full object-cover" alt="image 04" />
+							</a>
+						</li>
+						<li>
+							<a href="#" class="mdx:h-25 mdx:w-25 block h-20 w-20 overflow-hidden rounded-full">
+								<img src="./img/cyberpunk-8177474_1280.webp" class="h-full w-full object-cover" alt="image 05" />
+							</a>
+						</li>
+						<li>
+							<a href="#" class="mdx:h-25 mdx:w-25 block h-20 w-20 overflow-hidden rounded-full">
+								<img src="./img/girl-7795467_1280.webp" class="h-full w-full object-cover" alt="image 06" />
+							</a>
+						</li>
+						<li>
+							<a href="#" class="mdx:h-25 mdx:w-25 block h-20 w-20 overflow-hidden rounded-full">
+								<img src="./img/girl-8585105_1280.webp" class="h-full w-full object-cover" alt="image 08" />
+							</a>
+						</li>
+						<li>
+							<a href="#" class="mdx:h-25 mdx:w-25 block h-20 w-20 overflow-hidden rounded-full">
+								<img src="./img/girl-8728976_1280.webp" class="h-full w-full object-cover" alt="image 09" />
+							</a>
+						</li>
+						<li>
+							<a href="#" class="mdx:h-25 mdx:w-25 block h-20 w-20 overflow-hidden rounded-full">
+								<img src="./img/girl-8839335_1280.webp" class="h-full w-full object-cover" alt="image 10" />
+							</a>
+						</li>
+						<li>
+							<a href="#" class="mdx:h-25 mdx:w-25 block h-20 w-20 overflow-hidden rounded-full">
+								<img src="./img/img-01.webp" class="h-full w-full object-cover" alt="image 11" />
+							</a>
+						</li>
+						<li>
+							<a href="#" class="mdx:h-25 mdx:w-25 block h-20 w-20 overflow-hidden rounded-full">
+								<img src="./img/img-02.webp" class="h-full w-full object-cover" alt="image 12" />
+							</a>
+						</li>
+						<li>
+							<a href="#" class="mdx:h-25 mdx:w-25 block h-20 w-20 overflow-hidden rounded-full">
+								<img src="./img/img-03.webp" class="h-full w-full object-cover" alt="image 13" />
+							</a>
+						</li>
+						<li>
+							<a href="#" class="mdx:h-25 mdx:w-25 block h-20 w-20 overflow-hidden rounded-full">
+								<img src="./img/img-04.webp" class="h-full w-full object-cover" alt="image 14" />
+							</a>
+						</li>
+						<li>
+							<a href="#" class="mdx:h-25 mdx:w-25 block h-20 w-20 overflow-hidden rounded-full">
+								<img src="./img/img-54.webp" class="h-full w-full object-cover" alt="image 15" />
+							</a>
+						</li>
+					</ul>
+				</div>
+			
+				
+				<div class="mdx:scrollbar-thumb-japonica mdx:scrollbar-track-white mdx:scrollbar-thin h-full mdx:overflow-y-auto bg-white">
+					<div class="grid grid-cols-2 gap-1 md:grid-cols-3">
+						<div class="aspect-video overflow-hidden rounded">
+							<img src="./img/ai-generated-7930794_1280.webp" alt="image 01" class="h-full w-full object-cover" />
+						</div>
+						<div class="aspect-video overflow-hidden rounded">
+							<img src="./img/ai-art-girl-pink-hair-cyberpunk-portrait.webp" alt="image 016" class="h-full w-full object-cover" />
+						</div>
+						<div class="aspect-video overflow-hidden rounded">
+							<img src="./img/ai-generated-8990176_1280.webp" alt="image 02" class="h-full w-full object-cover" />
+						</div>
+						<div class="aspect-video overflow-hidden rounded">
+							<img src="./img/cyber-8066486_1280.webp" alt="image 03" class="h-full w-full object-cover" />
+						</div>
+						<div class="aspect-video overflow-hidden rounded">
+							<img src="./img/cyber-punk-8504498_1920.webp" alt="image 04" class="h-full w-full object-cover" />
+						</div>
+						<div class="aspect-video overflow-hidden rounded">
+							<img src="./img/cyberpunk-8177474_1280.webp" alt="image 05" class="h-full w-full object-cover" />
+						</div>
+						<div class="aspect-video overflow-hidden rounded">
+							<img src="./img/girl-7795467_1280.webp" alt="image 06" class="h-full w-full object-cover" />
+						</div>
+						<div class="aspect-video overflow-hidden rounded">
+							<img src="./img/girl-8585105_1280.webp" alt="image 08" class="h-full w-full object-cover" />
+						</div>
+						<div class="aspect-video overflow-hidden rounded">
+							<img src="./img/girl-8728976_1280.webp" alt="image 09" class="h-full w-full object-cover" />
+						</div>
+						<div class="aspect-video overflow-hidden rounded">
+							<img src="./img/girl-8839335_1280.webp" alt="image 10" class="h-full w-full object-cover" />
+						</div>
+						<div class="aspect-video overflow-hidden rounded">
+							<img src="./img/img-01.webp" alt="image 11" class="h-full w-full object-cover" />
+						</div>
+						<div class="aspect-video overflow-hidden rounded">
+							<img src="./img/img-02.webp" alt="image 12" class="h-full w-full object-cover" />
+						</div>
+						<div class="aspect-video overflow-hidden rounded">
+							<img src="./img/img-03.webp" alt="image 13" class="h-full w-full object-cover" />
+						</div>
+						<div class="aspect-video overflow-hidden rounded">
+							<img src="./img/img-04.webp" alt="image 14" class="h-full w-full object-cover" />
+						</div>
+						<div class="aspect-video overflow-hidden rounded">
+							<img src="./img/img-54.webp" alt="image 15" class="h-full w-full object-cover" />
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="mdx:hidden">
+				<div class="grid grid-cols-2 gap-1 md:grid-cols-3">
+						<div class="aspect-video overflow-hidden rounded">
+							<img src="./img/ai-generated-7930794_1280.webp" alt="image 01" class="h-full w-full object-cover" />
+						</div>
+						<div class="aspect-video overflow-hidden rounded">
+							<img src="./img/ai-art-girl-pink-hair-cyberpunk-portrait.webp" alt="image 016" class="h-full w-full object-cover" />
+						</div>
+						<div class="aspect-video overflow-hidden rounded">
+							<img src="./img/ai-generated-8990176_1280.webp" alt="image 02" class="h-full w-full object-cover" />
+						</div>
+						<div class="aspect-video overflow-hidden rounded">
+							<img src="./img/cyber-8066486_1280.webp" alt="image 03" class="h-full w-full object-cover" />
+						</div>
+						<div class="aspect-video overflow-hidden rounded">
+							<img src="./img/cyber-punk-8504498_1920.webp" alt="image 04" class="h-full w-full object-cover" />
+						</div>
+						<div class="aspect-video overflow-hidden rounded">
+							<img src="./img/cyberpunk-8177474_1280.webp" alt="image 05" class="h-full w-full object-cover" />
+						</div>
+				</div>
+				<div class="py-1">
+					<div class="userpic-wrapper mdx:bg-scorpion/80 mdx:rounded-tr-5 mdx:rounded-br-5 mdx:absolute mdx:top-1/2 mdx:-right-40 mdx:h-9/10 mdx:w-40 mdx:-translate-y-1/2 mdx:flex-col bg-scorpion relative">
+						<button class="userpic-prev mdx:left-1/2 mdx:-translate-x-1/2 mdx:top-4 mdx:translate-y-0 absolute top-1/2 left-2 z-[2] flex -translate-y-1/2 text-white">
+							<i class="icon icon--arrow-up mdx:rotate-0 h-8 w-8 -rotate-90"></i>
+						</button>
+						<button class="userpic-next mdx:left-1/2 mdx:-translate-x-1/2 mdx:bottom-4 mdx:top-auto mdx:translate-y-0 mdx:right-auto absolute top-1/2 right-2 z-[2] flex -translate-y-1/2 text-white">
+							<i class="icon icon--arrow-down mdx:rotate-0 h-8 w-8 -rotate-90"></i>
+						</button>
+					
+						<ul
+							class="userpic-list scrollbar-none mdx:h-full mdx:flex-col mdx:mask-y-from-80% mdx:mask-y-to-90% mdx:py-20 mdx:px-0 flex items-center gap-4 overflow-auto mask-x-from-70% mask-x-to-90% px-[14%] py-2"
+						>
+							<li>
+								<a href="#" class="mdx:h-25 mdx:w-25 block h-20 w-20 overflow-hidden rounded-full">
+									<img src="./img/ai-generated-7930794_1280.webp" class="h-full w-full object-cover" alt="image 01" />
+								</a>
+							</li>
+							<li>
+								<a href="#" class="mdx:h-25 mdx:w-25 block h-20 w-20 overflow-hidden rounded-full">
+									<img src="./img/ai-art-girl-pink-hair-cyberpunk-portrait.webp" class="h-full w-full object-cover" alt="image 016" />
+								</a>
+							</li>
+							<li>
+								<a href="#" class="mdx:h-25 mdx:w-25 block h-20 w-20 overflow-hidden rounded-full">
+									<img src="./img/ai-generated-8990176_1280.webp" class="h-full w-full object-cover" alt="image 02" />
+								</a>
+							</li>
+							<li>
+								<a href="#" class="mdx:h-25 mdx:w-25 block h-20 w-20 overflow-hidden rounded-full">
+									<img src="./img/cyber-8066486_1280.webp" class="h-full w-full object-cover" alt="image 03" />
+								</a>
+							</li>
+							<li>
+								<a href="#" class="mdx:h-25 mdx:w-25 block h-20 w-20 overflow-hidden rounded-full">
+									<img src="./img/cyber-punk-8504498_1920.webp" class="h-full w-full object-cover" alt="image 04" />
+								</a>
+							</li>
+							<li>
+								<a href="#" class="mdx:h-25 mdx:w-25 block h-20 w-20 overflow-hidden rounded-full">
+									<img src="./img/cyberpunk-8177474_1280.webp" class="h-full w-full object-cover" alt="image 05" />
+								</a>
+							</li>
+							<li>
+								<a href="#" class="mdx:h-25 mdx:w-25 block h-20 w-20 overflow-hidden rounded-full">
+									<img src="./img/girl-7795467_1280.webp" class="h-full w-full object-cover" alt="image 06" />
+								</a>
+							</li>
+							<li>
+								<a href="#" class="mdx:h-25 mdx:w-25 block h-20 w-20 overflow-hidden rounded-full">
+									<img src="./img/girl-8585105_1280.webp" class="h-full w-full object-cover" alt="image 08" />
+								</a>
+							</li>
+							<li>
+								<a href="#" class="mdx:h-25 mdx:w-25 block h-20 w-20 overflow-hidden rounded-full">
+									<img src="./img/girl-8728976_1280.webp" class="h-full w-full object-cover" alt="image 09" />
+								</a>
+							</li>
+							<li>
+								<a href="#" class="mdx:h-25 mdx:w-25 block h-20 w-20 overflow-hidden rounded-full">
+									<img src="./img/girl-8839335_1280.webp" class="h-full w-full object-cover" alt="image 10" />
+								</a>
+							</li>
+							<li>
+								<a href="#" class="mdx:h-25 mdx:w-25 block h-20 w-20 overflow-hidden rounded-full">
+									<img src="./img/img-01.webp" class="h-full w-full object-cover" alt="image 11" />
+								</a>
+							</li>
+							<li>
+								<a href="#" class="mdx:h-25 mdx:w-25 block h-20 w-20 overflow-hidden rounded-full">
+									<img src="./img/img-02.webp" class="h-full w-full object-cover" alt="image 12" />
+								</a>
+							</li>
+							<li>
+								<a href="#" class="mdx:h-25 mdx:w-25 block h-20 w-20 overflow-hidden rounded-full">
+									<img src="./img/img-03.webp" class="h-full w-full object-cover" alt="image 13" />
+								</a>
+							</li>
+							<li>
+								<a href="#" class="mdx:h-25 mdx:w-25 block h-20 w-20 overflow-hidden rounded-full">
+									<img src="./img/img-04.webp" class="h-full w-full object-cover" alt="image 14" />
+								</a>
+							</li>
+							<li>
+								<a href="#" class="mdx:h-25 mdx:w-25 block h-20 w-20 overflow-hidden rounded-full">
+									<img src="./img/img-54.webp" class="h-full w-full object-cover" alt="image 15" />
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="grid grid-cols-2 gap-1 md:grid-cols-3">
+						<div class="aspect-video overflow-hidden rounded">
+							<img src="./img/girl-7795467_1280.webp" alt="image 06" class="h-full w-full object-cover" />
+						</div>
+						<div class="aspect-video overflow-hidden rounded">
+							<img src="./img/girl-8585105_1280.webp" alt="image 08" class="h-full w-full object-cover" />
+						</div>
+						<div class="aspect-video overflow-hidden rounded">
+							<img src="./img/girl-8728976_1280.webp" alt="image 09" class="h-full w-full object-cover" />
+						</div>
+						<div class="aspect-video overflow-hidden rounded">
+							<img src="./img/girl-8839335_1280.webp" alt="image 10" class="h-full w-full object-cover" />
+						</div>
+						<div class="aspect-video overflow-hidden rounded">
+							<img src="./img/img-01.webp" alt="image 11" class="h-full w-full object-cover" />
+						</div>
+						<div class="aspect-video overflow-hidden rounded">
+							<img src="./img/img-02.webp" alt="image 12" class="h-full w-full object-cover" />
+						</div>
+				</div>
+			
+			</div>
+
+			<div class="mdx:hidden flex flex-col items-center shadow-scorpion-bottom text-xs">
+				<div class="border-scorpion/10 flex border-t border-b p-2 gap-2 ">
+					<a href="#" class="font-semibold">DMCA 257</a>
+					<a href="#" class="font-semibold">Terms, privacy policy</a>
+				</div>
+				<div class="flex p-2">© 2025 AROUND.XXX</div>
+			</div>
+		</div>
+
+	</body>
+</html>

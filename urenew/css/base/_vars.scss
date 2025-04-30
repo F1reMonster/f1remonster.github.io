@@ -1,0 +1,28 @@
+:root {
+	--container-width: 1300px;
+	--container-padding: 15px;
+
+	--font-main: "Gilroy", sans-serif;
+
+	--page-bg: #fff;
+	--text-color: #000;
+	--text-muted: #909090;
+	--accent: #ffc30d;
+	--text-white: #fff;
+
+	--black: #000;
+	--viking: #64afdc;
+	--feijoa: #b1d686;
+	--ecstasy: #f5831f;
+	--denim: #1d7abf;
+	--curious-blue: #28aae1;
+	--lightning-yellow: #ffc415;
+	--sun: #fbac18;
+}
+
+.dark {
+	--page-bg: #252526;
+	--text-color: #fff;
+}
+
+$fontSizeDefault: 16;

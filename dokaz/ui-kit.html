@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+<meta name="description" content="Meta descritpion page" />
+<meta name="keywords" content="kyewords, for, search, optimization " />
+<meta name="author" content="Author Name" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<link rel="shortcut icon" href="img/favicon.svg" type="image/x-icon" />
+<link rel="stylesheet" type="text/css" href="./css/style.css?v=202306072246" />
+<title>Доказ - UI-Kit</title>
+	</head>
+
+	<body>
+		<section>
+			<div class="container">
+				<div class="flex max-w-[37.5rem] flex-col gap-[1.25rem]">
+					<h2 class="mt-8 text-[1.5rem] font-semibold text-electric-violet underline underline-offset-4">Елементи форми</h2>
+					<div class="w-full">
+						<label class="flex w-full items-center gap-[1.875rem] exmd:ml-0 exmd:flex-col exmd:items-start exmd:gap-2">
+							<span class="ml-auto text-right text-gray exmd:ml-0 exmd:text-left">Ім'я</span>
+							<input type="text" class="w-[23.125rem] exmd:w-full" name="name" placeholder="Константин" required />
+						</label>
+					</div>
+
+					<div class="w-full">
+						<label class="flex w-full items-center gap-[1.875rem] exmd:ml-0 exmd:flex-col exmd:items-start exmd:gap-2">
+							<span class="ml-auto text-right text-gray exmd:ml-0 exmd:text-left">Електропошта</span>
+							<input type="email" class="error w-[23.125rem] exmd:w-full" name="email" placeholder="konstantin@gmail.com" value="esdsj@" required />
+						</label>
+						<p class="ml-auto mt-2 w-[23.125rem] text-[0.875rem] text-pomegranate exmd:w-full">Це поле обов'язкове до заповнення</p>
+					</div>
+
+					<div class="w-full">
+						<label class="relative flex w-full items-center gap-[1.875rem] exmd:ml-0 exmd:flex-col exmd:items-start exmd:gap-2">
+							<span class="ml-auto text-right text-gray exmd:ml-0 exmd:text-left">Пароль</span>
+							<input type="password" class="error w-[23.125rem] pr-[2.5rem] exmd:w-full" required />
+							<button type="button" class="absolute right-[1.25rem] top-[50%] z-[1] -translate-y-1/2 exmd:top-[2.375rem] exmd:translate-y-0">
+								<svg width="28" height="19" viewBox="0 0 28 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M14.265 1C7.40521 1 2.6377 6.51095 1 9.45867C2.46774 12.4064 6.89534 18 13.7551 18C20.6149 18 25.3623 12.4342 27 9.48649C25.5323 6.53877 21.1248 1 14.265 1Z" stroke="#BFBFBF" stroke-linejoin="round" />
+									<path d="M17.4822 9.5C17.4822 11.456 15.9231 13.0417 14 13.0417C12.0769 13.0417 10.5179 11.456 10.5179 9.5C10.5179 7.54399 12.0769 5.95833 14 5.95833C15.9231 5.95833 17.4822 7.54399 17.4822 9.5Z" stroke="#BFBFBF" stroke-linejoin="round" />
+								</svg>
+							</button>
+						</label>
+						<p class="ml-auto mt-2 w-[23.125rem] text-[0.875rem] text-pomegranate exmd:w-full">Це поле обов'язкове до заповнення</p>
+					</div>
+
+					<div class="w-full">
+						<label class="relative flex w-full items-center gap-[1.875rem] exmd:ml-0 exmd:flex-col exmd:items-start exmd:gap-2">
+							<span class="ml-auto text-right text-gray exmd:ml-0 exmd:text-left">Повторіть пароль</span>
+							<input type="password" class="w-[23.125rem] exmd:w-full" required />
+							<button type="button" class="absolute right-[1.25rem] top-[50%] z-[1] -translate-y-1/2 exmd:top-[2.375rem] exmd:translate-y-0">
+								<svg width="28" height="24" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M14.265 3.52301C7.40521 3.52301 2.6377 9.01904 1 11.9588C1.623 13.2066 2.77926 14.9298 4.42843 16.5M21.8009 6.00275C24.4103 7.84994 26.1724 10.329 27 11.9865C25.3623 14.9263 20.6149 20.477 13.7551 20.477C11.9683 20.477 10.3464 20.0985 8.89894 19.4867M17.1849 10.5698C17.376 11.007 17.4822 11.4909 17.4822 12C17.4822 13.9507 15.9231 15.5321 14 15.5321C13.5523 15.5321 13.1243 15.4464 12.7312 15.2902M3.32905 23L24.671 1" stroke="#BFBFBF" stroke-linecap="round" stroke-linejoin="round" />
+								</svg>
+							</button>
+						</label>
+					</div>
+
+					<div class="flex w-full items-center gap-[1.875rem] exmd:ml-0 exmd:flex-col exmd:items-start exmd:gap-2">
+						<div class="ml-auto text-right text-gray exmd:ml-0 exmd:text-left">Документи</div>
+						<label class="flex w-[23.125rem] cursor-pointer justify-center gap-2 rounded-[0.625rem] border border-dashed border-electric-violet px-6 py-[1.1875rem] text-electric-violet transition ease-in hover:border-solid hover:bg-magnolia exmd:w-full exmd:py-[0.9375rem]">
+							<svg width="15" height="18" viewBox="0 0 15 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M12.6532 11.0919L8.49292 15.635C7.66978 16.509 6.55336 17 5.38925 17C4.22515 17 3.10873 16.509 2.28558 15.635C1.46244 14.761 1 13.5756 1 12.3396C1 11.1036 1.46244 9.9182 2.28558 9.04421L9.00472 1.91C9.55348 1.32734 10.2978 1 11.0738 1C11.8499 1 12.5942 1.32734 13.1429 1.91C13.6917 2.49266 14 3.28292 14 4.10693C14 4.93094 13.6917 5.7212 13.1429 6.30386L6.4165 13.4381C6.14212 13.7294 5.76998 13.8931 5.38194 13.8931C4.99391 13.8931 4.62177 13.7294 4.34738 13.4381C4.073 13.1467 3.91886 12.7516 3.91886 12.3396C3.91886 11.9276 4.073 11.5325 4.34738 11.2411L6.30688 9.22577L8.26637 7.21041" stroke="#7900F3" stroke-linecap="round" stroke-linejoin="round"></path>
+							</svg>
+
+							<span>Прикріпити файл</span>
+							<input type="file" hidden="" name="file" />
+						</label>
+					</div>
+
+					<div class="flex w-full items-center gap-[1.875rem] exmd:ml-0 exmd:flex-col exmd:items-start exmd:gap-2">
+						<div class="ml-auto text-right text-gray exmd:ml-0 exmd:text-left">Документи</div>
+						<label class="flex w-[23.125rem] cursor-pointer justify-center gap-2 rounded-[0.625rem] border border-dashed border-electric-violet px-6 py-[1.1875rem] text-bamboo transition ease-in hover:border-solid hover:bg-magnolia exmd:w-full exmd:py-[0.9375rem]">
+							<span class="line-clamp-1 max-w-[15rem]">document_для реєстрації.docx</span>
+							<button class="btn-gray flex h-[1.125rem] w-[1.125rem] items-center justify-center p-0">
+								<svg width="6" height="6" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M11 1L6 6M6 6L1 11M6 6L1 1M6 6L11 11" stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+								</svg>
+							</button>
+						</label>
+					</div>
+
+					<div class="w-full">
+						<div class="flex w-full items-center gap-[1.875rem] exmd:ml-0 exmd:flex-col exmd:items-start exmd:gap-2">
+							<div class="ml-auto text-right text-gray exmd:ml-0 exmd:text-left">Документи</div>
+							<label class="flex w-[23.125rem] cursor-pointer justify-center gap-2 rounded-[0.625rem] border border-dashed border-pomegranate px-6 py-[1.1875rem] text-electric-violet transition ease-in hover:border-solid hover:bg-magnolia exmd:w-full exmd:py-[0.9375rem]">
+								<svg width="15" height="18" viewBox="0 0 15 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M12.6532 11.0919L8.49292 15.635C7.66978 16.509 6.55336 17 5.38925 17C4.22515 17 3.10873 16.509 2.28558 15.635C1.46244 14.761 1 13.5756 1 12.3396C1 11.1036 1.46244 9.9182 2.28558 9.04421L9.00472 1.91C9.55348 1.32734 10.2978 1 11.0738 1C11.8499 1 12.5942 1.32734 13.1429 1.91C13.6917 2.49266 14 3.28292 14 4.10693C14 4.93094 13.6917 5.7212 13.1429 6.30386L6.4165 13.4381C6.14212 13.7294 5.76998 13.8931 5.38194 13.8931C4.99391 13.8931 4.62177 13.7294 4.34738 13.4381C4.073 13.1467 3.91886 12.7516 3.91886 12.3396C3.91886 11.9276 4.073 11.5325 4.34738 11.2411L6.30688 9.22577L8.26637 7.21041" stroke="#7900F3" stroke-linecap="round" stroke-linejoin="round"></path>
+								</svg>
+
+								<span>Прикріпити файл</span>
+								<input type="file" hidden="" name="file" />
+							</label>
+						</div>
+						<p class="ml-auto mt-2 w-[23.125rem] text-[0.875rem] text-pomegranate exmd:w-full">Файл має бути не більше 100 Мбайт</p>
+					</div>
+				</div>
+
+				<h2 class="mt-8 text-[1.5rem] font-semibold text-electric-violet underline underline-offset-4">Кнопки</h2>
+				<div class="flex flex-wrap gap-4 mt-4">
+					<div>
+						<button class="btn-orange">Button</button>
+					</div>
+					<div>
+						<button class="btn-orange-light">Button</button>
+					</div>
+					<div>
+						<button class="btn-orange-border">Button</button>
+					</div>
+					<div>
+						<button class="btn-violet">Button</button>
+					</div>
+					<div>
+						<button class="btn-red">Button</button>
+					</div>
+					
+					<div>
+						<button class="btn-red-strong">Button</button>
+					</div>
+					<div>
+						<button class="btn-green">Button</button>
+					</div>
+					<div>
+						<button class="btn-green-strong">Button</button>
+					</div>
+					<div>
+						<button class="btn-gray">Button</button>
+					</div>
+					
+					<div>
+						<button class="btn-gray-bordered">Button</button>
+					</div>
+					<div>
+						<button class="btn-light">Button</button>
+					</div>
+				</div>
+
+				<h2 class="mt-8 text-[1.5rem] font-semibold text-electric-violet underline underline-offset-4">Інші елементи</h2>
+				<div class="flex flex-col gap-4 mt-4">
+
+					<div>
+						<a href="#" class="group flex items-center gap-[0.75rem] text-electric-violet xlg:text-[0.875rem]">
+							<svg class="xlg:h-[0.875rem] xlg:w-[0.875rem]" width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path class="transition-all group-hover:stroke-black" d="M8.30287 0.999972L0.999999 8.30284L8.30287 15.6057" stroke="#7900F3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+								<path class="transition-all group-hover:stroke-black" d="M1 8.30284L15.5 8.30285" stroke="#7900F3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+							<span class="transition-all group-hover:text-black">Назад</span>
+						</a>
+					</div>
+					<div>
+						<button class="group flex items-center gap-[0.625rem] text-electric-violet" aria-label="Редагувати заяву">
+							<svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path class="transition ease-in group-hover:stroke-black" d="M8.12959 8.61471L7.75208 11.7501L10.9987 11.5314L12.2068 10.4376L19.0021 4.09387L16.1329 1.25012L9.11114 7.73971L8.12959 8.61471Z" stroke="#7900F3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+								<path class="transition ease-in group-hover:stroke-black" d="M7.50208 0.500122H4.00208C2.34522 0.500122 1.00208 1.84327 1.00208 3.50012V15.5001C1.00208 17.157 2.34522 18.5001 4.00208 18.5001H16.0021C17.6589 18.5001 19.0021 17.157 19.0021 15.5001V12.5001" stroke="#7900F3" stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+
+							<span class="transition ease-in group-hover:text-black md:text-[0.875rem]">Ред</span>
+						</button>
+					</div>
+
+
+					<div>
+						<svg class="animate-spin" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<mask id="path-1-inside-1_1793_2890" fill="white">
+								<path d="M8.49173 28.484C8.0841 29.1618 8.30079 30.0481 9.01228 30.3935C11.7431 31.7193 14.8049 32.2452 17.84 31.8938C21.3509 31.4874 24.6284 29.9299 27.1609 27.4645C29.6934 24.9991 31.3382 21.7645 31.8388 18.2658C32.3393 14.7671 31.6672 11.2011 29.9276 8.12452C28.1879 5.04797 25.4785 2.63401 22.2224 1.25951C18.9662 -0.114994 15.3466 -0.37268 11.9286 0.526674C8.51061 1.42603 5.48657 3.43181 3.3286 6.23088C1.46311 8.65059 0.335594 11.5454 0.0641111 14.5689C-0.00662065 15.3566 0.641158 15.9992 1.43207 15.9992C2.22297 15.9993 2.85609 15.3562 2.94218 14.57C3.20387 12.1802 4.11787 9.89805 5.59689 7.97963C7.36856 5.68162 9.85127 4.03489 12.6574 3.29653C15.4636 2.55816 18.4353 2.76972 21.1085 3.89818C23.7818 5.02663 26.0062 7.00847 27.4344 9.5343C28.8627 12.0601 29.4144 14.9878 29.0035 17.8602C28.5926 20.7326 27.2421 23.3882 25.163 25.4123C23.0839 27.4363 20.393 28.715 17.5106 29.0487C15.1043 29.3273 12.6776 28.9342 10.4948 27.9266C9.77673 27.5952 8.89936 27.8062 8.49173 28.484Z"></path>
+							</mask>
+							<path d="M8.49173 28.484C8.0841 29.1618 8.30079 30.0481 9.01228 30.3935C11.7431 31.7193 14.8049 32.2452 17.84 31.8938C21.3509 31.4874 24.6284 29.9299 27.1609 27.4645C29.6934 24.9991 31.3382 21.7645 31.8388 18.2658C32.3393 14.7671 31.6672 11.2011 29.9276 8.12452C28.1879 5.04797 25.4785 2.63401 22.2224 1.25951C18.9662 -0.114994 15.3466 -0.37268 11.9286 0.526674C8.51061 1.42603 5.48657 3.43181 3.3286 6.23088C1.46311 8.65059 0.335594 11.5454 0.0641111 14.5689C-0.00662065 15.3566 0.641158 15.9992 1.43207 15.9992C2.22297 15.9993 2.85609 15.3562 2.94218 14.57C3.20387 12.1802 4.11787 9.89805 5.59689 7.97963C7.36856 5.68162 9.85127 4.03489 12.6574 3.29653C15.4636 2.55816 18.4353 2.76972 21.1085 3.89818C23.7818 5.02663 26.0062 7.00847 27.4344 9.5343C28.8627 12.0601 29.4144 14.9878 29.0035 17.8602C28.5926 20.7326 27.2421 23.3882 25.163 25.4123C23.0839 27.4363 20.393 28.715 17.5106 29.0487C15.1043 29.3273 12.6776 28.9342 10.4948 27.9266C9.77673 27.5952 8.89936 27.8062 8.49173 28.484Z" stroke="#E8E8E8" stroke-width="10" mask="url(#path-1-inside-1_1793_2890)"></path>
+							<mask id="path-2-inside-2_1793_2890" fill="white">
+								<path d="M28.484 23.5083C29.1618 23.9159 30.0481 23.6992 30.3935 22.9877C31.7193 20.2569 32.2452 17.1951 31.8938 14.16C31.4874 10.6491 29.9299 7.37158 27.4645 4.83911C24.9991 2.30664 21.7645 0.661752 18.2658 0.161243C14.7671 -0.339266 11.2011 0.332773 8.12452 2.07244C5.04797 3.81211 2.63401 6.5215 1.25951 9.77763C-0.114996 13.0338 -0.372682 16.6534 0.526673 20.0714C1.42603 23.4894 3.43181 26.5134 6.23088 28.6714C8.65059 30.5369 11.5454 31.6644 14.5689 31.9359C15.3566 32.0066 15.9992 31.3588 15.9992 30.5679C15.9993 29.777 15.3562 29.1439 14.57 29.0578C12.1802 28.7961 9.89805 27.8821 7.97963 26.4031C5.68162 24.6314 4.03489 22.1487 3.29652 19.3426C2.55816 16.5364 2.76972 13.5647 3.89818 10.8915C5.02663 8.21823 7.00847 5.99384 9.53429 4.56559C12.0601 3.13733 14.9878 2.5856 17.8602 2.99651C20.7326 3.40742 23.3882 4.75786 25.4123 6.837C27.4363 8.91614 28.715 11.607 29.0487 14.4894C29.3273 16.8957 28.9342 19.3224 27.9266 21.5052C27.5952 22.2233 27.8062 23.1006 28.484 23.5083Z"></path>
+							</mask>
+							<path d="M28.484 23.5083C29.1618 23.9159 30.0481 23.6992 30.3935 22.9877C31.7193 20.2569 32.2452 17.1951 31.8938 14.16C31.4874 10.6491 29.9299 7.37158 27.4645 4.83911C24.9991 2.30664 21.7645 0.661752 18.2658 0.161243C14.7671 -0.339266 11.2011 0.332773 8.12452 2.07244C5.04797 3.81211 2.63401 6.5215 1.25951 9.77763C-0.114996 13.0338 -0.372682 16.6534 0.526673 20.0714C1.42603 23.4894 3.43181 26.5134 6.23088 28.6714C8.65059 30.5369 11.5454 31.6644 14.5689 31.9359C15.3566 32.0066 15.9992 31.3588 15.9992 30.5679C15.9993 29.777 15.3562 29.1439 14.57 29.0578C12.1802 28.7961 9.89805 27.8821 7.97963 26.4031C5.68162 24.6314 4.03489 22.1487 3.29652 19.3426C2.55816 16.5364 2.76972 13.5647 3.89818 10.8915C5.02663 8.21823 7.00847 5.99384 9.53429 4.56559C12.0601 3.13733 14.9878 2.5856 17.8602 2.99651C20.7326 3.40742 23.3882 4.75786 25.4123 6.837C27.4363 8.91614 28.715 11.607 29.0487 14.4894C29.3273 16.8957 28.9342 19.3224 27.9266 21.5052C27.5952 22.2233 27.8062 23.1006 28.484 23.5083Z" stroke="#7900F3" stroke-width="10" mask="url(#path-2-inside-2_1793_2890)"></path>
+						</svg>
+					</div>
+
+					<div>
+						<button type="button" class="group/button">
+							<svg width="28" height="19" viewBox="0 0 28 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path class="transition ease-in group-hover/button:stroke-black" d="M14.265 1C7.40521 1 2.6377 6.51095 1 9.45867C2.46774 12.4064 6.89534 18 13.7551 18C20.6149 18 25.3623 12.4342 27 9.48649C25.5323 6.53877 21.1248 1 14.265 1Z" stroke="#BFBFBF" stroke-linejoin="round" />
+								<path class="transition ease-in group-hover/button:stroke-black" d="M17.4822 9.5C17.4822 11.456 15.9231 13.0417 14 13.0417C12.0769 13.0417 10.5179 11.456 10.5179 9.5C10.5179 7.54399 12.0769 5.95833 14 5.95833C15.9231 5.95833 17.4822 7.54399 17.4822 9.5Z" stroke="#BFBFBF" stroke-linejoin="round" />
+							</svg>
+						</button>
+					</div>
+					
+
+					<div>
+						<button aria-label="user" class="relative z-[10] group">
+							<div class="h-[2.5rem] w-[2.5rem] overflow-hidden rounded-full">
+								<div class="transition border border-feta rounded-full w-full h-full flex justify-center items-center bg-feta text-lima uppercase text-semibold text-[0.875rem] group-hover:bg-madang group-active:border-lima">
+									<span>A</span><span>B</span>
+								</div>
+							</div>
+						</button>
+					</div>
+
+					<div>
+						<button class="flex items-center justify-center w-8 h-8 p-0 btn-gray">
+							<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M11 1L6 6M6 6L1 11M6 6L1 1M6 6L11 11" stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</button>
+					</div>
+
+
+					<div class="max-w-[18.125rem]">
+						<li class="flex items-center gap-[0.625rem] px-[1.25rem] py-[0.375rem] hover:bg-mercury transition ease-out cursor-pointer">
+							<div class="h-[3.5625rem] w-[3.5625rem] flex-shrink-0 overflow-hidden rounded-[50%]">
+								<img src="img/user-004.jpg" alt="user">
+							</div>
+							<div class="flex w-full flex-col gap-1">
+								<p class="font-medium">Станіслав Броваренко</p>
+								<div class="flex items-center justify-between gap-[10px]">
+									<p class="line-clamp-1 text-[0.875rem] text-gray">Хай! як справи по Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores, facilis.</p>
+								</div>
+							</div>
+						</li>
+					</div>
+
+					<div class="max-w-[18.125rem]">
+						<li class="flex items-center gap-[0.625rem] bg-bamboo px-[1.25rem] py-[0.375rem] cursor-pointer">
+							<div class="h-[3.5625rem] w-[3.5625rem] flex-shrink-0 overflow-hidden rounded-[50%]">
+								<img src="img/user-004.jpg" alt="user">
+							</div>
+							<div class="flex w-full flex-col gap-1">
+								<p class="font-medium text-white">Станіслав Броваренко</p>
+								<div class="flex items-center justify-between gap-[10px]">
+									<p class="line-clamp-1 text-[0.875rem] text-wheat">Хай! як справи по Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores, facilis.</p>
+								</div>
+							</div>
+						</li>
+					</div>
+
+					<div class="pb-14">
+						<ul class="header__menu flex gap-[2.1875rem]">
+							<li class="active"><a href="#">Мої заявки</a></li>
+							<li class=""><a href="#">Експерти</a></li>
+							<li class=""><a href="#">Архів</a></li>
+						</ul>
+					</div>
+
+					
+					
+				</div>
+			</div>
+		</section>
+	</body>
+</html>

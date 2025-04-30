@@ -1,0 +1,30 @@
+.container {
+	padding: 0 var(--container-padding);
+	max-width: var(--container-width);
+	margin: 0 auto;
+	position: relative;
+}
+
+.container-right {
+	/* overflow-x: hidden; */
+	padding-left: calc(
+		(100% - var(--container-width)) / 2 + var(--container-padding)
+	);
+
+	@media (max-width: 1229px) {
+		padding-left: var(--container-padding);
+		padding-right: var(--container-padding);
+	}
+}
+
+.container-left {
+	/* overflow-x: hidden; */
+	padding-right: calc(
+		(100% - var(--container-width)) / 2 + var(--container-padding)
+	);
+
+	@media (max-width: 1229px) {
+		padding-left: var(--container-padding);
+		padding-right: var(--container-padding);
+	}
+}

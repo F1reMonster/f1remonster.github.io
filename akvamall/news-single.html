@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.min.css">
+	<title>Аквамол - Новини / Графік поставки води у святкові дні</title>
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+	<div class="body-wrapper">
+
+		<header class="header">
+	<div class="header__top">
+		<div class="container">
+			<div class="header__top-wrapper">
+				<div class="header__location">
+					<img class="header__location-marker" src="./img/icons/marker.svg" alt="marker">
+					<div class="select">
+						<div class="select__placeholder">
+							<p><span class="text">Доставка в</span> <span class="city">Харків</span></p>
+						</div>
+						<div class="dropdown__arrow"></div>
+						<ul class="dropdown">
+							<li class="dropdown__item">
+								<p><span class="text">Доставка в</span> <span class="city">Львів</span></p>
+							</li>
+							
+							<li class="dropdown__item dropdown__item--active">
+								<p><span class="text">Доставка в</span> <span class="city">Харків</span></p>
+							</li>
+							
+
+						</ul>
+					</div>
+				</div>
+				<div class="header__shedule">
+					<div class="header__shedule-order">
+						<div class="title">Прийом замовлень:</div>
+						<div class="time"><span>Пн-Сб:</span> 7:30 - 19:00</div>
+						<div class="time"><span>Нд:</span> 07:30 - 17:00</div>
+					</div>
+					<div class="header__shedule-delivery">
+						<div class="title">Доставка замовлень:</div>
+						<div class="time"><span>Пн-Сб:</span> 8:00 - 19:00 <span>(вечірню доставку уточнюйте)</span></div>
+						<div class="time"><span>Нд:</span> 08:30 - 16:00</div>
+					</div>
+
+				</div>
+				<div class="header__contacts">
+					<div class="contacts__item">
+						<div class="item">
+							<img src="img/icons/lifecell.svg" alt="img">
+							<a href="tel:+380639241216">+38 (063)
+								924-12-16</a>
+						</div>
+					</div>
+					<div class="contacts__item">
+						<div class="item">
+							<img src="img/icons/vodafone.svg" alt="img">
+							<a href="tel:+380999465255">+38 (099)
+								946-52-55</a>
+						</div>
+						<div class="item">
+							<img src="img/icons/kyivstar.svg" alt="img">
+							<a href="tel:+380969659316">+38 (096)
+								965-93-16</a>
+						</div>
+					</div>
+					<div class="contacts__item">
+						<div class="item">
+							<a href="#"><img src="img/icons/viber.svg" alt="img"></a>
+							<a href="#"><img src="img/icons/telegram.svg" alt="img"></a>
+						</div>
+					</div>
+
+
+				</div>
+				<div class="header__contacts-mobile">
+					<div class="select">
+						<div class="select__placeholder">
+							<p>Наші телефони</p>
+						</div>
+						<div class="dropdown__arrow"></div>
+						<ul class="dropdown">
+							<li class="dropdown__item">
+								<p>
+									<img src="img/icons/lifecell.svg" alt="img">
+									<a href="tel:+380639241216">
+										+38 (063) 924-12-16
+									</a>
+								</p>
+							</li>
+							<li class="dropdown__item">
+								<p>
+									<img src="img/icons/vodafone.svg" alt="img">
+									<a href="tel:+380999465255">+38 (099) 946-52-55
+									</a>
+								</p>
+							</li>
+							<li class="dropdown__item">
+								<p>
+									<img src="img/icons/kyivstar.svg" alt="img">
+									<a href="tel:+380969659316">
+										+38 (096) 965-93-16
+									</a>
+								</p>
+							</li>
+
+
+						</ul>
+					</div>
+				</div>
+				<div class="header__language">
+					<div class="select">
+						<div class="select__placeholder">
+							<p>UA</p>
+						</div>
+						<div class="dropdown__arrow"></div>
+						<ul class="dropdown">
+
+							<li class="dropdown__item dropdown__item--active">
+								<p>UA</p>
+							</li>
+							<li class="dropdown__item">
+								<p>RU</p>
+							</li>
+							
+
+						</ul>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<div class="header__bottom">
+		<div class="container">
+			<div class="menu">
+				<div class="burger">
+					
+				</div>
+				<div class="logo">
+					<a href="/"><img src="img/icons/logo.svg" alt="logo"></a>
+				</div>
+				<div class="menu__list ">
+
+					<ul class="menu-group mobile-order">
+						<li>Прийом замовлень:</li>
+						<li>Пн-Сб: 7:30 - 19:00 </li>
+						<li>Нд: 07:30 - 17:00</li>
+					</ul>
+					<ul class="menu-group mobile-delivery">
+						<li>Доставка замовлень:</li>
+						<li>Пн-Сб: 08:00 - 19:00 <br>(вечірню доставку уточнюйте)</li>
+						<li>Нд: 08:30 - 16:00</li>
+					</ul>
+
+					<ul class="menu-group">
+						<li><a href="#">Про воду</a>
+							<ul>
+								<li><a href="index.html">Водораздатчики</a></li>
+								<li><a href="main.html">Кулер настільний</a></li>
+								<li><a href="#">Кулер підлоговий</a></li>
+								<li><a href="#">Попми</a></li>
+								<li><a href="#">Підставки для бутиля</a></li>
+								<li><a href="#">Підстаканник для кулера</a></li>
+							</ul>
+						</li>
+						<li><a href="#">Ціни на воду</a></li>
+						<li><a href="#">Доставка та оплата</a></li>
+						<li>
+							<a href="index.html">Обладнання для розливу</a>
+							<ul>
+								<li><a href="index.html">Водораздатчики</a></li>
+								<li><a href="main.html">Кулер настільний</a></li>
+								<li><a href="#">Кулер підлоговий</a></li>
+								<li><a href="#">Попми</a></li>
+								<li><a href="#">Підставки для бутиля</a></li>
+								<li><a href="#">Підстаканник для кулера</a></li>
+							</ul>
+						</li>
+						<li><a href="#">Супутні товари</a></li>
+						<li><a href="#">Акції</a></li>
+						<li><a href="#">Відгуки</a></li>
+						<li><a href="#">Новини</a></li>
+						<li><a href="#">Наше виробництво</a></li>
+						<li><a href="#">Договір-оферти</a></li>
+						<li><a href="#">Контакти</a></li>
+					</ul>
+
+				</div>
+				<div class="cart">
+					<a href="#"><img src="img/icons/cart.svg" alt="cart"></a>
+					<div class="cart__count">0</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+</header>
+	
+		<!-- main ↓ -->
+		<main class="main" id="main">
+			<!-- block__slider-inner -->
+<section class="block block__patterns block__slider-inner">
+	<div class="container">
+		<div class="slider-inner swiper">
+			<div class="swiper-wrapper">
+
+
+				<div class="swiper-slide slider-inner__slide">
+					<div class="slider-inner__item">
+						<h2 class="block__title block__title--blue">Мінімальний стартовий пакет&nbsp;№&nbsp;1</h2>
+						<div class="slider-inner__item-content">
+							<div class="content-group">
+								<div class="content-item content-item--bottles">
+									<div class="img">
+										<img src="img/2_bottles.png" srcset="img/2_bottles.webp" alt="img">
+									</div>
+									<h5 class="title">Бутилі “Лазурної”</h5>
+
+								</div>
+								<div class="content-item content-item--plus">
+									<svg width="47" height="44" viewBox="0 0 47 44" fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M18.1673 40.4914V26.6466H4.42083C3.43894 26.6466 2.58797 26.2989 1.86792 25.6034C1.14787 24.908 0.787842 24.0862 0.787842 23.1379V20.6724C0.787842 19.7241 1.14787 18.9023 1.86792 18.2069C2.58797 17.5115 3.43894 17.1638 4.42083 17.1638H18.1673V3.50862C18.1673 2.56035 18.5273 1.73851 19.2474 1.0431C19.9674 0.3477 20.8184 0 21.8003 0H25.1387C26.1206 0 26.9715 0.3477 27.6916 1.0431C28.4116 1.73851 28.7717 2.56035 28.7717 3.50862V17.1638H42.7145C43.6964 17.1638 44.5474 17.5115 45.2674 18.2069C45.9875 18.9023 46.3475 19.7241 46.3475 20.6724V23.1379C46.3475 24.0862 45.9875 24.908 45.2674 25.6034C44.5474 26.2989 43.6964 26.6466 42.7145 26.6466H28.7717V40.4914C28.7717 41.4397 28.4116 42.2615 27.6916 42.9569C26.9715 43.6523 26.1206 44 25.1387 44H21.8003C20.8184 44 19.9674 43.6523 19.2474 42.9569C18.5273 42.2615 18.1673 41.4397 18.1673 40.4914Z"
+											fill="#0035E9" />
+									</svg>
+								</div>
+								<div class="content-item content-item--pump">
+									<div class="img">
+										<img src="img/pump.png" srcset="img/pump.webp" alt="img">
+									</div>
+									<h5 class="title">Помповий насос</h5>
+								</div>
+							</div>
+							<div class="content-group">
+								<div class="content-item content-item--equals">
+									<svg width="71" height="44" viewBox="0 0 71 44" fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M70.5971 5.61379V9.55861C70.5971 11.0759 70.0407 12.3908 68.9279 13.5034C67.8151 14.6161 66.5 15.1724 64.9825 15.1724H5.80139C4.28392 15.1724 2.96879 14.6161 1.85598 13.5034C0.743172 12.3908 0.186768 11.0759 0.186768 9.55861V5.61379C0.186768 4.09655 0.743172 2.78161 1.85598 1.66896C2.96879 0.556321 4.28392 0 5.80139 0H64.9825C66.5 0 67.8151 0.556321 68.9279 1.66896C70.0407 2.78161 70.5971 4.09655 70.5971 5.61379ZM70.5971 34.4414V38.3862C70.5971 39.9034 70.0407 41.2184 68.9279 42.331C67.8151 43.4437 66.5 44 64.9825 44H5.80139C4.28392 44 2.96879 43.4437 1.85598 42.331C0.743172 41.2184 0.186768 39.9034 0.186768 38.3862V34.4414C0.186768 32.9241 0.743172 31.6092 1.85598 30.4965C2.96879 29.3839 4.28392 28.8276 5.80139 28.8276H64.9825C66.5 28.8276 67.8151 29.3839 68.9279 30.4965C70.0407 31.6092 70.5971 32.9241 70.5971 34.4414Z"
+											fill="#0035E9" />
+									</svg>
+								</div>
+								<div class="content-item content-item--price">
+									<p>
+										100
+
+										<span>грн.</span>
+									</p>
+									<a href="#order" class="button btn-order" data-effect="mfp-zoom-in">Замовити</a>
+								</div>
+							</div>
+						</div>
+
+
+					</div>
+
+
+				</div>
+
+				<div class="swiper-slide slider-inner__slide">
+					<div class="slider-inner__item ">
+						<h2 class="block__title block__title--blue">Мінімальний стартовий пакет&nbsp;№&nbsp;2</h2>
+						<div class="slider-inner__item-info">
+							<div class="number">3</div>
+							<div class="text">бутилі “Лазурної”</div>
+						</div>
+						<div class="slider-inner__item-content slider-inner__item-content--2">
+							<div class="content-item content-item--bottles3">
+								<div class="img">
+									<img src="img/3_bottles.png" alt="img">
+								</div>
+							</div>
+							<div class="content-item content-item--equals">
+								<svg width="71" height="44" viewBox="0 0 71 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M70.5971 5.61379V9.55861C70.5971 11.0759 70.0407 12.3908 68.9279 13.5034C67.8151 14.6161 66.5 15.1724 64.9825 15.1724H5.80139C4.28392 15.1724 2.96879 14.6161 1.85598 13.5034C0.743172 12.3908 0.186768 11.0759 0.186768 9.55861V5.61379C0.186768 4.09655 0.743172 2.78161 1.85598 1.66896C2.96879 0.556321 4.28392 0 5.80139 0H64.9825C66.5 0 67.8151 0.556321 68.9279 1.66896C70.0407 2.78161 70.5971 4.09655 70.5971 5.61379ZM70.5971 34.4414V38.3862C70.5971 39.9034 70.0407 41.2184 68.9279 42.331C67.8151 43.4437 66.5 44 64.9825 44H5.80139C4.28392 44 2.96879 43.4437 1.85598 42.331C0.743172 41.2184 0.186768 39.9034 0.186768 38.3862V34.4414C0.186768 32.9241 0.743172 31.6092 1.85598 30.4965C2.96879 29.3839 4.28392 28.8276 5.80139 28.8276H64.9825C66.5 28.8276 67.8151 29.3839 68.9279 30.4965C70.0407 31.6092 70.5971 32.9241 70.5971 34.4414Z"
+										fill="#0035E9" />
+								</svg>
+							</div>
+							<div class="content-item content-item--price-tag">
+								<div class="img">
+									<img src="img/slider-price-tag-background.png" alt="img">
+								</div>
+								<div class="price-tag">
+									<img src="img/icons/price_label.svg" alt="img">
+									<div class="price">
+										<p>99</p>
+										<p>грн.</p>
+									</div>
+								</div>
+
+								<a href="#order" class="button btn-order" data-effect="mfp-zoom-in">Замовити</a>
+
+							</div>
+
+						</div>
+
+
+					</div>
+
+
+				</div>
+
+			</div>
+		</div>
+		<div class="slider-inner-pagination"></div>
+		<div class="company-about-video">
+			<a href="videos/video2.mp4" class="company-about-video__button" id="play-button"
+				data-effect="mfp-move-from-bottom">
+				<!-- <div class="company-about-video__icon"><img src="./src/img/icons/play_button.svg" alt="play"></div> -->
+				<div class="company-about-video__icon">
+					<svg class="my-svg" width="69" height="69" viewBox="0 0 69 69" fill="none"
+						xmlns="http://www.w3.org/2000/svg">
+						<circle class="circle-dotted--outer" cx="34.5" cy="34.5" r="33.5" stroke="#FEDA00"
+							stroke-dasharray="3 3" />
+						<circle cx="34.5" cy="34.5" r="30.5" fill="#FEDA00" />
+						<circle class="half-circle--inner" cx="34.5" cy="34.5" r="17" stroke="#033476"
+							stroke-dasharray="54.405 54.405" />
+					</svg>
+				</div>
+				<div class="company-about-video__text"><span>Подивитись відео<br>про компанію</span></div>
+			</a>
+		</div>
+
+		
+	</div>
+</section>
+<!-- ./block__slider-inner -->
+			
+			<div class="section block block__breadcsrumbs">
+	<div class="container">
+		
+		<ul>
+			<li>
+				<a href="#">Головна</a>
+			</li>
+						
+			
+				<li>
+					<a href="news.html">Новини</a>
+				</li>
+				<li>
+					Графік поставки води у святкові дні
+				</li>
+			
+		</ul>
+	</div>
+</div>
+			<!-- block__news-single -->
+<section class="block block__patterns block__news-single">
+	<div class="container">
+		<h3 class="block__title block__title--blue mb-4">Графік поставки води у святкові дні</h3>
+		<div class="block__row">
+			<div class="block__col block__col--no-shrink">
+				<div class="news__item">
+					<div class="news__date">
+						<span>15</span>
+						<span>квітня</span>
+					</div>
+					<div class="news__content">
+						<img src="img/news-03.jpg" srcset="img/news-03.webp" alt="img" loading="lazy">
+					</div>
+				</div>
+			</div>
+			<div class="block__col ">
+				<p>
+					Доставка в день замовлення здійснюватись якщо замовити до 14.00, все що після 14.00 доставлятися на
+					наступний день згідно з графіком доставки вашого району.
+				</p>
+				<br>
+				<br>
+				<b>Періоди доставки замовлень</b>
+				<p>Ранок із 8.15 до 13.00</p>
+				<p>День із 13.00 до 16.00</p>
+				<p>Вечір із 16.00 до 20.00</p>
+			</div>
+
+
+		</div>
+		<div class="block__row">
+			<div class="block__col">
+				<p>
+					<b>Доставка води безкоштовно. </b>Підйом на будь-який поверх будь-якої кількості суліїв безкоштовний при
+					працюючому
+					ліфті. Якщо ліфта немає або він не працює, ми піднімаємо до 5 поверху будь-яку кількість безкоштовно, а
+					понад 5 поверхів за кожен поверх 1 сулій підйому поверху 5 грн.
+					Ви можете замовити платну доставку в певний час (наприклад, з 10.00 до 11.00).
+				</p>
+
+				<br>
+				
+				<p>
+					<b>Вартість цієї послуги – 80 гривень. </b> Ця послуга не поширюється на передмістя та доставку у вихідні дні..
+				</p>
+				<br>
+				<p><b>Оплату можна зробити</b></p>
+				<p>Готівкою кур'єру</p>
+				<p>На карту через менеджера</p>
+				<p>На карту через сайт</p>
+				<p>Розрахунковий рахунок для юридичних.</p>
+
+			</div>
+		</div>
+
+	</div>
+</section>
+<!-- ./block__news-single -->
+			
+			
+			
+	
+		</main>
+		<!-- main ↑ -->
+	
+		<!-- footer -->
+<footer class="footer">
+	<div class="container">
+		<div class="footer__wrapper">
+			<div class="footer__item footer__item-socials">
+				<div class="socials-body">
+					<h5 class="block__title block__title--footer block__title--white">Долучайтесь до нас</h5>
+					<ul>
+						<li><a href="#"><img src="img/icons/instagram.svg" alt="img"></a></li>
+						<li><a href="#"><img src="img/icons/viber.svg" alt="img"></a></li>
+						<li><a href="#"><img src="img/icons/telegram.svg" alt="img"></a></li>
+					</ul>
+				</div>
+				<a href="#compliant" class="button btn-compliant btn-compliant-desktop" data-effect="mfp-zoom-in">Поскаржитись</a>
+			</div>
+			<div class="footer__group">
+				<div class="footer__item">
+					<div class="aquamall-block">
+						<h5 class="block__title block__title--footer block__title--white">Аквамол</h5>
+						<ul class="footer__menu">
+							<li><a href="#">Про воду</a></li>
+							<li><a href="#">Ціни на воду</a></li>
+							<li><a href="#">Обладнання для розливу</a></li>
+							<li><a href="#">Новини</a></li>
+							<li><a href="#">Наше виробницво</a></li>
+							<li><a href="#">Контакти</a></li>
+							<li><a href="#">Договір-оферта</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="footer__item">
+					<div class="buyers-block">
+						<h5 class="block__title block__title--footer block__title--white">Інформація для покупців</h5>
+						<ul class="footer__menu">
+							<li><a href="#">Доставка та оплата</a></li>
+							<li><a href="#">Супутні товари</a></li>
+							<li><a href="#">Акції</a></li>
+							<li><a href="#">Відгуки</a></li>
+
+						</ul>
+					</div>
+				</div>
+				<div class="footer__item footer__item-shedule">
+					<div class="shedule-orders">
+						<h5 class="block__title block__title--footer block__title--white">Прийом замовлень:</h5>
+						<ul>
+							<li>Пн-Сб: 7:30 - 19:00 </li>
+							<li>Нд: 07:30 - 17:00</li>
+						</ul>
+					</div>
+					<div class="shedule-delivery">
+						<h5 class="block__title block__title--footer block__title--white">Доставка замовлень:</h5>
+						<ul>
+							<li>Пн-Сб: 08:00 - 19:00<br>(вечірню доставку уточнюйте)</li>
+							<li>Нд: 08:30 - 16:00</li>
+						</ul>
+					</div>
+
+
+				</div>
+				<div class="footer__item footer__item-contacts">
+					<div class="contacts-body">
+						<h5 class="block__title block__title--footer block__title--white">Зв’язатися з нами</h5>
+						<ul>
+							<li><a href="tel:+380639241216">+38 (063) 924-12-16</a></li>
+							<li><a href="tel:+380969659316">+38 (096) 965-93-16</a></li>
+							<li><a href="tel:+380999465255">+38 (099) 946-52-55</a></li>
+						</ul>
+					</div>
+					<div class="messengers">
+						<ul>
+							<li><a href="#"><img src="img/icons/viber.svg" alt="img"></a></li>
+							<li><a href="#"><img src="img/icons/telegram.svg" alt="img"></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<div class="footer__item footer__item-compliant">
+			<a href="#compliant" class="button btn-compliant btn-compliant-mobile" data-effect="mfp-zoom-in">Поскаржитись</a>
+		</div>
+
+	</div>
+</footer>
+<!-- ./footer -->
+
+<a href="#order" class="button--fixed btn-order"  data-effect="mfp-zoom-in">
+	<svg class="my-svg" width="69" height="69" viewBox="0 0 69 69" fill="none"
+		xmlns="http://www.w3.org/2000/svg">
+		<circle class="circle-dotted--outer" cx="34.5" cy="34.5" r="33.5" stroke="#0035E9" stroke-dasharray="3 3" />
+		<circle cx="34.5" cy="34.5" r="30.5" fill="#0035E9" />
+	</svg>
+	<span>Замовити</span>
+</a>
+		<div id="order" class="modal modal--order mfp-with-anim mfp-hide">
+	<form id="orderForm" action="#">
+		<div class="form__header">
+			<div class="block__title block__title--white mb-2">Форма замовлення</div>
+		</div>
+		<div class="form__body">
+			<div class="form__input-group">
+				<label for="orderName" class="form__label">Ваше ім'я</label>
+				<input type="text" id="orderName" class="form__input">
+			</div>
+
+			<div class="form__input-group">
+				<label for="orderPhone" class="form__label">Телефон</label>
+				<input type="tel" id="orderPhone" class="form__input">
+			</div>
+
+		</div>
+
+		<div class="form__input-group form__input-group--center">
+			<button type="submit" class="button button--order">Відправити</button>
+		</div>
+	</form>
+</div>
+
+<div id="compliant" class="modal modal--compliant mfp-with-anim mfp-hide">
+	<form id="compliantForm" action="#">
+		<div class="form__header">
+			<div class="block__title block__title--white mb-2">Скарга</div>
+		</div>
+		<div class="form__body">
+			<div class="form__row">
+				<div class="form__input-group form__input-group--half">
+					<label for="compliantName" class="form__label">Ваше ім'я</label>
+					<input type="text" id="compliantName" name="compliantName" class="form__input">
+				</div>
+
+				<div class="form__input-group form__input-group--half">
+					<label for="compliantPhone" class="form__label">Телефон</label>
+					<input type="tel" id="compliantPhone" name="compliantPhone" class="form__input">
+				</div>
+			</div>
+
+			<div class="form__input-group">
+				<label for="compliantText" class="form__label">Що трапилося?</label>
+				<textarea id="compliantText" name="compliantText" class="form__input"></textarea>
+			</div>
+
+		</div>
+		<div class="form__input-group form__input-group--center">
+			<button type="submit" class="button button--compliant">Відправити</button>
+		</div>
+
+
+	</form>
+</div>
+
+<div id="notify" class="modal modal--notify mfp-with-anim mfp-hide">
+	<div class="modal__header">
+		<div class="block__title block__title--white mb-2">Увага!</div>
+	</div>
+	<div class="modal__body">
+		<p>При виборі іншого міста, товар якого там немає в наявності буде видалений із корзини!</p>
+
+
+	</div>
+	<div class="modal__footer">
+
+		<button class="button btn-close">Закрити</button>
+		<a href="№" class="button">Перейти</a>
+	</div>
+</div>
+	</div>
+
+
+	<!-- <script src="./src/js/jquery-3.6.0.min.js"></script> -->
+	<!-- <script src="./src/js/slick.min.js"></script> -->
+	<!-- <script src="./src/js/magnific-popup.min.js"></script> -->
+	<script src="js/vendors.js"></script>
+	<script src="js/script.js"></script>
+	<!-- <script src="js/sliders.js"></script> -->
+
+</body>
+
+</html>

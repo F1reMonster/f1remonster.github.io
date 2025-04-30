@@ -1,0 +1,1155 @@
+body {
+	font-family: "Gotham Pro", "Segoe UI", "Tahoma", "Geneva", "Verdana",
+		sans-serif;
+}
+
+.wr-fixed {
+	@media (max-width: 770px) {
+		.covid-icon {
+			position: absolute;
+			left: 20px;
+			bottom: 8px;
+			width: 45px;
+			height: 45px;
+		}
+
+		.callback-fixed {
+			left: calc(50% - 45px);
+		}
+
+		.gemotest {
+			left: calc(75% - 35px);
+
+			@media (max-width: 413px) {
+				left: calc(72% - 35px);
+			}
+		}
+	}
+}
+
+.covid-icon {
+	position: fixed;
+	right: 20px;
+	bottom: 600px;
+	z-index: 1000;
+	text-align: center;
+	text-decoration: none;
+}
+
+.section {
+	padding: 88px 0 81px;
+
+	@media (max-width: 767px) {
+		padding: 60px 0;
+	}
+
+	.index-title {
+		display: flex;
+		align-items: center;
+		margin-bottom: 30px;
+
+		.section__title {
+			margin-bottom: 0;
+			margin-left: 30px;
+		}
+	}
+
+	&__index-link {
+		font-family: "Museo Sans", sans-serif;
+		font-size: 24px;
+		text-decoration: none;
+		color: #5387b7;
+		transition: all 0.2s ease-out;
+		border-bottom: 1px solid transparent;
+
+		&:hover {
+			border-bottom: 1px solid #5387b7;
+		}
+	}
+
+	&__block {
+		&__apparat-cosmetology-top {
+			padding: 60px 0;
+
+			@media (max-width: 768px) {
+				padding: 30px 0;
+			}
+		}
+	}
+
+	&__text {
+		color: #6c5959;
+
+		p {
+			margin: 0;
+			padding: 15px 0;
+			font-size: 14px;
+			line-height: 13px;
+			color: #787878;
+		}
+
+		a {
+			border-bottom: 1px solid rgba(0, 90, 171, 0.5);
+			text-decoration: none;
+			color: #007cff;
+		}
+
+		&--w-md {
+			.row {
+				margin: 0 auto;
+				max-width: 747px;
+
+				@media (max-width: 767px) {
+					margin-left: -15px;
+					margin-right: -15px;
+					max-width: 100%;
+				}
+			}
+		}
+
+		&--apparat-cosmetology {
+			font-size: 14px;
+			line-height: 140%;
+		}
+	}
+
+	&__anchor {
+		.advantages-item {
+			display: flex;
+			flex-flow: row;
+			margin-right: 0;
+			align-items: center;
+			text-decoration: none;
+
+			&__number {
+				flex-shrink: 0;
+				margin-right: 30px;
+				width: 50px;
+				height: 50px;
+				font-size: 20px;
+			}
+
+			&__title {
+				font-family: "Museo Sans", sans-serif;
+				font-weight: 300;
+				font-size: 16px;
+				color: #767676;
+			}
+		}
+	}
+
+	&__article {
+		ul {
+			margin-bottom: 30px;
+		}
+
+		p,
+		li {
+			margin: 0 0 30px;
+			font-weight: 400;
+			font-size: 14px;
+			line-height: 134.2%;
+			color: #787878;
+		}
+
+		li {
+			position: relative;
+			padding-left: 30px;
+
+			&::before {
+				content: "";
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 15px;
+				height: 15px;
+				background: url("../img/svg/marker.svg") no-repeat center;
+				background-size: contain;
+			}
+		}
+
+		.row {
+			margin-bottom: 30px;
+
+			@media (max-width: 992px) {
+				gap: 30px;
+			}
+		}
+
+		.btn-more {
+			margin-top: 30px;
+			color: #7194ca;
+		}
+
+		&--more {
+			display: none;
+		}
+	}
+
+	&__article-item {
+		width: 100%;
+		height: 100%;
+	}
+
+	&__title {
+		position: relative;
+		margin-bottom: 30px;
+		font-family: "Museo Sans", sans-serif;
+		font-weight: 700;
+		font-size: 36px;
+		color: #000;
+
+		&--standard {
+			font-family: "Gotham Pro", sans-serif;
+		}
+
+		&--center {
+			text-align: center;
+
+			span {
+				position: relative;
+				z-index: 2;
+				padding: 0 45px;
+				background: #fff;
+
+				@media (max-width: 767px) {
+					padding: 0 15px;
+				}
+			}
+		}
+
+		&--lined {
+			&::after {
+				content: "";
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: 50%;
+				height: 1px;
+				background: #fcbad5;
+			}
+		}
+
+		&--cosmetology-adv {
+			margin-bottom: 45px;
+		}
+
+		&--service,
+		&--advantages {
+			font-size: 22px;
+			color: #df1366;
+		}
+
+		&--advantages {
+			margin-top: 60px;
+		}
+
+		&--cosmetology-services {
+			margin-bottom: 140px;
+		}
+
+		&--equipment {
+			font-size: 20px;
+			line-height: 28px;
+			color: #df1366;
+		}
+
+		&--equipment-characteristic-title {
+			margin-bottom: 20px;
+			font-size: 18px;
+			color: #6c5959;
+		}
+
+		@media (max-width: 567px) {
+			font-size: 24px;
+		}
+	}
+
+	&__image {
+		&--alone {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__color {
+		&--selago {
+			background: #e9f3fc;
+		}
+
+		&--white {
+			background: #fff;
+		}
+
+		&--grey {
+			background: #f8f8f8;
+		}
+	}
+
+	&__card {
+		display: flex;
+		flex-flow: column;
+		justify-content: space-between;
+		padding: 30px;
+		width: 100%;
+		height: 100%;
+		box-shadow: 0 0 20px rgba(0, 124, 255, 0.2);
+
+		h6 {
+			margin-bottom: 10px;
+			font-size: 18px;
+			color: #141414;
+		}
+
+		p {
+			font-size: 14px;
+			line-height: 140%;
+		}
+
+		.card__price {
+			p {
+				margin-bottom: 0;
+				font-weight: 700;
+				font-size: 22px;
+				color: #ff3e3e;
+			}
+		}
+	}
+
+	&__appointment {
+		.row {
+			@media (max-width: 767px) {
+				row-gap: 15px;
+			}
+		}
+
+		.dc-input {
+			width: 100%;
+			height: 65px;
+
+			&:nth-of-type(1) {
+				padding-right: 0;
+			}
+
+			&:nth-of-type(2) {
+				padding: 0;
+			}
+
+			&:nth-of-type(3) {
+				padding-left: 0;
+			}
+
+			input {
+				margin-bottom: 0;
+				width: 100%;
+				height: 100%;
+			}
+
+			@media (max-width: 767px) {
+				&:nth-of-type(1) {
+					padding-right: 15px;
+				}
+
+				&:nth-of-type(2) {
+					padding: 0 15px;
+				}
+
+				&:nth-of-type(3) {
+					padding-left: 15px;
+				}
+			}
+		}
+
+		.dc-btn {
+			width: 100%;
+			height: 65px;
+		}
+
+		p {
+			font-size: 12px;
+		}
+	}
+
+	&__communication {
+		p {
+			a {
+				border-bottom: 1px solid rgba(0, 90, 171, 0.5);
+				text-decoration: none;
+				color: #007cff;
+			}
+		}
+
+		.col-12 {
+			display: flex;
+			column-gap: 30px;
+
+			@media (max-width: 992px) {
+				flex-flow: column;
+			}
+		}
+
+		.manager-name,
+		.manager-phone,
+		.manager-email {
+			margin-bottom: 15px;
+		}
+	}
+
+	&__doctors {
+		padding: 60px 0;
+
+		.row-doctors {
+			margin-top: 0;
+		}
+
+		.doctors-item {
+			&:not(:last-child) {
+				border-bottom: 1px solid #fcbad5;
+			}
+
+			&:first-child {
+				margin-top: 0;
+				border-top: none;
+				padding-top: 35px;
+			}
+
+			&:last-child {
+				border-bottom: none;
+			}
+		}
+	}
+
+	&__advertising {
+		.row {
+			@media (max-width: 992px) {
+				row-gap: 30px;
+			}
+		}
+	}
+
+	&__atmosphere {
+		padding: 0 0 60px;
+	}
+
+	&__cosmetology-top,
+	&__apparat-cosmetology-top {
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+
+	&__cosmetology-top-item {
+		overflow: hidden;
+		width: 100%;
+		height: 700px;
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+
+		.container {
+			height: 100%;
+		}
+
+		.row {
+			align-items: center;
+			height: 100%;
+		}
+
+		.section__title {
+			margin-bottom: 20px;
+			color: #6c5959;
+		}
+
+		.item-logo {
+			width: 237px;
+
+			img {
+				width: 100%;
+			}
+		}
+
+		.item-text {
+			margin: 0;
+			padding: 0 0 20px;
+			font-size: 20px;
+			color: #6c5959;
+		}
+
+		@media (max-width: 767px) {
+			height: 500px;
+		}
+	}
+
+	&__cosmetology-adv {
+		padding: 100px 0 40px;
+		background: linear-gradient(
+			182.29deg,
+			#ffe4ef -66.69%,
+			rgba(252, 186, 213, 0) 87.18%
+		);
+		color: #6c5959;
+
+		ul {
+			li {
+				display: flex;
+				align-items: center;
+				margin: 0;
+				padding: 15px 0;
+
+				img {
+					margin-right: 10px;
+				}
+
+				@media (max-width: 767px) {
+					padding: 5px 0;
+				}
+			}
+		}
+
+		@media (max-width: 767px) {
+			padding: 40px 0;
+		}
+	}
+
+	&__cosmetology-services-item {
+		padding-bottom: 140px;
+
+		&--injection {
+			@media (max-width: 992px) {
+				padding-top: 120px;
+			}
+		}
+
+		&--lifting,
+		&--physiotherapy {
+			padding-top: 122px;
+
+			.row {
+				.col-lg-6 {
+					@media (max-width: 992px) {
+						&:nth-of-type(1) {
+							order: 2;
+						}
+
+						&:nth-of-type(2) {
+							order: 1;
+						}
+					}
+				}
+			}
+		}
+
+		&--procedures,
+		&--adaptive {
+			padding-top: 122px;
+		}
+
+		&--adaptive {
+			padding-bottom: 0;
+			.service__price-row {
+				&:last-child {
+					border-bottom: 1px solid transparent;
+				}
+			}
+		}
+	}
+
+	&__background {
+		background-position: center;
+		background-size: cover;
+
+		&--apparat-cosmetology {
+			width: 100%;
+			// height: 310px;
+		}
+	}
+
+	&__apparat-cosmetology-top {
+		.container {
+			height: 100%;
+
+			.row {
+				align-items: center;
+				height: inherit;
+			}
+		}
+	}
+
+	&__advanatages {
+		&--apparat-cosmetology {
+			padding: 60px 0;
+		}
+	}
+
+	&__list {
+		ul {
+			li {
+				position: relative;
+				padding-top: 10px;
+				padding-bottom: 10px;
+				padding-left: 30px;
+
+				&::before {
+					content: "";
+					position: absolute;
+					left: 0;
+					top: 10px;
+					width: 15px;
+					height: 15px;
+					background: url("../img/svg/check-red.svg") no-repeat center;
+					background-size: contain;
+				}
+			}
+		}
+	}
+
+	&__equipment {
+		padding: 60px 0;
+
+		p {
+			margin: 0;
+			padding-bottom: 20px;
+
+			&:first-child {
+				padding-top: 20px;
+			}
+		}
+
+		&--apparat-cosmetology {
+			background: linear-gradient(
+				359.78deg,
+				#ffe4ef -76.13%,
+				rgba(252, 186, 213, 0) 62.26%
+			);
+		}
+
+		&--item {
+			
+			
+			.container {
+				padding-top: 100px;
+				padding-bottom: 100px;
+				border-bottom: 1px solid #fadbe0;
+			}
+
+			.price__item--info {
+				justify-content: flex-start;
+				margin: 10px 0 20px;
+
+				@media (max-width: 567px) {
+					flex-flow: row;
+				}
+			}
+
+			&:nth-child(even) {
+				.col-md-6 {
+					&:nth-of-type(1) {
+						order: 2;
+					}
+					&:nth-of-type(2) {
+						order: 1;
+					}
+				}
+			}
+
+			@media (max-width: 767px) {
+				.container {
+					padding-top: 15px;
+					padding-bottom: 15px;
+				}
+			}
+		}
+
+		@media (max-width: 767px) {
+			.row {
+				row-gap: 30px;
+			}
+		}
+	}
+
+	&__equipment-image {
+		width: 100%;
+		height: 100%;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+	}
+
+	&__equipment-info {
+		font-size: 14px;
+		color: #6c5959;
+
+		p {
+			line-height: 140%;
+		}
+
+		ul {
+			li {
+				position: relative;
+				padding-top: 10px;
+				padding-bottom: 10px;
+				padding-left: 30px;
+
+				&::before {
+					content: "";
+					position: absolute;
+					left: 0;
+					top: 12px;
+					border-radius: 50%;
+					width: 8px;
+					height: 8px;
+					background: #df1366;
+					background-size: contain;
+				}
+			}
+		}
+	}
+
+	&__equipment-result {
+		.col-12 {
+			display: flex;
+			justify-content: center;
+			margin-bottom: 20px;
+		}
+
+		.col-6 {
+			display: flex;
+			flex-flow: column;
+			align-items: center;
+			justify-content: center;
+
+			p {
+				padding-top: 10px;
+				padding-bottom: 0;
+				font-size: 22px;
+				text-transform: uppercase;
+				color: #df1366;
+			}
+		}
+	}
+}
+
+.service {
+	&__price-row {
+		border-bottom: 1px solid #fadbe0;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		color: #6c5959;
+
+		&:nth-of-type(1) {
+			padding-top: 0;
+		}
+	}
+
+	&__block {
+		position: relative;
+		z-index: -1;
+
+		@media (max-width: 992px) {
+			// opacity: 0.2;
+		}
+	}
+
+	&__background {
+		position: absolute;
+		right: 0;
+		z-index: 1;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+
+		&--injections {
+			top: -200px;
+			width: 700px;
+			height: 900px;
+
+			@media (max-width: 992px) {
+				left: calc(50% - 170px);
+				right: auto;
+				top: -290px;
+				width: 300px;
+				height: auto;
+			}
+		}
+
+		&--lifting {
+			right: calc(50% - 450px);
+			top: calc(50% - 305px);
+			width: 900px;
+			height: 700px;
+
+			@media (max-width: 992px) {
+				left: calc(50% - 205px);
+				right: auto;
+				top: -258px;
+				width: 400px;
+				height: auto;
+			}
+		}
+
+		&--procedures {
+			right: 21px;
+			top: -317px;
+			width: 763px;
+			height: 1060px;
+
+			@media (max-width: 992px) {
+				left: calc(50% - 205px);
+				right: auto;
+				top: -330px;
+				width: 320px;
+				height: auto;
+			}
+		}
+
+		&--physiotherapy {
+			right: -114px;
+			top: -194px;
+			width: 846px;
+			height: 693px;
+
+			@media (max-width: 992px) {
+				left: calc(50% - 202px);
+				right: auto;
+				top: -232px;
+				width: 360px;
+				height: auto;
+			}
+		}
+
+		&--adaptive {
+			right: -59px;
+			top: -350px;
+			width: 754px;
+			height: 825px;
+
+			@media (max-width: 992px) {
+				left: calc(50% - 179px);
+				right: auto;
+				top: -316px;
+				width: 360px;
+				height: auto;
+			}
+		}
+	}
+
+	&__image {
+		position: absolute;
+		z-index: 2;
+		width: 400px;
+		height: 400px;
+
+		&--injections {
+			right: 100px;
+			top: 56px;
+		}
+
+		&--lifting {
+			right: 66px;
+			top: -131px;
+
+			@media (max-width: 992px) {
+			}
+		}
+
+		&--procedures {
+			right: 100px;
+			top: 22px;
+		}
+
+		&--physiotherapy {
+			right: 66px;
+			top: -69px;
+		}
+
+		&--adaptive {
+			right: 100px;
+			top: -80px;
+		}
+
+		@media (max-width: 992px) {
+			left: calc(50% - 85px);
+			right: auto;
+			top: -180px;
+			width: 170px;
+			height: 170px;
+		}
+	}
+}
+
+.price {
+	&__item {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding-right: 15px;
+		font-size: 14px;
+
+		img {
+			margin-right: 10px;
+		}
+
+		&--title {
+			flex-flow: column;
+			align-items: flex-start;
+			justify-content: center;
+			font-size: 16px;
+
+			p {
+				margin: 0;
+				padding: 0;
+			}
+
+			span {
+				font-size: 14px;
+				color: #969696;
+			}
+		}
+
+		&--info {
+			@media (max-width: 567px) {
+				flex-flow: column;
+				align-items: flex-start;
+			}
+		}
+	}
+}
+
+.advantages {
+	&-block {
+		&--top {
+			.advantages-items {
+				margin-top: 0;
+			}
+
+			.advantages-title {
+				margin-bottom: 30px;
+			}
+
+			.advantages-item {
+				margin-top: 0;
+				margin-right: 0;
+
+				@media (max-width: 992px) {
+					flex-basis: 100%;
+				}
+			}
+
+			p {
+				margin: 0 0 15px;
+				font-size: 14px;
+				line-height: 115%;
+				color: #313131;
+			}
+		}
+	}
+
+	&-item {
+		flex-basis: calc(50% - 10px);
+		margin-right: 10px;
+	}
+
+	&-title {
+		&--large {
+			font-size: 46px;
+		}
+
+		&--white {
+			color: #fff;
+		}
+	}
+
+	@media (max-width: 767.98px) {
+		height: 545px;
+	}
+}
+
+.atmosphere {
+	margin-bottom: 20px;
+
+	&__item {
+		width: 100%;
+		height: 600px;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center;
+		}
+	}
+
+	&__thumbnails {
+		.slick-arrow {
+			width: 16px;
+			height: 16px;
+			font-size: 16px;
+			color: #df1366;
+			background: transparent;
+		}
+
+		.slick-next {
+			right: -25px;
+		}
+
+		.slick-prev {
+			left: -15px;
+		}
+	}
+
+	&__thumbnails-item {
+		margin: 0 10px;
+		height: 130px;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center;
+		}
+	}
+}
+
+.manager-name,
+.manager-phone,
+.manager-email {
+	display: flex;
+	align-items: center;
+	margin-bottom: 30px;
+	color: #787878;
+
+	svg {
+		margin-right: 12px;
+	}
+
+	a {
+		text-decoration: none;
+		color: #787878;
+	}
+}
+
+.manager-name,
+.manager-phone {
+	font-family: "Museo Sans", sans-serif;
+}
+
+.manager-name {
+	font-size: 14px;
+	text-transform: uppercase;
+}
+
+.manager-phone {
+	font-size: 16px;
+}
+
+.manager-email {
+	font-size: 12px;
+}
+
+.footer {
+	@media (max-width: 575.98px) {
+		padding-bottom: 70px;
+	}
+}
+
+.advertising {
+	&__item {
+		display: flex;
+		flex-flow: column;
+		justify-content: space-between;
+		padding: 30px;
+		width: 100%;
+		height: 100%;
+		min-height: 197px;
+		box-shadow: 0 0 20px rgba(0, 124, 255, 0.2);
+		background: #e9f3fc;
+
+		@media (max-width: 567px) {
+			padding: 15px;
+		}
+	}
+
+	&__body {
+		p {
+			margin: 0;
+			padding: 20px 0;
+			font-size: 12px;
+			line-height: 11px;
+			text-transform: lowercase;
+			color: #787878;
+		}
+	}
+
+	&__title {
+		display: flex;
+		align-items: center;
+
+		h5 {
+			font-family: "Museo Sans", sans-serif;
+			font-size: 24px;
+			line-height: 29px;
+			color: #787878;
+		}
+	}
+
+	&__icon {
+		flex-shrink: 0;
+		margin-right: 10px;
+		width: 44px;
+		height: 44px;
+
+		img {
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	&__price {
+		a {
+			border-radius: 10px;
+			padding: 8px 20px;
+			font-weight: 700;
+			text-decoration: none;
+			color: #fff;
+			background: #ff3e3e;
+		}
+	}
+}
+
+.btn-arrow {
+	position: relative;
+	display: inline-flex;
+	border-radius: 10px;
+	padding: 20px 60px 20px 20px;
+	font-size: 18px;
+	text-decoration: none;
+	color: #fff;
+	background: #df1366;
+
+	&::after {
+		content: "";
+		position: absolute;
+		right: 38px;
+		top: calc(50% - 12.5px);
+		width: 1px;
+		height: 25px;
+		background: #fff;
+	}
+
+	.icon-arrow-right1 {
+		position: absolute;
+		right: 20px;
+		top: calc(50% - 7px);
+		font-size: 14px;
+	}
+
+	&--mt30 {
+		margin-top: 30px;
+	}
+}

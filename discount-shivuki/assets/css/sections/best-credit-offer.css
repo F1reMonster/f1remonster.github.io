@@ -1,0 +1,213 @@
+.typical-card .img-wrap img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.typical-card {
+  padding: 2.375em;
+  border: 1px solid rgba(60, 63, 69, 0.2);
+  box-shadow: 0 2px 15px 0 rgba(56, 59, 64, 0.1);
+  background-color: #fff;
+  border-radius: 1.875em;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+}
+.typical-card:focus-visible {
+  outline: 1px dashed #00a661;
+  outline-offset: 1px;
+}
+@media screen and (max-width: 767px) {
+  .typical-card {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    padding: 0.9375em;
+  }
+}
+.typical-card .img-wrap {
+  position: relative;
+  padding-bottom: 99.3846153846%;
+  overflow: hidden;
+  border-radius: 0.9375em;
+  width: 100%;
+}
+@media screen and (max-width: 767px) {
+  .typical-card .img-wrap {
+    padding-bottom: 0;
+    width: 30.179028133vw;
+    height: 30.179028133vw;
+    flex-shrink: 0;
+  }
+}
+.typical-card .txt-wrap {
+  padding: 0 0.625em;
+  margin-inline-start: 1.5625em;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+@media screen and (max-width: 767px) {
+  .typical-card .txt-wrap {
+    padding: 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  .typical-card .txt {
+    display: none;
+  }
+}
+.typical-card .card-header {
+  font: 1.5em/1.1666666667 "rubik-medium", sans-serif;
+  color: #3c3f45;
+  margin: 1.2916666667em 0 0.5em;
+  min-height: 1.375em;
+  transition: color 0.2s;
+}
+@media screen and (max-width: 767px) {
+  .typical-card .card-header {
+    font-size: 1.125em;
+    line-height: 1.3888888889;
+    margin: 0;
+  }
+}
+.typical-card .link-wrap {
+  margin-top: auto;
+  display: flex;
+}
+@media screen and (max-width: 767px) {
+  .typical-card .link-wrap {
+    display: none;
+  }
+}
+.typical-card .link {
+  font: 1.125em/1.2222222222 "rubik-medium", sans-serif;
+  color: #6924e8;
+  margin-top: 1.6666666667em;
+  position: relative;
+  text-decoration: underline;
+}
+.typical-card .link::after {
+  content: ">";
+  position: absolute;
+  margin-right: 0.1111111111em;
+}
+.typical-card:hover .card-header {
+  color: rgb(105, 36, 232);
+}
+
+.best-credit-offer {
+  position: relative;
+  padding: 6.25em 0 2.8125em;
+}
+@media screen and (max-width: 767px) {
+  .best-credit-offer {
+    padding: 3.125em 0;
+  }
+}
+.best-credit-offer .bg-img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  transform: translateX(-50%);
+}
+@media screen and (max-width: 767px) {
+  .best-credit-offer .bg-img {
+    display: none;
+  }
+}
+.best-credit-offer .subheader {
+  font: 1.25em/1.4 "rubik-reg", sans-serif;
+  color: #000;
+  text-align: center;
+  max-width: 1050px;
+  padding: 0 20px;
+  margin: 0.8em auto 0.3em;
+}
+@media screen and (max-width: 767px) {
+  .best-credit-offer .subheader {
+    font-size: 1em;
+    line-height: 1.625;
+    margin: 0.625em auto 0.375em;
+  }
+}
+.best-credit-offer .main-container {
+  margin-top: 3.75em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3.125em;
+}
+@media screen and (max-width: 767px) {
+  .best-credit-offer .main-container {
+    display: block;
+    margin-top: 3em;
+  }
+}
+.best-credit-offer .main-container .typical-card {
+  flex-basis: 24.75em;
+}
+@media screen and (max-width: 767px) {
+  .best-credit-offer .main-container .typical-card {
+    margin-top: 1.625em;
+  }
+}
+@media (max-width: 480px) {
+  .best-credit-offer .main-container .typical-card {
+    flex-direction: column;
+    padding: 33px;
+    min-height: 568px;
+  }
+}
+@media (max-width: 480px) {
+  .best-credit-offer .main-container .typical-card .card-header {
+    margin-bottom: 1em;
+  }
+}
+@media (max-width: 480px) {
+  .best-credit-offer .main-container .typical-card .img-wrap {
+    margin-bottom: 1.8125em;
+    width: 100%;
+    height: 280px;
+  }
+}
+.best-credit-offer .main-container .typical-card .txt-wrap {
+  margin-right: 0;
+}
+@media (max-width: 767px) {
+  .best-credit-offer .main-container .typical-card .txt-wrap {
+    padding: 0;
+    margin-right: 1.5625em;
+  }
+}
+@media (max-width: 480px) {
+  .best-credit-offer .main-container .typical-card .txt-wrap {
+    padding-right: 0.625em;
+    margin-right: 0;
+  }
+}
+.best-credit-offer .main-container .typical-card .typical-txt {
+  margin-bottom: 1.6666666667em;
+}
+@media (max-width: 480px) {
+  .best-credit-offer .main-container .typical-card .typical-txt {
+    display: block;
+    margin-bottom: 1.25em;
+    font-family: "rubik-light";
+    font-size: 1em;
+  }
+}
+.best-credit-offer .main-container .typical-card a {
+  font-family: "rubik-medium";
+  color: #6924e8;
+}
+@media (max-width: 767px) {
+  .best-credit-offer .main-container .typical-card a {
+    font-size: 1em;
+  }
+}

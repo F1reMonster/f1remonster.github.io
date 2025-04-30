@@ -1,0 +1,40 @@
+.marketing-article {
+  padding: 5.2083333333vw 20px 3.6458333333vw;
+}
+@media (max-width: 767px) {
+  .marketing-article {
+    padding: 1.25em 20px 1.25em;
+  }
+}
+@media (max-width: 767px) {
+  .marketing-article .typical-header {
+    text-align: initial;
+  }
+}
+.marketing-article .wrap {
+  max-width: 1134px;
+  margin: 0 auto;
+}
+.marketing-article .text {
+  font: 1.125em/1.7777777778 "rubik-reg", sans-serif;
+  margin: 1.4444444444em 0 1.8333333333em;
+}
+@media (max-width: 767px) {
+  .marketing-article .text {
+    font-size: 1em;
+    line-height: 2;
+    margin: 1.1875em 0 1.3125em;
+  }
+}
+.marketing-article .remarks {
+  border-top: 1px solid #00a661;
+  padding-top: 2.0625em;
+}
+@media (max-width: 767px) {
+  .marketing-article .remarks {
+    padding-top: 1.5em;
+  }
+}
+.marketing-article .remark {
+  font: 0.75em/1.6666666667 "rubik-medium", sans-serif;
+}

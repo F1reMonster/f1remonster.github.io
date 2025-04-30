@@ -1,0 +1,621 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Inconsolata:wght@200..900&display=swap" rel="stylesheet" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.10.3/cdn.min.js" defer></script>
+		<script src="https://cdn.tailwindcss.com"></script>
+		<script>
+			tailwind.config = {
+				theme: {
+					extend: {
+						fontFamily: {
+							cutive: ["Cutive Mono", "monospace"],
+							inconsolata: ["Inconsolata", "monospace"],
+						},
+					},
+				},
+			};
+		</script>
+		<style></style>
+		<title>AeroPress Recipes - over 300 AeroPress recipes - AeroPrecipe</title>
+	</head>
+	<body class="font-cutive" x-data="{ isModalOpen: null }">
+		<div class="bg-white text-black">
+			<div class="flex w-full flex-col">
+				<header class="sm:px-5 lg:px-12 z-30 border-b border-gray-300 bg-white px-3 py-4">
+					<div class="flex w-full items-center justify-between">
+						<a class="font-inconsolata text-lg font-bold" title="AeroPrecipe - a home for AeroPress Recipes" aria-label="AeroPrecipe" href="/">AeroPrecipe.</a>
+
+						<nav x-data="{open: false}" class="lg:gap-x-5 font-inconsolata relative flex items-center gap-x-4 text-base font-bold">
+							<button class="lg:block hidden">Feeling Lucky?</button>
+
+							<a class="lg:block hidden" href="/activity">Activity</a>
+
+							<button class="lg:block hidden">Share Your Recipe</button>
+
+							<div class="lg:gap-x-5 lg:pl-5 lg:border-l relative flex items-center gap-x-4 border-gray-300">
+								<a class="lg:block hidden" href="#">Sign in</a>
+
+								<a class="md:px-3 md:py-1.5 md:text-base cursor-pointer items-center justify-between gap-3 rounded border-2 border-black bg-black px-2 py-1.5 text-xs text-white transition hover:border-black/80 hover:bg-black/80 hover:text-white hover:ring-black/30 focus:ring-2 focus:ring-black/40 active:ring-2 active:ring-black/50 disabled:cursor-not-allowed disabled:opacity-50" aria-label="Join AeroPrecipe" href="/join"><span class="">Sign up</span></a>
+
+								<button class="flex cursor-pointer items-center space-x-1" aria-label="Search" @click="isModalOpen = 'modalSearch'; isModalOpen ? document.body.classList.add('overflow-hidden', 'max-h-screen') : ''">
+									<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-6" fill="currentColor" viewBox="0 0 256 256">
+										<path d="M232.49,215.51,185,168a92.12,92.12,0,1,0-17,17l47.53,47.54a12,12,0,0,0,17-17ZM44,112a68,68,0,1,1,68,68A68.07,68.07,0,0,1,44,112Z"></path>
+									</svg>
+								</button>
+
+								<div class="relative flex items-center">
+									<button @click="open = !open" class="focus:outline-none" type="button">
+										<svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="currentColor" viewBox="0 0 256 256">
+											<path d="M144,128a16,16,0,1,1-16-16A16,16,0,0,1,144,128ZM60,112a16,16,0,1,0,16,16A16,16,0,0,0,60,112Zm136,0a16,16,0,1,0,16,16A16,16,0,0,0,196,112Z"></path>
+										</svg>
+									</button>
+								</div>
+							</div>
+
+							<div x-show="open" x-transition x-cloak :class="open ? '!visible' : ''" class="invisible absolute right-0 top-full z-30 mt-4 flex min-w-[230px] flex-col rounded-md border border-slate-100 bg-white shadow-lg shadow-gray-300/40">
+								<ul class="lg:hidden p-2 text-base">
+									<li>
+										<button class="block border-b border-gray-300 px-5 py-1.5 last:border-b-0 hover:bg-yellow-100/50 hover:text-gray-900">I'm feeling Lucky</button>
+									</li>
+									<li>
+										<a class="block border-b border-gray-300 px-5 py-1.5 last:border-b-0 hover:bg-yellow-100/50 hover:text-gray-900" href="#">Activity</a>
+									</li>
+									<li>
+										<button class="block border-b border-gray-300 px-5 py-1.5 last:border-b-0 hover:bg-yellow-100/50 hover:text-gray-900">Share Your Recipe</button>
+									</li>
+									<li>
+										<a class="block border-b border-gray-300 px-5 py-1.5 last:border-b-0 hover:bg-yellow-100/50 hover:text-gray-900" href="#">Sign In</a>
+									</li>
+								</ul>
+								<ul class="md:pt-2 lg:border-t-0 lg:text-base border-t border-gray-300 p-2 pt-0 text-sm text-black">
+									<li><a class="block px-5 py-1.5 hover:bg-yellow-100/50 hover:text-gray-900" target="_self" href="#">Contact</a></li>
+									<li><a class="block px-5 py-1.5 hover:bg-yellow-100/50 hover:text-gray-900" target="_blank" href="#">Instagram</a></li>
+									<li><a class="block px-5 py-1.5 hover:bg-yellow-100/50 hover:text-gray-900" target="_blank" href="#">Facebook</a></li>
+									<li><a class="block px-5 py-1.5 hover:bg-yellow-100/50 hover:text-gray-900" target="_blank" href="#">Twitter</a></li>
+									<li><a class="block px-5 py-1.5 hover:bg-yellow-100/50 hover:text-gray-900" target="_blank" href="#">Youtube</a></li>
+								</ul>
+							</div>
+						</nav>
+					</div>
+				</header>
+
+				<main class="pb-20">
+					<div class="w-full flex-1">
+						<div class="relative flex h-full flex-row">
+							<div class="sm:px-5 lg:pl-12 lg:pr-12 flex-1 px-3 pb-16">
+								<div class="lg:sticky top-0 z-10 flex flex-col border-b border-gray-300 bg-white/75 py-8 text-sm backdrop-blur">
+									<div class="md:flex-row flex flex-col items-start justify-between">
+										<h1 class="font-inconsolata text-balance pr-3 text-2xl font-bold">James Hoffmann's Ultimate AeroPress Recipe</h1>
+										<div class="flex flex-shrink-0 items-center space-x-3">
+											<div>
+												<button class="md:my-0 my-2 flex flex-shrink-0 items-center gap-x-1.5 rounded border border-pink-600 bg-transparent px-2 py-1 text-xs text-pink-600 hover:bg-pink-600 hover:text-white focus:outline-none">
+													<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="currentColor" viewBox="0 0 256 256"><path d="M234,80.12A24,24,0,0,0,216,72H160V56a40,40,0,0,0-40-40,8,8,0,0,0-7.16,4.42L75.06,96H32a16,16,0,0,0-16,16v88a16,16,0,0,0,16,16H204a24,24,0,0,0,23.82-21l12-96A24,24,0,0,0,234,80.12ZM32,112H72v88H32Z"></path></svg>
+													<span class="">Upvote (995)</span>
+												</button>
+											</div>
+											<div class="relative">
+												<button class="md:my-0 my-2 flex flex-shrink-0 items-center gap-x-1.5 rounded border border-black bg-transparent px-2 py-1 text-xs text-black hover:bg-black hover:text-white focus:outline-none">
+													<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="currentColor" viewBox="0 0 256 256">
+														<path d="M184,32H72A16,16,0,0,0,56,48V224a8,8,0,0,0,12.24,6.78L128,193.43l59.77,37.35A8,8,0,0,0,200,224V48A16,16,0,0,0,184,32Z"></path>
+													</svg>
+													<span class="">Save</span>
+												</button>
+											</div>
+										</div>
+									</div>
+									<div class="mt-2 flex flex-wrap items-center justify-start gap-x-6 gap-y-1 text-sm">
+										<div class="flex items-center pt-2">
+											<a class="flex flex-shrink-0 items-center gap-2 border-b border-black" href="#">
+												<div class="h-5 w-5">
+													<img class="h-full w-full object-contain" src="https://api.aeroprecipe.com:443/media/2019/05/31/noun_Tamper_1638547.svg" alt="" />
+												</div>
+												<span>From a Barista</span>
+											</a>
+										</div>
+										<div class="flex flex-shrink-0 items-center pt-2">
+											Creator:
+											<a class="ml-1 flex flex-shrink-0 items-center gap-x-0.5 border-b border-gray-500" href="#">
+												<span>James Hoffmann</span>
+												<svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="currentColor" viewBox="0 0 256 256"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"></path></svg>
+											</a>
+										</div>
+
+										<button @click="isModalOpen = 'modalSaves'" class="flex cursor-pointer items-center border-b border-black pt-2" aria-label="View who saved this recipe">
+											<svg class="mr-2 h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"></path></svg>
+											<span>
+												<span>1594</span>
+												<span class="pl-1">saves</span>
+											</span>
+										</button>
+
+										<div class="flex cursor-pointer items-center border-b border-black pt-2">
+											<svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="currentColor" viewBox="0 0 256 256">
+												<path d="M216,48H40A16,16,0,0,0,24,64V224a15.84,15.84,0,0,0,9.25,14.5A16.05,16.05,0,0,0,40,240a15.89,15.89,0,0,0,10.25-3.78l.09-.07L83,208H216a16,16,0,0,0,16-16V64A16,16,0,0,0,216,48ZM40,224h0ZM216,192H80a8,8,0,0,0-5.23,1.95L40,224V64H216Z"></path>
+											</svg>
+											<span>
+												<a class="pl-1" href="#">138 comments</a>
+											</span>
+										</div>
+										<button class="flex cursor-pointer items-center border-b border-black pt-2">
+											<svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="currentColor" viewBox="0 0 256 256">
+												<path d="M168,128a8,8,0,0,1-8,8H96a8,8,0,0,1,0-16h64A8,8,0,0,1,168,128Zm-8,24H96a8,8,0,0,0,0,16h64a8,8,0,0,0,0-16ZM216,40V200a32,32,0,0,1-32,32H72a32,32,0,0,1-32-32V40a8,8,0,0,1,8-8H72V24a8,8,0,0,1,16,0v8h32V24a8,8,0,0,1,16,0v8h32V24a8,8,0,0,1,16,0v8h24A8,8,0,0,1,216,40Zm-16,8H184v8a8,8,0,0,1-16,0V48H136v8a8,8,0,0,1-16,0V48H88v8a8,8,0,0,1-16,0V48H56V200a16,16,0,0,0,16,16H184a16,16,0,0,0,16-16Z"></path>
+											</svg>
+											<span class="pl-1">Private notes (0)</span>
+										</button>
+									</div>
+								</div>
+								<div class="w-full border-b border-gray-200 pb-10 pt-8">
+									<div class="w-full max-w-3xl text-black">
+										<p>James Hoffmann's Ultimate AeroPress recipe - the AeroPress recipe everyone has been waiting for!</p>
+										<p>James presents us with a simple, and tasty recipe that throws away a lot of AeroPress misconceptions such as rinsing your paper filter and preheating your AeroPress. James also prefers to swirl, not stir.</p>
+										<p>This recipe is a great starting point for any AeroPress enthusiast - once you get it wired, use it as a base for other recipe experiments.</p>
+										<p><strong>Quick notes:</strong></p>
+										<ul>
+											<li>For medium roast coffee, using 90-95°C water will give you better results.</li>
+											<li>For dark roast coffee, try 85-90°C water for the brew.</li>
+										</ul>
+										<p>For a much more detailed walkthrough of this recipe, watch <a href="#">James’ original video.</a></p>
+										<p>James also has an espresso-like recipe for milk coffee, <a href="#">which you can view here.</a></p>
+										<p>.﻿</p>
+										<p>📌 <strong>Grind settings recommended by users:</strong></p>
+										<ul>
+											<li>1Zpresso JX Pro with a gray dot: 3.2.0 for light roast</li>
+											<li>1Zpresso Jx: 42-48 clicks (1.5 turns)</li>
+											<li>1Zpresso K-max: 5-5.5</li>
+											<li>Aergrind: 1.3-1.9</li>
+											<li>Baratza Encore: 12-14</li>
+											<li>Breville dose control / smart grinder: 2 Clicks before "percolator"</li>
+											<li>Comandante: 11-16</li>
+											<li>Hario mini slim: 3 for medium roast</li>
+											<li>Porlex Mini: 5-7 clicks depending on the type of roast (eg.dark roast, 7 clicks... sometimes 8)</li>
+											<li>Timemore C2: on 11 clicks for light roast</li>
+											<li>Timemore C2: 12-14 clicks for medium roast</li>
+											<li>Timemore C3 or C3 pro: 11 clicks for medium roast</li>
+											<li>Wilfa Aroma grinder: at the end of the AeroPress</li>
+										</ul>
+										<p><strong>Tried this recipe? Let us know what you think, in the comments below.</strong></p>
+									</div>
+									<div class="lg:max-w-screen-md w-full">
+										<div class="w-fulL relative mt-10 pt-[56.25%]">
+											<div class="absolute left-0 top-0 h-full w-full">
+												<div class="h-full w-full">
+													<iframe class="h-full w-full" frameborder="0" allowfullscreen="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" title="AeroPress Recipe | James Hoffmann's Ultimate AeroPress Recipe" src="https://www.youtube.com/embed/XGs5QVAU-00?autoplay=0&amp;mute=0&amp;controls=1&amp;origin=https%3A%2F%2Faeroprecipe.com&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;iv_load_policy=3&amp;modestbranding=1&amp;enablejsapi=1&amp;widgetid=1" id="widget2"></iframe>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="lg:hidden w-full">
+									<div class="lg:pl-5 lg:pr-12 lg:sticky top-0 pb-8 font-bold">
+										<div class="lg:flex hidden h-20 items-center justify-between border-b border-gray-300">
+											<div class="flex items-center">
+												<span class="font-inconsolata text-base font-bold">Recipe overview </span>
+											</div>
+										</div>
+										<h4 class="lg:hidden font-inconsolata mb-2 mt-5 text-base font-bold">Recipe details:</h4>
+										<div class="mt-5 flex flex-wrap">
+											<div class="mb-2 mr-3 flex items-center justify-between gap-x-2 rounded bg-yellow-100 bg-opacity-75 px-2 py-1 text-sm">
+												<svg viewBox="0 0 50 88" class="h-3.5 w-3.5 text-black">
+													<g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+														<g fill="currentColor">
+															<path d="M47.602,81.398 L42.8012,81.398 L42.8012,58.398 L43.69964,58.398 C44.80124,58.398 45.69964,57.398 45.69964,56.1988 L45.69964,54.8004 C45.69964,53.6012 44.8012,52.6012 43.69964,52.6012 L6.30164,52.6012 C5.20004,52.6012 4.30164,53.6012 4.30164,54.8004 L4.30164,56.1988 C4.30164,57.398 5.20008,58.398 6.30164,58.398 L7.20008,58.398 L7.20008,81.398 L2.39928,81.398 C1.20008,81.398 0.20008,82.398 0.20008,83.5972 L0.20008,84.9956 C0.20008,86.1948 1.20008,87.1948 2.39928,87.1948 L47.59828,87.1948 C48.79748,87.1948 49.79748,86.1948 49.79748,84.9956 L49.79748,83.5972 C49.801386,82.398 48.80139,81.398 47.60218,81.398 L47.602,81.398 Z" id="Path"></path>
+															<path d="M6.301,6.602 L10.801,6.602 L10.801,48.801 L39.403,48.801 L39.399094,6.602 L43.899094,6.602 C45.000694,6.602 45.899094,5.602 45.899094,4.4028 L45.899094,2.8989 C45.899094,1.6997 45.000654,0.6997 43.899094,0.6997 L6.301094,0.6997 C5.199494,0.6997 4.301094,1.6997 4.301094,2.8989 L4.301094,4.2973 C4.199534,5.602 5.101874,6.602 6.301094,6.602 L6.301,6.602 Z" id="Path"></path>
+														</g>
+													</g>
+												</svg>
+												<span>Standard</span>
+											</div>
+											<div class="mb-2 mr-3 flex items-center justify-between gap-x-2 rounded bg-yellow-100 bg-opacity-75 px-2 py-1 text-sm">
+												<svg viewBox="0 0 94 100" version="1.1" class="h-3.5 w-3.5 text-black">
+													<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+														<g transform="translate(3.000000, 0.000000)" stroke="currentColor">
+															<path d="M87.0097386,53.907633 C87.0097386,77.6695296 67.7596935,96.9164469 44.0009247,96.9164469 C20.2390281,96.9164469 0.9921108,77.6695296 0.9921108,53.907633 C0.9921108,30.1613754 20.2390281,10.8988191 44.0009247,10.8988191 C67.7628213,10.9027257 87.0097386,30.1645032 87.0097386,53.907633 Z" id="Path" stroke-width="6.17146218"></path>
+															<path d="M43.9117824,87.3688374 L43.9117824,94.9393645 L43.9117824,87.3688374 Z" id="Path" stroke-width="1.5639" fill="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+															<path d="M10.8284162,53.719965 L3.27352812,53.719965 L10.8284162,53.719965 Z" id="Path" stroke-width="1.5639" fill="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+															<polygon id="Path" stroke-width="1.61941845" fill="currentColor" stroke-linecap="round" stroke-linejoin="round" points="41.2156188 2.41028268 46.6063821 2.41028268 46.6063821 7.81668498 41.2156188 7.81668498"></polygon>
+															<polygon id="Path" stroke-width="1.76376642" fill="currentColor" stroke-linecap="round" stroke-linejoin="round" points="38.1222246 0.882837189 50.0638522 0.882837189 50.0638522 3.7618207 38.1222246 3.7618207"></polygon>
+															<path d="M43.9540077,52.3171467 C43.9540077,51.1452539 44.000884,16.2270264 44.000884,16.2270264 C64.8179569,16.2270264 81.6814906,33.1061991 81.6814906,53.907633 L45.5632201,53.9115381" id="Path" stroke-width="1.5639" fill="currentColor"></path>
+														</g>
+													</g>
+												</svg>
+												<span>3:20</span>
+											</div>
+											<div class="mb-2 mr-3 flex items-center justify-between gap-x-2 rounded bg-yellow-100 bg-opacity-75 px-2 py-1 text-sm">
+												<svg viewBox="0 0 76 76" class="h-3.5 w-3.5">
+													<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><circle id="Oval" stroke="#000" stroke-width="3" fill="#FFFFFF" fill-rule="nonzero" cx="38" cy="38" r="36"></circle></g>
+												</svg>
+												<span>Paper Filter</span>
+											</div>
+										</div>
+										<div class="mt-5">
+											<h4 class="font-inconsolata mb-2 text-base font-bold">Coffee:</h4>
+											<div class="flex flex-wrap">
+												<div class="mb-2 mr-3 flex items-center justify-between gap-x-2 rounded bg-yellow-100 bg-opacity-75 px-2 py-1 text-sm">
+													<svg viewBox="0 0 96 76" class="h-3.5 w-3.5 text-black">
+														<g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+															<g id="np_scale_1236635_333333" fill="currentColor" fill-rule="nonzero">
+																<path
+																	d="M95.781,65.32 C95.757562,65.14422 95.710688,64.97234 95.64038,64.80828 L79.10138,26.66028 C79.120912,26.586062 79.136537,26.51575 79.148256,26.44153 C79.22638,25.91419 79.093568,25.37903 78.777166,24.95323 C78.456856,24.52745 77.984196,24.2462 77.460766,24.17198 L56.519766,21.12118 C56.183826,17.76178 53.789266,14.96498 50.519766,14.12118 L50.519766,2.00018 C50.519766,0.89468 49.625236,0.00018 48.519766,0.00018 C47.414296,0.00018 46.519766,0.89471 46.519766,2.00018 L46.519766,14.10218 C44.054966,14.7389 42.035366,16.50448 41.070566,18.85998 L19.140566,15.66078 C18.546816,15.574843 17.945266,15.75453 17.503866,16.15687 C17.058556,16.56312 16.820276,17.14125 16.851526,17.73887 L0.382526,55.73887 L0.37862,55.73887 C0.312214,55.90293 0.26534,56.07481 0.238,56.25059 L0.238,56.3795 L0.238,56.52012 C0.230188,56.6295 0.230188,56.73887 0.238,56.85215 L0.238,56.902932 L0.238,56.899026 C0.273157,57.070896 0.33175,57.234966 0.40988,57.391216 L0.468474,57.500596 C0.558318,57.656846 0.663784,57.801376 0.788784,57.930286 L3.288784,60.430286 C7.452884,64.582586 13.089584,66.914686 18.968784,66.914686 C24.847984,66.914686 30.488784,64.582686 34.648784,60.430286 L37.148784,57.930286 C37.277694,57.801376 37.383154,57.656846 37.469094,57.500596 L37.527688,57.399036 L37.531594,57.399036 C37.609719,57.246696 37.664404,57.078726 37.699564,56.910756 C37.711283,56.801376 37.711283,56.692006 37.699564,56.578726 L37.699564,56.438106 L37.699564,56.309196 C37.676126,56.133416 37.629251,55.965446 37.558944,55.801386 L22.128944,20.141386 L40.507944,22.821086 L40.511851,22.821086 C40.847791,26.500786 43.664151,29.469486 47.320451,30.004686 C50.976751,30.539886 54.523551,28.500786 55.898551,25.071086 L74.488551,27.781986 L58.429551,64.781986 C58.359238,64.942146 58.312361,65.114016 58.288921,65.289796 L58.288921,65.418706 L58.288921,65.559326 C58.281109,65.668706 58.281109,65.781986 58.288921,65.891356 L58.288921,65.942137 C58.324078,66.110107 58.382671,66.274167 58.460801,66.430417 L58.519394,66.539787 C58.605332,66.696037 58.714704,66.840567 58.839704,66.969477 L61.339704,69.469477 C65.499904,73.621777 71.140504,75.953877 77.019704,75.953877 C82.898604,75.953877 88.539704,73.621877 92.699704,69.469477 L95.199704,66.969477 C95.324704,66.840567 95.434084,66.696037 95.520014,66.539787 L95.578608,66.430417 C95.656733,66.274167 95.715328,66.110107 95.750488,65.942137 L95.750488,65.891356 C95.7583,65.781976 95.7583,65.668696 95.750488,65.559326 L95.750488,65.418706 C95.750488,65.371831 95.781738,65.360112 95.781738,65.321049 L95.781,65.32 Z M32.679,54.519 L5.238,54.519 L19,22.89 L32.679,54.519 Z M63.32,63.5971 L77,31.9991 L90.762,63.5891 L63.32,63.5971 Z"
+																></path>
+															</g>
+														</g>
+													</svg>
+													<span>11g</span>
+												</div>
+												<div class="mb-2 mr-3 flex items-center justify-between gap-x-2 rounded bg-yellow-100 bg-opacity-75 px-2 py-1 text-sm">
+													<svg viewBox="0 0 18 17" class="h-3.5 w-3.5">
+														<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+															<g id="Group-4" fill="#7C4628" fill-rule="nonzero">
+																<circle id="Oval" cx="5" cy="12" r="1"></circle>
+																<circle id="Oval" cx="13" cy="11" r="1"></circle>
+																<circle id="Oval" cx="11" cy="13" r="1"></circle>
+																<circle id="Oval" cx="6" cy="15" r="1"></circle>
+																<circle id="Oval" cx="10" cy="2" r="1"></circle>
+																<circle id="Oval" cx="12" cy="5" r="1"></circle>
+																<circle id="Oval" cx="13" cy="1" r="1"></circle>
+																<circle id="Oval" cx="14" cy="14" r="1"></circle>
+																<circle id="Oval" cx="15" cy="9" r="1"></circle>
+																<circle id="Oval" cx="12" cy="8" r="1"></circle>
+																<circle id="Oval" cx="7" cy="10" r="1"></circle>
+																<circle id="Oval" cx="10" cy="7" r="1"></circle>
+																<circle id="Oval" cx="4" cy="3" r="1"></circle>
+																<circle id="Oval" cx="7" cy="3" r="1"></circle>
+																<circle id="Oval" cx="17" cy="7" r="1"></circle>
+																<circle id="Oval" cx="1" cy="10" r="1"></circle>
+																<circle id="Oval" cx="4" cy="9" r="1"></circle>
+																<circle id="Oval" cx="5" cy="7" r="1"></circle>
+																<circle id="Oval" cx="8" cy="6" r="1"></circle>
+																<circle id="Oval" cx="15" cy="5" r="1"></circle>
+																<circle id="Oval" cx="17" cy="11" r="1"></circle>
+																<circle id="Oval" cx="2" cy="12" r="1"></circle>
+																<circle id="Oval" cx="8" cy="13" r="1"></circle>
+																<circle id="Oval" cx="9" cy="16" r="1"></circle>
+																<circle id="Oval" cx="12" cy="16" r="1"></circle>
+																<circle id="Oval" cx="10" cy="10" r="1"></circle>
+															</g>
+														</g>
+													</svg>
+													<span>Finer end of medium</span>
+												</div>
+												<div class="mb-2 mr-3 flex items-start justify-between gap-x-2 rounded bg-yellow-100 bg-opacity-75 px-2 text-sm">
+													<svg viewBox="0 0 38 53" class="mt-1 h-3.5 w-3.5">
+														<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+															<g transform="translate(-62.000000, -39.000000)" fill="#7C4628"><path d="M90.281,39.68 C81.1521,36.4183 69.633,45.3519 64.543,59.61 C59.7227,73.149 62.4336,86.61 70.543,90.731 L70.539093,90.731 C73.703193,86.981 75.562493,82.3013 75.828193,77.399 C76.578193,64.251 79.500093,56.629 87.406193,47.188 L87.410099,47.191906 C87.984319,46.625496 88.894499,46.590346 89.515599,47.105969 C90.132789,47.621589 90.261689,48.523969 89.808569,49.191869 C82.300769,58.148869 79.660569,65.050869 78.999569,77.578869 C78.722229,82.746869 76.886269,87.711869 73.730069,91.808869 C82.519169,93.398669 92.902069,84.738569 97.660069,71.398869 C102.691269,57.128869 99.410069,42.929869 90.281169,39.679869 L90.281,39.68 Z" id="Path"></path></g>
+														</g>
+													</svg>
+													<span>Light roast </span>
+												</div>
+											</div>
+										</div>
+										<div class="mt-5">
+											<h4 class="font-inconsolata mb-2 text-base font-bold">Water:</h4>
+											<div class="flex flex-wrap">
+												<div class="mb-2 mr-3 flex items-center justify-between gap-x-2 rounded bg-yellow-100 bg-opacity-75 px-2 py-1 text-sm">
+													<svg class="h-3.5 w-3.5" viewBox="0 0 43 96" version="1.1">
+														<g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+															<g id="np_temperature_1979336_333333">
+																<path d="M17.801,95.602 C31.199,98.2036 42.801,88.0004 42.801,75 C42.801,68.1992 39.4026,62 34.1994,58.199 L34.1994,12.398 C34.1994,5.5972 28.801,0 21.8014,0 C15.0006,0 9.4034,5.6016 9.4034,12.398 L9.4034,58.199 C3.2042,62.8006 -0.3974,70.597 1.4034,79.398 C3.0011,87.398 9.6026,94 17.8014,95.601 L17.801,95.602 Z M12.0002,62 L13.801,60.6016 L13.801,12.6016 C13.801,8.2032 17.4026,4.8008 21.6018,4.8008 C26.0002,4.8008 29.6018,8.4024 29.6018,12.6016 L29.6018,60.6016 L31.4026,62 C35.6018,65 38.0042,70 38.0042,75.199 C38.0042,79.5974 36.2034,83.8006 33.2034,86.801 C30.0042,89.801 26.0042,91.6018 21.6014,91.6018 C13.4022,91.6018 6.9994,85.801 5.6014,78.6018 C4.6014,72.0002 6.9998,65.6018 11.9998,61.9998 L12.0002,62 Z" id="Shape" fill="#333333" fill-rule="nonzero"></path>
+																<path d="M21.801,86.801 C25.0002,86.801 28.0002,85.6018 30.1994,83.4026 C32.3986,81.2034 33.5978,78.2034 33.5978,75.0042 C33.5978,67.0042 26.797,64.4022 24.9962,62.8052 L25.000106,29.0002 L18.398506,29.0002 L18.398506,62.8012 C17.000106,64.4028 8.199506,67.602 10.199306,77.4032 C11.199306,82.6024 15.800906,86.8016 21.801306,86.8016 L21.801,86.801 Z" id="Path" fill="#DB5050"></path>
+															</g>
+														</g>
+													</svg>
+													<span>99°C / 210°F</span>
+												</div>
+												<div class="mb-2 mr-3 flex items-center justify-between gap-x-2 rounded bg-yellow-100 bg-opacity-75 px-2 py-1 text-sm">
+													<svg viewBox="0 0 50 68" class="h-3.5 w-3.5">
+														<g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+															<g id="np_50-filled-water_354243_333333" transform="translate(0.000000, -35.000000)" fill="#25A3DC" fill-rule="nonzero">
+																<g id="np_water_681730_333333" transform="translate(0.000000, 35.000000)"><path d="M23.336,0.383 C23.336,8.9768 0,25.961 0,42.617 C0,56.426 11.191,67.621 25,67.621 C38.809,67.621 50,56.43 50,42.617 C50,25.734 26.664,8.949 26.664,0.383 L23.336,0.383 Z M19.6915,22.477 C15.6563,27.4848 10.6329,33.711 10.6329,39.356 L6.6329,39.356 C6.6329,32.3052 12.1446,25.465 16.5743,19.969 C19.0743,16.8674 21.9063,13.3518 21.9063,11.7073 L25.9063042,11.7073 C25.910206,14.762 23.1641,18.1643 19.6915,22.4773 L19.6915,22.477 Z" id="Shape"></path></g>
+															</g>
+														</g>
+													</svg>
+													<span>200mL</span>
+												</div>
+											</div>
+										</div>
+										<div class="mt-5">
+											<h4 class="font-inconsolata mb-2 text-base font-bold">Equipment:</h4>
+											<div class="flex flex-col space-y-2">
+												<a href="№" aria-label="AeroPress®" rel="noopener" target="_blank" class="flex items-center justify-between rounded bg-yellow-100 bg-opacity-75 px-3 py-2 text-sm">
+													<div class="flex items-center justify-start">
+														<img class="mr-2 h-10 w-10 flex-shrink-0 object-contain" src="https://api.aeroprecipe.com:443/media/2019/01/30/aeropress_sml.png" alt="AeroPress®" />
+														<span>AeroPress®</span>
+													</div>
+													<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="currentColor" viewBox="0 0 256 256">
+														<path d="M204,64V168a12,12,0,0,1-24,0V93L72.49,200.49a12,12,0,0,1-17-17L163,76H88a12,12,0,0,1,0-24H192A12,12,0,0,1,204,64Z"></path>
+													</svg>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="border-b border-gray-200 pb-10">
+									<div class="mt-10 flex w-full max-w-3xl flex-col">
+										<ol class="recipeSteps text-base">
+											<li class="recipeStep mb-5">Set brewer in standard position on a server. Don't rinse or preheat the brewer (it doesn't make any difference).</li>
+											<li class="recipeStep mb-5">Start a timer, add 200mL water, aiming to wet all the coffee during pouring.</li>
+											<li class="recipeStep mb-5">Then immediately place the plunger on top of the brewer, about 1cm in. This creates a vacuum to stop the coffee from dripping through.</li>
+											<li class="recipeStep mb-5">Wait 2 minutes.</li>
+											<li class="recipeStep mb-5">Holding the brewer and the plunger, gently swirl the brewer.</li>
+											<li class="recipeStep mb-5">Wait 30 seconds.</li>
+											<li class="recipeStep mb-5">Press gently all the way, it takes about 30 seconds.</li>
+											<li class="recipeStep mb-5">Drink and enjoy!</li>
+										</ol>
+									</div>
+								</div>
+								<div x-data="{ activeTab: 'tab1'}" class="lg:pb-0 h-auto scroll-m-36 pb-10 pt-10">
+									<div class="flex items-center gap-8">
+										<button @click="activeTab = 'tab1'" :class="activeTab === 'tab1' ? '!border-black !hover:border-black !opacity-100' : ''" class="flex items-center gap-2 border-b-2 border-transparent pb-0.5 opacity-40 hover:border-black/20 hover:opacity-100">
+											<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="currentColor" viewBox="0 0 256 256">
+												<path d="M216,44H40A20,20,0,0,0,20,64V224A19.82,19.82,0,0,0,31.56,242.1a20.14,20.14,0,0,0,8.49,1.9,19.91,19.91,0,0,0,12.82-4.72l.12-.11L84.47,212H216a20,20,0,0,0,20-20V64A20,20,0,0,0,216,44Zm-4,144H80a11.93,11.93,0,0,0-7.84,2.92L44,215.23V68H212Z"></path>
+											</svg>
+											<h3 class="font-inconsolata text-base font-bold">Comments (<a class="pointer-events-none" href="#">138 comments</a>)</h3>
+										</button>
+										<button @click="activeTab = 'tab2'" :class="activeTab === 'tab2' ? '!border-black !hover:border-black !opacity-100' : ''" class="flex items-center gap-2 border-b-2 border-transparent pb-0.5 opacity-40 hover:border-black/20 hover:opacity-100">
+											<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="currentColor" viewBox="0 0 256 256">
+												<path d="M172,124a12,12,0,0,1-12,12H96a12,12,0,0,1,0-24h64A12,12,0,0,1,172,124Zm-12,28H96a12,12,0,0,0,0,24h64a12,12,0,0,0,0-24ZM220,40V200a36,36,0,0,1-36,36H72a36,36,0,0,1-36-36V40A12,12,0,0,1,48,28H72V24a12,12,0,0,1,24,0v4h20V24a12,12,0,0,1,24,0v4h20V24a12,12,0,0,1,24,0v4h24A12,12,0,0,1,220,40ZM196,52H184v4a12,12,0,0,1-24,0V52H140v4a12,12,0,0,1-24,0V52H96v4a12,12,0,0,1-24,0V52H60V200a12,12,0,0,0,12,12H184a12,12,0,0,0,12-12Z"></path>
+											</svg>
+											<h3 class="font-inconsolata text-base font-bold">Private Notes</h3>
+										</button>
+									</div>
+									<div x-show="activeTab === 'tab1'">
+										<div class="md:p-10 mt-5 flex items-center justify-center rounded-md bg-yellow-100 bg-opacity-50 p-6">
+											<span>
+												<a class="underline" aria-label="Login" href="#">Login</a>
+												or
+												<span>
+													<a class="underline" aria-label="Create an account" href="#">create an account</a>
+													to join the conversation.
+												</span>
+											</span>
+										</div>
+									</div>
+									<div x-show="activeTab === 'tab2'">
+										<div class="md:p-10 mt-5 flex items-center justify-center rounded-md bg-yellow-100 bg-opacity-50 p-6">
+											<span>
+												<a class="underline" aria-label="Login" href="#">Login</a>
+												or
+												<span>
+													<a class="underline" aria-label="Create an account" href="#">create an account</a>
+													to add private notes to this recipe.
+												</span>
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="md:w-96 lg:block hidden w-full flex-shrink-0 border-l border-gray-200 bg-opacity-75">
+								<div class="lg:pl-5 lg:pr-12 lg:sticky top-0 pb-8 font-bold">
+									<div class="lg:flex hidden h-20 items-center justify-between border-b border-gray-300">
+										<div class="flex items-center">
+											<span class="font-inconsolata text-base font-bold">Recipe overview</span>
+										</div>
+									</div>
+									<h4 class="lg:hidden font-inconsolata mb-2 mt-5 text-base font-bold">Recipe details:</h4>
+									<div class="mt-5 flex flex-wrap">
+										<div class="mb-2 mr-3 flex items-center justify-between gap-x-2 rounded bg-yellow-100 bg-opacity-75 px-2 py-1 text-sm">
+											<svg viewBox="0 0 50 88" class="h-3.5 w-3.5 text-black">
+												<g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+													<g fill="currentColor">
+														<path d="M47.602,81.398 L42.8012,81.398 L42.8012,58.398 L43.69964,58.398 C44.80124,58.398 45.69964,57.398 45.69964,56.1988 L45.69964,54.8004 C45.69964,53.6012 44.8012,52.6012 43.69964,52.6012 L6.30164,52.6012 C5.20004,52.6012 4.30164,53.6012 4.30164,54.8004 L4.30164,56.1988 C4.30164,57.398 5.20008,58.398 6.30164,58.398 L7.20008,58.398 L7.20008,81.398 L2.39928,81.398 C1.20008,81.398 0.20008,82.398 0.20008,83.5972 L0.20008,84.9956 C0.20008,86.1948 1.20008,87.1948 2.39928,87.1948 L47.59828,87.1948 C48.79748,87.1948 49.79748,86.1948 49.79748,84.9956 L49.79748,83.5972 C49.801386,82.398 48.80139,81.398 47.60218,81.398 L47.602,81.398 Z" id="Path"></path>
+														<path d="M6.301,6.602 L10.801,6.602 L10.801,48.801 L39.403,48.801 L39.399094,6.602 L43.899094,6.602 C45.000694,6.602 45.899094,5.602 45.899094,4.4028 L45.899094,2.8989 C45.899094,1.6997 45.000654,0.6997 43.899094,0.6997 L6.301094,0.6997 C5.199494,0.6997 4.301094,1.6997 4.301094,2.8989 L4.301094,4.2973 C4.199534,5.602 5.101874,6.602 6.301094,6.602 L6.301,6.602 Z" id="Path"></path>
+													</g>
+												</g>
+											</svg>
+											<span>Standard</span>
+										</div>
+										<div class="mb-2 mr-3 flex items-center justify-between gap-x-2 rounded bg-yellow-100 bg-opacity-75 px-2 py-1 text-sm">
+											<svg viewBox="0 0 94 100" version="1.1" class="h-3.5 w-3.5 text-black">
+												<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+													<g transform="translate(3.000000, 0.000000)" stroke="currentColor">
+														<path d="M87.0097386,53.907633 C87.0097386,77.6695296 67.7596935,96.9164469 44.0009247,96.9164469 C20.2390281,96.9164469 0.9921108,77.6695296 0.9921108,53.907633 C0.9921108,30.1613754 20.2390281,10.8988191 44.0009247,10.8988191 C67.7628213,10.9027257 87.0097386,30.1645032 87.0097386,53.907633 Z" id="Path" stroke-width="6.17146218"></path>
+														<path d="M43.9117824,87.3688374 L43.9117824,94.9393645 L43.9117824,87.3688374 Z" id="Path" stroke-width="1.5639" fill="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+														<path d="M10.8284162,53.719965 L3.27352812,53.719965 L10.8284162,53.719965 Z" id="Path" stroke-width="1.5639" fill="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+														<polygon id="Path" stroke-width="1.61941845" fill="currentColor" stroke-linecap="round" stroke-linejoin="round" points="41.2156188 2.41028268 46.6063821 2.41028268 46.6063821 7.81668498 41.2156188 7.81668498"></polygon>
+														<polygon id="Path" stroke-width="1.76376642" fill="currentColor" stroke-linecap="round" stroke-linejoin="round" points="38.1222246 0.882837189 50.0638522 0.882837189 50.0638522 3.7618207 38.1222246 3.7618207"></polygon>
+														<path d="M43.9540077,52.3171467 C43.9540077,51.1452539 44.000884,16.2270264 44.000884,16.2270264 C64.8179569,16.2270264 81.6814906,33.1061991 81.6814906,53.907633 L45.5632201,53.9115381" id="Path" stroke-width="1.5639" fill="currentColor"></path>
+													</g>
+												</g>
+											</svg>
+											<span>3:20</span>
+										</div>
+										<div class="mb-2 mr-3 flex items-center justify-between gap-x-2 rounded bg-yellow-100 bg-opacity-75 px-2 py-1 text-sm">
+											<svg viewBox="0 0 76 76" class="h-3.5 w-3.5">
+												<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+													<circle id="Oval" stroke="#000" stroke-width="3" fill="#FFFFFF" fill-rule="nonzero" cx="38" cy="38" r="36"></circle>
+												</g>
+											</svg>
+											<span>Paper Filter</span>
+										</div>
+									</div>
+									<div class="mt-5">
+										<h4 class="font-inconsolata mb-2 text-base font-bold">Coffee:</h4>
+										<div class="flex flex-wrap">
+											<div class="mb-2 mr-3 flex items-center justify-between gap-x-2 rounded bg-yellow-100 bg-opacity-75 px-2 py-1 text-sm">
+												<svg viewBox="0 0 96 76" class="h-3.5 w-3.5 text-black">
+													<g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+														<g id="np_scale_1236635_333333" fill="currentColor" fill-rule="nonzero">
+															<path
+																d="M95.781,65.32 C95.757562,65.14422 95.710688,64.97234 95.64038,64.80828 L79.10138,26.66028 C79.120912,26.586062 79.136537,26.51575 79.148256,26.44153 C79.22638,25.91419 79.093568,25.37903 78.777166,24.95323 C78.456856,24.52745 77.984196,24.2462 77.460766,24.17198 L56.519766,21.12118 C56.183826,17.76178 53.789266,14.96498 50.519766,14.12118 L50.519766,2.00018 C50.519766,0.89468 49.625236,0.00018 48.519766,0.00018 C47.414296,0.00018 46.519766,0.89471 46.519766,2.00018 L46.519766,14.10218 C44.054966,14.7389 42.035366,16.50448 41.070566,18.85998 L19.140566,15.66078 C18.546816,15.574843 17.945266,15.75453 17.503866,16.15687 C17.058556,16.56312 16.820276,17.14125 16.851526,17.73887 L0.382526,55.73887 L0.37862,55.73887 C0.312214,55.90293 0.26534,56.07481 0.238,56.25059 L0.238,56.3795 L0.238,56.52012 C0.230188,56.6295 0.230188,56.73887 0.238,56.85215 L0.238,56.902932 L0.238,56.899026 C0.273157,57.070896 0.33175,57.234966 0.40988,57.391216 L0.468474,57.500596 C0.558318,57.656846 0.663784,57.801376 0.788784,57.930286 L3.288784,60.430286 C7.452884,64.582586 13.089584,66.914686 18.968784,66.914686 C24.847984,66.914686 30.488784,64.582686 34.648784,60.430286 L37.148784,57.930286 C37.277694,57.801376 37.383154,57.656846 37.469094,57.500596 L37.527688,57.399036 L37.531594,57.399036 C37.609719,57.246696 37.664404,57.078726 37.699564,56.910756 C37.711283,56.801376 37.711283,56.692006 37.699564,56.578726 L37.699564,56.438106 L37.699564,56.309196 C37.676126,56.133416 37.629251,55.965446 37.558944,55.801386 L22.128944,20.141386 L40.507944,22.821086 L40.511851,22.821086 C40.847791,26.500786 43.664151,29.469486 47.320451,30.004686 C50.976751,30.539886 54.523551,28.500786 55.898551,25.071086 L74.488551,27.781986 L58.429551,64.781986 C58.359238,64.942146 58.312361,65.114016 58.288921,65.289796 L58.288921,65.418706 L58.288921,65.559326 C58.281109,65.668706 58.281109,65.781986 58.288921,65.891356 L58.288921,65.942137 C58.324078,66.110107 58.382671,66.274167 58.460801,66.430417 L58.519394,66.539787 C58.605332,66.696037 58.714704,66.840567 58.839704,66.969477 L61.339704,69.469477 C65.499904,73.621777 71.140504,75.953877 77.019704,75.953877 C82.898604,75.953877 88.539704,73.621877 92.699704,69.469477 L95.199704,66.969477 C95.324704,66.840567 95.434084,66.696037 95.520014,66.539787 L95.578608,66.430417 C95.656733,66.274167 95.715328,66.110107 95.750488,65.942137 L95.750488,65.891356 C95.7583,65.781976 95.7583,65.668696 95.750488,65.559326 L95.750488,65.418706 C95.750488,65.371831 95.781738,65.360112 95.781738,65.321049 L95.781,65.32 Z M32.679,54.519 L5.238,54.519 L19,22.89 L32.679,54.519 Z M63.32,63.5971 L77,31.9991 L90.762,63.5891 L63.32,63.5971 Z"
+															></path>
+														</g>
+													</g>
+												</svg>
+												<span>11g</span>
+											</div>
+											<div class="mb-2 mr-3 flex items-center justify-between gap-x-2 rounded bg-yellow-100 bg-opacity-75 px-2 py-1 text-sm">
+												<svg viewBox="0 0 18 17" class="h-3.5 w-3.5">
+													<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+														<g id="Group-4" fill="#7C4628" fill-rule="nonzero">
+															<circle id="Oval" cx="5" cy="12" r="1"></circle>
+															<circle id="Oval" cx="13" cy="11" r="1"></circle>
+															<circle id="Oval" cx="11" cy="13" r="1"></circle>
+															<circle id="Oval" cx="6" cy="15" r="1"></circle>
+															<circle id="Oval" cx="10" cy="2" r="1"></circle>
+															<circle id="Oval" cx="12" cy="5" r="1"></circle>
+															<circle id="Oval" cx="13" cy="1" r="1"></circle>
+															<circle id="Oval" cx="14" cy="14" r="1"></circle>
+															<circle id="Oval" cx="15" cy="9" r="1"></circle>
+															<circle id="Oval" cx="12" cy="8" r="1"></circle>
+															<circle id="Oval" cx="7" cy="10" r="1"></circle>
+															<circle id="Oval" cx="10" cy="7" r="1"></circle>
+															<circle id="Oval" cx="4" cy="3" r="1"></circle>
+															<circle id="Oval" cx="7" cy="3" r="1"></circle>
+															<circle id="Oval" cx="17" cy="7" r="1"></circle>
+															<circle id="Oval" cx="1" cy="10" r="1"></circle>
+															<circle id="Oval" cx="4" cy="9" r="1"></circle>
+															<circle id="Oval" cx="5" cy="7" r="1"></circle>
+															<circle id="Oval" cx="8" cy="6" r="1"></circle>
+															<circle id="Oval" cx="15" cy="5" r="1"></circle>
+															<circle id="Oval" cx="17" cy="11" r="1"></circle>
+															<circle id="Oval" cx="2" cy="12" r="1"></circle>
+															<circle id="Oval" cx="8" cy="13" r="1"></circle>
+															<circle id="Oval" cx="9" cy="16" r="1"></circle>
+															<circle id="Oval" cx="12" cy="16" r="1"></circle>
+															<circle id="Oval" cx="10" cy="10" r="1"></circle>
+														</g>
+													</g>
+												</svg>
+												<span>Finer end of medium</span>
+											</div>
+											<div class="mb-2 mr-3 flex items-start justify-between gap-x-2 rounded bg-yellow-100 bg-opacity-75 px-2 text-sm">
+												<svg viewBox="0 0 38 53" class="mt-1 h-3.5 w-3.5">
+													<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+														<g transform="translate(-62.000000, -39.000000)" fill="#7C4628"><path d="M90.281,39.68 C81.1521,36.4183 69.633,45.3519 64.543,59.61 C59.7227,73.149 62.4336,86.61 70.543,90.731 L70.539093,90.731 C73.703193,86.981 75.562493,82.3013 75.828193,77.399 C76.578193,64.251 79.500093,56.629 87.406193,47.188 L87.410099,47.191906 C87.984319,46.625496 88.894499,46.590346 89.515599,47.105969 C90.132789,47.621589 90.261689,48.523969 89.808569,49.191869 C82.300769,58.148869 79.660569,65.050869 78.999569,77.578869 C78.722229,82.746869 76.886269,87.711869 73.730069,91.808869 C82.519169,93.398669 92.902069,84.738569 97.660069,71.398869 C102.691269,57.128869 99.410069,42.929869 90.281169,39.679869 L90.281,39.68 Z" id="Path"></path></g>
+													</g>
+												</svg>
+												<span>Light roast</span>
+											</div>
+										</div>
+									</div>
+									<div class="mt-5">
+										<h4 class="font-inconsolata mb-2 text-base font-bold">Water:</h4>
+										<div class="flex flex-wrap">
+											<div class="mb-2 mr-3 flex items-center justify-between gap-x-2 rounded bg-yellow-100 bg-opacity-75 px-2 py-1 text-sm">
+												<svg class="h-3.5 w-3.5" viewBox="0 0 43 96" version="1.1">
+													<g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+														<g id="np_temperature_1979336_333333">
+															<path d="M17.801,95.602 C31.199,98.2036 42.801,88.0004 42.801,75 C42.801,68.1992 39.4026,62 34.1994,58.199 L34.1994,12.398 C34.1994,5.5972 28.801,0 21.8014,0 C15.0006,0 9.4034,5.6016 9.4034,12.398 L9.4034,58.199 C3.2042,62.8006 -0.3974,70.597 1.4034,79.398 C3.0011,87.398 9.6026,94 17.8014,95.601 L17.801,95.602 Z M12.0002,62 L13.801,60.6016 L13.801,12.6016 C13.801,8.2032 17.4026,4.8008 21.6018,4.8008 C26.0002,4.8008 29.6018,8.4024 29.6018,12.6016 L29.6018,60.6016 L31.4026,62 C35.6018,65 38.0042,70 38.0042,75.199 C38.0042,79.5974 36.2034,83.8006 33.2034,86.801 C30.0042,89.801 26.0042,91.6018 21.6014,91.6018 C13.4022,91.6018 6.9994,85.801 5.6014,78.6018 C4.6014,72.0002 6.9998,65.6018 11.9998,61.9998 L12.0002,62 Z" id="Shape" fill="#333333" fill-rule="nonzero"></path>
+															<path d="M21.801,86.801 C25.0002,86.801 28.0002,85.6018 30.1994,83.4026 C32.3986,81.2034 33.5978,78.2034 33.5978,75.0042 C33.5978,67.0042 26.797,64.4022 24.9962,62.8052 L25.000106,29.0002 L18.398506,29.0002 L18.398506,62.8012 C17.000106,64.4028 8.199506,67.602 10.199306,77.4032 C11.199306,82.6024 15.800906,86.8016 21.801306,86.8016 L21.801,86.801 Z" id="Path" fill="#DB5050"></path>
+														</g>
+													</g>
+												</svg>
+												<span>99°C / 210°F</span>
+											</div>
+											<div class="mb-2 mr-3 flex items-center justify-between gap-x-2 rounded bg-yellow-100 bg-opacity-75 px-2 py-1 text-sm">
+												<svg viewBox="0 0 50 68" class="h-3.5 w-3.5">
+													<g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+														<g id="np_50-filled-water_354243_333333" transform="translate(0.000000, -35.000000)" fill="#25A3DC" fill-rule="nonzero">
+															<g id="np_water_681730_333333" transform="translate(0.000000, 35.000000)"><path d="M23.336,0.383 C23.336,8.9768 0,25.961 0,42.617 C0,56.426 11.191,67.621 25,67.621 C38.809,67.621 50,56.43 50,42.617 C50,25.734 26.664,8.949 26.664,0.383 L23.336,0.383 Z M19.6915,22.477 C15.6563,27.4848 10.6329,33.711 10.6329,39.356 L6.6329,39.356 C6.6329,32.3052 12.1446,25.465 16.5743,19.969 C19.0743,16.8674 21.9063,13.3518 21.9063,11.7073 L25.9063042,11.7073 C25.910206,14.762 23.1641,18.1643 19.6915,22.4773 L19.6915,22.477 Z" id="Shape"></path></g>
+														</g>
+													</g>
+												</svg>
+												<span>200mL</span>
+											</div>
+										</div>
+									</div>
+									<div class="mt-5">
+										<h4 class="font-inconsolata mb-2 text-base font-bold">Equipment:</h4>
+										<div class="flex flex-col space-y-2">
+											<a href="#" aria-label="AeroPress®" rel="noopener" target="_blank" class="flex items-center justify-between rounded bg-yellow-100 bg-opacity-75 px-3 py-2 text-sm">
+												<div class="flex items-center justify-start">
+													<img class="mr-2 h-10 w-10 flex-shrink-0 object-contain" src="https://api.aeroprecipe.com:443/media/2019/01/30/aeropress_sml.png" alt="AeroPress®" />
+													<span>AeroPress®</span>
+												</div>
+												<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="currentColor" viewBox="0 0 256 256"><path d="M204,64V168a12,12,0,0,1-24,0V93L72.49,200.49a12,12,0,0,1-17-17L163,76H88a12,12,0,0,1,0-24H192A12,12,0,0,1,204,64Z"></path></svg>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="lg:w-96 fixed bottom-0 right-0 flex h-14 w-full items-center border-l border-t border-gray-300 bg-white">
+						<button class="md:pl-5 flex h-full w-full cursor-pointer items-center space-x-2 pl-3 hover:bg-yellow-100">
+							<svg viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4">
+								<path d="M4.5 12.5v-10l7 5-7 5z" stroke="currentColor" stroke-linejoin="round"></path>
+							</svg>
+							<span>Start timer</span>
+						</button>
+					</div>
+				</main>
+			</div>
+		</div>
+
+		<!-- search modal -->
+		<div x-show="isModalOpen === 'modalSearch'" :class="isModalOpen ? '!visible' : ''" class="invisible fixed left-0 top-0 z-50 flex h-full w-screen flex-col items-center justify-start bg-yellow-50 bg-opacity-95 px-5 py-20" x-cloak x-transition.opacity>
+			<div @click="isModalOpen = false; !isModalOpen ? document.body.classList.remove('overflow-hidden', 'max-h-screen') : ''" class="fixed left-0 top-0 z-0 h-full w-full"></div>
+			<div class="max-w-screen-sm relative z-10 flex max-h-full w-full flex-col items-center justify-center overflow-hidden rounded-xl border border-gray-300 bg-white text-center">
+				<div class="relative flex w-full items-center">
+					<input type="text" placeholder="Search recipes" class="lg:text-lg w-full border-x-0 border-b border-t-0 border-gray-400 border-opacity-50 bg-yellow-50 px-4 py-3 pl-12 text-base text-black placeholder:text-gray-800 focus:border-gray-400 focus:bg-yellow-100 focus:bg-opacity-50 focus:outline-none focus:ring-0" />
+					<svg class="absolute left-5 h-4 w-4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+						<path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+					</svg>
+				</div>
+				<div id="searchResults" class="flex w-full flex-1 flex-col items-start justify-start overflow-auto p-5 text-left">
+					<span class="text-sm">Popular search terms include<br /><i>James Hoffmann</i>, <i>Ethiopian</i>, <i>Tim Wendelboe</i></span>
+				</div>
+			</div>
+		</div>
+		<!-- ./search modal -->
+
+		<!-- saves -->
+		<div x-show="isModalOpen === 'modalSaves'" :class="isModalOpen ? '!visible' : ''" class="invisible fixed left-0 top-0 z-[99] flex h-full w-screen flex-col items-center justify-center bg-yellow-50 bg-opacity-95 p-5" x-cloak x-transition.opacity>
+			<div @click="isModalOpen = false; !isModalOpen ? document.body.classList.remove('overflow-hidden', 'max-h-screen') : ''" class="fixed left-0 top-0 z-0 h-full w-full"></div>
+			<div class="max-w-screen-sm lg:p-10 relative z-10 flex max-h-full w-full flex-col items-start justify-center rounded-xl border border-gray-300 bg-white p-0 py-5 text-center">
+				<button @click="isModalOpen = false; !isModalOpen ? document.body.classList.remove('overflow-hidden', 'max-h-screen') : ''" class="absolute -right-3 -top-3 flex h-8 w-8 cursor-pointer items-center justify-center rounded-full bg-black p-2 text-white">
+					<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 256 256"><path d="M208.49,191.51a12,12,0,0,1-17,17L128,145,64.49,208.49a12,12,0,0,1-17-17L111,128,47.51,64.49a12,12,0,0,1,17-17L128,111l63.51-63.52a12,12,0,0,1,17,17L145,128Z"></path></svg>
+				</button>
+				<h3 class="lg:text-2xl font-display lg:px-0 px-5 text-xl font-bold">Saved by</h3>
+				<div class="lg:px-0 mt-3 flex w-full flex-1 flex-col overflow-auto px-5">
+					<a class="group flex w-full items-center space-x-3 border-b py-3 last:border-b-0 last:pb-0" href="#">
+						<img src="https://api.dicebear.com/7.x/croodles-neutral/svg?seed=Kyle-Mendoza.svg" class="h-8 w-8 rounded-full border border-black p-1" alt="" />
+						<span class="group-hover:underline">Kyle Mendoza</span>
+					</a>
+					<a class="group flex w-full items-center space-x-3 border-b py-3 last:border-b-0 last:pb-0" href="#">
+						<img src="https://api.dicebear.com/7.x/croodles-neutral/svg?seed=M-D.svg" class="h-8 w-8 rounded-full border border-black p-1" alt="" />
+						<span class="group-hover:underline">M D</span>
+					</a>
+					<a class="group flex w-full items-center space-x-3 border-b py-3 last:border-b-0 last:pb-0" href="#">
+						<img src="https://api.dicebear.com/7.x/croodles-neutral/svg?seed=Kyle-Friedman.svg" class="h-8 w-8 rounded-full border border-black p-1" alt="" />
+						<span class="group-hover:underline">Kyle Friedman</span>
+					</a>
+					<a class="group flex w-full items-center space-x-3 border-b py-3 last:border-b-0 last:pb-0" href="#">
+						<img src="https://api.dicebear.com/7.x/croodles-neutral/svg?seed=Randall-Pierson.svg" class="h-8 w-8 rounded-full border border-black p-1" alt="" />
+						<span class="group-hover:underline">Randall Pierson</span>
+					</a>
+					<a class="group flex w-full items-center space-x-3 border-b py-3 last:border-b-0 last:pb-0" href="#">
+						<img src="https://api.dicebear.com/7.x/croodles-neutral/svg?seed=Jonathan-Biemond.svg" class="h-8 w-8 rounded-full border border-black p-1" alt="" />
+						<span class="group-hover:underline">Jonathan Biemond</span>
+					</a>
+					<a class="group flex w-full items-center space-x-3 border-b py-3 last:border-b-0 last:pb-0" href="#">
+						<img src="https://api.dicebear.com/7.x/croodles-neutral/svg?seed=Marc-Roosenbrand.svg" class="h-8 w-8 rounded-full border border-black p-1" alt="" />
+						<span class="group-hover:underline">Marc Roosenbrand</span>
+					</a>
+					<a class="group flex w-full items-center space-x-3 border-b py-3 last:border-b-0 last:pb-0" href="#">
+						<img src="https://api.dicebear.com/7.x/croodles-neutral/svg?seed=Antonio-Gonzalez.svg" class="h-8 w-8 rounded-full border border-black p-1" alt="" />
+						<span class="group-hover:underline">Antonio Gonzalez</span>
+					</a>
+					<a class="group flex w-full items-center space-x-3 border-b py-3 last:border-b-0 last:pb-0" href="#">
+						<img src="https://api.dicebear.com/7.x/croodles-neutral/svg?seed=Czar Paul-Paa.svg" class="h-8 w-8 rounded-full border border-black p-1" alt="" />
+						<span class="group-hover:underline">Czar Paul Paa</span>
+					</a>
+					<a class="group flex w-full items-center space-x-3 border-b py-3 last:border-b-0 last:pb-0" href="#">
+						<img src="https://api.dicebear.com/7.x/croodles-neutral/svg?seed=jack-spader.svg" class="h-8 w-8 rounded-full border border-black p-1" alt="" />
+						<span class="group-hover:underline">jack spader</span>
+					</a>
+					<a class="group flex w-full items-center space-x-3 border-b py-3 last:border-b-0 last:pb-0" href="#">
+						<img src="https://api.dicebear.com/7.x/croodles-neutral/svg?seed=Nick-Sheffield.svg" class="h-8 w-8 rounded-full border border-black p-1" alt="" />
+						<span class="group-hover:underline">Nick Sheffield</span>
+					</a>
+				</div>
+			</div>
+		</div>
+		<!-- ./saves -->
+	</body>
+</html>

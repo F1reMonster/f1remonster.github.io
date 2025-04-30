@@ -1,0 +1,44 @@
+.intro-section--economic-reviews {
+  padding: 2em 0 1em;
+}
+.intro-section--economic-reviews .header {
+  margin: 0.22em 0 0.24em;
+}
+@media screen and (max-width: 767px) {
+  .intro-section--economic-reviews .wrap {
+    display: flex;
+    flex-flow: column-reverse;
+  }
+}
+.intro-section--economic-reviews .img-part {
+  margin-top: -3.125em;
+}
+@media (max-width: 767px) {
+  .intro-section--economic-reviews .img-part {
+    margin-top: 0;
+    margin-inline-start: unset;
+  }
+}
+.intro-section--economic-reviews .txt-part {
+  max-width: 62.5em;
+  position: relative;
+}
+.intro-section--economic-reviews .txt-part .help-page-background {
+  position: absolute;
+  left: -3.125em;
+  bottom: -15em;
+  z-index: -1;
+}
+html[dir=ltr] .intro-section--economic-reviews .txt-part .help-page-background {
+  left: unset;
+  right: -3.125em;
+}
+
+@media (max-width: 1356px) {
+  .intro-section--economic-reviews .txt-part {
+    max-width: 31.25em;
+  }
+  .intro-section--economic-reviews .txt-part .help-page-background {
+    display: none;
+  }
+}

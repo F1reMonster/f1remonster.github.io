@@ -1,0 +1,189 @@
+.aboutus {
+	&-precont {
+		border-radius: 60px;
+		padding: 40px 70px;
+		border: 1px solid #000000;
+		font-size: 24px;
+		margin: 70px 0 50px 0;
+		@include mediaMobile {
+			font-size: 20px;
+			padding: 20px;
+			border-radius: 30px;
+		}
+		p {
+			margin-bottom: 1rem;
+		}
+		a {
+			margin-top: 30px;
+			text-transform: uppercase;
+			font-size: 20px;
+			max-width: 350px;
+			&.not {
+				text-transform: none;
+				color: #000000;
+				text-decoration: underline;
+				max-width: none;
+				margin: 0;
+				font-size: unset;
+			}
+		}
+		&.mb0 {
+			margin-bottom: 0;
+		}
+
+		&.no-border {
+			border: none;
+			margin-top: 0;
+			padding-top: 0;
+			&.pb0 {
+				padding-bottom: 0;
+			}
+		}
+		&.dop {
+			display: flex;
+			align-items: center;
+			justify-content: space-around;
+			flex-wrap: wrap;
+			padding-bottom: 80px;
+			&.pb0 {
+				padding-bottom: 0;
+			}
+			@include mediaMobile {
+				padding-bottom: 50px;
+			}
+			a {
+				max-width: none;
+			}
+		}
+		&.dopv {
+			.fundraising-block {
+				margin-top: 20px;
+			}
+			.fundraising-block-item {
+				&:hover {
+					.fundraising-block-img {
+						img {
+							transform: scale(1.1);
+						}
+					}
+				}
+			}
+			.fundraising-block-img {
+				img {
+					transform: scale(1);
+				}
+			}
+			a {
+				max-width: none;
+			}
+			.btnfblock a {
+				flex-direction: row;
+			}
+		}
+	}
+	&-ab-item {
+		padding: 0 35px;
+		@include mediaMobile {
+			padding: 0 10px;
+		}
+		.ab-item {
+			&--head {
+				font-size: 24px;
+				font-weight: bold;
+				margin-bottom: 22px;
+				min-height: 58px;
+				@include mediaLaptop {
+					font-size: 21px;
+				}
+			}
+			&--img {
+				margin-bottom: 35px;
+				position: relative;
+			}
+			&--des {
+				width: 156px;
+				height: 124px;
+				background-image: url("./../img/icons/aboutus_des.svg");
+				background-repeat: no-repeat;
+				background-size: contain;
+				position: absolute;
+				right: 0;
+				bottom: -70px;
+				z-index: -1;
+			}
+			&--forname {
+				font-size: 16px;
+				min-height: 91px;
+			}
+			&--content {
+				//margin-top: 20px;
+				@include mediaMobile {
+					font-size: 14px;
+				}
+			}
+			&--name {
+				font-size: 28px;
+				font-weight: bold;
+				text-transform: uppercase;
+				@include mediaLaptop {
+					font-size: 24px;
+				}
+			}
+			&--work {
+				font-size: 16px;
+				font-weight: bold;
+				text-transform: uppercase;
+			}
+		}
+		.btn-click-action {
+			font-size: 24px;
+			color: #fbac18;
+			margin-top: 15px;
+			@include mediaMobile {
+				font-size: 18px;
+			}
+		}
+	}
+	&-slider {
+		position: relative;
+		.swiper-aboutus-nav {
+			position: absolute;
+			width: 100%;
+			top: 0;
+			z-index: 10;
+		}
+		.swiper-aboutus {
+			display: block;
+			width: 125px;
+			height: 125px;
+			position: absolute;
+			z-index: 10;
+			background-image: url("./../img/icons/aboutus_arrow.svg");
+			background-repeat: no-repeat;
+			background-size: contain;
+			top: 320px;
+			opacity: 0.7;
+			transition: all 0.3s ease-in-out;
+			cursor: pointer;
+			@include mediaLaptop {
+				width: 80px;
+				height: 80px;
+			}
+			@include mediaMobile {
+				width: 48px;
+				height: 48px;
+				top: 280px;
+			}
+			&:hover {
+				opacity: 1;
+			}
+		}
+		.swiper-aboutus-next {
+			right: 20px;
+		}
+		.swiper-aboutus-prev {
+			left: 20px;
+			transform: rotate(180deg);
+		}
+	}
+}

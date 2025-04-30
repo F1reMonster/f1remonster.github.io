@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+<title>Legacy space - Portfolio page</title>
+<meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=yes">
+<link rel="canonical" href='' />
+<meta name="MobileOptimized" content="width"/>
+<meta name="HandheldFriendly" content="True"/>
+<meta name="viewport" content="initial-scale=1.0, width=device-width">
+<link rel="stylesheet" type="text/css" href="../../css/style.css" />
+
+	</head>
+
+	<body class="flex flex-col h-full overflow-clip font-inter">
+		<main class="flex-grow py-4 lg:py-12"></main>
+		
+		<!-- photo uploading -->
+<div class="fixed inset-0 bg-primary-black/60"></div>
+<div class="fixed inset-0 z-50 p-4 overflow-x-hidden overflow-y-auto">
+	<div class="flex justify-center">
+		<div class="relative z-20 p-4 bg-white border shadow-lg w-110 rounded-3xl border-neutral-black-5 lg:p-6">
+			<div class="pb-5 border-b border-neutral-black-5">
+				<h3 class="text-2xl font-medium lg:text-lg">Photo uploading</h3>
+				<p class="mt-2 text-sm text-neutral-black-70">Adding a photo or series, add a tag to it for easy search</p>
+			</div>
+			<div class="flex flex-col gap-2 mt-5">
+				<div class="relative cursor-pointer">
+					<input type="file" class="hidden" id="fileUpload" />
+					<label for="fileUpload" class="absolute inset-0 z-1"></label>
+					<div class="relative flex flex-col items-center w-full px-8 py-4 rounded-3xl bg-primary/10">
+						<div class="absolute inset-0 w-full h-full icon icon--dashed-r24 -z-0 text-primary"></div>
+						<span class="icon icon--media-upload h-12.5 w-12.5"></span>
+						<p class="mt-6 text-lg font-medium lg:mt-9 lg:text-xl">Drag and Drop</p>
+						<p class="mt-2 text-sm opacity-50 lg:mt-3">or</p>
+						<button class="mt-3 flex h-12 w-full flex-shrink-0 items-center justify-center gap-2 rounded-lg bg-primary px-5 py-3.5 text-sm font-semibold text-primary-100 transition-all duration-300 hover:bg-primary-hover lg:mt-4">
+							<span>Choose an image</span>
+						</button>
+					</div>
+				</div>
+				<div class="flex items-center justify-between text-xs text-neutral-black-70">
+					<p>Supported formats: PNG, JPEG</p>
+					<p>Max size: 5mb</p>
+				</div>
+			</div>
+
+			<p class="mt-5 text-sm font-medium">Importing..</p>
+			<div class="mt-1.5 flex justify-between text-sm font-medium text-neutral-black-50">
+				<div>30%</div>
+				<div>40 sec remaining</div>
+			</div>
+			<div class="w-full h-1 mt-1 rounded overflow-clip bg-neutral-black-3" style="--percent: 30">
+				<div class="h-1 w-[calc(var(--percent)*1%)] rounded bg-primary transition-all duration-300"></div>
+			</div>
+			<p class="mt-5 text-sm">Uploaded images</p>
+			<div class="mt-2 grid grid-cols-4 gap-2.5 border-b border-neutral-black-5 pb-5">
+				<div class="aspect-[1.17] w-full overflow-clip rounded-lg bg-loading bg-contain bg-center bg-no-repeat">
+					<img decoding="async" class="object-cover w-full h-full" src="../../img/assets/image-01.webp" title="" alt="" loading="lazy" />
+				</div>
+				<div class="aspect-[1.17] w-full overflow-clip rounded-lg bg-loading bg-contain bg-center bg-no-repeat">
+					<img decoding="async" class="object-cover w-full h-full" src="../../img/assets/image-01.webp" title="" alt="" loading="lazy" />
+				</div>
+				<div class="aspect-[1.17] w-full overflow-clip rounded-lg bg-loading bg-contain bg-center bg-no-repeat">
+					<img decoding="async" class="object-cover w-full h-full" src="../../img/assets/image-01.webp" title="" alt="" loading="lazy" />
+				</div>
+				<div class="aspect-[1.17] w-full overflow-clip rounded-lg bg-loading bg-contain bg-center bg-no-repeat">
+					<img decoding="async" class="object-cover w-full h-full" src="../../img/assets/image-01.webp" title="" alt="" loading="lazy" />
+				</div>
+				<div class="aspect-[1.17] w-full overflow-clip rounded-lg bg-loading bg-contain bg-center bg-no-repeat">
+					<img decoding="async" class="object-cover w-full h-full" src="../../img/assets/image-01.webp" title="" alt="" loading="lazy" />
+				</div>
+				<div class="aspect-[1.17] w-full overflow-clip rounded-lg bg-loading bg-contain bg-center bg-no-repeat">
+					<img decoding="async" class="object-cover w-full h-full" src="../../img/assets/image-01.webp" title="" alt="" loading="lazy" />
+				</div>
+				<div class="aspect-[1.17] w-full overflow-clip rounded-lg bg-loading bg-contain bg-center bg-no-repeat">
+					<img decoding="async" class="object-cover w-full h-full" src="../../img/assets/image-01.webp" title="" alt="" loading="lazy" />
+				</div>
+				<div class="flex aspect-[1.17] w-full flex-col items-center justify-center overflow-clip rounded-lg border border-neutral-black-5 bg-primary-green-gray text-neutral-black-70">
+					<span class="icon icon--folder-images h-7 w-7"></span>
+					<span class="mt-1 text-xs font-medium">+75 images</span>
+				</div>
+			</div>
+			<div class="relative flex flex-wrap items-center w-full gap-1 py-2 pl-2 pr-12 mt-5 transition-all duration-300 border group rounded-xl border-primary-green-gray bg-primary-green-gray focus-within:border-secondary focus-within:bg-white focus-within:shadow-input">
+				<div class="inline-flex items-center h-8 border rounded-lg border-neutral-black-5 bg-neutral-black-3 text-neutral-black-50">
+					<button class="flex h-full items-center border-r border-r-neutral-black-5 px-0.5">
+						<span class="w-5 h-5 icon icon--close"></span>
+					</button>
+					<span class="pl-2 pr-1.5">#Coin</span>
+				</div>
+
+				<input type="text" class="flex-1 p-0 bg-transparent border-0 placeholder:text-neutral-black-50" placeholder="-Add tag-" />
+				<div class="absolute flex -translate-y-1/2 right-2 top-1/2">
+					<span class="icon icon--chevron-down"></span>
+				</div>
+
+				<div class="absolute right-0 z-50 w-full mt-1 transition-all duration-300 opacity-0 pointer-events-none top-full group-focus-within:pointer-events-auto group-focus-within:translate-y-4 group-focus-within:opacity-100">
+					<div class="w-full rounded-xl bg-white py-2.5 pr-1.5 shadow-header-menu">
+						<div class="overflow-auto max-h-66 scrollbar-thin">
+							<ul class="flex flex-col pl-3 pr-1.5">
+								<li>
+									<a href="#" class="flex items-center gap-5 px-3 py-3 transition-all duration-300 rounded-xl text-primary-black hover:bg-neutral-black-3">
+										<span class="text-sm font-medium">All category</span>
+									</a>
+								</li>
+								<li>
+									<a href="#electronicDevices" class="flex items-center gap-5 px-3 py-3 transition-all duration-300 rounded-xl text-primary-black hover:bg-neutral-black-3">
+										<span class="text-sm font-medium">Electronic Devices</span>
+									</a>
+								</li>
+								<li>
+									<a href="#furniture" class="flex items-center gap-5 px-3 py-3 transition-all duration-300 rounded-xl text-primary-black hover:bg-neutral-black-3">
+										<span class="text-sm font-medium">Furniture</span>
+									</a>
+								</li>
+								<li>
+									<a href="#" class="flex items-center gap-5 px-3 py-3 transition-all duration-300 rounded-xl text-primary-black hover:bg-neutral-black-3">
+										<span class="text-sm font-medium">Decorative Utility</span>
+									</a>
+								</li>
+								<li>
+									<a href="#" class="flex items-center gap-5 px-3 py-3 transition-all duration-300 rounded-xl text-primary-black hover:bg-neutral-black-3">
+										<span class="text-sm font-medium">Ritual's things</span>
+									</a>
+								</li>
+								<li>
+									<a href="#" class="flex items-center gap-5 px-3 py-3 transition-all duration-300 rounded-xl text-primary-black hover:bg-neutral-black-3">
+										<span class="text-sm font-medium">Dishes and kitchen devices </span>
+									</a>
+								</li>
+								
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="flex flex-col gap-2 mt-8 sd:flex-row">
+				<button class="flex h-12 w-full items-center justify-center gap-2 rounded-xl border border-neutral-black-5 px-5 py-3.5 text-sm transition-all duration-300 hover:bg-neutral-black-1">
+					<span>Discard</span>
+				</button>
+				<button class="-order-1 flex h-12 w-full items-center justify-center gap-2 rounded-lg bg-gossip px-5 py-3.5 text-sm font-semibold text-norway transition-all duration-300 hover:bg-primary-hover hover:text-primary-100 sd:order-none">
+					<span class="icon icon--rocket"></span>
+					<span>Apply tag</span>
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- ./photo uploading -->
+ 
+		<script src="../../js/app.js"></script>
+
+	</body>
+</html>

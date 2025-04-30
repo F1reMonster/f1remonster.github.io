@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="92px" height="92px" viewBox="0 0 92 92" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>82173F82-38EC-408D-8671-880F0CFAFD17</title>
+    <defs>
+        <linearGradient x1="-67.3828125%" y1="-35.1025391%" x2="89.6909969%" y2="99.8586904%" id="linearGradient-1">
+            <stop stop-color="#8FE600" offset="0.0983391608%"></stop>
+            <stop stop-color="#6924E8" offset="43.9685315%"></stop>
+            <stop stop-color="#A07CE1" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="ui" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-1920_DISCOUNT_lobby-page---Credit-Card-Highlighted-component" transform="translate(-915.000000, -4546.000000)">
+            <g id="Group-30" transform="translate(180.000000, 4454.000000)">
+                <g id="Group-47" transform="translate(0.000000, 92.000000)">
+                    <g id="Group-41" transform="translate(735.000000, 0.000000)">
+                        <circle id="Oval" fill="url(#linearGradient-1)" cx="46" cy="46" r="46"></circle>
+                        <g id="Group-40" transform="translate(32.857143, 30.228571)" fill="#FFFFFF">
+                            <polygon id="Path" transform="translate(13.800000, 7.885714) scale(-1, 1) rotate(-90.000000) translate(-13.800000, -7.885714) " points="18.9393421 -5.91428571 21.6857143 -3.00451436 11.4072626 7.88571429 21.6857143 18.7759429 18.9393421 21.6857143 5.91428571 7.88571429"></polygon>
+                            <polygon id="Path-Copy" transform="translate(13.800000, 23.657143) scale(-1, 1) rotate(-90.000000) translate(-13.800000, -23.657143) " points="18.9393421 9.85714286 21.6857143 12.7669142 11.4072626 23.6571429 21.6857143 34.5473715 18.9393421 37.4571429 5.91428571 23.6571429"></polygon>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

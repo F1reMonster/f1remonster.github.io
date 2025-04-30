@@ -1,0 +1,17 @@
+.marketing-wrap .faq {
+  padding-bottom: 3.90625vw;
+}
+@media (max-width: 767px) {
+  .marketing-wrap .faq {
+    padding-top: 1.25em;
+    padding-bottom: 1.6875em;
+  }
+}
+@media (max-width: 767px) {
+  .marketing-wrap .faq .typical-header {
+    margin-bottom: 0.4666666667em;
+  }
+}
+.marketing-wrap .faq .faq-cloud {
+  display: none;
+}

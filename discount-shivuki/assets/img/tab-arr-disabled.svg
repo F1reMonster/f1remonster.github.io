@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>B526814C-AC7B-46CB-B5A7-62CFFC4EA3C2</title>
+    <defs>
+        <circle id="path-1" cx="22" cy="22" r="22"></circle>
+        <filter x="-8.0%" y="-5.7%" width="115.9%" height="115.9%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Design-system" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Buttons-2" transform="translate(-98.000000, -610.000000)">
+            <g id="Group-Copy-2" transform="translate(100.000000, 611.000000)">
+                <g id="Oval-Copy">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                    <use fill="#D5D7D8" fill-rule="evenodd" xlink:href="#path-1"></use>
+                </g>
+                <path d="M13.5380853,28.580862 L22.9687874,18.8607108 L32.4626723,28.580862 C33.72853,29.9148365 35.8805742,27.7551104 34.6147165,26.4208284 L23.8544953,15.3669909 C23.4113637,14.9222143 22.5886376,14.8587777 22.1454964,15.3035582 L11.3852752,26.420813 C10.1194175,27.7547875 12.2715383,29.9148211 13.5373195,28.5808466 L13.5380853,28.580862 Z" id="Path" fill="#A4A4A4" fill-rule="nonzero" transform="translate(23.000000, 22.000000) rotate(-270.000000) translate(-23.000000, -22.000000) "></path>
+            </g>
+        </g>
+    </g>
+</svg>

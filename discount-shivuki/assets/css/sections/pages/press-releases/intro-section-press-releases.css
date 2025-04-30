@@ -1,0 +1,67 @@
+.intro-section--press-releases {
+  margin-bottom: -10.3125em;
+  padding-bottom: 1.875em;
+}
+html[dir=ltr] .intro-section--press-releases {
+  margin-bottom: -6.25em;
+}
+
+@media (max-width: 767px) {
+  .intro-section--press-releases {
+    margin-bottom: 0;
+  }
+}
+.intro-section--press-releases .wrap {
+  position: relative;
+}
+@media (max-width: 1100px) {
+  .intro-section--press-releases .wrap {
+    align-items: flex-start;
+  }
+}
+@media (max-width: 767px) {
+  .intro-section--press-releases .wrap {
+    display: flex;
+    flex-flow: column-reverse;
+    align-items: center;
+  }
+}
+.intro-section--press-releases .header {
+  margin: 0.3em 0 0.17em;
+}
+.intro-section--press-releases .primary-btn {
+  min-width: 10.5em;
+  margin-top: 1.25em;
+}
+@media (max-width: 767px) {
+  .intro-section--press-releases .primary-btn {
+    display: none;
+  }
+}
+.intro-section--press-releases .background {
+  position: absolute;
+  inset-inline-end: 40%;
+  bottom: -200px;
+  max-width: none;
+  z-index: -1;
+}
+@media (max-width: 767px) {
+  .intro-section--press-releases .background {
+    display: none;
+  }
+}
+.intro-section--press-releases .img-part img {
+  position: relative;
+  top: -3.75em;
+}
+@media (max-width: 767px) {
+  .intro-section--press-releases .img-part img {
+    top: unset;
+  }
+}
+@media (max-width: 767px) {
+  .intro-section--press-releases .img-part {
+    margin-top: 0;
+    margin-inline-start: unset;
+  }
+}

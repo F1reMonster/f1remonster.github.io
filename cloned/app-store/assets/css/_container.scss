@@ -1,0 +1,14 @@
+.container {
+	padding-right: rem($containerPadding);
+	padding-left: rem($containerPadding);
+	max-width: rem($maxWidthContainer);
+
+	@media (min-width: em(600)) {
+		margin-left: rem(48);
+		margin-right: rem(48);
+	}
+
+	@media (min-width: em(1400)) {
+		margin: 0 auto;
+	}
+}

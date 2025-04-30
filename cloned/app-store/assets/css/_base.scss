@@ -1,0 +1,142 @@
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+body {
+	font-family: var(--font-primary);
+	-webkit-text-size-adjust: 100%;
+	-webkit-font-smoothing: antialiased;
+	-webkit-tap-highlight-color: transparent;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-moz-osx-font-smoothing: grayscale;
+	font-size: rem(13);
+	// line-height: 120%;
+	line-height: 1.38462;
+	color: var(--primary);
+	background-color: var(--white);
+
+	&.lock {
+		overflow: hidden;
+		padding-right: rem(16);
+		touch-action: none;
+		overscroll-behavior: none;
+
+		.body-wrapper {
+			pointer-events: none;
+		}
+
+		@media (max-width: em(1023)) {
+			padding-right: 0;
+		}
+	}
+}
+
+img {
+	width: 100%;
+}
+
+main {
+	flex: 1 1 0%;
+}
+
+a {
+	text-decoration: none;
+	color: var(--primary);
+	transition: all 0.2s ease-in;
+
+	@include hover-supported {
+		color: var(--dodger-blue);
+
+		.icon {
+			background-color: var(--dodger-blue);
+		}
+	}
+}
+
+button {
+	border: none;
+	padding: 0;
+	font-family: var(--font-primary);
+	background: none;
+}
+
+.body-wrapper {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	overflow: clip;
+	min-height: 100%;
+	padding-bottom: rem(60);
+}
+
+.stars {
+	display: flex;
+
+	span {
+		width: rem(16);
+		height: rem(16);
+	}
+
+	.fill {
+		fill: var(--dodger-blue);
+		stop-color: var(--dodger-blue);
+	}
+
+	.unfill {
+		fill: var(--porcelain);
+		stop-color: var(--porcelain);
+	}
+}
+
+.user {
+	display: flex;
+	align-items: center;
+	align-items: center;
+	gap: rem(16);
+	color: var(--shark);
+
+	&__avatar {
+		position: relative;
+		flex-shrink: 0;
+		width: rem(50);
+		height: rem(50);
+		border-radius: 50%;
+		overflow: hidden;
+
+		img {
+			inset: 0;
+			object-fit: cover;
+			position: absolute;
+			z-index: 2;
+		}
+	}
+
+	&__avatar-empty {
+		--color: white;
+		--bg-color: var(--dodger-blue);
+		position: absolute;
+		inset: 0;
+		background-color: var(--bg-color);
+		color: var(--color);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-weight: 500;
+	}
+
+	&__name {
+		font-size: rem(14);
+	}
+}

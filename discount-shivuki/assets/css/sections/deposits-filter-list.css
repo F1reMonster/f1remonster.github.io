@@ -1,0 +1,764 @@
+.card-with-dent-list .list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.card-with-dent-list canvas, .card-with-dent canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.card-with-dent-list .img-wrap img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-with-dent {
+  position: relative;
+  padding: 1.25em;
+  min-height: 18.125em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.card-with-dent .img-wrap {
+  position: absolute;
+  z-index: 1;
+  inset-block-start: -2.5em;
+  inset-inline-end: calc(50% - 3.75em);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #fff;
+  width: 7.5em;
+  height: 7.5em;
+  box-shadow: 0 1px 17px 0 rgba(56, 59, 64, 0.14);
+  border: 2px solid #fff;
+}
+@media screen and (max-width: 767px) {
+  .card-with-dent .img-wrap {
+    width: 6em;
+    height: 6em;
+    inset-inline-end: calc(50% - 3em);
+    inset-block-start: -1.75em;
+  }
+}
+.card-with-dent .img-wrap img {
+  display: block;
+}
+.card-with-dent.hover .img-wrap {
+  border-color: #00a661;
+}
+.card-with-dent .card-header {
+  font: 500 1.5em/1.3333333333 "rubik-medium", sans-serif;
+  color: #6924E8;
+  margin: 3.7083333333em 0 0.375em;
+  position: relative;
+  z-index: 1;
+}
+.card-with-dent .txt {
+  font: 1.125em/1.5555555556 "rubik-reg", sans-serif;
+  color: #000;
+  position: relative;
+  z-index: 1;
+  max-width: 15em;
+  margin: 0 auto;
+}
+.card-with-dent .card-btn {
+  position: absolute;
+  top: calc(100% - 1.4em);
+}
+@media screen and (max-width: 767px) {
+  .card-with-dent .card-btn {
+    top: calc(100% - 1.625em);
+    min-width: 10.125em;
+  }
+}
+.card-with-dent .back-img {
+  z-index: -1;
+  filter: blur(0.375em);
+}
+
+.card-with-dent-list {
+  position: relative;
+  padding: 1.25em;
+  min-height: 18.125em;
+  text-align: center;
+  color: #000;
+}
+.card-with-dent-list .card-inner {
+  padding: 1.6875em 1.625em;
+}
+.card-with-dent-list .img-wrap {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  width: 100%;
+  clear: both;
+}
+.card-with-dent-list .img-wrap::after {
+  content: "";
+  float: left;
+  padding-bottom: 73.1543624161%;
+}
+.card-with-dent-list .img-wrap img {
+  display: block;
+}
+.card-with-dent-list .card-header {
+  font: 1.5em/1.3333333333 "rubik-medium", sans-serif;
+  margin: 1.1666666667em 0 1em;
+  position: relative;
+  z-index: 1;
+}
+.card-with-dent-list .list {
+  text-align: initial;
+  position: relative;
+  z-index: 1;
+  padding-right: 0.75em;
+  margin-bottom: 2.125em;
+}
+@media screen and (max-width: 767px) {
+  .card-with-dent-list .list {
+    margin-bottom: 4.25em;
+  }
+}
+.card-with-dent-list .list li {
+  font: 1.125em/1.7777777778 "rubik-reg", sans-serif;
+  position: relative;
+  padding-inline-start: 1.4444444444em;
+}
+@media screen and (max-width: 767px) {
+  .card-with-dent-list .list li {
+    font-size: 1em;
+    line-height: 2;
+    padding-inline-start: 1.625em;
+  }
+}
+.card-with-dent-list .list .icon {
+  position: absolute;
+  top: 0.4444444444em;
+  inset-inline: 0 0.5em;
+}
+.card-with-dent-list .card-btn {
+  position: absolute;
+  top: calc(100% - 2em);
+  left: 50%;
+  transform: translateX(-50%);
+}
+@media screen and (max-width: 767px) {
+  .card-with-dent-list .card-btn {
+    top: calc(100% - 2.5em);
+    min-width: 11.375em;
+  }
+}
+.card-with-dent-list .back-img {
+  z-index: -1;
+  filter: blur(0.375em);
+}
+
+.deposits-filter-list {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 11.25em;
+}
+.deposits-filter-list .remark {
+  font: 1.25em/1.4 "rubik-reg", sans-serif;
+  color: #000;
+  text-align: center;
+  margin-top: 0.6em;
+}
+@media screen and (max-width: 767px) {
+  .deposits-filter-list .remark {
+    font-size: 1em;
+    line-height: 1.625;
+  }
+}
+.deposits-filter-list .cards-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2.125em;
+  margin-top: 1.75em;
+}
+@media screen and (max-width: 767px) {
+  .deposits-filter-list .cards-wrap {
+    margin-top: 0;
+    gap: 1em;
+  }
+}
+.deposits-filter-list .card-with-dent-list {
+  flex-basis: 24.375em;
+}
+@media (max-width: 767px) {
+  .deposits-filter-list {
+    margin-bottom: 3.75em;
+  }
+}
+.deposits-filter-list-sm-indent {
+  margin-bottom: 7.5em;
+}
+@media (max-width: 767px) {
+  .deposits-filter-list-sm-indent {
+    margin-top: 3.125em;
+    margin-bottom: 3.0625em;
+  }
+}
+@media (max-width: 767px) {
+  .deposits-filter-list-sm-indent .deposits-filter-list-more {
+    display: none;
+  }
+}
+.deposits-filter-list .cards-wrap {
+  margin-bottom: 5.3125em;
+}
+@media (max-width: 767px) {
+  .deposits-filter-list .cards-wrap {
+    margin-bottom: 2.1875em;
+  }
+}
+.deposits-filter-list .main-container {
+  position: relative;
+  z-index: 1;
+}
+.deposits-filter-list-oval {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+@media (max-width: 767px) {
+  .deposits-filter-list-oval {
+    display: none;
+  }
+}
+.deposits-filter-list-more {
+  display: flex;
+  justify-content: center;
+}
+@media (max-width: 767px) {
+  .deposits-filter-list-more .primary-btn {
+    flex: 0 1 17em;
+  }
+}
+.deposits-filter-list .deposits-filter {
+  position: relative;
+  margin-top: 1.875em;
+  width: 100%;
+}
+@media (max-width: 767px) {
+  .deposits-filter-list .deposits-filter {
+    height: 85px;
+  }
+}
+.deposits-filter-list .deposits-filter-title {
+  display: none;
+  margin-bottom: 0.5em;
+  font: 1em/1.5 "rubik-medium";
+}
+@media (max-width: 767px) {
+  .deposits-filter-list .deposits-filter-title {
+    display: block;
+  }
+}
+.deposits-filter-list .deposits-filter-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 767px) {
+  .deposits-filter-list .deposits-filter-content {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+}
+.deposits-filter-list .deposits-filter-container {
+  position: relative;
+  padding: 1.5em 1.5em 0;
+  box-sizing: border-box;
+  border: 1px solid rgba(60, 63, 69, 0.2);
+  background-color: #FFFFFF;
+  box-shadow: 0 2px 16px 0 rgba(56, 59, 64, 0.1);
+  border-radius: 1.25em;
+  transition: height 0.3s;
+}
+@media (max-width: 767px) {
+  .deposits-filter-list .deposits-filter-container {
+    position: absolute;
+    top: calc(100% - 53px);
+    left: 0;
+    padding: 0.875em 1.125em 1.25em 1.875em;
+    width: 100%;
+    border-radius: 0.8125em;
+    height: 53px;
+    overflow: hidden;
+    z-index: 99;
+  }
+}
+.deposits-filter-list .deposits-filter-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 98;
+  background-color: transparent;
+}
+@media (min-width: 768px) {
+  .deposits-filter-list .deposits-filter-overlay {
+    display: none !important;
+  }
+}
+.deposits-filter-list .deposits-filter-toggler-area {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 53px;
+  cursor: pointer;
+  z-index: 1;
+}
+@media (max-width: 767px) {
+  .deposits-filter-list .deposits-filter-toggler-area {
+    display: block;
+  }
+}
+.deposits-filter-list .deposits-filter-toggler {
+  display: none;
+  position: absolute;
+  inset-inline-end: 1.25em;
+  inset-block-start: 1.1875em;
+  width: 1em;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+@media (max-width: 767px) {
+  .deposits-filter-list .deposits-filter-toggler {
+    display: block;
+  }
+}
+.deposits-filter-list .deposits-filter-toggler-active {
+  transform: rotate(-180deg);
+  transform-origin: center;
+}
+.deposits-filter-list .deposits-filter-item {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 1.5em;
+  padding-top: 0.3125em;
+  padding-bottom: 0.3125em;
+  padding-inline-end: 1em;
+  border-inline-end: 1px solid #D8D8D8;
+}
+@media (max-width: 767px) {
+  .deposits-filter-list .deposits-filter-item {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: 0;
+    padding: 0;
+    border-inline-end: 0;
+  }
+}
+@media (max-width: 767px) {
+  .deposits-filter-list .deposits-filter-item:first-child {
+    order: 2;
+    margin-top: 1.375em;
+  }
+  .deposits-filter-list .deposits-filter-item:first-child .deposits-filter-field {
+    flex-direction: column;
+  }
+}
+@media (max-width: 767px) {
+  .deposits-filter-list .deposits-filter-item:nth-child(2) {
+    order: 1;
+  }
+  .deposits-filter-list .deposits-filter-item:nth-child(2) .deposits-filter-text {
+    margin-bottom: 1.375em;
+  }
+}
+@media (max-width: 767px) {
+  .deposits-filter-list .deposits-filter-item:last-child {
+    order: 3;
+    margin-top: 1.4375em;
+  }
+}
+.deposits-filter-list .deposits-filter-item:nth-child(n+2) {
+  margin-inline-start: 1em;
+}
+@media (max-width: 767px) {
+  .deposits-filter-list .deposits-filter-item:nth-child(n+2) {
+    margin-inline-start: 0;
+  }
+}
+.deposits-filter-list .deposits-filter-item:last-child {
+  border-inline-end: 1px solid transparent;
+  padding-inline-end: 0;
+}
+.deposits-filter-list .deposits-filter-field {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75em 0.75em;
+}
+@media (max-width: 767px) {
+  .deposits-filter-list .deposits-filter-field {
+    width: 100%;
+    gap: unset;
+  }
+}
+.deposits-filter-list .deposits-filter-text {
+  font-family: "rubik-reg", sans-serif;
+  font-size: 1.25em;
+  margin-inline-end: 0.75em;
+}
+@media (max-width: 767px) {
+  .deposits-filter-list .deposits-filter-text {
+    margin-bottom: 0.875em;
+    font: 1em/1.5 "rubik-medium";
+  }
+}
+.deposits-filter-list .deposits-filter-checkbox {
+  cursor: pointer;
+  min-width: 5em;
+}
+@media (max-width: 767px) {
+  .deposits-filter-list .deposits-filter-checkbox {
+    flex: 0 1 33.333%;
+    margin-bottom: 0.5em;
+    min-width: unset;
+  }
+}
+.deposits-filter-list .deposits-filter-checkbox input {
+  position: absolute;
+  opacity: 0;
+  height: 0;
+  width: 0;
+}
+.deposits-filter-list .deposits-filter-checkbox input:checked ~ .deposits-filter-checkmark {
+  color: #fff;
+  background-color: #6924e8;
+}
+.deposits-filter-list .deposits-filter-checkbox input:checked ~ .deposits-filter-checkmark:hover {
+  box-shadow: none;
+}
+.deposits-filter-list .deposits-filter-checkbox input:checked ~ .deposits-filter-checkmark-mob .deposits-filter-checkmark-mob-checkbox {
+  background-color: #00a661;
+  border-color: #00a661;
+}
+.deposits-filter-list .deposits-filter-checkbox input:checked ~ .deposits-filter-checkmark-mob .deposits-filter-checkmark-mob-checkbox::after {
+  display: block;
+}
+.deposits-filter-list .deposits-filter-checkmark {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.4375em 0.75em;
+  font-family: "rubik-light";
+  min-height: 2.5625em;
+  color: #6924e8;
+  font-size: 1em;
+  letter-spacing: 0;
+  line-height: 1;
+  text-align: center;
+  border: 1px solid #6924e8;
+  border-radius: 1.25em;
+  box-sizing: border-box;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.5);
+  transition: 0.3s, opacity 0.3s;
+}
+@media (max-width: 767px) {
+  .deposits-filter-list .deposits-filter-checkmark {
+    display: none;
+  }
+}
+.deposits-filter-list .deposits-filter-checkmark:hover {
+  box-shadow: 0 0 0 1px #6924e8;
+}
+.deposits-filter-list .deposits-filter-checkmark-mob {
+  display: none;
+  align-items: center;
+}
+@media (max-width: 767px) {
+  .deposits-filter-list .deposits-filter-checkmark-mob {
+    display: flex;
+  }
+}
+.deposits-filter-list .deposits-filter-checkmark-mob-text {
+  margin-inline-start: 0.5em;
+  font: 1em/1.5 "rubik-reg", sans-serif;
+}
+.deposits-filter-list .deposits-filter-checkmark-mob-checkbox {
+  position: relative;
+  min-width: 1em;
+  min-height: 1em;
+  background-color: transparent;
+  border: 2px solid #3c3f45;
+  border-radius: 2px;
+}
+.deposits-filter-list .deposits-filter-checkmark-mob-checkbox::after {
+  content: "";
+  display: none;
+  position: absolute;
+  left: 0.25em;
+  top: 0.0625em;
+  width: 0.3125em;
+  height: 0.5em;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+.deposits-filter-list .flip-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3.125em 4.5em;
+  margin: 3.125em 0;
+  padding: 0 10.625em;
+}
+@media (max-width: 767px) {
+  .deposits-filter-list .flip-cards {
+    padding: 0;
+    gap: 1.875em 4.5em;
+  }
+}
+.deposits-filter-list .flip-cards-item {
+  perspective: 62.5em;
+  flex-basis: 21.875em;
+}
+.deposits-filter-list .flip-cards-item-inner {
+  position: relative;
+  transition: all 0.6s;
+  transform-style: preserve-3d;
+  width: 100%;
+  height: 100%;
+}
+.deposits-filter-list .flip-cards-item-front, .deposits-filter-list .flip-cards-item-back {
+  padding: 2.0625em 2.4375em 2.4375em;
+  position: absolute;
+  width: 100%;
+  box-shadow: 0 1px 15px 0 rgba(60, 63, 69, 0.2);
+  border-radius: 0.8125em;
+  border: 1px solid rgba(60, 63, 69, 0.2);
+  box-sizing: border-box;
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+@media (max-width: 767px) {
+  .deposits-filter-list .flip-cards-item-front, .deposits-filter-list .flip-cards-item-back {
+    padding-bottom: 2.875em;
+  }
+}
+.deposits-filter-list .flip-cards-item-front {
+  background-color: #FFFFFF;
+}
+.deposits-filter-list .flip-cards-item-back {
+  background-color: #F0F0F0;
+  transform: rotateY(180deg);
+  overflow-y: auto;
+  min-height: 100%;
+}
+.deposits-filter-list .flip-cards-item-back .flip-cards-title {
+  margin-bottom: 2.125em;
+}
+.deposits-filter-list .flip-cards-item-back .flip-cards-question {
+  margin-bottom: 0.6111111111em;
+  font: 1.125em/1.2222222222 "rubik-medium";
+}
+.deposits-filter-list .flip-cards-item-back .flip-cards-description {
+  font: 1.125em/1.7777777778 "rubik-reg", sans-serif;
+}
+.deposits-filter-list .flip-cards-item-back-close {
+  position: absolute;
+  inset-block-start: 1.4375em;
+  inset-inline-end: 1.5625em;
+  width: 1.125em;
+  height: 1.125em;
+  cursor: pointer;
+}
+.deposits-filter-list .flip-cards-item-back-close::before, .deposits-filter-list .flip-cards-item-back-close::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 0.125em;
+  background-color: #000;
+  border-radius: 0.625em;
+}
+.deposits-filter-list .flip-cards-item-back-close::before {
+  transform: translateY(-50%) rotate(-135deg);
+}
+.deposits-filter-list .flip-cards-item-back-close::after {
+  transform: translateY(-50%) rotate(135deg);
+}
+.deposits-filter-list .flip-cards-item-fliped .flip-cards-item-inner {
+  transform: rotateY(180deg);
+}
+.deposits-filter-list .flip-cards-item-active .flip-cards-item-front, .deposits-filter-list .flip-cards-item-active .flip-cards-item-back {
+  border-color: #6924e8;
+}
+.deposits-filter-list .flip-cards-item-active .flip-cards-compare {
+  display: none;
+}
+.deposits-filter-list .flip-cards-item-active .flip-cards-compare-active {
+  display: flex;
+}
+.deposits-filter-list .flip-cards-title {
+  margin-bottom: 0.4166666667em;
+  color: #000000;
+  font-family: "rubik-medium";
+  font-size: 1.5em;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.3333333333;
+  text-align: center;
+}
+.deposits-filter-list .flip-cards-subtitle {
+  margin-bottom: 1em;
+  font-family: "rubik-reg", sans-serif;
+  font-size: 1.25em;
+  letter-spacing: 0;
+  line-height: 1.4;
+  text-align: center;
+}
+@media (max-width: 767px) {
+  .deposits-filter-list .flip-cards-subtitle {
+    margin-bottom: 1.35em;
+  }
+}
+.deposits-filter-list .flip-cards .list {
+  margin: 0 0 1.25em;
+  padding: 0;
+  list-style: none;
+}
+@media (max-width: 767px) {
+  .deposits-filter-list .flip-cards .list {
+    margin: 0 0 1.6875em;
+  }
+}
+.deposits-filter-list .flip-cards .list li {
+  position: relative;
+  font-family: "rubik-reg", sans-serif;
+  font-size: 1.125em;
+  line-height: 1.7777777778;
+  padding-inline-start: 1.4444444444em;
+}
+.deposits-filter-list .flip-cards .list li .icon {
+  position: absolute;
+  top: 0.4444444444em;
+  inset-inline-start: 0;
+}
+.deposits-filter-list .flip-cards-toggler {
+  margin-bottom: 2.2222222222em;
+  align-self: flex-start;
+  display: inline-block;
+  font-family: "rubik-medium";
+  font-size: 1.125em;
+  line-height: 1;
+  color: #6924e8;
+}
+@media (max-width: 767px) {
+  .deposits-filter-list .flip-cards-toggler {
+    margin-bottom: 2.375em;
+    font-size: 1em;
+    line-height: 1.1875;
+  }
+}
+.deposits-filter-list .flip-cards-toggler:hover {
+  font-family: "rubik-bold";
+}
+.deposits-filter-list .flip-cards-btns {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em 0;
+  margin-bottom: 1.75em;
+}
+@media (max-width: 767px) {
+  .deposits-filter-list .flip-cards-btns {
+    margin-bottom: 1.5em;
+  }
+}
+.deposits-filter-list .flip-cards-btns a {
+  padding: 0.6em;
+  width: 10.4em;
+  min-width: unset;
+  font: 1.25em/1.2 "rubik-reg", sans-serif;
+  box-sizing: border-box;
+}
+@media (max-width: 767px) {
+  .deposits-filter-list .flip-cards-btns a {
+    padding: 0.5em 1em;
+    width: 11.875em;
+    font: 1em/1.5 "rubik-reg", sans-serif;
+  }
+}
+.deposits-filter-list .flip-cards-btns .secondary-btn {
+  padding: 0.5em;
+}
+@media (max-width: 767px) {
+  .deposits-filter-list .flip-cards-btns .secondary-btn {
+    padding: 0.375em;
+  }
+}
+.deposits-filter-list .flip-cards-links {
+  display: flex;
+  justify-content: center;
+}
+.deposits-filter-list .flip-cards-compare {
+  padding-inline-start: 1em;
+  position: relative;
+  font-family: "rubik-medium";
+  font-size: 1.125em;
+  letter-spacing: 0;
+  line-height: 1.2222222222;
+  color: #6924e8;
+  text-align: center;
+}
+.deposits-filter-list .flip-cards-compare:hover {
+  font-family: "rubik-bold";
+}
+.deposits-filter-list .flip-cards-compare img {
+  position: absolute;
+  top: 50%;
+  inset-inline-start: 0;
+  transform: translateY(-50%);
+  width: 0.7777777778em;
+  height: auto;
+}
+.deposits-filter-list .flip-cards-compare-active {
+  position: relative;
+  display: none;
+  padding-inline-start: 1.2222222222em;
+  font-family: "rubik-medium";
+  font-size: 1.125em;
+  letter-spacing: 0;
+  line-height: 1.2222222222;
+  color: #6924e8;
+  text-align: center;
+}
+.deposits-filter-list .flip-cards-compare-active:hover {
+  font-family: "rubik-bold";
+}
+.deposits-filter-list .flip-cards-compare-active img {
+  position: absolute;
+  top: 50%;
+  inset-inline-start: 0;
+  transform: translateY(-50%);
+  width: 0.8888888889em;
+  height: auto;
+}

@@ -1,0 +1,11 @@
+.long-campaign-wrap .wanted-more-cf {
+  padding: 4.0625em 0 7em;
+}
+@media (max-width: 767px) {
+  .long-campaign-wrap .wanted-more-cf {
+    padding: 2.6875em 0 4.0625em;
+  }
+}
+.long-campaign-wrap .wanted-more-cf .bg {
+  display: none;
+}

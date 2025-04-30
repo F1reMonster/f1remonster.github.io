@@ -1,0 +1,96 @@
+.mediab {
+	&-slider {
+		padding: 50px 0 30px 0;
+		background-color: #8dd2ef;
+		background-image: url("./../img/icons/media_bg.webp");
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: cover;
+	}
+	.mediab-slider {
+		margin-top: 25px;
+		position: relative;
+		.swiper-scrollbar-mediab {
+			height: 20px;
+			border-radius: 60px;
+			width: 80%;
+			margin: 20px auto 0 auto;
+			background: #fec214;
+		}
+		.swiper-scrollbar-drag {
+			cursor: grab;
+			background-color: #fff0c3;
+			box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+		}
+	}
+	.swiper {
+		//height: 305px;
+
+		&-slide {
+			height: 100%;
+			border-radius: 15px;
+			overflow: hidden;
+			img {
+				display: block;
+				width: auto;
+				height: 100%;
+				object-fit: cover;
+				transform-origin: center center;
+				@include mediaMobile {
+					width: 100%;
+				}
+			}
+		}
+	}
+	&-title {
+		font-size: 24px;
+		font-weight: bold;
+		padding-left: 30px;
+		width: 74%;
+		@include mediaLaptop {
+			font-size: 18px;
+			padding-left: 20px;
+		}
+	}
+	&-desc {
+		font-size: 14px;
+	}
+	&-icon {
+		width: 85px;
+		height: 85px;
+		background-image: url("./../img/icons/media-icon.svg");
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: cover;
+		position: relative;
+		@include mediaLaptop {
+			width: 45px;
+			height: 45px;
+		}
+	}
+	&-box {
+		position: absolute;
+		width: 100%;
+		height: 130px;
+		background: linear-gradient(180deg, rgba(0, 0, 0, 0.64) 28.65%, rgba(0, 0, 0, 0) 100%);
+		color: #ffffff;
+		padding: 25px 15px;
+		display: flex;
+		z-index: 1;
+		@include mediaLaptop {
+			height: 110px;
+			padding: 15px;
+		}
+	}
+	&-link {
+		img {
+			transition: all 0.3s ease-in-out;
+			transform: scale(1);
+		}
+		&:hover {
+			img {
+				transform: scale(1.1);
+			}
+		}
+	}
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+<title>Legacy space - Portfolio page</title>
+<meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=yes">
+<link rel="canonical" href='' />
+<meta name="MobileOptimized" content="width"/>
+<meta name="HandheldFriendly" content="True"/>
+<meta name="viewport" content="initial-scale=1.0, width=device-width">
+<link rel="stylesheet" type="text/css" href="../../css/style.css" />
+
+	</head>
+
+	<body class="flex flex-col h-full overflow-clip font-inter">
+		<main class="flex-grow py-4 lg:py-12"></main>
+		
+		<!-- image actions mobile modal -->
+<div class="fixed inset-0 z-50 py-4">
+	<div class="absolute inset-0 bg-primary-black/60"></div>
+	<button class="absolute items-center justify-center hidden w-12 h-12 -translate-y-1/2 lg:flex bg-neutral-black-80 rounded-xl top-1/2 left-10">
+		<span class="w-5 h-5 text-white icon icon--arrow-left"></span>
+	</button>
+	<button class="absolute items-center justify-center hidden w-12 h-12 -translate-y-1/2 lg:flex bg-neutral-black-80 rounded-xl top-1/2 right-10">
+		<span class="w-5 h-5 text-white icon icon--arrow-right"></span>
+	</button>
+
+
+	<div class="flex items-center justify-center w-full h-full text-white">
+		<div class="relative z-20 w-110 py-1.5 pr-2.5 lg:w-167.5">
+			<div class="h-[calc(var(--app-height)-2rem)] overflow-auto py-2.5 pl-4 pr-1.5 scrollbar-thin lg:h-auto">
+				<div class="flex flex-col h-full gap-4">
+					<button class="flex flex-shrink-0 lg:items-center lg:justify-center lg:rounded-full lg:bg-white lg:w-10 lg:h-10 lg:border lg:border-neutral-black-3 lg:shadow-button lg:absolute lg:-top-0 lg:right-0">
+						<span class="icon icon--arrow-left lg:hidden"></span>
+						<span class="hidden icon icon--close lg:block text-neutral-black-40"></span>
+					</button>
+
+					<div class="flex flex-col justify-center flex-grow">
+						<div>
+							<div class="aspect-[1.17] w-full overflow-clip rounded-lg bg-loading bg-no-repeat bg-center lg:rounded-3xl lg:aspect-[1.36]">
+								<img decoding="async" src="../../img/assets/image-01.webp" title="title" alt="image" loading="lazy" class="object-cover w-full h-full" />
+							</div>
+							<div class="mt-2.5 items-center justify-between gap-4 text-sm font-medium flex lg:hidden">
+								<div class="text-neutral-70 line-clamp-1">IMG_9249.JPG</div>
+								<button class="flex items-center gap-1">
+									<span class="icon icon--stars-sparkle h-4.5 w-4.5 flex-shrink-0"></span>
+									<span>Make primary</span>
+								</button>
+							</div>
+						</div>
+					</div>
+
+					<div class="text-sm font-medium text-center lg:hidden">3 / 7</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- ./image actions mobile modal --> 
+		<script src="../../js/app.js"></script>
+
+	</body>
+</html>

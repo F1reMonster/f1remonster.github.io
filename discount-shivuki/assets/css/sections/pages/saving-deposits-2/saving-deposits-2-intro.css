@@ -1,0 +1,21 @@
+.sd-2-intro {
+  padding-bottom: 0;
+}
+.sd-2-intro .msg {
+  max-width: 28.05em;
+}
+@media screen and (max-width: 767px) {
+  .sd-2-intro .img-part {
+    margin-top: 0;
+  }
+}
+.sd-2-intro .img-part img {
+  display: block;
+  margin: -6.75em auto 0;
+}
+@media screen and (max-width: 767px) {
+  .sd-2-intro .img-part img {
+    margin-top: 0;
+    margin-bottom: -3.75em;
+  }
+}

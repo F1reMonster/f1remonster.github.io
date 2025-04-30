@@ -1,0 +1,101 @@
+.block__index-page {
+  padding: 2.5rem 0;
+}
+.block__index-page .index-title h1 {
+  margin-bottom: 2.25rem;
+  font-weight: 600;
+  line-height: 120%;
+  color: #000;
+}
+.block__index-page .index-title h1 span {
+  color: #007da0;
+}
+.block__index-page .index-title h1 span svg {
+  display: inline-block;
+  margin-bottom: -0.3125rem;
+  width: 2rem;
+  height: 2rem;
+}
+.block__index-page .index-title .block__subtitle {
+  font-size: 1.125rem;
+}
+.block__index-page .block__title {
+  margin-top: 1.25rem;
+  text-decoration: underline;
+  text-decoration-color: rgba(0, 125, 160, 0.4);
+  color: #007da0;
+  text-underline-offset: 0.25rem;
+}
+.block__index-page .block__title + ul {
+  margin-top: 1.5rem;
+}
+.block__index-page ul {
+  -webkit-column-count: 2;
+     -moz-column-count: 2;
+          column-count: 2;
+}
+.block__index-page ul li {
+  page-break-inside: avoid;
+  padding-bottom: 1.25rem;
+}
+.block__index-page ul li .block__title {
+  margin-top: 0;
+  margin-bottom: 0.625rem;
+  font-size: 1.25rem;
+  text-decoration: none;
+  color: #000;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+.block__index-page ul li .block__subtitle {
+  color: #007da0;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+.block__index-page a {
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+@media (max-width: 20em) {
+  .block__index-page .index-title h1 {
+    font-size: 1.5rem;
+  }
+  .block__index-page .block__title {
+    font-size: 1.375rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 72.375em) {
+  @supports (font-size: clamp(1.5rem, 1.3091rem  +  0.9547vw, 2rem)) {
+    .block__index-page .index-title h1 {
+      font-size: clamp(1.5rem, 1.3091rem  +  0.9547vw, 2rem);
+    }
+  }
+  @supports not (font-size: clamp(1.5rem, 1.3091rem  +  0.9547vw, 2rem)) {
+    .block__index-page .index-title h1 {
+      font-size: calc(1.5rem + 0.5 * (100vw - 20rem) / 51.375);
+    }
+  }
+  @supports (font-size: clamp(1.375rem, 1.3273rem  +  0.2387vw, 1.5rem)) {
+    .block__index-page .block__title {
+      font-size: clamp(1.375rem, 1.3273rem  +  0.2387vw, 1.5rem);
+    }
+  }
+  @supports not (font-size: clamp(1.375rem, 1.3273rem  +  0.2387vw, 1.5rem)) {
+    .block__index-page .block__title {
+      font-size: calc(1.375rem + 0.125 * (100vw - 20rem) / 51.375);
+    }
+  }
+}
+@media (min-width: 72.375em) {
+  .block__index-page .index-title h1 {
+    font-size: 2rem;
+  }
+  .block__index-page .block__title {
+    font-size: 1.5rem;
+  }
+}
+@media not all and (pointer: coarse) {
+  .block__index-page a:hover {
+    text-shadow: 0 0 0.040625rem #000, 0 0 0.040625rem #000;
+  }
+}

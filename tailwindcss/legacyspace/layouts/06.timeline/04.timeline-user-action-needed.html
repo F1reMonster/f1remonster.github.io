@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+<title>Legacy space - Portfolio page</title>
+<meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=yes">
+<link rel="canonical" href='' />
+<meta name="MobileOptimized" content="width"/>
+<meta name="HandheldFriendly" content="True"/>
+<meta name="viewport" content="initial-scale=1.0, width=device-width">
+<link rel="stylesheet" type="text/css" href="../../css/style.css" />
+
+	</head>
+
+	<body class="flex flex-col h-full font-inter">
+		<header class="border-b border-neutral-black-5">
+	<div class="container">
+		<div class="flex items-center justify-between py-3 lg:py-7">
+			<button id="burgerMenu" class="flex items-center justify-center flex-shrink-0 w-10 h-10 rounded-6lx bg-neutral-black-3 text-primary-black lg:hidden">
+				<span class="icon icon--burger"></span>
+			</button>
+			<a href="../../index.html" class="flex-shrink-0 hidden lg:block">
+				<img decoding="async" src="../../img/svg/logo.svg" title="" alt="" loading="lazy" class="w-25.5 lg:w-35" />
+			</a>
+			<div class="flex items-center lg:gap-2.5 gap-2">
+				<a href="#" class="flex h-10 w-full items-center justify-center rounded-xl bg-primary px-4 py-2.5 font-semibold text-primary-100 transition-all duration-300 hover:bg-primary-hover lg:hidden"><span>Upgrade plan</span></a>
+				<button class="items-center justify-center flex-shrink-0 hidden transition-all duration-300 lg:flex lg:w-12 lg:h-12 rounded-6lx bg-neutral-black-3 text-primary-black lg:hover:bg-neutral-black-5">
+					<span class="icon icon--search"></span>
+				</button>
+				<button class="flex items-center justify-center flex-shrink-0 w-10 h-10 transition-all duration-300 lg:w-12 lg:h-12 rounded-6lx lg:bg-neutral-black-3 text-primary-black lg:hover:bg-neutral-black-5">
+					<span class="icon icon--notification"></span>
+				</button>
+				<div class="relative items-center flex-shrink-0 hidden gap-3 cursor-pointer lg:flex group">
+					<div class="flex items-center justify-center flex-shrink-0 w-12 h-12 rounded-6lx bg-neutral-black-3 text-primary-black">
+						<span>A</span>
+					</div>
+					<div class="">
+						<div class="flex items-center gap-1.5">
+							<div>Andrii</div>
+							<span class="transition-all duration-300 transform icon icon--chevron-down group-hover:rotate-x-180"></span>
+						</div>
+					</div>
+					<div class="pt-4 mt-8 opacity-0 lg:pointer-events-none lg:absolute lg:right-0 lg:top-0 lg:z-50 lg:transition-all lg:duration-300 lg:group-hover:pointer-events-auto lg:group-hover:translate-y-4 lg:group-hover:opacity-100">
+						<div class="bg-white w-68 rounded-3xl shadow-header-menu">
+							<div class="px-6 pt-6 pb-5 text-lg font-bold border-b border-b-neutral-black-5 text-primary-black">Andrii Chernov</div>
+							<ul class="flex flex-col px-3 pt-5 pb-6">
+								<li>
+									<a href="#" class="flex items-center gap-5 px-3 py-3 transition-all duration-300 rounded-xl text-primary-black hover:bg-neutral-black-3">
+										<span class="icon icon--user"></span>
+										<span class="text-sm font-medium">Profile Details</span>
+									</a>
+								</li>
+								<li>
+									<a href="#" class="flex items-center gap-5 px-3 py-3 transition-all duration-300 rounded-xl text-primary-black hover:bg-neutral-black-3">
+										<span class="icon icon--checklist-money"></span>
+										<span class="text-sm font-medium">My plan</span>
+									</a>
+								</li>
+								<li>
+									<a href="#" class="flex items-center gap-5 px-3 py-3 transition-all duration-300 rounded-xl text-primary-black hover:bg-neutral-black-3">
+										<span class="icon icon--exit"></span>
+										<span class="text-sm font-medium">Log Out</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+
+		<main class="flex-grow py-4 lg:py-12">
+			<div class="container">
+				<div class="flex gap-13">
+					<aside class="hidden w-fit max-w-50 lg:block">
+	<a href="#" class="flex h-10 w-full items-center justify-center gap-2 rounded-xl bg-primary px-4 py-2.5 text-sm font-semibold text-primary-100 transition-all duration-300 hover:bg-primary-hover">
+		<span class="w-5 h-5 icon icon--arrow-nav"></span>
+		<span>Upgrade plan</span>
+	</a>
+
+	<ul class="flex flex-col gap-2 mt-10">
+		<li>
+			<a href="#" class="flex items-center gap-4.5 rounded-xl px-4 py-2.5 text-neutral-black-70 transition-all duration-300 hover:bg-neutral-black-3">
+				<span class="icon icon--dashboard"></span>
+				<span class="leading-150">Dashboard</span>
+			</a>
+		</li>
+		<li>
+			<a href="#" class="flex items-center gap-4.5 rounded-xl px-4 py-2.5 text-neutral-black-70 transition-all duration-300 hover:bg-neutral-black-3">
+				<span class="icon icon--portfolio"></span>
+				<span class="leading-150">Portfolio</span>
+			</a>
+		</li>
+		<li>
+			<a href="#" class="flex items-center gap-4.5 rounded-xl px-4 py-2.5 text-neutral-black-70  transition-all duration-300 hover:bg-neutral-black-3">
+				<span class="icon icon--collections"></span>
+				<span class="leading-150">Collections</span>
+			</a>
+		</li>
+		<li>
+			<a href="#" class="flex items-center gap-4.5 rounded-xl px-4 py-2.5 font-medium transition-all duration-300 hover:bg-neutral-black-3">
+				<span class="icon icon--identification"></span>
+				<span class="leading-150">Identification</span>
+			</a>
+		</li>
+		<li>
+			<a href="#" class="flex items-center gap-4.5 rounded-xl px-4 py-2.5 text-neutral-black-70 transition-all duration-300 hover:bg-neutral-black-3">
+				<span class="icon icon--requests"></span>
+				<span class="leading-150">Requests</span>
+			</a>
+		</li>
+	</ul>
+</aside>
+
+					<div class="flex-grow">
+						<div class="mx-auto max-w-225">
+							<div class="pb-4 border-b border-b-neutral-3">
+								<h1 class="font-semibold tracking-tight text-sm2x leading-125 text-primary-black lg:text-base2x">Golden Book</h1>
+							</div>
+
+							<div class="mt-9">
+								<div class="pb-9 md:relative md:pb-14 md:pl-12">
+									<div class="relative pr-8 md:static md:pr-0">
+										<div class="flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
+											<div class="flex items-center gap-3">
+												<span class="icon icon--alert-triangle text-error-60"></span>
+												<span class="text-lg font-medium">User action needed</span>
+											</div>
+											<div class="text-sm text-neutral-black-70">April 28,2024 - 12:46 PM</div>
+										</div>
+										<p class="mt-2 text-neutral-black-70 md:max-w-125">The expert will need more information about your request, please read the information below and follow all the necessary steps.</p>
+										<div class="absolute top-0 bottom-0 right-0 md:left-0 md:right-auto">
+											<div class="relative z-2 h-7 w-3.5 rounded-full bg-white">
+												<div class="absolute left-1/2 top-1/2 h-3.5 w-3.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-error-60"></div>
+											</div>
+											<div class="absolute top-0 bottom-0 -translate-x-1/2 left-1/2 w-one bg-neutral-black-5"></div>
+										</div>
+									</div>
+									<div class="mt-4 md:max-w-156">
+										<div class="flex flex-col gap-5 p-4 border-l-4 rounded-lg border-l-error-60 bg-error-60/5 md:p-6">
+											<div class="sm:px-8">
+												<div class="flex items-center gap-3">
+													<span class="font-bold text-neutral-black-70">Requested information</span>
+												</div>
+												<ul class="flex flex-col gap-4 mt-5">
+													<li class="flex gap-2">
+														<p>After thoroughly reviewing the provided information and images, I have identified the collectible as a Greek vase dating back to the 5th century BCE. This conclusion is based on the following observations:</p>
+													</li>
+													<li class="flex gap-2">
+														<p><span class="inline-block font-semibold">Additional description:&nbsp;</span>The style and design of the vase are consistent with Greek pottery from the 5th century BCE, a period known for its advancements in art and pottery.</p>
+													</li>
+
+													<li class="flex gap-2">
+														<p><span class="inline-block font-semibold">Additional Images:&nbsp;</span>The depicted scenes and motifs, which include mythological figures and geometric patterns, align with those commonly found on Greek vases from the 5th century BCE.</p>
+													</li>
+
+													<li class="flex gap-2">
+														<p><span class="inline-block font-semibold">Additional document:&nbsp;</span>The clay used in the vase, along with the intricate black-figure technique observed in the decorations, is characteristic of ancient Greek ceramics from this era.</p>
+													</li>
+												</ul>
+											</div>
+										</div>
+										<!-- editor -->
+										<div class="mt-8">
+											<div class="text-sm font-semibold tracking-tight leading-150">Description</div>
+											<div class="mt-2">
+												<div class="rounded-tl-xl rounded-tr-xl bg-primary-green-gray px-3.5 py-3">
+													<div class="flex flex-wrap gap-1.5">
+														<button class="flex items-center justify-center w-6 h-6 transition-all duration-300 rounded hover:bg-neutral-black-5 active:scale-90">
+															<span class="icon icon--editor-bold h-4.5 w-4.5"></span>
+														</button>
+														<button class="flex items-center justify-center w-6 h-6 transition-all duration-300 rounded hover:bg-neutral-black-5 active:scale-90">
+															<span class="icon icon--editor-italic h-4.5 w-4.5"></span>
+														</button>
+														<button class="flex items-center justify-center w-6 h-6 transition-all duration-300 rounded hover:bg-neutral-black-5 active:scale-90">
+															<span class="icon icon--editor-underline h-4.5 w-4.5"></span>
+														</button>
+														<div class="mx-0.5 mt-0.5 h-4.5 w-one bg-neutral-black-80"></div>
+														<button class="flex items-center justify-center w-6 h-6 transition-all duration-300 rounded hover:bg-neutral-black-5 active:scale-90">
+															<span class="icon icon--editor-list-number h-4.5 w-4.5"></span>
+														</button>
+														<button class="flex items-center justify-center w-6 h-6 transition-all duration-300 rounded hover:bg-neutral-black-5 active:scale-90">
+															<span class="icon icon--editor-list-bullet h-4.5 w-4.5"></span>
+														</button>
+														<div class="mx-0.5 mt-0.5 h-4.5 w-one bg-neutral-black-80"></div>
+														<button class="flex items-center justify-center w-6 h-6 transition-all duration-300 rounded hover:bg-neutral-black-5 active:scale-90">
+															<span class="icon icon--editor-spelling-check h-4.5 w-4.5"></span>
+														</button>
+														<button class="flex items-center justify-center w-6 h-6 transition-all duration-300 rounded hover:bg-neutral-black-5 active:scale-90">
+															<span class="icon icon--editor-bucket-paint h-4.5 w-4.5"></span>
+														</button>
+														<button class="flex items-center justify-center w-6 h-6 ml-auto transition-all duration-300 rounded hover:bg-neutral-black-5 active:scale-90">
+															<span class="icon icon--editor-subscript-text h-4.5 w-4.5"></span>
+														</button>
+													</div>
+												</div>
+												<textarea class="-mt-one w-full resize-none rounded-bl-xl rounded-br-xl border border-primary-green-gray px-3.5 py-3 text-neutral-black-50 transition-colors duration-300 scrollbar-thin focus:border-primary-green-gray focus:text-primary-black focus:shadow-none" rows="4">Providing a detailed description significantly increases the chances of a fast and accurate identification. Be as specific and thorough as possible. Providing a detailed description significantly increases the chances of a fast and accurate identification. Be as specific and thorough as possible.</textarea>
+											</div>
+										</div>
+										<!-- ./editor -->
+
+										<!-- upload image -->
+										<div class="mt-5">
+											<div class="text-sm font-semibold tracking-tight leading-150">Upload a new photo</div>
+											<div class="relative mt-2 cursor-pointer">
+												<input type="file" class="hidden" id="fileUpload" />
+												<label for="fileUpload" class="absolute inset-0 z-1"></label>
+												<div class="relative flex flex-col items-center justify-between w-full gap-2 px-8 py-6 rounded-3xl bg-primary/10 sm:flex-row lg:px-9 lg:py-9">
+													<div class="absolute inset-0 w-full h-full icon icon--dashed-r24 -z-0 text-primary"></div>
+													<span class="w-8 h-8 icon icon--media-upload sm:hidden"></span>
+
+													<p class="text-base font-medium lg:text-xl">Drag and Drop</p>
+													<p class="text-sm opacity-50">or</p>
+													<button class="flex h-12 w-full flex-shrink-0 items-center justify-center gap-2 rounded-xl bg-primary px-5 py-3.5 text-sm font-semibold text-primary-100 transition-all duration-300 hover:bg-primary-hover sm:w-fit">
+														<span>Choose an image</span>
+													</button>
+												</div>
+											</div>
+											<div class="flex gap-2 mt-3 text-xs font-medium text-error-60">
+												<span class="w-4 h-4 icon icon--disabled"></span>
+												<span>Error: Uplouded image is too large. The max sire is currently set to 5mb.</span>
+											</div>
+											<div class="grid grid-cols-5 gap-3 mt-5">
+												<div class="aspect-[1.17] rounded-lg">
+													<div class="group relative aspect-[1.17] w-full overflow-clip rounded-lg bg-neutral-black-5">
+														<img decoding="async" class="object-contain w-full h-full" src="../../img/assets/image-01.webp" title="" alt="img" loading="lazy" />
+														<a href="#" class="absolute inset-0 flex items-center justify-center transition-all duration-200 opacity-0 pointer-events-none z-1 bg-black/40 group-hover:pointer-events-auto group-hover:opacity-100">
+															<span class="text-white icon icon--search"></span>
+														</a>
+													</div>
+													<div class="mt-2.5 hidden items-center justify-between gap-2 lg:flex">
+														<div class="text-xs text-neutral-70 line-clamp-1">IMG_9249.JPG</div>
+														<button class="flex flex-shrink-0">
+															<span class="icon icon--trash-bin h-4.5 w-4.5 text-error-100"></span>
+														</button>
+													</div>
+												</div>
+												<div class="aspect-[1.17] rounded-lg">
+													<div class="group relative aspect-[1.17] w-full overflow-clip rounded-lg bg-neutral-black-5">
+														<img decoding="async" class="object-cover w-full h-full" src="../../img/assets/image-01.webp" title="" alt="img" loading="lazy" />
+														<a href="#" class="absolute inset-0 flex items-center justify-center transition-all duration-200 opacity-0 pointer-events-none z-1 bg-black/40 group-hover:pointer-events-auto group-hover:opacity-100">
+															<span class="text-white icon icon--search"></span>
+														</a>
+													</div>
+													<div class="mt-2.5 hidden items-center justify-between gap-2 lg:flex">
+														<div class="text-xs text-neutral-70 line-clamp-1">IMG_9249.JPG</div>
+														<button class="flex flex-shrink-0">
+															<span class="icon icon--trash-bin h-4.5 w-4.5 text-error-100"></span>
+														</button>
+													</div>
+												</div>
+												<div class="aspect-[1.17] rounded-lg">
+													<div class="group relative aspect-[1.17] w-full overflow-clip rounded-lg bg-neutral-black-5">
+														<img decoding="async" class="object-cover w-full h-full" src="../../img/assets/image-01.webp" title="" alt="img" loading="lazy" />
+														<a href="#" class="absolute inset-0 flex items-center justify-center transition-all duration-200 opacity-0 pointer-events-none z-1 bg-black/40 group-hover:pointer-events-auto group-hover:opacity-100">
+															<span class="text-white icon icon--search"></span>
+														</a>
+													</div>
+													<div class="mt-2.5 hidden items-center justify-between gap-2 lg:flex">
+														<div class="text-xs text-neutral-70 line-clamp-1">IMG_9249.JPG</div>
+														<button class="flex flex-shrink-0">
+															<span class="icon icon--trash-bin h-4.5 w-4.5 text-error-100"></span>
+														</button>
+													</div>
+												</div>
+												<div class="aspect-[1.17] rounded-lg">
+													<div class="group relative aspect-[1.17] w-full overflow-clip rounded-lg bg-neutral-black-5">
+														<img decoding="async" class="object-cover w-full h-full" src="../../img/assets/image-01.webp" title="" alt="img" loading="lazy" />
+														<a href="#" class="absolute inset-0 flex items-center justify-center transition-all duration-200 opacity-0 pointer-events-none z-1 bg-black/40 group-hover:pointer-events-auto group-hover:opacity-100">
+															<span class="text-white icon icon--search"></span>
+														</a>
+													</div>
+													<div class="mt-2.5 hidden items-center justify-between gap-2 lg:flex">
+														<div class="text-xs text-neutral-70 line-clamp-1">IMG_9249.JPG</div>
+														<button class="flex flex-shrink-0">
+															<span class="icon icon--trash-bin h-4.5 w-4.5 text-error-100"></span>
+														</button>
+													</div>
+												</div>
+												<div class="aspect-[1.17] rounded-lg">
+													<div class="group relative aspect-[1.17] w-full overflow-clip rounded-lg bg-neutral-black-5">
+														<img decoding="async" class="object-cover w-full h-full" src="../../img/assets/image-01.webp" title="" alt="img" loading="lazy" />
+														<a href="#" class="absolute inset-0 flex items-center justify-center transition-all duration-200 opacity-0 pointer-events-none z-1 bg-black/40 group-hover:pointer-events-auto group-hover:opacity-100">
+															<span class="text-white icon icon--search"></span>
+														</a>
+													</div>
+													<div class="mt-2.5 hidden items-center justify-between gap-2 lg:flex">
+														<div class="text-xs text-neutral-70 line-clamp-1">IMG_9249.JPG</div>
+														<button class="flex flex-shrink-0">
+															<span class="icon icon--trash-bin h-4.5 w-4.5 text-error-100"></span>
+														</button>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- ./upload image -->
+
+										<!-- upload docs -->
+										<div class="mt-6">
+											<div class="text-sm font-semibold tracking-tight leading-150">Upload a new file</div>
+											<div class="relative mt-2 cursor-pointer">
+												<input type="file" class="hidden" id="fileUpload" />
+												<label for="fileUpload" class="absolute inset-0 z-1"></label>
+												<div class="relative flex flex-col items-center justify-between w-full gap-2 px-8 py-6 rounded-3xl bg-primary/10 sm:flex-row lg:px-9 lg:py-9">
+													<div class="absolute inset-0 w-full h-full icon icon--dashed-r24 -z-0 text-primary"></div>
+													<span class="w-8 h-8 icon icon--media-upload sm:hidden"></span>
+
+													<p class="text-base font-medium lg:text-xl">Drag and Drop</p>
+													<p class="text-sm opacity-50">or</p>
+													<button class="flex h-12 w-full flex-shrink-0 items-center justify-center gap-2 rounded-xl bg-primary px-5 py-3.5 text-sm font-semibold text-primary-100 transition-all duration-300 hover:bg-primary-hover sm:w-fit">
+														<span>Choose an file</span>
+													</button>
+												</div>
+											</div>
+											<div class="flex gap-2 mt-3 text-xs font-medium text-error-60">
+												<span class="w-4 h-4 icon icon--disabled"></span>
+												<span>Error: Uplouded image is too large. The max sire is currently set to 5mb.</span>
+											</div>
+											<div class="flex flex-col gap-3 mt-5">
+												<div class="flex flex-col gap-3 pt-3 text-sm border-t border-t-neutral-black-3 leading-120">
+													<div class="flex justify-between gap-10">
+														<div class="font-medium break-all">Comprehensive_Analysis_of_Environmental_Impact_Assessment_Methodologies_2024.docx</div>
+														<div class="">
+															<button class="flex w-5 h-5 transition duration-300 all text-error-60 active:scale-95 lg:h-6 lg:w-6">
+																<span class="icon icon--trash-bin"></span>
+															</button>
+														</div>
+													</div>
+													<div class="flex gap-2">
+														<div class="text-neutral-black-50">Size:</div>
+														<div class="font-medium">4,77 mb</div>
+													</div>
+												</div>
+												<div class="flex flex-col gap-3 pt-3 text-sm border-t border-t-neutral-black-3 leading-120">
+													<div class="flex justify-between gap-10">
+														<div class="font-medium break-all">Comprehensive_Analysis_of_Environmental_Impact_Assessment_Methodologies_2024.docx</div>
+														<div class="">
+															<button class="flex w-5 h-5 transition duration-300 all text-error-60 active:scale-95 lg:h-6 lg:w-6">
+																<span class="icon icon--trash-bin"></span>
+															</button>
+														</div>
+													</div>
+													<div class="flex gap-2">
+														<div class="text-neutral-black-50">Size:</div>
+														<div class="font-medium">4,77 mb</div>
+													</div>
+												</div>
+												<div class="flex gap-4 items-center rounded-xl border border-t-neutral-black-3 md:px-6 md:py-3.5 text-sm leading-120 px-3 py-3">
+													<div class="flex items-center justify-center">
+														<dic class="icon icon--doc text-primary w-9 h-11.5"></dic>
+													</div>
+													
+													<div class="flex flex-col gap-3">
+														<div class="flex justify-between gap-10">
+															<div class="font-medium break-all">Comprehensive_Analysis_of_Environmental_Impact_Assessment_Methodologies_2024.docx</div>
+															<div class="">
+																<button class="flex w-5 h-5 transition duration-300 all text-error-60 active:scale-95 lg:h-6 lg:w-6">
+																	<span class="icon icon--trash-bin"></span>
+																</button>
+															</div>
+														</div>
+														<div class="flex gap-2">
+															<div class="text-neutral-black-50">Size:</div>
+															<div class="font-medium">4,77 mb</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- ./upload docs -->
+
+										<div class="flex flex-col gap-2 mt-8 xs:flex-row">
+											<button class="flex h-12 flex-shrink-0 items-center justify-center gap-2 rounded-xl border border-neutral-black-5 px-5 py-3.5 text-sm font-medium transition-all duration-300 hover:bg-neutral-black-1 xs:w-fit">
+												<span>Save for later</span>
+											</button>
+											<button class="-order-1 flex h-12 flex-1 flex-shrink-0 items-center justify-center gap-2 rounded-xl bg-primary px-5 py-3.5 text-sm font-semibold text-primary-100 transition-all duration-300 hover:bg-primary-hover xs:order-none">
+												<span class="icon icon--rocket"></span>
+												<span>Send updates to expert</span>
+											</button>
+										</div>
+									</div>
+								</div>
+
+								<div class="pb-9 md:relative md:pb-14 md:pl-12">
+									<div class="relative pr-8 md:static md:pr-0">
+										<div class="flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
+											<div class="flex items-center gap-3">
+												<span class="icon icon--search-chekmark-square"></span>
+												<span class="text-lg font-medium">Expert analysis</span>
+											</div>
+											<div class="text-sm text-neutral-black-70">April 28,2024 - 12:46 PM</div>
+										</div>
+										<p class="mt-2 text-neutral-black-70 md:max-w-125">An expert has started working on your request. The analysis will take a few days, and you will be notified about any updates.</p>
+										<div class="absolute top-0 bottom-0 right-0 md:left-0 md:right-auto">
+											<div class="relative z-2 h-7 w-3.5 rounded-full bg-white">
+												<div class="absolute left-1/2 top-1/2 h-3.5 w-3.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-purple"></div>
+											</div>
+											<div class="absolute top-0 bottom-0 -translate-x-1/2 left-1/2 w-one bg-neutral-black-5"></div>
+										</div>
+									</div>
+								</div>
+
+								<div class="md:relative md:pl-12">
+									<div class="relative pr-8 md:static md:pr-0">
+										<div class="flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
+											<div class="flex items-center gap-3">
+												<span class="icon icon--loading-waiting"></span>
+												<span class="text-lg font-medium">Expert review</span>
+											</div>
+											<div class="text-sm text-neutral-black-70">April 28,2024 - 12:46 PM</div>
+										</div>
+										<p class="mt-2 text-neutral-black-70 md:max-w-125">Request Submitted: Your identification request has been successfully submitted. Experts will be notified about the new submission and the status will change to “Expert Analysis” when they start working on it.</p>
+										<div class="absolute top-0 bottom-0 right-0 md:left-0 md:right-auto">
+											<div class="relative z-2 h-7 w-3.5 rounded-full bg-white">
+												<div class="absolute left-1/2 top-1/2 h-3.5 w-3.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-secondary"></div>
+											</div>
+											<div class="absolute top-0 bottom-0 -translate-x-1/2 left-1/2 w-one bg-neutral-black-5 md:hidden"></div>
+										</div>
+									</div>
+									<div class="flex flex-col gap-5 p-4 mt-4 border-l-4 rounded-lg border-l-secondary bg-secondary/5 md:max-w-156 md:p-6">
+										<button class="flex items-center gap-3 review-btn">
+											<span class="transition-all duration-300 icon icon--plus"></span>
+											<span class="transition-all duration-300 text-neutral-black-70">Open review</span>
+										</button>
+
+										<div class="hidden sm:px-8 review-content">
+											<div class="flex flex-col gap-8">
+												<div class="flex flex-col gap-3">
+													<div class="flex items-center gap-3">
+														<span class="icon icon--user-profile-settings"></span>
+														<h3 class="font-medium">Title/Name:</h3>
+													</div>
+													<div class="text-neutral-black-70">United Arab Coin United Arab Coin United Arab</div>
+												</div>
+												<div class="flex flex-col gap-3">
+													<div class="flex justify-between gap-4">
+														<div class="flex items-center gap-3">
+															<span class="icon icon--links-circle"></span>
+															<h3 class="font-medium">Linked Asset</h3>
+														</div>
+														
+													</div>
+													<div class="text-neutral-black-70">United Arab Coin United Arab</div>
+												</div>
+												<div class="flex flex-col gap-3">
+													<div class="flex justify-between gap-4">
+														<div class="flex items-center gap-3">
+															<span class="icon icon--text-edit-pen"></span>
+															<h3 class="font-medium">Description</h3>
+														</div>
+														
+													</div>
+													<div>
+														<div class="line-clamp-3 text-neutral-black-70 text-description">
+															Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32. The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their
+															exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+														</div>
+														<button class="flex items-center text-secondary btn-show-more">
+															<span class="transition-all duration-300 transform icon icon--chevron-down"></span>
+															<span class="btn-show-more-text">View more</span>
+														</button>
+													</div>
+												</div>
+												<div class="flex flex-col gap-3">
+													<div class="flex items-center gap-3">
+														<span class="icon icon--image-picture-download"></span>
+														<h3 class="font-medium">Uploaded Images</h3>
+													</div>
+													<div class="mt-2 grid grid-cols-3 gap-2.5 sm:grid-cols-5">
+														<div class="aspect-[1.17] w-full overflow-clip rounded-lg bg-loading bg-contain bg-center bg-no-repeat">
+															<img decoding="async" class="object-cover w-full h-full" src="../../img/assets/image-01.webp" title="" alt="" loading="lazy">
+														</div>
+														<div class="aspect-[1.17] w-full overflow-clip rounded-lg bg-loading bg-contain bg-center bg-no-repeat">
+															<img decoding="async" class="object-cover w-full h-full" src="../../img/assets/image-01.webp" title="" alt="" loading="lazy">
+														</div>
+														<div class="aspect-[1.17] w-full overflow-clip rounded-lg bg-loading bg-contain bg-center bg-no-repeat">
+															<img decoding="async" class="object-cover w-full h-full" src="../../img/assets/image-01.webp" title="" alt="" loading="lazy">
+														</div>
+														<div class="aspect-[1.17] w-full overflow-clip rounded-lg bg-loading bg-contain bg-center bg-no-repeat">
+															<img decoding="async" class="object-cover w-full h-full" src="../../img/assets/image-01.webp" title="" alt="" loading="lazy">
+														</div>
+														<div class="aspect-[1.17] w-full overflow-clip rounded-lg bg-loading bg-contain bg-center bg-no-repeat">
+															<img decoding="async" class="object-cover w-full h-full" src="../../img/assets/image-01.webp" title="" alt="" loading="lazy">
+														</div>
+													</div>
+												</div>
+				
+												<div class="flex flex-col gap-3">
+													<div class="flex items-center gap-3">
+														<span class="icon icon--document-attachment"></span>
+														<h3 class="font-medium">Uploaded Documents</h3>
+													</div>
+													<ul class="flex flex-col gap-2 md:pl-8">
+														<li class="flex gap-2">
+															<span class="h-1 w-1 flex-shrink-0 translate-y-2.5 rounded-full bg-primary-black"></span>
+															<p class="break-all text-neutral-black-70">Comprehensive_Analysis_of_Environmental_Impact_Assessment_Methodologies_2024.docx</p>
+														</li>
+														<li class="flex gap-2">
+															<span class="h-1 w-1 flex-shrink-0 translate-y-2.5 rounded-full bg-primary-black"></span>
+															<p class="break-all text-neutral-black-70">Detailed_Review_of_Financial_Performance_and_Projections_Report_2023.xlsx</p>
+														</li>
+														<li class="flex gap-2">
+															<span class="h-1 w-1 flex-shrink-0 translate-y-2.5 rounded-full bg-primary-black"></span>
+															<p class="break-all text-neutral-black-70">Advanced_Research_on_Genetic_Modifications_in_Agricultural_Crops.pdf</p>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<div id="menuMobile" class="fixed top-0 bottom-0 left-0 z-50 w-full px-8 py-4 transition-all duration-300 bg-white -translate-x-p110 shadow-header-menu sd:w-90 lg:-translate-x-p110">
+	<div class="flex flex-col items-start">
+		<button id="closeMenuMobile" class="flex items-center justify-center">
+			<span class="icon icon--chevron-left"></span>
+		</button>
+		<div class="mt-8 h-[calc(var(--app-height)-5.5rem)] w-full flex-grow overflow-auto">
+			<div class="flex items-center gap-5">
+				<div class="flex items-center justify-center flex-shrink-0 rounded-full h-13 w-13 bg-neutral-black-3">
+					<span class="icon icon--user"></span>
+				</div>
+				<div class="text-2xl font-semibold">Andrii Chernov</div>
+			</div>
+			<div class="flex flex-wrap items-center gap-3 mt-5">
+				<a href="#" class="flex h-9 items-center gap-1 rounded-6.5lx border border-neutral-black-5 px-3 py-2 transition-all duration-300 hover:bg-neutral-black-3">
+					<span class="w-5 h-5 icon icon--user"></span>
+					<span class="text-sm font-medium">Profile Details</span>
+				</a>
+				<a href="#" class="flex h-9 items-center gap-1 rounded-6.5lx border border-neutral-black-5 px-3 py-2 transition-all duration-300 hover:bg-neutral-black-3">
+					<span class="w-5 h-5 icon icon--checklist-money"></span>
+					<span class="text-sm font-medium">My Plan</span>
+				</a>
+			</div>
+
+			<a href="#" class="mt-9 flex h-12 w-full items-center justify-center gap-2 rounded-xl bg-primary px-5 py-3.5 text-sm font-semibold text-primary-100 transition-all duration-300 hover:bg-primary-hover">
+				<span class="w-5 h-5 icon icon--arrow-nav"></span>
+				<span>Upgrade plan</span>
+			</a>
+
+			<ul class="mt-9">
+				<li class="pb-3 mb-3 border-b border-b-neutral-black-3">
+					<a href="#" class="flex items-center gap-5 py-2.5 font-medium">
+						<span class="icon icon--dashboard"></span>
+						<span class="leading-150">Dashboard</span>
+						<span class="ml-auto icon icon--chevron-right"></span>
+					</a>
+				</li>
+				<li class="pb-3 mb-3 border-b border-b-neutral-black-3">
+					<a href="#" class="flex items-center gap-5 py-2.5">
+						<span class="icon icon--portfolio"></span>
+						<span class="leading-150">Portfolio</span>
+						<span class="ml-auto icon icon--chevron-right"></span>
+					</a>
+				</li>
+				
+				<li class="pb-3 mb-3 border-b border-b-neutral-black-3">
+					<a href="#" class="flex items-center gap-5 py-2.5">
+						<span class="icon icon--collections"></span>
+						<span class="leading-150">Collections</span>
+						<span class="ml-auto icon icon--chevron-right"></span>
+					</a>
+				</li>
+				<li class="pb-3 mb-3 border-b border-b-neutral-black-3">
+					<a href="#" class="flex items-center gap-5 py-2.5">
+						<span class="icon icon--identification"></span>
+						<span class="leading-150">Identification</span>
+						<span class="ml-auto icon icon--chevron-right"></span>
+					</a>
+				</li>
+				<li class="pb-3 mb-3">
+					<a href="#" class="flex items-center gap-5 py-2.5">
+						<span class="icon icon--requests"></span>
+				<span class="leading-150">Requests</span>
+						<span class="ml-auto icon icon--chevron-right"></span>
+					</a>
+				</li>
+			</ul>
+
+			<a href="#" class="flex items-center justify-center h-12 gap-1 px-3 py-2 transition-all duration-300 border rounded-xl border-neutral-black-5 hover:bg-neutral-black-3">
+				<span class="text-sm font-medium">Sign Out</span>
+			</a>
+		</div>
+	</div>
+	<div class="z-30 invisible hidden overflow-clip bg-neutral-black-1/50 backdrop-blur-sm"></div>
+</div>
+
+ <script src="../../js/app.js"></script>
+
+	</body>
+</html>

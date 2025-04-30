@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="19px" viewBox="0 0 18 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>F537051E-A9BC-4721-8A62-3027E1FFF6E0</title>
+    <defs>
+        <filter x="-6.1%" y="-5.6%" width="112.1%" height="111.3%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.23574951   0 0 0 0 0.248700764   0 0 0 0 0.269134964  0 0 0 0.265679633 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <path d="M20,0 L277,0 C288.045695,-5.58177493e-15 297,8.954305 297,20 L297,299 C297,310.045695 288.045695,319 277,319 L20,319 C8.954305,319 1.3527075e-15,310.045695 0,299 L0,20 C-1.3527075e-15,8.954305 8.954305,2.02906125e-15 20,0 Z" id="path-2"></path>
+        <filter x="-5.1%" y="-4.7%" width="110.1%" height="109.4%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.780392157   0 0 0 0 0.831372549   0 0 0 0 0.831372549  0 0 0 0.2 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Concept" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-1920_DISCOUNT---Press-Releases---dropdown-multiple-selections" transform="translate(-1305.000000, -863.000000)">
+            <rect fill="#FFFFFF" x="0" y="0" width="1920" height="2838"></rect>
+            <g id="Group-2" transform="translate(180.000000, 846.000000)" fill="#000000" font-family="RubikRoman-Medium, Rubik" font-size="20" font-weight="400" line-spacing="32">
+                <text id="מרץ">
+                    <tspan x="1521.8275" y="19">מרץ</tspan>
+                </text>
+            </g>
+            <g id="Group-6-Copy-2" transform="translate(1043.000000, 739.000000)">
+                <g id="Group-49" filter="url(#filter-1)">
+                    <g id="Combined-Shape">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-2"></use>
+                        <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-2"></use>
+                    </g>
+                </g>
+                <g id="Group" transform="translate(31.000000, 34.000000)" fill="#FFFFFF" stroke="#000000" stroke-width="2">
+                    <g id="Group-9" transform="translate(0.000000, 85.000000)">
+                        <g id="Checkboxes-/-desktop-/-on-Copy-2" transform="translate(231.000000, 5.251642)">
+                            <rect id="Rectangle-Copy" x="1" y="1" width="16" height="16" rx="2"></rect>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

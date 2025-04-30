@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>E1B50C61-4018-40BA-A628-A5E508A63B32</title>
+    <defs>
+        <linearGradient x1="-67.3828125%" y1="-35.1025391%" x2="89.6909969%" y2="99.8586904%" id="linearGradient-1">
+            <stop stop-color="#8FE600" offset="0.0983391608%"></stop>
+            <stop stop-color="#6924E8" offset="43.9685315%"></stop>
+            <stop stop-color="#A07CE1" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Concept" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-1920_DISCOUNT_CreditCards-Lobby" transform="translate(-1691.000000, -2221.000000)">
+            <g id="Group-50" transform="translate(1092.000000, 2045.000000)">
+                <g id="Group-17" transform="translate(599.000000, 176.000000)">
+                    <circle id="Oval" fill="url(#linearGradient-1)" cx="25" cy="25" r="25"></circle>
+                    <g id="Group-7" transform="translate(15.625000, 10.937500)" stroke="#FFFFFF" stroke-linecap="round" stroke-width="2">
+                        <path d="M15.6600952,6.25 L16.75,6.25 C17.8545695,6.25 18.75,7.1454305 18.75,8.25 L18.75,21.875 L18.75,21.875 C18.75,23.6008898 17.3508898,25 15.625,25 L3.125,25 C1.39911016,25 0,23.6008898 0,21.875 L0,8.25 C-1.3527075e-16,7.1454305 0.8954305,6.25 2,6.25 L3.125,6.25 L3.125,6.25" id="Path" stroke-linejoin="round"></path>
+                        <path d="M5.46875,9.375 L5.46875,3.90625 C5.46875,1.7488877 7.2176377,3.96301026e-16 9.375,0 C11.5323623,-3.96301026e-16 13.28125,1.7488877 13.28125,3.90625 L13.28125,9.375 L13.28125,9.375" id="Path"></path>
+                        <line x1="8.203125" y1="6.640625" x2="10.546875" y2="6.640625" id="Line-6" stroke-linejoin="round"></line>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

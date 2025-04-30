@@ -1,0 +1,5 @@
+  <svg id="my-svg" width="69" height="69" viewBox="0 0 69 69" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle id="circle-dotted--outer" cx="34.5" cy="34.5" r="33.5" stroke="#FEDA00" stroke-dasharray="3 3" />
+      <circle cx="34.5" cy="34.5" r="30.5" fill="#FEDA00" />
+      <circle  id="half-circle--inner" cx="34.5" cy="34.5" r="17" stroke="#033476" stroke-dasharray="54.405 54.405" />
+    </svg>

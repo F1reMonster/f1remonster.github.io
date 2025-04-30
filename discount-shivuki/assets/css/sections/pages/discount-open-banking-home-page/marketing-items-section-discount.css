@@ -1,0 +1,118 @@
+.marketing-items-section--discount .slide-btn {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 0;
+}
+
+.marketing-items-section--discount {
+  text-align: unset;
+}
+@media (max-width: 767px) {
+  .marketing-items-section--discount {
+    text-align: center;
+  }
+}
+.marketing-items-section--discount .section-container {
+  max-width: 1328px;
+}
+.marketing-items-section--discount .subheader {
+  font: 1.5em/1.5 "rubik-reg", sans-serif;
+  text-align: center;
+}
+@media (max-width: 767px) {
+  .marketing-items-section--discount .subheader {
+    font: 1.25em/1.8 "rubik-reg", sans-serif;
+  }
+}
+.marketing-items-section--discount .wrap {
+  position: relative;
+  flex-wrap: wrap;
+  gap: 2.8125em;
+  justify-content: center;
+}
+.marketing-items-section--discount .slide-btn {
+  font-size: inherit;
+  cursor: pointer;
+  position: absolute;
+  top: calc(50% - 1.5em);
+  z-index: 5;
+  transition: opacity 0.3s;
+}
+.marketing-items-section--discount .slide-btn:focus-visible {
+  opacity: 0.5;
+  outline: none;
+}
+.marketing-items-section--discount .slide-btn img {
+  width: 3em;
+  height: auto;
+}
+html[dir=ltr] .marketing-items-section--discount .slide-btn img {
+  transform: scaleX(-1);
+}
+
+@media screen and (max-width: 767px) {
+  .marketing-items-section--discount .slide-btn img {
+    width: 1.875em;
+  }
+}
+.marketing-items-section--discount .next {
+  inset-inline-end: -5em;
+}
+@media screen and (max-width: 1464px) {
+  .marketing-items-section--discount .next {
+    inset-inline-end: -1.25em;
+  }
+}
+@media (max-width: 767px) {
+  .marketing-items-section--discount .next {
+    inset-inline-end: -1.25em;
+  }
+}
+.marketing-items-section--discount .prev {
+  inset-inline-start: -5em;
+}
+@media screen and (max-width: 1464px) {
+  .marketing-items-section--discount .prev {
+    inset-inline-start: -1.25em;
+  }
+}
+@media (max-width: 767px) {
+  .marketing-items-section--discount .prev {
+    inset-inline-start: -1.25em;
+  }
+}
+.marketing-items-section--discount .swiper {
+  margin: 0 -1.25em;
+  padding: 20px 0;
+  height: 100%;
+}
+.marketing-items-section--discount .swiper-slide {
+  display: flex;
+}
+.marketing-items-section--discount .swiper-slide .marketing-card {
+  margin: 0 1.40625em;
+}
+@media (max-width: 575px) {
+  .marketing-items-section--discount .swiper-slide .marketing-card {
+    margin: 0 20px;
+  }
+}
+.marketing-items-section--discount .marketing-card {
+  flex-basis: 24.8125em;
+  max-width: 24.8125em;
+  padding: 2.3125em 2.375em 3em;
+}
+.marketing-items-section--discount .marketing-card .img-wrap {
+  padding-bottom: 100.3115264798%;
+}
+.marketing-items-section--discount .marketing-card .msg {
+  text-align: right;
+}
+html[dir=ltr] .marketing-items-section--discount .marketing-card .msg {
+  text-align: left;
+}
+
+.marketing-items-section--discount .marketing-card:hover .card-header {
+  color: #6924e8;
+}

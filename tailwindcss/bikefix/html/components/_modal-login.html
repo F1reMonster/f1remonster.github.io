@@ -1,0 +1,115 @@
+<div class="relative z-[9999]" aria-labelledby="modal-title-login" role="dialog" aria-modal="true">
+	<!--
+	  Background backdrop, show/hide based on modal state.
+ 
+	  Entering: "ease-out duration-300"
+		 From: "opacity-0"
+		 To: "opacity-100"
+	  Leaving: "ease-in duration-200"
+		 From: "opacity-100"
+		 To: "opacity-0"
+	-->
+	<div class="fixed inset-0 bg-concrete dark:bg-charade dark:bg-opacity-75 bg-opacity-75 transition-opacity"></div>
+
+	<div class="fixed inset-0 z-10 overflow-y-auto">
+		<button class="absolute group right-[3.75rem] top-[6.25rem] lg:hidden" title="Close modal" aria-label="Close modal">
+			<svg width="144" height="147" viewBox="0 0 144 147" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M65.9883 98L95.9883 73.5L65.9883 49V67.375H11.9883V79.625H65.9883V98Z" fill="#4163CF" />
+				<path d="M77.9936 18.3689C70.8987 18.3488 63.8705 19.766 57.316 22.5385C50.7616 25.311 44.8112 29.3837 39.8096 34.5205L48.2936 43.1812C56.2256 35.084 66.7736 30.6189 77.9936 30.6189C89.2136 30.6189 99.7616 35.084 107.694 43.1812C115.626 51.2785 120 62.0462 120 73.5C120 84.9537 115.626 95.7215 107.694 103.819C99.7616 111.916 89.2136 116.381 77.9936 116.381C66.7736 116.381 56.2256 111.916 48.2936 103.819L39.8096 112.479C50.0036 122.892 63.5636 128.631 77.9936 128.631C92.4236 128.631 105.984 122.892 116.178 112.479C126.378 102.073 132 88.2306 132 73.5C132 58.7694 126.378 44.9269 116.178 34.5205C111.176 29.3837 105.226 25.311 98.6711 22.5385C92.1166 19.766 85.0884 18.3488 77.9936 18.3689Z" fill="#4163CF" />
+				<path class="dark:fill-black duration-300 ease-out group-hover:fill-indigo-500" d="M79.5 127C108.495 127 132 103.047 132 73.5C132 43.9528 108.495 20 79.5 20C50.505 20 27 43.9528 27 73.5C27 103.047 50.505 127 79.5 127Z" fill="white" />
+				<path class="dark:fill-black duration-300 ease-out group-hover:fill-indigo-500" d="M97 56L62 91L97 56ZM62 56L97 91L62 56Z" fill="white" />
+				<path class="dark:stroke-white" d="M97 56L62 91M62 56L97 91" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+			</svg>
+		</button>
+		<div class="flex min-h-full items-center justify-center p-4 text-center sm:items-center sm:p-0 sm:px-[0.625rem]">
+			<!--
+			Modal panel, show/hide based on modal state.
+ 
+			Entering: "ease-out duration-300"
+			  From: "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+			  To: "opacity-100 translate-y-0 sm:scale-100"
+			Leaving: "ease-in duration-200"
+			  From: "opacity-100 translate-y-0 sm:scale-100"
+			  To: "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+		 -->
+			<div class="relative w-full max-w-[597px] transform overflow-hidden rounded-lg bg-white px-[5.1875rem] pb-[2.5rem] pt-[2.8125rem] text-left shadow-modal-shadow transition-all sm:my-8 sm:w-full sm:max-w-sm sm:p-6 dark:bg-black">
+				<button class="group absolute z-1 right-[1rem] top-[1rem] hidden lg:block" title="Close modal" aria-label="Close modal">
+					<svg class="w-[3.75rem] h-[3.75rem]" width="144" height="147" viewBox="0 0 144 147" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M65.9883 98L95.9883 73.5L65.9883 49V67.375H11.9883V79.625H65.9883V98Z" fill="#4163CF" />
+						<path d="M77.9936 18.3689C70.8987 18.3488 63.8705 19.766 57.316 22.5385C50.7616 25.311 44.8112 29.3837 39.8096 34.5205L48.2936 43.1812C56.2256 35.084 66.7736 30.6189 77.9936 30.6189C89.2136 30.6189 99.7616 35.084 107.694 43.1812C115.626 51.2785 120 62.0462 120 73.5C120 84.9537 115.626 95.7215 107.694 103.819C99.7616 111.916 89.2136 116.381 77.9936 116.381C66.7736 116.381 56.2256 111.916 48.2936 103.819L39.8096 112.479C50.0036 122.892 63.5636 128.631 77.9936 128.631C92.4236 128.631 105.984 122.892 116.178 112.479C126.378 102.073 132 88.2306 132 73.5C132 58.7694 126.378 44.9269 116.178 34.5205C111.176 29.3837 105.226 25.311 98.6711 22.5385C92.1166 19.766 85.0884 18.3488 77.9936 18.3689Z" fill="#4163CF" />
+						<path class="dark:fill-black duration-300 ease-out group-hover:fill-indigo-500" d="M79.5 127C108.495 127 132 103.047 132 73.5C132 43.9528 108.495 20 79.5 20C50.505 20 27 43.9528 27 73.5C27 103.047 50.505 127 79.5 127Z" fill="white" />
+						<path class="dark:fill-black duration-300 ease-out group-hover:fill-indigo-500" d="M97 56L62 91L97 56ZM62 56L97 91L62 56Z" fill="white" />
+						<path class="dark:stroke-white" d="M97 56L62 91M62 56L97 91" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+					</svg>
+				</button>
+				<h2 class="mb-[2.375rem] text-center text-[1.875rem] dark:text-white md:text-[1.5rem] md:px-[3rem]">Log in</h2>
+				<form action="">
+					<div class="input-field">
+						<div class="relative">
+							<div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
+								<svg class="h-6 w-6" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M22 4H2V20H22V4ZM20 8L12 13L4 8V6L12 11L20 6V8Z" fill="#B0B0B0" />
+								</svg>
+							</div>
+							<div class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3">
+								<svg class="h-6 w-6" width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M23.067 18.4733L13.807 1.43329C13.6226 1.09369 13.3501 0.810138 13.018 0.612551C12.6859 0.414964 12.3067 0.310669 11.9203 0.310669C11.5339 0.310669 11.1546 0.414964 10.8226 0.612551C10.4905 0.810138 10.218 1.09369 10.0336 1.43329L0.780288 18.4733C0.597304 18.8009 0.50341 19.1708 0.507971 19.5461C0.512532 19.9213 0.615387 20.2888 0.80628 20.6119C0.997173 20.935 1.26943 21.2025 1.59591 21.3875C1.92239 21.5726 2.29168 21.6688 2.66696 21.6666H21.1803C21.5517 21.6662 21.9167 21.5695 22.2396 21.3858C22.5625 21.2021 22.8321 20.9378 23.0223 20.6187C23.2124 20.2996 23.3165 19.9366 23.3243 19.5652C23.3321 19.1939 23.2435 18.8268 23.067 18.5V18.4733ZM11.067 5.66662C11.067 5.41909 11.1653 5.18169 11.3403 5.00666C11.5154 4.83162 11.7528 4.73329 12.0003 4.73329C12.2478 4.73329 12.4852 4.83162 12.6603 5.00666C12.8353 5.18169 12.9336 5.41909 12.9336 5.66662V13.6666C12.9336 13.9142 12.8353 14.1516 12.6603 14.3266C12.4852 14.5016 12.2478 14.6 12.0003 14.6C11.7528 14.6 11.5154 14.5016 11.3403 14.3266C11.1653 14.1516 11.067 13.9142 11.067 13.6666V5.66662ZM12.0003 18.9C11.763 18.9 11.5309 18.8296 11.3336 18.6977C11.1363 18.5659 10.9825 18.3785 10.8916 18.1592C10.8008 17.9399 10.777 17.6986 10.8233 17.4659C10.8696 17.2331 10.9839 17.0193 11.1518 16.8514C11.3196 16.6836 11.5334 16.5693 11.7662 16.523C11.999 16.4767 12.2402 16.5005 12.4595 16.5913C12.6788 16.6821 12.8662 16.8359 12.9981 17.0333C13.1299 17.2306 13.2003 17.4626 13.2003 17.7C13.2003 17.8575 13.1692 18.0136 13.1089 18.1592C13.0486 18.3048 12.9602 18.4371 12.8488 18.5485C12.7374 18.6599 12.6051 18.7483 12.4595 18.8086C12.3139 18.8689 12.1579 18.9 12.0003 18.9V18.9Z"
+										fill="#DC3131"
+									/>
+								</svg>
+							</div>
+							<input type="email" name="email" class="block h-[3.75rem] w-full rounded-[0.9375rem] border border-punch bg-concrete p-2.5 pl-[3.125rem] pr-[3.125rem] text-[1.0625rem] text-gray-900 placeholder-silver-chalice focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500" placeholder="Email" value="@@@wrongemail!" />
+						</div>
+						<div class="error-message mt-[0.75rem] text-[12px] leading-[133%] text-punch">
+							<p>Email address is invalid. Please enter in format:</p>
+							<p>yourname@example.com</p>
+						</div>
+					</div>
+					<div class="input-field mt-[0.9375rem]">
+						<div class="relative">
+							<div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
+								<svg class="h-6 w-6" width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M10 16.7619C10.663 16.7619 11.2989 16.5412 11.7678 16.1482C12.2366 15.7553 12.5 15.2224 12.5 14.6667C12.5 14.111 12.2366 13.578 11.7678 13.1851C11.2989 12.7922 10.663 12.5714 10 12.5714C9.33696 12.5714 8.70107 12.7922 8.23223 13.1851C7.76339 13.578 7.5 14.111 7.5 14.6667C7.5 15.2224 7.76339 15.7553 8.23223 16.1482C8.70107 16.5412 9.33696 16.7619 10 16.7619ZM17.5 7.33333C18.163 7.33333 18.7989 7.55408 19.2678 7.94702C19.7366 8.33995 20 8.87288 20 9.42857V19.9048C20 20.4605 19.7366 20.9934 19.2678 21.3863C18.7989 21.7793 18.163 22 17.5 22H2.5C1.83696 22 1.20107 21.7793 0.732233 21.3863C0.263392 20.9934 0 20.4605 0 19.9048V9.42857C0 8.87288 0.263392 8.33995 0.732233 7.94702C1.20107 7.55408 1.83696 7.33333 2.5 7.33333H3.75V5.2381C3.75 3.84887 4.40848 2.51654 5.58058 1.5342C6.75269 0.551869 8.3424 0 10 0C10.8208 0 11.6335 0.135487 12.3918 0.398726C13.1501 0.661965 13.8391 1.0478 14.4194 1.5342C14.9998 2.0206 15.4602 2.59805 15.7742 3.23356C16.0883 3.86908 16.25 4.55022 16.25 5.2381V7.33333H17.5ZM10 2.09524C9.00544 2.09524 8.05161 2.42636 7.34835 3.01576C6.64509 3.60516 6.25 4.40456 6.25 5.2381V7.33333H13.75V5.2381C13.75 4.40456 13.3549 3.60516 12.6517 3.01576C11.9484 2.42636 10.9946 2.09524 10 2.09524Z"
+										fill="#B0B0B0"
+									/>
+								</svg>
+							</div>
+							<input type="password" name="password" class="block h-[3.75rem] w-full rounded-[0.9375rem] border border-concrete bg-concrete p-2.5 pl-[3.125rem] text-[1.0625rem] text-gray-900 placeholder-silver-chalice focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500" placeholder="Password" />
+						</div>
+					</div>
+					<div class="mt-[0.9375rem] flex justify-between">
+						<a class="underline dark:text-white" href="#">Forgot password</a>
+						<a class="underline dark:text-white" href="#">Sign up</a>
+					</div>
+					<div>
+						<button type="submit" title="Continue registration" aria-label="Continue registration" class="duration-300 ease-out focus-visible:outline-indigo-600 mt-[1.25rem] flex h-[3rem] w-full items-center justify-center rounded-[0.9375rem] bg-indigo px-3 py-1.5 text-[1.0625rem] text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2">Continue</button>
+					</div>
+				</form>
+				<div class="mt-[1.875rem]">
+					<p class="text-center text-[0.75rem] text-tundora dark:text-white">Continue with</p>
+					<div class="mt-4 flex justify-center gap-6">
+						<button class="duration-300 ease-out  bg-cod-gray hover:bg-indigo-500 w-[6.125rem] h-[3.75rem] rounded-[0.9375rem] flex items-center justify-center" title="Apple" aria-label="Registarion thru Apple">
+							<svg class="w-6 h-6" width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M16.385 11.6262C16.3741 9.82294 17.214 8.46385 18.9102 7.46173C17.9615 6.13967 16.5263 5.41253 14.6345 5.27239C12.8432 5.1349 10.8834 6.28774 10.1658 6.28774C9.40744 6.28774 7.67325 5.31999 6.30873 5.31999C3.4927 5.36229 0.5 7.50403 0.5 11.8616C0.5 13.1492 0.741917 14.4792 1.22575 15.8489C1.87268 17.6522 4.20486 22.0705 6.63762 21.9991C7.90973 21.9701 8.80944 21.1213 10.4648 21.1213C12.0712 21.1213 12.903 21.9991 14.3219 21.9991C16.7764 21.9648 18.8857 17.9483 19.5 16.1398C16.2083 14.63 16.385 11.7188 16.385 11.6262ZM13.5282 3.56164C14.9063 1.96988 14.7813 0.520893 14.7405 0C13.5227 0.0687473 12.1147 0.806459 11.3129 1.71339C10.4295 2.68643 9.9103 3.88951 10.0217 5.24595C11.3373 5.34378 12.5388 4.68539 13.5282 3.56164Z" fill="white" />
+							</svg>
+						</button>
+						<button class="duration-300 ease-out bg-indigo hover:bg-indigo-500 w-[6.125rem] h-[3.75rem] rounded-[0.9375rem] flex items-center justify-center" title="Google" aria-label="Registarion thru Google">
+							<svg class="w-6 h-6 width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M19.9565 8.15401C20.0795 8.81301 20.1465 9.50201 20.1465 10.221C20.1465 15.845 16.3825 19.844 10.6975 19.844C9.40467 19.8444 8.12442 19.59 6.92991 19.0955C5.73541 18.6009 4.65006 17.8758 3.73588 16.9616C2.8217 16.0475 2.09661 14.9621 1.60204 13.7676C1.10748 12.5731 0.853122 11.2929 0.853516 10C0.853122 8.70716 1.10748 7.42691 1.60204 6.2324C2.09661 5.0379 2.8217 3.95255 3.73588 3.03837C4.65006 2.12419 5.73541 1.3991 6.92991 0.904533C8.12442 0.409966 9.40467 0.155612 10.6975 0.156006C13.3555 0.156006 15.5765 1.13401 17.2805 2.72201L14.5055 5.49701V5.49001C13.4725 4.50601 12.1615 4.00101 10.6975 4.00101C7.44952 4.00101 4.80952 6.74501 4.80952 9.99401C4.80952 13.242 7.44952 15.992 10.6975 15.992C13.6445 15.992 15.6505 14.307 16.0625 11.993H10.6975V8.15401H19.9575H19.9565Z" fill="white"/>
+								</svg>
+								
+						</button>
+						<button class="duration-300 ease-out  bg-mariner hover:bg-indigo-500 w-[6.125rem] h-[3.75rem] rounded-[0.9375rem] flex items-center justify-center" title="Facebook" aria-label="Registarion thru Facebook">
+							<svg class="w-6 h-6 width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M0 12.067C0 18.033 4.333 22.994 10 24V15.333H7V12H10V9.333C10 6.333 11.933 4.667 14.667 4.667C15.533 4.667 16.467 4.8 17.333 4.933V8H15.8C14.333 8 14 8.733 14 9.667V12H17.2L16.667 15.333H14V24C19.667 22.994 24 18.034 24 12.067C24 5.43 18.6 0 12 0C5.4 0 0 5.43 0 12.067Z" fill="white"/>
+								</svg>
+								
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

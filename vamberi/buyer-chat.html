@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="uk">
+	<head>
+		<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="img/svg/ua.svg" type="image/x-icon" />
+
+<!-- <link rel="stylesheet" type="text/css" href="./css/jquery-ui.css" /> -->
+<!-- <link rel="stylesheet" type="text/css" href="./css/fancybox.css" /> -->
+<!-- <link rel="stylesheet" type="text/css" href="./css/select2.min.css" /> -->
+<!-- <link rel="stylesheet" type="text/css" href="./css/swiper.min.css" /> -->
+
+<!-- cdn -->
+<link rel="stylesheet" media="screen" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+<link rel="stylesheet" media="screen" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+
+<link rel="stylesheet" media="screen" type="text/css" href="./css/style.css" />
+<title>VamBeri - Повідомлення</title>
+
+
+	</head>
+	<body>
+		<!-- header -->
+<header class="border-b border-b-dusty-gray/50">
+	<div class="container">
+		<!-- header bottom -->
+		<div class="relative flex items-center justify-between py-3 lg:py-5">
+			<!-- logo -->
+			<a href="index.html" title="VamBeri" class="text-2xl font-semibold text-lavender-purple lg:text-left lg:text-4ms">VamBeri</a>
+			<!-- ./logo -->
+
+			<!-- actions buttons -->
+			<div class="relative flex gap-5 text-sm lg:gap-10">
+				<!-- lang swither mobile -->
+				<div class="relative filter-item">
+					<button class="filter-btn flex h-9 w-9 items-center justify-center rounded-full bg-white text-sm font-medium transition ease-in lg:h-12.5 lg:w-12.5 lg:text-base lg:hover:border-lavender-purple">
+						<span class="default-placeholder hidden">UA</span>
+						<span class="selected-placeholder">UA</span>
+					</button>
+
+					<!-- dropdown -->
+					<div class="filter-dropdown absolute left-1/2 top-full z-40 mt-2 hidden rounded-emd border border-lavender-purple/50 bg-white px-3.5 py-2.5 text-shark -translate-x-1/2" data-filter-name="lang">
+						<ul class="flex flex-col gap-3 text-sm font-medium lg:text-base">
+							<li data-filter-option="ua">
+								<a href="#ua" class="transition ease-in hover:text-lavender-purple">UA</a>
+							</li>
+							<li data-filter-option="ru">
+								<a href="#ru" class="transition ease-in hover:text-lavender-purple">RU</a>
+							</li>
+						</ul>
+					</div>
+					<!-- ./dropdown -->
+				</div>
+				<!-- ./lang swither mobile -->
+
+				<a href="#" class="group flex flex-col items-center gap-1 text-lavender-purple transition ease-in hover:text-purple-800" title="Кошик">
+					<span class="flex h-9 w-9 items-center justify-center rounded-full bg-white lg:h-12.5 lg:w-12.5">
+						<svg class="h-4 w-4 fill-shark lg:h-5.5 lg:w-5.5">
+							<use xlink:href="img/svg/sprites/sprite-icons.svg#cart2-solid"></use>
+						</svg>
+					</span>
+				</a>
+
+				<a href="#" class="group flex flex-col items-center gap-1 text-lavender-purple transition ease-in hover:text-purple-800" title="Сповіщення">
+					<div class="relative flex h-9 w-9 items-center justify-center rounded-full bg-white lg:h-12.5 lg:w-12.5">
+						<!--  якщо є сповіщення додаємо класс hidden -->
+						<svg class="hidden h-4 w-4 fill-transparent stroke-lavender-purple transition ease-in group-hover:stroke-purple-800 lg:h-5.5 lg:w-5.5">
+							<use xlink:href="img/svg/sprites/sprite-icons.svg#bell"></use>
+						</svg>
+
+						<!--  якщо є сповіщення видяляємо класс hidden -->
+						<svg class="h-4 w-4 fill-tundora stroke-tundora transition ease-in lg:h-5.5 lg:w-5.5">
+							<use xlink:href="img/svg/sprites/sprite-icons.svg#bell"></use>
+						</svg>
+						<p class="absolute -right-1.5 -top-1.5 flex h-4 items-center justify-center rounded-lge bg-tall-poppy px-1 text-sm lg:-right-2.5 lg:top-0"><span class="text-white">1+</span></p>
+					</div>
+				</a>
+
+				
+			</div>
+			<!-- ./actions buttons -->
+		</div>
+		<!-- ./header bottom -->
+	</div>
+</header>
+<!-- ./header -->
+
+
+		<main>
+			<!-- breadcrumbs -->
+			<div><!-- breadcrumbs -->
+<div class="pb-4 pt-2 text-sm lg:pb-2 lg:pt-7.5">
+	<div class="container">
+		<ul class="flex items-center gap-1 overflow-hidden">
+			
+			<li class="flex items-center gap-1">
+				<a href="#" class="link-primary line-clamp-1 text-ellipsis text-tundora">Головна</a>
+				<svg class="h-2.5 w-2.5 fill-lavender-purple">
+					<use xlink:href="img/svg/sprites/sprite-icons.svg#chevron-right"></use>
+				</svg>
+			</li>
+			   
+			<li class="flex items-center gap-1">
+				<a href="#" class="link-primary line-clamp-1 text-ellipsis text-tundora">Повідомлення</a>
+			</li>
+			
+		</ul>
+	</div>
+</div>
+<!-- ./breadcrumbs -->
+</div>
+			<!-- ./breadcrumbs -->
+
+			<section>
+				<div class="container">
+					<div class="flex flex-col gap-5 lg:flex-row lg:gap-5 2xl:gap-10.5">
+						<div><!-- panel buyer -->
+<div class="lg:w-[22.5rem]">
+	<!-- buyer -->
+	<div class="relative rounded-bl-3xle rounded-br-3xle rounded-tl-xle rounded-tr-xle px-3 text-shark lg:bg-white lg:py-6 lg:shadow-custom">
+		<div class="flex flex-col items-center">
+			<div class="text-lg font-semibold">Кабінет покупця</div>
+			<div class="mt-5">
+				<svg class="h-11 w-15 lg:h-[55px] lg:w-[70px]">
+					<use xlink:href="img/svg/sprites/sprite-icons.svg#buyer-office"></use>
+				</svg>
+			</div>
+			<div class="k mt-4 text-base font-medium lg:text-xl lg:font-normal">Софія Смірнова</div>
+			<div class="mt-2 text-sm text-tundora">На сайті Vamberi з 10.09.2022</div>
+			<div class="mt-2.5 flex items-center gap-4 text-sm">
+				<div class="flex items-center gap-1.5">
+					<div>
+						<svg class="h-4 w-4 fill-transparent stroke-shark">
+							<use xlink:href="img/svg/sprites/sprite-icons.svg#star"></use>
+						</svg>
+					</div>
+					<div class="font-medium">0.0</div>
+				</div>
+				<div>
+					<span class="font-medium">0</span>
+					<span>відгуків</span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="relative mt-2.5 rounded-bl-xle rounded-br-xle rounded-tl-3xle rounded-tr-3xle lg:-mt-1.5 lg:bg-white lg:px-3 lg:pb-6 lg:pt-0 lg:shadow-custom">
+		<div class="mx-auto w-60">
+			<!-- Особистий кабінет -->
+			<div class="text-center text-base font-normal sm:font-medium">Особистий кабінет</div>
+			<div class="mt-2.5 flex items-center justify-between rounded-lge bg-lavender-purple px-3 py-2 text-sm transition ease-in lg:mt-5">
+				<a href="buyer-orders.html" class="relative">
+					
+					<div class="rounded-lge bg-transparent px-4 py-2.5 text-xs transition ease-in bg-white text-shark sm:text-sm">Покупець</div>
+					<svg class="absolute -left-8 top-1/2 h-3.5 w-3.5 -translate-y-1/2 fill-tall-poppy transition ease-in sm:-left-10 sm:h-5 sm:w-5">
+						<use xlink:href="img/svg/sprites/sprite-icons.svg#bell-filled"></use>
+					</svg>
+				</a>
+				<a href="seller-my-goods.html" class="relative">
+					
+					<div class="rounded-lge bg-transparent px-4 py-2.5 text-xs text-white transition ease-in  sm:text-sm">Продавець</div>
+					
+				</a>
+			</div>
+			<!-- ./Особистий кабінет -->
+
+			<!-- menu -->
+			<div class="mt-3.5 hidden lg:block">
+				<ul class="flex flex-col gap-3.5 text-sm">
+					<li class="flex">
+						<button class="btn-blue-royal-light group flex h-7.5 items-center justify-center gap-3 rounded-lge py-1 text-xs pl-1 pr-6">
+							<svg class="h-4.5 w-4.5 fill-royal-blue transition ease-in group-hover:fill-white">
+								<use xlink:href="img/svg/sprites/sprite-icons.svg#Group"></use>
+							</svg>
+							<span>Панель управління</span>
+						</button>
+					</li>
+					<li class="relative flex items-center gap-5">
+						<a href="buyer-orders.html" class="flex w-full items-center gap-5 rounded-lge border border-tundora p-3 lg:border-0 lg:py-0 lg:pl-1 lg:pr-0">
+							<svg class="h-5 w-5 flex-shrink-0 fill-shark">
+								<use xlink:href="img/svg/sprites/sprite-icons.svg#basket"></use>
+							</svg>
+							<div class="relative">
+								Замовлення
+								<p class="absolute left-[calc(100%+1.375rem)] top-1/2 flex h-[1.25rem] min-w-[1.25rem] flex-shrink-0 -translate-y-1/2 items-center justify-center rounded-full bg-royal-blue px-1.5 leading-none"><span class="text-white">656+</span></p>
+							</div>
+						</a>
+					</li>
+					<li class="relative flex items-center gap-5">
+						<a href="buyer-chat.html" class="flex w-full items-center gap-5 rounded-lge border border-tundora p-3 lg:border-0 lg:py-0 lg:pl-1 lg:pr-0">
+							<svg class="h-5 w-5 flex-shrink-0 fill-shark">
+								<use xlink:href="img/svg/sprites/sprite-icons.svg#envelope"></use>
+							</svg>
+							<div class="relative">
+								Повідомлення
+								<p class="absolute left-[calc(100%+1.375rem)] top-1/2 flex h-[1.25rem] min-w-[1.25rem] flex-shrink-0 -translate-y-1/2 items-center justify-center rounded-full bg-royal-blue px-1.5 leading-none"><span class="text-white">656+</span></p>
+							</div>
+						</a>
+					</li>
+					<li class="flex items-center gap-5">
+						<a href="#" class="flex w-full items-center gap-5 rounded-lge border border-tundora p-3 lg:border-0 lg:py-0 lg:pl-1 lg:pr-0">
+							<svg class="h-5 w-5 flex-shrink-0 fill-shark">
+								<use xlink:href="img/svg/sprites/sprite-icons.svg#eye2"></use>
+							</svg>
+							<span>Переглянуті товари</span>
+						</a>
+					</li>
+					<li class="flex items-center gap-5">
+						<a href="buyer-favorites.html" class="flex w-full items-center gap-5 rounded-lge border border-tundora p-3 lg:border-0 lg:py-0 lg:pl-1 lg:pr-0">
+							<svg class="h-5 w-5 flex-shrink-0 fill-shark">
+								<use xlink:href="img/svg/sprites/sprite-icons.svg#heart"></use>
+							</svg>
+							<span>Вибране</span>
+						</a>
+					</li>
+					<li class="flex items-center gap-5">
+						<a href="buyer-subscriptions.html" class="flex w-full items-center gap-5 rounded-lge border border-tundora p-3 lg:border-0 lg:py-0 lg:pl-1 lg:pr-0">
+							<svg class="h-5 w-5 flex-shrink-0 fill-shark">
+								<use xlink:href="img/svg/sprites/sprite-icons.svg#user02"></use>
+							</svg>
+							<span>Мої підписки</span>
+						</a>
+					</li>
+					<li class="flex items-center gap-5">
+						<a href="#" class="flex w-full items-center gap-5 rounded-lge border border-tundora p-3 lg:border-0 lg:py-0 lg:pl-1 lg:pr-0">
+							<svg class="h-5 w-5 flex-shrink-0 fill-shark">
+								<use xlink:href="img/svg/sprites/sprite-icons.svg#message2"></use>
+							</svg>
+							<span>Мої відгуки</span>
+						</a>
+					</li>
+					<li class="flex items-center gap-5">
+						<a href="settings-buyer.html" class="flex w-full items-center gap-5 rounded-lge border border-tundora p-3 lg:border-0 lg:py-0 lg:pl-1 lg:pr-0">
+							<svg class="h-5 w-5 flex-shrink-0 fill-shark">
+								<use xlink:href="img/svg/sprites/sprite-icons.svg#settings"></use>
+							</svg>
+							<span>Налаштування</span>
+						</a>
+					</li>
+					<li class="flex items-center gap-5">
+						<a href="#" class="flex w-full items-center gap-5 rounded-lge border border-tundora p-3 lg:border-0 lg:py-0 lg:pl-1 lg:pr-0">
+							<svg class="h-5 w-5 flex-shrink-0 fill-shark">
+								<use xlink:href="img/svg/sprites/sprite-icons.svg#exit"></use>
+							</svg>
+							<span>Вихід</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<!-- menu -->
+		</div>
+	</div>
+</div>
+<!-- ./panel buyer -->
+</div>
+
+						<div class="w-full">
+							<!-- info banner  -->
+<div class="info-banner bg-gradient-pink2 relative mb-6 mt-0 flex min-h-[8.5rem] flex-grow flex-col rounded-lge px-2.5 py-5 lg:mb-9 lg:mt-0 lg:min-h-[11.25rem] lg:px-3.5">
+	<button class="absolute right-2 top-2 z-20 info-banner-close">
+		<svg class="h-4 w-4 fill-tundora">
+			<use xlink:href="img/svg/sprites/sprite-icons.svg#close"></use>
+		</svg>
+	</button>
+	<div class="text-xs font-medium text-shark lg:text-lg">Не дайте себе обдурити!</div>
+	<div class="mb-1.5 mt-4 pr-24 text-xs text-tundora lg:mt-2.5 lg:pr-32 lg:text-sm">Дізнайтеся, як уберегти свій гаманець від зловмисників</div>
+	<a href="#" class="mt-auto text-xs font-medium text-royal-blue lg:text-sm">Поради з безпеки</a>
+	<img src="img/icon005.png" alt="icon" class="absolute bottom-0 right-0 h-[7.125rem] w-[7.8125rem] lg:h-[10.625rem] lg:w-[11.625rem]" style="float: right" />
+</div>
+<!-- ./info banner  -->
+
+
+							<!-- messages & chat block  -->
+							<div class="rounded-lge border-lavender-purple/50 lg:border lg:bg-white lg:p-5">
+								<div class="flex flex-col gap-3 lg:gap-6 xl:flex-row">
+									<!-- messages -->
+									<div class="flex-shrink-0 xl:w-[41%]">
+										<div class="flex items-center gap-2.5">
+											<div class="text-lg font-medium text-shark">Повідомлення</div>
+											<p class="flex h-[1.25rem] min-w-[1.25rem] flex-shrink-0 items-center justify-center rounded-full bg-royal-blue px-1.5 leading-none lg:hidden"><span class="text-white">99+</span></p>
+										</div>
+
+										<div class="mt-4 flex flex-wrap gap-2">
+											<button class="flex min-w-[100px] justify-center rounded-emd border border-lavender-purple/50 bg-white px-2 py-0.5 text-sm lg:min-w-[8.125rem] lg:rounded-lge lg:px-2.5 lg:py-1.5">
+												<p>Непрочитані <span class="hidden font-medium lg:inline-block">2</span></p>
+											</button>
+											<button class="flex min-w-[100px] justify-center rounded-emd border border-royal-blue bg-white px-2 py-0.5 text-sm text-royal-blue lg:min-w-[8.125rem] lg:rounded-lge lg:px-2.5 lg:py-1.5">
+												<p>Активні <span class="hidden font-medium lg:inline-block">5</span></p>
+											</button>
+											<button class="flex min-w-[100px] justify-center rounded-emd border border-lavender-purple/50 bg-white px-2 py-0.5 text-sm lg:min-w-[8.125rem] lg:rounded-lge lg:px-2.5 lg:py-1.5">
+												<p>Архів <span class="hidden font-medium lg:inline-block">5</span></p>
+											</button>
+										</div>
+
+										<div class="mt-4 flex w-full flex-col items-center justify-center gap-0.5 rounded-lge bg-lavender-purple p-2.5 text-white">
+											<p class="text-center text-base leading-6 lg:text-lg lg:leading-7">Підтримка VamBeri</p>
+											<p class="text-center text-sm leading-5 lg:text-base lg:leading-6">Будемо раді вам допомогти!</p>
+										</div>
+
+										<!-- search -->
+										<div class="relative mt-5">
+											<input type="text" class="h-9 w-full rounded-lge border-dusty-gray px-3 py-1 pr-10 text-sm ring-0 transition ease-in placeholder:text-dusty-gray focus:border-lavender-purple focus:ring-0 lg:h-auto lg:py-3.5 lg:pl-3.5" placeholder="Пошук по повідомленням" />
+											<button class="absolute right-1.5 top-1/2 flex h-7 items-center gap-1 rounded-lge bg-lavender-purple px-2.5 text-sm text-white -translate-y-1/2 lg:bg-transparent">
+												<span class="lg:hidden">Знайти</span>
+												<svg class="h-3.5 w-3.5 fill-white lg:h-5 lg:w-5 lg:fill-dusty-gray">
+													<use xlink:href="img/svg/sprites/sprite-icons.svg#search"></use>
+												</svg>
+											</button>
+										</div>
+										<!-- ./search -->
+
+										<!-- messages list -->
+										<ul class="mt-5 flex flex-col gap-3.5 lg:mt-4.5">
+											<!-- messages list item -->
+											<li class="relative rounded-lge border border-lavender-purple/40 bg-white px-2.5 py-1.5 lg:px-3 lg:pb-1 lg:pt-3.5">
+												<div class="flex items-center gap-2.5">
+													<div class="relative h-12.5 w-12.5 flex-shrink-0 lg:h-[4.375rem] lg:w-[4.375rem]">
+														<div class="h-12.5 w-12.5 overflow-hidden rounded-full lg:h-[4.375rem] lg:w-[4.375rem]">
+															<img class="w-fill object-ccover h-full object-center" src="img/no-avatar.jpg" alt="img" />
+														</div>
+													</div>
+													<div>
+														<div class="pr-16 text-base font-medium text-shark lg:pr-0">Іван Семенов</div>
+														<div class="mt-1 line-clamp-2 text-ellipsis pr-16 text-sm text-tundora lg:mt-2 lg:line-clamp-1 lg:pr-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, quam?</div>
+													</div>
+												</div>
+												<div class="mt-2.5 line-clamp-1 hidden text-ellipsis pr-10 text-sm leading-5 text-dusty-gray lg:block">Шкаф кровать трансформер</div>
+												<p class="absolute bottom-2.5 right-3 flex h-[1.25rem] min-w-[1.25rem] flex-shrink-0 items-center justify-center rounded-full bg-royal-blue px-1.5 leading-none"><span class="text-white">99+</span></p>
+												<p class="absolute right-2 top-2 text-sm text-dusty-gray lg:hidden">вчора</p>
+											</li>
+											<!-- ./messages list item -->
+											<!-- messages list item -->
+											<li class="relative rounded-lge border border-lavender-purple/40 bg-white px-2.5 py-1.5 lg:px-3 lg:pb-1 lg:pt-3.5">
+												<div class="flex items-center gap-2.5">
+													<div class="relative h-12.5 w-12.5 flex-shrink-0 lg:h-[4.375rem] lg:w-[4.375rem]">
+														<div class="h-12.5 w-12.5 overflow-hidden rounded-full lg:h-[4.375rem] lg:w-[4.375rem]">
+															<img class="w-fill object-ccover h-full object-center" src="img/no-avatar.jpg" alt="img" />
+														</div>
+													</div>
+													<div>
+														<div class="pr-16 text-base font-medium text-shark lg:pr-0">Іван Семенов</div>
+														<div class="mt-1 line-clamp-2 text-ellipsis pr-16 text-sm text-tundora lg:mt-2 lg:line-clamp-1 lg:pr-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, quam?</div>
+													</div>
+												</div>
+												<div class="mt-2.5 line-clamp-1 hidden text-ellipsis pr-10 text-sm leading-5 text-dusty-gray lg:block">Шкаф кровать трансформер</div>
+												<p class="absolute bottom-2.5 right-3 flex h-[1.25rem] min-w-[1.25rem] flex-shrink-0 items-center justify-center rounded-full bg-royal-blue px-1.5 leading-none"><span class="text-white">99+</span></p>
+												<p class="absolute right-2 top-2 text-sm text-dusty-gray lg:hidden">вчора</p>
+											</li>
+											<!-- ./messages list item -->
+											<!-- messages list item -->
+											<li class="relative rounded-lge border border-lavender-purple/40 bg-white px-2.5 py-1.5 lg:px-3 lg:pb-1 lg:pt-3.5">
+												<div class="flex items-center gap-2.5">
+													<div class="relative h-12.5 w-12.5 flex-shrink-0 lg:h-[4.375rem] lg:w-[4.375rem]">
+														<div class="h-12.5 w-12.5 overflow-hidden rounded-full lg:h-[4.375rem] lg:w-[4.375rem]">
+															<img class="w-fill object-ccover h-full object-center" src="img/no-avatar.jpg" alt="img" />
+														</div>
+													</div>
+													<div>
+														<div class="pr-16 text-base font-medium text-shark lg:pr-0">Іван Семенов</div>
+														<div class="mt-1 line-clamp-2 text-ellipsis pr-16 text-sm text-tundora lg:mt-2 lg:line-clamp-1 lg:pr-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, quam?</div>
+													</div>
+												</div>
+												<div class="mt-2.5 line-clamp-1 hidden text-ellipsis pr-10 text-sm leading-5 text-dusty-gray lg:block">Шкаф кровать трансформер</div>
+												<p class="absolute bottom-2.5 right-3 flex h-[1.25rem] min-w-[1.25rem] flex-shrink-0 items-center justify-center rounded-full bg-royal-blue px-1.5 leading-none"><span class="text-white">99+</span></p>
+												<p class="absolute right-2 top-2 text-sm text-dusty-gray lg:hidden">вчора</p>
+											</li>
+											<!-- ./messages list item -->
+											<!-- messages list item -->
+											<li class="relative rounded-lge border border-lavender-purple/40 bg-white px-2.5 py-1.5 lg:px-3 lg:pb-1 lg:pt-3.5">
+												<div class="flex items-center gap-2.5">
+													<div class="relative h-12.5 w-12.5 flex-shrink-0 lg:h-[4.375rem] lg:w-[4.375rem]">
+														<div class="h-12.5 w-12.5 overflow-hidden rounded-full lg:h-[4.375rem] lg:w-[4.375rem]">
+															<img class="w-fill object-ccover h-full object-center" src="img/no-avatar.jpg" alt="img" />
+														</div>
+													</div>
+													<div>
+														<div class="pr-16 text-base font-medium text-shark lg:pr-0">Іван Семенов</div>
+														<div class="mt-1 line-clamp-2 text-ellipsis pr-16 text-sm text-tundora lg:mt-2 lg:line-clamp-1 lg:pr-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, quam?</div>
+													</div>
+												</div>
+												<div class="mt-2.5 line-clamp-1 hidden text-ellipsis pr-10 text-sm leading-5 text-dusty-gray lg:block">Шкаф кровать трансформер</div>
+												<p class="absolute bottom-2.5 right-3 flex h-[1.25rem] min-w-[1.25rem] flex-shrink-0 items-center justify-center rounded-full bg-royal-blue px-1.5 leading-none"><span class="text-white">99+</span></p>
+												<p class="absolute right-2 top-2 text-sm text-dusty-gray lg:hidden">вчора</p>
+											</li>
+											<!-- ./messages list item -->
+											<!-- messages list item -->
+											<li class="relative rounded-lge border border-lavender-purple/40 bg-white px-2.5 py-1.5 lg:px-3 lg:pb-1 lg:pt-3.5">
+												<div class="flex items-center gap-2.5">
+													<div class="relative h-12.5 w-12.5 flex-shrink-0 lg:h-[4.375rem] lg:w-[4.375rem]">
+														<div class="h-12.5 w-12.5 overflow-hidden rounded-full lg:h-[4.375rem] lg:w-[4.375rem]">
+															<img class="w-fill object-ccover h-full object-center" src="img/no-avatar.jpg" alt="img" />
+														</div>
+													</div>
+													<div>
+														<div class="pr-16 text-base font-medium text-shark lg:pr-0">Іван Семенов</div>
+														<div class="mt-1 line-clamp-2 text-ellipsis pr-16 text-sm text-tundora lg:mt-2 lg:line-clamp-1 lg:pr-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, quam?</div>
+													</div>
+												</div>
+												<div class="mt-2.5 line-clamp-1 hidden text-ellipsis pr-10 text-sm leading-5 text-dusty-gray lg:block">Шкаф кровать трансформер</div>
+												<p class="absolute bottom-2.5 right-3 flex h-[1.25rem] min-w-[1.25rem] flex-shrink-0 items-center justify-center rounded-full bg-royal-blue px-1.5 leading-none"><span class="text-white">99+</span></p>
+												<p class="absolute right-2 top-2 text-sm text-dusty-gray lg:hidden">вчора</p>
+											</li>
+											<!-- ./messages list item -->
+										</ul>
+										<!-- ./messages list -->
+
+										<div class="mt-5 flex justify-center">
+											<button class="btn-primary flex h-8 w-8 items-center justify-center rounded-full lg:h-12.5 lg:w-12.5">
+												<svg class="h-2 w-4 fill-white lg:h-2.5 lg:w-5">
+													<use xlink:href="img/svg/sprites/sprite-icons.svg#chevron-down"></use>
+												</svg>
+											</button>
+										</div>
+									</div>
+									<!-- messages -->
+
+									<!-- chat -->
+									<div class="mt-5 lg:flex-grow">
+										<div class="rounded-lge border-lavender-purple/50 lg:border lg:px-6 lg:py-4.5">
+											<div class="flex items-center gap-4 rounded-lge border border-lavender-purple/40 bg-white p-2.5">
+												<div class="relative h-12.5 w-12.5 flex-shrink-0 lg:h-[3.75rem] lg:w-[3.75rem]">
+													<div class="h-12.5 w-12.5 overflow-hidden rounded-full lg:h-[3.75rem] lg:w-[3.75rem]">
+														<img class="w-fill object-ccover h-full object-center" src="img/no-avatar.jpg" alt="img" />
+													</div>
+													<div class="absolute bottom-0.5 right-1 h-2.5 w-2.5 rounded-full bg-limeade"></div>
+												</div>
+												<div class="flex w-full flex-col justify-between lg:flex-row lg:items-center lg:gap-4">
+													<div class="flex flex-col gap-0.5 lg:gap-2">
+														<div class="text-base font-semibold text-shark">Іван Семенов</div>
+														<div class="text-sm text-dusty-gray">Шкаф ліжко трансформер Шкаф ліжко трансформер ліжко</div>
+													</div>
+													<div class="mt-1 flex flex-shrink-0 gap-2.5 text-sm lg:ml-auto lg:mt-0 lg:flex-col lg:items-end">
+														<div class="text-limeade lg:text-right">Зараз онлайн</div>
+														<div class="ml-auto flex gap-2">
+															<button>
+																<svg class="h-3.5 w-3.5 lg:h-5 lg:w-5">
+																	<use xlink:href="img/svg/sprites/sprite-icons.svg#user01"></use>
+																</svg>
+															</button>
+															<button>
+																<svg class="h-3.5 w-3.5 fill-tall-poppy lg:h-5 lg:w-5">
+																	<use xlink:href="img/svg/sprites/sprite-icons.svg#bin2"></use>
+																</svg>
+															</button>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="scrollbar mt-6 flex max-h-[31.25rem] flex-col gap-5.5 overflow-y-auto lg:mt-8.5 lg:px-4">
+												<!-- user message -->
+												<div class="flex flex-grow gap-1.5 sm:mr-12 lg:mr-14">
+													<div>
+														<div class="h-11 w-11 flex-shrink-0 overflow-hidden rounded-full lg:h-12.5 lg:w-12.5">
+															<img class="h-full w-full object-cover object-center" src="img/user-woman-no-avatar.png" alt="img" />
+														</div>
+														<div class="mt-1.5 text-center text-sm">12:46</div>
+													</div>
+													<div class="relative flex w-full flex-col rounded-bl-2lge rounded-br-2lge rounded-tr-2lge bg-white p-3 lg:bg-wild-sand">
+														<!-- name -->
+														<div class="text-base font-medium leading-5">Софія Смірнова</div>
+														<!-- ./name -->
+														<!-- message text-->
+														<div class="mt-2.5 text-sm">Вітаю! Скажіть, будь ласка, чи висувні нижні полички і можете надіслати ще фото?</div>
+														<!-- ./message text-->
+
+														<!-- status -->
+														<div class="absolute right-2 top-2">
+															<svg class="h-3.5 w-3.5 fill-limeade">
+																<use xlink:href="img/svg/sprites/sprite-icons.svg#checker4"></use>
+															</svg>
+														</div>
+														<!-- status -->
+													</div>
+												</div>
+												<!-- ./user message -->
+
+												<!-- answerer message -->
+												<div class="flex flex-grow gap-1.5 sm:ml-12 lg:ml-14">
+													<div class="relative flex w-full flex-col rounded-bl-2lge rounded-br-2lge rounded-tl-2lge bg-pattens-blue p-3">
+														<!-- name -->
+														<div class="text-base font-medium leading-5">Іван Семенов</div>
+														<!-- ./name -->
+														<!-- message text-->
+														<div class="mt-2.5 text-sm">Добридень! Так, шафки висувні. Фото прикріпив.</div>
+														<!-- ./message text-->
+														<!-- attachment images -->
+														<div class="mt-2.5 flex flex-wrap gap-2.5 lg:gap-3.5">
+															<div class="h-11 w-[6.25rem] overflow-hidden rounded-lge lg:h-[5.125rem] lg:w-30">
+																<img class="h-full w-full object-cover" src="img/goods/1.jpg" alt="img" />
+															</div>
+															<div class="h-11 w-[6.25rem] overflow-hidden rounded-lge lg:h-[5.125rem] lg:w-30">
+																<img class="h-full w-full object-cover" src="img/goods/4.jpg" alt="img" />
+															</div>
+														</div>
+														<!-- ./attachment images -->
+
+														<!-- status -->
+														<div class="absolute right-2 top-2">
+															<svg class="h-3.5 w-3.5 fill-limeade">
+																<use xlink:href="img/svg/sprites/sprite-icons.svg#checker4"></use>
+															</svg>
+														</div>
+														<!-- status -->
+													</div>
+													<div>
+														<div class="h-11 w-11 flex-shrink-0 overflow-hidden rounded-full lg:h-12.5 lg:w-12.5">
+															<img class="h-full w-full object-cover object-center" src="img/no-avatar.jpg" alt="img" />
+														</div>
+														<div class="mt-1.5 text-center text-sm">16:26</div>
+													</div>
+												</div>
+												<!-- ./answerer message -->
+
+												<!-- user message -->
+												<div class="flex flex-grow gap-1.5 sm:mr-12 lg:mr-14">
+													<div>
+														<div class="h-11 w-11 flex-shrink-0 overflow-hidden rounded-full lg:h-12.5 lg:w-12.5">
+															<img class="h-full w-full object-cover object-center" src="img/user-woman-no-avatar.png" alt="img" />
+														</div>
+														<div class="mt-1.5 text-center text-sm">19:00</div>
+													</div>
+													<div class="relative flex w-full flex-col rounded-bl-2lge rounded-br-2lge rounded-tr-2lge bg-white p-3 lg:bg-wild-sand">
+														<!-- name -->
+														<div class="text-base font-medium leading-5">Софія Смірнова</div>
+														<!-- ./name -->
+														<!-- message text-->
+														<div class="mt-2.5 text-sm">Дякую, зрозуміла. Буду думати)</div>
+														<!-- ./message text-->
+
+														<!-- status -->
+														<div class="absolute right-2 top-2">
+															<svg class="h-3.5 w-3.5 fill-limeade">
+																<use xlink:href="img/svg/sprites/sprite-icons.svg#checker4"></use>
+															</svg>
+														</div>
+														<!-- status -->
+													</div>
+												</div>
+												<!-- ./user message -->
+
+												<!-- answerer message -->
+												<div class="flex flex-grow gap-1.5 sm:ml-12 lg:ml-14">
+													<div class="relative w-full flex-col rounded-bl-2lge rounded-br-2lge rounded-tl-2lge bg-pattens-blue p-3">
+														<!-- name -->
+														<div class="text-base font-medium leading-5">Іван Семенов</div>
+														<!-- ./name -->
+														<!-- message text-->
+														<div class="mt-2.5 text-sm">Буду чекати відповіді</div>
+														<!-- ./message text-->
+														<!-- attachment images -->
+
+														<!-- status -->
+														<div class="absolute right-2 top-2">
+															<svg class="h-2 w-2.5 fill-limeade">
+																<use xlink:href="img/svg/sprites/sprite-icons.svg#checker2"></use>
+															</svg>
+														</div>
+														<!-- status -->
+													</div>
+													<div>
+														<div class="h-11 w-11 flex-shrink-0 overflow-hidden rounded-full lg:h-12.5 lg:w-12.5">
+															<img class="h-full w-full object-cover object-center" src="img/no-avatar.jpg" alt="img" />
+														</div>
+														<div class="mt-1.5 text-center text-sm">16:26</div>
+													</div>
+												</div>
+												<!-- ./answerer message -->
+											</div>
+
+											<!-- chat area -->
+											<div class="mt-12.5 lg:mt-22">
+												<div class="h-24 w-full rounded-lge border border-lavender-purple bg-white p-2.5">
+													<div class="flex h-full flex-col">
+														<div class="flex">
+															<textarea class="h-10 w-full resize-none border-0 bg-transparent p-0 align-bottom text-sm ring-0 placeholder:text-sm placeholder:text-dusty-gray focus:ring-0" placeholder="Ваше повідомлення..."></textarea>
+														</div>
+
+														<div class="mt-auto flex items-center justify-between">
+															<div class="flex items-center gap-5">
+																<button class="">
+																	<svg class="h-4 w-4 flex-shrink-0 fill-lavender-purple lg:h-6 lg:w-6">
+																		<use xlink:href="img/svg/sprites/sprite-icons.svg#image"></use>
+																	</svg>
+																</button>
+																<button class="">
+																	<svg class="h-4 w-4 flex-shrink-0 fill-lavender-purple lg:h-6 lg:w-6">
+																		<use xlink:href="img/svg/sprites/sprite-icons.svg#message"></use>
+																	</svg>
+																</button>
+															</div>
+
+															<button>
+																<svg class="h-4 w-4 flex-shrink-0 fill-lavender-purple lg:h-6 lg:w-6">
+																	<use xlink:href="img/svg/sprites/sprite-icons.svg#message-send"></use>
+																</svg>
+															</button>
+														</div>
+													</div>
+												</div>
+
+												<div class="mt-3.5 text-right lg:mt-5">
+													<button class="whitespace-nowrap text-sm text-tall-poppy underline decoration-tall-poppy decoration-dashed decoration-[0.25px] underline-offset-4 lg:text-base lg:decoration-[0.5px]">Поскаржитися</button>
+												</div>
+											</div>
+											<!-- ./chat area -->
+										</div>
+									</div>
+									<!-- ./chat -->
+								</div>
+							</div>
+							<!-- messages & chat block -->
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<div class="account-menu fixed inset-0 z-40 hidden bg-black/40 lg:absolute lg:inset-[unset] lg:right-0 lg:top-[102%] lg:bg-transparent">
+	<div class="account-menu-body absolute right-0 top-0 z-30 h-[calc(100vh-3rem)] w-full bg-white px-10 py-4 lw:w-[22.5rem] lg:left-auto lg:mt-4.5 lg:h-auto lg:min-h-fit lg:w-80 lg:rounded-2lge lg:border lg:border-lavender-purple/50 lg:px-10 lg:py-5">
+		<div>
+			<div class="mt-10 flex h-12.5 w-full items-center justify-between rounded-lge bg-lavender-purple px-3 py-2 text-sm transition ease-in lg:mt-0">
+				<label class="buyer-btn relative cursor-pointer" data-link-panel="settings-buyer.html">
+					<input type="radio" name="account" class="peer/buyer hidden" checked />
+					<div class="rounded-lge bg-transparent px-4 py-2.5 text-white transition ease-in peer-checked/buyer:bg-white peer-checked/buyer:text-shark">Покупець</div>
+					<svg class="absolute -left-10 top-1/2 hidden h-5 w-5 fill-tall-poppy opacity-0 transition ease-in -translate-y-1/2 peer-checked/buyer:opacity-100 lg:block">
+						<use xlink:href="img/svg/sprites/sprite-icons.svg#bell-filled "></use>
+					</svg>
+				</label>
+				<label class="seller-btn relative cursor-pointer" data-link-panel="settings-seller-private.html">
+					<input type="radio" name="account" class="peer/seller hidden" />
+					<div class="rounded-lge bg-transparent px-4 py-2.5 text-white transition ease-in peer-checked/seller:bg-white peer-checked/seller:text-shark">Продавець</div>
+					<svg class="absolute -right-9 top-1/2 hidden h-5 w-5 fill-tall-poppy opacity-0 transition ease-in -translate-y-1/2 peer-checked/seller:opacity-100 lg:block">
+						<use xlink:href="img/svg/sprites/sprite-icons.svg#bell-filled "></use>
+					</svg>
+				</label>
+			</div>
+
+			<a href="settings-buyer.html" class="btn-panel btn-blue-royal-light group mt-5 flex h-9 w-full items-center justify-center gap-4 rounded-lge p-1 text-xs" aria-label="Панель управління">
+				<svg class="h-5 w-5 fill-royal-blue transition ease-in group-hover:fill-white">
+					<use xlink:href="img/svg/sprites/sprite-icons.svg#Group"></use>
+				</svg>
+				<span>Панель управління</span>
+			</a>
+		</div>
+		<button class="account-menu-close absolute right-4 top-4 lg:hidden" aria-label="Закрити">
+			<svg class="h-5 w-5">
+				<use xlink:href="img/svg/sprites/sprite-icons.svg#close"></use>
+			</svg>
+		</button>
+
+		<!-- buyer -->
+		<div class="buyer-menu relative">
+			<div class="absolute -top-[10.375rem] left-0 right-0 text-center text-lg font-semibold lg:hidden">Кабінет покупця</div>
+			<div class="scrollbar-custom relative -mr-3 mt-5 h-[calc(100vh-15rem)] overflow-auto pr-2.5 text-shark lg:mr-0 lg:h-auto lg:overflow-visible lg:pr-0">
+				<ul class="flex flex-col gap-4.5 text-sm">
+					<li class="flex items-center gap-3 lg:gap-5">
+						<a href="#" class="flex h-9 w-full items-center gap-5 rounded-lge border border-tundora px-3.5 py-2 leading-none lg:h-auto lg:border-0 lg:p-0">
+							<svg class="h-4 w-4 flex-shrink-0 fill-shark lg:h-5 lg:w-5">
+								<use xlink:href="img/svg/sprites/sprite-icons.svg#basket"></use>
+							</svg>
+							<span>Замовлення</span>
+						</a>
+					</li>
+					<li class="flex items-center gap-3 lg:gap-5">
+						<a href="#" class="flex h-9 w-full items-center gap-5 rounded-lge border border-tundora px-3.5 py-2 leading-none lg:h-auto lg:border-0 lg:p-0">
+							<svg class="h-4 w-4 flex-shrink-0 fill-shark lg:h-5 lg:w-5">
+								<use xlink:href="img/svg/sprites/sprite-icons.svg#envelope"></use>
+							</svg>
+							<div class="flex flex-grow items-center justify-between lg:justify-normal">
+								<div class="pr-5">Повідомлення</div>
+								<p class="flex h-[1.25rem] min-w-[1.25rem] flex-shrink-0 items-center justify-center rounded-full bg-royal-blue px-1.5 leading-none"><span class="text-white">999+</span></p>
+							</div>
+						</a>
+					</li>
+					<li class="flex items-center gap-5">
+						<a href="#" class="flex h-9 w-full items-center gap-5 rounded-lge border border-tundora px-3.5 py-2 leading-none lg:h-auto lg:border-0 lg:p-0">
+							<svg class="h-4 w-4 flex-shrink-0 fill-shark lg:h-5 lg:w-5">
+								<use xlink:href="img/svg/sprites/sprite-icons.svg#eye"></use>
+							</svg>
+							<span>Переглянуті товари</span>
+						</a>
+					</li>
+					<li class="flex items-center gap-5">
+						<a href="#" class="flex h-9 w-full items-center gap-5 rounded-lge border border-tundora px-3.5 py-2 leading-none lg:h-auto lg:border-0 lg:p-0">
+							<svg class="h-4 w-4 flex-shrink-0 fill-shark lg:h-5 lg:w-5">
+								<use xlink:href="img/svg/sprites/sprite-icons.svg#heart"></use>
+							</svg>
+							<span>Вибране</span>
+						</a>
+					</li>
+					<li class="flex items-center gap-5">
+						<a href="#" class="flex h-9 w-full items-center gap-5 rounded-lge border border-tundora px-3.5 py-2 leading-none lg:h-auto lg:border-0 lg:p-0">
+							<svg class="h-4 w-4 flex-shrink-0 fill-shark lg:h-5 lg:w-5">
+								<use xlink:href="img/svg/sprites/sprite-icons.svg#user01"></use>
+							</svg>
+							<span>Мої підписки</span>
+						</a>
+					</li>
+					<li class="relative flex items-center gap-5">
+						<a href="#" class="flex h-9 w-full items-center gap-5 rounded-lge border border-tundora px-3.5 py-2 leading-none lg:h-auto lg:border-0 lg:p-0">
+							<svg class="h-4 w-4 flex-shrink-0 fill-shark lg:h-5 lg:w-5">
+								<use xlink:href="img/svg/sprites/sprite-icons.svg#message2"></use>
+							</svg>
+
+							<div class="flex flex-grow items-center justify-between lg:justify-normal">
+								<div class="pr-5">Мої відгуки</div>
+								<p class="flex h-[1.25rem] min-w-[1.25rem] flex-shrink-0 items-center justify-center rounded-full bg-royal-blue px-1.5 leading-none"><span class="text-white">999+</span></p>
+							</div>
+						</a>
+					</li>
+					<li class="flex items-center gap-5">
+						<a href="#" class="flex h-9 w-full items-center gap-5 rounded-lge border border-tundora px-3.5 py-2 leading-none lg:h-auto lg:border-0 lg:p-0">
+							<svg class="h-4 w-4 flex-shrink-0 fill-shark lg:h-5 lg:w-5">
+								<use xlink:href="img/svg/sprites/sprite-icons.svg#settings"></use>
+							</svg>
+							<span>Налаштування</span>
+						</a>
+					</li>
+					<li class="flex items-center gap-5">
+						<a href="#" class="flex h-9 w-full items-center gap-5 rounded-lge border border-tundora px-3.5 py-2 leading-none lg:h-auto lg:border-0 lg:p-0">
+							<svg class="h-4 w-4 flex-shrink-0 fill-shark lg:h-5 lg:w-5">
+								<use xlink:href="img/svg/sprites/sprite-icons.svg#exit"></use>
+							</svg>
+							<span>Вихід</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- buyer -->
+
+		<!-- seller -->
+		<div class="seller-menu relative hidden">
+			<div class="absolute -top-[10.375rem] left-0 right-0 text-center text-lg font-semibold lg:hidden">Кабінет продавця</div>
+			<div class="scrollbar-custom relative -mr-3 mt-5 h-[calc(100vh-15rem)] overflow-auto pr-2.5 text-shark lg:mr-0 lg:h-auto lg:overflow-visible lg:pr-0">
+				<ul class="flex flex-col gap-5 text-sm">
+					<li class="relative flex items-center gap-5">
+						<a href="#" class="flex h-9 w-full items-center gap-5 rounded-lge border border-tundora px-3.5 py-2 leading-none lg:h-auto lg:border-0 lg:p-0">
+							<svg class="h-4 w-4 flex-shrink-0 fill-shark lg:h-5 lg:w-5">
+								<use xlink:href="img/svg/sprites/sprite-icons.svg#bag"></use>
+							</svg>
+
+							<div class="flex flex-grow items-center justify-between lg:justify-normal">
+								<div class="pr-5">Продажі</div>
+								<p class="flex h-[1.25rem] min-w-[1.25rem] flex-shrink-0 items-center justify-center rounded-full bg-royal-blue px-1.5 leading-none"><span class="text-white">999+</span></p>
+							</div>
+						</a>
+					</li>
+					<li class="relative flex items-center gap-5">
+						<a href="#" class="flex h-9 w-full items-center gap-5 rounded-lge border border-tundora px-3.5 py-2 leading-none lg:h-auto lg:border-0 lg:p-0">
+							<svg class="h-4 w-4 flex-shrink-0 fill-shark lg:h-5 lg:w-5">
+								<use xlink:href="img/svg/sprites/sprite-icons.svg#envelope"></use>
+							</svg>
+
+							<div class="flex flex-grow items-center justify-between lg:justify-normal">
+								<div class="pr-5">Повідомлення</div>
+								<p class="flex h-[1.25rem] min-w-[1.25rem] flex-shrink-0 items-center justify-center rounded-full bg-royal-blue px-1.5 leading-none"><span class="text-white">999+</span></p>
+							</div>
+						</a>
+					</li>
+
+					<li class="flex items-center gap-5">
+						<a href="#" class="flex h-9 w-full items-center gap-5 rounded-lge border border-tundora px-3.5 py-2 leading-none lg:h-auto lg:border-0 lg:p-0">
+							<svg class="h-4 w-4 flex-shrink-0 fill-shark lg:h-5 lg:w-5">
+								<use xlink:href="img/svg/sprites/sprite-icons.svg#my-products"></use>
+							</svg>
+							<span>Мої товари</span>
+						</a>
+					</li>
+					<li class="flex items-center gap-5">
+						<a href="#" class="flex h-9 w-full items-center gap-5 rounded-lge border border-tundora px-3.5 py-2 leading-none lg:h-auto lg:border-0 lg:p-0">
+							<svg class="h-4 w-4 flex-shrink-0 fill-shark lg:h-5 lg:w-5">
+								<use xlink:href="img/svg/sprites/sprite-icons.svg#add"></use>
+							</svg>
+							<span>Додати товар</span>
+						</a>
+					</li>
+					<li class="flex items-center gap-5">
+						<a href="#" class="flex h-9 w-full items-center gap-5 rounded-lge border border-tundora px-3.5 py-2 leading-none lg:h-auto lg:border-0 lg:p-0">
+							<svg class="h-5 w-5 flex-shrink-0 fill-transparent stroke-shark">
+								<use xlink:href="img/svg/sprites/sprite-icons.svg#my-shop"></use>
+							</svg>
+							<span>Мій магазин </span>
+						</a>
+					</li>
+					<li class="flex items-center gap-5">
+						<a href="#" class="flex h-9 w-full items-center gap-5 rounded-lge border border-tundora px-3.5 py-2 leading-none lg:h-auto lg:border-0 lg:p-0">
+							<svg class="h-4 w-4 flex-shrink-0 fill-shark lg:h-5 lg:w-5">
+								<use xlink:href="img/svg/sprites/sprite-icons.svg#wallet"></use>
+							</svg>
+							<span>Гаманець [0 грн.] </span>
+						</a>
+					</li>
+
+					<li class="flex items-center gap-5">
+						<a href="#" class="flex h-9 w-full items-center gap-5 rounded-lge border border-tundora px-3.5 py-2 leading-none lg:h-auto lg:border-0 lg:p-0">
+							<svg class="h-4 w-4 flex-shrink-0 fill-shark lg:h-5 lg:w-5">
+								<use xlink:href="img/svg/sprites/sprite-icons.svg#user01"></use>
+							</svg>
+							<span>Мої підписки</span>
+						</a>
+					</li>
+					<li class="flex items-center gap-5">
+						<a href="#" class="flex h-9 w-full items-center gap-5 rounded-lge border border-tundora px-3.5 py-2 leading-none lg:h-auto lg:border-0 lg:p-0">
+							<svg class="h-4 w-4 flex-shrink-0 fill-shark lg:h-5 lg:w-5">
+								<use xlink:href="img/svg/sprites/sprite-icons.svg#settings"></use>
+							</svg>
+							<span>Налаштування</span>
+						</a>
+					</li>
+
+					<li class="flex items-center gap-5">
+						<a href="#" class="flex h-9 w-full items-center gap-5 rounded-lge border border-tundora px-3.5 py-2 leading-none lg:h-auto lg:border-0 lg:p-0">
+							<svg class="h-4 w-4 flex-shrink-0 fill-shark lg:h-5 lg:w-5">
+								<use xlink:href="img/svg/sprites/sprite-icons.svg#exit"></use>
+							</svg>
+							<span>Вихід</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- seller -->
+	</div>
+</div>
+
+		<!-- sticky menu -->
+
+<div class="sticky inset-x-0 bottom-0 z-50 h-12.5 bg-white px-4 pb-1 pt-1.5 shadow-sticky md:px-5 lg:hidden" id="sticky">
+	<div class="flex items-center justify-between gap-x-3">
+		<a class="shrink-0" href="#home">
+			<div class="flex shrink-0 flex-col items-center gap-1">
+				<svg class="h-5 w-5 fill-shark">
+					<use xlink:href="img/svg/sprites/sprite-icons.svg#home"></use>
+				</svg>
+				<div class="text-xs text-shark">Головна</div>
+			</div>
+		</a>
+		<a class="shrink-0" href="#favorites">
+			<div class="flex shrink-0 flex-col items-center gap-1">
+				<svg class="h-5 w-5 fill-shark">
+					<use xlink:href="img/svg/sprites/sprite-icons.svg#heart"></use>
+				</svg>
+				<div class="text-xs text-shark">Вибране</div>
+			</div>
+		</a>
+		<a class="shrink-0" href="#create">
+			<div class="flex shrink-0 flex-col items-center gap-1">
+				<svg class="h-5 w-5 fill-transparent stroke-shark">
+					<use xlink:href="img/svg/sprites/sprite-icons.svg#circle-plus"></use>
+				</svg>
+				<div class="text-xs text-shark">Подати</div>
+			</div>
+		</a>
+		<a class="shrink-0" href="#chat">
+			<div class="flex shrink-0 flex-col items-center gap-1">
+				<svg class="h-5 w-5 fill-shark">
+					<use xlink:href="img/svg/sprites/sprite-icons.svg#envelope"></use>
+				</svg>
+
+				<div class="text-xs text-shark">Чат</div>
+			</div>
+		</a>
+		<a class="shrink-0 account-btn" href="#">
+			<div class="flex shrink-0 flex-col items-center gap-1">
+				<svg class="h-5 w-5 fill-shark">
+					<use xlink:href="img/svg/sprites/sprite-icons.svg#user01"></use>
+				</svg>
+				<div class="text-xs text-shark">Кабінет</div>
+			</div>
+		</a>
+	</div>
+</div>
+
+<!-- ./sticky menu -->
+
+		<script src="js/libs/jquery.min.js"></script>
+<script src="js/libs/jquery-ui.min.js"></script>
+<!-- <script src="js/libs/jquery.mask.min.js"></script> -->
+<!-- <script src="js/libs/select2.min.js"></script> -->
+<script src="js/libs/fancybox.min.js"></script>
+<script src="js/libs/swiper.min.js"></script>
+<!-- CDN scripts -->
+<!-- <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js" integrity="sha512-57oZ/vW8ANMjR/KQ6Be9v/+/h6bq9/l3f0Oc7vn6qMqyhvPd1cvKBRWWpzu0QoneImqr2SkmO4MSqU+RpHom3Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script> -->
+
+<script src="js/app.js"></script>
+
+	</body>
+</html>

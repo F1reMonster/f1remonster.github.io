@@ -1,0 +1,25 @@
+.title {
+	font-weight: 700;
+	line-height: 1.2;
+
+	&--regular {
+		font-size: rem(20);
+		letter-spacing: 0.024em;
+	}
+
+	&--middle {
+		font-size: rem(24);
+		letter-spacing: 0.023em;
+	}
+
+	&--large {
+		font-size: rem(34);
+		letter-spacing: 0.018em;
+	}
+}
+
+.subtitle {
+	font-size: rem(18);
+	letter-spacing: .027em;
+	line-height: 1.22226;
+}

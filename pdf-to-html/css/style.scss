@@ -1,0 +1,859 @@
+@use "sass:math";
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Roboto:wght@300;400;500&display=swap");
+$maxWidth: 1920;
+$maxWidthContainer: 595;
+// breakpoints
+$bp-xl: 1200;
+$bp-lg: 992;
+$bp-md: 768;
+$bp-sm: 576;
+// контрольні точки сітки
+$grid-breakpoints: (
+	xs: 0,
+	sm: 576px,
+	md: 768px,
+	lg: 992px,
+	xl: 1200px,
+	xxl: 1400px,
+) !default;
+// кількість колонок
+$grid-columns: 12 !default;
+
+// відстань між елементами
+$grid-gap: 6pt !default;
+$grid-gap-side: math.div($grid-gap, 2); // migrate sass 5
+
+$font-primary: "Open Sans", sans-serif;
+$font-secondary: "Roboto", sans-serif;
+
+//colors
+$jaffa: #ee713a;
+$dorado: #68605d;
+$chicago: #5e5a58;
+$black: #000;
+$white: #fff;
+$gallery: #f0eeee;
+$apricon-peach: #facbaf;
+$alizarin-crimson: #ed2727;
+$tuft-bush: #fee0ce;
+$chrome-white: #e4f0d8;
+$hollywood-cerise: #ec008c;
+$cerulean: #00aeef;
+$mantis: #86c553;
+
+// адаптивний розмір напр.: @include adaptiveValue("font-size", 60, 20, 0)
+@mixin adaptiveValue($property, $startSize, $minSize, $type) {
+	$addSize: $startSize - $minSize;
+
+	@if $type == 1 {
+		// тільки якщо менше контейнера
+		#{$property}: $startSize + px;
+
+		@media (max-width: #{$maxWidthContainer + px}) {
+			#{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}));
+		}
+	} @else if $type == 2 {
+		// тільки якщо більше контейнера
+		#{$property}: $startSize + px;
+
+		@media (min-width: #{$maxWidthContainer + px}) {
+			#{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
+		}
+	} @else {
+		//  завжди
+		#{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
+	}
+}
+
+// рядок сітки
+@mixin row {
+	display: flex;
+	flex-wrap: wrap;
+	margin-right: -$grid-gap-side;
+	margin-left: -$grid-gap-side;
+
+	> * {
+		margin-right: $grid-gap-side;
+		margin-left: $grid-gap-side;
+		width: 100%;
+		max-width: 100%;
+	}
+}
+
+// фіксована колонка
+@mixin col($size) {
+	flex: 0 0 auto;
+	width: calc(#{math.percentage(math.div($size, $grid-columns))} - #{$grid-gap});
+}
+
+// медіа
+@mixin media($width) {
+	@media (min-width: $width) {
+		@content;
+	}
+}
+
+// контрольна точка
+@mixin bp($name) {
+	$width: map.get($grid-breakpoints, $name);
+
+	@include media($width) {
+		@content;
+	}
+}
+
+// рядок сітки
+.row {
+	@include row;
+
+	&.no-wrap {
+		flex-flow: nowrap;
+	}
+}
+
+// колонка сітки
+.col {
+	flex: 1 0 0%;
+}
+
+// генерація голонок
+@each $bp, $width in $grid-breakpoints {
+	@include media($width) {
+		@for $i from 1 through $grid-columns {
+			.col-#{$bp}-#{$i} {
+				@include col($i);
+			}
+		}
+	}
+}
+
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li {
+	margin: 0;
+	padding: 0;
+}
+
+ul,
+li {
+	list-style: none;
+}
+
+a {
+	color: $dorado;
+	text-decoration: none;
+	transition: all 0.2s ease-out;
+
+	&:hover {
+		color: $jaffa;
+	}
+}
+
+body {
+	font-family: $font-primary;
+	font-weight: 400;
+	font-size: 8pt;
+	// color: $dorado;
+	color: $black;
+	overflow-x: hidden;
+}
+
+.container {
+	max-width: 595pt;
+	margin: 0 auto;
+}
+
+.row {
+	margin-bottom: 3pt;
+	row-gap: 3pt;
+
+	.col-5 {
+		width: calc(41.6666667% - $grid-gap);
+	}
+	.col-6 {
+		width: calc(50% - $grid-gap);
+	}
+
+	.col-7 {
+		width: calc(58.33333% - $grid-gap);
+	}
+
+	.col-8 {
+		width: calc(66.6666% - $grid-gap);
+	}
+
+	&-full {
+		flex: 0 0 60%;
+	}
+	&-default {
+		font-weight: 300 !important;
+	}
+}
+
+.date {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	gap: 2px;
+
+	input {
+		font-family: $font-primary;
+		font-weight: 300;
+		outline: none;
+		border: none;
+		width: 59px;
+		color: $dorado;
+		padding: 0;
+		margin: 0;
+
+		font-size: 8pt;
+
+		&::-webkit-calendar-picker-indicator {
+			display: none;
+		}
+	}
+}
+
+.row-section {
+	display: flex;
+	flex-wrap: wrap;
+	margin-right: -1.5pt;
+	margin-left: -1.5pt;
+	margin-bottom: 3pt;
+
+	> * {
+		margin-right: 1.5pt;
+		margin-left: 1.5pt;
+	}
+}
+
+.row-section-stamp {
+	.stamp {
+		position: absolute;
+		top: -50pt;
+		right: 0;
+		width: 100pt;
+		height: 100pt;
+	}
+
+	.signature {
+		position: absolute;
+		top: -20pt;
+		right: 100pt;
+	}
+}
+
+.meter-square {
+	// position: relative;
+	padding-left: 3px;
+	&::after {
+		content: "2";
+		position: relative;
+		top: -3pt;
+		right: 0;
+		font-family: inherit;
+		font-weight: 300;
+		font-size: 6pt;
+	}
+}
+
+.pages {
+	&__title {
+		color: $jaffa;
+		font-size: 32pt;
+	}
+
+	&__list {
+		padding-top: 40pt;
+	}
+
+	&__link {
+		display: flex;
+		align-items: center;
+		font-size: 20pt;
+		gap: 5pt;
+
+		span {
+			color: $apricon-peach;
+			margin-top: 10px;
+			font-size: 12pt;
+		}
+	}
+}
+
+.bg {
+	&-grey,
+	&-grey-2 {
+		background-color: $gallery;
+		min-height: 19px;
+	}
+
+	&-peach {
+		background-color: $apricon-peach;
+	}
+
+	&-jaffa {
+		background-color: $jaffa;
+		color: $white;
+	}
+
+	&-chicago {
+		background-color: $chicago;
+		color: $white;
+	}
+}
+
+.pdf {
+	position: relative;
+	padding-top: 20px;
+	padding-bottom: 122px;
+	height: 841pt;
+
+	&__header {
+		margin-bottom: 10px;
+
+		.bg-grey {
+			padding: 8px 6px;
+			font-family: $font-secondary;
+			font-size: 10pt;
+		}
+	}
+
+	&__section {
+		margin-bottom: 10px;
+
+		.bg-grey,
+		.bg-jaffa,
+		.bg-chicago {
+			padding: 3px 6px;
+			font-family: $font-secondary;
+			font-weight: 500;
+		}
+
+		.bg-grey-2,
+		.bg-white-2 {
+			padding: 8px 6px;
+			min-height: 22pt;
+		}
+
+		.bg-white {
+			padding: 0 6px;
+			font-family: $font-secondary;
+			font-weight: 300;
+		}
+
+		.bg-white-400 {
+			padding: 3px 0px;
+			font-family: $font-secondary;
+			font-weight: 400;
+		}
+
+		.bg-white-3 {
+			padding: 3px;
+		}
+
+		&--summary {
+			.bg-white {
+				font-weight: 500;
+			}
+
+			.meter-square {
+				&::after {
+					font-weight: 500;
+				}
+			}
+		}
+
+		&--description {
+			padding-top: 20px;
+			font-family: $font-secondary;
+			.title {
+				font-weight: 600;
+				margin-bottom: 4px;
+				line-height: 1;
+			}
+
+			font-size: 6pt;
+
+			p {
+				font-weight: 300;
+				line-height: 1.3;
+			}
+		}
+	}
+
+	&__section-group {
+		display: flex;
+		flex-flow: column;
+		align-items: stretch;
+		justify-content: space-between;
+	}
+
+	&__title {
+		display: inline-block;
+		margin-left: -36px;
+		padding: 20px 36px;
+		font-family: $font-secondary;
+		font-weight: 500;
+		font-size: 21pt;
+		text-transform: uppercase;
+		background-color: $jaffa;
+		color: $white;
+	}
+
+	&__body {
+		height: 100%;
+		padding-left: 36px;
+		padding-right: 36px;
+	}
+
+	&__col-head {
+		font-family: $font-secondary;
+		font-size: 12pt;
+		text-transform: uppercase;
+	}
+
+	&__col-head-data {
+		font-family: $font-primary;
+		font-weight: 300;
+		text-transform: uppercase;
+		text-align: right;
+	}
+
+	&__row-title {
+		font-family: $font-secondary;
+		font-weight: 300;
+	}
+
+	&__footer {
+		position: absolute;
+		bottom: 0;
+		width: calc(100% - 72px);
+	}
+
+	&__footer-wrapper {
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+
+		.pdf__logo {
+			position: relative;
+			width: 230px;
+			height: 65px;
+
+			img {
+				position: absolute;
+				left: -46px;
+				width: 100%;
+				height: 100%;
+				object-fit: contain;
+			}
+		}
+
+		.pdf__contacts {
+			font-family: $font-secondary;
+			font-weight: 8pt;
+			align-self: center;
+			// text-align: right;
+
+			span {
+				font-weight: 700;
+				padding-right: 6pt;
+				color: $jaffa;
+			}
+		}
+	}
+
+	&__sheet-number {
+		position: absolute;
+		top: 0;
+		right: 36px;
+		font-family: $font-secondary;
+		padding: 10px;
+		background-color: $gallery;
+
+		&--transparent {
+			right: 26px;
+			background-color: transparent;
+
+			span {
+				padding: 1px 3px;
+				background-color: $gallery;
+			}
+		}
+	}
+
+	&__checkbox-list {
+		display: flex;
+		margin-bottom: 6px;
+		gap: 8px;
+	}
+}
+
+.contractor {
+	display: flex;
+	align-items: center;
+	font-family: $font-secondary;
+	gap: 5px;
+}
+
+.checkbox {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	cursor: pointer;
+
+	&__input {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		font-size: 0;
+
+		&:checked + .checkbox__box {
+			&::after {
+				opacity: 1;
+			}
+		}
+	}
+
+	&__box {
+		position: relative;
+		display: block;
+		width: 14pt;
+		height: 14pt;
+		background-color: $gallery;
+
+		&::after {
+			content: "";
+			position: absolute;
+			top: 1px;
+			left: 1px;
+			width: 13pt;
+			height: 13pt;
+			background-image: url("data:image/svg+xml,%3Csvg fill='none' stroke='%23000' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke-width='1' d='M6 18L18 6M6 6l12 12'%3E%3C/path%3E%3C/svg%3E");
+			background-size: contain;
+			opacity: 0;
+			transition: opacity 0.2s ease-out;
+		}
+
+		&.bg-alizarin-crimson {
+			// red
+			background-color: $alizarin-crimson;
+		}
+
+		&.bg-hollywood-cerise {
+			// pink
+			background-color: $hollywood-cerise;
+		}
+
+		&.bg-mantis {
+			// green
+			background-color: $mantis;
+		}
+
+		&.bg-cerulean {
+			// blue
+			background-color: $cerulean;
+		}
+
+		&.bg-jaffa {
+			// orange
+			background-color: $jaffa;
+		}
+
+		&.bg-tuft-bush {
+			// light orange
+			background-color: $tuft-bush;
+		}
+
+		&.bg-chrome-white {
+			// light green
+			background-color: $chrome-white;
+		}
+	}
+
+	&.content-absolute {
+		position: relative;
+
+		.checkbox__content {
+			position: absolute;
+			top: -24px;
+			left: -4px;
+			width: 24px;
+		}
+	}
+
+	&.content-vertical {
+		.checkbox__content {
+			transform: rotate(-90deg);
+		}
+	}
+}
+
+.d-flex {
+	display: flex;
+}
+
+.flow {
+	&-column {
+		flex-flow: column;
+	}
+}
+
+.f-grow {
+	flex-grow: 1;
+}
+
+.flex-0 {
+	flex: 0 0 0%;
+}
+
+.j-center {
+	justify-content: center;
+}
+
+.j-between {
+	justify-content: space-between;
+}
+
+.j-end {
+	justify-content: flex-end;
+}
+
+.self-center {
+	align-self: center;
+}
+
+.a-center {
+	align-items: center;
+}
+
+.self-end {
+	align-self: end;
+}
+
+.gap {
+	&-3 {
+		gap: 3pt;
+	}
+
+	&-30 {
+		gap: #{calc(30 / 0.75) + "pt"};
+	}
+}
+
+// text-color
+.t-color {
+	&-jaffa {
+		color: $jaffa;
+	}
+	&-black {
+		color: $black;
+	}
+
+	&-tuft-bush {
+		color: $tuft-bush;
+	}
+
+	&-chrome-white {
+		color: $chrome-white;
+	}
+
+	&-mantis {
+		color: $mantis;
+	}
+}
+
+.fs {
+	&-6 {
+		font-size: 6pt;
+	}
+
+	&-8 {
+		font-size: 8pt;
+	}
+
+	&-9 {
+		font-size: 9pt;
+	}
+
+	&-10 {
+		font-size: 10pt;
+	}
+
+	&-11 {
+		font-size: 11pt;
+	}
+
+	&-12 {
+		font-size: 12pt;
+	}
+}
+
+.fw {
+	&-300 {
+		font-weight: 300 !important;
+	}
+
+	&-400 {
+		font-weight: 400 !important;
+	}
+
+	&-500 {
+		font-weight: 500;
+
+		&::after {
+			font-weight: 500;
+		}
+	}
+
+	&-600 {
+		font-weight: 600;
+	}
+
+	&-700 {
+		font-weight: 700;
+	}
+}
+
+.font {
+	&-roboto {
+		font-family: $font-secondary;
+	}
+}
+
+.t-right {
+	text-align: right;
+}
+
+// custom colunm width
+.col {
+	&-w-30 {
+		flex: 0 0 30%;
+	}
+
+	&-w-40 {
+		flex: 0 0 40%;
+	}
+}
+
+.row-mt-35 {
+	margin-top: 35pt;
+}
+
+.relative {
+	position: relative;
+}
+
+// paddings
+.p {
+	&-3 {
+		padding-top: 3pt;
+		padding-bottom: 3pt;
+	}
+
+	&-6 {
+		padding-top: 6px;
+		padding-bottom: 6px;
+	}
+}
+
+.pl {
+	&-20 {
+		padding-left: 20pt;
+	}
+}
+
+// margins
+.mb {
+	&-3 {
+		margin-bottom: 3pt;
+	}
+
+	&-6 {
+		margin-bottom: 6pt;
+	}
+
+	&-12 {
+		margin-bottom: 12pt;
+	}
+}
+
+.mt {
+	&-20 {
+		margin-top: 20pt;
+	}
+}
+
+.m-none {
+	margin: 0;
+}
+
+.p-rows {
+	&:not(:last-child) {
+		margin-bottom: 3pt;
+	}
+
+	&.bg-grey-img {
+		padding: 0 6px;
+		line-height: 18pt;
+		background-image: url("../gray-bg.jpg");
+		background-repeat: repeat-y;
+	}
+}
+
+.bg-alizarin-crimson {
+	// red
+	background-color: $alizarin-crimson;
+}
+
+.bg-hollywood-cerise {
+	// pink
+	background-color: $hollywood-cerise;
+}
+
+.bg-mantis {
+	// green
+	background-color: $mantis;
+}
+
+.bg-cerulean {
+	// blue
+	background-color: $cerulean;
+}
+
+.bg-jaffa {
+	// orange
+	background-color: $jaffa;
+}
+
+.bg-tuft-bush {
+	// light orange
+	background-color: $tuft-bush;
+}
+
+.bg-chrome-white {
+	// light green
+	background-color: $chrome-white;
+}
+
+@media print {
+	@page {
+		size: auto;
+		margin: 0;
+		padding: 0;
+	}
+}

@@ -1,0 +1,38 @@
+.discount-open-banking__contact-form {
+  position: relative;
+}
+.discount-open-banking__contact-form-bg {
+  position: absolute;
+  bottom: -450px;
+  left: 0;
+}
+@media (max-width: 767px) {
+  .discount-open-banking__contact-form-bg {
+    display: none;
+  }
+}
+.discount-open-banking__contact-form-bg-02 {
+  position: absolute;
+  bottom: -150px;
+  left: 0;
+}
+@media (max-width: 767px) {
+  .discount-open-banking__contact-form-bg-02 {
+    display: none;
+  }
+}
+.discount-open-banking__faq {
+  padding: 4.9375em 0 3.6875em;
+}
+.discount-open-banking__faq .purple-link {
+  margin-top: 0;
+}
+.discount-open-banking__faq .faq {
+  padding: 0;
+}
+.discount-open-banking__faq .faq .faq-items-wrap {
+  margin-top: 0;
+}
+.discount-open-banking__faq .faq .answer p {
+  max-width: 63.2222222222em;
+}

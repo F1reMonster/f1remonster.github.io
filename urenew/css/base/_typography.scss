@@ -1,0 +1,32 @@
+.section {
+	&__title,
+	&__subtitle {
+		font-weight: 700;
+		text-transform: uppercase;
+	}
+
+	&__title {
+		font-size: clamp(2rem, 1.55rem + 2.25vw, 4.25rem);
+
+		&--large {
+			font-size: clamp(2rem, 1.2rem + 4vw, 6rem);
+		}
+
+		&--bg-denim {
+			display: flex;
+
+			span {
+				padding: rem(37) rem(30);
+				background-color: var(--denim);
+
+				@media (max-width: em(1023)) {
+					padding: rem(15) rem(20);
+				}
+			}
+		}
+	}
+
+	&__subtitle {
+		font-size: clamp(1.5rem, 1.05rem + 2.25vw, 3.75rem);
+	}
+}

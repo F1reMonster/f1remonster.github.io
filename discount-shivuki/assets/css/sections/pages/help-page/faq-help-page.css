@@ -1,0 +1,77 @@
+.filter {
+  display: flex;
+  justify-content: center;
+  padding: 3.125em 0 1.875em;
+}
+.filter__wrapper {
+  display: flex;
+  flex-flow: wrap;
+  gap: 1em;
+}
+@media (max-width: 767px) {
+  .filter__wrapper {
+    gap: 0.625em;
+  }
+}
+.filter__item label {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1em;
+  height: 2em;
+  font: 1.25em/1.2 "rubik-reg", sans-serif;
+  min-width: 10em;
+  color: #6924e8;
+  border: 1.5px solid #6924e8;
+  border-radius: 1.5em;
+  transition: all 0.2s ease-out;
+  cursor: pointer;
+}
+.filter__item input {
+  position: absolute;
+  opacity: 0;
+  height: 0;
+  width: 0;
+}
+.filter__item input:checked ~ label {
+  background: #6924e8;
+  color: #fff;
+}
+.filter__item.hidden {
+  display: none;
+}
+@media (max-width: 767px) {
+  .filter__item label {
+    font: 0.875em/1.7142857143 "rubik-reg", sans-serif;
+    min-width: auto;
+    padding: 0 0.625em;
+    height: 2.2857142857em;
+  }
+}
+.filter__more {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  height: 2.2857142857em;
+  width: 2.2857142857em;
+  font: 0.875em/1.7142857143 "rubik-reg", sans-serif;
+  color: #6924e8;
+  border: 1.5px solid #6924e8;
+  border-radius: 2.1428571429em;
+  transition: all 0.2s ease-out;
+  cursor: pointer;
+}
+@media (max-width: 767px) {
+  .filter__more {
+    display: inline-flex;
+  }
+}
+@media (max-width: 767px) {
+  .filter {
+    padding: 1.25em 0 0.625em;
+  }
+}
+
+.faq--help-page {
+  padding: 2.5em 0 3.125em;
+}

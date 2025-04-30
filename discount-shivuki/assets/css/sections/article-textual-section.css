@@ -1,0 +1,45 @@
+.textual-section {
+  position: relative;
+  margin-bottom: 5em;
+}
+@media screen and (max-width: 767px) {
+  .textual-section {
+    margin-bottom: 2.5em;
+  }
+}
+.textual-section-oval {
+  position: absolute;
+  top: 0;
+  inset-inline-start: 0;
+  transform: translateY(-50%);
+}
+html[dir=ltr] .textual-section-oval {
+  transform: scaleX(-1) translateY(-50%);
+}
+
+@media (max-width: 767px) {
+  .textual-section-oval {
+    display: none;
+  }
+}
+.textual-section h2 {
+  margin-bottom: 0.32em;
+  text-align: initial;
+}
+@media screen and (max-width: 767px) {
+  .textual-section h2 {
+    margin-bottom: 0;
+    font-size: 1.875em;
+    line-height: 2;
+  }
+}
+.textual-section p {
+  margin: 0 0 32px;
+  font: 1.125em/1.7777777778 "rubik-reg", sans-serif;
+}
+@media screen and (max-width: 767px) {
+  .textual-section p {
+    font-size: 1em;
+    line-height: 1.625;
+  }
+}

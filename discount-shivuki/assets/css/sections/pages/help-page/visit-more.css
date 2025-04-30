@@ -1,0 +1,28 @@
+.visit-more {
+  padding: 0.9375em 0 2.5em;
+  text-align: center;
+}
+.visit-more .btns-wrap {
+  margin-top: 1.5em;
+  display: flex;
+  justify-content: center;
+  flex-flow: wrap;
+  gap: 1em;
+}
+.visit-more .subtitle--visit-more {
+  margin-top: 0.2083333333em;
+}
+@media (max-width: 767px) {
+  .visit-more .subtitle--visit-more {
+    font: 1.25em/1.2 "rubik-medium", sans-serif;
+  }
+}
+@media (max-width: 767px) {
+  .visit-more .subtitle--visit-more-2 {
+    font: 1.25em/1.2 "rubik-reg", sans-serif;
+  }
+}
+.visit-more .typical-btn-bigger,
+.visit-more .secondary-btn {
+  min-width: 13em;
+}

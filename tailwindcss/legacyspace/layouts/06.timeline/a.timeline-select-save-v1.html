@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+<title>Legacy space - Timeline page</title>
+<meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=yes">
+<link rel="canonical" href='' />
+<meta name="MobileOptimized" content="width"/>
+<meta name="HandheldFriendly" content="True"/>
+<meta name="viewport" content="initial-scale=1.0, width=device-width">
+<link rel="stylesheet" type="text/css" href="../../css/style.css" />
+
+	</head>
+
+	<body class="flex flex-col h-full overflow-clip font-inter">
+		<main class="flex-grow py-4 lg:py-12"></main>
+		
+		<!-- timeline select how to save asset → modal -->
+<div class="fixed inset-0 z-50 p-4">
+	<div class="absolute inset-0 bg-primary-black/60"></div>
+
+	<div class="flex items-center justify-center w-full h-full">
+		<div class="relative z-20 w-167.5 rounded-3xl border border-neutral-black-5 bg-white p-4 shadow-lg sm:p-9">
+			<div class="flex justify-between gap-4">
+				<h2 class="font-semibold tracking-tight text-sm2x leading-125 lg:text-base2x">Select How to Save Asset</h2>
+				<button class="flex items-center justify-center w-8 h-8 bg-white lg:text-neutral-black-40 lg:absolute lg:-right-4 lg:-top-5 lg:h-10 lg:w-10 lg:rounded-full lg:border lg:border-neutral-black-3 lg:shadow-button">
+					<span class="icon icon--close"></span>
+				</button>
+			</div>
+
+			<div class="relative mt-6 max-h-[calc(var(--app-height)-11.25rem)] min-h-20 overflow-auto scrollbar-thin">
+				
+				<div class="flex flex-col gap-3">
+					<div class="flex flex-col gap-4 p-6 border md:items-center border-neutral-black-3 rounded-3xl sm:flex-row">
+						<div class="flex-1">
+							<h3 class="font-medium tect-lg">Create new asset</h3>
+							<p class="mt-2 text-sm leading-160 text-neutral-black-70">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+							<button class="mt-5 flex h-10 w-full items-center justify-center gap-2 rounded-xl bg-primary px-5 py-2.5 text-sm font-semibold transition-all duration-300 hover:bg-primary-hover sm:w-fit">
+								<span class="w-5 h-5 icon icon--plus"></span>
+								<span>Add asset</span>
+							</button>
+						</div>
+						<div class="flex-shrink-0 sm:order-none -order-1">
+							<div class="relative aspect-square w-30 sm:w-36 overflow-clip rounded-2xl">
+								<img decoding="async" class="object-cover w-full h-full" src="../../img/image-04.webp" title="img" alt="img" loading="lazy" />
+								<div class="absolute inset-0 bg-secondary mix-blend-hue"></div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="flex flex-col gap-4 p-6 border md:items-center border-neutral-black-3 rounded-3xl sm:flex-row">
+						<div class="flex-1">
+							<h3 class="font-medium tect-lg">Select a linked asset</h3>
+							<p class="mt-2 text-sm leading-160 text-neutral-black-70">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+							<div class="flex items-center gap-2.5 mt-4.5 sm:flex-row flex-col">
+								<select type="text" class="h-10 w-full rounded-xl border border-primary-green-gray bg-primary-green-gray pl-3 pr-8 py-2.5 text-neutral-black-50 transition-all duration-300 focus:border-secondary focus:bg-white focus:shadow-input text-sm">
+									<option disabled="" selected="">Select a linked asset</option>
+									<option value="1">Option 1</option>
+									<option value="2">Option 2</option>
+									<option value="3">Option 3</option>
+									<option value="4">Option 4</option>
+									<option value="5">Option 5</option>
+								</select>
+								<button class="flex h-10 w-full items-center justify-center gap-2 rounded-xl bg-primary px-5 py-2.5 text-sm font-semibold transition-all duration-300 hover:bg-primary-hover">
+									<span class="w-5 h-5 icon icon--arrow-nav"></span>
+									<span>Update the asset</span>
+								</button>
+							</div>
+						</div>
+						<div class="flex-shrink-0 sm:order-none -order-1">
+							<div class="relative aspect-square w-30 sm:w-36 overflow-clip rounded-2xl">
+								<img decoding="async" class="object-cover w-full h-full" src="../../img/image-05.webp" title="img" alt="img" loading="lazy" />
+								<div class="absolute inset-0 bg-secondary mix-blend-hue"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</div>
+<!-- ./timeline select how to save asset → ver.1 → modal -->
+ 
+		<script src="../../js/app.js"></script>
+
+	</body>
+</html>

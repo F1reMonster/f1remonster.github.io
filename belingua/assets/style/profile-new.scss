@@ -1,0 +1,661 @@
+.profile-new {
+	.settings_container {
+		display: flex;
+		width: 100%;
+	}
+
+	.settings_nav_item {
+		display: flex;
+		align-items: center;
+
+		span {
+			flex-shrink: 0;
+			margin: 0 8px 0 0;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			color: #fff;
+			width: 20px;
+			height: 20px;
+			border-radius: 50%;
+			background: #d7dade;
+		}
+
+		&.active {
+			&::after {
+				content: none;
+			}
+
+			span {
+				background: #5753d0;
+			}
+		}
+	}
+
+	.page-person_info {
+		max-width: 635px;
+	}
+
+	.page3 {
+		.list-item__checkbox {
+			&--mb-none {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	.settings-menu {
+		flex-shrink: 0;
+	}
+
+	.wrapper {
+		display: flex;
+
+		.input_image {
+			display: unset;
+			flex-shrink: 0;
+		}
+	}
+
+	.btn-add {
+		top: 52px;
+		cursor: pointer;
+	}
+
+	.form_richtext {
+		margin-bottom: 24px;
+	}
+}
+
+.page-step {
+	margin-bottom: 20px;
+	font-weight: 500;
+	font-size: 13px;
+	line-height: 16px;
+	color: #949ba4;
+}
+
+.form_half {
+	&.form_half_w65 {
+		width: 65%;
+	}
+
+	&.form_half_w35 {
+		width: 35%;
+	}
+
+	&--flex {
+		display: flex;
+	}
+
+
+}
+
+.form {
+	&__col {
+		display: flex;
+
+		&--w65 {
+			width: 65%;
+
+		}
+
+		&--w35 {
+			width: 35%;
+			margin-left: 12px;
+		}
+
+		.day-group {
+			flex-shrink: 0;
+			max-width: 124px;
+			margin: 0 12px 0 0;
+		}
+
+		.month-group {
+			// flex-shrink: 1;
+			// max-width: 238px;
+			min-width: unset;
+			margin: 0;
+		}
+
+		.year-group {
+			margin: 0 12px 0 0;
+			max-width: 124px;
+		}
+
+		input {
+			color: #80868E;
+		}
+
+	}
+}
+
+.edu-doc-add {
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	min-height: 160px;
+	border-radius: 8px;
+	vertical-align: top;
+	cursor: pointer;
+	position: relative;
+	background-image: url("data:image/svg+xml;utf8,<svg width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill: none; stroke: rgb(215,218,222); stroke-width: 3; stroke-dasharray: 10 10'/></svg>");
+
+	p {
+		margin-top: 14px;
+		text-align: center;
+	}
+}
+
+.edu-doc-add-wrapper {
+	// margin-top: 10px;
+	text-align: center;
+}
+
+.edu-doc-add-container {
+	display: flex;
+	margin-top: 12px;
+	flex-flow: wrap;
+	width: 100%;
+
+	.dz-preview {
+		position: relative;
+	}
+
+	.dz-details {
+		span {
+			background-color: rgba(255,255,255,0.8);
+			padding: 2px;
+		}
+	}
+
+	// .dz-container {
+	// 	background-color: unset;
+	// }
+
+
+
+	.dz-preview {
+
+		.dz-image {
+			border-radius: 20px;
+			width: 120px;
+			height: 120px;
+			display: block;
+
+		}
+	}
+}
+
+
+
+.edu,
+.service {
+	&__list-caption {
+		display: flex;
+		padding: 16px;
+		background: #f7f7f8;
+		border-radius: 8px 8px 0px 0px;
+		font-size: 15px;
+		line-height: 24px;
+		color: #3F4350;
+
+		p {
+			font-weight: 500;
+
+			&:nth-of-type(1),
+			&:nth-of-type(2) {
+				width: 40%;
+			}
+		}
+
+		p,
+		span {
+			font-size: 15px;
+			line-height: 24px;
+		}
+	}
+
+	&__list {
+		margin-top: 32px;
+	}
+
+	&__list-item {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 16px;
+		border-left: 1px solid #d7dade;
+		border-right: 1px solid #d7dade;
+		border-bottom: 1px solid #d7dade;
+		font-size: 15px;
+		line-height: 24px;
+
+		&:last-child {
+			border-radius: 0 0 8px 8px;
+		}
+	}
+
+	&__list-item-body {
+		display: flex;
+		align-items: center;
+		width: 100%;
+		flex-flow: wrap;
+
+		.lang-pair {
+			display: flex;
+			align-items: center;
+			width: 41%;
+
+
+			.from-to {
+				display: flex;
+				align-items: center;
+				overflow: hidden;
+				width: 100%;
+				flex-wrap: wrap;
+				padding-right: 10px;
+
+				p {
+					margin: 0 5px;
+				}
+
+				svg {
+					flex-shrink: 0;
+				}
+
+			}
+		}
+
+		.translate-type {
+			width: 41.5%;
+		}
+
+		.translate-price {
+			p {
+				color: #80868E;
+				span {
+					font-weight: 600;
+					color: #3F4350;
+				}
+
+
+				&:nth-of-type(2) {
+					font-size: 13px;
+					text-align: right;
+				}
+			}
+		}
+	}
+}
+
+.edu {
+	&__list-caption {
+		p {
+			&:nth-of-type(1) {
+				width: 75%;
+			}
+			&:nth-of-type(2) {
+				width: unset;
+			}
+		}
+	}
+	&__list-item-body {
+		p {
+			&:nth-of-type(1) {
+				width: 77%;
+				padding-right: 20px;
+			}
+
+			&:nth-of-type(2) {
+				// width: 24%;
+			}
+		}
+	}
+}
+
+.modal {
+	&.modal-add-education {
+		.modal-wrapper {
+			max-width: 932px;
+			margin: 0 20px;
+		}
+
+		.education_place-title {
+			max-width: 692px;
+		}
+
+		.education_place-year {
+			max-width: 164px;
+		}
+
+		.edu-header,
+		.edu-item {
+			display: flex;
+		}
+
+		.edu-header {
+			justify-content: space-between;
+			margin-bottom: 8px;
+			font-size: 13px;
+			line-height: 16px;
+			color: #525962;
+
+			.title {
+				width: 80%;
+			}
+
+			.years {
+				display: flex;
+				width: calc(20% - 12px);
+			}
+		}
+
+		.edu-item {
+			justify-content: space-between;
+			margin-bottom: 12px;
+			font-size: 15px;
+			line-height: 24px;
+			color: #0c0f17;
+		}
+
+		.edu-school,
+		.edu-year {
+			padding: 10px 12px;
+			border: 1px solid #d7dade;
+			border-radius: 4px;
+			overflow: hidden;
+		}
+
+		.edu-school {
+			width: 80%;
+			//white-space: nowrap;
+			//text-overflow: ellipsis;
+		}
+
+		.edu-year {
+			width: calc(20% - 12px);
+			display: flex;
+			justify-content: space-between;
+		}
+
+		.btn-blue {
+			margin-top: 32px;
+		}
+	}
+
+	&.modal-add-service {
+		.modal-wrapper {
+			max-width: 796px;
+			margin: 0 20px;
+
+
+		}
+		.modal_body {
+			.form-group {
+				// margin-left: 0;
+			}
+		}
+
+
+
+	}
+
+	.btn-wrapper {
+		justify-content: flex-end;
+	}
+
+
+}
+
+
+.form-group {
+	&__body {
+		display: flex;
+		justify-content: space-between;
+		margin-left: -6px;
+		margin-right: -6px;
+
+	}
+
+	&__item {
+		position: relative;
+		width: 100%;
+		margin: 0 6px;
+
+		i {
+			&.dropdown {
+				position: absolute;
+				top: 38px;
+				right: 12px;
+				transition: all 0.2s ease-out;
+			}
+		}
+
+		&--w50 {
+			width: 50%;
+		}
+
+		&--w25 {
+			width: 25%;
+		}
+
+		&--no-title {
+			margin-top: 25px;
+
+			i {
+				&.dropdown {
+					position: absolute;
+					top: 12px;
+					right: 12px;
+					transition: all 0.2s ease-out;
+				}
+			}
+		}
+
+
+	}
+}
+
+@media (max-width: 1163px) {
+	.wrapper {
+		flex-flow: column;
+
+		.page-person_info {
+			margin-top: 20px;
+			margin-left: 0;
+		}
+	}
+}
+
+@media (max-width: 945px) {
+	.settings_container {
+		flex-flow: column;
+	}
+
+	.settings_steps {
+		margin-top: 20px;
+		margin-left: 0;
+		max-width: unset;
+	}
+}
+
+@media (max-width: 780px) {
+	.edit-menu {
+		top: -94px;
+	}
+
+
+
+
+	.form {
+		&__col {
+			flex-flow: column;
+			width: 100%;
+
+			.day-group,
+			.month-group,
+			.year-group {
+				width: 100%;
+				max-width: unset;
+				margin: 0 0 8px;
+
+
+			}
+
+			&--w65,
+			&--w35 {
+				width: 100%;
+				margin-right: 0;
+				margin-left: 0;
+			}
+		}
+	}
+
+	.form_half {
+		&.form_half_w65 {
+			width: 100%;
+		}
+
+		&.form_half_w35 {
+			width: 100%;
+		}
+	}
+
+	.modal {
+		&.modal-add-education {
+			.education_place-year {
+				max-width: 100%;
+			}
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.profile-new {
+		.btn-add {
+			margin-top: 0;
+			margin-bottom: 32px;
+		}
+	}
+	form {
+		.forms-language__group {
+			margin: 0;
+
+			&.form_half {
+				margin-bottom: 24px;
+			}
+		}
+	}
+
+
+
+	.edu-doc-add-container {
+		.dz-preview {
+			margin: 10px;
+
+			.dz-image {
+				width: 100px;
+				height: 100px;
+			}
+		}
+
+		.dz-container {
+			img {
+				width: 100px;
+			}
+		}
+	}
+}
+
+@media (max-width: 696px) {
+	.edu {
+		&__list-caption {
+			justify-content: flex-start;
+
+			p {
+				&:nth-of-type(1) {
+					width: unset;
+				}
+				&:nth-of-type(2) {
+					width: unset;
+					&::before {
+						content: "/";
+						padding: 0 5px;
+					}
+				}
+			}
+			}
+		}
+	}
+
+
+@media (max-width: 569px) {
+	.modal {
+		.modal-wrapper {
+			overflow-y: scroll;
+		}
+		&.modal-add-education {
+			.edu-item {
+				.edu-school {
+					width: 60%;
+				}
+				.edu-year {
+					width: calc(40% - 12px);
+				}
+			}
+
+			.edu-header {
+				.title {
+					width: 60%;
+				}
+				.years {
+					width: calc(40% - 12px);
+				}
+			}
+		}
+	}
+
+	.form-group {
+
+		&__body {
+			flex-flow: wrap;
+			margin-left: 0;
+			margin-right: 0;
+		}
+
+		&__item {
+			margin: 5px 0;
+
+			&--w50,
+			&--w25 {
+				width: 100%;
+			}
+		}
+	}
+
+	.service {
+		&__list-caption {
+			flex-flow: column;
+
+			p {
+				&:nth-of-type(1),
+				&:nth-of-type(2) {
+					width: 100%;
+				}
+			}
+		}
+
+		&__list-item-body {
+			flex-flow: column;
+			align-items: flex-start;
+
+			.lang-pair,
+			.translate-type {
+				width: 100%;
+			}
+		}
+	}
+}

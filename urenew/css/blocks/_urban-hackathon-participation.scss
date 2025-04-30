@@ -1,0 +1,104 @@
+.urban-hackathon-participation {
+	padding-top: rem(86);
+
+	.headblock {
+		.title-2 {
+			position: relative;
+
+			span {
+				position: relative;
+
+				&::before {
+					content: "";
+					position: absolute;
+					top: rem(-68);
+					left: rem(45);
+					z-index: -1;
+					width: rem(264);
+					aspect-ratio: 1.32;
+					background: url("../img/icons/heart-big.svg") center / contain no-repeat;
+				}
+
+				@media (max-width: em(1023)) {
+					&::before {
+						top: rem(-38);
+						width: rem(150);
+					}
+				}
+
+				@media (max-width: em(575)) {
+					&::before {
+						left: rem(10);
+					}
+				}
+			}
+		}
+	}
+
+	&__list {
+		margin-top: rem(108);
+
+		ul {
+			display: grid;
+			grid-template-columns: repeat(3, minmax(0, 1fr));
+			gap: clamp(1.25rem, 0.425rem + 4.125vw, 5.375rem) clamp(1.25rem, -0.475rem + 8.625vw, 9.875rem);
+
+			li {
+				position: relative;
+				display: flex;
+				flex-flow: column;
+				font-size: clamp(1rem, 0.85rem + 0.75vw, 1.75rem);
+				gap: rem(20);
+
+				&::after {
+					content: "";
+					position: absolute;
+					top: rem(-50);
+					right: 0;
+					width: rem(105);
+					aspect-ratio: 1;
+					background: url("../img/icons/icon5.svg") center / contain no-repeat;
+				}
+
+				.title {
+					padding-right: rem(110);
+					text-transform: uppercase;
+				}
+
+				@media (max-width: em(1023)) {
+					&::after {
+						top: rem(-35);
+						width: rem(80);
+					}
+
+					.title {
+						padding-right: rem(90);
+					}
+				}
+
+				@media (max-width: em(565)) {
+					&::after {
+						top: rem(-20);
+						width: rem(40);
+					}
+
+					.title {
+						padding-right: rem(45);
+					}
+				}
+			}
+
+			@media (max-width: em(767)) {
+				grid-template-columns: 1fr 1fr;
+			}
+
+			@media (max-width: em(374)) {
+				grid-template-columns: 1fr;
+			}
+		}
+
+		@media (max-width: em(1023)) {
+			margin-top: rem(50);
+		}
+	}
+}

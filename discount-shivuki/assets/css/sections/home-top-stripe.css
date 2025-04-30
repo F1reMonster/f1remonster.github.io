@@ -1,0 +1,105 @@
+.home-top-stripe .next, .home-top-stripe .close {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 0;
+}
+
+.home-top-stripe {
+  background-color: rgba(105, 36, 232, 0.5);
+  position: relative;
+}
+.home-top-stripe .inner {
+  min-height: 5em;
+  padding-block: 0.625em 0.625em;
+  padding-inline: 2.5em 8.75em;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 767px) {
+  .home-top-stripe .inner {
+    min-height: 6.25em;
+    padding-inline: 1.25em 3.3125em;
+  }
+}
+.home-top-stripe .inner .msg {
+  color: #000;
+  font: 1.125em/1.4444444444 "rubik-reg", sans-serif;
+}
+@media screen and (max-width: 767px) {
+  .home-top-stripe .inner .msg {
+    font-size: 0.875em;
+    line-height: 1.4285714286;
+  }
+}
+.home-top-stripe .inner a {
+  color: inherit;
+  font-family: "rubik-bold", sans-serif;
+  text-decoration-thickness: 2px;
+}
+.home-top-stripe .next, .home-top-stripe .close {
+  font-size: inherit;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 10;
+  display: block;
+  padding: 0.3125em;
+}
+@media screen and (max-width: 767px) {
+  .home-top-stripe .next, .home-top-stripe .close {
+    transform: none;
+  }
+}
+.home-top-stripe .next img, .home-top-stripe .close img {
+  display: block;
+}
+.home-top-stripe .close {
+  inset-inline-end: 2.1875em;
+}
+.home-top-stripe .close:focus-visible {
+  outline: 1px dashed #00a661;
+  outline-offset: 1px;
+}
+@media screen and (max-width: 767px) {
+  .home-top-stripe .close {
+    top: 0.4375em;
+    inset-inline-end: 0.4375em;
+  }
+}
+.home-top-stripe .close img {
+  width: 1.25em;
+}
+@media screen and (max-width: 767px) {
+  .home-top-stripe .close img {
+    width: 1em;
+  }
+}
+.home-top-stripe .next {
+  inset-inline-end: 7.1875em;
+}
+.home-top-stripe .next:focus-visible {
+  outline: 1px dashed #00a661;
+  outline-offset: 1px;
+}
+@media screen and (max-width: 767px) {
+  .home-top-stripe .next {
+    top: auto;
+    bottom: 1.1875em;
+    inset-inline-end: 0.75em;
+  }
+}
+.home-top-stripe .next img {
+  width: 0.75em;
+}
+html[dir=ltr] .home-top-stripe .next img {
+  transform: scaleX(-1);
+}
+
+@media screen and (max-width: 767px) {
+  .home-top-stripe .next img {
+    width: 0.5em;
+  }
+}

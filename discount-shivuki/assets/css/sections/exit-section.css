@@ -1,0 +1,76 @@
+.exit-section {
+  padding: 8.4375em 0 5em;
+}
+@media screen and (max-width: 767px) {
+  .exit-section {
+    padding: 3.1875em 0 1.875em;
+  }
+}
+.exit-section .wrap {
+  display: flex;
+}
+@media screen and (max-width: 767px) {
+  .exit-section .wrap {
+    flex-direction: column-reverse;
+  }
+}
+.exit-section .txt-wrap {
+  margin-inline-start: 20px;
+  max-width: 35.0625em;
+}
+html[dir=ltr] .exit-section .txt-wrap {
+  max-width: 36.9375em;
+}
+
+@media screen and (max-width: 767px) {
+  .exit-section .txt-wrap {
+    margin-inline-start: 0;
+    max-width: none;
+    width: 100%;
+  }
+}
+.exit-section .img-wrap {
+  margin-inline-end: auto;
+}
+@media screen and (max-width: 767px) {
+  .exit-section .img-wrap {
+    margin-bottom: 2.625em;
+  }
+}
+.exit-section .exit-header {
+  font: 400 5.625em/1.2 "rubik-bold";
+  color: #00a661;
+  margin: -0.1777777778em 0 0.2666666667em;
+}
+@media screen and (max-width: 767px) {
+  .exit-section .exit-header br {
+    display: none;
+  }
+}
+@media screen and (max-width: 767px) {
+  .exit-section .exit-header {
+    font-size: 3.75em;
+    line-height: 1.1666666667;
+    margin: 0 0 10px;
+  }
+}
+.exit-section .msg {
+  font: 1.875em/1.4 "rubik-reg", sans-serif;
+  color: #3c3f45;
+}
+@media screen and (max-width: 767px) {
+  .exit-section .msg {
+    font-size: 1em;
+    line-height: 1.5;
+  }
+}
+.exit-section .btn-wrap {
+  margin-top: 3.0625em;
+}
+@media screen and (max-width: 767px) {
+  .exit-section .btn-wrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.625em;
+  }
+}

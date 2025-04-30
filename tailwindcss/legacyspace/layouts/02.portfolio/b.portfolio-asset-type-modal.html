@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+<title>Legacy space - Portfolio page</title>
+<meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=yes">
+<link rel="canonical" href='' />
+<meta name="MobileOptimized" content="width"/>
+<meta name="HandheldFriendly" content="True"/>
+<meta name="viewport" content="initial-scale=1.0, width=device-width">
+<link rel="stylesheet" type="text/css" href="../../css/style.css" />
+
+	</head>
+
+	<body class="flex flex-col h-full overflow-clip font-inter ">
+		<main class="flex-grow py-4 lg:py-12"></main>
+		
+		<!-- quick help modal -->
+<div class="fixed inset-0 z-50 p-4">
+	<div class="absolute inset-0 bg-primary-black/60"></div>
+
+	<div class="flex items-center justify-center w-full h-full">
+		<div class="relative z-20 w-225 rounded-3xl border border-neutral-black-5 bg-white pr-2.5 shadow-lg">
+			<div class="h-full">
+				<div class="flex flex-col gap-6 px-4 pt-4 lg:gap-2 lg:pt-8 lg:px-8 lg:items-center lg:flex-row">
+					<label class="relative flex flex-col order-1 w-full gap-2 lg:order-none">
+						<span class="icon icon--search absolute left-3.5 top-1/2 -translate-y-1/2 text-neutral-black-50"></span>
+						<input type="search" class="h-12 w-full rounded-xl border border-primary-green-gray bg-primary-green-gray py-3 pl-12 pr-3.5 text-primary-black transition-all duration-300 placeholder:text-neutral-black-50 focus:border-secondary focus:bg-white focus:shadow-input" placeholder="Search the type..." />
+					</label>
+					<div class="flex justify-between flex-shrink-0">
+						<div class="relative group">
+							<button class="flex items-center gap-2 transition-all duration-300 lg:border lg:h-12 lg:px-4 w-fit rounded-xl lg:border-primary-green-gray lg:bg-primary-green-gray text-primary-black lg:group-hover:border-secondary lg:group-hover:bg-white lg:group-hover:shadow-input">
+								<span>Quick navigation</span>
+								<span class="transition-all duration-300 transform icon icon--chevron-down group-hover:rotate-x-180"></span>
+							</button>
+							<div class="absolute top-0 right-0 z-50 w-full pt-4 transition-all duration-300 opacity-0 pointer-events-none lg:mt-8 group-hover:pointer-events-auto group-hover:translate-y-4 group-hover:opacity-100">
+								<div class="w-47 lg:w-full rounded-3xl bg-white py-2.5 pr-1.5 shadow-header-menu">
+									<div class="overflow-auto max-h-66 scrollbar-thin">
+										<ul class="flex flex-col py-2.5 pl-3 pr-1.5">
+											<li>
+												<a href="#" class="flex items-center gap-5 px-3 py-3 transition-all duration-300 rounded-xl text-primary-black hover:bg-neutral-black-3">
+													<span class="text-sm font-medium">All category</span>
+												</a>
+											</li>
+											<li>
+												<a href="#electronicDevices" class="flex items-center gap-5 px-3 py-3 transition-all duration-300 rounded-xl text-primary-black hover:bg-neutral-black-3">
+													<span class="text-sm font-medium">Electronic Devices</span>
+												</a>
+											</li>
+											<li>
+												<a href="#furniture" class="flex items-center gap-5 px-3 py-3 transition-all duration-300 rounded-xl text-primary-black hover:bg-neutral-black-3">
+													<span class="text-sm font-medium">Furniture</span>
+												</a>
+											</li>
+											<li>
+												<a href="#" class="flex items-center gap-5 px-3 py-3 transition-all duration-300 rounded-xl text-primary-black hover:bg-neutral-black-3">
+													<span class="text-sm font-medium">Decorative Utility</span>
+												</a>
+											</li>
+											<li>
+												<a href="#" class="flex items-center gap-5 px-3 py-3 transition-all duration-300 rounded-xl text-primary-black hover:bg-neutral-black-3">
+													<span class="text-sm font-medium">Ritual's things</span>
+												</a>
+											</li>
+											<li>
+												<a href="#" class="flex items-center gap-5 px-3 py-3 transition-all duration-300 rounded-xl text-primary-black hover:bg-neutral-black-3">
+													<span class="text-sm font-medium">Dishes and kitchen devices </span>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<button class="flex items-center justify-center bg-white text-neutral-black-40 lg:absolute lg:-right-4 lg:-top-5 lg:h-10 lg:w-10 lg:rounded-full lg:border lg:border-neutral-black-3 lg:shadow-button">
+							<span class="icon icon--close"></span>
+						</button>
+					</div>
+				</div>
+
+				<div class="relative mt-8 max-h-[calc(var(--app-height)-17.125rem)] min-h-20 overflow-auto scroll-smooth pl-4 lg:pl-8 lg:pr-5.5 pr-2 scrollbar-thin">
+					
+					<div class="relative flex flex-col gap-6">
+						<div id="electronicDevices" class="">
+							<h3 class="text-lg font-semibold">Electronic devices:</h3>
+							<div class="flex flex-col gap-4 mt-5">
+								<label>
+									<input type="radio" class="hidden peer" name="name1" checked />
+									<div class="flex gap-3 group">
+										<div>
+											<div class="relative">
+												<div class="flex items-center justify-center flex-shrink-0 w-5 h-5 transition-all duration-300 border-2 rounded-full border-neutral-black-20 group-peer-checked:border-primary-100"></div>
+												<div class="absolute left-1/2 top-1/2 h-2.5 w-2.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary-100 opacity-0 transition-all duration-300 group-peer-checked:opacity-100"></div>
+											</div>
+										</div>
+										<div class="-mt-0.5">
+											<h4 class="text-sm transition-all duration-300 group-peer-checked:text-shadow-mid lg:text-base leading-150">Vintage Music Players</h4>
+											<p class="mt-1 text-sm text-neutral-black-70">Devices like the Sony Walkman cassette player, Discman CD player, and early MP3 players like the original iPod.</p>
+										</div>
+									</div>
+								</label>
+								<label>
+									<input type="radio" class="hidden peer" name="name1" />
+									<div class="flex gap-3 group">
+										<div>
+											<div class="relative">
+												<div class="flex items-center justify-center flex-shrink-0 w-5 h-5 transition-all duration-300 border-2 rounded-full border-neutral-black-20 group-peer-checked:border-primary-100"></div>
+												<div class="absolute left-1/2 top-1/2 h-2.5 w-2.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary-100 opacity-0 transition-all duration-300 group-peer-checked:opacity-100"></div>
+											</div>
+										</div>
+										<div class="-mt-0.5">
+											<h4 class="text-sm transition-all duration-300 group-peer-checked:text-shadow-mid lg:text-base leading-150">Vintage Home Video Game Consoles</h4>
+											<p class="mt-1 text-sm text-neutral-black-70">Classic systems like the Nintendo Entertainment System (NES), Sega Genesis, Atari 2600, and PlayStation 1.</p>
+										</div>
+									</div>
+								</label>
+								<label>
+									<input type="radio" class="hidden peer" name="name1" />
+									<div class="flex gap-3 group">
+										<div>
+											<div class="relative">
+												<div class="flex items-center justify-center flex-shrink-0 w-5 h-5 transition-all duration-300 border-2 rounded-full border-neutral-black-20 group-peer-checked:border-primary-100"></div>
+												<div class="absolute left-1/2 top-1/2 h-2.5 w-2.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary-100 opacity-0 transition-all duration-300 group-peer-checked:opacity-100"></div>
+											</div>
+										</div>
+										<div class="-mt-0.5">
+											<h4 class="text-sm transition-all duration-300 group-peer-checked:text-shadow-mid lg:text-base leading-150">Retro Computers</h4>
+											<p class="mt-1 text-sm text-neutral-black-70">Early personal computers such as the Apple I and II, Commodore 64, IBM PC, Amiga, and Sinclair ZX Spectrum.</p>
+										</div>
+									</div>
+								</label>
+								<label>
+									<input type="radio" class="hidden peer" name="name1" />
+									<div class="flex gap-3 group">
+										<div>
+											<div class="relative">
+												<div class="flex items-center justify-center flex-shrink-0 w-5 h-5 transition-all duration-300 border-2 rounded-full border-neutral-black-20 group-peer-checked:border-primary-100"></div>
+												<div class="absolute left-1/2 top-1/2 h-2.5 w-2.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary-100 opacity-0 transition-all duration-300 group-peer-checked:opacity-100"></div>
+											</div>
+										</div>
+										<div class="-mt-0.5">
+											<h4 class="text-sm transition-all duration-300 group-peer-checked:text-shadow-mid lg:text-base leading-150">Mobile Phones</h4>
+											<p class="mt-1 text-sm text-neutral-black-70">Iconic models like the Motorola DynaTAC (The Brick), Nokia 3310, or the first-generation iPhone. <br />Music Players: Devices like the Sony Walkman cassette player, Discman CD player, and early MP3 players like the original iPod.</p>
+										</div>
+									</div>
+								</label>
+							</div>
+						</div>
+						<div id="furniture" class="">
+							<h3 class="text-lg font-semibold">Furniture:</h3>
+							<div class="flex flex-col gap-4 mt-5">
+								<label>
+									<input type="radio" class="hidden peer" name="name1" />
+									<div class="flex gap-3 group">
+										<div>
+											<div class="relative">
+												<div class="flex items-center justify-center flex-shrink-0 w-5 h-5 transition-all duration-300 border-2 rounded-full border-neutral-black-20 group-peer-checked:border-primary-100"></div>
+												<div class="absolute left-1/2 top-1/2 h-2.5 w-2.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary-100 opacity-0 transition-all duration-300 group-peer-checked:opacity-100"></div>
+											</div>
+										</div>
+										<div class="-mt-0.5">
+											<h4 class="text-sm transition-all duration-300 group-peer-checked:text-shadow-mid lg:text-base leading-150">Chairs</h4>
+											<p class="mt-1 text-sm text-neutral-black-70">Devices like the Sony Walkman cassette player, Discman CD player, and early MP3 players like the original iPod.</p>
+										</div>
+									</div>
+								</label>
+								<label>
+									<input type="radio" class="hidden peer" name="name1" />
+									<div class="flex gap-3 group">
+										<div>
+											<div class="relative">
+												<div class="flex items-center justify-center flex-shrink-0 w-5 h-5 transition-all duration-300 border-2 rounded-full border-neutral-black-20 group-peer-checked:border-primary-100"></div>
+												<div class="absolute left-1/2 top-1/2 h-2.5 w-2.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary-100 opacity-0 transition-all duration-300 group-peer-checked:opacity-100"></div>
+											</div>
+										</div>
+										<div class="-mt-0.5">
+											<h4 class="text-sm transition-all duration-300 group-peer-checked:text-shadow-mid lg:text-base leading-150">Vintage Music Players</h4>
+											<p class="mt-1 text-sm text-neutral-black-70">Devices like the Sony Walkman cassette player, Discman CD player, and early MP3 players like the original iPod.</p>
+										</div>
+									</div>
+								</label>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="relative p-4 lg:p-8">
+					<button class="flex h-12 flex-shrink-0 items-center justify-center gap-2 rounded-xl bg-primary px-5 py-3.5 text-sm font-semibold text-primary-100 transition-all duration-300 hover:bg-primary-hover md:w-fit">
+						<span class="icon icon--floppy-save-edit"></span>
+						<span>Save&amp;Continue</span>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- ./quick help modal -->
+ 
+		<script src="../../js/app.js"></script>
+
+	</body>
+</html>

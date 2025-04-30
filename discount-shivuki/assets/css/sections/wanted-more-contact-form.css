@@ -1,0 +1,119 @@
+.wanted-more-cf {
+  padding: 2.5em 0 3.125em;
+  position: relative;
+}
+@media screen and (max-width: 767px) {
+  .wanted-more-cf {
+    padding-bottom: 2.5em;
+  }
+}
+.wanted-more-cf .contact-form {
+  padding-bottom: 7.6875em;
+  margin-top: 3.75em;
+  margin-bottom: 0;
+}
+@media screen and (max-width: 767px) {
+  .wanted-more-cf .contact-form {
+    margin-top: 2em;
+    padding-bottom: 5em;
+  }
+}
+@media screen and (max-width: 767px) {
+  .wanted-more-cf .cf-icon {
+    top: -0.875em;
+  }
+}
+.wanted-more-cf .form-wrap {
+  max-width: 54.375em;
+  margin: 0 auto;
+}
+.wanted-more-cf .form-inner {
+  max-width: 38.75em;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25em;
+}
+@media screen and (max-width: 767px) {
+  .wanted-more-cf .field-wrap {
+    margin-bottom: 2.75em;
+  }
+}
+.wanted-more-cf .remark {
+  width: 100%;
+  margin-top: 1.3125em;
+  margin-bottom: 0.3125em;
+  letter-spacing: -0.004375em;
+}
+@media screen and (max-width: 767px) {
+  .wanted-more-cf .remark {
+    font-size: 1em;
+    line-height: 1.875;
+    letter-spacing: -0.0428571429em;
+    margin-top: 0.1875em;
+    margin-bottom: 2.8125em;
+  }
+}
+.wanted-more-cf .field-row {
+  width: calc(50% - 0.625em);
+}
+@media screen and (max-width: 767px) {
+  .wanted-more-cf .field-row {
+    width: 100%;
+  }
+}
+.wanted-more-cf .field-row.wide {
+  width: 100%;
+}
+.wanted-more-cf .submit-contact-form {
+  bottom: -1em;
+}
+.wanted-more-cf .kaptcha {
+  height: 3.3125em;
+  width: 100%;
+  border: 1px solid #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.375em;
+}
+@media screen and (max-width: 767px) {
+  .wanted-more-cf .kaptcha {
+    position: relative;
+    z-index: 1;
+    height: 3em;
+    font-size: 0.625em;
+    margin-top: -2.4em;
+  }
+}
+.wanted-more-cf .remark-bottom {
+  font: 1em/1.1875 "rubik-reg", sans-serif;
+  color: #000;
+  letter-spacing: -0.004375em;
+}
+@media screen and (max-width: 767px) {
+  .wanted-more-cf .remark-bottom {
+    font-size: 0.875em;
+    line-height: 1.4285714286;
+    letter-spacing: -0.0042857143em;
+    margin-top: -0.6428571429em;
+  }
+}
+.wanted-more-cf .remark-bottom a {
+  color: inherit;
+  text-decoration-thickness: 0.125em;
+}
+@media screen and (max-width: 767px) {
+  .wanted-more-cf .remark-bottom a {
+    text-decoration-thickness: 1px;
+  }
+}
+.wanted-more-cf .bg {
+  position: absolute;
+  inset-inline-end: -41.375em;
+  top: -53.125em;
+  z-index: -5;
+}
+html[dir=ltr] .wanted-more-cf .bg {
+  transform: scaleX(-1);
+}

@@ -1,0 +1,203 @@
+.typical-card .img-wrap img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.typical-card {
+  padding: 2.375em;
+  border: 1px solid rgba(60, 63, 69, 0.2);
+  box-shadow: 0 2px 15px 0 rgba(56, 59, 64, 0.1);
+  background-color: #fff;
+  border-radius: 1.875em;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+}
+.typical-card:focus-visible {
+  outline: 1px dashed #00a661;
+  outline-offset: 1px;
+}
+@media screen and (max-width: 767px) {
+  .typical-card {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    padding: 0.9375em;
+  }
+}
+.typical-card .img-wrap {
+  position: relative;
+  padding-bottom: 99.3846153846%;
+  overflow: hidden;
+  border-radius: 0.9375em;
+  width: 100%;
+}
+@media screen and (max-width: 767px) {
+  .typical-card .img-wrap {
+    padding-bottom: 0;
+    width: 30.179028133vw;
+    height: 30.179028133vw;
+    flex-shrink: 0;
+  }
+}
+.typical-card .txt-wrap {
+  padding: 0 0.625em;
+  margin-inline-start: 1.5625em;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+@media screen and (max-width: 767px) {
+  .typical-card .txt-wrap {
+    padding: 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  .typical-card .txt {
+    display: none;
+  }
+}
+.typical-card .card-header {
+  font: 1.5em/1.1666666667 "rubik-medium", sans-serif;
+  color: #3c3f45;
+  margin: 1.2916666667em 0 0.5em;
+  min-height: 1.375em;
+  transition: color 0.2s;
+}
+@media screen and (max-width: 767px) {
+  .typical-card .card-header {
+    font-size: 1.125em;
+    line-height: 1.3888888889;
+    margin: 0;
+  }
+}
+.typical-card .link-wrap {
+  margin-top: auto;
+  display: flex;
+}
+@media screen and (max-width: 767px) {
+  .typical-card .link-wrap {
+    display: none;
+  }
+}
+.typical-card .link {
+  font: 1.125em/1.2222222222 "rubik-medium", sans-serif;
+  color: #6924e8;
+  margin-top: 1.6666666667em;
+  position: relative;
+  text-decoration: underline;
+}
+.typical-card .link::after {
+  content: ">";
+  position: absolute;
+  margin-right: 0.1111111111em;
+}
+.typical-card:hover .card-header {
+  color: rgb(105, 36, 232);
+}
+
+.thank-you-page-wrap {
+  overflow: hidden;
+}
+
+.thank-you-additional {
+  position: relative;
+  padding: 6.25em 0 9.6875em;
+  overflow: hidden;
+}
+@media screen and (max-width: 767px) {
+  .thank-you-additional {
+    padding: 1.5625em 0 2.5em;
+  }
+}
+.thank-you-additional .wrap {
+  margin-top: 4.25em;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3.125em;
+  justify-content: center;
+}
+@media screen and (max-width: 767px) {
+  .thank-you-additional .wrap {
+    display: block;
+    margin-top: 1.5em;
+  }
+}
+.thank-you-additional .wrap .typical-card {
+  flex-basis: 24.75em;
+}
+@media screen and (max-width: 767px) {
+  .thank-you-additional .wrap .typical-card {
+    margin-top: 1.625em;
+    flex-direction: column;
+    text-align: center;
+    padding: 39px 2.3125em 30px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .thank-you-additional .wrap .typical-card .card-header {
+    font-size: 1.5em;
+    line-height: 1.1666666667;
+    color: #3c3f45;
+    min-height: 0;
+    margin: 1.2083333333em 0 0.375em;
+  }
+}
+@media screen and (max-width: 767px) {
+  .thank-you-additional .wrap .typical-card .link-wrap {
+    display: block;
+  }
+}
+.thank-you-additional .wrap .typical-card .link-wrap .purple-link {
+  margin-top: 1.0625em;
+}
+@media screen and (max-width: 767px) {
+  .thank-you-additional .wrap .typical-card .txt {
+    display: block;
+    font-size: 1em;
+    line-height: 1.5;
+  }
+}
+.thank-you-additional .wrap .typical-card .txt-wrap {
+  margin-inline-start: 0;
+}
+@media screen and (max-width: 767px) {
+  .thank-you-additional .wrap .typical-card .txt-wrap {
+    margin-inline-start: 1.5625em;
+  }
+}
+@media screen and (max-width: 767px) {
+  .thank-you-additional .wrap .typical-card .img-wrap {
+    position: relative;
+    padding-bottom: 100%;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .thank-you-additional .wrap .typical-card .img-wrap img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+.thank-you-additional .thank-you-bottom-bg {
+  position: absolute;
+  bottom: -21.6666666667vw;
+  inset-inline-start: -1.6145833333vw;
+  z-index: -1;
+}
+html[dir=ltr] .thank-you-additional .thank-you-bottom-bg {
+  transform: scaleX(-1);
+}
+
+@media screen and (max-width: 767px) {
+  .thank-you-additional .thank-you-bottom-bg {
+    display: none;
+  }
+}

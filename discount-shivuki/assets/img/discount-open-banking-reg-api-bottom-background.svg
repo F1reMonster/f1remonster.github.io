@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1920px" height="471px" viewBox="0 0 1920 471" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>CEEEAB4A-DF42-4F1D-BAD3-3E1084E3ED52</title>
+    <defs>
+        <linearGradient x1="39.4329379%" y1="48.5896848%" x2="106.405556%" y2="48.4961797%" id="linearGradient-1">
+            <stop stop-color="#8FE600" offset="0%"></stop>
+            <stop stop-color="#2FC059" offset="90.4556381%"></stop>
+            <stop stop-color="#218370" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" fill-opacity="0.2">
+        <g id="Desktop-1920_DISCOUNT---Open-banking----Regulatory-API" transform="translate(0.000000, -1307.000000)" fill="url(#linearGradient-1)">
+            <path d="M26.9413186,1281.66787 C451.41597,1443.66942 836.64586,1505.52298 1182.63099,1467.22853 C1528.61612,1428.93409 1805.67526,1445.83163 2013.80842,1517.92118 C2296.89443,1599.0764 2286.26437,1686.76536 1981.91823,1780.98805 C1879.61552,1812.66 1466.77996,1858.25061 825.073117,1607.9666 C397.268557,1441.11059 83.6842828,1444.94131 -115.679704,1619.45875 L26.9413186,1281.66787 Z" id="Path-4-Copy-2" transform="translate(1051.379610, 1543.918828) scale(1, -1) rotate(-12.000000) translate(-1051.379610, -1543.918828) "></path>
+        </g>
+    </g>
+</svg>

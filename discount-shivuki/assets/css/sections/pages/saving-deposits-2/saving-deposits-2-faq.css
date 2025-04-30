@@ -1,0 +1,22 @@
+.saving-deposits-2-wrap .saving-deposit-2-footer-bg {
+  position: absolute;
+  left: -3.4375em;
+  bottom: -18.75em;
+  z-index: -1;
+}
+@media screen and (max-width: 767px) {
+  .saving-deposits-2-wrap .saving-deposit-2-footer-bg {
+    display: none;
+  }
+}
+.saving-deposits-2-wrap .faq-cloud {
+  display: none;
+}
+.saving-deposits-2-wrap .faq {
+  padding: 4.625em 0 13.375em;
+}
+@media screen and (max-width: 767px) {
+  .saving-deposits-2-wrap .faq {
+    padding: 3.125em 0 3.75em;
+  }
+}

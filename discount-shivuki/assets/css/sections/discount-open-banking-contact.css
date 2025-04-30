@@ -1,0 +1,463 @@
+@charset "UTF-8";
+.field-wrap {
+  width: 100%;
+  position: relative;
+}
+.field-wrap .input {
+  font: 1.25em/1.2 "rubik-reg", sans-serif;
+  display: inline-block;
+  width: 100%;
+  color: #000;
+  padding: 0 0 0.55em 0;
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid #000;
+  outline: none;
+}
+@media screen and (max-width: 767px) {
+  .field-wrap .input {
+    font-size: 1em;
+  }
+}
+.field-wrap .input-label {
+  font: 1.25em/1.2 "rubik-reg", sans-serif;
+  position: absolute;
+  transition: transform 0.3s;
+  transform-origin: center right;
+}
+html[dir=ltr] .field-wrap .input-label {
+  transform-origin: center left;
+}
+
+@media screen and (max-width: 767px) {
+  .field-wrap .input-label {
+    font-size: 1em;
+    line-height: 1.5;
+  }
+}
+.field-wrap .error-msg, .field-wrap .success-msg {
+  font: 1em/1.5 "rubik-reg", sans-serif;
+  position: absolute;
+  padding-inline-start: 1.5em;
+  white-space: nowrap;
+  inset-inline-start: 0;
+  bottom: -1.625em;
+  display: none;
+  align-items: center;
+}
+@media screen and (max-width: 767px) {
+  .field-wrap .error-msg, .field-wrap .success-msg {
+    font-size: 0.875em;
+    bottom: -1.4285714286em;
+  }
+}
+.field-wrap .error-msg::before, .field-wrap .success-msg::before {
+  position: absolute;
+  inset-inline-start: 0;
+  font: 0.625em/1.8 "rubik-reg", sans-serif;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+}
+.field-wrap .error-msg::before {
+  content: "✕";
+  background-color: #D40511;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.field-wrap .success-msg::before {
+  content: "";
+  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg width='16px' height='16px' viewBox='0 0 16 16' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Ctitle%3E23B4FA83-5BDE-42D5-B00A-72BC350392F6%3C/title%3E%3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='Desktop-1920-Gimlaim---footer---user-input' transform='translate(-800.000000, -234.000000)'%3E%3Cg id='Desktop-/-gimlaim-/-footer' transform='translate(-1.000000, 0.000000)'%3E%3Cg id='Group-2' transform='translate(175.000000, 56.000000)'%3E%3Cg id='-field-/-form-/-Desktop-/-Default-long' transform='translate(1.000000, 106.000000)'%3E%3Cg id='Group-2-Copy' transform='translate(341.000000, 68.000000)'%3E%3Cg id='Group-Copy' transform='translate(284.000000, 4.000000)'%3E%3Ccircle id='Oval' fill='%2300A661' cx='8' cy='8' r='8'/%3E%3Cpolyline id='Path-5' stroke='%23FFFFFF' stroke-width='2.00000006' stroke-linecap='round' points='4.8 8.16474899 7.08759532 10.4 12 5.6'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.field-wrap.focus .input-label {
+  transform: scale(0.8) translateY(-1.6em);
+}
+@media screen and (max-width: 767px) {
+  .field-wrap.focus .input-label {
+    transform: scale(0.8) translateY(-1.3125em);
+  }
+}
+.field-wrap.success .success-msg {
+  display: flex;
+}
+.field-wrap.error .error-msg {
+  display: flex;
+}
+.field-wrap.error .input {
+  border-color: #D40511;
+}
+.field-wrap.error .input-label {
+  color: #D40511;
+}
+
+.discount-open-banking__contact {
+  padding: 4.375em 20px 3.125em;
+}
+@media (max-width: 767px) {
+  .discount-open-banking__contact {
+    padding: 0 20px 0;
+  }
+}
+.discount-open-banking__contact .wrap {
+  display: flex;
+  max-width: 1760px;
+  margin: 0 auto;
+  padding-inline-start: max(100px, 5.2083333333%);
+}
+@media (max-width: 1580px) {
+  .discount-open-banking__contact .wrap {
+    padding-inline-start: 0;
+  }
+}
+@media (max-width: 767px) {
+  .discount-open-banking__contact .wrap {
+    display: block;
+  }
+}
+.discount-open-banking__contact h1 {
+  font: 7.5em/1.1666666667 "mixtape-reg", sans-serif;
+  color: #00a661;
+  margin: 0 0 0.525em;
+}
+html[dir=ltr] .discount-open-banking__contact h1 {
+  font-family: "mixtape-reg-latin", sans-serif;
+}
+
+@media (max-width: 1300px) {
+  .discount-open-banking__contact h1 {
+    font-size: max(5em, 8.6923076923vw);
+  }
+}
+@media (max-width: 767px) {
+  .discount-open-banking__contact h1 {
+    font-size: 3.75em;
+    line-height: 1;
+    margin-bottom: 40px;
+  }
+}
+.discount-open-banking__contact .img-part {
+  margin-inline-end: 1.25em;
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 767px) {
+  .discount-open-banking__contact .img-part {
+    display: none;
+  }
+}
+.discount-open-banking__contact .form-part {
+  flex-basis: 40em;
+  flex-shrink: 0.7;
+  margin-inline-start: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 3.1875em;
+}
+@media (max-width: 767px) {
+  .discount-open-banking__contact .form-part {
+    padding-top: 2.25em;
+  }
+}
+.discount-open-banking__contact .form-part .input {
+  background-color: transparent;
+}
+.discount-open-banking__contact .fields-wrap {
+  width: 100%;
+  margin-top: -0.1875em;
+}
+@media (max-width: 767px) {
+  .discount-open-banking__contact .fields-wrap {
+    margin-top: 3.125em;
+  }
+}
+.discount-open-banking__contact .typical-header {
+  font: 3.125em/1.24 "rubik-medium", sans-serif;
+  max-width: 10em;
+}
+@media (max-width: 767px) {
+  .discount-open-banking__contact .typical-header {
+    font: 1.875em/1.4 "rubik-medium", sans-serif;
+  }
+}
+.discount-open-banking__contact .typical-subheader {
+  margin-top: 1.6666666667em;
+  text-align: unset;
+  font: 1.875em/1 "rubik-medium", sans-serif;
+}
+.discount-open-banking__contact .typical-subheader.second {
+  margin-top: 2.6666666667em;
+}
+@media (max-width: 767px) {
+  .discount-open-banking__contact .typical-subheader {
+    margin-top: 2.0833333333em;
+    font: 1.5em/1 "rubik-medium", sans-serif;
+  }
+  .discount-open-banking__contact .typical-subheader.second {
+    margin-top: 0;
+  }
+}
+.discount-open-banking__contact .form-header {
+  text-align: initial;
+  letter-spacing: -1px;
+}
+.discount-open-banking__contact .field-row {
+  display: flex;
+  align-items: flex-end;
+  height: 6.0625em;
+}
+@media (max-width: 767px) {
+  .discount-open-banking__contact .field-row {
+    display: block;
+    height: auto;
+  }
+}
+@media (max-width: 767px) {
+  .discount-open-banking__contact .field-row .field-wrap {
+    margin-bottom: 4em;
+  }
+}
+.discount-open-banking__contact .field-row.two-fields {
+  gap: 2.5em;
+}
+.discount-open-banking__contact .form-comment {
+  font: 0.875em/1.7142857143 "rubik-reg", sans-serif;
+  color: #000;
+  margin-top: 0.8571428571em;
+}
+@media (max-width: 767px) {
+  .discount-open-banking__contact .form-comment {
+    margin-top: 1.2em;
+    font: 0.625em/1.8 "rubik-reg", sans-serif;
+  }
+}
+.discount-open-banking__contact .form-btn {
+  margin: 1.5em 0 1em;
+}
+@media (max-width: 767px) {
+  .discount-open-banking__contact .form-btn {
+    min-width: 11.875em;
+    margin: 1.25em 0 3.125em;
+  }
+}
+.discount-open-banking__contact .form-disclaimers {
+  font: 0.625em/1.8 "rubik-reg", sans-serif;
+  color: #000;
+  margin-top: auto;
+}
+.discount-open-banking__contact .textarea-wrap {
+  height: 12.0625em;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+}
+@media screen and (max-width: 767px) {
+  .discount-open-banking__contact .textarea-wrap {
+    display: block;
+    height: auto;
+  }
+}
+.discount-open-banking__contact .textarea-wrap .textarea-note {
+  font: 1.25em/1.2 "rubik-reg", sans-serif;
+  position: absolute;
+  bottom: -1.6em;
+  inset-inline-end: 0.55em;
+}
+@media screen and (max-width: 767px) {
+  .discount-open-banking__contact .textarea-wrap .textarea-note {
+    font-size: 1em;
+    margin-inline-end: -0.375em;
+  }
+}
+.discount-open-banking__contact .textarea-wrap .textarea-label {
+  font: 1.25em/1.2 "rubik-reg", sans-serif;
+  margin-bottom: 0.65em;
+}
+@media screen and (max-width: 767px) {
+  .discount-open-banking__contact .textarea-wrap .textarea-label {
+    font-size: 1em;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    display: inline-block;
+  }
+}
+.discount-open-banking__contact .textarea {
+  font: 1.25em/1.2 "rubik-reg", sans-serif;
+  padding: 0.5em 0.9em;
+  color: #000;
+  border-radius: 0.2em;
+  border: 1px solid #000;
+  outline: none;
+  display: inline-block;
+  height: 5.9em;
+  border-radius: 0.2em;
+  resize: none;
+}
+@media screen and (max-width: 767px) {
+  .discount-open-banking__contact .textarea {
+    padding: 0.625em 1.125em;
+    font-size: 1em;
+    height: 9.875em;
+    width: 100%;
+  }
+}
+.discount-open-banking__contact .radio-group-item,
+.discount-open-banking__contact .checkbox-group-item {
+  position: relative;
+}
+.discount-open-banking__contact .checkbox-group-item {
+  width: 50%;
+}
+@media (max-width: 575px) {
+  .discount-open-banking__contact .checkbox-group-item {
+    width: 100%;
+  }
+}
+.discount-open-banking__contact .input-checkbox-input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.discount-open-banking__contact .input-checkbox-input:checked + .input-checkbox {
+  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg width='18px' height='19px' viewBox='0 0 18 19' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Ctitle%3E331F693F-9394-4B7D-8B48-8EE1554546A9%3C/title%3E%3Cdefs%3E%3Cfilter x='-6.1%25' y='-5.6%25' width='112.1%25' height='111.3%25' filterUnits='objectBoundingBox' id='filter-1'%3E%3CfeOffset dx='0' dy='0' in='SourceAlpha' result='shadowOffsetOuter1'%3E%3C/feOffset%3E%3CfeGaussianBlur stdDeviation='2' in='shadowOffsetOuter1' result='shadowBlurOuter1'%3E%3C/feGaussianBlur%3E%3CfeColorMatrix values='0 0 0 0 0.23574951 0 0 0 0 0.248700764 0 0 0 0 0.269134964 0 0 0 0.265679633 0' type='matrix' in='shadowBlurOuter1' result='shadowMatrixOuter1'%3E%3C/feColorMatrix%3E%3CfeMerge%3E%3CfeMergeNode in='shadowMatrixOuter1'%3E%3C/feMergeNode%3E%3CfeMergeNode in='SourceGraphic'%3E%3C/feMergeNode%3E%3C/feMerge%3E%3C/filter%3E%3Cpath d='M20,0 L277,0 C288.045695,-5.58177493e-15 297,8.954305 297,20 L297,299 C297,310.045695 288.045695,319 277,319 L20,319 C8.954305,319 1.3527075e-15,310.045695 0,299 L0,20 C-1.3527075e-15,8.954305 8.954305,2.02906125e-15 20,0 Z' id='path-2'%3E%3C/path%3E%3Cfilter x='-5.1%25' y='-4.7%25' width='110.1%25' height='109.4%25' filterUnits='objectBoundingBox' id='filter-3'%3E%3CfeOffset dx='0' dy='0' in='SourceAlpha' result='shadowOffsetOuter1'%3E%3C/feOffset%3E%3CfeGaussianBlur stdDeviation='5' in='shadowOffsetOuter1' result='shadowBlurOuter1'%3E%3C/feGaussianBlur%3E%3CfeColorMatrix values='0 0 0 0 0.780392157 0 0 0 0 0.831372549 0 0 0 0 0.831372549 0 0 0 0.2 0' type='matrix' in='shadowBlurOuter1'%3E%3C/feColorMatrix%3E%3C/filter%3E%3C/defs%3E%3Cg id='Concept' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='Desktop-1920_DISCOUNT---Press-Releases---dropdown-multiple-selections' transform='translate(-1305.000000, -821.000000)'%3E%3Crect fill='%23FFFFFF' x='0' y='0' width='1920' height='2838'%3E%3C/rect%3E%3Cg id='bgr' opacity='0.097702753' transform='translate(1054.000000, 600.000000) scale(-1, 1) rotate(-77.000000) translate(-1054.000000, -600.000000) translate(841.000000, 387.000000)' fill='%238FE600' fill-opacity='0.117313'%3E%3Ccircle id='Oval-Copy-3' cx='213' cy='213' r='213'%3E%3C/circle%3E%3C/g%3E%3Ctext id='2022' font-family='RubikRoman-Medium, Rubik' font-size='24' font-weight='400' line-spacing='32' fill='%23000000'%3E%3Ctspan x='1679.6895' y='816'%3E2022%3C/tspan%3E%3C/text%3E%3Cg id='Group-6-Copy-2' transform='translate(1043.000000, 739.000000)'%3E%3Cg id='Group-49' filter='url(%23filter-1)'%3E%3Cg id='Combined-Shape'%3E%3Cuse fill='black' fill-opacity='1' filter='url(%23filter-3)' xlink:href='%23path-2'%3E%3C/use%3E%3Cuse fill='%23FFFFFF' fill-rule='evenodd' xlink:href='%23path-2'%3E%3C/use%3E%3C/g%3E%3C/g%3E%3Cg id='Group' transform='translate(31.000000, 34.000000)'%3E%3Cg id='Group-8' transform='translate(0.000000, 43.000000)'%3E%3Cg id='Group' transform='translate(231.000000, 5.251642)'%3E%3Crect id='Rectangle-Copy-14' fill='%2300A661' x='0' y='0' width='18' height='18' rx='2'%3E%3C/rect%3E%3Cpolyline id='Path-5' stroke='%23FFFFFF' stroke-width='2.00000006' stroke-linecap='round' points='5.8 9.16474899 8.08759532 11.4 13 6.6'%3E%3C/polyline%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+.discount-open-banking__contact .input-radio-input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.discount-open-banking__contact .input-radio-input:checked + .input-radio {
+  border-color: #00a661;
+}
+.discount-open-banking__contact .input-radio-input:checked + .input-radio::before {
+  background: #00a661;
+}
+.discount-open-banking__contact .input-radio-label,
+.discount-open-banking__contact .input-checkbox-label {
+  position: relative;
+  z-index: 2;
+  padding-right: 1.4444444444em;
+  font: 1.125em/1.2222222222 "rubik-reg", sans-serif;
+}
+html[dir=ltr] .discount-open-banking__contact .input-radio-label,
+html[dir=ltr] .discount-open-banking__contact .input-checkbox-label {
+  padding-right: 0;
+  padding-left: 1.4444444444em;
+}
+
+@media (max-width: 767px) {
+  .discount-open-banking__contact .input-radio-label,
+.discount-open-banking__contact .input-checkbox-label {
+    font: 1em/1.375 "rubik-reg", sans-serif;
+  }
+}
+@media (max-width: 413px) {
+  .discount-open-banking__contact .input-radio-label,
+.discount-open-banking__contact .input-checkbox-label {
+    font: 0.875em/1.5714285714 "rubik-reg", sans-serif;
+  }
+}
+.discount-open-banking__contact .input-radio {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  z-index: -1;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  border: 0.125em solid #000;
+  transform: translateY(-50%);
+  transition: border-color 0.2s ease-out;
+}
+.discount-open-banking__contact .input-radio::before {
+  content: "";
+  position: absolute;
+  width: 0.4375em;
+  height: 0.4375em;
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  background: transparent;
+  transform: translate(-50%, -50%);
+  transition: background 0.2s ease-out;
+}
+.discount-open-banking__contact .input-checkbox {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  z-index: 1;
+  width: 1.125em;
+  height: 1.125em;
+  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg width='18px' height='19px' viewBox='0 0 18 19' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Ctitle%3EF537051E-A9BC-4721-8A62-3027E1FFF6E0%3C/title%3E%3Cdefs%3E%3Cfilter x='-6.1%25' y='-5.6%25' width='112.1%25' height='111.3%25' filterUnits='objectBoundingBox' id='filter-1'%3E%3CfeOffset dx='0' dy='0' in='SourceAlpha' result='shadowOffsetOuter1'%3E%3C/feOffset%3E%3CfeGaussianBlur stdDeviation='2' in='shadowOffsetOuter1' result='shadowBlurOuter1'%3E%3C/feGaussianBlur%3E%3CfeColorMatrix values='0 0 0 0 0.23574951 0 0 0 0 0.248700764 0 0 0 0 0.269134964 0 0 0 0.265679633 0' type='matrix' in='shadowBlurOuter1' result='shadowMatrixOuter1'%3E%3C/feColorMatrix%3E%3CfeMerge%3E%3CfeMergeNode in='shadowMatrixOuter1'%3E%3C/feMergeNode%3E%3CfeMergeNode in='SourceGraphic'%3E%3C/feMergeNode%3E%3C/feMerge%3E%3C/filter%3E%3Cpath d='M20,0 L277,0 C288.045695,-5.58177493e-15 297,8.954305 297,20 L297,299 C297,310.045695 288.045695,319 277,319 L20,319 C8.954305,319 1.3527075e-15,310.045695 0,299 L0,20 C-1.3527075e-15,8.954305 8.954305,2.02906125e-15 20,0 Z' id='path-2'%3E%3C/path%3E%3Cfilter x='-5.1%25' y='-4.7%25' width='110.1%25' height='109.4%25' filterUnits='objectBoundingBox' id='filter-3'%3E%3CfeOffset dx='0' dy='0' in='SourceAlpha' result='shadowOffsetOuter1'%3E%3C/feOffset%3E%3CfeGaussianBlur stdDeviation='5' in='shadowOffsetOuter1' result='shadowBlurOuter1'%3E%3C/feGaussianBlur%3E%3CfeColorMatrix values='0 0 0 0 0.780392157 0 0 0 0 0.831372549 0 0 0 0 0.831372549 0 0 0 0.2 0' type='matrix' in='shadowBlurOuter1'%3E%3C/feColorMatrix%3E%3C/filter%3E%3C/defs%3E%3Cg id='Concept' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='Desktop-1920_DISCOUNT---Press-Releases---dropdown-multiple-selections' transform='translate(-1305.000000, -863.000000)'%3E%3Crect fill='%23FFFFFF' x='0' y='0' width='1920' height='2838'%3E%3C/rect%3E%3Cg id='Group-2' transform='translate(180.000000, 846.000000)' fill='%23000000' font-family='RubikRoman-Medium, Rubik' font-size='20' font-weight='400' line-spacing='32'%3E%3Ctext id='מרץ'%3E%3Ctspan x='1521.8275' y='19'%3Eמרץ%3C/tspan%3E%3C/text%3E%3C/g%3E%3Cg id='Group-6-Copy-2' transform='translate(1043.000000, 739.000000)'%3E%3Cg id='Group-49' filter='url(%23filter-1)'%3E%3Cg id='Combined-Shape'%3E%3Cuse fill='black' fill-opacity='1' filter='url(%23filter-3)' xlink:href='%23path-2'%3E%3C/use%3E%3Cuse fill='%23FFFFFF' fill-rule='evenodd' xlink:href='%23path-2'%3E%3C/use%3E%3C/g%3E%3C/g%3E%3Cg id='Group' transform='translate(31.000000, 34.000000)' fill='%23FFFFFF' stroke='%23000000' stroke-width='2'%3E%3Cg id='Group-9' transform='translate(0.000000, 85.000000)'%3E%3Cg id='Checkboxes-/-desktop-/-on-Copy-2' transform='translate(231.000000, 5.251642)'%3E%3Crect id='Rectangle-Copy' x='1' y='1' width='16' height='16' rx='2'%3E%3C/rect%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform: translateY(-50%);
+  transition: all 0.2s ease-out;
+}
+html[dir=ltr] .discount-open-banking__contact .input-checkbox {
+  right: unset;
+  left: 0;
+}
+
+@media (max-width: 767px) {
+  .discount-open-banking__contact .input-checkbox {
+    width: 1em;
+    height: 1em;
+  }
+}
+.discount-open-banking__contact .field-not-robot {
+  display: flex;
+  align-items: center;
+  margin-top: 3.8125em;
+  padding: 0 0.9375em;
+  border: 1px solid #3c3f45;
+  border-radius: 0.25em;
+  height: 3.375em;
+  direction: ltr;
+}
+@media (max-width: 767px) {
+  .discount-open-banking__contact .field-not-robot {
+    height: 1.875em;
+  }
+}
+.discount-open-banking__contact .field-not-robot .circle {
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+  background: #3c3f45;
+}
+@media (max-width: 767px) {
+  .discount-open-banking__contact .field-not-robot .circle {
+    width: 1.125em;
+    height: 1.125em;
+  }
+}
+.discount-open-banking__contact .field-not-robot .checkbox-group-item {
+  width: auto;
+}
+.discount-open-banking__contact .field-not-robot .input-checkbox-label {
+  padding-right: 0;
+  padding-left: 2.6em;
+  font: 0.625em/2.4 "rubik-reg", sans-serif;
+}
+.discount-open-banking__contact .field-not-robot .input-checkbox {
+  right: unset;
+  left: 0;
+}
+.discount-open-banking__contact .field-not-robot .wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}

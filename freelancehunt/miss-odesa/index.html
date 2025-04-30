@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<!-- <link rel="shortcut icon" href="img/favicon.ico"> -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Miss Odesa - index page</title>
+	
+	
+		<script type="module" crossorigin src="./js/app.min.js"></script>
+		<link rel="stylesheet" crossorigin href="./css/styles.min.css">
+	</head>
+	<style>
+		body {
+			background-color: var(--mirage);
+			color: var(--white);
+		}
+		.index-container {
+			max-width: 64rem;
+			margin: 0 auto;
+			padding-inline: 1rem;
+			padding-block: 2.5rem;
+		}
+
+		.index-title {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 1rem;
+			font-size: 1.25rem;
+		}
+
+		.index-title .title {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-flow: column;
+			gap: 0.125rem;
+			font-family: var(--font-secondary);
+			color: var(--orchid);
+			font-size: 26px;
+		}
+
+		.index-logo {
+			display: flex;
+			width: 100px;
+		}
+
+		.index-pages-list {
+			columns: 2;
+		}
+
+		
+
+		.index-page {
+			break-inside: avoid;
+		}
+
+		.index-page a {
+			display: flex;
+			flex-flow: column;
+			color: var(--white);
+			transition: color 0.2s ease-out;
+
+		}
+
+		.index-page a span:first-child {
+			font-size: 1.125rem;
+		}
+
+		.index-page a span:last-child {
+			opacity: 0.5;
+		}
+
+		.index-page a:hover {
+			color: var(--orchid);
+		}
+
+
+
+		
+	</style>
+	<body>
+		<div class="body-wrapper">
+			<main>
+				<div class="index-container">
+					<h1 class="index-title">
+						<div class="title">
+							<span class="index-logo">
+								<img src="./img/svg/logo.svg" alt="" width="100" />
+							</span>
+							<span>Odesa</span>
+						</div>
+						<span>completed pages</span>
+					</h1>
+
+					<ul class="index-pages-list">
+						<li class="index-page">
+							<a href="home.html" target="_blank">
+								<span>Home page</span>
+								<span>home.html</span>
+							</a>
+
+						</li>
+						<li class="index-page">
+							<a href="person-page.html" target="_blank">
+								<span>Person page</span>
+								<span>person-page.html</span>
+							</a>
+
+						</li>
+					</ul>
+				</div>
+			</main>
+		</div>
+
+		
+		
+		
+			</body>
+</html>

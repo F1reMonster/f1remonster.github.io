@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full text-base leading-tight font-robotomono">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/png" href="https://unicorn-cdn.b-cdn.net/4cff5e68-9871-4f3c-bae7-54ba38772b71/" sizes="16x16" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css?family=Roboto+Mono:700|Roboto+Mono:400,700&amp;display=swap" rel="stylesheet" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.10.3/cdn.min.js" defer></script>
+		<script src="https://cdn.tailwindcss.com"></script>
+		<script>
+			tailwind.config = {
+				theme: {
+					extend: {
+						fontFamily: {
+							robotomono: "Roboto Mono, sans-serif",
+						},
+					},
+				},
+			};
+		</script>
+
+		<style>
+			[x-cloak] {
+				display: none;
+			}
+		</style>
+		<title>Neobank - Neobanque | Find an alternative to Revolut in your country</title>
+	</head>
+	<body class="flex flex-col h-full bg-white text-slate-800 xl:overflow-auto xl:max-h-auto">
+		<!-- header -->
+		<header class="absolute left-0 right-0 top-0 z-[1300] py-8">
+			<nav class="">
+				<div class="max-w-full px-4 xl:px-12">
+					<div class="flex items-center justify-between">
+						<div class="relative z-10">
+							<a class="inline-flex items-center justify-center transition-opacity hover:opacity-60" href="/" target="_self">
+								<img class="mr-2" width="50" alt="Neobank" src="https://storage.googleapis.com/neobanque-website/logo/neobanques.svg" />
+							</a>
+						</div>
+						<div class="menu" x-data="{ isMobMenuOpen: false }">
+							<!-- desktop menu -->
+							<ul class="hidden xl:block">
+								<li class="inline-block mr-4 align-middle">
+									<a class="relative inline-block min-h-11 min-w-[7.5rem] rounded-3xl border-2 border-transparent px-4 py-3 text-center font-medium text-slate-900 transition-transform hover:-translate-y-0.5" href="#" target="_self"><span class="">Graveyard</span> </a>
+								</li>
+
+								<li class="inline-block mr-4">
+									<a class="relative inline-block min-h-11 min-w-[7.5rem] rounded-3xl border-2 border-transparent px-4 py-3 text-center font-medium text-slate-900 transition-transform hover:-translate-y-0.5" href="#" target="_self"><span class="">Stats</span> </a>
+								</li>
+
+								<li class="inline-block mr-4">
+									<button x-data="{ open: false }" class="relative">
+										<span @click="open = !open" :class="{'after:rotate-90 z-[100]': open}" class="relative inline-block min-h-11 min-w-[7.5rem] rounded-3xl border-2 border-transparent px-4 py-3 text-center font-medium text-slate-900 after:ml-2 after:inline-block after:h-0 after:w-0 after:border-b-0 after:border-l-[.3125rem] after:border-r-[5px] after:border-t-[6px] after:border-[#303030_transparent_transparent_transparent] after:align-middle after:transition-all after:duration-200 after:content-[''] transition-transform hover:-translate-y-0.5">Browse by country</span>
+										<span x-show="open" @click.away="open = false" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="transform opacity-0 translate-y-5" x-transition:enter-end="transform opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-200" x-transition:leave-start="transform opacity-200 translate-y-0" x-transition:leave-end="transform opacity-0 translate-y-5" class="absolute right-0 top-11 z-100 w-max max-w-[12.5rem] rounded bg-white shadow-md" x-cloak>
+											<ul class="max-h-[70vh] overflow-auto pb-2">
+												<li>
+													<a href="https://neobanque.ch/argentina" target="_self" class="relative inline-block min-h-11 min-w-[7.5rem] rounded-3xl border-2 border-transparent px-4 py-3 text-center font-medium text-slate-900 transition-transform hover:-translate-y-0.5">
+														<span class="button__text">Argentina</span>
+													</a>
+												</li>
+
+												<li>
+													<a href="https://neobanque.ch/brazil" target="_self" class="relative inline-block min-h-11 min-w-[7.5rem] rounded-3xl border-2 border-transparent px-4 py-3 text-center font-medium text-slate-900 transition-transform hover:-translate-y-0.5">
+														<span class="button__text">Brazil</span>
+													</a>
+												</li>
+
+												<li>
+													<a href="https://neobanque.ch/france" target="_self" class="relative inline-block min-h-11 min-w-[7.5rem] rounded-3xl border-2 border-transparent px-4 py-3 text-center font-medium text-slate-900 transition-transform hover:-translate-y-0.5">
+														<span class="button__text">France</span>
+													</a>
+												</li>
+
+												<li>
+													<a href="https://neobanque.ch/germany" target="_self" class="relative inline-block min-h-11 min-w-[7.5rem] rounded-3xl border-2 border-transparent px-4 py-3 text-center font-medium text-slate-900 transition-transform hover:-translate-y-0.5">
+														<span class="button__text">Germany</span>
+													</a>
+												</li>
+
+												<li>
+													<a href="https://neobanque.ch/india" target="_self" class="relative inline-block min-h-11 min-w-[7.5rem] rounded-3xl border-2 border-transparent px-4 py-3 text-center font-medium text-slate-900 transition-transform hover:-translate-y-0.5">
+														<span class="button__text">India</span>
+													</a>
+												</li>
+
+												<li>
+													<a href="https://neobanque.ch/hong-kong/" target="_self" class="relative inline-block min-h-11 min-w-[7.5rem] rounded-3xl border-2 border-transparent px-4 py-3 text-center font-medium text-slate-900 transition-transform hover:-translate-y-0.5">
+														<span class="button__text">Hong-Kong</span>
+													</a>
+												</li>
+
+												<li>
+													<a href="https://neobanque.ch/italy" target="_self" class="relative inline-block min-h-11 min-w-[7.5rem] rounded-3xl border-2 border-transparent px-4 py-3 text-center font-medium text-slate-900 transition-transform hover:-translate-y-0.5">
+														<span class="button__text">Italy</span>
+													</a>
+												</li>
+
+												<li>
+													<a href="https://neobanque.ch/mexico" target="_self" class="relative inline-block min-h-11 min-w-[7.5rem] rounded-3xl border-2 border-transparent px-4 py-3 text-center font-medium text-slate-900 transition-transform hover:-translate-y-0.5">
+														<span class="button__text">Mexico</span>
+													</a>
+												</li>
+
+												<li>
+													<a href="https://neobanque.ch/spain" target="_self" class="relative inline-block min-h-11 min-w-[7.5rem] rounded-3xl border-2 border-transparent px-4 py-3 text-center font-medium text-slate-900 transition-transform hover:-translate-y-0.5">
+														<span class="button__text">Spain</span>
+													</a>
+												</li>
+
+												<li>
+													<a href="https://neobanque.ch/switzerland" target="_self" class="relative inline-block min-h-11 min-w-[7.5rem] rounded-3xl border-2 border-transparent px-4 py-3 text-center font-medium text-slate-900 transition-transform hover:-translate-y-0.5">
+														<span class="button__text">Switzerland</span>
+													</a>
+												</li>
+
+												<li>
+													<a href="https://neobanque.ch/uk" target="_self" class="relative inline-block min-h-11 min-w-[7.5rem] rounded-3xl border-2 border-transparent px-4 py-3 text-center font-medium text-slate-900 transition-transform hover:-translate-y-0.5">
+														<span class="button__text">United Kingdom</span>
+													</a>
+												</li>
+
+												<li>
+													<a href="https://neobanque.ch/united-states/" target="_self" class="relative inline-block min-h-11 min-w-[7.5rem] rounded-3xl border-2 border-transparent px-4 py-3 text-center font-medium text-slate-900 transition-transform hover:-translate-y-0.5">
+														<span class="button__text">United States</span>
+													</a>
+												</li>
+
+												<li>
+													<a href="https://neobanque.ch/country" target="_self" class="relative inline-block min-h-11 min-w-[7.5rem] rounded-3xl border-2 border-transparent px-4 py-3 text-center font-medium text-slate-900 transition-transform hover:-translate-y-0.5">
+														<span class="button__text">All Countries</span>
+													</a>
+												</li>
+											</ul>
+										</span>
+									</button>
+								</li>
+
+								<li class="inline-block">
+									<div class="">
+										<ul class="flex flex-row-reverse -ml-2">
+											<li>
+												<a class="mx-2 font-medium text-white bg-black relative inline-block min-h-11 min-w-[7.5rem] rounded-3xl border-2 px-4 py-3 text-center transition-transform hover:-translate-y-0.5" href="#" target="_self"><span>Boost your listing</span></a>
+											</li>
+											<li>
+												<a class="mx-2 relative inline-block min-h-11 min-w-[7.5rem] rounded-3xl border-2 px-4 py-3 text-center font-medium text-slate-900 transition-transform hover:-translate-y-0.5 border-stone-200" href="#" target="_self"><span>Submit your Neobank</span></a>
+											</li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+							<!-- ./desktop menu -->
+
+							<!-- mobile menu -->
+							<div x-show="isMobMenuOpen" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="transform opacity-0" x-transition:enter-end="transform opacity-200 " x-transition:leave="transition ease-in duration-100" x-transition:leave-start="transform opacity-100" x-transition:leave-end="transform opacity-0" class="fixed inset-0 m-auto overflow-auto bg-white xl:hidden">
+								<ul class="xl:hidden flex-col flex-wrap items-center justify-center gap-3 p-[5.625rem_.9375rem_2.5rem_.9375rem] flex">
+									<li class="inline-block mr-4 align-middle">
+										<a class="relative inline-block min-h-11 min-w-[7.5rem] rounded-3xl border-2 border-transparent px-4 py-3 text-center font-medium text-slate-900 transition-transform hover:-translate-y-0.5" href="#" target="_self"><span class="">Graveyard</span> </a>
+									</li>
+
+									<li class="inline-block mr-4">
+										<a class="relative inline-block min-h-11 min-w-[7.5rem] rounded-3xl border-2 border-transparent px-4 py-3 text-center font-medium text-slate-900 transition-transform hover:-translate-y-0.5" href="#" target="_self"><span class="">Stats</span> </a>
+									</li>
+
+									<li class="inline-block mr-4">
+										<button x-data="{ open: false }" class="relative">
+											<span @click="open = !open" :class="{'after:rotate-90 z-[100]': open}" class="relative inline-block min-h-11 min-w-[7.5rem] rounded-3xl border-2 border-transparent px-4 py-3 text-center font-medium text-slate-900 transition-transform hover:-translate-y-0.5 after:ml-2 after:inline-block after:h-0 after:w-0 after:border-b-0 after:border-l-[.3125rem] after:border-r-[5px] after:border-t-[6px] after:border-[#303030_transparent_transparent_transparent] after:align-middle after:transition-all after:duration-200 after:content-['']">Browse by country</span>
+											<span x-show="open" @click.away="open = false" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="transform opacity-0 translate-y-[1.25rem]" x-transition:enter-end="transform opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-200" x-transition:leave-start="transform opacity-200 translate-y-0" x-transition:leave-end="transform opacity-0 translate-y-[1.25rem]" class="absolute right-0 top-11 z-[100] w-max max-w-[12.5rem] rounded bg-white shadow-[0_.75rem_2.75rem_0_rgba(0,0,0,0.1)]" x-cloak>
+												<ul class="max-h-[50vh] overflow-auto pb-2">
+													<li>
+														<a href="https://neobanque.ch/argentina" target="_self" class="relative inline-block min-h-11 min-w-[7.5rem] rounded-3xl border-2 border-transparent px-4 py-3 text-center font-medium text-slate-900">
+															<span class="button__text">Argentina</span>
+														</a>
+													</li>
+
+													<li>
+														<a href="https://neobanque.ch/brazil" target="_self" class="relative inline-block min-h-11 min-w-[7.5rem] rounded-3xl border-2 border-transparent px-4 py-3 text-center font-medium text-slate-900">
+															<span class="button__text">Brazil</span>
+														</a>
+													</li>
+
+													<li>
+														<a href="https://neobanque.ch/france" target="_self" class="relative inline-block min-h-11 min-w-[7.5rem] rounded-3xl border-2 border-transparent px-4 py-3 text-center font-medium text-slate-900">
+															<span class="button__text">France</span>
+														</a>
+													</li>
+
+													<li>
+														<a href="https://neobanque.ch/germany" target="_self" class="relative inline-block min-h-11 min-w-[7.5rem] rounded-3xl border-2 border-transparent px-4 py-3 text-center font-medium text-slate-900">
+															<span class="button__text">Germany</span>
+														</a>
+													</li>
+
+													<li>
+														<a href="https://neobanque.ch/india" target="_self" class="relative inline-block min-h-11 min-w-[7.5rem] rounded-3xl border-2 border-transparent px-4 py-3 text-center font-medium text-slate-900 b">
+															<span class="button__text">India</span>
+														</a>
+													</li>
+
+													<li>
+														<a href="https://neobanque.ch/hong-kong/" target="_self" class="relative inline-block min-h-11 min-w-[7.5rem] rounded-3xl border-2 border-transparent px-4 py-3 text-center font-medium text-slate-900">
+															<span class="button__text">Hong-Kong</span>
+														</a>
+													</li>
+
+													<li>
+														<a href="https://neobanque.ch/italy" target="_self" class="relative inline-block min-h-11 min-w-[7.5rem] rounded-3xl border-2 border-transparent px-4 py-3 text-center font-medium text-slate-900">
+															<span class="button__text">Italy</span>
+														</a>
+													</li>
+
+													<li>
+														<a href="https://neobanque.ch/mexico" target="_self" class="relative inline-block min-h-11 min-w-[7.5rem] rounded-3xl border-2 border-transparent px-4 py-3 text-center font-medium text-slate-900">
+															<span class="button__text">Mexico</span>
+														</a>
+													</li>
+
+													<li>
+														<a href="https://neobanque.ch/spain" target="_self" class="relative inline-block min-h-11 min-w-[7.5rem] rounded-3xl border-2 border-transparent px-4 py-3 text-center font-medium text-slate-900">
+															<span class="button__text">Spain</span>
+														</a>
+													</li>
+
+													<li>
+														<a href="https://neobanque.ch/switzerland" target="_self" class="relative inline-block min-h-11 min-w-[7.5rem] rounded-3xl border-2 border-transparent px-4 py-3 text-center font-medium text-slate-900">
+															<span class="button__text">Switzerland</span>
+														</a>
+													</li>
+
+													<li>
+														<a href="https://neobanque.ch/uk" target="_self" class="relative inline-block min-h-11 min-w-[7.5rem] rounded-3xl border-2 border-transparent px-4 py-3 text-center font-medium text-slate-900">
+															<span class="button__text">United Kingdom</span>
+														</a>
+													</li>
+
+													<li>
+														<a href="https://neobanque.ch/united-states/" target="_self" class="relative inline-block min-h-11 min-w-[7.5rem] rounded-3xl border-2 border-transparent px-4 py-3 text-center font-medium text-slate-900">
+															<span class="button__text">United States</span>
+														</a>
+													</li>
+
+													<li>
+														<a href="https://neobanque.ch/country" target="_self" class="relative inline-block min-h-11 min-w-[7.5rem] rounded-3xl border-2 border-transparent px-4 py-3 text-center font-medium text-slate-900">
+															<span class="button__text">All Countries</span>
+														</a>
+													</li>
+												</ul>
+											</span>
+										</button>
+									</li>
+
+									<li class="inline-block">
+										<ul class="flex flex-col-reverse items-center justify-center gap-3">
+											<li>
+												<a class="mx-2 font-medium text-white bg-black relative inline-block min-h-11 min-w-[7.5rem] rounded-3xl border-2 px-4 py-3 text-center transition-transform hover:-translate-y-0.5" href="#" target="_self"><span>Boost your listing</span></a>
+											</li>
+											<li>
+												<a class="mx-2 relative inline-block min-h-11 min-w-[7.5rem] rounded-3xl border-2 px-4 py-3 text-center font-medium text-slate-900 transition-transform hover:-translate-y-0.5 border-stone-200" href="#" target="_self"><span>Submit your Neobank</span></a>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+
+							<button @click="isMobMenuOpen = !isMobMenuOpen; isMobMenuOpen ? document.body.classList.add('overflow-hidden', 'max-h-screen') : document.body.classList.remove('overflow-hidden', 'max-h-screen')" class="burger relative xl:hidden h-10 w-10 rounded-[50%] bg-white shadow-[0_.125rem_.25rem_0_rgba(136,144,195,0.2),0_.3125rem_.9375rem_0_rgba(37,44,97,0.15);] inline-block" type="button">
+								<div class="relative flex items-center justify-center text-slate-800">
+									<svg class="w-6 h-6" x-show="!isMobMenuOpen" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+									</svg>
+									<svg class="w-6 h-6" x-show="isMobMenuOpen" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" x-cloak>
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+									</svg>
+								</div>
+							</button>
+							<!-- ./mobile menu -->
+						</div>
+					</div>
+				</div>
+			</nav>
+		</header>
+		<!-- ./header -->
+
+		<main class="flex-grow">
+			<!-- hero section -->
+			<section class="z-[110] bg-slate-100 pb-[6.875rem] pt-[6.25rem] xl:pt-[11.875rem] bg-cover bg-center bg-no-repeat">
+				<div class="max-w-[75rem] mx-auto px-4 ">
+					<div class="flex flex-wrap items-center justify-center pt-20 md:justify-between gap-14 md:flex-nowrap">
+						<div class="text-center max-w-[34.375rem] md:text-left w-full lg:w-1/2 mx-auto md:mx-0">
+							<div>
+								<h1 class="my-2 mt-2 mb-1 text-3xl font-bold leading-tight md:mb-1 md:text-5xl md:leading-none sm:text-4xl">Trade Republic - Broker & Bank</h1>
+
+								<h2 class="my-3 text-2xl font-bold md:text-3xl">DE - Broker - Private</h2>
+								<h3 class="my-3 text-xl font-bold md:text-2xl">App store Ranking : 4.5</h3>
+								<p class="my-4"><strong>Founded in </strong>2015</p>
+							</div>
+							<div class="max-w-md mx-auto mt-10 md:mx-0">
+								<ul>
+									<li>
+										<a class="group inline-flex items-center rounded-full py-1.5 pr-4 pl-1.5 transition-all ease-out text-base bg-blue-100 text-indigo-500 hover:bg-blue-200" href="#" target="_blank">
+											<span class="h-6 uppercase rounded-3xl text-[.625rem] whitespace-nowrap px-2 text-white font-bold bg-indigo-500">Go to</span>
+											<span class="ml-2 tracking-[0.02em]"> Trade Republic </span>
+											<span class="flex items-center ml-2 transition-transform ease-out group-hover:translate-x-1">
+												<svg viewBox="0 0 13 10" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-4 h-4"><path d="M12.823 4.164L8.954.182a.592.592 0 0 0-.854 0 .635.635 0 0 0 0 .88l2.836 2.92H.604A.614.614 0 0 0 0 4.604c0 .344.27.622.604.622h10.332L8.1 8.146a.635.635 0 0 0 0 .88.594.594 0 0 0 .854 0l3.869-3.982a.635.635 0 0 0 0-.88z" fill-rule="nonzero"></path></svg>
+											</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="relative w-3/5 sm:w-[90%] md:w-[22%] lg:w-1/2">
+							<div class="relative z-10 left-[20%] sm:left-[1.875rem] md:left-0 flex justify-center flex-wrap ">
+								<!-- static -->
+								<div class="w-[12.5rem] xl:w-[15.625rem]">
+									<div class="relative z-10">
+										<div class="z-50 bg-no-repeat bg-cover bg-[top_center] absolute mx-auto left-0 right-0 top-[7%] h-[86%] w-[88%]">
+											<img class="object-cover w-full h-full m-auto" alt="Trade Republic app screenshoot 2" src="https://storage.googleapis.com/neobanque-website/logo/traderepublic_app_2.webp" />
+										</div>
+										<img
+											class="relative z-[99] max-w-full"
+											alt="Device frame"
+											src="https://unicorn-cdn.b-cdn.net/422a1178-de82-41ec-b0a9-e88acdc52899/google_pixel_4_xl_just_black.png"
+											srcset="
+												https://unicorn-cdn.b-cdn.net/422a1178-de82-41ec-b0a9-e88acdc52899/google_pixel_4_xl_just_black.png?width=174&amp;height=376  174w,
+												https://unicorn-cdn.b-cdn.net/422a1178-de82-41ec-b0a9-e88acdc52899/google_pixel_4_xl_just_black.png?width=200&amp;height=432  200w,
+												https://unicorn-cdn.b-cdn.net/422a1178-de82-41ec-b0a9-e88acdc52899/google_pixel_4_xl_just_black.png?width=162&amp;height=350  162w,
+												https://unicorn-cdn.b-cdn.net/422a1178-de82-41ec-b0a9-e88acdc52899/google_pixel_4_xl_just_black.png?width=200&amp;height=432  200w,
+												https://unicorn-cdn.b-cdn.net/422a1178-de82-41ec-b0a9-e88acdc52899/google_pixel_4_xl_just_black.png?width=250&amp;height=540  250w,
+												https://unicorn-cdn.b-cdn.net/422a1178-de82-41ec-b0a9-e88acdc52899/google_pixel_4_xl_just_black.png?width=348&amp;height=752  348w,
+												https://unicorn-cdn.b-cdn.net/422a1178-de82-41ec-b0a9-e88acdc52899/google_pixel_4_xl_just_black.png?width=400&amp;height=864  400w,
+												https://unicorn-cdn.b-cdn.net/422a1178-de82-41ec-b0a9-e88acdc52899/google_pixel_4_xl_just_black.png?width=324&amp;height=700  324w,
+												https://unicorn-cdn.b-cdn.net/422a1178-de82-41ec-b0a9-e88acdc52899/google_pixel_4_xl_just_black.png?width=400&amp;height=864  400w,
+												https://unicorn-cdn.b-cdn.net/422a1178-de82-41ec-b0a9-e88acdc52899/google_pixel_4_xl_just_black.png?width=500&amp;height=1080 500w,
+												https://unicorn-cdn.b-cdn.net/422a1178-de82-41ec-b0a9-e88acdc52899/google_pixel_4_xl_just_black.png?width=522&amp;height=1128 522w,
+												https://unicorn-cdn.b-cdn.net/422a1178-de82-41ec-b0a9-e88acdc52899/google_pixel_4_xl_just_black.png?width=600&amp;height=1296 600w,
+												https://unicorn-cdn.b-cdn.net/422a1178-de82-41ec-b0a9-e88acdc52899/google_pixel_4_xl_just_black.png?width=486&amp;height=1050 486w,
+												https://unicorn-cdn.b-cdn.net/422a1178-de82-41ec-b0a9-e88acdc52899/google_pixel_4_xl_just_black.png?width=600&amp;height=1296 600w,
+												https://unicorn-cdn.b-cdn.net/422a1178-de82-41ec-b0a9-e88acdc52899/google_pixel_4_xl_just_black.png?width=750&amp;height=1620 750w
+											"
+											sizes="(max-width: 320px) 174px,(max-width: 760px) 200px,(max-width: 768px) 162px,(max-width: 1366px) 200px,250px"
+										/>
+									</div>
+								</div>
+								<!-- ./static -->
+								<!-- shift -->
+								<div class="absolute -left-[60%] right-0 bottom-0 top-[10%] w-full mx-auto flex justify-center flex-wrap sm:-left-[20%] md:-left-[60%] lg:-left-[45%]">
+									<div class="w-[12.5rem] xl:w-[15.625rem]">
+										<div class="relative">
+											<div class="absolute left-0 right-0 z-50 mx-auto bg-no-repeat bg-cover bg-[top_center] top-[4.2%] h-[91.5%] w-[83.3%]">
+												<img class="object-cover w-full h-full m-auto" alt="Trade Republic app screenshoot 1" src="https://storage.googleapis.com/neobanque-website/logo/traderepublic_app_1.webp" />
+											</div>
+											<img
+												class="z-[101] max-w-full relative"
+												alt="Device frame"
+												src="https://unicorn-cdn.b-cdn.net/04f7baaf-d013-4e30-86b3-623511b983f7/apple_iphone_11_pro_max_space_grey.png"
+												srcset="
+													https://unicorn-cdn.b-cdn.net/04f7baaf-d013-4e30-86b3-623511b983f7/apple_iphone_11_pro_max_space_grey.png?width=174&amp;height=342  174w,
+													https://unicorn-cdn.b-cdn.net/04f7baaf-d013-4e30-86b3-623511b983f7/apple_iphone_11_pro_max_space_grey.png?width=200&amp;height=393  200w,
+													https://unicorn-cdn.b-cdn.net/04f7baaf-d013-4e30-86b3-623511b983f7/apple_iphone_11_pro_max_space_grey.png?width=162&amp;height=318  162w,
+													https://unicorn-cdn.b-cdn.net/04f7baaf-d013-4e30-86b3-623511b983f7/apple_iphone_11_pro_max_space_grey.png?width=200&amp;height=393  200w,
+													https://unicorn-cdn.b-cdn.net/04f7baaf-d013-4e30-86b3-623511b983f7/apple_iphone_11_pro_max_space_grey.png?width=250&amp;height=491  250w,
+													https://unicorn-cdn.b-cdn.net/04f7baaf-d013-4e30-86b3-623511b983f7/apple_iphone_11_pro_max_space_grey.png?width=348&amp;height=684  348w,
+													https://unicorn-cdn.b-cdn.net/04f7baaf-d013-4e30-86b3-623511b983f7/apple_iphone_11_pro_max_space_grey.png?width=400&amp;height=786  400w,
+													https://unicorn-cdn.b-cdn.net/04f7baaf-d013-4e30-86b3-623511b983f7/apple_iphone_11_pro_max_space_grey.png?width=324&amp;height=636  324w,
+													https://unicorn-cdn.b-cdn.net/04f7baaf-d013-4e30-86b3-623511b983f7/apple_iphone_11_pro_max_space_grey.png?width=400&amp;height=786  400w,
+													https://unicorn-cdn.b-cdn.net/04f7baaf-d013-4e30-86b3-623511b983f7/apple_iphone_11_pro_max_space_grey.png?width=500&amp;height=982  500w,
+													https://unicorn-cdn.b-cdn.net/04f7baaf-d013-4e30-86b3-623511b983f7/apple_iphone_11_pro_max_space_grey.png?width=522&amp;height=1026 522w,
+													https://unicorn-cdn.b-cdn.net/04f7baaf-d013-4e30-86b3-623511b983f7/apple_iphone_11_pro_max_space_grey.png?width=600&amp;height=1179 600w,
+													https://unicorn-cdn.b-cdn.net/04f7baaf-d013-4e30-86b3-623511b983f7/apple_iphone_11_pro_max_space_grey.png?width=486&amp;height=954  486w,
+													https://unicorn-cdn.b-cdn.net/04f7baaf-d013-4e30-86b3-623511b983f7/apple_iphone_11_pro_max_space_grey.png?width=600&amp;height=1179 600w,
+													https://unicorn-cdn.b-cdn.net/04f7baaf-d013-4e30-86b3-623511b983f7/apple_iphone_11_pro_max_space_grey.png?width=750&amp;height=1473 750w
+												"
+												sizes="(max-width: 320px) 174px,(max-width: 760px) 200px,(max-width: 768px) 162px,(max-width: 1366px) 200px,250px"
+											/>
+										</div>
+									</div>
+								</div>
+								<!-- ./shift -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- ./hero section -->
+
+			<section class="pt-8 pb-12 text-white bg-blue-950">
+				<div class="mx-auto max-w-[67.5rem] px-4">
+					<ul class="flex flex-wrap justify-center gap-20">
+						<li>
+							<h3 class="mb-5 font-bold leading-tight">Lorem, ipsum dolor.</h3>
+							<ul class="flex flex-col gap-4">
+								<li>
+									<div class="inline-flex text-center">
+										<div class="h-3 mr-2">
+											<span class="">
+												<svg width="22px" height="17px" viewBox="0 0 22 17" version="1.1" xmlns="http://www.w3.org/2000/svg">
+													<g id="styleguide" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+														<g id="Unicorn-Styleguide" transform="translate(-76.000000, -1899.000000)" fill-rule="nonzero" fill="#4D61FC" class="fill-white">
+															<g id="Icons" transform="translate(76.000000, 1856.000000)">
+																<g id="checked" transform="translate(0.000000, 43.000000)">
+																	<path d="M0.253846154,9.30769231 C0.0846153846,9.13846154 0,8.88461538 0,8.71538462 C0,8.54615385 0.0846153846,8.29230769 0.253846154,8.12307692 L1.43846154,6.93846154 C1.77692308,6.6 2.28461538,6.6 2.62307692,6.93846154 L7.36153846,12.0153846 C7.53076923,12.1846154 7.78461538,12.1846154 7.95384615,12.0153846 L19.3769231,0.253846154 C19.7153846,-0.0846153846 20.2230769,-0.0846153846 20.5615385,0.253846154 L21.7461538,1.43846154 C22.0846154,1.77692308 22.0846154,2.28461538 21.7461538,2.62307692 L8.20769231,16.6692308 C8.03846154,16.8384615 7.86923077,16.9230769 7.61538462,16.9230769 C7.36153846,16.9230769 7.19230769,16.8384615 7.02307692,16.6692308 L0.253846154,9.30769231 Z" id="Shape"></path>
+																</g>
+															</g>
+														</g>
+													</g>
+												</svg>
+											</span>
+										</div>
+										<div class="max-w-[12.5rem] items-baseline leading-snug">Lorem ipsum dolor sit amet.</div>
+									</div>
+								</li>
+								<li>
+									<div class="inline-flex text-center">
+										<div class="h-3 mr-2">
+											<span class="">
+												<svg width="22px" height="17px" viewBox="0 0 22 17" version="1.1" xmlns="http://www.w3.org/2000/svg">
+													<g id="styleguide" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+														<g id="Unicorn-Styleguide" transform="translate(-76.000000, -1899.000000)" fill-rule="nonzero" fill="#4D61FC" class="fill-white">
+															<g id="Icons" transform="translate(76.000000, 1856.000000)">
+																<g id="checked" transform="translate(0.000000, 43.000000)">
+																	<path d="M0.253846154,9.30769231 C0.0846153846,9.13846154 0,8.88461538 0,8.71538462 C0,8.54615385 0.0846153846,8.29230769 0.253846154,8.12307692 L1.43846154,6.93846154 C1.77692308,6.6 2.28461538,6.6 2.62307692,6.93846154 L7.36153846,12.0153846 C7.53076923,12.1846154 7.78461538,12.1846154 7.95384615,12.0153846 L19.3769231,0.253846154 C19.7153846,-0.0846153846 20.2230769,-0.0846153846 20.5615385,0.253846154 L21.7461538,1.43846154 C22.0846154,1.77692308 22.0846154,2.28461538 21.7461538,2.62307692 L8.20769231,16.6692308 C8.03846154,16.8384615 7.86923077,16.9230769 7.61538462,16.9230769 C7.36153846,16.9230769 7.19230769,16.8384615 7.02307692,16.6692308 L0.253846154,9.30769231 Z" id="Shape"></path>
+																</g>
+															</g>
+														</g>
+													</g>
+												</svg>
+											</span>
+										</div>
+										<div class="max-w-[12.5rem] items-baseline leading-snug">Lorem ipsum dolor sit amet.</div>
+									</div>
+								</li>
+								<li>
+									<div class="inline-flex text-center">
+										<div class="h-3 mr-2">
+											<span class="">
+												<svg width="22px" height="17px" viewBox="0 0 22 17" version="1.1" xmlns="http://www.w3.org/2000/svg">
+													<g id="styleguide" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+														<g id="Unicorn-Styleguide" transform="translate(-76.000000, -1899.000000)" fill-rule="nonzero" fill="#4D61FC" class="fill-white">
+															<g id="Icons" transform="translate(76.000000, 1856.000000)">
+																<g id="checked" transform="translate(0.000000, 43.000000)">
+																	<path d="M0.253846154,9.30769231 C0.0846153846,9.13846154 0,8.88461538 0,8.71538462 C0,8.54615385 0.0846153846,8.29230769 0.253846154,8.12307692 L1.43846154,6.93846154 C1.77692308,6.6 2.28461538,6.6 2.62307692,6.93846154 L7.36153846,12.0153846 C7.53076923,12.1846154 7.78461538,12.1846154 7.95384615,12.0153846 L19.3769231,0.253846154 C19.7153846,-0.0846153846 20.2230769,-0.0846153846 20.5615385,0.253846154 L21.7461538,1.43846154 C22.0846154,1.77692308 22.0846154,2.28461538 21.7461538,2.62307692 L8.20769231,16.6692308 C8.03846154,16.8384615 7.86923077,16.9230769 7.61538462,16.9230769 C7.36153846,16.9230769 7.19230769,16.8384615 7.02307692,16.6692308 L0.253846154,9.30769231 Z" id="Shape"></path>
+																</g>
+															</g>
+														</g>
+													</g>
+												</svg>
+											</span>
+										</div>
+										<div class="max-w-[12.5rem] items-baseline leading-snug">Lorem ipsum dolor sit amet.</div>
+									</div>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<h3 class="mb-5 font-bold leading-tight">Lorem, ipsum dolor.</h3>
+							<ul class="flex flex-col gap-4">
+								<li>
+									<div class="inline-flex text-center">
+										<div class="h-3 mr-2">
+											<span class="">
+												<svg width="22px" height="17px" viewBox="0 0 22 17" version="1.1" xmlns="http://www.w3.org/2000/svg">
+													<g id="styleguide" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+														<g id="Unicorn-Styleguide" transform="translate(-76.000000, -1899.000000)" fill-rule="nonzero" fill="#4D61FC" class="fill-white">
+															<g id="Icons" transform="translate(76.000000, 1856.000000)">
+																<g id="checked" transform="translate(0.000000, 43.000000)">
+																	<path d="M0.253846154,9.30769231 C0.0846153846,9.13846154 0,8.88461538 0,8.71538462 C0,8.54615385 0.0846153846,8.29230769 0.253846154,8.12307692 L1.43846154,6.93846154 C1.77692308,6.6 2.28461538,6.6 2.62307692,6.93846154 L7.36153846,12.0153846 C7.53076923,12.1846154 7.78461538,12.1846154 7.95384615,12.0153846 L19.3769231,0.253846154 C19.7153846,-0.0846153846 20.2230769,-0.0846153846 20.5615385,0.253846154 L21.7461538,1.43846154 C22.0846154,1.77692308 22.0846154,2.28461538 21.7461538,2.62307692 L8.20769231,16.6692308 C8.03846154,16.8384615 7.86923077,16.9230769 7.61538462,16.9230769 C7.36153846,16.9230769 7.19230769,16.8384615 7.02307692,16.6692308 L0.253846154,9.30769231 Z" id="Shape"></path>
+																</g>
+															</g>
+														</g>
+													</g>
+												</svg>
+											</span>
+										</div>
+										<div class="max-w-[12.5rem] items-baseline leading-snug">Lorem ipsum dolor sit amet.</div>
+									</div>
+								</li>
+								<li>
+									<div class="inline-flex text-center">
+										<div class="h-3 mr-2">
+											<span class="">
+												<svg width="22px" height="17px" viewBox="0 0 22 17" version="1.1" xmlns="http://www.w3.org/2000/svg">
+													<g id="styleguide" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+														<g id="Unicorn-Styleguide" transform="translate(-76.000000, -1899.000000)" fill-rule="nonzero" fill="#4D61FC" class="fill-white">
+															<g id="Icons" transform="translate(76.000000, 1856.000000)">
+																<g id="checked" transform="translate(0.000000, 43.000000)">
+																	<path d="M0.253846154,9.30769231 C0.0846153846,9.13846154 0,8.88461538 0,8.71538462 C0,8.54615385 0.0846153846,8.29230769 0.253846154,8.12307692 L1.43846154,6.93846154 C1.77692308,6.6 2.28461538,6.6 2.62307692,6.93846154 L7.36153846,12.0153846 C7.53076923,12.1846154 7.78461538,12.1846154 7.95384615,12.0153846 L19.3769231,0.253846154 C19.7153846,-0.0846153846 20.2230769,-0.0846153846 20.5615385,0.253846154 L21.7461538,1.43846154 C22.0846154,1.77692308 22.0846154,2.28461538 21.7461538,2.62307692 L8.20769231,16.6692308 C8.03846154,16.8384615 7.86923077,16.9230769 7.61538462,16.9230769 C7.36153846,16.9230769 7.19230769,16.8384615 7.02307692,16.6692308 L0.253846154,9.30769231 Z" id="Shape"></path>
+																</g>
+															</g>
+														</g>
+													</g>
+												</svg>
+											</span>
+										</div>
+										<div class="max-w-[12.5rem] items-baseline leading-snug">Lorem ipsum dolor sit amet.</div>
+									</div>
+								</li>
+								<li>
+									<div class="inline-flex text-center">
+										<div class="h-3 mr-2">
+											<span class="">
+												<svg width="22px" height="17px" viewBox="0 0 22 17" version="1.1" xmlns="http://www.w3.org/2000/svg">
+													<g id="styleguide" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+														<g id="Unicorn-Styleguide" transform="translate(-76.000000, -1899.000000)" fill-rule="nonzero" fill="#4D61FC" class="fill-white">
+															<g id="Icons" transform="translate(76.000000, 1856.000000)">
+																<g id="checked" transform="translate(0.000000, 43.000000)">
+																	<path d="M0.253846154,9.30769231 C0.0846153846,9.13846154 0,8.88461538 0,8.71538462 C0,8.54615385 0.0846153846,8.29230769 0.253846154,8.12307692 L1.43846154,6.93846154 C1.77692308,6.6 2.28461538,6.6 2.62307692,6.93846154 L7.36153846,12.0153846 C7.53076923,12.1846154 7.78461538,12.1846154 7.95384615,12.0153846 L19.3769231,0.253846154 C19.7153846,-0.0846153846 20.2230769,-0.0846153846 20.5615385,0.253846154 L21.7461538,1.43846154 C22.0846154,1.77692308 22.0846154,2.28461538 21.7461538,2.62307692 L8.20769231,16.6692308 C8.03846154,16.8384615 7.86923077,16.9230769 7.61538462,16.9230769 C7.36153846,16.9230769 7.19230769,16.8384615 7.02307692,16.6692308 L0.253846154,9.30769231 Z" id="Shape"></path>
+																</g>
+															</g>
+														</g>
+													</g>
+												</svg>
+											</span>
+										</div>
+										<div class="max-w-[12.5rem] items-baseline leading-snug">Lorem ipsum dolor sit amet.</div>
+									</div>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<h3 class="mb-5 font-bold leading-tight">Lorem, ipsum dolor.</h3>
+							<ul class="flex flex-col gap-4">
+								<li>
+									<div class="inline-flex text-center">
+										<div class="h-3 mr-2">
+											<span class="">
+												<svg width="22px" height="17px" viewBox="0 0 22 17" version="1.1" xmlns="http://www.w3.org/2000/svg">
+													<g id="styleguide" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+														<g id="Unicorn-Styleguide" transform="translate(-76.000000, -1899.000000)" fill-rule="nonzero" fill="#4D61FC" class="fill-white">
+															<g id="Icons" transform="translate(76.000000, 1856.000000)">
+																<g id="checked" transform="translate(0.000000, 43.000000)">
+																	<path d="M0.253846154,9.30769231 C0.0846153846,9.13846154 0,8.88461538 0,8.71538462 C0,8.54615385 0.0846153846,8.29230769 0.253846154,8.12307692 L1.43846154,6.93846154 C1.77692308,6.6 2.28461538,6.6 2.62307692,6.93846154 L7.36153846,12.0153846 C7.53076923,12.1846154 7.78461538,12.1846154 7.95384615,12.0153846 L19.3769231,0.253846154 C19.7153846,-0.0846153846 20.2230769,-0.0846153846 20.5615385,0.253846154 L21.7461538,1.43846154 C22.0846154,1.77692308 22.0846154,2.28461538 21.7461538,2.62307692 L8.20769231,16.6692308 C8.03846154,16.8384615 7.86923077,16.9230769 7.61538462,16.9230769 C7.36153846,16.9230769 7.19230769,16.8384615 7.02307692,16.6692308 L0.253846154,9.30769231 Z" id="Shape"></path>
+																</g>
+															</g>
+														</g>
+													</g>
+												</svg>
+											</span>
+										</div>
+										<div class="max-w-[12.5rem] items-baseline leading-snug">Lorem ipsum dolor sit amet.</div>
+									</div>
+								</li>
+								<li>
+									<div class="inline-flex text-center">
+										<div class="h-3 mr-2">
+											<span class="">
+												<svg width="22px" height="17px" viewBox="0 0 22 17" version="1.1" xmlns="http://www.w3.org/2000/svg">
+													<g id="styleguide" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+														<g id="Unicorn-Styleguide" transform="translate(-76.000000, -1899.000000)" fill-rule="nonzero" fill="#4D61FC" class="fill-white">
+															<g id="Icons" transform="translate(76.000000, 1856.000000)">
+																<g id="checked" transform="translate(0.000000, 43.000000)">
+																	<path d="M0.253846154,9.30769231 C0.0846153846,9.13846154 0,8.88461538 0,8.71538462 C0,8.54615385 0.0846153846,8.29230769 0.253846154,8.12307692 L1.43846154,6.93846154 C1.77692308,6.6 2.28461538,6.6 2.62307692,6.93846154 L7.36153846,12.0153846 C7.53076923,12.1846154 7.78461538,12.1846154 7.95384615,12.0153846 L19.3769231,0.253846154 C19.7153846,-0.0846153846 20.2230769,-0.0846153846 20.5615385,0.253846154 L21.7461538,1.43846154 C22.0846154,1.77692308 22.0846154,2.28461538 21.7461538,2.62307692 L8.20769231,16.6692308 C8.03846154,16.8384615 7.86923077,16.9230769 7.61538462,16.9230769 C7.36153846,16.9230769 7.19230769,16.8384615 7.02307692,16.6692308 L0.253846154,9.30769231 Z" id="Shape"></path>
+																</g>
+															</g>
+														</g>
+													</g>
+												</svg>
+											</span>
+										</div>
+										<div class="max-w-[12.5rem] items-baseline leading-snug">Lorem ipsum dolor sit amet.</div>
+									</div>
+								</li>
+								<li>
+									<div class="inline-flex text-center">
+										<div class="h-3 mr-2">
+											<span class="">
+												<svg width="22px" height="17px" viewBox="0 0 22 17" version="1.1" xmlns="http://www.w3.org/2000/svg">
+													<g id="styleguide" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+														<g id="Unicorn-Styleguide" transform="translate(-76.000000, -1899.000000)" fill-rule="nonzero" fill="#4D61FC" class="fill-white">
+															<g id="Icons" transform="translate(76.000000, 1856.000000)">
+																<g id="checked" transform="translate(0.000000, 43.000000)">
+																	<path d="M0.253846154,9.30769231 C0.0846153846,9.13846154 0,8.88461538 0,8.71538462 C0,8.54615385 0.0846153846,8.29230769 0.253846154,8.12307692 L1.43846154,6.93846154 C1.77692308,6.6 2.28461538,6.6 2.62307692,6.93846154 L7.36153846,12.0153846 C7.53076923,12.1846154 7.78461538,12.1846154 7.95384615,12.0153846 L19.3769231,0.253846154 C19.7153846,-0.0846153846 20.2230769,-0.0846153846 20.5615385,0.253846154 L21.7461538,1.43846154 C22.0846154,1.77692308 22.0846154,2.28461538 21.7461538,2.62307692 L8.20769231,16.6692308 C8.03846154,16.8384615 7.86923077,16.9230769 7.61538462,16.9230769 C7.36153846,16.9230769 7.19230769,16.8384615 7.02307692,16.6692308 L0.253846154,9.30769231 Z" id="Shape"></path>
+																</g>
+															</g>
+														</g>
+													</g>
+												</svg>
+											</span>
+										</div>
+										<div class="max-w-[12.5rem] items-baseline leading-snug">Lorem ipsum dolor sit amet.</div>
+									</div>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</section>
+
+			<section class="py-20">
+				<div class="max-w-[56.25rem] mx-auto px-4">
+					<h2 class="my-2 mt-2 mb-1 text-3xl font-bold leading-tight md:mb-1 md:text-5xl md:leading-none sm:text-4xl">Trade Republic - Broker & Bank</h2>
+
+					<div class="leading-relaxed">
+						<div class="content-text">
+							<p></p>
+							<p class="my-4">The smartest way to invest, spend and bank.</p>
+							<p class="my-4">Earn 3.75 % interest on unlimited cash. Get your subscription free card to spend and earn 1 % Saveback. Invest easily and safely with just 1 €.</p>
+							<br />
+							<p class="my-4">Earn while you spend</p>
+							<p class="my-4">- Activate 3.75 % annual interest with your new Trade Republic IBAN and earn money every month on unlimited cash balances.</p>
+							<p class="my-4">- No monthly subscription fee. Unlimited free ATM withdrawals worldwide above 100 €.</p>
+							<p class="my-4">- Earn 1&nbsp;% Saveback on card spending into your savings plan. You can earn Saveback on up to 1,500&nbsp;€ in monthly spending. To qualify, invest at least 50&nbsp;€ monthly in savings plans.</p>
+							<p class="my-4">- Round up card payments and invest spare change on the go.</p>
+							<br />
+							<p class="my-4">Save now for later</p>
+							<p class="my-4">- Invest with just 1 € in stocks, ETFs or crypto. No hidden fees, easy and safe.</p>
+							<p class="my-4">- Savings Plans on ETFs or stocks to invest continuously for long term wealth.</p>
+							<p class="my-4">- Bonds to lock in high interest for years and get regular payments. Start with 1 €, sell anytime.</p>
+							<p class="my-4">- Derivatives trading with premium partners: Citi, HSBC, Société Générale or UBS.</p>
+							<br />
+							<p class="my-4">Trusted by millions</p>
+							<p class="my-4">- Over 4 millions users and 35 billions € of assets across 17 European countries.</p>
+							<p class="my-4">- German bank regulated by BaFin and Bundesbank.</p>
+							<p class="my-4">- Publicly regulated exchange and better spreads than the reference market.</p>
+							<br />
+							<p class="my-4">We are on a mission to empower everyone to create wealth with easy, safe and free access to the financial system.</p>
+							<br />
+							<p class="my-4">Disclaimer: Not all of the before mentioned services are available in all the markets. The scope and availability of our Stock, ETF, Savings Plan, Crypto, Bonds and Derivative offering may vary according to the country. Please refer to our website for more information.</p>
+							<br />
+							<p class="my-4">Brunnenstr. 19-21</p>
+							<p class="my-4">10119 Berlin, Germany</p>
+							<p></p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="py-20 bg-zinc-100">
+				<div class="max-w-[67.5rem] mx-auto px-4">
+					<ul class="flex flex-col w-full gap-4 sm:flex-row sm:justify-center">
+						<li class="w-full sm:w-fit">
+							<a href="#" class="w-full text-sm text-white transition-all duration-200 ease-linear relative inline-block min-h-[2.75rem] min-w-[7.5rem] px-5 pb-3 pt-3 text-center font-bold rounded shadow-sm bg-slate-800 hover:bg-black sm:w-fit hover:shadow-lg hover:-translate-y-1">Go on Trade Republic now !</a>
+						</li>
+						
+					</ul>
+				</div>
+			</section>
+
+			<section class="py-20">
+				<div class="max-w-[75rem] mx-auto px-4">
+					<div class="max-w-[43.75rem] mx-auto text-center">
+						<h2 class="my-4 text-3xl font-bold leading-tight">Discover More Neobanks</h2>
+					</div>
+					<ul class="grid grid-cols-1 gap-4 mt-12 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+						<li>
+							<div class="w-auto h-full overflow-hidden transition-opacity ease-out border border-black/10 hover:opacity-70 rounded-xl">
+								<a href="#" class="flex flex-col h-full">
+									<div>
+										<img class="h-[8.125rem] w-full object-cover object-top" src="https://storage.googleapis.com/neobanque-website/logo/comdirect.webp" alt="Comdirect thumbnail">
+									</div>
+									<div class="flex-grow p-5">
+										<div class="flex items-center justify-between mb-3">
+											<h3 class="font-bold leading-tight">Comdirect</h3>
+											<div class="flex items-center gap-2 text-sm">
+												<span>4.7</span>
+												<svg viewBox="0 0 16 16" height="16" width="16" class="w-4 h-4 fill-amber-400">
+													<path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Zm0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41L8 2.694Z"></path>
+												</svg>
+											</div>
+										</div>
+										<div class="text-sm leading-relaxed text-gray-700/80">
+											<p>mehr verstehen, mehr vermögen</p>
+										</div>
+									</div>
+								</a>
+							</div>
+						</li>
+						
+						<li>
+							<div class="w-auto h-full overflow-hidden transition-opacity ease-out border border-black/10 hover:opacity-70 rounded-xl">
+								<a href="#" class="flex flex-col h-full">
+									<div>
+										<img class="h-[8.125rem] w-full object-cover object-top" src="https://storage.googleapis.com/neobanque-website/logo/c24.webp" alt="C24 thumbnail">
+									</div>
+									<div class="flex-grow p-5">
+										<div class="flex items-center justify-between mb-3">
+											<h3 class="font-bold leading-tight">C24</h3>
+											<div class="flex items-center gap-2 text-sm">
+												<span>4.8</span>
+												<svg viewBox="0 0 16 16" height="16" width="16" class="w-4 h-4 fill-amber-400">
+													<path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Zm0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41L8 2.694Z"></path>
+												</svg>
+											</div>
+										</div>
+										<div class="text-sm leading-relaxed text-gray-700/80">
+											<p>CHECK24 Banking</p>
+										</div>
+									</div>
+								</a>
+							</div>
+						</li>
+
+						<li>
+							<div class="w-auto h-full overflow-hidden transition-opacity ease-out border border-black/10 hover:opacity-70 rounded-xl">
+								<a href="#" class="flex flex-col h-full">
+									<div>
+										<img class="h-[8.125rem] w-full object-cover object-top" src="https://storage.googleapis.com/neobanque-website/logo/dkb.webp" alt="DKB thumbnail">
+									</div>
+									<div class="flex-grow p-5">
+										<div class="flex items-center justify-between mb-3">
+											<h3 class="font-bold leading-tight">DKB</h3>
+											<div class="flex items-center gap-2 text-sm">
+												<span>4.4</span>
+												<svg viewBox="0 0 16 16" height="16" width="16" class="w-4 h-4 fill-amber-400">
+													<path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Zm0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41L8 2.694Z"></path>
+												</svg>
+											</div>
+										</div>
+										<div class="text-sm leading-relaxed text-gray-700/80">
+											<p></p>
+										</div>
+									</div>
+								</a>
+							</div>
+						</li>
+						<li>
+							<div class="w-auto h-full overflow-hidden transition-opacity ease-out border border-black/10 hover:opacity-70 rounded-xl">
+								<a href="#" class="flex flex-col h-full">
+									<div>
+										<img class="h-[8.125rem] w-full object-cover object-top" src="https://storage.googleapis.com/neobanque-website/logo/n26.png" alt="N26 thumbnail">
+									</div>
+									<div class="flex-grow p-5">
+										<div class="flex items-center justify-between mb-3">
+											<h3 class="font-bold leading-tight">N26</h3>
+											<div class="flex items-center gap-2 text-sm">
+												<span>4.6</span>
+												<svg viewBox="0 0 16 16" height="16" width="16" class="w-4 h-4 fill-amber-400">
+													<path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Zm0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41L8 2.694Z"></path>
+												</svg>
+											</div>
+										</div>
+										<div class="text-sm leading-relaxed text-gray-700/80">
+											<p>Love your bank</p>
+										</div>
+									</div>
+								</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</section>
+
+			<!-- faq -->
+			<section class="py-20 text-white bg-blue-950">
+				<div class="px-4 mx-auto max-w-[67.5rem]">
+					<div class="mx-auto max-w-[32.5rem] text-center">
+						<h2 class="my-4 text-5xl font-bold text-white">F.A.Q.</h2>
+						<div class="mx-auto sm:max-w-[80%] text-xl leading-relaxed opacity-90 max-w-[18.75rem]">
+							<p>Got questions? We've got answers.</p>
+						</div>
+					</div>
+
+					<div x-data="{ openItem: null }" class="mx-auto mt-10 flex max-w-[60rem] flex-col gap-2">
+						<template
+							x-for="(item, index) in [
+								{ 	question: 'What is a Neobank?', 
+									answer: `<p>A neobank, also known as an online bank, digital bank, or challenger bank, is a type of financial institution that operates exclusively online without traditional physical branch networks. Neobanks leverage modern technology to provide a wide range of banking services, typically through mobile apps and web platforms. Here are some key characteristics and features of neobanks:</p>
+									<ol class='list-decimal pl-[2em]'>
+									<li>Digital-Only Presence: Neobanks operate entirely online, with no physical branches. Customers interact with the bank through digital platforms like mobile apps or websites.</li>
+									<li>User-Friendly Interfaces: Neobanks focus on providing seamless and intuitive user experiences. Their platforms often feature sleek designs and easy-to-navigate interfaces.</li>
+									<li>Low Fees: Many neobanks offer lower fees compared to traditional banks. This includes reduced or no fees for account maintenance, overdrafts, and foreign transactions.
+									Innovative Services: Neobanks often provide innovative financial services and tools. This can include real-time spending notifications, budgeting tools, savings goals, and advanced analytics to track spending habits.</li>
+									<li>Accessibility: With 24/7 access through digital platforms, neobanks offer high convenience for users, allowing them to manage their finances from anywhere at any time.</li>
+									<li>Quick Account Opening: Opening an account with a neobank is typically a quick and straightforward process, often requiring only a few minutes and basic personal information.</li>
+									<li>Focus on Specific Markets: Some neobanks target specific customer segments, such as freelancers, small businesses, or tech-savvy individuals.</li>
+									<li>Partnerships with Traditional Banks: Some neobanks partner with established financial institutions to offer certain services, ensuring regulatory compliance and stability.</li>
+									</ol>
+									
+									<p>Neobanks are part of the broader fintech (financial technology) revolution, leveraging technology to disrupt traditional banking models and offer more personalized, efficient, and accessible financial services.</p>` },
+								{ question: 'Питання 2', answer: 'Відповідь на питання 2...' },
+								{ question: 'Питання 3', answer: 'Відповідь на питання 3...' }
+							]"
+						>
+							<div class="relative">
+								<button @click="openItem = openItem === index ? null : index" class="relative w-full py-5 pl-5 pr-4 overflow-hidden text-left transition-all duration-200 border-2 rounded-2xl border-white/40 hover:border-white" :class="{ 'border-white': openItem === index }" type="button">
+									<div class="relative text-xl leading-snug text-white pr-9">
+										<span x-text="item.question"></span>
+										<div class="absolute right-2 top-[50%] -translate-y-[50%] transition-transform duration-200" :class="{ 'rotate-180': openItem === index }">
+											<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+												<path fill="currentColor" d="M5.293 9.293a1 1 0 0 1 1.414 0L12 14.586l5.293-5.293a1 1 0 1 1 1.414 1.414l-6 6a1 1 0 0 1-1.414 0l-6-6a1 1 0 0 1 0-1.414" />
+											</svg>
+										</div>
+									</div>
+
+									<div x-cloak class="text-left transition-all duration-200 opacity-0 max-h-0" :class="{ 'mt-5 opacity-100 max-h-max': openItem === index }">
+										<div class="flex flex-col gap-4 leading-relaxed text-gray-100/[0.85]" x-html="item.answer"></div>
+									</div>
+								</button>
+							</div>
+						</template>
+					</div>
+				</div>
+			</section>
+			<!-- ./faq -->
+
+			<section class="py-5">
+				<div class="mx-auto px-4 max-w-[53.125rem]">
+					<div class="text-xs leading-snug text-center text-gray-500">
+						<p>Affiliate Disclosure Instead of banner ads and paywalls, Neobanque makes money through affiliate links to the various payment service providers featured on our website. While we work hard to scout the market for the best deals, we're unable to consider every possible product available to you. Our extensive range of trusted affiliate partners enables us to make detailed, unbiased, and solution-driven recommendations for all types of consumer questions and problems. This allows us to match our users with the right providers to suit their needs and, in doing so, match our providers with new customers, creating a win-win for everybody involved. However, while some links on Neobanque.ch may indeed earn us a commission, this fact never impacts the independence and integrity of our opinions, recommendations, and evaluations.</p>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer class="py-20">
+			<div class="max-w-full px-8 mx-auto">
+				<div class="flex flex-wrap xl:justify-between justify-normal">
+					<div class="mb-12 w-1/5 min-w-[12.5rem] pr-6">
+						<a class="inline-block transition-opacity hover:opacity-60" href="" target="_blank">
+							<img loading="lazy" alt="" class="" width="42" src="https://storage.googleapis.com/neobanque-website/logo/neobanques.svg" />
+						</a>
+					</div>
+
+					<div class="mb-12 w-1/5 min-w-[12.5rem] pr-6">
+						<h3 class="mb-5 font-bold leading-tight">Category</h3>
+						<ul class="flex flex-col gap-3 text-sm">
+							<li>
+								<a href="https://neobanque.ch/neobank/" target="_self" class="transition-opacity hover:opacity-70"> Neobanks </a>
+							</li>
+							<li>
+								<a href="https://neobanque.ch/kids/" target="_self" class="transition-opacity hover:opacity-70"> Neobanks For Kids </a>
+							</li>
+							<li>
+								<a href="https://neobanque.ch/business/" target="_self" class="transition-opacity hover:opacity-70"> Neobanks For Business </a>
+							</li>
+							<li>
+								<a href="https://neobanque.ch/broker/" target="_self" class="transition-opacity hover:opacity-70"> Brokers </a>
+							</li>
+							<li>
+								<a href="https://neobanque.ch/crypto-bitcoin-wallet-exchange/" target="_self" class="transition-opacity hover:opacity-70"> Crypto Wallet &amp; Exchange </a>
+							</li>
+							<li>
+								<a href="https://neobanque.ch/bitcoin-101/" target="_self" class="transition-opacity hover:opacity-70"> Bitcoin 101 </a>
+							</li>
+							<li>
+								<a href="https://neobanque.ch/blog/" target="_self" class="transition-opacity hover:opacity-70"> Blog </a>
+							</li>
+
+							<li>
+								<a href="https://neobanque.ch/finance-share-referral-code/" target="_self" class="transition-opacity hover:opacity-70"> Share your Referral Code </a>
+							</li>
+						</ul>
+					</div>
+
+					<div class="mb-12 w-1/5 min-w-[12.5rem] pr-6">
+						<h3 class="mb-5 font-bold leading-tight">Neobanks by Country</h3>
+						<ul class="flex flex-col gap-3 text-sm">
+							<li>
+								<a href="#" target="_self" class="transition-opacity hover:opacity-70">Argentina</a>
+							</li>
+							<li>
+								<a href="#" target="_self" class="transition-opacity hover:opacity-70">Australia</a>
+							</li>
+							<li>
+								<a href="#" target="_self" class="transition-opacity hover:opacity-70">Brazil</a>
+							</li>
+							<li>
+								<a href="#" target="_self" class="transition-opacity hover:opacity-70">France</a>
+							</li>
+							<li>
+								<a href="#" target="_self" class="transition-opacity hover:opacity-70">Germany</a>
+							</li>
+							<li>
+								<a href="#" target="_self" class="transition-opacity hover:opacity-70">Italy</a>
+							</li>
+							<li>
+								<a href="#" target="_self" class="transition-opacity hover:opacity-70">Spain</a>
+							</li>
+							<li>
+								<a href="#" target="_self" class="transition-opacity hover:opacity-70">Switzerland</a>
+							</li>
+							<li>
+								<a href="#" target="_self" class="transition-opacity hover:opacity-70">United Kingdom</a>
+							</li>
+							<li>
+								<a href="#" target="_self" class="transition-opacity hover:opacity-70">United States </a>
+							</li>
+						</ul>
+					</div>
+
+					<div class="mb-12 w-1/5 min-w-[12.5rem] pr-6">
+						<h3 class="mb-5 font-bold leading-tight">Reviews</h3>
+						<ul class="flex flex-col gap-3 text-sm">
+							<li>
+								<a href="#" target="_self" class="transition-opacity hover:opacity-70">US Regional Bank VS Neobanks </a>
+							</li>
+						</ul>
+					</div>
+
+					<div class="mb-12 w-1/5 min-w-[12.5rem] pr-6">
+						<h3 class="mb-5 font-bold leading-tight">Neobanque</h3>
+						<ul class="flex flex-col gap-3 text-sm">
+							<li>
+								<a href="#" target="_self" class="transition-opacity hover:opacity-70">Terms </a>
+							</li>
+							<li>
+								<a href="#" target="_self" class="transition-opacity hover:opacity-70">Privacy Policies </a>
+							</li>
+						</ul>
+					</div>
+
+					<div class="mb-12 w-1/5 min-w-[12.5rem] pr-6">
+						<ul class="flex gap-2">
+							<li>
+								<a class="block transition-all brightness-0 hover:-translate-y-1 hover:brightness-100" href="#" target="_blank">
+									<img loading="lazy" class="w-5" alt="linkedin icon" src="https://cdn.unicornplatform.com/static/img/icons/social/color/linkedin.svg" />
+								</a>
+							</li>
+							<li>
+								<a class="block transition-all brightness-0 hover:-translate-y-1 hover:brightness-100" href="#" target="_blank">
+									<img loading="lazy" class="w-5" alt="instagram icon" src="https://cdn.unicornplatform.com/static/img/icons/social/color/instagram.svg" />
+								</a>
+							</li>
+							<li>
+								<a class="block transition-all brightness-0 hover:-translate-y-1 hover:brightness-100" href="#" target="_blank">
+									<img loading="lazy" class="w-5" alt="facebook icon" src="https://cdn.unicornplatform.com/static/img/icons/social/color/facebook.svg" />
+								</a>
+							</li>
+							<li>
+								<a class="block transition-all brightness-0 hover:-translate-y-1 hover:brightness-100" href="#" target="_blank">
+									<img loading="lazy" class="w-5" alt="pinterest icon" src="https://cdn.unicornplatform.com/static/img/icons/social/color/pinterest.svg" />
+								</a>
+							</li>
+							<li>
+								<a class="block transition-all brightness-0 hover:-translate-y-1 hover:brightness-100" href="#" target="_blank">
+									<img loading="lazy" class="w-5" alt="substack icon" src="https://cdn.unicornplatform.com/static/img/icons/social/color/link.svg" />
+								</a>
+							</li>
+							<li>
+								<a class="block transition-all brightness-0 hover:-translate-y-1 hover:brightness-100" href="#" target="_blank">
+									<img loading="lazy" class="w-5" alt="buymeacoffee icon" src="https://cdn.unicornplatform.com/static/img/icons/social/color/link.svg" />
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,80 @@
+.maps {
+	//padding-bottom: 45px;
+	&--container {
+		display: flex;
+		margin-top: 50px;
+		@include mediaMobile {
+			flex-direction: column-reverse;
+		}
+	}
+	&--left {
+		width: 65%;
+		padding-right: 30px;
+		@include mediaMobile {
+			width: 100%;
+			padding-right: 0;
+			margin-top: 30px;
+		}
+	}
+	&--pano {
+		display: inline-block;
+		position: relative;
+		margin-bottom: 50px;
+		img {
+			border-radius: 20px;
+		}
+		@include mediaMobile {
+			width: 100%;
+			img {
+				width: 100%;
+				height: auto;
+			}
+		}
+	}
+	&--line {
+		position: absolute;
+		right: -110%;
+		top: 50px;
+		width: 100%;
+		@include mediaMobile {
+			transform: rotate(-70deg);
+			right: 43%;
+			top: -55%;
+			width: 60%;
+		}
+	}
+	&--title {
+		font-size: 30px;
+		font-weight: bold;
+		text-transform: uppercase;
+		@include mediaMobile {
+			font-size: 20px;
+		}
+	}
+	&--content {
+		font-size: 16px;
+		font-weight: bold;
+		margin-left: 20px;
+		position: relative;
+		min-height: 330px;
+		@include mediaMobile {
+			font-size: 16px;
+			min-height: auto;
+		}
+		ul {
+			margin-left: 0;
+			margin-top: 25px;
+			position: absolute;
+			max-width: 500px;
+			width: 170%;
+			@include mediaMobile {
+				position: relative;
+				width: 100%;
+			}
+			li {
+				list-style: disc;
+				margin-bottom: 1rem;
+			}
+		}
+	}
+}

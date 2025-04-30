@@ -1,0 +1,1540 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<!-- <link rel="shortcut icon" href="img/favicon.ico"> -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Miss Odesa - Home page</title>
+	
+	
+		<script type="module" crossorigin src="./js/app.min.js"></script>
+		<link rel="stylesheet" crossorigin href="./css/styles.min.css">
+	</head>
+
+	<body>
+		<div class="body-wrapper">
+			<header class="header">
+				<div class="container">
+					<div class="header__wrapper">
+						<div class="header__logo-wrapper">
+							<a href="index.html" class="header__logo">
+								<img src="./img/logo-white-pink.png" alt="Logo" />
+							</a>
+							<span>Odesa</span>
+						</div>
+						<div class="header__center-block">
+							<div class="header__top">
+								<button class="header__menu">
+									<i class="icon icon--burger"></i>
+								</button>
+								<div class="header__search">
+									<input type="text" class="header__search-input" placeholder="Search" />
+			
+									<button class="header__search-btn">
+										<img src="data:image/png;base64,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" alt="search" />
+									</button>
+								</div>
+			
+								<a class="btn btn--white" href="#">Смотреть на карте</a>
+							</div>
+						</div>
+						<div class="header__actions">
+							<a href="#" class="btn btn--primary">Добавить анкету</a>
+							<div class="header__actions-bottom">
+								<a href="#">
+									<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAH7SURBVHgBtZc7SwNBFIVvHmiwCCqIiEIIidhZi42ClZLGxiaChY/fYeevsBC0F8uglr5KQfCtIKKFBEUEMZrx3MwsDkt2d2Z2PfBlhmT2ntk7zxAlJCHEJGiAGpgBKUpaCJoGfaAEiiADTsSfmlp9D0xTEkKgdV/wMjgWwWpqJWckTy5qE3gkwtiv0zTF03gKQnlJduqMa5zjD3gLslSksVCzE2XcTtoZQwc8KCgHUWQoIZkYj6nyHgyJhNZnqLEyyWptb0EBVMAPxVA27EeeNLz2VLtvZX4DSmAWdNN/GEeYD4M7cpTRTFXLhc0z2nNXoOg64XjPTZmg2gu1YejmBZ85j/0Z2CSZobbi9D2BfjKUXFmt4BnNvEdr8ghGVf0arFKAscsE0YeIhyDv+83byb6CAmSRuRzeYkAFMBGn70Wrz5PMmieOdQjOQZWSkna88aFf9cbX8nS6iFxOflOSaeTsLCJbW+Qo443fbwp28NUcOcrI2Ge6BLZBHTyToyJTzWOpma6ADTKfiIEyeWOvc8ts6nLohwUNVEpu1r2ovqEa60SyMlbmdUpYca8zrQy4XA7iGu/D9ANlmez0bm2s3u6B5MzuAF2gYfIoyS12F0xZ7VwsdTHg688CyZsId+RVlX7xUByBNVDDsyYdtBM6MwE+hfyLUgG5sPa/0GzHbulXaYEAAAAASUVORK5CYII=" alt="" />
+									<span>Войти</span>
+								</a>
+								<a href="#">
+									<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAMWSURBVHgBvVZLaBRBEO3ZbBCDK1nxEESMHxSiETTe/IAfAhLBi4gnERFBvHrxqF6jeBD0pKgnP6BRggpqFBUUPzl4UBGMKGIQg4awRk12t1LFvM7U9s7s9iSQgpfedFfV6/p09xjjIUSUwbiecYPxlfGHUWB8YVxmrNW60xJ2EgC7GSVGGXBFz28VcrEzUxEV5RuQFuH4GmMDYxGjlbGZcRdrJaDHbtxMRdjwG2MM0ZysoRdgvALdccYLk1aQqpsqyg5Gg4ddA2MnbMS227vmIG1XdeukFA0D8oNq03nvlLPiZ6TroSZVzbaScYZxitFm5x0966Pfi5iVchRJTtXPjp+osrPl9zNHR4gXKL2sD/EBKA868+LsKZpNpE8I8XscjRU4NgWsb/Eh7oHyRWd+joqyAxuRftieFBn//wTz3S5PXNMsx/jamW/DOBwEQT+DGGXGPZ4rYq3FsXmFcZXxIH6E8bkzP4SxWf7YiDHXiHHUscljLJp6AodZijm3FN5KUs8POCbzGEOM/4zRGP2PKMNh4yusPFfXjMLzuQ41G1P1tr8XuptVOi2+pLdhsI0qz6dkYgljQDmV49WsSdF0p5Gh38ZXWPk8hTdPIWYtU2uOorNM8LGD0jwWMJQdHyKPe1pvgsIbT3rhr0kjqOdRiu7bLHnc17DbSNE9vzrNprWjEXTsoIeufb8J0d5KRapq1IimsbU6m+RI2fxk/BMDZzNBPVJJ1QrGe/wW7KPos2cXxZ9vOfu9qjQ5lGc2hd9k+brRq1QdUU6vY05kjXN0ZHMnsC6b61KRXkCpRmoRZuCgZFPlrEsW7GWxWGVkP0WfO8eo8tLJQl/W91Y1KFWfvT3kPOwYfyECkaVIvSW9StXPomzsuC1BUrR9iKiQlBGMwypyS/rA1BCK7vhzk1GDtFU5aqfk7rXk3xGFOHuss5IQVKctIUvTpC5Fn7EvqU7rK/L7jEu1SB27H+B4K/rSsZtM+AZLlPMZTaJn/KRs4t/0OJE3ewC+lwmx3Kez4CT99ZZO5INANvpOWv8Oo4tRMjMjElzvBEIRHClq4jU6AAAAAElFTkSuQmCC" alt="" />
+									<span>Города</span>
+								</a>
+							</div>
+						</div>
+						<nav class="header__nav-mobile-wrapper">
+							<ul class="header__nav-mobile">
+								<li>
+									<a href="#">Новые</a>
+								</li>
+								<li>
+									<a href="#">Дешевые </a>
+								</li>
+								<li>
+									<a href="#">Элитные </a>
+								</li>
+								<li>
+									<a href="#">Проверенные </a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</header>
+			
+			<nav class="header__nav" data-da=".header .header__center-block,992,1">
+				<ul class="header__nav-list">
+					<li>
+						<a href="#">Все анкеты</a>
+					</li>
+					<li>
+						<a href="#">Жду звонка </a>
+					</li>
+					
+					<li>
+						<a href="#">Новые анкеты </a>
+					</li>
+					<li>
+						<a href="#">Фото проверенно </a>
+					</li>
+					<li>
+						<a href="#">Анкеты с видео </a>
+					</li>
+					<li>
+						<a href="#">Недорого</a>
+					</li>
+					<li class="active">
+						<a href="#">VIP</a>
+					</li>
+					<li>
+						<a href="#">Отзывы</a>
+					</li>
+					<li>
+						<a href="#" class="filter-btn">Параметры</a>
+					</li>
+				</ul>
+			</nav>
+			<main>
+				<section class="section">
+					<div class="container">
+						<h2 class="title">Девушки дня</h2>
+						<ul class="breadcrumbs">
+							<li>
+								<a href="#">Головна</a>
+							</li>
+						</ul>
+				
+						<div class="gday">
+							<!-- <button class="btn btn-prev">
+								<i class="icon icon--chevron-left"></i>
+							</button>
+							<button class="btn btn-next">
+								<i class="icon icon--chevron-right"></i>
+							</button> -->
+							<div class="gday__list">
+								<div class="gday__item">
+									<div class="gday__photo">
+										<img src="./img/girls/01.webp" alt="Кристина" />
+									</div>
+				
+									<div class="gday__info">
+										<div class="gday__name">Кристина</div>
+										<div class="gday__network gday__network--online">
+											<span>сейчас в сети</span>
+											<span></span>
+										</div>
+									</div>
+									<a href="#" class="btn btn--primary">Подробнее</a>
+								</div>
+								<div class="gday__item">
+									<div class="gday__photo">
+										<img src="./img/girls/02.webp" alt="Анна" />
+									</div>
+				
+									<div class="gday__info">
+										<div class="gday__name">Анна</div>
+										<div class="gday__network gday__network--offline">
+											<span>сейчас не сети</span>
+											<span></span>
+										</div>
+									</div>
+									<a href="#" class="btn btn--primary">Подробнее</a>
+								</div>
+								<div class="gday__item">
+									<div class="gday__photo">
+										<img src="./img/girls/03.webp" alt="Кристина" />
+									</div>
+				
+									<div class="gday__info">
+										<div class="gday__name">Кристина</div>
+										<div class="gday__network gday__network--online">
+											<span>сейчас в сети</span>
+											<span></span>
+										</div>
+									</div>
+									<div class="gday__vip">vip</div>
+									<a href="#" class="btn btn--primary">Подробнее</a>
+								</div>
+								<div class="gday__item">
+									<div class="gday__photo">
+										<img src="./img/girls/04.webp" alt="Анна" />
+									</div>
+				
+									<div class="gday__info">
+										<div class="gday__name">Анна</div>
+										<div class="gday__network gday__network--online">
+											<span>сейчас в сети</span>
+											<span></span>
+										</div>
+									</div>
+									<a href="#" class="btn btn--primary">Подробнее</a>
+								</div>
+								<div class="gday__item">
+									<div class="gday__photo">
+										<img src="./img/girls/05.webp" alt="Кристина" />
+									</div>
+				
+									<div class="gday__info">
+										<div class="gday__name">Кристина</div>
+										<div class="gday__network gday__network--online">
+											<span>сейчас в сети</span>
+											<span></span>
+										</div>
+									</div>
+									<a href="#" class="btn btn--primary">Подробнее</a>
+								</div>
+								<div class="gday__item">
+									<div class="gday__photo">
+										<img src="./img/girls/06.webp" alt="Анна" />
+									</div>
+				
+									<div class="gday__info">
+										<div class="gday__name">Анна</div>
+										<div class="gday__network gday__network--online">
+											<span>сейчас в сети</span>
+											<span></span>
+										</div>
+									</div>
+									<a href="#" class="btn btn--primary">Подробнее</a>
+								</div>
+								<div class="gday__item">
+									<div class="gday__photo">
+										<img src="./img/girls/07.webp" alt="Кристина" />
+									</div>
+				
+									<div class="gday__info">
+										<div class="gday__name">Кристина</div>
+										<div class="gday__network gday__network--online">
+											<span>сейчас в сети</span>
+											<span></span>
+										</div>
+									</div>
+									<div class="gday__vip">vip</div>
+									<a href="#" class="btn btn--primary">Подробнее</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="section">
+					<div class="container">
+						<h2 class="title">Эротический массаж</h2>
+						<div class="girls">
+							<div class="girls__list">
+				
+								<div class="girl__item">
+									<a href="#" class="girl__name">Ксюша</a>
+									<div class="girl__main-info">
+										<div class="left-side">
+											<div class="girl__photo">
+												<a href="#"></a>
+												<div class="girl__photo-image">
+													<img decoding="async" src="./img/girls/08.webp" alt="Ксюша" />
+												</div>
+											</div>
+											<div class="girl__badges">
+												<div class="girl__badge" style="--color-badge-bg: var(--cinnabar)">Новая</div>
+											</div>
+											<div class="girl__state">
+												<button class="girl__video">
+													<i class="icon icon--play"></i>
+												</button>
+												<div class="girl__photo-status">Фото проверенно</div>
+												<div class="girl__network girl__network--online">
+													<span>Сейчас онлайн</span>
+													<span></span>
+												</div>
+				
+											</div>
+											<div class="girl__comment">
+												<i class="icon icon--comments"></i>
+												<span>12</span>
+											</div>
+										</div>
+										<div class="right-side">
+											<div class="girl__details">
+												<div class="girl__location">
+													<h4>Одесса</h4>
+													<p>Центр</p>
+												</div>
+												<div class="girl__dimensions">
+													<div class="dim-row">
+														<div class="dim-name">Возраст:</div>
+														<div class="dim-value">21</div>
+													</div>
+													<div class="dim-row">
+														<div class="dim-name">Грудь:</div>
+														<div class="dim-value">2</div>
+													</div>
+													<div class="dim-row">
+														<div class="dim-name">Вес:</div>
+														<div class="dim-value">51</div>
+													</div>
+													<div class="dim-row">
+														<div class="dim-name">Рост:</div>
+														<div class="dim-value">160</div>
+													</div>
+													
+												</div>
+												<div class="girl__tags">
+															<div class="girl__tag" style="--color-tag-bg: var(--finn);">Индивидуалка</div>
+															<div class="girl__tag" style="--color-tag-bg: var(--orchid);">МБР</div>
+															<div class="girl__tag" style="--color-tag-bg: var(--orchid);">Фетиш</div>
+															<div class="girl__tag" style="--color-tag-bg: var(--orchid);">Секс классический</div>
+															<div class="girl__tag" style="--color-tag-bg: var(--finn);">VIP</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="girl__contacts">
+										<div class="girl__messenger-list">
+											<a class="btn btn--curious-blue" href="https://t.me/nikname">
+												<i class="icon icon--telegram"></i>
+											</a>
+											 
+											<a class="btn btn--emerald" href="https://wa.me/380XXXXXXXXX">
+												<i class="icon icon--whatsapp"></i>
+											</a>
+											 
+											<a class="btn btn--studio" href="viber://chat?number&#x3D;%2B380XXXXXXXXX">
+												<i class="icon icon--whatsapp"></i>
+											</a>
+										</div>
+				
+										<div class="girl__phone">
+											<button class="btn btn--primary">Показать телефон</button>
+										</div>
+									</div>
+									<ul class="girl__features">
+				
+										<li>
+											<span class="f-icon">
+												<img src="./img/1hour.webp" alt="" />
+											</span>
+											<span class="f-name">Час 4000грн</span>
+										</li>
+				
+				
+										<li>
+											<span class="f-icon">
+												<img src="./img/2hours.webp" alt="" />
+											</span>
+											<span class="f-name">Часa 4000грн</span>
+										</li>
+				
+				
+										<li>
+											<span class="f-icon">
+												<img src="./img/moon.webp" alt="" />
+											</span>
+											<span class="f-name">Ночь 12000грн</span>
+										</li>
+				
+				
+										<li>
+											<span class="f-icon">
+												<img src="./img/clock.webp" alt="" />
+											</span>
+											<span class="f-name">Экспресс</span>
+										</li>
+				
+									</ul>
+									<div class="girl__description">Яркая красотка с аппетитной фигуройи горячимтемпераментом! Буду самой изысканной, развратной и ненасытной!</div>
+								</div>
+				
+								<div class="girl__item">
+									<a href="#" class="girl__name">Кристина</a>
+									<div class="girl__main-info">
+										<div class="left-side">
+											<div class="girl__photo">
+												<a href="#"></a>
+												<div class="girl__photo-image">
+													<img decoding="async" src="./img/girls/01.webp" alt="Кристина" />
+												</div>
+											</div>
+											<div class="girl__badges">
+											</div>
+											<div class="girl__state">
+												<button class="girl__video">
+													<i class="icon icon--play"></i>
+												</button>
+												<div class="girl__photo-status">Фото проверенно</div>
+												<div class="girl__network girl__network--online">
+													<span>Сейчас онлайн</span>
+													<span></span>
+												</div>
+				
+											</div>
+										</div>
+										<div class="right-side">
+											<div class="girl__details">
+												<div class="girl__location">
+													<h4>Одесса</h4>
+													<p>Центр</p>
+												</div>
+												<div class="girl__dimensions">
+													<div class="dim-row">
+														<div class="dim-name">Возраст:</div>
+														<div class="dim-value">22</div>
+													</div>
+													<div class="dim-row">
+														<div class="dim-name">Грудь:</div>
+														<div class="dim-value">3</div>
+													</div>
+													<div class="dim-row">
+														<div class="dim-name">Вес:</div>
+														<div class="dim-value">51</div>
+													</div>
+													<div class="dim-row">
+														<div class="dim-name">Рост:</div>
+														<div class="dim-value">160</div>
+													</div>
+													
+												</div>
+												<div class="girl__tags">
+															<div class="girl__tag" style="--color-tag-bg: var(--finn);">Индивидуалка</div>
+															<div class="girl__tag" style="--color-tag-bg: var(--orchid);">Секс классический</div>
+															<div class="girl__tag" style="--color-tag-bg: var(--finn);">VIP</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="girl__contacts">
+										<div class="girl__messenger-list">
+											<a class="btn btn--curious-blue" href="https://t.me/nikname">
+												<i class="icon icon--telegram"></i>
+											</a>
+											 
+											<a class="btn btn--emerald" href="https://wa.me/380XXXXXXXXX">
+												<i class="icon icon--whatsapp"></i>
+											</a>
+											 
+											<a class="btn btn--studio" href="viber://chat?number&#x3D;%2B380XXXXXXXXX">
+												<i class="icon icon--whatsapp"></i>
+											</a>
+										</div>
+				
+										<div class="girl__phone">
+											<button class="btn btn--primary">Показать телефон</button>
+										</div>
+									</div>
+									<ul class="girl__features">
+				
+										<li>
+											<span class="f-icon">
+												<img src="./img/1hour.webp" alt="" />
+											</span>
+											<span class="f-name">Час 4000грн</span>
+										</li>
+				
+				
+										<li>
+											<span class="f-icon">
+												<img src="./img/2hours.webp" alt="" />
+											</span>
+											<span class="f-name">Часa 4000грн</span>
+										</li>
+				
+				
+										<li>
+											<span class="f-icon">
+												<img src="./img/moon.webp" alt="" />
+											</span>
+											<span class="f-name">Ночь 12000грн</span>
+										</li>
+				
+				
+										<li>
+											<span class="f-icon">
+												<img src="./img/clock.webp" alt="" />
+											</span>
+											<span class="f-name">Экспресс</span>
+										</li>
+				
+									</ul>
+									<div class="girl__description">Яркая красотка </div>
+								</div>
+				
+								<div class="girl__item">
+									<a href="#" class="girl__name">Anna</a>
+									<div class="girl__main-info">
+										<div class="left-side">
+											<div class="girl__photo">
+												<a href="#"></a>
+												<div class="girl__photo-image">
+													<img decoding="async" src="./img/girls/03.webp" alt="Anna" />
+												</div>
+											</div>
+											<div class="girl__badges">
+											</div>
+											<div class="girl__state">
+												<div class="girl__photo-status">Фото проверенно</div>
+												<div class="girl__network girl__network--online">
+													<span>Сейчас онлайн</span>
+													<span></span>
+												</div>
+				
+											</div>
+										</div>
+										<div class="right-side">
+											<div class="girl__details">
+												<div class="girl__location">
+													<h4>Одесса</h4>
+													<p>Центр</p>
+												</div>
+												<div class="girl__dimensions">
+													<div class="dim-row">
+														<div class="dim-name">Возраст:</div>
+														<div class="dim-value">21</div>
+													</div>
+													<div class="dim-row">
+														<div class="dim-name">Грудь:</div>
+														<div class="dim-value">2</div>
+													</div>
+													<div class="dim-row">
+														<div class="dim-name">Вес:</div>
+														<div class="dim-value">51</div>
+													</div>
+													<div class="dim-row">
+														<div class="dim-name">Рост:</div>
+														<div class="dim-value">160</div>
+													</div>
+													
+												</div>
+												<div class="girl__tags">
+															<div class="girl__tag" style="--color-tag-bg: var(--finn);">Индивидуалка</div>
+															<div class="girl__tag" style="--color-tag-bg: var(--orchid);">МБР</div>
+															<div class="girl__tag" style="--color-tag-bg: var(--orchid);">Фетиш</div>
+															<div class="girl__tag" style="--color-tag-bg: var(--orchid);">Секс классический</div>
+															<div class="girl__tag" style="--color-tag-bg: var(--finn);">VIP</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="girl__contacts">
+										<div class="girl__messenger-list">
+											<a class="btn btn--curious-blue" href="https://t.me/nikname">
+												<i class="icon icon--telegram"></i>
+											</a>
+											 
+											<a class="btn btn--emerald" href="https://wa.me/380XXXXXXXXX">
+												<i class="icon icon--whatsapp"></i>
+											</a>
+											 
+											<a class="btn btn--studio" href="viber://chat?number&#x3D;%2B380XXXXXXXXX">
+												<i class="icon icon--whatsapp"></i>
+											</a>
+										</div>
+				
+										<div class="girl__phone">
+											<button class="btn btn--primary">Показать телефон</button>
+										</div>
+									</div>
+									<ul class="girl__features">
+				
+										<li>
+											<span class="f-icon">
+												<img src="./img/1hour.webp" alt="" />
+											</span>
+											<span class="f-name">Час 4000грн</span>
+										</li>
+				
+				
+										<li>
+											<span class="f-icon">
+												<img src="./img/2hours.webp" alt="" />
+											</span>
+											<span class="f-name">Часa 4000грн</span>
+										</li>
+				
+				
+										<li>
+											<span class="f-icon">
+												<img src="./img/moon.webp" alt="" />
+											</span>
+											<span class="f-name">Ночь 12000грн</span>
+										</li>
+				
+				
+										<li>
+											<span class="f-icon">
+												<img src="./img/clock.webp" alt="" />
+											</span>
+											<span class="f-name">Экспресс</span>
+										</li>
+				
+									</ul>
+									<div class="girl__description">Яркая красотка с аппетитной фигуройи горячимтемпераментом! Буду самой изысканной, развратной и ненасытной!</div>
+								</div>
+				
+								<div class="girl__item">
+									<a href="#" class="girl__name">Ксюша</a>
+									<div class="girl__main-info">
+										<div class="left-side">
+											<div class="girl__photo">
+												<a href="#"></a>
+												<div class="girl__photo-image">
+													<img decoding="async" src="./img/girls/02.webp" alt="Ксюша" />
+												</div>
+											</div>
+											<div class="girl__badges">
+											</div>
+											<div class="girl__state">
+												<div class="girl__photo-status">Фото проверенно</div>
+												<div class="girl__network girl__network--online">
+													<span>Сейчас онлайн</span>
+													<span></span>
+												</div>
+				
+											</div>
+										</div>
+										<div class="right-side">
+											<div class="girl__details">
+												<div class="girl__location">
+													<h4>Одесса</h4>
+													<p>Центр</p>
+												</div>
+												<div class="girl__dimensions">
+													<div class="dim-row">
+														<div class="dim-name">Возраст:</div>
+														<div class="dim-value">21</div>
+													</div>
+													<div class="dim-row">
+														<div class="dim-name">Грудь:</div>
+														<div class="dim-value">2</div>
+													</div>
+													<div class="dim-row">
+														<div class="dim-name">Вес:</div>
+														<div class="dim-value">51</div>
+													</div>
+													<div class="dim-row">
+														<div class="dim-name">Рост:</div>
+														<div class="dim-value">160</div>
+													</div>
+													
+												</div>
+												<div class="girl__tags">
+															<div class="girl__tag" style="--color-tag-bg: var(--finn);">Индивидуалка</div>
+															<div class="girl__tag" style="--color-tag-bg: var(--orchid);">МБР</div>
+															<div class="girl__tag" style="--color-tag-bg: var(--orchid);">Фетиш</div>
+															<div class="girl__tag" style="--color-tag-bg: var(--orchid);">Секс классический</div>
+															<div class="girl__tag" style="--color-tag-bg: var(--finn);">VIP</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="girl__contacts">
+										<div class="girl__messenger-list">
+											<a class="btn btn--curious-blue" href="https://t.me/nikname">
+												<i class="icon icon--telegram"></i>
+											</a>
+											 
+											<a class="btn btn--emerald" href="https://wa.me/380XXXXXXXXX">
+												<i class="icon icon--whatsapp"></i>
+											</a>
+											 
+											<a class="btn btn--studio" href="viber://chat?number&#x3D;%2B380XXXXXXXXX">
+												<i class="icon icon--whatsapp"></i>
+											</a>
+										</div>
+				
+										<div class="girl__phone">
+											<button class="btn btn--primary">Показать телефон</button>
+										</div>
+									</div>
+									<ul class="girl__features">
+				
+										<li>
+											<span class="f-icon">
+												<img src="./img/1hour.webp" alt="" />
+											</span>
+											<span class="f-name">Час 4000грн</span>
+										</li>
+				
+				
+										<li>
+											<span class="f-icon">
+												<img src="./img/2hours.webp" alt="" />
+											</span>
+											<span class="f-name">Часa 4000грн</span>
+										</li>
+				
+				
+										<li>
+											<span class="f-icon">
+												<img src="./img/moon.webp" alt="" />
+											</span>
+											<span class="f-name">Ночь 12000грн</span>
+										</li>
+				
+				
+										<li>
+											<span class="f-icon">
+												<img src="./img/clock.webp" alt="" />
+											</span>
+											<span class="f-name">Экспресс</span>
+										</li>
+				
+									</ul>
+									<div class="girl__description">Яркая красотка с аппетитной фигуройи горячимтемпераментом! Буду самой изысканной, развратной и ненасытной!</div>
+								</div>
+				
+								<div class="girl__item">
+									<a href="#" class="girl__name">Ангелина</a>
+									<div class="girl__main-info">
+										<div class="left-side">
+											<div class="girl__photo">
+												<a href="#"></a>
+												<div class="girl__photo-image">
+													<img decoding="async" src="./img/girls/09.webp" alt="Ангелина" />
+												</div>
+											</div>
+											<div class="girl__badges">
+											</div>
+											<div class="girl__state">
+												<button class="girl__video">
+													<i class="icon icon--play"></i>
+												</button>
+											</div>
+										</div>
+										<div class="right-side">
+											<div class="girl__details">
+												<div class="girl__location">
+													<h4>Одесса</h4>
+													<p>Киевский</p>
+												</div>
+												<div class="girl__dimensions">
+													<div class="dim-row">
+														<div class="dim-name">Возраст:</div>
+														<div class="dim-value">23</div>
+													</div>
+													<div class="dim-row">
+														<div class="dim-name">Грудь:</div>
+														<div class="dim-value">3</div>
+													</div>
+													<div class="dim-row">
+														<div class="dim-name">Вес:</div>
+														<div class="dim-value">53</div>
+													</div>
+													<div class="dim-row">
+														<div class="dim-name">Рост:</div>
+														<div class="dim-value">160</div>
+													</div>
+													
+												</div>
+												<div class="girl__tags">
+															<div class="girl__tag" style="--color-tag-bg: var(--finn);">Менеджер</div>
+															<div class="girl__tag" style="--color-tag-bg: var(--orchid);">Анал</div>
+															<div class="girl__tag" style="--color-tag-bg: var(--orchid);">МБР</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="girl__contacts">
+										<div class="girl__messenger-list">
+											<a class="btn btn--curious-blue" href="https://t.me/nikname">
+												<i class="icon icon--telegram"></i>
+											</a>
+											 
+											<a class="btn btn--emerald" href="https://wa.me/380XXXXXXXXX">
+												<i class="icon icon--whatsapp"></i>
+											</a>
+											 						</div>
+				
+										<div class="girl__phone">
+											<button class="btn btn--primary">Показать телефон</button>
+										</div>
+									</div>
+									<ul class="girl__features">
+				
+										<li>
+											<span class="f-icon">
+												<img src="./img/1hour.webp" alt="" />
+											</span>
+											<span class="f-name">Час 4000грн</span>
+										</li>
+				
+				
+										<li>
+											<span class="f-icon">
+												<img src="./img/2hours.webp" alt="" />
+											</span>
+											<span class="f-name">Часa 4000грн</span>
+										</li>
+				
+									</ul>
+									<div class="girl__description">Яркая красотка с аппетитной фигуройи горячимтемпераментом! Буду самой изысканной, развратной и ненасытной!</div>
+								</div>
+				
+								<div class="girl__item">
+									<a href="#" class="girl__name">Ангелина</a>
+									<div class="girl__main-info">
+										<div class="left-side">
+											<div class="girl__photo">
+												<a href="#"></a>
+												<div class="girl__photo-image">
+													<img decoding="async" src="./img/girls/04.webp" alt="Ангелина" />
+												</div>
+											</div>
+											<div class="girl__badges">
+											</div>
+											<div class="girl__state">
+												<button class="girl__video">
+													<i class="icon icon--play"></i>
+												</button>
+											</div>
+										</div>
+										<div class="right-side">
+											<div class="girl__details">
+												<div class="girl__location">
+													<h4>Одесса</h4>
+													<p>Киевский</p>
+												</div>
+												<div class="girl__dimensions">
+													<div class="dim-row">
+														<div class="dim-name">Возраст:</div>
+														<div class="dim-value">23</div>
+													</div>
+													<div class="dim-row">
+														<div class="dim-name">Грудь:</div>
+														<div class="dim-value">3</div>
+													</div>
+													<div class="dim-row">
+														<div class="dim-name">Вес:</div>
+														<div class="dim-value">53</div>
+													</div>
+													<div class="dim-row">
+														<div class="dim-name">Рост:</div>
+														<div class="dim-value">160</div>
+													</div>
+													
+												</div>
+												<div class="girl__tags">
+															<div class="girl__tag" style="--color-tag-bg: var(--finn);">Менеджер</div>
+															<div class="girl__tag" style="--color-tag-bg: var(--orchid);">Анал</div>
+															<div class="girl__tag" style="--color-tag-bg: var(--orchid);">МБР</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="girl__contacts">
+										<div class="girl__messenger-list">
+				 
+											<a class="btn btn--emerald" href="https://wa.me/380XXXXXXXXX">
+												<i class="icon icon--whatsapp"></i>
+											</a>
+											 
+											<a class="btn btn--studio" href="viber://chat?number&#x3D;%2B380XXXXXXXXX">
+												<i class="icon icon--whatsapp"></i>
+											</a>
+										</div>
+				
+										<div class="girl__phone">
+											<button class="btn btn--primary">Показать телефон</button>
+										</div>
+									</div>
+									<ul class="girl__features">
+				
+										<li>
+											<span class="f-icon">
+												<img src="./img/1hour.webp" alt="" />
+											</span>
+											<span class="f-name">Час 4000грн</span>
+										</li>
+				
+				
+										<li>
+											<span class="f-icon">
+												<img src="./img/2hours.webp" alt="" />
+											</span>
+											<span class="f-name">Часa 4000грн</span>
+										</li>
+				
+				
+										<li>
+											<span class="f-icon">
+												<img src="./img/car.webp" alt="" />
+											</span>
+											<span class="f-name">Только выезд</span>
+										</li>
+				
+									</ul>
+									<div class="girl__description">Яркая красотка с аппетитной фигуройи горячимтемпераментом! Буду самой изысканной, развратной и ненасытной!</div>
+								</div>
+				
+								<div class="girl__item">
+									<a href="#" class="girl__name">Ангелина</a>
+									<div class="girl__main-info">
+										<div class="left-side">
+											<div class="girl__photo">
+												<a href="#"></a>
+												<div class="girl__photo-image">
+													<img decoding="async" src="./img/girls/05.webp" alt="Ангелина" />
+												</div>
+											</div>
+											<div class="girl__badges">
+											</div>
+											<div class="girl__state">
+												<button class="girl__video">
+													<i class="icon icon--play"></i>
+												</button>
+											</div>
+										</div>
+										<div class="right-side">
+											<div class="girl__details">
+												<div class="girl__location">
+													<h4>Одесса</h4>
+													<p>Киевский</p>
+												</div>
+												<div class="girl__dimensions">
+													<div class="dim-row">
+														<div class="dim-name">Возраст:</div>
+														<div class="dim-value">23</div>
+													</div>
+													<div class="dim-row">
+														<div class="dim-name">Грудь:</div>
+														<div class="dim-value">3</div>
+													</div>
+													<div class="dim-row">
+														<div class="dim-name">Вес:</div>
+														<div class="dim-value">53</div>
+													</div>
+													<div class="dim-row">
+														<div class="dim-name">Рост:</div>
+														<div class="dim-value">160</div>
+													</div>
+													
+												</div>
+												<div class="girl__tags">
+															<div class="girl__tag" style="--color-tag-bg: var(--finn);">Менеджер</div>
+															<div class="girl__tag" style="--color-tag-bg: var(--orchid);">Анал</div>
+															<div class="girl__tag" style="--color-tag-bg: var(--orchid);">МБР</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="girl__contacts">
+										<div class="girl__messenger-list">
+				  
+											<a class="btn btn--studio" href="viber://chat?number&#x3D;%2B380XXXXXXXXX">
+												<i class="icon icon--whatsapp"></i>
+											</a>
+										</div>
+				
+										<div class="girl__phone">
+											<button class="btn btn--primary">Показать телефон</button>
+										</div>
+									</div>
+									<ul class="girl__features">
+				
+										<li>
+											<span class="f-icon">
+												<img src="./img/1hour.webp" alt="" />
+											</span>
+											<span class="f-name">Час 4000грн</span>
+										</li>
+				
+				
+										<li>
+											<span class="f-icon">
+												<img src="./img/2hours.webp" alt="" />
+											</span>
+											<span class="f-name">Часa 4000грн</span>
+										</li>
+				
+				
+										<li>
+											<span class="f-icon">
+												<img src="./img/apt.webp" alt="" />
+											</span>
+											<span class="f-name">Только у меня</span>
+										</li>
+				
+									</ul>
+									<div class="girl__description">Яркая красотка с аппетитной фигуройи горячимтемпераментом! Буду самой изысканной, развратной и ненасытной!</div>
+								</div>
+				
+								<div class="girl__item">
+									<a href="#" class="girl__name">Ангелина</a>
+									<div class="girl__main-info">
+										<div class="left-side">
+											<div class="girl__photo">
+												<a href="#"></a>
+												<div class="girl__photo-image">
+													<img decoding="async" src="./img/girls/06.webp" alt="Ангелина" />
+												</div>
+											</div>
+											<div class="girl__badges">
+											</div>
+											<div class="girl__state">
+												<button class="girl__video">
+													<i class="icon icon--play"></i>
+												</button>
+											</div>
+										</div>
+										<div class="right-side">
+											<div class="girl__details">
+												<div class="girl__location">
+													<h4>Одесса</h4>
+													<p>Киевский</p>
+												</div>
+												<div class="girl__dimensions">
+													<div class="dim-row">
+														<div class="dim-name">Возраст:</div>
+														<div class="dim-value">23</div>
+													</div>
+													<div class="dim-row">
+														<div class="dim-name">Грудь:</div>
+														<div class="dim-value">3</div>
+													</div>
+													<div class="dim-row">
+														<div class="dim-name">Вес:</div>
+														<div class="dim-value">53</div>
+													</div>
+													<div class="dim-row">
+														<div class="dim-name">Рост:</div>
+														<div class="dim-value">160</div>
+													</div>
+													
+												</div>
+												<div class="girl__tags">
+															<div class="girl__tag" style="--color-tag-bg: var(--finn);">Менеджер</div>
+															<div class="girl__tag" style="--color-tag-bg: var(--orchid);">Анал</div>
+															<div class="girl__tag" style="--color-tag-bg: var(--orchid);">МБР</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="girl__contacts">
+										<div class="girl__messenger-list">
+				 
+											<a class="btn btn--emerald" href="https://wa.me/380XXXXXXXXX">
+												<i class="icon icon--whatsapp"></i>
+											</a>
+											 						</div>
+				
+										<div class="girl__phone">
+											<button class="btn btn--primary">Показать телефон</button>
+										</div>
+									</div>
+									<ul class="girl__features">
+				
+										<li>
+											<span class="f-icon">
+												<img src="./img/1hour.webp" alt="" />
+											</span>
+											<span class="f-name">Час 4000грн</span>
+										</li>
+				
+				
+										<li>
+											<span class="f-icon">
+												<img src="./img/2hours.webp" alt="" />
+											</span>
+											<span class="f-name">Часa 4000грн</span>
+										</li>
+				
+				
+										<li>
+											<span class="f-icon">
+												<img src="./img/apt.webp" alt="" />
+											</span>
+											<span class="f-name">Только у меня</span>
+										</li>
+				
+									</ul>
+									<div class="girl__description">Яркая красотка с аппетитной фигуройи горячимтемпераментом! Буду самой изысканной, развратной и ненасытной!</div>
+								</div>
+							</div>
+						</div>
+						<div class="girls__footer">
+							
+								<button class="btn btn--primary">Загрузить еще</button>
+							
+							<div class="pagination">
+								<a href="#" class="page active">1</a>
+								<a href="#" class="page">2</a>
+								<a href="#" class="page">3</a>
+								<a href="#" class="page">4</a>
+								<a href="#" class="page">5</a>
+								<a href="#" class="page next">
+									<i class="icon icon--chevron-right"></i>
+								</a>
+								<a href="#" class="page last">12</a>
+							
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="section section--map">
+					<div class="container">
+						<div class="map">
+							<div class="map__body">
+								<img src="./img/map.webp" alt="map">
+							</div>
+				
+							<div class="map__content">
+								<h2 class="title">Интим Карта</h2>
+								<p>Удобный подбор девушек рядом</p>
+								<a href="#" class="btn btn--primary">Смотреть на карте</a>
+							</div>
+				
+						</div>
+					</div>
+				</section>				<section class="section">
+					<div class="container">
+						<div class="text-block">
+							<h2>Интимный массаж: искусство наслаждения и тонкости удовольствия</h2>
+							<p>Интимный массаж — это не просто способ расслабления. Это целый ритуал, пробуждающий тело и разум, дарящий не только физическое, но и эмоциональное удовлетворение. В этой статье мы подробно расскажем, что такое интимный массаж, какие бывают его виды, кому он подходит и почему он стал таким популярным.</p>
+							<h3>Что такое интимный массаж?</h3>
+							<p>
+								Интимный (эротический) массаж — это сочетание профессиональных техник релаксации с элементами чувственного удовольствия. Основной его задачей является достижение гармонии, снятие сексуального и психологического напряжения, улучшение кровообращения и усиление либидо. <br />
+								В отличие от классического массажа, интимный включает в себя более мягкие и ласкающие прикосновения, которые направлены на пробуждение эрогенных зон и возбуждение фантазии. Это не просто телесный контакт — это эмоциональная игра, в которой важно всё: атмосфера, настроение, музыка, аромат.
+							</p>
+				
+							<h3>Основные виды интимного массажа</h3>
+							<ol>
+								<li>
+									<span>Классический эротический массаж</span>
+									<ul>
+										<li>Начинается с обычных расслабляющих движений.</li>
+										<li>Постепенно мастер переходит к более чувственным прикосновениям.</li>
+										<li>Часто проводится обнажённым телом, включая контакт "тело к телу".</li>
+									</ul>
+								</li>
+								<li>
+									<span>Тантрический массаж</span>
+									<ul>
+										<li>Восточная практика, основанная на духовной связи.</li>
+										<li>Включает дыхательные практики и медленные ритмичные касания.</li>
+										<li>Часто сопровождается медитацией и полной открытостью</li>
+									</ul>
+								</li>
+								<li>
+									<span>Lingam и Yoni массаж</span>
+									<ul>
+										<li>Lingam — массаж мужских половых органов.</li>
+										<li>Yoni — массаж интимной зоны женщины.</li>
+										<li>Оба вида направлены на усиление чувственности и раскрытие сексуальной энергии.</li>
+									</ul>
+								</li>
+								<li>
+									<span>НУРУ-массаж</span>
+									<ul>
+										<li>Используется специальный гель на водной основе.</li>
+										<li>Всё тело скользит по телу клиента.</li>
+										<li>Максимальное наслаждение и полное отсутствие стеснения.</li>
+									</ul>
+								</li>
+							</ol>
+							<h3>Кому подходит интимный массаж?</h3>
+							<ul>
+								<li>Людям, испытывающим стресс, тревогу, усталость.</li>
+								<li>Тем, кто ищет новых ощущений в сексуальной жизни.</li>
+								<li>Парам, которые хотят восстановить страсть.</li>
+								<li>Одиноким людям, которым не хватает телесного контакта.</li>
+								<li>Всем, кто ценит удовольствие, красоту и чувственность.</li>
+							</ul>
+							<h3>Преимущества интимного массажа</h3>
+							<ul>
+								<li>🌿 Полное расслабление тела и ума</li>
+								<li>❤️ Повышение либидо и чувственности</li>
+								<li>😌 Устранение зажимов и комплексов</li>
+								<li>🌺 Повышение уверенности в себе</li>
+								<li>🔥 Новые грани наслаждения без обязательств</li>
+							</ul>
+							<h3>Как проходит сеанс?</h3>
+							<ol>
+								<li>Вас встречает обаятельная массажистка или массажист.</li>
+								<li>В уютной комнате с приглушённым светом и ароматами звучит расслабляющая музыка.</li>
+								<li>Вы принимаете душ, после чего начинается массаж.</li>
+								<li>Сначала мастер прорабатывает спину, плечи и ноги.</li>
+								<li>Затем — переход к более интимным прикосновениям, пробуждающим всю чувственность.</li>
+								<li>Финал — по желанию: от расслабления до экстаза.</li>
+							</ol>
+							<h3>Это больше, чем просто массаж…</h3>
+							<p>Интимный массаж — это искусство. Это способ лучше узнать своё тело, отпустить напряжение и насладиться моментом. Он не требует слов, только ощущений. Это возможность для каждого почувствовать себя желанным, красивым и живым.</p>
+						</div>
+					</div>
+				</section>
+				<section class="section">
+					<div class="container">
+						<div class="tags__list">
+							<a class="tags__item" href="#">#Хештег</a>
+							<a class="tags__item" href="#" style="--color-tag-bg: var(--hot-pink)">#Хештег</a>
+							<a class="tags__item" href="#" style="--color-tag-bg: var(--studio)">#Хештег</a>
+							<a class="tags__item" href="#">#Хештег</a>
+							<a class="tags__item" href="#">#Хештег</a>
+							<a class="tags__item" href="#">#Хештег</a>
+							<a class="tags__item" href="#">#Хештег</a>
+							<a class="tags__item" href="#">#Хештег</a>
+							<a class="tags__item" href="#">#Хештег</a>
+							<a class="tags__item" href="#">#Хештег</a>
+							<a class="tags__item" href="#">#Хештег</a>
+							<a class="tags__item" href="#">#Хештег</a>
+							<a class="tags__item" href="#">#Хештег</a>
+							<a class="tags__item" href="#">#Хештег</a>
+							<a class="tags__item" href="#">#Хештег</a>
+							<a class="tags__item" href="#">#Хештег</a>
+							<a class="tags__item" href="#">#Хештег</a>
+							<a class="tags__item" href="#">#Хештег</a>
+							<a class="tags__item" href="#">#Хештег</a>
+							<a class="tags__item" href="#">#Хештег</a>
+							<a class="tags__item" href="#">#Хештег</a>
+							<a class="tags__item" href="#">#Хештег</a>
+							<a class="tags__item" href="#">#Хештег</a>
+							<a class="tags__item" href="#">#Хештег</a>
+							<a class="tags__item" href="#">#Хештег</a>
+							<a class="tags__item" href="#">#Хештег</a>
+							<a class="tags__item" href="#">#Хештег</a>
+							<a class="tags__item" href="#">#Хештег</a>
+							<a class="tags__item" href="#">#Хештег</a>
+							<a class="tags__item" href="#">#Хештег</a>
+							<a class="tags__item" href="#">#Хештег</a>
+							<a class="tags__item" href="#">#Хештег</a>
+							<a class="tags__item" href="#">#Хештег</a>
+							<a class="tags__item" href="#">#Хештег</a>
+							<a class="tags__item" href="#">#Хештег</a>
+							<a class="tags__item" href="#">#Хештег</a>
+							<a class="tags__item" href="#">#Хештег</a>
+							<a class="tags__item" href="#">#Хештег</a>
+							<a class="tags__item" href="#">#Хештег</a>
+							<a class="tags__item" href="#">#Хештег</a>
+							<a class="tags__item" href="#">#Хештег</a>
+							<a class="tags__item" href="#">#Хештег</a>
+							<a class="tags__item" href="#">#Хештег</a>
+						</div>
+					</div>
+				</section>			</main>
+			<footer class="footer">
+				<div class="container">
+					<div class="footer__wrapper">
+						<div class="footer__left">
+							<div class="footer__logo-wrapper">
+								<div class="footer__logo">
+									<img src="./img/logo-white-pink.png" alt="Logo" />
+								</div>
+								<span>Odesa</span>
+							</div>
+							<div class="footer__copyright">© 2021–2025, MissOdesa — проект, созданный для удобного поиска массажисток по всей Украине</div>
+						</div>
+						<ul class="footer__menu">
+							<li>
+								<ul>
+									<li><a href="#">О проекте</a></li>
+									<li><a href="#">Реклама на сайте</a></li>
+									<li><a href="#">Метро</a></li>
+									<li><a href="#">Районы</a></li>
+									<li><a href="#">Шоссе</a></li>
+									<li><a href="#">Города</a></li>
+									<li><a href="#">Блог</a></li>
+								</ul>
+							</li>
+							<li>
+								<ul>
+									<li><a href="#">Пользовательское соглашение для клиентов</a></li>
+									<li><a href="#">Пользовательское соглашение для рекламодателей</a></li>
+									<li><a href="#">Политика конфиденциальности</a></li>
+									<li><a href="#">Контакты</a></li>
+									<li><a href="#">Новости</a></li>
+								</ul>
+							</li>
+						</ul>
+						<div class="footer__right">
+							<a href="#" class="btn btn--purple-mountains-majesty">
+								<i class="icon icon--telegram"></i>
+								<span>Telegram</span>
+							</a>
+							<a href="#" class="btn btn--white btn--numbers">+18</a>
+						</div>
+					</div>
+				</div>
+			</footer>
+			<div class="menu__burger">
+				<button class="btn btn--primary-outline menu-close">
+					<i class="icon icon--close"></i>
+				</button>
+			
+				<div class="menu__burger-body">
+					<ul>
+						<li class="active">
+							<a href="#">Служба поддержки</a>
+						</li>
+						<li>
+							<a href="#">Секс классический</a>
+						</li>
+						<li>
+							<a href="#">Секс классический</a>
+						</li>
+						<li>
+							<a href="#">Секс классический</a>
+						</li>
+						<li>
+							<a href="#">Секс классический</a>
+						</li>
+						<li>
+							<a href="#">Секс классический</a>
+						</li>
+						<li>
+							<a href="#">Секс классический</a>
+						</li>
+						<li>
+							<a href="#">Секс классический</a>
+						</li>
+						<li>
+							<a href="#">Секс классический</a>
+						</li>
+						<li>
+							<a href="#">Секс классический</a>
+						</li>
+						<li>
+							<a href="#">Секс классический</a>
+						</li>
+						<li>
+							<a href="#">Секс классический</a>
+						</li>
+						<li>
+							<a href="#">Секс классический</a>
+						</li>
+						<li>
+							<a href="#">Секс классический</a>
+						</li>
+						<li>
+							<a href="#">Секс классический</a>
+						</li>
+						
+					</ul>
+				</div>
+			</div>
+			<div class="filter">
+				<div class="filter__header">
+					<h3>Параметры</h3>
+			
+					<button class="btn btn--primary-outline filter-close">
+						<i class="icon icon--close"></i>
+					</button>
+				</div>
+			
+				<div class="filter__body">
+					<div class="filter__item">
+						<h4>Цена</h4>
+						<div class="filter__row">
+							<label class="filter__radiobox">
+								<input class="filter__input-radio" type="radio" name="price" value="" />
+								<span class="filter__radiobox-wrapper">
+									<span class="filter__value">Дешевые</span>
+								</span>
+							</label>
+							<label class="filter__radiobox">
+								<input class="filter__input-radio" type="radio" name="price" value="" />
+								<span class="filter__radiobox-wrapper">
+									<span class="filter__value">600-1000</span>
+								</span>
+							</label>
+						</div>
+						<div class="filter__row">
+							<label class="filter__radiobox">
+								<input class="filter__input-radio" type="radio" name="price" value="" />
+								<span class="filter__radiobox-wrapper">
+									<span class="filter__value">1000-1500</span>
+								</span>
+							</label>
+							<label class="filter__radiobox">
+								<input class="filter__input-radio" type="radio" name="price" value="" />
+								<span class="filter__radiobox-wrapper">
+									<span class="filter__value">1500-2000</span>
+								</span>
+							</label>
+						</div>
+						<div class="filter__row">
+							<label class="filter__radiobox">
+								<input class="filter__input-radio" type="radio" name="price" value="" />
+								<span class="filter__radiobox-wrapper">
+									<span class="filter__value">2000-2500</span>
+								</span>
+							</label>
+							<label class="filter__radiobox">
+								<input class="filter__input-radio" type="radio" name="price" value="" />
+								<span class="filter__radiobox-wrapper">
+									<span class="filter__value">2500-3000</span>
+								</span>
+							</label>
+						</div>
+						<div class="filter__row">
+							<label class="filter__radiobox">
+								<input class="filter__input-radio" type="radio" name="price" value="" />
+								<span class="filter__radiobox-wrapper">
+									<span class="filter__value">5000-5000</span>
+								</span>
+							</label>
+							<label class="filter__radiobox">
+								<input class="filter__input-radio" type="radio" name="price" value="" />
+								<span class="filter__radiobox-wrapper">
+									<span class="filter__value">Элитные</span>
+								</span>
+							</label>
+						</div>
+					</div>
+					<div class="filter__item">
+						<h4>Тип анкеты</h4>
+						<div class="filter__row">
+							<label class="filter__radiobox">
+								<input class="filter__input-radio" type="radio" name="type" value="" />
+								<span class="filter__radiobox-wrapper">
+									<span class="filter__value">Экзотика</span>
+								</span>
+							</label>
+							<label class="filter__radiobox">
+								<input class="filter__input-radio" type="radio" name="type" value="" />
+								<span class="filter__radiobox-wrapper">
+									<span class="filter__value">Парни</span>
+								</span>
+							</label>
+						</div>
+						<div class="filter__row">
+							<label class="filter__radiobox">
+								<input class="filter__input-radio" type="radio" name="type" value="" />
+								<span class="filter__radiobox-wrapper">
+									<span class="filter__value">Пары</span>
+								</span>
+							</label>
+							<label class="filter__radiobox">
+								<input class="filter__input-radio" type="radio" name="type" value="" />
+								<span class="filter__radiobox-wrapper">
+									<span class="filter__value">Массаж</span>
+								</span>
+							</label>
+						</div>
+					</div>
+					<div class="filter__item">
+						<h4>Возраст</h4>
+						<div class="filter__row">
+							<label class="filter__radiobox">
+								<input class="filter__input-radio" type="radio" name="age" value="" />
+								<span class="filter__radiobox-wrapper">
+									<span class="filter__value">Молодые</span>
+								</span>
+							</label>
+							<label class="filter__radiobox">
+								<input class="filter__input-radio" type="radio" name="age" value="" />
+								<span class="filter__radiobox-wrapper">
+									<span class="filter__value">20-25</span>
+								</span>
+							</label>
+						</div>
+						<div class="filter__row">
+							<label class="filter__radiobox">
+								<input class="filter__input-radio" type="radio" name="age" value="" />
+								<span class="filter__radiobox-wrapper">
+									<span class="filter__value">25-30</span>
+								</span>
+							</label>
+							<label class="filter__radiobox">
+								<input class="filter__input-radio" type="radio" name="age" value="" />
+								<span class="filter__radiobox-wrapper">
+									<span class="filter__value">30-35</span>
+								</span>
+							</label>
+						</div>
+						<div class="filter__row">
+							<label class="filter__radiobox">
+								<input class="filter__input-radio" type="radio" name="age" value="" />
+								<span class="filter__radiobox-wrapper">
+									<span class="filter__value">35-40</span>
+								</span>
+							</label>
+							<label class="filter__radiobox">
+								<input class="filter__input-radio" type="radio" name="age" value="" />
+								<span class="filter__radiobox-wrapper">
+									<span class="filter__value">Зрелые</span>
+								</span>
+							</label>
+						</div>
+					</div>
+			
+					<div class="filter__item">
+						<h4>Рост</h4>
+						<div class="filter__row">
+							<label class="filter__radiobox">
+								<input class="filter__input-radio" type="radio" name="height" value="" />
+								<span class="filter__radiobox-wrapper">
+									<span class="filter__value">Миниатюрные</span>
+								</span>
+							</label>
+						</div>
+						<div class="filter__row">
+							<label class="filter__radiobox">
+								<input class="filter__input-radio" type="radio" name="height" value="" />
+								<span class="filter__radiobox-wrapper">
+									<span class="filter__value">От 156 до 160 см</span>
+								</span>
+							</label>
+						</div>
+						<div class="filter__row">
+							<label class="filter__radiobox">
+								<input class="filter__input-radio" type="radio" name="height" value="" />
+								<span class="filter__radiobox-wrapper">
+									<span class="filter__value">От 161 до 165 см</span>
+								</span>
+							</label>
+						</div>
+						<div class="filter__row">
+							<label class="filter__radiobox">
+								<input class="filter__input-radio" type="radio" name="height" value="" />
+								<span class="filter__radiobox-wrapper">
+									<span class="filter__value">От 166 до 170 см</span>
+								</span>
+							</label>
+						</div>
+						<div class="filter__row">
+							<label class="filter__radiobox">
+								<input class="filter__input-radio" type="radio" name="height" value="" />
+								<span class="filter__radiobox-wrapper">
+									<span class="filter__value">От 175 до 180 см</span>
+								</span>
+							</label>
+						</div>
+						<div class="filter__row">
+							<label class="filter__radiobox">
+								<input class="filter__input-radio" type="radio" name="height" value="" />
+								<span class="filter__radiobox-wrapper">
+									<span class="filter__value">От 181 до 185 см</span>
+								</span>
+							</label>
+						</div>
+						<div class="filter__row">
+							<label class="filter__radiobox">
+								<input class="filter__input-radio" type="radio" name="height" value="" />
+								<span class="filter__radiobox-wrapper">
+									<span class="filter__value">От 186</span>
+								</span>
+							</label>
+							<label class="filter__radiobox">
+								<input class="filter__input-radio" type="radio" name="height" value="" />
+								<span class="filter__radiobox-wrapper">
+									<span class="filter__value">Высокие</span>
+								</span>
+							</label>
+						</div>
+					</div>
+				</div>
+				<div class="filter__footer">
+					<button class="btn btn--primary">Застосувати</button>
+				</div>
+			</div>
+		</div>
+
+		
+		
+		
+			</body>
+</html>

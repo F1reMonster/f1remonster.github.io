@@ -1,0 +1,12 @@
+<svg class="duration-300 ease-out" width="53" height="39" viewBox="0 0 53 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<line x1="22.2832" y1="2" x2="9.63288" y2="2" stroke="black" stroke-width="2" />
+					<line x1="19.1206" y1="7.58826" x2="6.47028" y2="7.58826" stroke="black" stroke-width="2" />
+					<line x1="15.958" y1="13.1764" x2="3.30769" y2="13.1764" stroke="black" stroke-width="2" />
+					<path d="M26.5 1.55872H32.8252" stroke="black" stroke-width="2" />
+					<path d="M32.2544 1.89478L42.7963 27.6007" stroke="black" stroke-width="2" />
+					<path d="M37.042 13.2939L24.3916 28.3822" stroke="black" stroke-width="2" />
+					<path d="M24.7915 28.3823L9.63223 28.3823" stroke="black" stroke-width="2" />
+					<line y1="-1" x2="20.1212" y2="-1" transform="matrix(0.628707 -0.777642 0.740071 0.672529 9.63232 28.9413)" stroke="black" stroke-width="2" />
+					<path d="M20.2289 28.3823C20.2289 33.7007 15.9501 37.9999 10.687 37.9999C5.42382 37.9999 1.14502 33.7007 1.14502 28.3823C1.14502 23.0639 5.42382 18.7646 10.687 18.7646C15.9501 18.7646 20.2289 23.0639 20.2289 28.3823Z" stroke="black" stroke-width="2" />
+					<path d="M51.8549 28.3823C51.8549 33.7007 47.5761 37.9999 42.3129 37.9999C37.0498 37.9999 32.771 33.7007 32.771 28.3823C32.771 23.0639 37.0498 18.7646 42.3129 18.7646C47.5761 18.7646 51.8549 23.0639 51.8549 28.3823Z" stroke="black" stroke-width="2" />
+				</svg>

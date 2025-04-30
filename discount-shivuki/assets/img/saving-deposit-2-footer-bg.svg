@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="399px" height="568px" viewBox="0 0 399 568" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>EB2E5C10-41AF-4EAC-990F-F94CD6A0401F</title>
+    <defs>
+        <linearGradient x1="39.4329379%" y1="31.0618099%" x2="106.405556%" y2="29.8061915%" id="linearGradient-1">
+            <stop stop-color="#8FE600" offset="0%"></stop>
+            <stop stop-color="#2FC059" offset="90.4556381%"></stop>
+            <stop stop-color="#218370" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Concept" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" fill-opacity="0.2">
+        <g id="Desktop-1920_DISCOUNT--Savings-and-deposits---Tabs" transform="translate(0.000000, -3393.000000)" fill="url(#linearGradient-1)">
+            <path d="M115.337455,3965.34877 C261.600002,3965.34877 394.327882,3667.15139 394.327882,3544.45999 C394.327882,3421.7686 97.4221991,3382.34877 -48.8403484,3382.34877 C-195.102896,3382.34877 -313.672118,3481.8098 -313.672118,3604.50119 C-313.672118,3727.19258 -30.9250929,3965.34877 115.337455,3965.34877 Z" id="Oval-Copy-5" transform="translate(40.327882, 3673.848769) scale(-1, -1) rotate(-4.000000) translate(-40.327882, -3673.848769) "></path>
+        </g>
+    </g>
+</svg>

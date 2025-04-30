@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="11.5" height="17.5" viewBox="0 0 11.5 17.5">
+  <g id="Icon_feather-mic" data-name="Icon feather-mic" transform="translate(0.5 0.5)">
+    <path id="Path_11" data-name="Path 11" d="M15.75,1.5A2.25,2.25,0,0,0,13.5,3.75v6a2.25,2.25,0,0,0,4.5,0v-6A2.25,2.25,0,0,0,15.75,1.5Z" transform="translate(-10.5 -1.5)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+    <path id="Path_12" data-name="Path 12" d="M18,15v1.5a5.25,5.25,0,1,1-10.5,0V15" transform="translate(-7.5 -8.25)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+    <path id="Path_13" data-name="Path 13" d="M18,28.5v3" transform="translate(-12.75 -15)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+    <path id="Path_14" data-name="Path 14" d="M12,34.5h6" transform="translate(-9.75 -18)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+  </g>
+</svg>

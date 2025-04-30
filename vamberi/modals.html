@@ -1,0 +1,1813 @@
+<!DOCTYPE html>
+<html lang="uk">
+	<head>
+		<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="img/svg/ua.svg" type="image/x-icon" />
+
+<!-- <link rel="stylesheet" type="text/css" href="./css/jquery-ui.css" /> -->
+<!-- <link rel="stylesheet" type="text/css" href="./css/fancybox.css" /> -->
+<!-- <link rel="stylesheet" type="text/css" href="./css/select2.min.css" /> -->
+<!-- <link rel="stylesheet" type="text/css" href="./css/swiper.min.css" /> -->
+
+<!-- cdn -->
+<link rel="stylesheet" media="screen" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+<link rel="stylesheet" media="screen" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+
+<link rel="stylesheet" media="screen" type="text/css" href="./css/style.css" />
+<title>VamBeri - Модальні вікна</title>
+
+
+	</head>
+	<body class="">
+		<!-- header -->
+<header class="border-b border-b-dusty-gray/50 lg:border-0">
+	<div class="container">
+		<!-- header top -->
+		<div class="hidden justify-between pt-9 lg:flex">
+			<div class="flex items-center">
+				<!-- lang switcher -->
+				<div class="mr-4 flex h-10 items-center rounded-2lge bg-deep-blush px-2.5 py-1.5 text-sm transition ease-in xl:mr-10">
+					<a href="#" lang="uk" class="lang-active rounded-2lge bg-transparent px-5 py-1.5 text-white transition ease-in">Мова</a>
+					<a href="#" lang="ru" class="rounded-2lge bg-transparent px-5 py-1.5 text-white transition ease-in">Язык</a>
+				</div>
+				<!-- ./lang switcher -->
+				<a href="#" class="btn-primary flex h-10 min-w-[18.125rem] items-center justify-center text-sm" aria-label="Продавай на VamBeri">Продавай на VamBeri</a>
+			</div>
+			<a href="#" class="btn-primary flex h-10 min-w-[12rem] items-center justify-center text-sm" aria-label="Додати товар">Додати товар</a>
+		</div>
+		<!-- ./header top -->
+
+		<!-- header bottom -->
+		<div class="relative flex items-center justify-between gap-2.5 py-3 lg:mt-5.5 lg:gap-0 lg:py-0 lg:pb-0">
+			<div class="account-menu fixed inset-0 z-40 hidden bg-black/40 lg:absolute lg:inset-[unset] lg:right-0 lg:top-[102%] lg:bg-transparent">
+	<div class="account-menu-body absolute right-0 top-0 z-30 h-[calc(100vh-3rem)] w-full bg-white px-10 py-4 lw:w-[22.5rem] lg:left-auto lg:mt-4.5 lg:h-auto lg:min-h-fit lg:w-80 lg:rounded-2lge lg:border lg:border-lavender-purple/50 lg:px-10 lg:py-5">
+		<div>
+			<div class="mt-10 flex h-12.5 w-full items-center justify-between rounded-lge bg-lavender-purple px-3 py-2 text-sm transition ease-in lg:mt-0">
+				<label class="buyer-btn relative cursor-pointer" data-link-panel="settings-buyer.html">
+					<input type="radio" name="account" class="peer/buyer hidden" checked />
+					<div class="rounded-lge bg-transparent px-4 py-2.5 text-white transition ease-in peer-checked/buyer:bg-white peer-checked/buyer:text-shark">Покупець</div>
+					<svg class="absolute -left-10 top-1/2 hidden h-5 w-5 fill-tall-poppy opacity-0 transition ease-in -translate-y-1/2 peer-checked/buyer:opacity-100 lg:block">
+						<use xlink:href="img/svg/sprites/sprite-icons.svg#bell-filled "></use>
+					</svg>
+				</label>
+				<label class="seller-btn relative cursor-pointer" data-link-panel="settings-seller-private.html">
+					<input type="radio" name="account" class="peer/seller hidden" />
+					<div class="rounded-lge bg-transparent px-4 py-2.5 text-white transition ease-in peer-checked/seller:bg-white peer-checked/seller:text-shark">Продавець</div>
+					<svg class="absolute -right-9 top-1/2 hidden h-5 w-5 fill-tall-poppy opacity-0 transition ease-in -translate-y-1/2 peer-checked/seller:opacity-100 lg:block">
+						<use xlink:href="img/svg/sprites/sprite-icons.svg#bell-filled "></use>
+					</svg>
+				</label>
+			</div>
+
+			<a href="settings-buyer.html" class="btn-panel btn-blue-royal-light group mt-5 flex h-9 w-full items-center justify-center gap-4 rounded-lge p-1 text-xs" aria-label="Панель управління">
+				<svg class="h-5 w-5 fill-royal-blue transition ease-in group-hover:fill-white">
+					<use xlink:href="img/svg/sprites/sprite-icons.svg#Group"></use>
+				</svg>
+				<span>Панель управління</span>
+			</a>
+		</div>
+		<button class="account-menu-close absolute right-4 top-4 lg:hidden" aria-label="Закрити">
+			<svg class="h-5 w-5">
+				<use xlink:href="img/svg/sprites/sprite-icons.svg#close"></use>
+			</svg>
+		</button>
+
+		<!-- buyer -->
+		<div class="buyer-menu relative">
+			<div class="absolute -top-[10.375rem] left-0 right-0 text-center text-lg font-semibold lg:hidden">Кабінет покупця</div>
+			<div class="scrollbar-custom relative -mr-3 mt-5 h-[calc(100vh-15rem)] overflow-auto pr-2.5 text-shark lg:mr-0 lg:h-auto lg:overflow-visible lg:pr-0">
+				<ul class="flex flex-col gap-4.5 text-sm">
+					<li class="flex items-center gap-3 lg:gap-5">
+						<a href="#" class="flex h-9 w-full items-center gap-5 rounded-lge border border-tundora px-3.5 py-2 leading-none lg:h-auto lg:border-0 lg:p-0">
+							<svg class="h-4 w-4 flex-shrink-0 fill-shark lg:h-5 lg:w-5">
+								<use xlink:href="img/svg/sprites/sprite-icons.svg#basket"></use>
+							</svg>
+							<span>Замовлення</span>
+						</a>
+					</li>
+					<li class="flex items-center gap-3 lg:gap-5">
+						<a href="#" class="flex h-9 w-full items-center gap-5 rounded-lge border border-tundora px-3.5 py-2 leading-none lg:h-auto lg:border-0 lg:p-0">
+							<svg class="h-4 w-4 flex-shrink-0 fill-shark lg:h-5 lg:w-5">
+								<use xlink:href="img/svg/sprites/sprite-icons.svg#envelope"></use>
+							</svg>
+							<div class="flex flex-grow items-center justify-between lg:justify-normal">
+								<div class="pr-5">Повідомлення</div>
+								<p class="flex h-[1.25rem] min-w-[1.25rem] flex-shrink-0 items-center justify-center rounded-full bg-royal-blue px-1.5 leading-none"><span class="text-white">999+</span></p>
+							</div>
+						</a>
+					</li>
+					<li class="flex items-center gap-5">
+						<a href="#" class="flex h-9 w-full items-center gap-5 rounded-lge border border-tundora px-3.5 py-2 leading-none lg:h-auto lg:border-0 lg:p-0">
+							<svg class="h-4 w-4 flex-shrink-0 fill-shark lg:h-5 lg:w-5">
+								<use xlink:href="img/svg/sprites/sprite-icons.svg#eye"></use>
+							</svg>
+							<span>Переглянуті товари</span>
+						</a>
+					</li>
+					<li class="flex items-center gap-5">
+						<a href="#" class="flex h-9 w-full items-center gap-5 rounded-lge border border-tundora px-3.5 py-2 leading-none lg:h-auto lg:border-0 lg:p-0">
+							<svg class="h-4 w-4 flex-shrink-0 fill-shark lg:h-5 lg:w-5">
+								<use xlink:href="img/svg/sprites/sprite-icons.svg#heart"></use>
+							</svg>
+							<span>Вибране</span>
+						</a>
+					</li>
+					<li class="flex items-center gap-5">
+						<a href="#" class="flex h-9 w-full items-center gap-5 rounded-lge border border-tundora px-3.5 py-2 leading-none lg:h-auto lg:border-0 lg:p-0">
+							<svg class="h-4 w-4 flex-shrink-0 fill-shark lg:h-5 lg:w-5">
+								<use xlink:href="img/svg/sprites/sprite-icons.svg#user01"></use>
+							</svg>
+							<span>Мої підписки</span>
+						</a>
+					</li>
+					<li class="relative flex items-center gap-5">
+						<a href="#" class="flex h-9 w-full items-center gap-5 rounded-lge border border-tundora px-3.5 py-2 leading-none lg:h-auto lg:border-0 lg:p-0">
+							<svg class="h-4 w-4 flex-shrink-0 fill-shark lg:h-5 lg:w-5">
+								<use xlink:href="img/svg/sprites/sprite-icons.svg#message2"></use>
+							</svg>
+
+							<div class="flex flex-grow items-center justify-between lg:justify-normal">
+								<div class="pr-5">Мої відгуки</div>
+								<p class="flex h-[1.25rem] min-w-[1.25rem] flex-shrink-0 items-center justify-center rounded-full bg-royal-blue px-1.5 leading-none"><span class="text-white">999+</span></p>
+							</div>
+						</a>
+					</li>
+					<li class="flex items-center gap-5">
+						<a href="#" class="flex h-9 w-full items-center gap-5 rounded-lge border border-tundora px-3.5 py-2 leading-none lg:h-auto lg:border-0 lg:p-0">
+							<svg class="h-4 w-4 flex-shrink-0 fill-shark lg:h-5 lg:w-5">
+								<use xlink:href="img/svg/sprites/sprite-icons.svg#settings"></use>
+							</svg>
+							<span>Налаштування</span>
+						</a>
+					</li>
+					<li class="flex items-center gap-5">
+						<a href="#" class="flex h-9 w-full items-center gap-5 rounded-lge border border-tundora px-3.5 py-2 leading-none lg:h-auto lg:border-0 lg:p-0">
+							<svg class="h-4 w-4 flex-shrink-0 fill-shark lg:h-5 lg:w-5">
+								<use xlink:href="img/svg/sprites/sprite-icons.svg#exit"></use>
+							</svg>
+							<span>Вихід</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- buyer -->
+
+		<!-- seller -->
+		<div class="seller-menu relative hidden">
+			<div class="absolute -top-[10.375rem] left-0 right-0 text-center text-lg font-semibold lg:hidden">Кабінет продавця</div>
+			<div class="scrollbar-custom relative -mr-3 mt-5 h-[calc(100vh-15rem)] overflow-auto pr-2.5 text-shark lg:mr-0 lg:h-auto lg:overflow-visible lg:pr-0">
+				<ul class="flex flex-col gap-5 text-sm">
+					<li class="relative flex items-center gap-5">
+						<a href="#" class="flex h-9 w-full items-center gap-5 rounded-lge border border-tundora px-3.5 py-2 leading-none lg:h-auto lg:border-0 lg:p-0">
+							<svg class="h-4 w-4 flex-shrink-0 fill-shark lg:h-5 lg:w-5">
+								<use xlink:href="img/svg/sprites/sprite-icons.svg#bag"></use>
+							</svg>
+
+							<div class="flex flex-grow items-center justify-between lg:justify-normal">
+								<div class="pr-5">Продажі</div>
+								<p class="flex h-[1.25rem] min-w-[1.25rem] flex-shrink-0 items-center justify-center rounded-full bg-royal-blue px-1.5 leading-none"><span class="text-white">999+</span></p>
+							</div>
+						</a>
+					</li>
+					<li class="relative flex items-center gap-5">
+						<a href="#" class="flex h-9 w-full items-center gap-5 rounded-lge border border-tundora px-3.5 py-2 leading-none lg:h-auto lg:border-0 lg:p-0">
+							<svg class="h-4 w-4 flex-shrink-0 fill-shark lg:h-5 lg:w-5">
+								<use xlink:href="img/svg/sprites/sprite-icons.svg#envelope"></use>
+							</svg>
+
+							<div class="flex flex-grow items-center justify-between lg:justify-normal">
+								<div class="pr-5">Повідомлення</div>
+								<p class="flex h-[1.25rem] min-w-[1.25rem] flex-shrink-0 items-center justify-center rounded-full bg-royal-blue px-1.5 leading-none"><span class="text-white">999+</span></p>
+							</div>
+						</a>
+					</li>
+
+					<li class="flex items-center gap-5">
+						<a href="#" class="flex h-9 w-full items-center gap-5 rounded-lge border border-tundora px-3.5 py-2 leading-none lg:h-auto lg:border-0 lg:p-0">
+							<svg class="h-4 w-4 flex-shrink-0 fill-shark lg:h-5 lg:w-5">
+								<use xlink:href="img/svg/sprites/sprite-icons.svg#my-products"></use>
+							</svg>
+							<span>Мої товари</span>
+						</a>
+					</li>
+					<li class="flex items-center gap-5">
+						<a href="#" class="flex h-9 w-full items-center gap-5 rounded-lge border border-tundora px-3.5 py-2 leading-none lg:h-auto lg:border-0 lg:p-0">
+							<svg class="h-4 w-4 flex-shrink-0 fill-shark lg:h-5 lg:w-5">
+								<use xlink:href="img/svg/sprites/sprite-icons.svg#add"></use>
+							</svg>
+							<span>Додати товар</span>
+						</a>
+					</li>
+					<li class="flex items-center gap-5">
+						<a href="#" class="flex h-9 w-full items-center gap-5 rounded-lge border border-tundora px-3.5 py-2 leading-none lg:h-auto lg:border-0 lg:p-0">
+							<svg class="h-5 w-5 flex-shrink-0 fill-transparent stroke-shark">
+								<use xlink:href="img/svg/sprites/sprite-icons.svg#my-shop"></use>
+							</svg>
+							<span>Мій магазин </span>
+						</a>
+					</li>
+					<li class="flex items-center gap-5">
+						<a href="#" class="flex h-9 w-full items-center gap-5 rounded-lge border border-tundora px-3.5 py-2 leading-none lg:h-auto lg:border-0 lg:p-0">
+							<svg class="h-4 w-4 flex-shrink-0 fill-shark lg:h-5 lg:w-5">
+								<use xlink:href="img/svg/sprites/sprite-icons.svg#wallet"></use>
+							</svg>
+							<span>Гаманець [0 грн.] </span>
+						</a>
+					</li>
+
+					<li class="flex items-center gap-5">
+						<a href="#" class="flex h-9 w-full items-center gap-5 rounded-lge border border-tundora px-3.5 py-2 leading-none lg:h-auto lg:border-0 lg:p-0">
+							<svg class="h-4 w-4 flex-shrink-0 fill-shark lg:h-5 lg:w-5">
+								<use xlink:href="img/svg/sprites/sprite-icons.svg#user01"></use>
+							</svg>
+							<span>Мої підписки</span>
+						</a>
+					</li>
+					<li class="flex items-center gap-5">
+						<a href="#" class="flex h-9 w-full items-center gap-5 rounded-lge border border-tundora px-3.5 py-2 leading-none lg:h-auto lg:border-0 lg:p-0">
+							<svg class="h-4 w-4 flex-shrink-0 fill-shark lg:h-5 lg:w-5">
+								<use xlink:href="img/svg/sprites/sprite-icons.svg#settings"></use>
+							</svg>
+							<span>Налаштування</span>
+						</a>
+					</li>
+
+					<li class="flex items-center gap-5">
+						<a href="#" class="flex h-9 w-full items-center gap-5 rounded-lge border border-tundora px-3.5 py-2 leading-none lg:h-auto lg:border-0 lg:p-0">
+							<svg class="h-4 w-4 flex-shrink-0 fill-shark lg:h-5 lg:w-5">
+								<use xlink:href="img/svg/sprites/sprite-icons.svg#exit"></use>
+							</svg>
+							<span>Вихід</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- seller -->
+	</div>
+</div>
+
+
+			<!-- burger -->
+			<!-- <button class="flex h-7.5 w-7.5 items-center justify-center rounded-full bg-white lg:hidden" aria-label="Burger">
+				<svg class="h-4 w-4 fill-black">
+					<use xlink:href="img/svg/sprites/sprite-icons.svg#burger"></use>
+				</svg>
+
+				<svg class="hidden h-4 w-4 fill-black">
+					<use xlink:href="img/svg/sprites/sprite-icons.svg#close"></use>
+				</svg>
+			</button> -->
+			<!-- ./burger -->
+			<!-- logo -->
+			<a href="index.html" title="VamBeri" class="mr-0 text-center text-2xl font-semibold text-lavender-purple lg:mr-4 lg:text-left lg:text-4ms xl:mr-10">VamBeri</a>
+			<!-- ./logo -->
+
+			<!-- category dropdown -->
+			<button aria-label="Обрати категорію" class="btn-category-desktop group mr-4 hidden h-12.5 w-[18.125rem] flex-shrink-0 items-center rounded-lge bg-white px-2.5 py-1.5 lg:flex xl:mr-8">
+				<div class="flex items-center gap-3.5">
+					<div class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-lavender-purple transition ease-in group-hover:bg-purple-800">
+						<svg class="h-5 w-5 fill-white">
+							<use xlink:href="img/svg/sprites/sprite-icons.svg#category"></use>
+						</svg>
+					</div>
+					<span class="text-sm">Обрати категорію</span>
+				</div>
+				<div class="ml-auto">
+					<svg class="category-arrow-down h-2.5 w-2.5 transition ease-in">
+						<use xlink:href="img/svg/sprites/sprite-icons.svg#chevron-down"></use>
+					</svg>
+				</div>
+			</button>
+			<!-- ./category dropdown -->
+
+			<!-- search -->
+			<div class="group relative hidden h-14 w-full flex-grow items-center gap-2.5 rounded-lge bg-white px-2.5 py-1.5 lg:flex lg:h-12.5 lg:gap-4 lg:rounded-2lge">
+				<input type="text" class="search-field flex-grow border-none p-0 text-sm placeholder:text-sm placeholder:text-dusty-gray focus:outline-none focus:ring-0" placeholder="Пошук по сайту..." />
+				<div class="autocomplete-block scrollbar-custom absolute left-0 top-[calc(100%+0.5rem)] z-50 max-h-80 w-full overflow-y-auto overflow-x-hidden rounded-lge bg-white shadow-md"></div>
+				<button class="btn-primary rounded-lge px-3.5 py-2.5 lg:px-5" aria-label="Search">
+					<span class="hidden text-sm lg:block">Пошук</span>
+					<svg class="block h-4 w-4 fill-white lg:hidden">
+						<use xlink:href="img/svg/sprites/sprite-icons.svg#search"></use>
+					</svg>
+				</button>
+			</div>
+			<!-- ./search -->
+
+			<!-- actions buttons -->
+			<div class="relative ml-0 flex gap-5 text-sm lg:ml-4 lg:gap-1 xl:ml-8 xl:gap-3.5">
+				<!-- lang swither mobile -->
+				<div class="relative lg:hidden filter-item">
+					<button class="filter-btn flex h-9 w-9 items-center justify-center rounded-full bg-white text-sm font-medium transition ease-in lg:hover:border-lavender-purple" aria-label="Language switcher">
+						<span class="default-placeholder hidden">UA</span>
+						<span class="selected-placeholder">UA</span>
+					</button>
+
+					<!-- dropdown -->
+					<div class="filter-dropdown absolute left-1/2 top-full z-40 mt-2 hidden rounded-emd border border-lavender-purple/50 bg-white px-3.5 py-2.5 text-shark -translate-x-1/2" data-filter-name="lang">
+						<ul class="flex flex-col gap-3 text-sm font-medium">
+							<li data-filter-option="ua">
+								<a href="#" class="transition ease-in hover:text-lavender-purple">UA</a>
+							</li>
+							<li data-filter-option="ru">
+								<a href="#" class="transition ease-in hover:text-lavender-purple">RU</a>
+							</li>
+						</ul>
+					</div>
+					<!-- ./dropdown -->
+				</div>
+				<!-- ./lang swither mobile -->
+
+				<!-- якщо клєнт залогінився показуємо цю кнопку на десктопі-->
+				<a href="#" class="account-btn group hidden flex-col items-center gap-1 text-lavender-purple transition ease-in hover:text-purple-800 lg:flex" title="Увійти">
+					<span class="flex h-9 w-9 items-center justify-center rounded-full bg-white lg:h-8.5 lg:w-8.5">
+						<svg class="h-4 w-4 fill-lavender-purple transition ease-in group-hover:fill-purple-800 sm:h-5 sm:w-5">
+							<use xlink:href="img/svg/sprites/sprite-icons.svg#user01"></use>
+						</svg>
+					</span>
+					<span class="hidden xl:block">Кабінет</span>
+				</a>
+				<!-- якщо клєнт залогінився показуємо цю кнопку на десктопі-->
+
+				<!-- якщо клєнт не залогінився показуємо цю кнопку, обгортку <div class="hidden"></div> прибрати-->
+				<div class="hidden">
+					<a href="#" class="account-login group hidden flex-col items-center gap-1 text-lavender-purple transition ease-in hover:text-purple-800 lg:flex" title="Увійти">
+						<span class="flex h-9 w-9 items-center justify-center rounded-full bg-white lg:h-8.5 lg:w-8.5">
+							<svg class="h-4 w-4 fill-lavender-purple transition ease-in group-hover:fill-purple-800 sm:h-5 sm:w-5">
+								<use xlink:href="img/svg/sprites/sprite-icons.svg#user01"></use>
+							</svg>
+						</span>
+						<span class="hidden xl:block">Увійти</span>
+					</a>
+				</div>
+				<!-- якщо клєнт не залогінився показуємо цю кнопку -->
+
+				<button class="group flex flex-col items-center gap-1 text-lavender-purple transition ease-in hover:text-purple-800" title="Кошик" aria-label="Кошик" data-modal="modal-basket">
+					<span class="flex h-9 w-9 items-center justify-center rounded-full bg-white lg:h-8.5 lg:w-8.5">
+						<svg class="hidden h-4 w-4 fill-lavender-purple transition ease-in group-hover:fill-purple-800 lg:block lg:h-5 lg:w-5">
+							<use xlink:href="img/svg/sprites/sprite-icons.svg#basket"></use>
+						</svg>
+						<svg class="h-4 w-4 fill-shark lg:hidden lg:h-5 lg:w-5">
+							<use xlink:href="img/svg/sprites/sprite-icons.svg#cart2-solid"></use>
+						</svg>
+					</span>
+					<span class="hidden xl:block">Кошик</span>
+				</button>
+				<a href="#" class="group hidden flex-col items-center gap-1 text-lavender-purple transition ease-in hover:text-purple-800 lg:flex" title="Обране">
+					<span class="flex h-7.5 w-7.5 items-center justify-center rounded-full bg-white lg:h-8.5 lg:w-8.5">
+						<svg class="h-4 w-4 fill-lavender-purple transition ease-in group-hover:fill-purple-800 sm:h-5 sm:w-5">
+							<use xlink:href="img/svg/sprites/sprite-icons.svg#heart"></use>
+						</svg>
+					</span>
+					<span class="hidden xl:block">Обране</span>
+				</a>
+
+				<a href="#" class="group flex flex-col items-center gap-1 text-lavender-purple transition ease-in hover:text-purple-800" title="Сповіщення">
+					<div class="relative flex h-9 w-9 items-center justify-center rounded-full bg-white lg:h-8.5 lg:w-8.5">
+						<!--  якщо є сповіщення додаємо класс hidden -->
+						<svg class="hidden h-4 w-4 fill-transparent stroke-lavender-purple transition ease-in group-hover:stroke-purple-800 lg:h-5 lg:w-5">
+							<use xlink:href="img/svg/sprites/sprite-icons.svg#bell"></use>
+						</svg>
+
+						<!--  якщо є сповіщення видяляємо класс hidden -->
+						<svg class="h-4 w-4 fill-tundora stroke-tundora transition ease-in lg:h-5 lg:w-5">
+							<use xlink:href="img/svg/sprites/sprite-icons.svg#bell"></use>
+						</svg>
+						<p class="absolute -right-1.5 -top-1.5 flex h-4 items-center justify-center rounded-lge bg-tall-poppy px-1 text-sm lg:-right-2.5 lg:top-0"><span class="text-white">1+</span></p>
+					</div>
+					<span class="hidden xl:block">Сповіщення </span>
+				</a>
+
+				
+			</div>
+			<!-- ./actions buttons -->
+		</div>
+		<!-- ./header bottom -->
+	</div>
+</header>
+<!-- ./header -->
+
+
+		<main>
+			<!-- breadcrumbs -->
+			<div class="pb-4 pt-2 text-xs lg:pb-2 lg:pt-11 lg:text-sm">
+				<div class="container">
+					<ul class="flex items-center gap-1 overflow-hidden">
+						<li class="flex items-center gap-1">
+							<a href="#" class="link-primary line-clamp-1 text-ellipsis text-tundora">Україна</a>
+							<svg class="h-2.5 w-2.5 fill-lavender-purple">
+								<use xlink:href="img/svg/sprites/sprite-icons.svg#chevron-right"></use>
+							</svg>
+						</li>
+
+						<li class="flex items-center gap-1">
+							<a class="link-primary line-clamp-1 overflow-hidden text-ellipsis text-tundora hover:text-tundora">Модальні вікна</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- ./breadcrumbs -->
+
+			
+
+			<section class="pt-0">
+				<div class="container">
+					<div class="flex flex-col justify-center w-full items-center gap-4">
+						<button class="btn-primary h-10 flex items-center justify-center w-[15rem]" data-modal="modal-basket">Кошик товарів</button>
+						<button class="btn-primary h-10 flex items-center justify-center w-[15rem]" data-modal="modal-add-discount">Додавання знижки</button>
+						<button class="btn-primary h-10 flex items-center justify-center w-[15rem]" data-modal="modal-product-delete">Видалення товару</button>
+						<button class="btn-primary h-10 flex items-center justify-center w-[15rem]" data-modal="modal-date-filter">Фільтрування за датою</button>
+						<button class="btn-primary h-10 flex items-center justify-center w-[15rem]" data-modal="modal-compliant">Скарга</button>
+						<button class="btn-primary h-10 flex items-center justify-center w-[15rem]" data-modal="modal-rules-buyer">Правила → покупець</button>
+						<button class="btn-primary h-10 flex items-center justify-center w-[15rem]" data-modal="modal-rules-seller">Правила → продавець</button>
+						<button class="btn-primary h-10 flex items-center justify-center w-[15rem]" data-modal="modal-cancel-order-by-seller">Скасування замовлення → продавець</button>
+						<button class="btn-primary h-10 flex items-center justify-center w-[15rem]" data-modal="modal-cancel-order-by-buyer">Скасування замовлення → покупець</button>
+
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<!-- category dropdown-menu -->
+
+<div class="category-desktop fixed -top-[0.0625rem] left-0 z-30 hidden h-screen w-screen bg-lavender-purple/10">
+	<div class="relative flex max-h-screen max-w-[70rem]">
+		<div class="category-desktop-body relative flex border border-dusty-gray bg-white text-shark shadow-custom">
+			<button class="category-desktop-close absolute -right-10 top-5">
+				<svg class="h-5 w-5">
+					<use xlink:href="img/svg/sprites/sprite-icons.svg#close"></use>
+				</svg>
+			</button>
+			<div class="scrollbar-custom max-h-full w-80 overflow-y-auto overflow-x-hidden border border-r-ebb px-2.5 py-[1.875rem] xl:w-[23.125rem] xl:pl-[1.875rem] xl:pr-[3.125rem]">
+				<ul class="flex w-[17.5rem] flex-col gap-4 text-sm">
+					<li class="category__item rounded-lg px-2.5 py-1.5" data-category="1">
+						<a href="#" class="relative flex items-center gap-4">
+							<svg class="h-5 w-5 fill-shark">
+								<use xlink:href="img/svg/sprites/sprite-category.svg#women"></use>
+							</svg>
+							<span>Жінкам</span>
+						</a>
+					</li>
+					<li class="category__item rounded-lg px-2.5 py-1.5" data-category="2">
+						<a href="#" class="relative flex items-center gap-4">
+							<svg class="h-5 w-5 fill-shark">
+								<use xlink:href="img/svg/sprites/sprite-category.svg#shoes"></use>
+							</svg>
+							<span>Взуття</span>
+						</a>
+					</li>
+
+					<li class="category__item rounded-lg px-2.5 py-1.5" data-category="3">
+						<a href="#" class="relative flex items-center gap-4">
+							<svg class="h-5 w-5">
+								<use xlink:href="img/svg/sprites/sprite-category.svg#children-goods2"></use>
+							</svg>
+							<span>Дитячі товари 2</span>
+						</a>
+					</li>
+
+					<li class="category__item rounded-lg px-2.5 py-1.5" data-category="4">
+						<a href="#" class="relative flex items-center gap-4">
+							<svg class="h-5 w-5 fill-shark">
+								<use xlink:href="img/svg/sprites/sprite-category.svg#man"></use>
+							</svg>
+							<span>Чоловікам</span>
+						</a>
+					</li>
+					<li class="category__item rounded-lg px-2.5 py-1.5" data-category="5">
+						<a href="#" class="relative flex items-center gap-4">
+							<svg class="h-5 w-5 fill-shark">
+								<use xlink:href="img/svg/sprites/sprite-category.svg#for-house2"></use>
+							</svg>
+							<span>Дім</span>
+						</a>
+					</li>
+					<li class="category__item rounded-lg px-2.5 py-1.5" data-category="6">
+						<a href="#" class="relative flex items-center gap-4">
+							<svg class="h-5 w-5 fill-shark">
+								<use xlink:href="img/svg/sprites/sprite-category.svg#accessory"></use>
+							</svg>
+							<span>Аксесуари</span>
+						</a>
+					</li>
+					<li class="category__item rounded-lg px-2.5 py-1.5" data-category="7">
+						<a href="#" class="relative flex items-center gap-4">
+							<svg class="h-5 w-5 fill-shark">
+								<use xlink:href="img/svg/sprites/sprite-category.svg#toys"></use>
+							</svg>
+							<span>Іграшки </span>
+						</a>
+					</li>
+					<li class="category__item rounded-lg px-2.5 py-1.5" data-category="8">
+						<a href="#" class="relative flex items-center gap-4">
+							<svg class="h-5 w-5 fill-shark">
+								<use xlink:href="img/svg/sprites/sprite-category.svg#homehold"></use>
+							</svg>
+							<span>Побутова техніка </span>
+						</a>
+					</li>
+					<li class="category__item rounded-lg px-2.5 py-1.5" data-category="9">
+						<a href="#" class="relative flex items-center gap-4">
+							<svg class="h-5 w-5 fill-shark">
+								<use xlink:href="img/svg/sprites/sprite-category.svg#help"></use>
+							</svg>
+							<span>Допомога</span>
+						</a>
+					</li>
+					<li class="category__item rounded-lg px-2.5 py-1.5" data-category="10">
+						<a href="#" class="relative flex items-center gap-4">
+							<svg class="h-5 w-5 fill-shark">
+								<use xlink:href="img/svg/sprites/sprite-category.svg#sport"></use>
+							</svg>
+							<span>Спорт та відпочинок</span>
+						</a>
+					</li>
+					<li class="category__item rounded-lg px-2.5 py-1.5" data-category="11">
+						<a href="#" class="relative flex items-center gap-4">
+							<svg class="h-5 w-5 fill-shark">
+								<use xlink:href="img/svg/sprites/sprite-category.svg#plc-board"></use>
+							</svg>
+
+							<span>Обладнання та сировина</span>
+						</a>
+					</li>
+					<li class="category__item rounded-lg px-2.5 py-1.5" data-category="12">
+						<a href="#" class="relative flex items-center gap-4">
+							<svg class="h-5 w-5 fill-shark">
+								<use xlink:href="img/svg/sprites/sprite-category.svg#instruments"></use>
+							</svg>
+
+							<span>Будматеріали та інструменти</span>
+						</a>
+					</li>
+					<li class="category__item rounded-lg px-2.5 py-1.5" data-category="13">
+						<a href="#" class="relative flex items-center gap-4">
+							<svg class="h-5 w-5 fill-shark">
+								<use xlink:href="img/svg/sprites/sprite-category.svg#fashion"></use>
+							</svg>
+
+							<span>Мода та стиль</span>
+						</a>
+					</li>
+					<li class="category__item rounded-lg px-2.5 py-1.5" data-category="14">
+						<a href="#" class="relative flex items-center gap-4">
+							<svg class="h-5 w-5 fill-shark">
+								<use xlink:href="img/svg/sprites/sprite-category.svg#beauty"></use>
+							</svg>
+
+							<span>Краса і здоров’я</span>
+						</a>
+					</li>
+					<li class="category__item rounded-lg px-2.5 py-1.5" data-category="15">
+						<a href="#" class="relative flex items-center gap-4">
+							<svg class="h-5 w-5 fill-shark">
+								<use xlink:href="img/svg/sprites/sprite-category.svg#children-goods"></use>
+							</svg>
+
+							<span>Дитячі товари</span>
+						</a>
+					</li>
+					<li class="category__item rounded-lg px-2.5 py-1.5" data-category="16">
+						<a href="#" class="relative flex items-center gap-4">
+							<svg class="h-5 w-5 fill-shark">
+								<use xlink:href="img/svg/sprites/sprite-category.svg#building"></use>
+							</svg>
+
+							<span>Нерухомість</span>
+						</a>
+					</li>
+					<li class="category__item rounded-lg px-2.5 py-1.5" data-category="17">
+						<a href="#" class="relative flex items-center gap-4">
+							<svg class="h-5 w-5 fill-shark">
+								<use xlink:href="img/svg/sprites/sprite-category.svg#for-home"></use>
+							</svg>
+
+							<span>Мебелі</span>
+						</a>
+					</li>
+					<li class="category__item rounded-lg px-2.5 py-1.5" data-category="18">
+						<a href="#" class="relative flex items-center gap-4">
+							<svg class="h-5 w-5 fill-shark">
+								<use xlink:href="img/svg/sprites/sprite-category.svg#work"></use>
+							</svg>
+
+							<span>Робота</span>
+						</a>
+					</li>
+					<li class="category__item rounded-lg px-2.5 py-1.5" data-category="19">
+						<a href="#" class="relative flex items-center gap-4">
+							<svg class="h-5 w-5 fill-shark">
+								<use xlink:href="img/svg/sprites/sprite-category.svg#freelance"></use>
+							</svg>
+
+							<span>Послуги та фріланс</span>
+						</a>
+					</li>
+					<li class="category__item rounded-lg px-2.5 py-1.5" data-category="20">
+						<a href="#" class="relative flex items-center gap-4">
+							<svg class="h-5 w-5 fill-shark">
+								<use xlink:href="img/svg/sprites/sprite-category.svg#auto"></use>
+							</svg>
+
+							<span>Авто</span>
+						</a>
+					</li>
+					<li class="category__item rounded-lg px-2.5 py-1.5" data-category="21">
+						<a href="#" class="relative flex items-center gap-4">
+							<svg class="h-5 w-5 fill-shark">
+								<use xlink:href="img/svg/sprites/sprite-category.svg#auto2"></use>
+							</svg>
+
+							<span>Автотовари</span>
+						</a>
+					</li>
+					<li class="category__item rounded-lg px-2.5 py-1.5" data-category="22">
+						<a href="#" class="relative flex items-center gap-4">
+							<svg class="h-5 w-5 fill-shark">
+								<use xlink:href="img/svg/sprites/sprite-category.svg#spare-parts"></use>
+							</svg>
+
+							<span>Запчастини для транспорту</span>
+						</a>
+					</li>
+					<li class="category__item rounded-lg px-2.5 py-1.5" data-category="23">
+						<a href="#" class="relative flex items-center gap-4">
+							<svg class="h-5 w-5 fill-shark">
+								<use xlink:href="img/svg/sprites/sprite-category.svg#animals"></use>
+							</svg>
+
+							<span>Тварини</span>
+						</a>
+					</li>
+					<li class="category__item rounded-lg px-2.5 py-1.5" data-category="24">
+						<a href="#" class="relative flex items-center gap-4">
+							<svg class="h-5 w-5 fill-shark">
+								<use xlink:href="img/svg/sprites/sprite-category.svg#electronics"></use>
+							</svg>
+
+							<span>Електроніка</span>
+						</a>
+					</li>
+					<li class="category__item rounded-lg px-2.5 py-1.5" data-category="25">
+						<a href="#" class="relative flex items-center gap-4">
+							<svg class="h-5 w-5 fill-shark">
+								<use xlink:href="img/svg/sprites/sprite-category.svg#exchange"></use>
+							</svg>
+
+							<span>Обмін</span>
+						</a>
+					</li>
+					<li class="category__item rounded-lg px-2.5 py-1.5" data-category="26">
+						<a href="#" class="relative flex items-center gap-4">
+							<svg class="h-5 w-5 fill-shark">
+								<use xlink:href="img/svg/sprites/sprite-category.svg#for-busines"></use>
+							</svg>
+
+							<span>Для бізнесу</span>
+						</a>
+					</li>
+					<li class="category__item rounded-lg px-2.5 py-1.5" data-category="27">
+						<a href="#" class="relative flex items-center gap-4">
+							<svg class="h-5 w-5 fill-shark">
+								<use xlink:href="img/svg/sprites/sprite-category.svg#hobbies"></use>
+							</svg>
+
+							<span>Хобі та розваги</span>
+						</a>
+					</li>
+					<li class="category__item rounded-lg px-2.5 py-1.5" data-category="28">
+						<a href="#" class="relative flex items-center gap-4">
+							<svg class="h-5 w-5 fill-transparent stroke-shark">
+								<use xlink:href="img/svg/sprites/sprite-category.svg#school"></use>
+							</svg>
+
+							<span>Школа</span>
+						</a>
+					</li>
+					<li class="category__item rounded-lg px-2.5 py-1.5" data-category="29">
+						<a href="#" class="relative flex items-center gap-4">
+							<svg class="h-5 w-5 fill-shark">
+								<use xlink:href="img/svg/sprites/sprite-category.svg#books"></use>
+							</svg>
+
+							<span>Книги</span>
+						</a>
+					</li>
+					<li class="category__item rounded-lg px-2.5 py-1.5" data-category="30">
+						<a href="#" class="relative flex items-center gap-4">
+							<svg class="h-5 w-5 fill-shark">
+								<use xlink:href="img/svg/sprites/sprite-category.svg#jewerly"></use>
+							</svg>
+
+							<span>Ювелірні вироби</span>
+						</a>
+					</li>
+					<li class="category__item rounded-lg px-2.5 py-1.5" data-category="31">
+						<a href="#" class="relative flex items-center gap-4">
+							<svg class="h-5 w-5 fill-shark">
+								<use xlink:href="img/svg/sprites/sprite-category.svg#roll-brush"></use>
+							</svg>
+
+							<span>Для ремонту</span>
+						</a>
+					</li>
+					<li class="category__item rounded-lg px-2.5 py-1.5" data-category="32">
+						<a href="#" class="relative flex items-center gap-4">
+							<svg class="h-5 w-5 fill-shark">
+								<use xlink:href="img/svg/sprites/sprite-category.svg#garden"></use>
+							</svg>
+
+							<span>Сад та дача</span>
+						</a>
+					</li>
+					<li class="category__item rounded-lg px-2.5 py-1.5" data-category="33">
+						<a href="#" class="relative flex items-center gap-4">
+							<svg class="h-5 w-5 fill-shark">
+								<use xlink:href="img/svg/sprites/sprite-category.svg#health"></use>
+							</svg>
+
+							<span>Здоров’я</span>
+						</a>
+					</li>
+					<li class="category__item rounded-lg px-2.5 py-1.5" data-category="34">
+						<a href="#" class="relative flex items-center gap-4">
+							<svg class="h-5 w-5 fill-shark">
+								<use xlink:href="img/svg/sprites/sprite-category.svg#office-supplies"></use>
+							</svg>
+
+							<span>Канцтовари</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="scrollbar-custom hidden max-h-full w-80 overflow-y-auto overflow-x-hidden border border-r-ebb px-2.5 py-[1.875rem] xl:w-[21.875rem] xl:pl-11 xl:pr-[3.375rem]" data-category-level-2="1">
+				<p class="text-lg font-semibold">Жінкам</p>
+				<ul class="mt-6 flex flex-col gap-4 text-sm">
+					<li class="category__submenu-item rounded-lg py-1.5" data-submenu="111">
+						<a href="#" class="relative flex items-center gap-4">
+							<span>Item 1</span>
+						</a>
+					</li>
+					<li class="category__submenu-item rounded-lg py-1.5" data-submenu="112">
+						<a href="#" class="relative flex items-center gap-4">
+							<span>Item with submenu</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="scrollbar-custom hidden max-h-full w-80 overflow-y-auto overflow-x-hidden border border-r-ebb px-2.5 py-[1.875rem] xl:w-[21.875rem] xl:pl-11 xl:pr-[3.375rem]" data-category-level-2="3">
+				<p class="text-lg font-semibold">Дитячі товари</p>
+				<ul class="mt-6 flex flex-col gap-4 text-sm">
+					<li class="category__submenu-item rounded-lg py-1.5" data-submenu="1">
+						<a href="#" class="relative flex items-center gap-4">
+							<span>Дитяча електроніка</span>
+						</a>
+					</li>
+					<li class="category__submenu-item rounded-lg py-1.5" data-submenu="2">
+						<a href="#" class="relative flex items-center gap-4">
+							<span>Дитячий транспорт</span>
+						</a>
+					</li>
+					<li class="category__submenu-item rounded-lg py-1.5" data-submenu="3">
+						<a href="#" class="relative flex items-center gap-4">
+							<span>Для дівчаток</span>
+						</a>
+					</li>
+					<li class="category__submenu-item rounded-lg py-1.5" data-submenu="4">
+						<a href="#" class="relative flex items-center gap-4">
+							<span>Для немовлят</span>
+						</a>
+					</li>
+					<li class="category__submenu-item rounded-lg py-1.5" data-submenu="5">
+						<a href="#" class="relative flex items-center gap-4">
+							<span>Для хлопчиків</span>
+						</a>
+					</li>
+					<li class="category__submenu-item rounded-lg py-1.5" data-submenu="6">
+						<a href="#" class="relative flex items-center gap-4">
+							<span>Конструктори</span>
+						</a>
+					</li>
+					<li class="category__submenu-item rounded-lg py-1.5" data-submenu="7">
+						<a href="#" class="relative flex items-center gap-4">
+							<span>Підгузки</span>
+						</a>
+					</li>
+
+					<!-- active subcategory -->
+					<li class="category__submenu-item rounded-lg py-1.5" data-submenu="8">
+						<a href="#" class="relative flex items-center gap-4 pr-2">
+							<span>Подарунки дітям</span>
+						</a>
+					</li>
+					<!-- ./active subcategory -->
+
+					<li class="category__submenu-item rounded-lg py-1.5" data-submenu="9">
+						<a href="#" class="relative flex items-center gap-4">
+							<span>Релігійний одяг </span>
+						</a>
+					</li>
+
+					<li class="category__submenu-item rounded-lg py-1.5" data-submenu="10">
+						<a href="#" class="relative flex items-center gap-4">
+							<span>Товари для малюка </span>
+						</a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="scrollbar-custom hidden max-h-full w-80 overflow-y-auto overflow-x-hidden px-2.5 py-7.5 xl:w-[27.125rem] xl:px-[3.125rem]" data-category-level-3="8">
+				<p class="text-lg font-semibold">Подарунки дітям</p>
+				<ul class="mt-6 flex flex-col gap-4 text-sm">
+					<li class="category__submenu2-item rounded-lg py-1.5">
+						<a href="#" class="relative flex items-center gap-4">
+							<span>Іграшки</span>
+						</a>
+					</li>
+					<li class="category__submenu2-item rounded-lg py-1.5">
+						<a href="#" class="relative flex items-center gap-4">
+							<span>Аксесуари</span>
+						</a>
+					</li>
+					<li class="category__submenu2-item rounded-lg py-1.5">
+						<a href="#" class="relative flex items-center gap-4">
+							<span>Для будинку</span>
+						</a>
+					</li>
+					<li class="category__submenu2-item rounded-lg py-1.5">
+						<a href="#" class="relative flex items-center gap-4">
+							<span>Книги та канцтовари</span>
+						</a>
+					</li>
+					<li class="category__submenu2-item rounded-lg py-1.5">
+						<a href="#" class="relative flex items-center gap-4">
+							<span>Косметика та догляд</span>
+						</a>
+					</li>
+					<li class="category__submenu2-item rounded-lg py-1.5">
+						<a href="#" class="relative flex items-center gap-4">
+							<span>Кульки та упаковка</span>
+						</a>
+					</li>
+					<li class="category__submenu2-item rounded-lg py-1.5">
+						<a href="#" class="relative flex items-center gap-4">
+							<span>Листівки та сувеніри</span>
+						</a>
+					</li>
+					<li class="category__submenu2-item rounded-lg py-1.5">
+						<a href="#" class="relative flex items-center gap-4">
+							<span>Посуд</span>
+						</a>
+					</li>
+					<li class="category__submenu2-item rounded-lg py-1.5">
+						<a href="#" class="relative flex items-center gap-4">
+							<span>Смачні подарунки</span>
+						</a>
+					</li>
+					<li class="category__submenu2-item rounded-lg py-1.5">
+						<a href="#" class="relative flex items-center gap-4">
+							<span>Хобі та розваги</span>
+						</a>
+					</li>
+					<li class="category__submenu2-item rounded-lg py-1.5">
+						<a href="#" class="relative flex items-center gap-4">
+							<span>Шкарпетки</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="scrollbar-custom hidden max-h-full w-80 overflow-y-auto overflow-x-hidden px-2.5 py-7.5 xl:w-[27.125rem] xl:px-[3.125rem]" data-category-level-3="112">
+				<p class="text-lg font-semibold">Item with submenu</p>
+				<ul class="mt-6 flex flex-col gap-4 text-sm">
+					<li class="category__submenu2-item rounded-lg py-1.5">
+						<a href="#" class="relative flex items-center gap-4">
+							<span>Item 1</span>
+						</a>
+					</li>
+					<li class="category__submenu2-item rounded-lg py-1.5">
+						<a href="#" class="relative flex items-center gap-4">
+							<span>Item 2</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- ./category dropdown-menu -->
+ 
+		<!-- sticky menu -->
+
+<div class="sticky inset-x-0 bottom-0 z-50 h-12.5 bg-white px-4 pb-1 pt-1.5 shadow-sticky md:px-5 lg:hidden" id="sticky">
+	<div class="flex items-center justify-between gap-x-3">
+		<a class="shrink-0" href="#home">
+			<div class="flex shrink-0 flex-col items-center gap-1">
+				<svg class="h-5 w-5 fill-shark">
+					<use xlink:href="img/svg/sprites/sprite-icons.svg#home"></use>
+				</svg>
+				<div class="text-xs text-shark">Головна</div>
+			</div>
+		</a>
+		<a class="shrink-0" href="#favorites">
+			<div class="flex shrink-0 flex-col items-center gap-1">
+				<svg class="h-5 w-5 fill-shark">
+					<use xlink:href="img/svg/sprites/sprite-icons.svg#heart"></use>
+				</svg>
+				<div class="text-xs text-shark">Вибране</div>
+			</div>
+		</a>
+		<a class="shrink-0" href="#create">
+			<div class="flex shrink-0 flex-col items-center gap-1">
+				<svg class="h-5 w-5 fill-transparent stroke-shark">
+					<use xlink:href="img/svg/sprites/sprite-icons.svg#circle-plus"></use>
+				</svg>
+				<div class="text-xs text-shark">Подати</div>
+			</div>
+		</a>
+		<a class="shrink-0" href="#chat">
+			<div class="flex shrink-0 flex-col items-center gap-1">
+				<svg class="h-5 w-5 fill-shark">
+					<use xlink:href="img/svg/sprites/sprite-icons.svg#envelope"></use>
+				</svg>
+
+				<div class="text-xs text-shark">Чат</div>
+			</div>
+		</a>
+		<a class="shrink-0 account-btn" href="#">
+			<div class="flex shrink-0 flex-col items-center gap-1">
+				<svg class="h-5 w-5 fill-shark">
+					<use xlink:href="img/svg/sprites/sprite-icons.svg#user01"></use>
+				</svg>
+				<div class="text-xs text-shark">Кабінет</div>
+			</div>
+		</a>
+	</div>
+</div>
+
+<!-- ./sticky menu -->
+ 
+		<!-- footer -->
+<footer class="bg-tundora py-6 text-white lg:py-12.5">
+	<div class="container">
+		<div class="relative">
+			<div class="flex flex-col md:flex-row">
+				<div class="flex items-center justify-between pb-5 md:mr-12 md:items-start md:pb-20 lg:mr-48">
+					<a href="#" class="link-primary drop-shadow-text font-semibold hover:text-white md:text-3xl">VamBeri</a>
+					<button class="scroll-up flex h-9 w-9 items-center justify-center rounded-full border border-lavender-purple md:hidden" aria-label="Go up">
+						<svg class="h-4 w-4 fill-white transition ease-in">
+							<use xlink:href="img/svg/sprites/sprite-icons.svg#chevron-up"></use>
+						</svg>
+					</button>
+				</div>
+
+				<div class="flex w-full flex-col justify-between gap-4 md:flex-row lg:w-auto lg:gap-20">
+					<!-- для відкриття в мобільному  -->
+					<!-- при кліку на заголовок h3 -->
+					<!-- на button вішаємо клас rotate-180 -->
+					<!-- на список із меню ul прибираємо клас hidden -->
+					<div>
+						<div class="flex items-center gap-2">
+							<h3 class="text-sm font-semibold md:text-xl">Покупцям</h3>
+							<button class="footer-btn-menu transition ease-in md:hidden" aria-label="показати більше">
+								<svg class="h-2.5 w-2.5 fill-white">
+									<use xlink:href="img/svg/sprites/sprite-icons.svg#chevron-down"></use>
+								</svg>
+							</button>
+						</div>
+						<ul class="mt-2.5 hidden text-xs md:mt-7.5 md:block md:max-w-[14.5rem] md:text-base">
+							<li class="mb-1.5 md:mb-4">
+								<a href="#" class="link-white">Як зробити заказ</a>
+							</li>
+							<li class="mb-1.5 md:mb-4">
+								<a href="#" class="link-white">Способи оплати</a>
+							</li>
+							<li class="mb-1.5 md:mb-4">
+								<a href="#" class="link-white">Доставка</a>
+							</li>
+							<li class="mb-1.5 md:mb-4">
+								<a href="#" class="link-white">Повернення товару</a>
+							</li>
+							<li class="mb-1.5 md:mb-4">
+								<a href="#" class="link-white">Повернення коштів</a>
+							</li>
+							<li class="mb-1.5 md:mb-4">
+								<a href="#" class="link-white">Правила продажу</a>
+							</li>
+							<li class="mb-1.5 md:mb-4">
+								<a href="#" class="link-white">Правила користування торговим майданчиком</a>
+							</li>
+							<li class="mb-0">
+								<a href="#" class="link-white">Запитання та відповідіз</a>
+							</li>
+						</ul>
+					</div>
+
+					<div>
+						<div class="flex items-center gap-2">
+							<h3 class="text-sm font-semibold md:text-xl">Партненрам</h3>
+							<button class="footer-btn-menu transition ease-in md:hidden" aria-label="показати більше">
+								<svg class="h-2.5 w-2.5 fill-white">
+									<use xlink:href="img/svg/sprites/sprite-icons.svg#chevron-down"></use>
+								</svg>
+							</button>
+						</div>
+						<ul class="mt-2.5 hidden text-xs md:mt-7.5 md:block md:text-base">
+							<li class="mb-1.5 md:mb-4">
+								<a href="#" class="link-white">Продавайте на Vamberi</a>
+							</li>
+							<li class="mb-1.5 md:mb-4">
+								<a href="#" class="link-white">Кур'єрам</a>
+							</li>
+							<li class="mb-1.5 md:mb-4">
+								<a href="#" class="link-white">Перевізникам</a>
+							</li>
+							<li class="mb-1.5 md:mb-4">
+								<a href="#" class="link-white">Партнерський пункт видачі</a>
+							</li>
+							<li class="mb-0">
+								<a href="#" class="link-white">Франшизний пункт видачі</a>
+							</li>
+						</ul>
+					</div>
+					<div>
+						<div class="flex items-center gap-2">
+							<h3 class="text-base font-semibold md:text-xl">Компанія</h3>
+							<button class="footer-btn-menu transition ease-in md:hidden" aria-label="показати більше">
+								<svg class="h-2.5 w-2.5 fill-white">
+									<use xlink:href="img/svg/sprites/sprite-icons.svg#chevron-down"></use>
+								</svg>
+							</button>
+						</div>
+						<ul class="mt-2.5 hidden text-xs md:mt-7.5 md:block md:text-base">
+							<li class="mb-1.5 md:mb-4">
+								<a href="#" class="link-white">Про нас</a>
+							</li>
+							<li class="mb-1.5 md:mb-4">
+								<a href="#" class="link-white">Реквізити</a>
+							</li>
+							<li class="mb-1.5 md:mb-4">
+								<a href="#" class="link-white">Прес-центр</a>
+							</li>
+							<li class="mb-0">
+								<a href="#" class="link-white">Контакти</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="static bottom-0 left-0 mt-6 flex flex-col gap-4 pb-10 md:pb-0 lg:absolute">
+				<div class="flex items-center gap-3.5">
+					<a href="#" class="">
+						<img class="h-6 w-6" src="img/svg/socials/instagram.svg" alt="instagram" />
+					</a>
+					<a href="#" class="">
+						<img class="h-6 w-6" src="img/svg/socials/facebook.svg" alt="fb" jbzhyrlos="" />
+					</a>
+					<a href="#" class="">
+						<img class="h-6 w-6" src="img/svg/socials/youtube.svg" alt="youtube" />
+					</a>
+					<a href="#" class="">
+						<img class="h-6 w-6" src="img/svg/socials/telegram.svg" alt="telegram" />
+					</a>
+					<a href="#" class="">
+						<img class="h-6 w-6" src="img/svg/socials/twitter.svg" alt="twitter" jbzhyrlos="" />
+					</a>
+					<a href="#" class="">
+						<img class="h-6 w-6" src="img/svg/socials/viber.svg" alt="viber" />
+					</a>
+				</div>
+				<a class="text-sm lg:text-base" href="amberi.sms@gmail.com"> vamberi.sms@gmail.com </a>
+			</div>
+			<!-- copyrights -->
+			<div class="absolute bottom-0 right-0 z-10 hidden h-full flex-col items-end justify-end md:flex xl:items-center">
+				<button class="scroll-up group flex h-9 w-9 items-center justify-center rounded-full border border-lavender-purple transition ease-in hover:border-white lg:h-15 lg:w-15" aria-label="Go up">
+					<svg class="h-4 w-4 fill-white transition ease-in group-hover:fill-lavender-purple lg:h-6 lg:w-6">
+						<use xlink:href="img/svg/sprites/sprite-icons.svg#chevron-up"></use>
+					</svg>
+				</button>
+				<p class="mt-auto font-inter text-xs md:mt-9 lg:text-base">© 2022 Доска объявлений vamberi.com.ua</p>
+			</div>
+			<p class="text-center font-inter text-xs md:hidden">© 2022 Доска объявлений vamberi.com.ua</p>
+			<!-- ./copyrights -->
+		</div>
+	</div>
+</footer>
+<!-- ./footer -->
+
+<!--  -->
+<div class="hidden rotate-x-180"></div>
+<!--  -->
+ 
+		<!-- <div class="relative z-[9999]" aria-labelledby="modal-app-sending-success" role="dialog" aria-modal="true" style="display:none;" id="add-discount">
+	<div class="fixed inset-0 bg-shark/60 bg-opacity-75 transition-opacity"></div>
+
+	<div class="fixed inset-0 z-10 overflow-y-auto">
+		<div class="flex min-h-full items-center justify-center p-4">
+			
+		</div>
+	</div>
+</div> -->
+
+<div style="display: none" id="modal-add-discount">
+	<div class="relative flex w-full flex-col overflow-hidden rounded-lge bg-white px-5 py-7.5 transition-all transform sm:w-[44.375rem] sm:px-7.5">
+		<button class="modal-close absolute right-4 top-4 z-10 ml-auto flex h-5 w-5 items-center justify-center p-0 md:right-5 md:top-5" aria-label="Закрити модальне вікно">
+			<svg class="h-4 w-4 fill-tundora md:h-5 md:w-5">
+				<use xlink:href="img/svg/sprites/sprite-icons.svg#close"></use>
+			</svg>
+		</button>
+		<div class="text-shark">
+			<div class="mx-auto max-w-[13.75rem] text-center text-base font-semibold sm:max-w-[29.375rem] sm:text-lg">Додавання знижки для LED насадка на кран TVOOO172 400</div>
+			<div class="mt-5 flex flex-col gap-5 sm:mt-5.5 sm:flex-row sm:gap-0">
+				<div class="w-full sm:w-1/2">
+					<div class="text-sm font-medium sm:text-base">Знижка</div>
+					<div class="mt-2 flex gap-5 sm:mt-3.5">
+						<div>
+							<select class="h-8.5 w-20 rounded-lge border border-lavender-purple/50 bg-white px-2.5 py-2 ring-0 ease-in focus:border-lavender-purple focus:ring-0 sm:text-sm">
+								<option selected="">10</option>
+								<option value="">50</option>
+								<option value="">100</option>
+							</select>
+						</div>
+						<div class="flex h-8.5 w-15 items-center rounded-lge border border-lavender-purple/50 bg-white px-2.5 py-2 text-sm">%</div>
+					</div>
+					<div class="mt-3 text-sm sm:mt-5.5">Ціна: 1500 грн.</div>
+					<div class="mt-2.5 text-sm">Ціна зі знижкою: 1350 грн.</div>
+				</div>
+				<div class="w-full sm:w-1/2">
+					<div class="text-sm font-medium sm:text-base">Термін дії</div>
+					<div class="mt-2 flex items-center gap-4 sm:mt-3.5">
+						<div>
+							<input type="text" class="ring:0 w-full rounded-lge border border-lavender-purple/50 py-2.5 pl-2.5 pr-8 text-sm transition ease-in focus:border-lavender-purple focus:ring-0" placeholder="дд.мм.ггггг" value="04.07.2023" />
+						</div>
+						<div class="h-[1px] w-3.5 bg-lavender-purple"></div>
+						<div>
+							<input type="text" class="ring:0 w-full rounded-lge border border-lavender-purple/50 py-2.5 pl-2.5 pr-8 text-sm transition ease-in focus:border-lavender-purple focus:ring-0" placeholder="дд.мм.ггггг" value="04.07.2023" />
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="mt-6 flex flex-col-reverse items-center gap-4 sm:mt-7.5 sm:flex-row sm:gap-0">
+				<div class="sm:w-1/3">
+					<button class="whitespace-nowrap text-sm text-tall-poppy underline decoration-tall-poppy decoration-dashed decoration-[0.25px] underline-offset-4 lg:text-base lg:decoration-[0.5px]">Видалити знижку</button>
+				</div>
+				<div class="flex w-full flex-col-reverse gap-4 lw:flex-row lw:gap-5 sm:w-2/3">
+					<button class="btn-danger-light h-11 w-full px-6.5 text-sm lg:h-9">Скасувати</button>
+					<button class="btn-primary flex h-11 w-full items-center justify-center px-3 text-sm font-normal lg:h-9">Зберегти</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+		<div id="modal-basket" style="display: none">
+	<div class="relative flex w-full flex-col overflow-hidden rounded-lge bg-white px-2.5 py-7.5 transition-all transform sm:w-[1060px] lg:p-7.5">
+		<button class="modal-close absolute right-4 top-4 z-10 ml-auto flex h-5 w-5 items-center justify-center p-0 md:right-5 md:top-5" aria-label="Закрити модальне вікно">
+			<svg class="h-4 w-4 fill-tundora md:h-5 md:w-5">
+				<use xlink:href="img/svg/sprites/sprite-icons.svg#close"></use>
+			</svg>
+		</button>
+		<div>
+			<h2 class="text-center text-base font-medium md:text-xl">Кошик товарів</h2>
+			<div class="mt-6 rounded-lge border border-dusty-gray p-2.5 md:mt-7.5 md:p-3">
+				<div class="relative">
+					<div class="flex flex-col items-start justify-between gap-2.5 md:flex-row">
+						<div class="flex gap-2.5 sm:gap-4">
+							<div class="h-[5.9375rem] w-[7.5rem] flex-shrink-0 overflow-hidden rounded-xle md:h-[6.75rem] md:w-[9.375rem]">
+								<img class="h-full w-full object-cover" src="img/product-card/product001-001.jpg" alt="Lenovo ideapad 330-15ikb" />
+							</div>
+							<div class="max-w-[21.25rem] font-medium">
+								<h3 class="line-clamp-2 text-ellipsis text-xs text-shark md:text-lg">Lenovo ideapad 330-15ikb</h3>
+								<div>
+									<p class="mt-2 text-xs md:text-base">Продавець: <span class="text-royal-blue">Макс</span></p>
+								</div>
+								<div class="mt-4 flex items-center gap-1 sm:gap-1.5 lg:hidden">
+									<svg class="h-4 w-4 flex-shrink-0 md:h-5 md:w-5">
+										<use xlink:href="img/svg/sprites/sprite-icons.svg#wallet2"></use>
+									</svg>
+									<p class="text-xs md:text-base">Оплата онлайн</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="flex w-full justify-between gap-1 sm:gap-4 md:w-auto md:flex-col md:items-end lg:w-full lg:max-w-[27.125rem] lg:flex-row lg:items-center">
+							<div class="flex flex-shrink-0 items-center gap-1.5 sm:gap-3.5">
+								<button class="flex h-8 w-8 items-center justify-center rounded-emd border border-dusty-gray text-xl text-shark transition ease-in hover:bg-lavender-purple hover:text-white">-</button>
+								<input type="text" value="1" class="block w-[1.375rem] border-0 p-0 text-center text-lg" readonly />
+								<button class="flex h-8 w-8 items-center justify-center rounded-emd border border-dusty-gray text-xl text-shark transition ease-in hover:bg-lavender-purple hover:text-white">+</button>
+							</div>
+
+							<div class="flex flex-grow flex-col sm:block md:flex-shrink-0">
+								<div class="flex flex-shrink-0 flex-wrap items-center justify-end gap-1 whitespace-nowrap text-right text-xs md:gap-2 md:text-lg"><span class="justify-self-end">Роздріб:</span> <span class="justify-self-end text-sm font-semibold md:text-lg">2, 299, 999 грн.</span></div>
+								<div class="decoration mt-1.5 text-right text-ms text-dusty-gray line-through md:text-xs">8,300 грн.</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="bottom-0 mt-5 flex w-full flex-col flex-wrap items-center justify-between gap-5 text-xs sm:flex-row sm:gap-20 sm:text-base md:gap-32 lg:absolute lg:gap-11 lg:pl-[10.3125rem]">
+						<div class="hidden items-center gap-1.5 lg:flex">
+							<svg class="h-5 w-5">
+								<use xlink:href="img/svg/sprites/sprite-icons.svg#wallet2"></use>
+							</svg>
+							<p>Оплата онлайн</p>
+						</div>
+						<div class="flex w-full flex-grow justify-between sm:w-auto">
+							<div>Код товару: <span class="font-semibold">119954759</span></div>
+							<div>ID: <span class="font-semibold">45475541 </span></div>
+						</div>
+						<div class="flex w-full flex-grow justify-between sm:w-auto">
+							<div>Всього: <span class="font-bold">8000 грн</span></div>
+							<div class="flex gap-4">
+								<button class="group" aria-label="Додати до улюблених">
+									<svg class="h-5 w-5 transition ease-linear group-hover:fill-lavender-purple">
+										<use xlink:href="img/svg/sprites/sprite-icons.svg#heart2"></use>
+									</svg>
+								</button>
+								<button class="group" aria-label="Видалити з кошика">
+									<svg class="h-5 w-5 transition ease-linear group-hover:fill-pomegranate">
+										<use xlink:href="img/svg/sprites/sprite-icons.svg#bin"></use>
+									</svg>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="mt-[2.1875rem] flex flex-col items-center justify-center gap-5 lg:flex-row lg:gap-6">
+				<div class="flex">
+					<a href="#" class="btn-primary-light flex h-11 min-w-[15rem] items-center justify-center">Продовжити покупки</a>
+				</div>
+				<div class="flex">
+					<a href="#" class="btn-primary-light flex h-11 min-w-[15rem] items-center justify-center">Перейти у кошик</a>
+				</div>
+				<div class="flex">
+					<a href="#" class="btn-primary-light flex h-11 min-w-[15rem] items-center justify-center">Купити зараз</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+		<div id="modal-product-delete" style="display: none">
+	<div class="relative flex w-full flex-col overflow-hidden rounded-2lge bg-white px-4 py-7.5 transition-all transform sm:w-[752px] sm:px-7.5 sm:py-5">
+		<button class="modal-close absolute right-4 top-4 z-10 ml-auto flex h-5 w-5 items-center justify-center p-0 md:right-5 md:top-5" aria-label="Закрити модальне вікно">
+			<svg class="h-4 w-4 fill-tundora md:h-5 md:w-5">
+				<use xlink:href="img/svg/sprites/sprite-icons.svg#close"></use>
+			</svg>
+		</button>
+		<div>
+			<h2 class="text-center text-sm font-medium md:text-lg">Вкажіть причину видалення товару</h2>
+
+			<label class="mt-7 flex cursor-pointer items-center gap-3.5 sm:gap-5">
+				<div class="relative h-6 w-6 flex-shrink-0 rounded-full border border-dusty-gray bg-wild-sand">
+					<input type="radio" name="reason" class="peer hidden" checked />
+					<div class="absolute left-1/2 top-1/2 h-4.5 w-4.5 rounded-full border border-white bg-lavender-purple opacity-0 shadow-radio-modal transition ease-in -translate-x-1/2 -translate-y-1/2 peer-checked:opacity-100"></div>
+				</div>
+				<div class="text-xs text-tundora sm:text-sm">Товара немає в наявності</div>
+			</label>
+			<label class="mt-3 flex cursor-pointer items-center gap-3.5 sm:gap-5">
+				<div class="relative h-6 w-6 flex-shrink-0 rounded-full border border-dusty-gray bg-wild-sand">
+					<input type="radio" name="reason" class="peer hidden" />
+					<div class="absolute left-1/2 top-1/2 h-4.5 w-4.5 rounded-full border border-white bg-lavender-purple opacity-0 shadow-radio-modal transition ease-in -translate-x-1/2 -translate-y-1/2 peer-checked:opacity-100"></div>
+				</div>
+				<div class="text-xs text-tundora sm:text-sm">Покупець змінив рішення</div>
+			</label>
+			<div class="mt-4 text-xs font-medium text-tall-poppy sm:text-base">Тут ви можете вказати причину скасування замовлення</div>
+			<div class="mt-5 h-[157px] w-full rounded-lge border border-lavender-purple px-5 py-3.5">
+				<div class="flex h-full w-full">
+					<div class="flex w-full gap-4 fill-lavender-purple sm:mt-auto sm:items-center">
+						<div class="flex h-full items-end">
+							<label class="cursor-pointer">
+								<input type="file" name="" id="" hidden>
+								<svg class="h-4 w-4 flex-shrink-0 fill-lavender-purple sm:h-8 sm:w-8">
+									<use xlink:href="img/svg/sprites/sprite-icons.svg#message"></use>
+								</svg>
+							</label>
+						</div>
+
+						<div class="-ml-8 -mr-8 flex-grow pb-5 sm:m-0 sm:pb-0">
+							<input class="min-h-0 w-full border-0 p-0 align-bottom text-xs ring-0 placeholder:text-xs placeholder:text-dusty-gray focus:ring-0 sm:text-sm sm:placeholder:text-sm" placeholder="Ваше повідомлення..." />
+						</div>
+						<div class="z-10 flex h-full items-end sm:hidden">
+							<button>
+								<svg class="h-4 w-4 flex-shrink-0 fill-lavender-purple sm:h-6 sm:w-6">
+									<use xlink:href="img/svg/sprites/sprite-icons.svg#message-send"></use>
+								</svg>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="mt-4 flex justify-end">
+				<div class="w-full sm:w-auto">
+					<button class="btn-pink h-9 w-full min-w-[220px] text-sm sm:w-auto">Відправити</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+		<div id="modal-date-filter" style="display: none">
+	<div class="relative flex w-full flex-col overflow-hidden rounded-lge bg-white p-7.5 transition-all transform sm:w-[34.5rem] lg:p-5">
+		<button class="modal-close absolute right-4 top-4 z-10 ml-auto flex h-4 w-4 items-center justify-center p-0 md:right-5 md:top-5 lg:h-5 lg:w-5" aria-label="Закрити модальне вікно">
+			<svg class="h-4 w-4 fill-tundora md:h-5 md:w-5">
+				<use xlink:href="img/svg/sprites/sprite-icons.svg#close"></use>
+			</svg>
+		</button>
+		<div>
+			<div class="text-center text-base font-medium sm:text-2xl">Фільтрування за датою</div>
+
+			<div class="mx-auto mt-5 sm:w-[445px] lg:mt-11">
+				<div class="relative">
+					<input type="date" name="start-date" class="ring:0 w-full rounded-lge border border-lavender-purple/50 p-2.5 text-sm transition ease-in focus:border-lavender-purple focus:ring-0" placeholder="дд.мм.ггггг" />
+					<!-- <input type="date" name="start-date" class="ring:0 w-full rounded-lge border border-lavender-purple/50 py-2.5 pl-2.5 pr-8 text-sm transition ease-in focus:border-lavender-purple focus:ring-0" placeholder="дд.мм.ггггг" /> -->
+					<!-- <button class="absolute right-2.5 top-1/2 -translate-y-1/2">
+						<svg class="h-4 w-4 fill-shark">
+							<use xlink:href="img/svg/sprites/sprite-icons.svg#calendar"></use>
+						</svg>
+					</button> -->
+				</div>
+				<div class="relative mt-3 lg:mt-4">
+					<input type="date" name="end-date" class="ring:0 w-full rounded-lge border border-lavender-purple/50 p-2.5 text-sm transition ease-in focus:border-lavender-purple focus:ring-0" placeholder="дд.мм.ггггг" />
+					<!-- <input type="date" name="end-date" class="ring:0 w-full rounded-lge border border-lavender-purple/50 py-2.5 pl-2.5 pr-8 text-sm transition ease-in focus:border-lavender-purple focus:ring-0" placeholder="дд.мм.ггггг" /> -->
+					<!-- <button class="absolute right-2.5 top-1/2 -translate-y-1/2">
+						<svg class="h-4 w-4 fill-shark">
+							<use xlink:href="img/svg/sprites/sprite-icons.svg#calendar"></use>
+						</svg>
+					</button> -->
+				</div>
+			</div>
+			<div class="mt-6 flex w-full justify-center lw:mx-auto lw:w-[280px] lg:mt-8">
+				<button class="btn-primary flex h-[44px] w-full items-center justify-center text-base font-medium">Застосувати</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+		<div style="display: none" id="modal-compliant">
+	<div class="relative flex w-full flex-col overflow-hidden rounded-lge bg-white px-3.5 py-12.5 transition-all transform sm:w-[48.75rem] lg:px-5 lg:py-7.5">
+		<button class="modal-close absolute right-4 top-4 z-10 ml-auto flex h-5 w-5 items-center justify-center p-0 md:right-5 md:top-5" aria-label="Закрити модальне вікно">
+			<svg class="h-4 w-4 fill-tundora md:h-5 md:w-5">
+				<use xlink:href="img/svg/sprites/sprite-icons.svg#close"></use>
+			</svg>
+		</button>
+		<div class="flex flex-col gap-4 lg:gap-5">
+			<div>
+				<div class="text-base font-semibold leading-5 text-tundora">Повідомити про шахрайські дії:</div>
+
+				<div class="mt-2.5 flex flex-col gap-3 lg:ml-1 lg:mt-5 lg:gap-3.5">
+					<label class="flex cursor-pointer items-center gap-3.5 lg:gap-5">
+						<div class="lex-shrink-0 relative h-6 w-6 flex-shrink-0 rounded-full border border-dusty-gray/50 bg-wild-sand">
+							<input type="radio" name="radio1" class="peer hidden" checked />
+							<div class="absolute left-1/2 top-1/2 h-4.5 w-4.5 rounded-full border border-white bg-lavender-purple opacity-0 transition ease-in -translate-x-1/2 -translate-y-1/2 peer-checked:opacity-100"></div>
+						</div>
+						<div class="text-sm leading-5 text-tundora">Я стала(ла) жертвою шахрайських дій</div>
+					</label>
+					<label class="flex cursor-pointer items-center gap-3.5 lg:gap-5">
+						<div class="lex-shrink-0 relative h-6 w-6 flex-shrink-0 rounded-full border border-dusty-gray/50 bg-wild-sand">
+							<input type="radio" name="radio1" class="peer hidden" />
+							<div class="absolute left-1/2 top-1/2 h-4.5 w-4.5 rounded-full border border-white bg-lavender-purple opacity-0 transition ease-in -translate-x-1/2 -translate-y-1/2 peer-checked:opacity-100"></div>
+						</div>
+						<div class="text-sm leading-5 text-tundora">Я підозрюю про шахрайські дії</div>
+					</label>
+				</div>
+			</div>
+			<!--  -->
+			<div>
+				<div class="text-base font-semibold leading-5 text-tundora">Вказано недостовірну інформацію про товар:</div>
+
+				<div class="mt-2.5 flex flex-col gap-3 lg:ml-1 lg:mt-5 lg:gap-3.5">
+					<label class="flex cursor-pointer items-center gap-3.5 lg:gap-5">
+						<div class="lex-shrink-0 relative h-6 w-6 flex-shrink-0 rounded-full border border-dusty-gray/50 bg-wild-sand">
+							<input type="radio" name="radio2" class="peer hidden" checked />
+							<div class="absolute left-1/2 top-1/2 h-4.5 w-4.5 rounded-full border border-white bg-lavender-purple opacity-0 transition ease-in -translate-x-1/2 -translate-y-1/2 peer-checked:opacity-100"></div>
+						</div>
+						<div class="text-sm leading-5 text-tundora">Ціна не актуальна</div>
+					</label>
+					<label class="flex cursor-pointer items-center gap-3.5 lg:gap-5">
+						<div class="lex-shrink-0 relative h-6 w-6 flex-shrink-0 rounded-full border border-dusty-gray/50 bg-wild-sand">
+							<input type="radio" name="radio2" class="peer hidden" />
+							<div class="absolute left-1/2 top-1/2 h-4.5 w-4.5 rounded-full border border-white bg-lavender-purple opacity-0 transition ease-in -translate-x-1/2 -translate-y-1/2 peer-checked:opacity-100"></div>
+						</div>
+						<div class="text-sm leading-5 text-tundora">Опис та фото не відповідає товару</div>
+					</label>
+					<label class="flex cursor-pointer items-center gap-3.5 lg:gap-5">
+						<div class="lex-shrink-0 relative h-6 w-6 flex-shrink-0 rounded-full border border-dusty-gray/50 bg-wild-sand">
+							<input type="radio" name="radio2" class="peer hidden" />
+							<div class="absolute left-1/2 top-1/2 h-4.5 w-4.5 rounded-full border border-white bg-lavender-purple opacity-0 transition ease-in -translate-x-1/2 -translate-y-1/2 peer-checked:opacity-100"></div>
+						</div>
+						<div class="text-sm leading-5 text-tundora">Неправильно вказано категорію товару</div>
+					</label>
+					<label class="flex cursor-pointer items-center gap-3.5 lg:gap-5">
+						<div class="lex-shrink-0 relative h-6 w-6 flex-shrink-0 rounded-full border border-dusty-gray/50 bg-wild-sand">
+							<input type="radio" name="radio2" class="peer hidden" />
+							<div class="absolute left-1/2 top-1/2 h-4.5 w-4.5 rounded-full border border-white bg-lavender-purple opacity-0 transition ease-in -translate-x-1/2 -translate-y-1/2 peer-checked:opacity-100"></div>
+						</div>
+						<div class="text-sm leading-5 text-tundora">Товару немає в наявності, і не вказано, що товар на замовлення</div>
+					</label>
+				</div>
+			</div>
+			<!--  -->
+			<div>
+				<div class="text-base font-semibold leading-5 text-tundora">Продавець запитує мої дані:</div>
+
+				<div class="mt-2.5 flex flex-col gap-3 lg:ml-1 lg:mt-5 lg:gap-3.5">
+					<label class="flex cursor-pointer items-center gap-3.5 lg:gap-5">
+						<div class="lex-shrink-0 relative h-6 w-6 flex-shrink-0 rounded-full border border-dusty-gray/50 bg-wild-sand">
+							<input type="radio" name="radio3" class="peer hidden" checked />
+							<div class="absolute left-1/2 top-1/2 h-4.5 w-4.5 rounded-full border border-white bg-lavender-purple opacity-0 transition ease-in -translate-x-1/2 -translate-y-1/2 peer-checked:opacity-100"></div>
+						</div>
+						<div class="text-sm leading-5 text-tundora">Контактні дані</div>
+					</label>
+					<label class="flex cursor-pointer items-center gap-3.5 lg:gap-5">
+						<div class="lex-shrink-0 relative h-6 w-6 flex-shrink-0 rounded-full border border-dusty-gray/50 bg-wild-sand">
+							<input type="radio" name="radio3" class="peer hidden" />
+							<div class="absolute left-1/2 top-1/2 h-4.5 w-4.5 rounded-full border border-white bg-lavender-purple opacity-0 transition ease-in -translate-x-1/2 -translate-y-1/2 peer-checked:opacity-100"></div>
+						</div>
+						<div class="text-sm leading-5 text-tundora">Дані банківської картки</div>
+					</label>
+				</div>
+			</div>
+			<!--  -->
+			<div>
+				<div class="text-base font-semibold leading-5 text-tundora">Продаж незаконного товару або оголошення зі шкідливим утриманням:</div>
+
+				<div class="mt-2.5 flex flex-col gap-3 lg:ml-1 lg:mt-5 lg:gap-3.5">
+					<label class="flex cursor-pointer items-center gap-3.5 lg:gap-5">
+						<div class="lex-shrink-0 relative h-6 w-6 flex-shrink-0 rounded-full border border-dusty-gray/50 bg-wild-sand">
+							<input type="radio" name="radio4" class="peer hidden" checked />
+							<div class="absolute left-1/2 top-1/2 h-4.5 w-4.5 rounded-full border border-white bg-lavender-purple opacity-0 transition ease-in -translate-x-1/2 -translate-y-1/2 peer-checked:opacity-100"></div>
+						</div>
+						<div class="text-sm leading-5 text-tundora">Насильство, зміст сексуального характеру, дискримінація тощо.</div>
+					</label>
+					<label class="flex cursor-pointer items-center gap-3.5 lg:gap-5">
+						<div class="lex-shrink-0 relative h-6 w-6 flex-shrink-0 rounded-full border border-dusty-gray/50 bg-wild-sand">
+							<input type="radio" name="radio4" class="peer hidden" />
+							<div class="absolute left-1/2 top-1/2 h-4.5 w-4.5 rounded-full border border-white bg-lavender-purple opacity-0 transition ease-in -translate-x-1/2 -translate-y-1/2 peer-checked:opacity-100"></div>
+						</div>
+						<div class="text-sm leading-5 text-tundora">Продаж забороненого товару: зброя, наркотики, вид тварин, що зникає, підроблені дизайнерські речі та інше.</div>
+					</label>
+				</div>
+			</div>
+
+			<div>
+				<div class="text-base font-medium">Коментар</div>
+				<div class="mt-3.5 lg:ml-6">
+					<textarea name="" class="h-36 w-full resize-none rounded-lge border-lavender-purple/50 placeholder:text-sm placeholder:text-dusty-gray focus:border-lavender-purple focus:ring-0 lg:h-40" placeholder="Розкажіть, будь ласка, докладніше про ситуацію, що склалася"></textarea>
+				</div>
+			</div>
+
+			<div class="flex justify-center lg:justify-end">
+				<button class="btn-pink h-11 min-w-[18.125rem] lg:min-w-[13.75rem]">Відправити</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+		<div style="display:none" id="modal-rules-buyer">
+	<div class="relative flex w-full flex-col overflow-hidden rounded-lge bg-white px-4 py-10 transition-all transform sm:w-[61.25rem] lg:p-7.5">
+		<button class="modal-close absolute right-4 top-4 z-10 ml-auto flex h-5 w-5 items-center justify-center p-0 md:right-5 md:top-5" aria-label="Закрити модальне вікно">
+			<svg class="h-4 w-4 fill-tundora md:h-5 md:w-5">
+				<use xlink:href="img/svg/sprites/sprite-icons.svg#close"></use>
+			</svg>
+		</button>
+
+		<div class="text-center text-base font-medium leading-5 lg:text-lg lg:leading-7">Ознайомтеся з правилами безпеки листування на сайті Вамбері:</div>
+		<div class="mt-6 flex flex-col gap-4 text-shark lg:gap-5">
+			<!--  -->
+			<div class="faq-item rounded-lge border border-lavender-purple p-3.5">
+				<button class="faq-btn flex w-full items-center justify-between gap-4 lg:gap-16">
+					<span class="text-left text-sm font-medium leading-5 lg:text-base lg:leading-6">1) Не повідомляйте свої контактні та особисті дані продавцю у листуванні, вся необхідна інформація вже вказується при оформленні замовлення.</span>
+
+					<svg class="h-2.5 w-5 flex-shrink-0 fill-shark transition ease-in">
+						<use xlink:href="img/svg/sprites/sprite-icons.svg#chevron-down"></use>
+					</svg>
+				</button>
+				<div class="faq-content mt-5 hidden text-sm leading-5 lg:pr-16">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis obcaecati voluptatum dolorem modi. Distinctio, voluptatem ex tenetur maiores perspiciatis ab.</div>
+			</div>
+			<!--  -->
+			<div class="faq-item rounded-lge border border-lavender-purple p-3.5">
+				<button class="faq-btn flex w-full items-center justify-between gap-4 lg:gap-16">
+					<span class="text-left text-sm font-medium leading-5 lg:text-base lg:leading-6">2) Не переходьте до спілкування на інших сайтах чи інших месенджерах. Важливо не використовувати сторонні месенджери для спілкування з продавцем, оскільки такі прохання надходять лише від шахраїв.</span>
+
+					<svg class="h-2.5 w-5 flex-shrink-0 fill-shark transition ease-in">
+						<use xlink:href="img/svg/sprites/sprite-icons.svg#chevron-down"></use>
+					</svg>
+				</button>
+				<div class="faq-content mt-5 hidden text-sm leading-5 lg:pr-16">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis obcaecati voluptatum dolorem modi. Distinctio, voluptatem ex tenetur maiores perspiciatis ab.</div>
+			</div>
+			<!--  -->
+			<div class="faq-item rounded-lge border border-lavender-purple p-3.5">
+				<button class="faq-btn flex w-full items-center justify-between gap-4 lg:gap-16">
+					<span class="text-left text-sm font-medium leading-5 lg:text-base lg:leading-6">3) Не переходьте за посиланнями, які надіслали Вам у чаті, - це заборонено робити, оскільки вся необхідна інформація вже є на сайті Вамбері.</span>
+
+					<svg class="h-2.5 w-5 flex-shrink-0 fill-shark transition ease-in">
+						<use xlink:href="img/svg/sprites/sprite-icons.svg#chevron-down"></use>
+					</svg>
+				</button>
+				<div class="faq-content mt-5 hidden text-sm leading-5 lg:pr-16">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis obcaecati voluptatum dolorem modi. Distinctio, voluptatem ex tenetur maiores perspiciatis ab.</div>
+			</div>
+			<!--  -->
+			<div class="faq-item rounded-lge border border-lavender-purple p-3.5">
+				<button class="faq-btn flex w-full items-center justify-between gap-4 lg:gap-16">
+					<span class="text-left text-sm font-medium leading-5 lg:text-base lg:leading-6">4) Не передавайте свої особисті дані, такі як пароль або PIN-код. Співробітники Vamberi ніколи не попросять пароль, ПІН-код або номер CVV.</span>
+
+					<svg class="h-2.5 w-5 flex-shrink-0 fill-shark transition ease-in">
+						<use xlink:href="img/svg/sprites/sprite-icons.svg#chevron-down"></use>
+					</svg>
+				</button>
+				<div class="faq-content mt-5 hidden text-sm leading-5 lg:pr-16">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis obcaecati voluptatum dolorem modi. Distinctio, voluptatem ex tenetur maiores perspiciatis ab.</div>
+			</div>
+			<!--  -->
+			<div class="faq-item rounded-lge border border-lavender-purple p-3.5">
+				<button class="faq-btn flex w-full items-center justify-between gap-4 lg:gap-16">
+					<span class="text-left text-sm font-medium leading-5 lg:text-base lg:leading-6">5) Запити даних картки для «повернення» грошей. Ніколи і нікому не надсилати дані своєї банківської картки чи її фото.</span>
+
+					<svg class="h-2.5 w-5 flex-shrink-0 fill-shark">
+						<use xlink:href="img/svg/sprites/sprite-icons.svg#chevron-down"></use>
+					</svg>
+				</button>
+				<div class="faq-content mt-5 hidden text-sm leading-5 lg:pr-16">Якщо раптом продавець з якоїсь причини просить про це, натисніть кнопку “повідомити про шахрайські дії”. Скасування доставки товару - лише привід для того, щоб вступити в контакт з покупцем і дізнатися дані банківської картки. Багато хто звикли до того, що вони потрібні для повернення грошей. Однак на Вамбері повернення коштів завжди відбувається в платіжній системі — і в тих випадках, коли покупець відмовляється від товару шляхом натискання кнопки «скасувати замовлення» в особистому кабінеті, і в тих, коли доставку скасовує продавець. Ці карти для цього передавати не потрібно — вони вже безпечно збережені в платіжній системі.</div>
+			</div>
+			<!--  -->
+
+			<div>
+				<label class="flex cursor-pointer items-center gap-4">
+					<div class="relative flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-md border border-shark/50">
+						<input type="checkbox" name="" class="peer hidden" />
+
+						<svg class="h-4 w-4 fill-limeade opacity-0 transition ease-in peer-checked:opacity-100">
+							<use xlink:href="img/svg/sprites/sprite-icons.svg#checker"></use>
+						</svg>
+					</div>
+					<div class="text-sm font-light leading-5 text-tundora lg:font-normal">Поставивши галочку і натиснувши продовжити, Ви приймаєте правила листування в чаті VamBeri</div>
+				</label>
+				<div class="mt-4.5 flex items-center gap-4">
+					<svg class="h-6.5 w-6.5 flex-shrink-0 fill-tall-poppy">
+						<use xlink:href="img/svg/sprites/sprite-icons.svg#warning"></use>
+					</svg>
+					<div class="text-sm font-light leading-5 text-tundora lg:font-normal">При недотриманні правил листування модератор сайту VamBeri має право заблокувати користувача, а також не несе відповідальності за можливі неправомірні дії з боку шахраїв.</div>
+				</div>
+			</div>
+
+			<div class="mt-5 flex justify-center lg:justify-end">
+				<div class="flex flex-col-reverse items-center gap-3.5 lg:flex-col">
+					<label class="flex cursor-pointer items-center gap-4">
+						<div class="relative flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-md border border-shark/50">
+							<input type="checkbox" name="" class="peer hidden" />
+
+							<svg class="h-4 w-4 fill-limeade opacity-0 transition ease-in peer-checked:opacity-100">
+								<use xlink:href="img/svg/sprites/sprite-icons.svg#checker"></use>
+							</svg>
+						</div>
+						<div class="text-sm text-tundora">нагадати пізніше</div>
+					</label>
+					<button class="btn-pink h-11 min-w-[18.125rem] lg:min-w-[13.75rem]">Продовжити</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+		<div style="display: none" id="modal-rules-seller">
+	<div class="relative flex w-full flex-col overflow-hidden rounded-lge bg-white px-4 py-10 transition-all transform sm:w-[61.25rem] lg:p-7.5">
+		<button class="modal-close absolute right-4 top-4 z-10 ml-auto flex h-5 w-5 items-center justify-center p-0 md:right-5 md:top-5" aria-label="Закрити модальне вікно">
+			<svg class="h-4 w-4 fill-tundora md:h-5 md:w-5">
+				<use xlink:href="img/svg/sprites/sprite-icons.svg#close"></use>
+			</svg>
+		</button>
+
+		<div class="text-center text-base font-medium leading-5 lg:text-lg lg:leading-7">Ознайомтеся з правилами безпеки листування на сайті Вамбері:</div>
+		<div class="mt-6 flex flex-col gap-4 text-shark lg:gap-5">
+			<!--  -->
+			<div class="faq-item rounded-lge border border-lavender-purple p-3.5">
+				<button class="faq-btn flex w-full items-center justify-between gap-4 lg:gap-16">
+					<span class="text-left text-sm font-medium leading-5 lg:text-base lg:leading-6">1) Не повідомляйте свої та не запитуйте контактні та особисті дані покупця у листуванні, вся необхідна інформація для відправки вже вказується при оформленні замовлення.</span>
+
+					<svg class="h-2.5 w-5 flex-shrink-0 fill-shark transition ease-in">
+						<use xlink:href="img/svg/sprites/sprite-icons.svg#chevron-down"></use>
+					</svg>
+				</button>
+				<div class="faq-content mt-5 hidden text-sm leading-5 lg:pr-16">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis obcaecati voluptatum dolorem modi. Distinctio, voluptatem ex tenetur maiores perspiciatis ab.</div>
+			</div>
+			<!--  -->
+			<div class="faq-item rounded-lge border border-lavender-purple p-3.5">
+				<button class="faq-btn flex w-full items-center justify-between gap-4 lg:gap-16">
+					<span class="text-left text-sm font-medium leading-5 lg:text-base lg:leading-6">2) Заборонено переходити до спілкування на інших сайтах чи інших месенджерах.</span>
+
+					<svg class="h-2.5 w-5 flex-shrink-0 fill-shark transition ease-in">
+						<use xlink:href="img/svg/sprites/sprite-icons.svg#chevron-down"></use>
+					</svg>
+				</button>
+				<div class="faq-content mt-5 hidden text-sm leading-5 lg:pr-16">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis obcaecati voluptatum dolorem modi. Distinctio, voluptatem ex tenetur maiores perspiciatis ab.</div>
+			</div>
+			<!--  -->
+			<div class="faq-item rounded-lge border border-lavender-purple p-3.5">
+				<button class="faq-btn flex w-full items-center justify-between gap-4 lg:gap-16">
+					<span class="text-left text-sm font-medium leading-5 lg:text-base lg:leading-6">3) Запрещено присылать любые ссылки. </span>
+
+					<svg class="h-2.5 w-5 flex-shrink-0 fill-shark transition ease-in">
+						<use xlink:href="img/svg/sprites/sprite-icons.svg#chevron-down"></use>
+					</svg>
+				</button>
+				<div class="faq-content mt-5 hidden text-sm leading-5 lg:pr-16">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis obcaecati voluptatum dolorem modi. Distinctio, voluptatem ex tenetur maiores perspiciatis ab.</div>
+			</div>
+			<!--  -->
+			<div class="faq-item rounded-lge border border-lavender-purple p-3.5">
+				<button class="faq-btn flex w-full items-center justify-between gap-4 lg:gap-16">
+					<span class="text-left text-sm font-medium leading-5 lg:text-base lg:leading-6">4) Не передавайте свои и не запрашивайте личные данные, такие как пароль или ПИН-код. Сотрудники Vamberi никогда не попросят у Вас пароль, ПИН-код или номер CVV. Получив все данные карты, злоумышленники могут завладеть хранящимися на ней деньгами.</span>
+
+					<svg class="h-2.5 w-5 flex-shrink-0 fill-shark transition ease-in">
+						<use xlink:href="img/svg/sprites/sprite-icons.svg#chevron-down"></use>
+					</svg>
+				</button>
+				<div class="faq-content mt-5 hidden text-sm leading-5 lg:pr-16">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis obcaecati voluptatum dolorem modi. Distinctio, voluptatem ex tenetur maiores perspiciatis ab.</div>
+			</div>
+			<!--  -->
+			<div class="faq-item rounded-lge border border-lavender-purple p-3.5">
+				<button class="faq-btn flex w-full items-center justify-between gap-4 lg:gap-16">
+					<span class="text-left text-sm font-medium leading-5 lg:text-base lg:leading-6">5) Запити даних картки для «повернення» грошей. Ніколи і нікому не надсилати дані своєї банківської картки чи її фото. Якщо раптом покупець з якоїсь причини просить про це, натисніть на кнопку "повідомити про шахрайські дії". Багато хто звикли до того, що дані картки потрібні для повернення грошей. Однак на Вамбері повернення коштів завжди відбувається в платіжній системі — і в тих випадках, коли покупець відмовляється від товару шляхом натискання кнопки «скасувати замовлення» в особистому кабінеті, і в тих, коли доставку скасовує продавець. Ці карти для цього передавати не потрібно — вони вже безпечно збережені в платіжній системі.</span>
+
+					<svg class="h-2.5 w-5 flex-shrink-0 fill-shark transition ease-in">
+						<use xlink:href="img/svg/sprites/sprite-icons.svg#chevron-down"></use>
+					</svg>
+				</button>
+				<div class="mt-5 hidden text-sm leading-5 lg:pr-16">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, rerum!</div>
+			</div>
+			<!--  -->
+			<div class="faq-item rounded-lge border border-lavender-purple p-3.5">
+				<button class="faq-btn flex w-full items-center justify-between gap-4 lg:gap-16">
+					<span class="text-left text-sm font-medium leading-5 lg:text-base lg:leading-6">6) Не надсилати номер телефону і не дзвонити за надісланими номерами телефону в чаті, тому що вся інформація повинна бути надана в описі до товару, а на додаткові всі питання щодо товару можна відповісти в листуванні та уникнути спірних моментів з покупцем.</span>
+
+					<svg class="h-2.5 w-5 flex-shrink-0 fill-shark transition ease-in">
+						<use xlink:href="img/svg/sprites/sprite-icons.svg#chevron-down"></use>
+					</svg>
+				</button>
+				<div class="faq-content mt-5 hidden text-sm leading-5 lg:pr-16">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, rerum!</div>
+			</div>
+			<!--  -->
+
+			<div>
+				<label class="flex cursor-pointer items-center gap-4">
+					<div class="relative flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-md border border-shark/50">
+						<input type="checkbox" name="" class="peer hidden" />
+
+						<svg class="h-4 w-4 fill-limeade opacity-0 transition ease-in peer-checked:opacity-100">
+							<use xlink:href="img/svg/sprites/sprite-icons.svg#checker"></use>
+						</svg>
+					</div>
+					<div class="text-sm font-light leading-5 text-tundora lg:font-normal">Поставивши галочку і натиснувши продовжити, Ви приймаєте правила листування в чаті Вамбері. При недотриманні правил листування модератор сайту Вамбері має право заблокувати користувача, а також не несе відповідальності за можливі неправомірні дії з боку шахраїв.</div>
+				</label>
+				<div class="mt-4.5 flex items-center gap-4">
+					<svg class="h-6.5 w-6.5 flex-shrink-0 fill-tall-poppy">
+						<use xlink:href="img/svg/sprites/sprite-icons.svg#warning"></use>
+					</svg>
+					<div class="text-sm font-light leading-5 text-tundora lg:font-normal">Ці правила створені з метою убезпечити клієнтів сайту Vamberi від можливих шахрайських дій як з боку продавця, так і з боку покупця.</div>
+				</div>
+			</div>
+
+			<div class="mt-5 flex justify-center lg:justify-end">
+				<div class="flex flex-col-reverse items-center gap-3.5 lg:flex-col">
+					<label class="flex cursor-pointer items-center gap-4">
+						<div class="relative flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-md border border-shark/50">
+							<input type="checkbox" name="" class="peer hidden" />
+
+							<svg class="h-4 w-4 fill-limeade opacity-0 transition ease-in peer-checked:opacity-100">
+								<use xlink:href="img/svg/sprites/sprite-icons.svg#checker"></use>
+							</svg>
+						</div>
+						<div class="text-sm text-tundora">нагадати пізніше</div>
+					</label>
+					<button class="btn-pink h-11 min-w-[18.125rem] lg:min-w-[13.75rem]">Продовжити</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+		<div style="display:hidden;" id="modal-cancel-order-by-buyer">
+	<div class="relative flex w-full flex-col overflow-hidden rounded-lge bg-white px-4 py-10 transition-all transform sm:w-[47rem] lg:p-7.5">
+		<button class="modal-close absolute right-4 top-4 z-10 ml-auto flex h-5 w-5 items-center justify-center p-0 md:right-5 md:top-5" aria-label="Закрити модальне вікно">
+			<svg class="h-4 w-4 fill-tundora md:h-5 md:w-5">
+				<use xlink:href="img/svg/sprites/sprite-icons.svg#close"></use>
+			</svg>
+		</button>
+
+		<div class="text-center text-base font-medium leading-5 lg:text-lg lg:leading-7">Вкажіть причину скасування замовлення</div>
+		<div class="mt-6 flex flex-col gap-4 text-shark lg:gap-5">
+			<label class="flex cursor-pointer items-center gap-3.5 lg:gap-5">
+				<div class="lex-shrink-0 relative h-6 w-6 flex-shrink-0 rounded-full border border-dusty-gray/50 bg-wild-sand">
+					<input type="radio" name="radio3" class="peer hidden" checked />
+					<div class="absolute left-1/2 top-1/2 h-4.5 w-4.5 rounded-full border border-white bg-lavender-purple opacity-0 transition ease-in -translate-x-1/2 -translate-y-1/2 peer-checked:opacity-100"></div>
+				</div>
+				<div class="text-sm leading-5 text-tundora">Товару немає в наявності</div>
+			</label>
+			<label class="flex cursor-pointer items-center gap-3.5 lg:gap-5">
+				<div class="lex-shrink-0 relative h-6 w-6 flex-shrink-0 rounded-full border border-dusty-gray/50 bg-wild-sand">
+					<input type="radio" name="radio3" class="peer hidden" />
+					<div class="absolute left-1/2 top-1/2 h-4.5 w-4.5 rounded-full border border-white bg-lavender-purple opacity-0 transition ease-in -translate-x-1/2 -translate-y-1/2 peer-checked:opacity-100"></div>
+				</div>
+				<div class="text-sm leading-5 text-tundora">Передумав(ла) купувати</div>
+			</label>
+			<label class="flex cursor-pointer items-center gap-3.5 lg:gap-5">
+				<div class="lex-shrink-0 relative h-6 w-6 flex-shrink-0 rounded-full border border-dusty-gray/50 bg-wild-sand">
+					<input type="radio" name="radio3" class="peer hidden" />
+					<div class="absolute left-1/2 top-1/2 h-4.5 w-4.5 rounded-full border border-white bg-lavender-purple opacity-0 transition ease-in -translate-x-1/2 -translate-y-1/2 peer-checked:opacity-100"></div>
+				</div>
+				<div class="text-sm leading-5 text-tundora">Продавець не підтверджує угоду</div>
+			</label>
+			<label class="flex cursor-pointer items-center gap-3.5 lg:gap-5">
+				<div class="lex-shrink-0 relative h-6 w-6 flex-shrink-0 rounded-full border border-dusty-gray/50 bg-wild-sand">
+					<input type="radio" name="radio3" class="peer hidden" />
+					<div class="absolute left-1/2 top-1/2 h-4.5 w-4.5 rounded-full border border-white bg-lavender-purple opacity-0 transition ease-in -translate-x-1/2 -translate-y-1/2 peer-checked:opacity-100"></div>
+				</div>
+				<div class="text-sm leading-5 text-tundora">Знайшов(ла) дешевше</div>
+			</label>
+			<label class="flex cursor-pointer items-center gap-3.5 lg:gap-5">
+				<div class="lex-shrink-0 relative h-6 w-6 flex-shrink-0 rounded-full border border-dusty-gray/50 bg-wild-sand">
+					<input type="radio" name="radio3" class="peer hidden" />
+					<div class="absolute left-1/2 top-1/2 h-4.5 w-4.5 rounded-full border border-white bg-lavender-purple opacity-0 transition ease-in -translate-x-1/2 -translate-y-1/2 peer-checked:opacity-100"></div>
+				</div>
+				<div class="text-sm leading-5 text-tundora">Продавець не відповідає</div>
+			</label>
+			<div>
+				<div class="text-xs font-medium text-tall-poppy sm:text-base">Тут ви можете вказати причину скасування замовлення</div>
+
+				<textarea name="" class="relative mt-5 h-40 w-full resize-none rounded-lge border border-lavender-purple/50 px-5 py-3.5 ring-0 placeholder:absolute placeholder:bottom-3.5 placeholder:text-sm placeholder:text-dusty-gray focus:border-lavender-purple focus:ring-0" placeholder="Ваше повідомлення..."></textarea>
+			</div>
+		</div>
+		<div class="mt-3.5 flex justify-center lg:justify-end">
+			<button class="btn-pink h-11 min-w-[18.125rem] lg:min-w-[13.75rem]">Відправити</button>
+		</div>
+	</div>
+</div>
+
+		<div style="display:hidden;" id="modal-cancel-order-by-seller">
+	<div class="relative flex w-full transform flex-col overflow-hidden rounded-lge bg-white px-4 py-10 transition-all sm:w-[47rem] lg:p-7.5">
+		<button class="modal-close absolute right-4 top-4 z-10 ml-auto flex h-5 w-5 items-center justify-center p-0 md:right-5 md:top-5" aria-label="Закрити модальне вікно">
+			<svg class="h-4 w-4 fill-tundora md:h-5 md:w-5">
+				<use xlink:href="img/svg/sprites/sprite-icons.svg#close"></use>
+			</svg>
+		</button>
+
+		<div class="text-center text-base font-medium leading-5 lg:text-lg lg:leading-7">Вкажіть причину скасування замовлення</div>
+		<div class="mt-6 flex flex-col gap-4 text-shark lg:gap-5">
+			<label class="flex cursor-pointer items-center gap-3.5 lg:gap-5">
+				<div class="lex-shrink-0 relative h-6 w-6 flex-shrink-0 rounded-full border border-dusty-gray/50 bg-wild-sand">
+					<input type="radio" name="radio3" class="peer hidden" checked />
+					<div class="absolute left-1/2 top-1/2 h-4.5 w-4.5 -translate-x-1/2 -translate-y-1/2 rounded-full border border-white bg-lavender-purple opacity-0 transition ease-in peer-checked:opacity-100"></div>
+				</div>
+				<div class="text-sm leading-5 text-tundora">Немає в наявності, чекаю на постачання</div>
+			</label>
+			<label class="flex cursor-pointer items-center gap-3.5 lg:gap-5">
+				<div class="lex-shrink-0 relative h-6 w-6 flex-shrink-0 rounded-full border border-dusty-gray/50 bg-wild-sand">
+					<input type="radio" name="radio3" class="peer hidden" />
+					<div class="absolute left-1/2 top-1/2 h-4.5 w-4.5 -translate-x-1/2 -translate-y-1/2 rounded-full border border-white bg-lavender-purple opacity-0 transition ease-in peer-checked:opacity-100"></div>
+				</div>
+				<div class="text-sm leading-5 text-tundora">Закінчився товар, поставок не чекаю</div>
+			</label>
+			<label class="flex cursor-pointer items-center gap-3.5 lg:gap-5">
+				<div class="lex-shrink-0 relative h-6 w-6 flex-shrink-0 rounded-full border border-dusty-gray/50 bg-wild-sand">
+					<input type="radio" name="radio3" class="peer hidden" />
+					<div class="absolute left-1/2 top-1/2 h-4.5 w-4.5 -translate-x-1/2 -translate-y-1/2 rounded-full border border-white bg-lavender-purple opacity-0 transition ease-in peer-checked:opacity-100"></div>
+				</div>
+				<div class="text-sm leading-5 text-tundora">Покупець не виходить на зв’язок</div>
+			</label>
+			<label class="flex cursor-pointer items-center gap-3.5 lg:gap-5">
+				<div class="lex-shrink-0 relative h-6 w-6 flex-shrink-0 rounded-full border border-dusty-gray/50 bg-wild-sand">
+					<input type="radio" name="radio3" class="peer hidden" />
+					<div class="absolute left-1/2 top-1/2 h-4.5 w-4.5 -translate-x-1/2 -translate-y-1/2 rounded-full border border-white bg-lavender-purple opacity-0 transition ease-in peer-checked:opacity-100"></div>
+				</div>
+				<div class="text-sm leading-5 text-tundora">Покупець відмовився</div>
+			</label>
+			<div>
+				<div class="text-xs font-medium text-tall-poppy sm:text-base">Тут ви можете вказати причину скасування замовлення</div>
+
+				<textarea name="" class="placeholder:text-dusty-gray placeholder:absolute relative placeholder:text-sm placeholder:bottom-3.5 mt-5 h-40 w-full resize-none rounded-lge border border-lavender-purple/50 px-5 py-3.5 ring-0 focus:border-lavender-purple focus:ring-0 " placeholder="Ваше повідомлення..."></textarea>
+			</div>
+		</div>
+		<div class="flex justify-center lg:justify-end mt-3.5">
+			<button class="btn-pink h-11 min-w-[18.125rem] lg:min-w-[13.75rem]">Відправити</button>
+		</div>
+	</div>
+</div>
+
+		<script src="js/libs/jquery.min.js"></script>
+<script src="js/libs/jquery-ui.min.js"></script>
+<!-- <script src="js/libs/jquery.mask.min.js"></script> -->
+<!-- <script src="js/libs/select2.min.js"></script> -->
+<script src="js/libs/fancybox.min.js"></script>
+<script src="js/libs/swiper.min.js"></script>
+<!-- CDN scripts -->
+<!-- <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js" integrity="sha512-57oZ/vW8ANMjR/KQ6Be9v/+/h6bq9/l3f0Oc7vn6qMqyhvPd1cvKBRWWpzu0QoneImqr2SkmO4MSqU+RpHom3Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script> -->
+
+<script src="js/app.js"></script>
+
+	</body>
+</html>

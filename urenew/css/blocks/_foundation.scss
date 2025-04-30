@@ -1,0 +1,52 @@
+.foundation {
+	.title-2 {
+		margin: 150px 0 80px 0;
+		@include mediaTablet {
+			margin: 50px 0 20px 0;
+		}
+	}
+	.swiper-scrollbar-honorary {
+		height: 20px;
+		border-radius: 60px;
+		width: 80%;
+		margin: 20px auto 0 auto;
+		background: #f7f7f7;
+	}
+	.swiper-scrollbar-foundation {
+		height: 20px;
+		border-radius: 60px;
+		width: 80%;
+		margin: 20px auto 0 auto;
+		background: #f7f7f7;
+	}
+	.swiper-scrollbar-office {
+		height: 20px;
+		border-radius: 60px;
+		width: 80%;
+		margin: 20px auto 0 auto;
+		background: #f7f7f7;
+	}
+	.swiper-scrollbar-drag {
+		cursor: grab;
+		background-color: #fdfdfd;
+		box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+	}
+	h3 {
+		font-size: 28px;
+		font-weight: 700;
+		margin: 60px 0 60px 30px;
+		@include mediaMobile {
+			margin: 30px 0 30px 10px;
+		}
+	}
+	.foundation-slider {
+		.aboutus-ab-item .ab-item--des {
+			background-image: url("./../img/icons/aboutus_des2.svg");
+		}
+	}
+	.office-slider {
+		.aboutus-ab-item .ab-item--des {
+			background-image: url("./../img/icons/aboutus_des3.svg");
+		}
+	}
+}

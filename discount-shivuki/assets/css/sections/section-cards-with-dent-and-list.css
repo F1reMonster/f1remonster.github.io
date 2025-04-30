@@ -1,0 +1,158 @@
+.section-cards-with-dent-and-list, .section-cards-with-dent-and-list .card-with-dent-list .list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.section-cards-with-dent-and-list .card-with-dent-list canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.section-cards-with-dent-and-list .card-with-dent-list .img-wrap img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.section-cards-with-dent-and-list {
+  padding: 4.875em 0 4.375em;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 1fr;
+}
+@media screen and (max-width: 767px) {
+  .section-cards-with-dent-and-list {
+    padding: 1.875em 0 1.875em;
+  }
+}
+.section-cards-with-dent-and-list .cards-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2.125em;
+  margin: 1.75em -20px 0;
+}
+@media screen and (max-width: 767px) {
+  .section-cards-with-dent-and-list .cards-wrap {
+    margin-top: 0;
+    gap: 1em;
+  }
+}
+.section-cards-with-dent-and-list .card-with-dent-list {
+  flex-basis: 24.375em;
+}
+.section-cards-with-dent-and-list li.tab-content {
+  grid-column: 1;
+  grid-row: 1;
+  transition: opacity 0.5s;
+  display: none;
+  opacity: 0;
+  position: relative;
+  z-index: 1;
+}
+.section-cards-with-dent-and-list li.tab-content:focus-visible {
+  outline: 1px dashed #00a661;
+  outline-offset: 1px;
+}
+.section-cards-with-dent-and-list li.tab-content.active {
+  display: block;
+  z-index: 3;
+}
+.section-cards-with-dent-and-list li.tab-content.visible {
+  opacity: 1;
+}
+.section-cards-with-dent-and-list .remark {
+  font: 1.25em/1.4 "rubik-reg", sans-serif;
+  color: #000;
+  text-align: center;
+  margin-top: 0.6em;
+}
+@media screen and (max-width: 767px) {
+  .section-cards-with-dent-and-list .remark {
+    font-size: 1em;
+    line-height: 1.625;
+  }
+}
+.section-cards-with-dent-and-list .card-with-dent-list {
+  position: relative;
+  padding: 1.25em;
+  min-height: 18.125em;
+  text-align: center;
+  color: #000;
+}
+.section-cards-with-dent-and-list .card-with-dent-list .card-inner {
+  padding: 1.6875em 1.625em;
+}
+.section-cards-with-dent-and-list .card-with-dent-list .img-wrap {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  width: 100%;
+  clear: both;
+}
+.section-cards-with-dent-and-list .card-with-dent-list .img-wrap::after {
+  content: "";
+  float: left;
+  padding-bottom: 73.1543624161%;
+}
+.section-cards-with-dent-and-list .card-with-dent-list .img-wrap img {
+  display: block;
+}
+.section-cards-with-dent-and-list .card-with-dent-list .card-header {
+  font: 1.5em/1.3333333333 "rubik-medium", sans-serif;
+  margin: 1.1666666667em 0 1em;
+  position: relative;
+  z-index: 1;
+}
+.section-cards-with-dent-and-list .card-with-dent-list .list {
+  text-align: initial;
+  position: relative;
+  z-index: 1;
+  padding-right: 0.75em;
+  margin-bottom: 2.125em;
+}
+@media screen and (max-width: 767px) {
+  .section-cards-with-dent-and-list .card-with-dent-list .list {
+    margin-bottom: 4.25em;
+  }
+}
+.section-cards-with-dent-and-list .card-with-dent-list .list li {
+  font: 1.125em/1.7777777778 "rubik-reg", sans-serif;
+  position: relative;
+  padding-right: 1.4444444444em;
+}
+@media screen and (max-width: 767px) {
+  .section-cards-with-dent-and-list .card-with-dent-list .list li {
+    font-size: 1em;
+    line-height: 2;
+    padding-right: 1.625em;
+  }
+}
+.section-cards-with-dent-and-list .card-with-dent-list .list .icon {
+  position: absolute;
+  top: 0.4444444444em;
+  right: 0;
+}
+.section-cards-with-dent-and-list .card-with-dent-list .card-btn {
+  position: absolute;
+  top: calc(100% - 2em);
+  left: 50%;
+  transform: translateX(-50%);
+}
+@media screen and (max-width: 767px) {
+  .section-cards-with-dent-and-list .card-with-dent-list .card-btn {
+    top: calc(100% - 2.5em);
+    min-width: 11.375em;
+  }
+}
+.section-cards-with-dent-and-list .card-with-dent-list .back-img {
+  z-index: -1;
+  filter: blur(0.375em);
+}

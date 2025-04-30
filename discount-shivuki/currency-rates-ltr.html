@@ -1,0 +1,1265 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+	<title>Currency Rates</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<!-- general css styles -->
+
+	<link rel="stylesheet" href="./assets/css/jquery-ui.css" />
+	<link rel="stylesheet" href="./assets/css/swiper.css" />
+	<link rel="stylesheet" href="./assets/css/autoComplete.css" />
+
+	<link rel="stylesheet" href="./assets/css/perfect-scrollbar.css" />
+	<link rel="stylesheet" href="./assets/css/sections/scrollbar.css" />
+	<link rel="stylesheet" href="./assets/css/sections/base.css" />
+	<link rel="stylesheet" href="./assets/css/sections/breadcrumbs.css" />
+	<link rel="stylesheet" href="./assets/css/sections/header.css" />
+	<link rel="stylesheet" href="./assets/css/sections/intro-section.css" />
+	<link rel="stylesheet" href="./assets/css/sections/footer.css" />
+	<link rel="stylesheet" href="./assets/css/sections/currency-exchange.css" />
+	<link rel="stylesheet" href="./assets/css/sections/exchange-calculator.css" />
+	<link rel="stylesheet" href="./assets/css/sections/exchange-archive.css" />
+	<link rel="stylesheet" href="./assets/css/sections/exchange-services.css" />
+
+	<!-- currency-rates.html styles for this page -->
+	<link rel="stylesheet" href="./assets/css/sections/pages/currency-rates/intro-section-currency-rates.css" />
+	<link rel="stylesheet" href="./assets/css/sections/pages/currency-rates/anchor-list-currency-exchange.css" />
+</head>
+
+<body>
+	<script>
+    function set_vh_var() {
+        document.querySelector(':root').style.setProperty('--vh', window.innerHeight / 100 + 'px');
+    }
+    set_vh_var();
+    window.addEventListener('resize', set_vh_var);
+</script>
+
+<header id="main-header" class="site-header">
+    <div class="header-container">
+        <div class="logo-lang-wrap">
+            <a class="header-logo" href="#"><img src="./assets/img/header-logo.svg" alt="header logo"></a>
+            <div id="lang-switcher" class="lang-switcher">
+                <button id="langs-btn" role="button" class="label" aria-controls="ul-langs" aria-expanded="false"
+                    aria-labelledby="langs-label" aria-haspopup="ul-langs" role="combobox" aria-activedescendant="">
+                    <span class="cur-name">English</span>
+                    <span class="lang-tick"><img src="./assets/img/lang-tick.svg" alt="tick"></span>
+                </button>
+                <ul id="ul-langs" class="langs" tabindex="-1" aria-labelledby="langs-label" role="listbox">
+                    <li aria-selected="false" id="lang-1" role="option"><span data-lang_code="he" href="#">
+                            עברית
+                        </span></li>
+                    <li aria-selected="true" id="lang-1" role="option" class="selected"><span data-lang_code="en"
+                            href="#">
+                            English
+                        </span></li>
+                    <li aria-selected="false" id="lang-2" role="option"><span data-lang_code="ar" href="#">
+                            عربيه
+                        </span></li>
+                    <li aria-selected="false" id="lang-2" role="option"><span data-lang_code="fr" href="#">
+                            Français
+                        </span></li>
+                    <li aria-selected="false" id="lang-2" role="option"><span data-lang_code="ru" href="#">
+                            Русский
+                        </span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="header-container">
+        <nav class="main-navigation panel">
+            <label class="visually-hidden" id="custom-hamburger-label" for="custom-hamburger">Main Menu</label>
+            <button id="custom-hamburger" class="custom-hamburger" aria-labelledby="custom-hamburger-label"
+                aria-controls="header-menu" aria-expanded="false">
+                <span class="stick stick-1"></span>
+                <span class="stick stick-2"></span>
+                <span class="stick stick-3"></span>
+                <span data-closed_state="open" data-opened_state="close" class="btn-txt">open</span>
+            </button>
+            <ul class="top-menu-items">
+                <li class="selected">
+                    <a data-title="item menu 1" href="#">item menu 1</a>
+                </li>
+                <li>
+                    <a data-title="item menu 2" href="#">item menu 2</a>
+                </li>
+                <li>
+                    <a data-title="item menu 3" href="#">item menu 3</a>
+                </li>
+            </ul>
+            <button class="tablet-search-trigger" type="button">
+                <img src="./assets/img/glass.svg" alt="glass">
+            </button>
+            <form action="search-results.html" class="search-input js-search-input" autocomplete="off"
+                data-article-titles='["כל המידע לגמלאי","זכויות גמלאי דיסקונט","גמלאים ונהנים","מפגש נציגות ועד גמלאי הבנק","זכויות גמלאי דיסקונט","גמלאים בצמרת","הצגה מומלצת לגמלאים","ביטוח וזכויות הגמלאי","lorem ipsum","Dollar wmmt","Littera mare","post lorem","dollar lorem isplor","loram ires"]'>
+                <div class="search-input-inner">
+                    <label for="autoComplete" class="visually-hidden">Search</label>
+                    <input id="autoComplete" type="search" name="search" placeholder="What are you looking for?">
+                    <button type="submit"><img src="./assets/img/glass.svg" alt="Search icon"></button>
+                </div>
+            </form>
+
+            <!-- Search tags -->
+            <div id="search-tags" class="menu-dropdown is-search" aria-hidden="true">
+                <div class="search-wrapper">
+                    <div class="container">
+                        <div class="inner">
+                            <h2 class="search-tags__title">Common searches on the site</h2>
+                            <ul class="list-reset search-tags">
+                                <li><a href="/">Item text</a></li>
+                                <li><a href="/">Item text 1</a></li>
+                                <li><a href="/">Item text 2</a></li>
+                                <li><a href="/">Item text 3</a></li>
+                                <li><a href="/">Item text 4</a></li>
+                                <li><a href="/">Item text 5</a></li>
+                                <li><a href="/">Some text</a></li>
+                                <li><a href="/">Some text 1</a></li>
+                                <li><a href="/">Item text 6</a></li>
+                                <li><a href="/">Some longer text</a></li>
+                                <li><a href="/">Some text</a></li>
+                                <li><a href="/">Item text 7</a></li>
+                                <li><a href="/">Some text</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Search hints -->
+            <div id="search-hints" class="menu-dropdown is-search" aria-hidden="true">
+                <div class="search-wrapper">
+                    <div class="container">
+                        <div class="inner">
+                            <h2 class="search-tags__title"> Were found <span class="js-search-count">0</span> results
+                                for
+                                term </h2>
+                            <ul class="list-reset search-hints js-search-hints">
+                            </ul>
+                            <p class="all-search-results"><a href="/">For all results (<span
+                                        class="js-search-count">0</span>) ></a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button id="close-search-form" class="close-search-form" type="button"
+                aria-label="CLOSE SEARCH FIELD">&#x2715</button>
+
+            <a class="primary-btn-small" href="#">text</a>
+            <a class="goto-discounts header-btn" href="#">
+                some text
+                <img src="./assets/img/go.svg" alt="arrow icon">
+            </a>
+        </nav>
+    </div>
+
+    <div id="header-menu-bg" class="header-menu-bg"></div>
+
+    <div id="header-menu" class="header-menu">
+        <div class="header-container">
+            <div class="submenus-wrap">
+                <div class="submenu">
+                    <h4>Submenu header</h4>
+                    <ul>
+                        <li><a href="#">submenu 1</a></li>
+                        <li><a href="#">submenu 2</a></li>
+                        <li><a href="#">submenu 3</a></li>
+                        <li><a href="#">submenu 4</a></li>
+                        <li><a href="#">subment 5</a></li>
+                        <li><a href="#">submenu 6</a></li>
+                    </ul>
+                </div>
+
+                <div class="submenu">
+                    <h4>Submenu header 1</h4>
+                    <ul>
+                        <li><a href="#">submenu 1</a></li>
+                        <li><a href="#">submenu 2</a></li>
+                        <li><a href="#">submenu 3</a></li>
+                        <li><a href="#">submenu 4</a></li>
+                    </ul>
+                </div>
+
+                <div class="submenu">
+                    <h4>Submenu header 2</h4>
+                    <ul>
+                        <li><a href="#">submenu 1</a></li>
+                        <li><a href="#">submenu 2</a></li>
+                        <li><a href="#">submenu 3</a></li>
+                        <li><a href="#">submenu 4</a></li>
+                        <li><a href="#">submenu 5</a></li>
+                        <li><a href="#">submenu 6</a></li>
+                    </ul>
+                </div>
+
+                <div class="menu-block">
+                    <ul class="menu-in-menu-block">
+                        <li><a href="#">menu item</a></li>
+                        <li><a href="#">menu item 1</a></li>
+                        <li><a href="#">item</a></li>
+                        <li><a href="#">item 1</a></li>
+                    </ul>
+                    <article class="article">
+                        <div class="img-part">
+                            <div class="img-inner">
+                                <img src="./assets/img/some-post-img.png" alt="article image">
+                            </div>
+                        </div>
+                        <div class="txt-part">
+                            <h4 class="article-header">
+                                article header
+                            </h4>
+                            <div class="txt">
+                                Some message here
+                            </div>
+                            <div class="link-wrap">
+                                <a class="more" href="#">More</a>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<header class="mobile-header">
+
+    <div class="top">
+        <label class="visually-hidden" id="mobile-menu-label" for="custom-hamburger-mobile">Main menu mobile</label>
+        <button id="custom-hamburger-mobile" aria-labelledby="mobile-menu-label"
+            class="custom-hamburger mobile-hamburger" aria-expanded="false">
+            <span class="stick stick-1"></span>
+            <span class="stick stick-2"></span>
+            <span class="stick stick-3"></span>
+        </button>
+        <a class="header-mobile-logo" href="#">
+            <img src="./assets/img/header-logo-mobile.svg" alt="header mobile logo">
+        </a>
+        <button class="mobile-search-open">
+            <img src="./assets/img/glass-mobile.svg" alt="magnifying glass">
+        </button>
+        <div class="mobile-search">
+            <div class="mobile-search-inner">
+                <button type="button" class="close-mobile-search" aria-label="CLOSE MOBILE SEARCH FIELD">
+                    &#x2715
+                </button>
+                <form action="search-results.html" class="search-input js-search-input" autocomplete="off"
+                    data-article-titles='["כל המידע לגמלאי","זכויות גמלאי דיסקונט","גמלאים ונהנים","מפגש נציגות ועד גמלאי הבנק","זכויות גמלאי דיסקונט","גמלאים בצמרת","הצגה מומלצת לגמלאים","ביטוח וזכויות הגמלאי","lorem ipsum","Dollar wmmt","Littera mare","post lorem","dollar lorem isplor","loram ires"]'>
+                    <div class="search-input-inner">
+                        <label for="autoComplete-mobile" class="visually-hidden">Search</label>
+                        <input id="autoComplete-mobile" type="search" name="search" placeholder="מה מחפשים?">
+                        <button type="submit"><img src="./assets/img/glass.svg" alt="Search"></button>
+                    </div>
+                    <div class="close-search-form" role="button" aria-label="CLOSE MOBILE SEARCH FIELD">&#x2715</div>
+                </form>
+                <!-- Search tags -->
+                <div id="search-tags-mobile" class="menu-dropdown is-search" aria-hidden="true">
+                    <div class="search-wrapper">
+                        <div class="container">
+                            <div class="inner">
+                                <h2 class="search-tags__title">חיפושים נפוצים באתר</h2>
+                                <ul class="list-reset search-tags">
+                                    <li><a href="/">שחזור קוד סודי</a></li>
+                                    <li><a href="/">חניה חינם</a></li>
+                                    <li><a href="/">פתיחת חשבון</a></li>
+                                    <li><a href="/">שחזור קוד סודי</a></li>
+                                    <li><a href="/">שחזור קוד סודי</a></li>
+                                    <li><a href="/">שחזור קוד סודי</a></li>
+                                    <li><a href="/">חניה חינם</a></li>
+                                    <li><a href="/">פתיחת חשבון</a></li>
+                                    <li><a href="/">שחזור קוד סודי</a></li>
+                                    <li><a href="/">שחזור קוד סודי</a></li>
+                                    <li><a href="/">שחזור קוד סודי</a></li>
+                                    <li><a href="/">חניה חינם</a></li>
+                                    <li><a href="/">פתיחת חשבון</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Search hints -->
+                <div id="search-hints-mobile" class="menu-dropdown is-search" aria-hidden="true">
+                    <div class="search-wrapper">
+                        <div class="container">
+                            <div class="inner">
+                                <h2 class="search-tags__title"> נמצאו <span class="js-search-count_mobile">0</span>
+                                    תוצאות עבור גמלאות </h2>
+                                <ul class="list-reset search-hints js-search-hints_mobile">
+                                </ul>
+                                <p class="all-search-results"><a href="/"> לכל התוצאות (<span
+                                            class="js-search-count_mobile">0</span>) ></a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bottom">
+        <div id="client-switcher" class="client-switcher">
+            <label id="client-label" class="visually-hidden" for="">Client type select</label>
+            <button class="label" aria-controls="ul-langs" aria-expanded="false" aria-labelledby="client-label"
+                aria-haspopup="ul-clients" role="combobox" aria-activedescendant="">
+                <span class="cur-name">client a</span>
+                <span class="client-tick"><img src="./assets/img/client-tick.svg" alt="tick"></span>
+            </button>
+            <ul id="ul-clients" class="clients">
+                <li aria-selected="true" id="client-1" role="option" class="selected"><span data-client_type="a"
+                        href="#">
+                        client a
+                    </span></li>
+                <li aria-selected="false" id="client-2" role="option"><span data-client_type="b" href="#">
+                        client b
+                    </span></li>
+                <li aria-selected="false" id="client-3" role="option"><span data-client_type="c" href="#">
+                        client c
+                    </span></li>
+            </ul>
+        </div>
+        <a class="goto-discounts-mobile" href="#">
+            <span>some text</span>
+            <img src="./assets/img/go-mobile.svg" alt="arrow">
+        </a>
+    </div>
+
+</header>
+<div id="header-menu-mobile" class="header-menu-mobile">
+    <div class="inner">
+        <ul class="horizontal-menu">
+            <li><a href="#">menu 1</a></li>
+            <li><a href="#">submenu 2</a></li>
+            <li><a href="#">submenu 3</a></li>
+            <li><a href="#">bmenu 4</a></li>
+        </ul>
+
+        <div class="submenu">
+            <h4 class="accordeon-title opened">
+                <button aria-expanded="true" aria-controls="mobile-menu-1">
+                    Header
+                </button>
+            </h4>
+            <ul id="mobile-menu-1" style="display: block;" class="accordeon-content">
+                <li><a href="#">submenu 1</a></li>
+                <li><a href="#">submenu 2</a></li>
+                <li><a href="#">submenu 3</a></li>
+                <li><a href="#">submenu 4</a></li>
+                <li><a href="#">submenu 5</a></li>
+                <li><a href="#">submenu 6</a></li>
+            </ul>
+        </div>
+        <div class="submenu">
+            <h4 class="accordeon-title">
+                <button aria-expanded="false" aria-controls="mobile-menu-2">
+                    Header
+                </button>
+            </h4>
+            <ul id="mobile-menu-2" class="accordeon-content">
+                <li><a href="#">submenu 1</a></li>
+                <li><a href="#">submenu 2</a></li>
+                <li><a href="#">submenu 3</a></li>
+                <li><a href="#">submenu 4</a></li>
+            </ul>
+        </div>
+
+        <div class="submenu">
+            <h4 class="accordeon-title">
+                <button aria-expanded="false" aria-controls="mobile-menu-3">
+                    Header
+                </button>
+            </h4>
+            <ul id="mobile-menu-3" class="accordeon-content">
+                <li><a href="#">submenu 1</a></li>
+                <li><a href="#">submenu 2</a></li>
+                <li><a href="#">submenu 3</a></li>
+                <li><a href="#">submenu 4</a></li>
+                <li><a href="#">submenu 5</a></li>
+                <li><a href="#">submenu 6</a></li>
+            </ul>
+        </div>
+
+        <div class="join-wrap">
+            <a class="join" href="#">text</a>
+        </div>
+        <ul class="languages">
+            <li><a class="selected" href="#">עברית</a></li>
+            <li><a href="#">English</a></li>
+            <li><a href="#">Русский</a></li>
+            <li><a href="#">Français</a></li>
+            <li><a href="#">عربيه</a></li>
+        </ul>
+        <div class="card-mobile-menu">
+            <div class="img-wrap">
+                <img src="./assets/img/some-post-img.png" alt="some post image">
+            </div>
+            <div class="txt-wrap">
+                <h4 class="card-header">
+                    Header
+                </h4>
+                <div class="txt">
+                    Some text Some text
+                </div>
+                <div class="link-wrap">
+                    <a class="more" href="#">more</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+<main id="main">
+
+
+	<section class="breadcrumbs main-container">
+		<ul class="site-pagination responsive">
+			<li>
+				<a href="#">main</a>
+			</li>
+			<li>
+				<a href="">discount group</a>
+			</li>
+			<li>publications</li>
+		</ul>
+	</section>
+
+	<!-- intro-section -->
+	<section class="intro-section intro-section--currency-rates section">
+		<div class="main-container">
+			<div class="wrap">
+				<div class="txt-part">
+					<h1 class="header">Forex rates</h1>
+					<p class="msg">Here it will be written what can be found on the page and why it is worth it at a
+						discount Here it will be written what can be found on the page and why it is worth it at a
+						discount Here it will be written what can be found on the page and why it is worth it at a
+						discount Here it will be written what can be found on the page and why it is It's worth it at a
+						discount Here it will be written what can be found on the page and why it's worth it at a
+						discount</p>
+					<div class="btns-wrap">
+						<a class="primary-btn" href="#">more details</a>
+						<a class="secondary-btn-purple" href="#">purchase foreign exchange</a>
+					</div>
+				</div>
+				<div class="img-part">
+					<img src="assets/img/girl-with-abacus.png" alt="img" />
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- ./intro-section -->
+
+	<section class="anchor-list anchor-list--currency-exchange">
+		<div class="anchor-list-content">
+			<div class="anchor-list-top">
+				<div class="main-container">
+					<div class="anchor-list-top-wr">
+						<!-- <div class="anchor-list-start">
+								<div class="anchor-list-title">שערי מט״ח</div>
+							</div>
+							<div class="anchor-list-end">
+								<a class="primary-btn" href="#">פרטים נוספים</a>
+							<a class="secondary-btn-purple" href="#">רכישת מט״ח</a>
+							</div> -->
+					</div>
+				</div>
+			</div>
+			<div class="anchor-list-wr">
+				<div class="main-container">
+					<div class="top-menu-items">
+						<div id="anchor-swiper" class="swiper">
+							<div class="swiper-wrapper">
+								<div class="selected swiper-slide" data-id="currency-exchange-table">
+									<a data-title="Gates" href="#currency-exchange-table">Gates</a>
+								</div>
+								<div data-id="exchange-calculator" class="swiper-slide">
+									<a data-title="Exchange Calculator" href="#exchange-calculator">Exchange
+										Calculator</a>
+								</div>
+								<div data-id="currency-exchange-archive" class="swiper-slide">
+									<a data-title="Historical forex rates" href="#currency-exchange-archive">Historical
+										forex rates</a>
+								</div>
+							</div>
+						</div>
+						<button aria-controls="anchor-swiper" class="swiper-button-next"></button>
+						<button aria-controls="anchor-swiper" class="swiper-button-prev"></button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!--  currency-exchange table -->
+	<section id="currency-exchange-table" class="currency-exchange" data-anchor-target>
+		<img class="bg-img" src="assets/img/currency-rates-bg-right.svg" alt="currency bg right" />
+		<div class="main-container">
+			<h2 class="typical-header">Gates</h2>
+			<p class="typical-subheader">Current data as of: 15.8.2022</p>
+			<div class="table table--desktop">
+				<div class="table__row table__row--header">
+					<div class="table__cell font-medium w w-45">The currency unit</div>
+
+					<div class="table__cell font-medium w w-33">Transfers and checks</div>
+
+					<div class="table__cell font-medium w w-22">Banknotes</div>
+				</div>
+				<div class="table__row table__row--head">
+					<div class="table__cell font-medium w w-15">Name</div>
+					<div class="table__cell font-medium w w-11"></div>
+					<div class="table__cell font-medium w w-19">stable gate</div>
+					<div class="table__cell font-medium w w-13">Buy</div>
+					<div class="table__cell font-medium w w-20">Sale</div>
+					<div class="table__cell font-medium w w-12">Buy</div>
+					<div class="table__cell font-medium w w-10">Sale</div>
+				</div>
+				<div class="table__row">
+					<div class="table__cell table__cell--with-icon font-20 font-medium w w-15">
+						<img src="assets/img/flags/us.svg" alt="us" />
+						<p>USD</p>
+					</div>
+					<div class="table__cell w w-11">USD</div>
+					<div class="table__cell w w-19 font-medium">3.199</div>
+					<div class="table__cell w w-13">3.169</div>
+					<div class="table__cell w w-20">3.221</div>
+					<div class="table__cell w w-12">3.12</div>
+					<div class="table__cell w w-10">3.27</div>
+				</div>
+				<div class="table__row">
+					<div class="table__cell table__cell--with-icon font-20 font-medium w w-15">
+						<img src="assets/img/flags/european_union.svg" alt="eu" />
+						<p>Euro</p>
+					</div>
+					<div class="table__cell w w-11">EUR</div>
+					<div class="table__cell w w-19 font-medium">3.668</div>
+					<div class="table__cell w w-13">3.632</div>
+					<div class="table__cell w w-20">3.699</div>
+					<div class="table__cell w w-12">3.57</div>
+					<div class="table__cell w w-10">2.76</div>
+				</div>
+				<div class="table__row">
+					<div class="table__cell table__cell--with-icon font-20 font-medium w w-15">
+						<img src="assets/img/flags/gb.svg" alt="gb" />
+						<p>GBP</p>
+					</div>
+					<div class="table__cell w w-11">GBP</div>
+					<div class="table__cell w w-19 font-medium">4.340</div>
+					<div class="table__cell w w-13">4.300</div>
+					<div class="table__cell w w-20">4.378</div>
+					<div class="table__cell w w-12">4.23</div>
+					<div class="table__cell w w-10">4.45</div>
+				</div>
+				<div class="table__row">
+					<div class="table__cell table__cell--with-icon font-20 font-medium w w-15">
+						<img src="assets/img/flags/jp.svg" alt="jp" />
+						<p>100 JPY</p>
+					</div>
+					<div class="table__cell w w-11">JPY</div>
+					<div class="table__cell w w-19 font-medium">2.782</div>
+					<div class="table__cell w w-13">2.757</div>
+					<div class="table__cell w w-20">2.807</div>
+					<div class="table__cell w w-12">2.71</div>
+					<div class="table__cell w w-10">2.85</div>
+				</div>
+				<div class="table__row">
+					<div class="table__cell table__cell--with-icon font-20 font-medium w w-15">
+						<img src="assets/img/flags/us.svg" alt="us" />
+						<p>USD</p>
+					</div>
+					<div class="table__cell w w-11">USD</div>
+					<div class="table__cell w w-19 font-medium">3.199</div>
+					<div class="table__cell w w-13">3.169</div>
+					<div class="table__cell w w-20">3.221</div>
+					<div class="table__cell w w-12">3.12</div>
+					<div class="table__cell w w-10">3.27</div>
+				</div>
+				<div class="table__row">
+					<div class="table__cell table__cell--with-icon font-20 font-medium w w-15">
+						<img src="assets/img/flags/european_union.svg" alt="eu" />
+						<p>Euro</p>
+					</div>
+					<div class="table__cell w w-11">EUR</div>
+					<div class="table__cell w w-19 font-medium">3.668</div>
+					<div class="table__cell w w-13">3.632</div>
+					<div class="table__cell w w-20">3.699</div>
+					<div class="table__cell w w-12">3.57</div>
+					<div class="table__cell w w-10">2.76</div>
+				</div>
+				<div class="table__row">
+					<div class="table__cell table__cell--with-icon font-20 font-medium w w-15">
+						<img src="assets/img/flags/gb.svg" alt="gb" />
+						<p>GBP</p>
+					</div>
+					<div class="table__cell w w-11">GBP</div>
+					<div class="table__cell w w-19 font-medium">4.340</div>
+					<div class="table__cell w w-13">4.300</div>
+					<div class="table__cell w w-20">4.378</div>
+					<div class="table__cell w w-12">4.23</div>
+					<div class="table__cell w w-10">4.45</div>
+				</div>
+				<div class="table__row">
+					<div class="table__cell table__cell--with-icon font-medium font-20 w w-15">
+						<img src="assets/img/flags/jp.svg" alt="jp" />
+						<p>100 JPY</p>
+					</div>
+					<div class="table__cell w w-11">JPY</div>
+					<div class="table__cell w w-19 font-medium">2.782</div>
+					<div class="table__cell w w-13">2.757</div>
+					<div class="table__cell w w-20">2.807</div>
+					<div class="table__cell w w-12">2.71</div>
+					<div class="table__cell w w-10">2.85</div>
+				</div>
+				<div class="table__row">
+					<div class="table__cell table__cell--with-icon font-20 font-medium w w-15">
+						<img src="assets/img/flags/european_union.svg" alt="eu" />
+						<p>Euro</p>
+					</div>
+					<div class="table__cell w w-11">EUR</div>
+					<div class="table__cell w w-19 font-medium">3.668</div>
+					<div class="table__cell w w-13">3.632</div>
+					<div class="table__cell w w-20">3.699</div>
+					<div class="table__cell w w-12">3.57</div>
+					<div class="table__cell w w-10">2.76</div>
+				</div>
+				<div class="table__row">
+					<div class="table__cell table__cell--with-icon font-20 font-medium w w-15">
+						<img src="assets/img/flags/gb.svg" alt="gb" />
+						<p>GBP</p>
+					</div>
+					<div class="table__cell w w-11">GBP</div>
+					<div class="table__cell w w-19 font-medium">4.340</div>
+					<div class="table__cell w w-13">4.300</div>
+					<div class="table__cell w w-20">4.378</div>
+					<div class="table__cell w w-12">4.23</div>
+					<div class="table__cell w w-10">4.45</div>
+				</div>
+			</div>
+
+			<div class="table table--mobile">
+				<div class="table__row">
+					<div class="table__cell font-medium color--green-haze">The currency unit</div>
+					<div class="table__row-group">
+						<div class="table__cell font-medium w w-30">Name</div>
+						<div class="table__cell table__cell--with-icon font-18 w w-50">
+							<img src="assets/img/flags/us.svg" alt="us" />
+							<p>US Dollar</p>
+						</div>
+						<div class="table__cell w w-20">
+							<p>USD</p>
+						</div>
+					</div>
+					<div class="table__row-group">
+						<div class="table__cell font-medium w w-30">Gate</div>
+						<div class="table__cell">3.199</div>
+					</div>
+					<div class="table__row-group mt-20">
+						<div class="table__cell font-medium color--green-haze w w-60">Checks</div>
+						<div class="table__cell font-medium color--green-haze">Banknotes</div>
+					</div>
+					<div class="table__row-group">
+						<div class="table__cell font-medium w w-30">Buy</div>
+						<div class="table__cell w w-30">3.169</div>
+						<div class="table__cell">3.120</div>
+					</div>
+					<div class="table__row-group">
+						<div class="table__cell font-medium w w-30">Sale</div>
+						<div class="table__cell w w-30">3.227</div>
+						<div class="table__cell">3.270</div>
+					</div>
+				</div>
+				<div class="table__row">
+					<div class="table__cell font-medium color--green-haze">The currency unit</div>
+					<div class="table__row-group">
+						<div class="table__cell font-medium w w-30">Name</div>
+						<div class="table__cell table__cell--with-icon font-18 w w-50">
+							<img src="assets/img/flags/european_union.svg" alt="us" />
+							<p>Euro</p>
+						</div>
+						<div class="table__cell w w-20">
+							<p>EUR</p>
+						</div>
+					</div>
+					<div class="table__row-group">
+						<div class="table__cell font-medium w w-30">Gate</div>
+						<div class="table__cell">3.668</div>
+					</div>
+					<div class="table__row-group mt-20">
+						<div class="table__cell font-medium color--green-haze w w-60">Checks</div>
+						<div class="table__cell font-medium color--green-haze">Banknotes</div>
+					</div>
+					<div class="table__row-group">
+						<div class="table__cell font-medium w w-30">Buy</div>
+						<div class="table__cell w w-30">3.169</div>
+						<div class="table__cell">3.120</div>
+					</div>
+					<div class="table__row-group">
+						<div class="table__cell font-medium w w-30">Sell</div>
+						<div class="table__cell w w-30">3.227</div>
+						<div class="table__cell">3.270</div>
+					</div>
+				</div>
+
+				<div class="table__row">
+					<div class="table__cell font-medium color--green-haze">The currency unit</div>
+					<div class="table__row-group">
+						<div class="table__cell font-medium w w-30">Name</div>
+						<div class="table__cell table__cell--with-icon font-18 w w-50">
+							<img src="assets/img/flags/gb.svg" alt="us" />
+							<p>Pound Sterling</p>
+						</div>
+						<div class="table__cell w w-20">
+							<p>GBP</p>
+						</div>
+					</div>
+					<div class="table__row-group">
+						<div class="table__cell font-medium w w-30">Gate</div>
+						<div class="table__cell">3.668</div>
+					</div>
+					<div class="table__row-group mt-20">
+						<div class="table__cell font-medium color--green-haze w w-60">Checks</div>
+						<div class="table__cell font-medium color--green-haze">Banknotes</div>
+					</div>
+					<div class="table__row-group">
+						<div class="table__cell font-medium w w-30">Buy</div>
+						<div class="table__cell w w-30">3.169</div>
+						<div class="table__cell">3.120</div>
+					</div>
+					<div class="table__row-group">
+						<div class="table__cell font-medium w w-30">Sell</div>
+						<div class="table__cell w w-30">3.227</div>
+						<div class="table__cell">3.270</div>
+					</div>
+				</div>
+				<div class="table__row">
+					<div class="table__cell font-medium color--green-haze">The currency unit</div>
+					<div class="table__row-group">
+						<div class="table__cell font-medium w w-30">Name</div>
+						<div class="table__cell table__cell--with-icon font-18 w w-50">
+							<img src="assets/img/flags/jp.svg" alt="us" />
+							<p>100 JPY</p>
+						</div>
+						<div class="table__cell w w-20">
+							<p>JPY</p>
+						</div>
+					</div>
+					<div class="table__row-group">
+						<div class="table__cell font-medium w w-30">Gate</div>
+						<div class="table__cell">3.668</div>
+					</div>
+					<div class="table__row-group mt-20">
+						<div class="table__cell font-medium color--green-haze w w-60">Checks</div>
+						<div class="table__cell font-medium color--green-haze">Banknotes</div>
+					</div>
+					<div class="table__row-group">
+						<div class="table__cell font-medium w w-30">Buy</div>
+						<div class="table__cell w w-30">3.169</div>
+						<div class="table__cell">3.120</div>
+					</div>
+					<div class="table__row-group">
+						<div class="table__cell font-medium w w-30">Sell</div>
+						<div class="table__cell w w-30">3.227</div>
+						<div class="table__cell">3.270</div>
+					</div>
+				</div>
+			</div>
+			<div class="currency-exchange__bottom">
+				<div class="currency-exchange__bottom-item">
+					<a class="purple-link" href="#">Rates of transfers and cash checks are correct for the time:
+						13:00</a>
+				</div>
+				<div class="currency-exchange__bottom-item">
+					<a class="purple-link" href="#">Correct display gates for time: 15:30</a>
+				</div>
+				<div class="currency-exchange__bottom-item">
+					<a class="purple-link" href="#">The rates are not quote rates for buy and sell transactions </a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--  ./currency-exchange table -->
+
+	<!--  currency-exchange calculator -->
+	<section id="exchange-calculator" class="exchange-calculator" data-anchor-target>
+		<img src="assets/img/exchange-calculator-bg.png" alt="bg" class="bg-img" />
+		<div class="main-container">
+			<h2 class="typical-header">Conversion calculator</h2>
+			<div class="exchange-calculator__body">
+				<p class="typical-subheader">Enter amount</p>
+				<div class="exchange-calculator__wrapper">
+					<div class="exchange-calculator__inputs">
+						<div class="exchange-calculator__row exchange-calculator__row--top">
+							<div class="exchange-calculator__col">
+								<div class="exchange-calculator__label">Amount</div>
+								<div class="exchange-calculator__input exchange-calculator__input--numeric">
+									<input id="calcExchangeSum" type="number" value="10" />
+								</div>
+							</div>
+
+							<div class="exchange-calculator__col currency-from">
+								<div class="exchange-calculator__label">from currency</div>
+								<div
+									class="exchange-calculator__input exchange-calculator__input--autocomplete input-with-autocomplete">
+									<label class="label-autocomplete" for="autoCompleteCurrencyFrom">
+										<span> עיר</span>
+									</label>
+									<input id="autoCompleteCurrencyFrom" class="autocomplete-input" />
+								</div>
+							</div>
+						</div>
+
+						<div class="exchange-calculator__row exchange-calculator__row--bottom">
+							<div class="exchange-calculator__col">
+								<div class="exchange-calculator__label exchange-calculator__label--result">Amount</div>
+								<div class="exchange-calculator__input exchange-calculator__input--result">
+									<input class="input-result" value="32.543" readonly />
+								</div>
+							</div>
+
+							<div class="exchange-calculator__col currency-to">
+								<div class="exchange-calculator__label">to currency</div>
+
+								<div
+									class="exchange-calculator__input exchange-calculator__input--autocomplete input-with-autocomplete">
+									<label class="label-autocomplete" for="autoCompleteCurrencyTo">
+										<span> עיר</span>
+									</label>
+									<input id="autoCompleteCurrencyTo" class="autocomplete-input" />
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="exchange-calculator__btn">
+						<button id="calcBtn" class="calculate" disabled><img src="assets/img/icon-exchange.svg"
+								alt="exchange button" /></button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--  ./currency-exchange calculator -->
+
+	<!-- exchange-archive  -->
+	<section id="currency-exchange-archive" class="exchange-archive" data-anchor-target>
+		<div class="main-container">
+			<h2 class="typical-header">Historical forex rates</h2>
+
+			<form class="exchange-archive__form" autocomplete="on">
+				<div class="exchange-archive__wrapper">
+					<div class="exchange-archive__row">
+						<div class="exchange-archive__col">
+							<div class="exchange-archive__label">Currency</div>
+
+							<div
+								class="exchange-calculator__input exchange-calculator__input--autocomplete input-with-autocomplete">
+								<input id="autoCompleteArchive" class="autocomplete-input" />
+							</div>
+						</div>
+
+						<div class="exchange-archive__col">
+							<div class="exchange-archive__label">Start date</div>
+							<div class="exchange-archive__input exchange-archive__input--calendar">
+								<input id="startDate" type="text" name="startDate" placeholder="DD/MM/YY" />
+							</div>
+						</div>
+						<div class="exchange-archive__col">
+							<div class="exchange-archive__label">End date</div>
+							<div class="exchange-archive__input exchange-archive__input--calendar">
+								<input id="endDate" type="text" name="endDate" placeholder="DD/MM/YY" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</form>
+
+			<div class="exchange-archive__btn">
+				<button class="typical-btn-bigger exchange-archive-btn" disabled>Search</button>
+			</div>
+
+			<div class="table table--desktop">
+				<h3 class="typical-subheader">Search Results</h3>
+				<div class="table__row table__row--header">
+					<div class="table__cell table__cell--with-icon font-22 font-medium w w-26">
+						<span>Currency</span>
+						<img src="assets/img/flags/us.svg" alt="us" />
+						<p class="c-black">USD</p>
+					</div>
+
+					<div class="table__cell font-medium w w-32">% change</div>
+					<div class="table__cell font-medium w w-23">Checks</div>
+					<div class="table__cell font-medium w w-19">Banknotes</div>
+				</div>
+				<div class="table__row table__row--head">
+					<div class="table__cell font-medium w w-12">Date</div>
+					<div class="table__cell font-medium w w-14">Gate</div>
+					<div class="table__cell font-medium w w-9">Daily</div>
+					<div class="table__cell font-medium w w-9">Monthly</div>
+					<div class="table__cell font-medium w w-14">Annual</div>
+					<div class="table__cell font-medium w w-9">Buy</div>
+					<div class="table__cell font-medium w w-14">Sale</div>
+					<div class="table__cell font-medium w w-10">Buy</div>
+					<div class="table__cell font-medium w w-9">Sale</div>
+				</div>
+				<div class="table__row">
+					<div class="table__cell w w-12">01/01/01</div>
+					<div class="table__cell w w-14">3.199</div>
+					<div class="table__cell w w-9 negative c-red font-medium"><span>-0.488</span></div>
+					<div class="table__cell w w-9">0.337</div>
+					<div class="table__cell w w-14">0.337</div>
+					<div class="table__cell w w-9">3.169</div>
+					<div class="table__cell w w-14">3.2271</div>
+					<div class="table__cell w w-10">3.12</div>
+					<div class="table__cell w w-9">3.27</div>
+				</div>
+				<div class="table__row">
+					<div class="table__cell w w-12">02/01/01</div>
+					<div class="table__cell w w-14">3.199</div>
+					<div class="table__cell w w-9 negative c-red font-medium"><span>-0.488</span></div>
+					<div class="table__cell w w-9">0.337</div>
+					<div class="table__cell w w-14">0.337</div>
+					<div class="table__cell w w-9">3.169</div>
+					<div class="table__cell w w-14">3.2271</div>
+					<div class="table__cell w w-10">3.12</div>
+					<div class="table__cell w w-9">3.27</div>
+				</div>
+				<div class="table__row">
+					<div class="table__cell w w-12">03/01/01</div>
+					<div class="table__cell w w-14">3.199</div>
+					<div class="table__cell w w-9 c-green font-medium">0.488</div>
+					<div class="table__cell w w-9">0.337</div>
+					<div class="table__cell w w-14">0.337</div>
+					<div class="table__cell w w-9">3.169</div>
+					<div class="table__cell w w-14">3.2271</div>
+					<div class="table__cell w w-10">3.12</div>
+					<div class="table__cell w w-9">3.27</div>
+				</div>
+				<div class="table__row">
+					<div class="table__cell w w-12">04/01/01</div>
+					<div class="table__cell w w-14">3.199</div>
+					<div class="table__cell w w-9 c-green font-medium">0.488</div>
+					<div class="table__cell w w-9">0.337</div>
+					<div class="table__cell w w-14">0.337</div>
+					<div class="table__cell w w-9">3.169</div>
+					<div class="table__cell w w-14">3.2271</div>
+					<div class="table__cell w w-10">3.12</div>
+					<div class="table__cell w w-9">3.27</div>
+				</div>
+			</div>
+			<div class="table table--mobile">
+				<h3 class="typical-subheader">Search Results</h3>
+				<div class="table__archive-caption">Currency unit</div>
+				<div class="table__archive-units">
+					<img src="assets/img/flags/us.svg" alt="us" />
+					<p class="currency-name">USD</p>
+					<p class="currency-name-short">USD</p>
+				</div>
+				<div class="table__row table__row--header">
+					<div class="table__cell font-medium w w-40">Date</div>
+					<div class="table__cell font-medium w w-28">Gate</div>
+					<div class="table__cell font-medium w w-32">% daily change</div>
+				</div>
+				<div class="table__row">
+					<div class="table__row-group table__row-group--archive-head accordeon-title opened">
+						<div class="table__cell w w-40 font-medium">12/09/2022</div>
+						<div class="table__cell w w-28 font-medium">3.3920</div>
+						<div class="table__cell w w-30 negative c-red font-medium"><span>-0.7343</span></div>
+					</div>
+					<div class="table__row-group table__row-group--archive-content accordeon-content"
+						style="display: block">
+						<div class="table__archive-caption">Percent Change</div>
+						<div class="table__row">
+							<div class="table__cell w w-25">Monthly</div>
+							<div class="table__cell w w-25">0.337</div>
+							<div class="table__cell w w-25">Annual</div>
+							<div class="table__cell w w-25">0.416</div>
+						</div>
+						<div class="table__row">
+							<div class="table__cell font-medium c-green w w-50">Checks</div>
+							<div class="table__cell font-medium c-green w w-50">Banknotes</div>
+						</div>
+						<div class="table__row">
+							<div class="table__cell font-medium w w-25">Buy</div>
+							<div class="table__cell w w-25">3.169</div>
+							<div class="table__cell w-50">3.12</div>
+						</div>
+						<div class="table__row">
+							<div class="table__cell font-medium w w-25">Sell</div>
+							<div class="table__cell w w-25">3.169</div>
+							<div class="table__cell w w-50">3.12</div>
+						</div>
+					</div>
+				</div>
+				<div class="table__row">
+					<div class="table__row-group table__row-group--archive-head accordeon-title">
+						<div class="table__cell w w-40 font-medium">11/09/2022</div>
+						<div class="table__cell w w-28 font-medium">3.4170</div>
+						<div class="table__cell w w-32 c-green font-medium"><span>0</span></div>
+					</div>
+					<div class="table__row-group table__row-group--archive-content accordeon-content">
+						<div class="table__archive-caption">Percent Change</div>
+						<div class="table__row">
+							<div class="table__cell w w-25">Monthly</div>
+							<div class="table__cell w w-25">0.337</div>
+							<div class="table__cell w w-25">Annual</div>
+							<div class="table__cell w w-25">0.416</div>
+						</div>
+						<div class="table__row">
+							<div class="table__cell font-medium c-green w w-50">Checks</div>
+							<div class="table__cell font-medium c-green w w-50">Banknotes</div>
+						</div>
+						<div class="table__row">
+							<div class="table__cell font-medium w w-25">Buy</div>
+							<div class="table__cell w w-25">3.169</div>
+							<div class="table__cell w-50">3.12</div>
+						</div>
+						<div class="table__row">
+							<div class="table__cell font-medium w w-25">Sell</div>
+							<div class="table__cell w w-25">3.169</div>
+							<div class="table__cell w w-50">3.12</div>
+						</div>
+					</div>
+				</div>
+				<div class="table__row">
+					<div class="table__row-group table__row-group--archive-head accordeon-title">
+						<div class="table__cell w w-40 font-medium">10/09/2022</div>
+						<div class="table__cell w w-28 font-medium">3.4170</div>
+						<div class="table__cell w w-32 negative c-red font-medium"><span>-0.2338</span></div>
+					</div>
+					<div class="table__row-group table__row-group--archive-content accordeon-content">
+						<div class="table__archive-caption">Percent Change</div>
+						<div class="table__row">
+							<div class="table__cell w w-25">Monthly</div>
+							<div class="table__cell w w-25">0.337</div>
+							<div class="table__cell w w-25">Annual</div>
+							<div class="table__cell w w-25">0.416</div>
+						</div>
+						<div class="table__row">
+							<div class="table__cell font-medium c-green w w-50">Checks</div>
+							<div class="table__cell font-medium c-green w w-50">Banknotes</div>
+						</div>
+						<div class="table__row">
+							<div class="table__cell font-medium w w-25">Buy</div>
+							<div class="table__cell w w-25">3.169</div>
+							<div class="table__cell w-50">3.12</div>
+						</div>
+						<div class="table__row">
+							<div class="table__cell font-medium w w-25">Sell</div>
+							<div class="table__cell w w-25">3.169</div>
+							<div class="table__cell w w-50">3.12</div>
+						</div>
+					</div>
+				</div>
+				<div class="table__row">
+					<div class="table__row-group table__row-group--archive-head accordeon-title">
+						<div class="table__cell w w-40 font-medium">09/09/2022</div>
+						<div class="table__cell w w-28 font-medium">3.4250</div>
+						<div class="table__cell w w-32 negative c-red font-medium"><span>-0.2624</span></div>
+					</div>
+					<div class="table__row-group table__row-group--archive-content accordeon-content">
+						<div class="table__archive-caption">Percent Change</div>
+						<div class="table__row">
+							<div class="table__cell w w-25">Monthly</div>
+							<div class="table__cell w w-25">0.337</div>
+							<div class="table__cell w w-25">Annual</div>
+							<div class="table__cell w w-25">0.416</div>
+						</div>
+						<div class="table__row">
+							<div class="table__cell font-medium c-green w w-50">Checks</div>
+							<div class="table__cell font-medium c-green w w-50">Banknotes</div>
+						</div>
+						<div class="table__row">
+							<div class="table__cell font-medium w w-25">Buy</div>
+							<div class="table__cell w w-25">3.169</div>
+							<div class="table__cell w-50">3.12</div>
+						</div>
+						<div class="table__row">
+							<div class="table__cell font-medium w w-25">Sell</div>
+							<div class="table__cell w w-25">3.169</div>
+							<div class="table__cell w w-50">3.12</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- ./exchange-archive  -->
+
+	<!-- exchange-services -->
+	<section id="exchange-services" class="exchange-services">
+		<div class="main-container">
+			<h2 class="typical-header">Available services</h2>
+			<h3 class="typical-subheader">Subheader Subheader Subheader Subheader</h3>
+			<div class="exchange-services__list">
+				<div class="exchange-services__item">
+					<div class="exchange-services__item-group">
+						<div class="exchange-services__item-icon">
+							<img src="assets/img/icon-list-checked.svg" alt="icon checked list" />
+						</div>
+					</div>
+					<div class="exchange-services__item-group">
+						<h5 class="exchange-services__item-title">The capital market</h5>
+						<a class="typical-btn-small" href="#">for more details</a>
+					</div>
+				</div>
+
+				<div class="exchange-services__item">
+					<div class="exchange-services__item-group">
+						<div class="exchange-services__item-icon">
+							<img src="assets/img/icon-cash.svg" alt="icon cash" />
+						</div>
+					</div>
+					<div class="exchange-services__item-group">
+						<h5 class="exchange-services__item-title">Buying foreign exchange</h5>
+						<a class="typical-btn-small" href="#">for more details</a>
+					</div>
+				</div>
+
+				<div class="exchange-services__item">
+					<div class="exchange-services__item-group">
+						<div class="exchange-services__item-icon">
+							<img src="assets/img/icon-wallet.svg" alt="icon-wallet" />
+						</div>
+					</div>
+					<div class="exchange-services__item-group">
+						<h5 class="exchange-services__item-title">Loans</h5>
+						<a class="typical-btn-small" href="#">for more details</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- ./exchange-services -->
+
+	</main>
+<footer class="footer section">
+    <div class="main-container">
+        <div class="wrap">
+            <div class="footer-item">
+                <h4 class="accordeon-title">
+                    <button class="mobile-btn" aria-expanded="false" aria-controls="footer-menu-1">
+                        Header
+                        <img class="footer-tick" src="./assets/img/footer-tick.svg" alt="footer-tick">
+                    </button>
+                    <span class="desktop-title">
+                        Header
+                    </span>
+                </h4>
+                <ul id="footer-menu-1" class="accordeon-content">
+                    <li><a href="#">Subitem 1</a></li>
+                    <li><a href="#">Subitem 2</a></li>
+                    <li><a href="#">Subitem 3</a></li>
+                    <li><a href="#">Subitem 4</a></li>
+                    <li><a href="#">Subitem 5</a></li>
+                    <li><a href="#">Subitem 6</a></li>
+                    <li><a href="#">Subitem 7</a></li>
+                    <li><a href="#">Subitem 8</a></li>
+                </ul>
+            </div>
+            <div class="footer-item">
+                <h4 class="accordeon-title">
+                    <button class="mobile-btn" aria-expanded="false" aria-controls="footer-menu-2">
+                        Header
+                        <img class="footer-tick" src="./assets/img/footer-tick.svg" alt="footer-tick">
+                    </button>
+                    <span class="desktop-title">
+                        Header
+                    </span>
+                </h4>
+                <ul id="footer-menu-2" class="accordeon-content">
+                    <li><a href="#">Subitem 1</a></li>
+                    <li><a href="#">Subitem 2</a></li>
+                    <li><a href="#">Investor Relations</a></li>
+                    <li><a href="#">Subitem 3</a></li>
+                    <li><a href="#">Subitem 4</a></li>
+                    <li><a href="#">Discount Tech</a></li>
+                    <li><a href="#">Subitem 5</a></li>
+                    <li><a href="#">Subitem 6</a></li>
+                    <li><a href="#">Subitem 7</a></li>
+                </ul>
+            </div>
+            <div class="footer-item">
+                <h4 class="accordeon-title">
+                    <button class="mobile-btn" aria-expanded="false" aria-controls="footer-menu-3">
+                        Header
+                        <img class="footer-tick" src="./assets/img/footer-tick.svg" alt="footer-tick">
+                    </button>
+                    <span class="desktop-title">
+                        Header
+                    </span>
+                </h4>
+                <ul id="footer-menu-3" class="accordeon-content">
+                    <li><a href="#">Subitem 1</a></li>
+                    <li><a href="#">Subitem 2</a></li>
+                    <li><a href="#">Subitem 3</a></li>
+                    <li><a href="#">Subitem 4</a></li>
+                    <li><a href="#">Subitem 5</a></li>
+                    <li><a href="#">Subitem 6</a></li>
+                    <li><a href="#">Subitem 7</a></li>
+                </ul>
+            </div>
+            <div class="footer-item">
+                <h4 class="accordeon-title">
+                    <button class="mobile-btn" aria-expanded="false" aria-controls="footer-menu-4">
+                        Header
+                        <img class="footer-tick" src="./assets/img/footer-tick.svg" alt="footer-tick">
+                    </button>
+                    <span class="desktop-title">
+                        Header
+                    </span>
+                </h4>
+                <ul id="footer-menu-4" class="accordeon-content">
+                    <li><a href="#">Subitem 1</a></li>
+                    <li><a href="#">Subitem 2</a></li>
+                    <li><a href="#">Subitem 3</a></li>
+                    <li><a href="#">Subitem 4</a></li>
+                    <li><a href="#">Subitem 5</a></li>
+                    <li><a href="#">Subitem 6</a></li>
+                    <li><a href="#">Subitem 7</a></li>
+                </ul>
+            </div>
+            <div class="footer-item footer-item-with-logo">
+                <a class="footer-logo" href="#">
+                    <svg width="112px" height="40px" viewBox="0 0 112 40" version="1.1"
+                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <title>2C2D1494-E258-4E81-8C45-27131E12612C</title>
+                        <g id="ui" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g id="Desktop-1920_DISCOUNT_lobby-page---Credit-Card"
+                                transform="translate(-234.000000, -5511.000000)" fill="#FFFFFF">
+                                <g id="footer-desktop-1920" transform="translate(0.000000, 5421.000000)">
+                                    <g id="Group-5" transform="translate(180.000000, 90.000000)">
+                                        <g id="logo-landing-1" transform="translate(54.000000, 0.000000)">
+                                            <path
+                                                d="M10.804551,19.9078759 C16.883936,19.9078759 20.8092241,17.5519142 20.8092241,10.9028669 L20.8092241,5.66034886 C20.8092241,1.48204083 20.078495,0.00100682121 17.1926666,0.00100682121 L10.6491833,0.00100682121 L10.6491833,4.97671726 L12.4965546,4.97671726 C13.4969217,4.97671726 13.6121944,5.39454806 13.6121944,7.7505097 L13.6121944,11.5492461 C13.6121944,13.5628886 12.68901,14.8546402 10.8035486,14.8546402 C8.87899471,14.8546402 7.87862764,13.639407 7.87862764,11.5492461 L7.87862764,0.00100682121 L0.798875508,0.00100682121 L0.798875508,10.9018601 C0.798875508,17.4753958 4.8394363,19.906869 10.804551,19.906869 L10.804551,19.9078759 Z M30.1282748,19.4135266 C31.7060081,19.4135266 32.4758296,18.4268419 32.4758296,14.4368094 L32.4758296,6.9148481 C32.4758296,1.93813084 31.9365536,0.00100682121 28.7039045,0.00100682121 L22.162426,0.00100682121 L22.162426,4.97772408 L24.12507,4.97772408 C25.1184205,4.97772408 25.2316885,5.95031337 25.2397075,7.16554658 L25.2397075,12.5369378 C25.2397075,14.2847794 25.0492568,14.4368094 24.5480709,14.4368094 L21.1239688,14.4368094 L21.1239688,19.4135266 L30.1292772,19.4135266 L30.1282748,19.4135266 Z M41.750776,19.4135266 L41.750776,3.76148405 C41.750776,1.52030003 40.5970461,0.00100682121 37.8645805,0.00100682121 L33.5543817,0.00100682121 L33.5543817,4.97671726 C34.2470206,4.97671726 34.5547488,5.35729568 34.5547488,6.07918649 L34.5547488,19.4135266 L41.7517784,19.4135266 L41.750776,19.4135266 Z M53.8393801,19.4135266 C57.6864832,19.4135266 62.8426838,17.057565 62.8426838,8.16733369 C62.8426838,1.40753606 61.1887703,0.00201364243 57.4178475,0.00201364243 L42.9095179,0.00201364243 L42.9095179,4.9787309 L53.453467,4.9787309 C55.0692904,4.9787309 55.4542011,5.39656171 55.4542011,8.96674973 C55.4542011,12.7654862 53.8764679,14.4378162 51.6451882,14.4378162 L51.6451882,19.4145335 L53.8383778,19.4145335 L53.8393801,19.4135266 Z M74.0050963,19.906869 C79.1993871,19.906869 83.9716793,18.0835158 83.9716793,11.0559037 L83.9716793,4.14105565 C83.9716793,0.873920814 82.5483113,0.00100682121 80.7781227,0.00100682121 L67.1157948,0.00100682121 C65.2313358,0.00100682121 63.8841481,0.950439226 63.8841481,4.14105565 L63.8841481,11.0559037 C63.8841481,17.9314858 69.0403487,19.906869 74.0050963,19.906869 L74.0050963,19.906869 Z M93.2105403,11.2079338 L93.2105403,3.76148405 C93.2105403,1.52030003 92.4417211,0 89.7092556,0 L85.0532385,0 L85.0532385,4.97671726 C85.82306,4.97671726 86.0155154,5.35729568 86.0155154,6.07918649 L86.0155154,11.2079338 L93.2115427,11.2079338 L93.2105403,11.2079338 Z M108.652078,19.4135266 L108.652078,8.77646052 C108.652078,6.8010773 109.036989,5.47106648 109.80681,4.97671726 L112,4.97671726 L112,0.00100682121 L94.2219335,0.00100682121 L94.2219335,4.97671726 L103.918878,4.97671726 C102.841329,5.66135568 101.494141,7.40819049 101.494141,10.2202421 L101.494141,19.4125198 L108.652078,19.4125198 L108.652078,19.4135266 Z M74.0050963,14.8536334 C72.1186326,14.8536334 71.0029927,13.639407 71.0029927,11.5492461 L71.0029927,6.99136651 C71.0029927,5.39555488 71.1563556,4.97772408 72.1577251,4.97772408 L75.7361925,4.97772408 C76.7365595,4.97772408 76.8518323,5.39555488 76.8518323,6.99136651 L76.8518323,11.5492461 C76.8518323,13.6766594 75.8905577,14.8536334 74.0050963,14.8536334 L74.0050963,14.8536334 Z M50.1055451,26.3344157 L50.1055451,8.31634323 L43.0638831,8.31634323 L43.0638831,26.3344157 L50.1055451,26.3344157 Z M54.9500081,39.9989932 C70.8616583,39.9989932 94.2931019,37.0993481 107.313912,27.5355534 C107.391094,27.4791714 108.255139,26.8418536 108.563869,26.5619573 C108.650073,26.4834252 108.803436,26.304211 108.926728,26.1189559 C109.083098,25.8843666 109.155269,25.741398 109.249492,25.4735835 C109.500085,24.7567268 109.486051,24.2956027 109.443952,23.5384732 C109.401852,22.7702686 109.302617,22.1691963 109.02897,21.6094037 C108.966823,21.4835511 108.923721,21.3979713 108.798424,21.3315211 C108.77255,21.317681 108.744888,21.3075157 108.71623,21.3013164 L108.630026,21.2942687 C108.456616,21.298296 108.277191,21.4090463 108.198004,21.4714692 C96.3549807,30.7261698 69.777092,32.9029173 54.9349725,32.9029173 L54.5340238,32.9029173 C39.6888972,32.9029173 13.1130133,30.7261698 1.26999026,21.4714692 C1.16823928,21.3910811 1.05020486,21.3340356 0.924171985,21.3043369 L0.837968009,21.2942687 C0.779255723,21.2918984 0.720922415,21.3047263 0.668567172,21.3315211 C0.544273067,21.3969644 0.501171079,21.4835511 0.439024026,21.6094037 C0.166378892,22.1681895 0.0661417108,22.7702686 0.0240420946,23.5384732 C-0.0180575217,24.2956027 -0.0320907271,24.7567268 0.218502227,25.4735835 C0.311722806,25.741398 0.384895948,25.8843666 0.541265951,26.1179491 C0.664557685,26.304211 0.817920573,26.4834252 0.904124549,26.5609504 C1.21285507,26.8428604 2.07689957,27.4791714 2.1540822,27.5355534 C15.1748921,37.0993481 38.6063357,40 54.5179859,40 L54.9500081,39.9989932 Z"
+                                                id="Shape"></path>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </svg>
+                </a>
+                <ul class="footer-socials">
+                    <li><a href="#"><img src="./assets/img/twitter-icon.svg" alt="twitter"></a></li>
+                    <li><a href="#"><img src="./assets/img/instagram-icon.svg" alt="intagram"></a></li>
+                    <li><a href="#"><img src="./assets/img/youtube-icon.svg" alt="youtube"></a></li>
+                    <li><a href="#"><img src="./assets/img/facebook-icon.svg" alt="facebook"></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="./assets/js/common.js"></script>
+<script src="./assets/js/sections/header.js"></script>
+<script type="text/javascript" src="./assets/js/sections/footer.js"></script>
+
+	<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+	<script type="text/javascript" src="./assets/js/autoComplete.js"></script>
+	<script type="text/javascript" src="./assets/js/perfect-scrollbar.js"></script>
+	<script type="text/javascript" src="./assets/js/jquery.min.js"></script>
+	<script type="text/javascript" src="./assets/js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="./assets/js/jquery.mask.min.js"></script>
+
+	<script type="text/javascript" src="./assets/js/hl-scripts.js"></script>
+</body>
+
+</html>

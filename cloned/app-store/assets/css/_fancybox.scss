@@ -1,0 +1,23 @@
+.fancybox {
+	&__slide-in {
+		transform: translateY(100%);
+		opacity: 0;
+		transition: transform 0.5s ease, opacity 0.5s ease;
+	}
+
+	&__slide-in-active {
+		transform: translateY(0);
+		opacity: 1;
+	}
+
+	&__slide-out {
+		transform: translateY(0);
+		opacity: 1;
+		transition: transform 0.5s ease, opacity 0.5s ease;
+	}
+
+	&__slide-out-active {
+		transform: translateY(100%);
+		opacity: 0;
+	}
+}

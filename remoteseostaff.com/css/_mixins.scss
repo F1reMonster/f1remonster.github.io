@@ -1,0 +1,18 @@
+@mixin hover-supported {
+	// https://developer.mozilla.org/en-US/docs/Web/CSS/@media/pointer
+	// coarse: The primary input mechanism includes a pointing device of limited accuracy.
+
+	@media not all and (pointer: coarse) {
+		&:hover {
+			@content;
+		}
+	}
+}
+
+
+@mixin line-clamp($value) {
+	display: -webkit-box;
+	overflow: hidden;
+	-webkit-box-orient: block-axis;
+	-webkit-line-clamp: $value;
+}

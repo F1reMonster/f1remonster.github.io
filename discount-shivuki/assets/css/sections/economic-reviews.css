@@ -1,0 +1,368 @@
+.filter {
+  display: flex;
+  justify-content: center;
+  padding: 3.125em 0 1.875em;
+}
+.filter__wrapper {
+  display: flex;
+  flex-flow: wrap;
+  gap: 1em;
+}
+@media (max-width: 767px) {
+  .filter__wrapper {
+    gap: 0.625em;
+  }
+}
+.filter__item label {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1em;
+  height: 2em;
+  font: 1.25em/1.2 "rubik-reg", sans-serif;
+  min-width: 10em;
+  color: #6924e8;
+  border: 1.5px solid #6924e8;
+  border-radius: 1.5em;
+  transition: all 0.2s ease-out;
+  cursor: pointer;
+}
+.filter__item input {
+  position: absolute;
+  opacity: 0;
+  height: 0;
+  width: 0;
+}
+.filter__item input:checked ~ label {
+  background: #6924e8;
+  color: #fff;
+}
+.filter__item.hidden {
+  display: none;
+}
+@media (max-width: 767px) {
+  .filter__item label {
+    font: 0.875em/1.7142857143 "rubik-reg", sans-serif;
+    min-width: auto;
+    padding: 0 0.625em;
+    height: 2.2857142857em;
+  }
+}
+.filter__more {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  height: 2.2857142857em;
+  width: 2.2857142857em;
+  font: 0.875em/1.7142857143 "rubik-reg", sans-serif;
+  color: #6924e8;
+  border: 1.5px solid #6924e8;
+  border-radius: 2.1428571429em;
+  transition: all 0.2s ease-out;
+  cursor: pointer;
+}
+@media (max-width: 767px) {
+  .filter__more {
+    display: inline-flex;
+  }
+}
+@media (max-width: 767px) {
+  .filter {
+    padding: 1.25em 0 0.625em;
+  }
+}
+
+.select {
+  position: relative;
+  z-index: 100;
+  font: 1.125em/1.3333333333 "rubik-reg", sans-serif;
+  width: 100%;
+  background-color: transparent;
+  padding-bottom: 0.3333333333em;
+  border-bottom: 1px solid #000;
+}
+.select__placeholder {
+  position: relative;
+  z-index: 2;
+  padding-left: 1.6666666667em;
+  width: 100%;
+  color: #000;
+  cursor: pointer;
+}
+.select__placeholder p {
+  display: none;
+}
+html[dir=ltr] .select__placeholder {
+  padding-left: 0;
+  padding-right: 1.6666666667em;
+}
+
+.select__dropdown {
+  position: absolute;
+  right: 0;
+  top: 1.9444444444em;
+  z-index: 5;
+  display: none;
+  margin: 0;
+  width: 100%;
+  max-height: 8.6111111111em;
+  overflow-y: auto;
+  border-radius: 1.25em;
+  background-color: #fff;
+  border: 1px solid rgba(33, 33, 33, 0.07);
+  box-shadow: 0 0 4px 0 rgba(60, 63, 69, 0.27);
+  padding: 0.375em 0;
+  list-style: none;
+  scrollbar-color: rgba(60, 63, 69, 0.2) #fff;
+  scrollbar-width: thin;
+}
+.select__dropdown::-webkit-scrollbar {
+  width: 0.5rem;
+  cursor: pointer;
+}
+.select__dropdown::-webkit-scrollbar-thumb {
+  width: 8px;
+  margin: 10px 0;
+  border-radius: 5px;
+  background: rgba(60, 63, 69, 0.2);
+}
+.select__dropdown::-webkit-scrollbar-track {
+  background: transparent;
+  margin: 10px 0;
+}
+.select__dropdown-item {
+  cursor: pointer;
+  padding: 0.0555555556em 0.8333333333em;
+  margin: 0.1666666667em 0;
+}
+.select__dropdown-item span {
+  display: none;
+}
+.select__dropdown-item p {
+  margin: 0;
+  display: inline-block;
+}
+.select__dropdown-item:hover {
+  color: #000;
+  background: #f0f0f0;
+}
+.select__dropdown-item--active {
+  font-weight: 600;
+  background: #f0f0f0;
+}
+.select__dropdown-arrow {
+  position: absolute;
+  left: 0.2777777778em;
+  top: 50%;
+  z-index: 1;
+  width: 1.0555555556em;
+  height: 1.0555555556em;
+  background-image: url("data:image/svg+xml,%3Csvg width='19px' height='11px' viewBox='0 0 19 11' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg transform='translate(-36.000000, -764.000000)' fill='%2300A661' fill-rule='nonzero'%3E%3Cg transform='translate(24.000000, 728.000000)'%3E%3Cpath d='M28.4393398,36.4393398 C29.0251263,35.8535534 29.9748737,35.8535534 30.5606602,36.4393398 C31.109835,36.9885146 31.1441584,37.857577 30.6636304,38.4467378 L30.5606602,38.5606602 L22.5606602,46.5606602 C22.0114854,47.109835 21.142423,47.1441584 20.5532622,46.6636304 L20.4393398,46.5606602 L12.4393398,38.5606602 C11.8535534,37.9748737 11.8535534,37.0251263 12.4393398,36.4393398 C12.9885146,35.890165 13.857577,35.8558416 14.4467378,36.3363696 L14.5606602,36.4393398 L21.5,43.379 L28.4393398,36.4393398 Z' id='Icon/Arrow-Copy'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  transition: all 0.2s ease-out;
+  transform: translateY(-50%);
+}
+html[dir=ltr] .select__dropdown-arrow {
+  left: unset;
+  right: 0.2777777778em;
+}
+
+@media (max-width: 1365px) {
+  .select .text {
+    display: none;
+  }
+}
+.select--open {
+  z-index: 101;
+}
+.select--open .select__dropdown {
+  display: block;
+}
+.select--open .select__dropdown-arrow {
+  transform: translateY(-50%) rotateX(180deg);
+}
+
+.list-chevron-bullet--ecomonic-review {
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-flow: column;
+  font: 1.125em/1.5555555556 "rubik-reg", sans-serif;
+  max-width: unset;
+}
+.list-chevron-bullet--ecomonic-review li {
+  padding-right: 1.4444444444em;
+}
+html[dir=ltr] .list-chevron-bullet--ecomonic-review li {
+  padding-left: 1.4444444444em;
+}
+
+.list-chevron-bullet--ecomonic-review li:not(:last-child) {
+  margin-bottom: 0.8888888889em;
+}
+.list-chevron-bullet--ecomonic-review li:before {
+  top: 0.3125em;
+  width: 1em;
+  height: 1em;
+  transform: none;
+}
+@media (max-width: 767px) {
+  .list-chevron-bullet--ecomonic-review {
+    font: 0.875em/1.5714285714 "rubik-reg", sans-serif;
+  }
+  .list-chevron-bullet--ecomonic-review li {
+    padding-right: 1.8571428571em;
+  }
+  .list-chevron-bullet--ecomonic-review li:not(:last-child) {
+    margin-bottom: 0.5714285714em;
+  }
+  .list-chevron-bullet--ecomonic-review li:before {
+    width: 1.1428571429em;
+    height: 1.1428571429em;
+  }
+}
+
+.economic-reviews {
+  position: relative;
+  overflow: hidden;
+  padding: 0 0 4.6875em;
+}
+.economic-reviews__background-left, .economic-reviews__background-right, .economic-reviews__background-bottom {
+  position: absolute;
+  z-index: -1;
+}
+@media (max-width: 767px) {
+  .economic-reviews__background-left, .economic-reviews__background-right, .economic-reviews__background-bottom {
+    display: none;
+  }
+}
+.economic-reviews__background-left {
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.economic-reviews__background-right {
+  right: -0.625em;
+  top: 2.5em;
+}
+.economic-reviews__background-bottom {
+  inset-inline-end: 50%;
+  transform: translateX(-50%);
+  bottom: -180px;
+  max-width: none;
+}
+html[dir=ltr] .economic-reviews__background-bottom {
+  transform: translateX(50%);
+}
+
+.economic-reviews__item {
+  position: relative;
+  padding: 2.5em 2.125em;
+  border: 1px solid rgba(60, 63, 69, 0.27);
+  border-radius: 12px;
+  background-color: #fff;
+  box-shadow: 0 1px 15px 0 rgba(60, 63, 69, 0.2);
+}
+.economic-reviews__item:not(:last-child) {
+  margin-bottom: 2.5em;
+}
+@media (max-width: 767px) {
+  .economic-reviews__item {
+    padding: 1.875em 1.25em;
+  }
+  .economic-reviews__item:not(:last-child) {
+    margin-bottom: 1.875em;
+  }
+}
+@media (max-width: 767px) {
+  .economic-reviews__header {
+    max-width: calc(100% - 7.1428571429em);
+    min-height: 8.75em;
+  }
+}
+.economic-reviews__date {
+  font: 1.25em/1.6 "rubik-reg", sans-serif;
+}
+.economic-reviews__title {
+  margin: 0.8333333333em 0 1.1666666667em;
+  font: 1.5em/1.1666666667 "rubik-bold", sans-serif;
+}
+@media (max-width: 767px) {
+  .economic-reviews__title {
+    margin: 0.3636363636em 0 0.9090909091em;
+    font: 1.375em/1.2727272727 "rubik-bold", sans-serif;
+  }
+}
+.economic-reviews__link {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 2.4444444444em;
+  gap: 1em;
+  color: #000;
+  font: 1.125em/1.7777777778 "rubik-reg", sans-serif;
+}
+.economic-reviews__link svg {
+  transition: all 0.2s ease-out;
+}
+.economic-reviews__link:hover svg {
+  transform: scale(1.1);
+}
+@media (max-width: 767px) {
+  .economic-reviews__link {
+    position: absolute;
+    top: 5em;
+    left: 0;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+    max-width: 5.7142857143em;
+    font: 0.875em/1.2857142857 "rubik-reg", sans-serif;
+  }
+  .economic-reviews__link span {
+    text-align: center;
+  }
+  html[dir=ltr] .economic-reviews__link {
+    left: unset;
+    right: 1.25em;
+    top: 5.3125em;
+  }
+}
+@media (max-width: 767px) {
+  .economic-reviews .typical-header {
+    display: none;
+  }
+}
+.economic-reviews .filter--v2 {
+  padding: 2.125em 0 2.5em;
+}
+@media (max-width: 767px) {
+  .economic-reviews .filter--v2 {
+    display: none;
+  }
+}
+.economic-reviews .filter--select {
+  display: none;
+}
+@media (max-width: 767px) {
+  .economic-reviews .filter--select {
+    display: block;
+    margin-bottom: 2.2222222222em;
+  }
+  .economic-reviews .filter--select .typical-header {
+    display: block;
+    text-align: unset;
+    color: #000;
+    margin-bottom: 0.6666666667em;
+  }
+}
+.economic-reviews .mobile-header {
+  display: none;
+}
+@media (max-width: 767px) {
+  .economic-reviews .mobile-header {
+    display: block;
+    font: 1.5em/1.3333333333 "rubik-reg", sans-serif;
+  }
+}

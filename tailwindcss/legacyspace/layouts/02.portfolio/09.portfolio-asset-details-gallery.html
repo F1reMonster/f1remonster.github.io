@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+<title>Legacy space - Portfolio page</title>
+<meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=yes">
+<link rel="canonical" href='' />
+<meta name="MobileOptimized" content="width"/>
+<meta name="HandheldFriendly" content="True"/>
+<meta name="viewport" content="initial-scale=1.0, width=device-width">
+<link rel="stylesheet" type="text/css" href="../../css/style.css" />
+
+	</head>
+
+	<body class="flex h-full flex-col font-inter">
+		<header class="border-b border-neutral-black-5">
+	<div class="container">
+		<div class="flex items-center justify-between py-3 lg:py-7">
+			<button id="burgerMenu" class="flex items-center justify-center flex-shrink-0 w-10 h-10 rounded-6lx bg-neutral-black-3 text-primary-black lg:hidden">
+				<span class="icon icon--burger"></span>
+			</button>
+			<a href="../../index.html" class="flex-shrink-0 hidden lg:block">
+				<img decoding="async" src="../../img/svg/logo.svg" title="" alt="" loading="lazy" class="w-25.5 lg:w-35" />
+			</a>
+			<div class="flex items-center lg:gap-2.5 gap-2">
+				<a href="#" class="flex h-10 w-full items-center justify-center rounded-xl bg-primary px-4 py-2.5 font-semibold text-primary-100 transition-all duration-300 hover:bg-primary-hover lg:hidden"><span>Upgrade plan</span></a>
+				<button class="items-center justify-center flex-shrink-0 hidden transition-all duration-300 lg:flex lg:w-12 lg:h-12 rounded-6lx bg-neutral-black-3 text-primary-black lg:hover:bg-neutral-black-5">
+					<span class="icon icon--search"></span>
+				</button>
+				<button class="flex items-center justify-center flex-shrink-0 w-10 h-10 transition-all duration-300 lg:w-12 lg:h-12 rounded-6lx lg:bg-neutral-black-3 text-primary-black lg:hover:bg-neutral-black-5">
+					<span class="icon icon--notification"></span>
+				</button>
+				<div class="relative items-center flex-shrink-0 hidden gap-3 cursor-pointer lg:flex group">
+					<div class="flex items-center justify-center flex-shrink-0 w-12 h-12 rounded-6lx bg-neutral-black-3 text-primary-black">
+						<span>A</span>
+					</div>
+					<div class="">
+						<div class="flex items-center gap-1.5">
+							<div>Andrii</div>
+							<span class="transition-all duration-300 transform icon icon--chevron-down group-hover:rotate-x-180"></span>
+						</div>
+					</div>
+					<div class="pt-4 mt-8 opacity-0 lg:pointer-events-none lg:absolute lg:right-0 lg:top-0 lg:z-50 lg:transition-all lg:duration-300 lg:group-hover:pointer-events-auto lg:group-hover:translate-y-4 lg:group-hover:opacity-100">
+						<div class="bg-white w-68 rounded-3xl shadow-header-menu">
+							<div class="px-6 pt-6 pb-5 text-lg font-bold border-b border-b-neutral-black-5 text-primary-black">Andrii Chernov</div>
+							<ul class="flex flex-col px-3 pt-5 pb-6">
+								<li>
+									<a href="#" class="flex items-center gap-5 px-3 py-3 transition-all duration-300 rounded-xl text-primary-black hover:bg-neutral-black-3">
+										<span class="icon icon--user"></span>
+										<span class="text-sm font-medium">Profile Details</span>
+									</a>
+								</li>
+								<li>
+									<a href="#" class="flex items-center gap-5 px-3 py-3 transition-all duration-300 rounded-xl text-primary-black hover:bg-neutral-black-3">
+										<span class="icon icon--checklist-money"></span>
+										<span class="text-sm font-medium">My plan</span>
+									</a>
+								</li>
+								<li>
+									<a href="#" class="flex items-center gap-5 px-3 py-3 transition-all duration-300 rounded-xl text-primary-black hover:bg-neutral-black-3">
+										<span class="icon icon--exit"></span>
+										<span class="text-sm font-medium">Log Out</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+
+		<main class="flex-grow py-4 lg:py-12">
+			<div class="container">
+				<div class="flex gap-13">
+					<aside class="hidden w-fit max-w-50 lg:block">
+	<a href="#" class="flex h-10 w-full items-center justify-center gap-2 rounded-xl bg-primary px-4 py-2.5 text-sm font-semibold text-primary-100 transition-all duration-300 hover:bg-primary-hover">
+		<span class="w-5 h-5 icon icon--arrow-nav"></span>
+		<span>Upgrade plan</span>
+	</a>
+
+	<ul class="flex flex-col gap-2 mt-10">
+		<li>
+			<a href="#" class="flex items-center gap-4.5 rounded-xl px-4 py-2.5 text-neutral-black-70 transition-all duration-300 hover:bg-neutral-black-3">
+				<span class="icon icon--dashboard"></span>
+				<span class="leading-150">Dashboard</span>
+			</a>
+		</li>
+		<li>
+			<a href="#" class="flex items-center gap-4.5 rounded-xl px-4 py-2.5 font-medium text-primary-black transition-all duration-300 hover:bg-neutral-black-3">
+				<span class="icon icon--portfolio"></span>
+				<span class="leading-150">Portfolio</span>
+			</a>
+		</li>
+		<li>
+			<a href="#" class="flex items-center gap-4.5 rounded-xl px-4 py-2.5 text-neutral-black-70 transition-all duration-300 hover:bg-neutral-black-3">
+				<span class="icon icon--collections"></span>
+				<span class="leading-150">Collections</span>
+			</a>
+		</li>
+		<li>
+			<a href="#" class="flex items-center gap-4.5 rounded-xl px-4 py-2.5 text-neutral-black-70 transition-all duration-300 hover:bg-neutral-black-3">
+				<span class="icon icon--identification"></span>
+				<span class="leading-150">Identification</span>
+			</a>
+		</li>
+		<li>
+			<a href="#" class="flex items-center gap-4.5 rounded-xl px-4 py-2.5 text-neutral-black-70 transition-all duration-300 hover:bg-neutral-black-3">
+				<span class="icon icon--requests"></span>
+				<span class="leading-150">Requests</span>
+			</a>
+		</li>
+	</ul>
+</aside>
+
+					<div class="flex-grow">
+						<div class="mx-auto max-w-225">
+							<div class="flex items-center justify-between gap-6">
+								<div>
+									<h1 class="text-sm2x font-semibold leading-125 tracking-tight text-primary-black lg:text-base2x">Asset details</h1>
+								</div>
+								<div class="flex items-center gap-2 lg:hidden">
+									<button class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-6lx bg-neutral-black-3 text-primary-black transition-all duration-300 hover:bg-neutral-black-5">
+										<span class="icon icon--share-arrow"></span>
+									</button>
+									<div class="group relative">
+										<button class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-6lx bg-neutral-black-3 text-primary-black transition-all duration-300 hover:bg-neutral-black-5">
+											<span class="icon icon--dots-menu"></span>
+										</button>
+										<div class="pointer-events-none absolute right-0 top-0 z-50 mt-4 pt-4 opacity-0 transition-all duration-300 group-hover:pointer-events-auto group-hover:translate-y-4 group-hover:opacity-100 lg:mt-8">
+											<div class="w-50 rounded-xl border border-neutral-black-5 bg-white py-2 shadow-custom">
+												<div class="max-h-66 overflow-auto scrollbar-thin">
+													<ul class="flex flex-col">
+														<li>
+															<a href="#" class="flex items-center gap-2 px-4 py-2.5 text-primary-black transition-all duration-300 hover:bg-neutral-black-3">
+																<span class="icon icon--pen-edit"></span>
+																<span class="text-sm font-medium">Edit</span>
+															</a>
+														</li>
+														<li>
+															<a href="#" class="flex items-center gap-2 px-4 py-2.5 text-primary-black transition-all duration-300 hover:bg-neutral-black-3">
+																<span class="icon icon--mailbox-archive"></span>
+																<span class="text-sm font-medium">Archive</span>
+															</a>
+														</li>
+														<li>
+															<a href="#" class="flex items-center gap-2 px-4 py-2.5 text-primary-black transition-all duration-300 hover:bg-neutral-black-3">
+																<span class="icon icon--hand-coins"></span>
+																<span class="text-sm font-medium">Transfer ownership</span>
+															</a>
+														</li>
+														<li>
+															<a href="#" class="flex items-center gap-2 px-4 py-2.5 text-error-60 transition-all duration-300 hover:bg-neutral-black-3">
+																<span class="icon icon--trash-bin"></span>
+																<span class="text-sm font-medium">Delete</span>
+															</a>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="mt-6">
+								<div class="flex items-center gap-5 lg:gap-8">
+									<div class="h-20 w-20 flex-shrink-0 overflow-clip rounded-full lg:h-28 lg:w-28">
+										<img decoding="async" class="h-full w-full object-cover" src="../../img/portfolio/img-02.webp" title="" alt="" loading="lazy" />
+									</div>
+									<div class="flex-grow">
+										<h2 class="text-xl font-semibold leading-125 tracking-tight text-primary-black lg:text-2xl">United Arab Coin</h2>
+										<div class="mt-4 flex flex-wrap items-center justify-between gap-2">
+											<ul class="flex flex-wrap gap-2">
+												<li class="flex h-10.5 w-fit flex-col justify-center rounded-xl border border-dashed border-neutral-black-30 px-2 text-xs lg:h-12 lg:px-3 lg:text-sm">
+													<p class="font-semibold">$20.00</p>
+													<p class="text-neutral-black-50">Cost</p>
+												</li>
+												<li class="flex h-10.5 w-fit flex-col justify-center rounded-xl border border-dashed border-neutral-black-30 px-2 text-xs lg:h-12 lg:px-3 lg:text-sm">
+													<p class="font-semibold">$20.00</p>
+													<p class="text-neutral-black-50">Evaluation</p>
+												</li>
+											</ul>
+											<div class="hidden flex-shrink-0 gap-2 lg:flex">
+												<a href="#" class="flex h-12 w-fit items-center justify-center gap-2 rounded-xl border border-neutral-black-5 px-5 py-3.5 text-sm transition-all duration-300 hover:bg-neutral-black-1">
+													<span class="icon icon--share-arrow"></span>
+													<span>Share</span>
+												</a>
+												<button class="flex h-12 w-12 items-center justify-center gap-2 rounded-xl border border-neutral-black-5 px-5 py-3.5 text-sm transition-all duration-300 hover:bg-neutral-black-1">
+													<span class="icon icon--pen-edit"></span>
+												</button>
+												<div class="group relative">
+													<button class="flex h-12 w-12 items-center justify-center gap-2 rounded-xl border border-neutral-black-5 px-5 py-3.5 text-sm transition-all duration-300 hover:bg-neutral-black-1">
+														<span class="icon icon--dots-menu"></span>
+													</button>
+													<div class="pointer-events-none absolute right-0 top-0 z-50 mt-4 pt-4 opacity-0 transition-all duration-300 group-hover:pointer-events-auto group-hover:translate-y-4 group-hover:opacity-100 lg:mt-8">
+														<div class="w-50 rounded-xl border border-neutral-black-5 bg-white py-2 shadow-custom">
+															<div class="max-h-66 overflow-auto scrollbar-thin">
+																<ul class="flex flex-col">
+																	<li>
+																		<a href="#" class="flex items-center gap-2 px-4 py-2.5 text-primary-black transition-all duration-300 hover:bg-neutral-black-3">
+																			<span class="icon icon--mailbox-archive"></span>
+																			<span class="text-sm font-medium">Archive</span>
+																		</a>
+																	</li>
+																	<li>
+																		<a href="#" class="flex items-center gap-2 px-4 py-2.5 text-primary-black transition-all duration-300 hover:bg-neutral-black-3">
+																			<span class="icon icon--hand-coins"></span>
+																			<span class="text-sm font-medium">Transfer ownership</span>
+																		</a>
+																	</li>
+																	<li>
+																		<a href="#" class="flex items-center gap-2 px-4 py-2.5 text-error-60 transition-all duration-300 hover:bg-neutral-black-3">
+																			<span class="icon icon--trash-bin"></span>
+																			<span class="text-sm font-medium">Delete</span>
+																		</a>
+																	</li>
+																</ul>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="mt-8 lg:mt-12">
+								<ul class="flex flex-wrap gap-2 lg:justify-between lg:gap-0 lg:border-b lg:border-b-neutral-black-3/80 lg:pb-3">
+									<li>
+										<button class="group relative h-7.5 rounded-3xl border border-neutral-black-5 px-2.5 py-1 text-sm leading-150 transition-all duration-300 lg:h-auto lg:border-0 lg:bg-transparent lg:px-2 lg:py-0 lg:text-base lg:hover:text-shadow-mid">
+											<span>Overview</span>
+											<span class="pointer-events-none absolute -bottom-3 left-0 right-0 hidden h-0.5 rounded-tl-sm rounded-tr-sm bg-primary-100 opacity-0 transition-all duration-300 group-hover:opacity-100 lg:block"></span>
+										</button>
+									</li>
+									<li>
+										<button class="group relative h-7.5 rounded-3xl border border-primary bg-primary px-2.5 py-1 text-sm leading-150 transition-all duration-300 text-shadow-mid lg:h-auto lg:border-0 lg:bg-transparent lg:px-2 lg:py-0 lg:text-base">
+											<span> Gallery</span>
+											<span class="pointer-events-none absolute -bottom-3 left-0 right-0 hidden h-0.5 rounded-tl-sm rounded-tr-sm bg-primary-100 opacity-100 transition-all duration-300 lg:block"></span>
+										</button>
+									</li>
+									<li>
+										<button class="group relative h-7.5 rounded-3xl border border-neutral-black-5 px-2.5 py-1 text-sm leading-150 transition-all duration-300 lg:h-auto lg:border-0 lg:bg-transparent lg:px-2 lg:py-0 lg:text-base lg:hover:text-shadow-mid">
+											<span>Moments</span>
+											<span class="pointer-events-none absolute -bottom-3 left-0 right-0 hidden h-0.5 rounded-tl-sm rounded-tr-sm bg-primary-100 opacity-0 transition-all duration-300 group-hover:opacity-100 lg:block"></span>
+										</button>
+									</li>
+									<li>
+										<button class="group relative h-7.5 rounded-3xl border border-neutral-black-5 px-2.5 py-1 text-sm leading-150 transition-all duration-300 lg:h-auto lg:border-0 lg:bg-transparent lg:px-2 lg:py-0 lg:text-base lg:hover:text-shadow-mid">
+											<span>Evaluations</span>
+											<span class="pointer-events-none absolute -bottom-3 left-0 right-0 hidden h-0.5 rounded-tl-sm rounded-tr-sm bg-primary-100 opacity-0 transition-all duration-300 group-hover:opacity-100 lg:block"></span>
+										</button>
+									</li>
+									<li>
+										<button class="group relative h-7.5 rounded-3xl border border-neutral-black-5 px-2.5 py-1 text-sm leading-150 transition-all duration-300 lg:h-auto lg:border-0 lg:bg-transparent lg:px-2 lg:py-0 lg:text-base lg:hover:text-shadow-mid">
+											<span>Documents</span>
+											<span class="pointer-events-none absolute -bottom-3 left-0 right-0 hidden h-0.5 rounded-tl-sm rounded-tr-sm bg-primary-100 opacity-0 transition-all duration-300 group-hover:opacity-100 lg:block"></span>
+										</button>
+									</li>
+									<li>
+										<button class="group relative h-7.5 rounded-3xl border border-neutral-black-5 px-2.5 py-1 text-sm leading-150 transition-all duration-300 lg:h-auto lg:border-0 lg:bg-transparent lg:px-2 lg:py-0 lg:text-base lg:hover:text-shadow-mid">
+											<span>Identifications</span>
+											<span class="pointer-events-none absolute -bottom-3 left-0 right-0 hidden h-0.5 rounded-tl-sm rounded-tr-sm bg-primary-100 opacity-0 transition-all duration-300 group-hover:opacity-100 lg:block"></span>
+										</button>
+									</li>
+								</ul>
+							</div>
+
+							<div class="mt-8 lg:mt-9">
+								<div class="flex flex-col justify-between gap-6 md:flex-row md:gap-13">
+									<div>
+										<h2 class="text-2xl font-semibold leading-125 tracking-tight text-primary-black">Gallery</h2>
+										<p class="mt-1 text-sm leading-150 text-neutral-black-70 lg:text-base">Keep images of your asset here</p>
+									</div>
+									<button class="flex h-12 flex-shrink-0 items-center justify-center gap-2 rounded-xl bg-primary px-5 py-3.5 text-sm font-semibold text-primary-100 transition-all duration-300 hover:bg-primary-hover md:w-fit">
+										<span class="icon icon--plus"></span>
+										<span>Add image</span>
+									</button>
+								</div>
+							</div>
+
+							<div class="mt-9 grid grid-cols-2 gap-3.75 md:grid-cols-3 lg:mt-8 lg:gap-7.5">
+								<div class="relative">
+									<div class="group relative h-30 w-full overflow-clip rounded-xl bg-loading bg-contain bg-center bg-no-repeat xs:h-51">
+										<img decoding="async" class="h-full w-full object-cover object-top" src="../../img/portfolio/img-01.webp" title="" alt="" loading="lazy" />
+
+										<div class="absolute right-0 top-3 flex flex-col items-end gap-1 lg:top-4 lg:gap-2">
+											<div class="z-1 w-fit rounded-bl-lg rounded-tl-lg bg-white px-2 py-0.5 text-xs lg:px-3 lg:py-1 lg:text-sm">Primary</div>
+											<div class="z-1 w-fit rounded-bl-lg rounded-tl-lg bg-purple px-2 py-0.5 text-xs text-white lg:px-3 lg:py-1 lg:text-sm">#Coin</div>
+										</div>
+										<a href="#" class="pointer-events-none absolute inset-0 z-1 flex items-center justify-center bg-black/40 opacity-0 transition-all duration-200 group-hover:pointer-events-auto group-hover:opacity-100">
+											<span class="icon icon--search text-white"></span>
+										</a>
+									</div>
+
+									<div class="relative mt-3 flex items-center justify-between gap-1">
+										<div class="line-clamp-1 text-sm font-medium leading-none">IMG_9249.JPG</div>
+										<div class="group flex">
+											<button class="flex h-7 w-7 items-center justify-center">
+												<span class="icon icon--dots-menu"></span>
+											</button>
+											<div class="pointer-events-none absolute right-0 top-0 z-1 w-full pt-4 opacity-0 transition-all duration-300 group-hover:pointer-events-auto group-hover:translate-y-4 group-hover:opacity-100 xs:w-auto">
+												<div class="w-full rounded-xl border border-neutral-black-5 bg-white py-2 shadow-custom xs:w-56">
+													<div class="max-h-66 overflow-auto scrollbar-thin">
+														<p class="px-4 pb-1 pt-2 text-xs text-neutral-black-70">Actions</p>
+														<ul class="flex flex-col">
+															<li>
+																<a href="#" class="flex items-center gap-2 px-4 py-2.5 text-primary-black transition-all duration-300 hover:bg-neutral-black-3">
+																	<span class="icon icon--stars-sparkle"></span>
+																	<span class="text-sm font-medium">Make primary </span>
+																</a>
+															</li>
+
+															<li>
+																<a href="#" class="flex items-center gap-2 px-4 py-2.5 text-error-60 transition-all duration-300 hover:bg-neutral-black-3">
+																	<span class="icon icon--trash-bin"></span>
+																	<span class="text-sm font-medium">Delete</span>
+																</a>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="relative">
+									<div class="group relative h-30 w-full overflow-clip rounded-xl bg-loading bg-contain bg-center bg-no-repeat xs:h-51">
+										<img decoding="async" class="h-full w-full object-cover object-top" src="../../img/portfolio/img-02.webp" title="" alt="" loading="lazy" />
+										<a href="#" class="pointer-events-none absolute inset-0 z-1 flex items-center justify-center bg-black/40 opacity-0 transition-all duration-200 group-hover:pointer-events-auto group-hover:opacity-100">
+											<span class="icon icon--search text-white"></span>
+										</a>
+									</div>
+
+									<div class="relative mt-3 flex items-center justify-between gap-1">
+										<div class="line-clamp-1 text-sm font-medium leading-none">IMG_9249.JPG</div>
+										<div class="group flex">
+											<button class="flex h-7 w-7 items-center justify-center">
+												<span class="icon icon--dots-menu"></span>
+											</button>
+											<div class="pointer-events-none absolute right-0 top-0 z-1 w-full pt-4 opacity-0 transition-all duration-300 group-hover:pointer-events-auto group-hover:translate-y-4 group-hover:opacity-100 xs:w-auto">
+												<div class="w-full rounded-xl border border-neutral-black-5 bg-white py-2 shadow-custom xs:w-56">
+													<div class="max-h-66 overflow-auto scrollbar-thin">
+														<p class="px-4 pb-1 pt-2 text-xs text-neutral-black-70">Actions</p>
+														<ul class="flex flex-col">
+															<li>
+																<a href="#" class="flex items-center gap-2 px-4 py-2.5 text-primary-black transition-all duration-300 hover:bg-neutral-black-3">
+																	<span class="icon icon--stars-sparkle"></span>
+																	<span class="text-sm font-medium">Make primary </span>
+																</a>
+															</li>
+
+															<li>
+																<a href="#" class="flex items-center gap-2 px-4 py-2.5 text-error-60 transition-all duration-300 hover:bg-neutral-black-3">
+																	<span class="icon icon--trash-bin"></span>
+																	<span class="text-sm font-medium">Delete</span>
+																</a>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="relative">
+									<div class="group relative h-30 w-full overflow-clip rounded-xl bg-loading bg-contain bg-center bg-no-repeat xs:h-51">
+										<img decoding="async" class="h-full w-full object-cover object-top" src="../../img/portfolio/img-03.webp" title="" alt="" loading="lazy" />
+										<a href="#" class="pointer-events-none absolute inset-0 z-1 flex items-center justify-center bg-black/40 opacity-0 transition-all duration-200 group-hover:pointer-events-auto group-hover:opacity-100">
+											<span class="icon icon--search text-white"></span>
+										</a>
+									</div>
+
+									<div class="relative mt-3 flex items-center justify-between gap-1">
+										<div class="line-clamp-1 text-sm font-medium leading-none">IMG_9249.JPG</div>
+										<div class="group flex">
+											<button class="flex h-7 w-7 items-center justify-center">
+												<span class="icon icon--dots-menu"></span>
+											</button>
+											<div class="pointer-events-none absolute right-0 top-0 z-1 w-full pt-4 opacity-0 transition-all duration-300 group-hover:pointer-events-auto group-hover:translate-y-4 group-hover:opacity-100 xs:w-auto">
+												<div class="w-full rounded-xl border border-neutral-black-5 bg-white py-2 shadow-custom xs:w-56">
+													<div class="max-h-66 overflow-auto scrollbar-thin">
+														<p class="px-4 pb-1 pt-2 text-xs text-neutral-black-70">Actions</p>
+														<ul class="flex flex-col">
+															<li>
+																<a href="#" class="flex items-center gap-2 px-4 py-2.5 text-primary-black transition-all duration-300 hover:bg-neutral-black-3">
+																	<span class="icon icon--stars-sparkle"></span>
+																	<span class="text-sm font-medium">Make primary </span>
+																</a>
+															</li>
+
+															<li>
+																<a href="#" class="flex items-center gap-2 px-4 py-2.5 text-error-60 transition-all duration-300 hover:bg-neutral-black-3">
+																	<span class="icon icon--trash-bin"></span>
+																	<span class="text-sm font-medium">Delete</span>
+																</a>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="relative">
+									<div class="group relative h-30 w-full overflow-clip rounded-xl bg-loading bg-contain bg-center bg-no-repeat xs:h-51">
+										<img decoding="async" class="h-full w-full object-cover object-top" src="../../img/portfolio/img-01.webp" title="" alt="" loading="lazy" />
+										<a href="#" class="pointer-events-none absolute inset-0 z-1 flex items-center justify-center bg-black/40 opacity-0 transition-all duration-200 group-hover:pointer-events-auto group-hover:opacity-100">
+											<span class="icon icon--search text-white"></span>
+										</a>
+									</div>
+
+									<div class="relative mt-3 flex items-center justify-between gap-1">
+										<div class="line-clamp-1 text-sm font-medium leading-none">IMG_9249.JPG</div>
+										<div class="group flex">
+											<button class="flex h-7 w-7 items-center justify-center">
+												<span class="icon icon--dots-menu"></span>
+											</button>
+											<div class="pointer-events-none absolute right-0 top-0 z-1 w-full pt-4 opacity-0 transition-all duration-300 group-hover:pointer-events-auto group-hover:translate-y-4 group-hover:opacity-100 xs:w-auto">
+												<div class="w-full rounded-xl border border-neutral-black-5 bg-white py-2 shadow-custom xs:w-56">
+													<div class="max-h-66 overflow-auto scrollbar-thin">
+														<p class="px-4 pb-1 pt-2 text-xs text-neutral-black-70">Actions</p>
+														<ul class="flex flex-col">
+															<li>
+																<a href="#" class="flex items-center gap-2 px-4 py-2.5 text-primary-black transition-all duration-300 hover:bg-neutral-black-3">
+																	<span class="icon icon--stars-sparkle"></span>
+																	<span class="text-sm font-medium">Make primary </span>
+																</a>
+															</li>
+
+															<li>
+																<a href="#" class="flex items-center gap-2 px-4 py-2.5 text-error-60 transition-all duration-300 hover:bg-neutral-black-3">
+																	<span class="icon icon--trash-bin"></span>
+																	<span class="text-sm font-medium">Delete</span>
+																</a>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- error message -->
+							<div class="sticky bottom-0 z-10 py-4">
+								<div class="flex w-full gap-2 rounded-xl border border-error-100 bg-amour p-6 shadow-header-menu">
+									<div class="icon icon--disabled text-error-100"></div>
+									<p class="mt-0.5 flex-grow text-sm font-medium">Error: Uplouded image is too large. The max size is currently set to 5mb.</p>
+									<button class="flex">
+										<span class="icon icon--close"></span>
+									</button>
+								</div>
+							</div>
+							<!-- ./error message -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<div id="menuMobile" class="fixed top-0 bottom-0 left-0 z-50 w-full px-8 py-4 transition-all duration-300 bg-white -translate-x-p110 shadow-header-menu sd:w-90 lg:-translate-x-p110">
+	<div class="flex flex-col items-start">
+		<button id="closeMenuMobile" class="flex items-center justify-center">
+			<span class="icon icon--chevron-left"></span>
+		</button>
+		<div class="mt-8 h-[calc(var(--app-height)-5.5rem)] w-full flex-grow overflow-auto">
+			<div class="flex items-center gap-5">
+				<div class="flex items-center justify-center flex-shrink-0 rounded-full h-13 w-13 bg-neutral-black-3">
+					<span class="icon icon--user"></span>
+				</div>
+				<div class="text-2xl font-semibold">Andrii Chernov</div>
+			</div>
+			<div class="flex flex-wrap items-center gap-3 mt-5">
+				<a href="#" class="flex h-9 items-center gap-1 rounded-6.5lx border border-neutral-black-5 px-3 py-2 transition-all duration-300 hover:bg-neutral-black-3">
+					<span class="w-5 h-5 icon icon--user"></span>
+					<span class="text-sm font-medium">Profile Details</span>
+				</a>
+				<a href="#" class="flex h-9 items-center gap-1 rounded-6.5lx border border-neutral-black-5 px-3 py-2 transition-all duration-300 hover:bg-neutral-black-3">
+					<span class="w-5 h-5 icon icon--checklist-money"></span>
+					<span class="text-sm font-medium">My Plan</span>
+				</a>
+			</div>
+
+			<a href="#" class="mt-9 flex h-12 w-full items-center justify-center gap-2 rounded-xl bg-primary px-5 py-3.5 text-sm font-semibold text-primary-100 transition-all duration-300 hover:bg-primary-hover">
+				<span class="w-5 h-5 icon icon--arrow-nav"></span>
+				<span>Upgrade plan</span>
+			</a>
+
+			<ul class="mt-9">
+				<li class="pb-3 mb-3 border-b border-b-neutral-black-3">
+					<a href="#" class="flex items-center gap-5 py-2.5 font-medium">
+						<span class="icon icon--dashboard"></span>
+						<span class="leading-150">Dashboard</span>
+						<span class="ml-auto icon icon--chevron-right"></span>
+					</a>
+				</li>
+				<li class="pb-3 mb-3 border-b border-b-neutral-black-3">
+					<a href="#" class="flex items-center gap-5 py-2.5">
+						<span class="icon icon--portfolio"></span>
+						<span class="leading-150">Portfolio</span>
+						<span class="ml-auto icon icon--chevron-right"></span>
+					</a>
+				</li>
+				
+				<li class="pb-3 mb-3 border-b border-b-neutral-black-3">
+					<a href="#" class="flex items-center gap-5 py-2.5">
+						<span class="icon icon--collections"></span>
+						<span class="leading-150">Collections</span>
+						<span class="ml-auto icon icon--chevron-right"></span>
+					</a>
+				</li>
+				<li class="pb-3 mb-3 border-b border-b-neutral-black-3">
+					<a href="#" class="flex items-center gap-5 py-2.5">
+						<span class="icon icon--identification"></span>
+						<span class="leading-150">Identification</span>
+						<span class="ml-auto icon icon--chevron-right"></span>
+					</a>
+				</li>
+				<li class="pb-3 mb-3">
+					<a href="#" class="flex items-center gap-5 py-2.5">
+						<span class="icon icon--requests"></span>
+				<span class="leading-150">Requests</span>
+						<span class="ml-auto icon icon--chevron-right"></span>
+					</a>
+				</li>
+			</ul>
+
+			<a href="#" class="flex items-center justify-center h-12 gap-1 px-3 py-2 transition-all duration-300 border rounded-xl border-neutral-black-5 hover:bg-neutral-black-3">
+				<span class="text-sm font-medium">Sign Out</span>
+			</a>
+		</div>
+	</div>
+	<div class="z-30 invisible hidden overflow-clip bg-neutral-black-1/50 backdrop-blur-sm"></div>
+</div>
+
+ <script src="../../js/app.js"></script>
+
+	</body>
+</html>

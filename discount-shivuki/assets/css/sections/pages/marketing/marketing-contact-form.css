@@ -1,0 +1,18 @@
+.marketing-wrap .contact-form {
+  margin-top: 4.125em;
+}
+@media (max-width: 767px) {
+  .marketing-wrap .contact-form {
+    margin-top: 2.1875em;
+  }
+}
+.marketing-wrap .contact-form-section {
+  padding-bottom: 2.9166666667vw;
+  padding-top: 5.2083333333vw;
+}
+@media (max-width: 767px) {
+  .marketing-wrap .contact-form-section {
+    padding-top: 1.875em;
+    padding-bottom: 0.9375em;
+  }
+}

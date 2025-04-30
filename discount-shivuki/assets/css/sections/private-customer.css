@@ -1,0 +1,121 @@
+.private-customer .list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.private-customer canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.private-customer {
+  padding: 1.5625em 0 1.875em;
+}
+@media screen and (max-width: 767px) {
+  .private-customer {
+    padding: 0.3125em 0 30px;
+  }
+}
+.private-customer canvas {
+  z-index: -1;
+}
+.private-customer canvas.shadow-canvas {
+  filter: blur(0.625em);
+  z-index: -2;
+}
+.private-customer .wrap {
+  color: #000;
+  max-width: 1230px;
+  margin: 0 auto;
+  position: relative;
+  padding: 7.125em 0 6.75em;
+}
+@media screen and (max-width: 767px) {
+  .private-customer .wrap {
+    padding: 4.625em 0 76px;
+    max-width: 24.375em;
+  }
+}
+.private-customer .icon {
+  position: absolute;
+  top: -1.8125em;
+  width: 5.75em;
+  height: 5.75em;
+  inset-inline-end: 50%;
+  transform: translateX(-50%) rotate(180deg);
+}
+html[dir=ltr] .private-customer .icon {
+  transform: translateX(50%) rotate(180deg);
+}
+
+@media screen and (max-width: 767px) {
+  .private-customer .icon {
+    width: 3.75em;
+    height: 3.75em;
+    top: -10px;
+  }
+}
+.private-customer .header {
+  font: 400 1.875em/1.4 "rubik-reg", sans-serif;
+  margin: 0 0 1.0666666667em;
+  text-align: center;
+}
+@media screen and (max-width: 767px) {
+  .private-customer .header {
+    font-size: 1.25em;
+    line-height: 1.5;
+    max-width: 14.55em;
+    margin: 0 auto 0.7em;
+  }
+}
+.private-customer .list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3.125em;
+}
+@media screen and (max-width: 767px) {
+  .private-customer .list {
+    display: block;
+  }
+}
+.private-customer .list li {
+  font: 1.5em/1.5 "rubik-reg", sans-serif;
+}
+@media screen and (max-width: 767px) {
+  .private-customer .list li {
+    font-size: 1em;
+    line-height: 1.625;
+    position: relative;
+    inset-inline-start: calc(50% - 4.0625em);
+  }
+  .private-customer .list li:not(:last-child) {
+    margin-bottom: 1.125em;
+  }
+}
+.private-customer .list li .tick {
+  margin-inline-end: 0.3333333333em;
+  vertical-align: -0.125em;
+}
+@media screen and (max-width: 767px) {
+  .private-customer .list li .tick {
+    width: 15px;
+  }
+}
+.private-customer .more {
+  position: absolute;
+  top: calc(100% - 1.6em);
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 12em;
+}
+@media screen and (max-width: 767px) {
+  .private-customer .more {
+    min-width: 8.5625em;
+  }
+}

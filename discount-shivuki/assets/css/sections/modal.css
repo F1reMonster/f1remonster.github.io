@@ -1,0 +1,48 @@
+.fancybox__backdrop {
+  background: rgba(243, 243, 243, 0.9);
+}
+
+.carousel__button {
+  display: none;
+}
+
+.modal {
+  direction: rtl;
+  padding: 1.875em 1.875em 2.5625em;
+  box-shadow: 0 1px 15px 0 rgba(60, 63, 69, 0.2);
+  border-radius: 0.75em;
+}
+html[dir=ltr] .modal {
+  direction: rtl;
+}
+
+.modal__img {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.25em;
+}
+.modal__btns-item {
+  text-align: center;
+}
+.modal--mobile {
+  max-width: 21.875em;
+  width: 100%;
+}
+.modal--mobile .typical-header {
+  font: 2.5em/1.1 "mixtape-reg", sans-serif;
+  margin-bottom: 0.75em;
+}
+.modal--mobile .list-chevron-bullet {
+  justify-content: flex-start;
+  align-items: flex-start;
+  font: 1.125em/1.3333333333 "rubik-reg", sans-serif;
+  gap: 0.6666666667em;
+  margin-bottom: 1.6666666667em;
+}
+.modal--mobile .list-chevron-bullet li {
+  padding-right: 1.4444444444em;
+}
+.modal--mobile .list-chevron-bullet li::before {
+  width: 1em;
+  height: 1em;
+}

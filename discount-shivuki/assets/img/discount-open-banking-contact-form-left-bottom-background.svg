@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="341px" height="553px" viewBox="0 0 341 553" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>B4EF7D82-BEEA-4B28-84B6-93BA68980485</title>
+    <defs>
+        <linearGradient x1="44.5246607%" y1="22.0701966%" x2="79.226625%" y2="20.2184266%" id="linearGradient-1">
+            <stop stop-color="#8FE600" offset="0%"></stop>
+            <stop stop-color="#2FC059" offset="90.4556381%"></stop>
+            <stop stop-color="#218370" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" fill-opacity="0.3">
+        <g id="Desktop-1920_DISCOUNT---Open-banking---main" transform="translate(0.000000, -3142.000000)" fill="url(#linearGradient-1)">
+            <path d="M92.5500642,3843.96115 C195.751975,3843.96115 289.403911,3488.98862 289.403911,3342.93746 C289.403911,3196.8863 79.9091754,3149.96115 -23.292735,3149.96115 C-126.494645,3149.96115 -210.156324,3268.35901 -210.156324,3414.41017 C-210.156324,3560.46133 -10.6518462,3843.96115 92.5500642,3843.96115 Z" id="Oval-Copy-3" transform="translate(39.623793, 3496.961146) rotate(23.000000) translate(-39.623793, -3496.961146) "></path>
+        </g>
+    </g>
+</svg>

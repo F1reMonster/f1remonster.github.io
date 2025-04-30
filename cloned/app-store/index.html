@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Google Play Clone</title>
+
+		<link rel="stylesheet" href="assets/css/styles.css" />
+	</head>
+	<style>
+		.index-header {
+			display: flex;
+			align-items: center;
+			gap: 1.5rem;
+			padding: 16px 0;
+		}
+
+		.index-header p {
+			font-size: 1rem;
+			font-weight: 500;
+			color: var(--deep-sea);
+		}
+
+		.index-logo {
+			display: flex;
+			gap: 1rem;
+			align-items: center;
+			font-family: var(--font-secondary);
+			font-size: 1.5rem;
+			font-weight: 600;
+			line-height: 120%;
+			
+		}
+
+		.index-logo .icon--apple {
+			width: 4rem;
+			height: 4rem;
+			flex-shrink: 0;
+		}
+
+		.index-pages-list {
+			columns: 1;
+			margin-top: 2rem;
+		}
+
+		.index-pages-list li {
+			page-break-inside: avoid;
+		}
+
+		.index-pages-list li:not(:first-child) {
+			margin-top: 1rem;
+		}
+
+		.index-pages-list li p:first-child {
+			font-family: var(--font-secondary);
+			font-size: 1.125rem;
+			font-weight: 500;
+			color: var(--deep-sea);
+		}
+
+		.index-pages-list li p {
+			font-size: 0.875rem;
+			color: var(--shuttle-gray);
+		}
+
+		@media (min-width: 37.5em) {
+			.index-logo {
+				font-size: 2.5rem;
+			}
+
+			.index-logo svg {
+				width: 3rem;
+				height: 3rem;
+			}
+
+			.index-header p {
+				font-size: 1.375rem;
+			}
+		}
+
+		@media (min-width: 450px) {
+			.index-pages-list {
+				columns: 2;
+			}
+		}
+
+		
+	</style>
+	<body>
+		<div class="container">
+			<div class="index-header">
+				<div aria-label="Логотип Apple Store" class="index-logo">
+					<span class="icon icon--apple"></span>
+					<span>Apple Store Clone</span>
+				</div>
+				<p>Completed pages</p>
+			</div>
+
+			<ul class="index-pages-list">
+				<li>
+					<a href="home-page.html">
+						<p>Home page</p>
+						<p>home-page.html</p>
+					</a>
+				</li>
+				<li>
+					<a href="category-page.html">
+						<p>Category page</p>
+						<p>category-page.html</p>
+					</a>
+				</li>
+				<li>
+					<a href="app-page.html">
+						<p>App page</p>
+						<p>app-page.html</p>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</body>
+</html>

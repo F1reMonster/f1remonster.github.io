@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+	<head>
+		<head>
+			<meta charset="UTF-8" />
+<meta name="description" content="Meta descritpion page" />
+<meta name="keywords" content="kyewords, for, search, optimization " />
+<meta name="author" content="Author Name" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<link rel="shortcut icon" href="img/svg/favicon.svg" type="image/x-icon" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+<link rel="stylesheet" type="text/css" href="css/style.css?v=202306072246" />
+<script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.3/dist/cdn.min.js"></script>
+<title>Terms and Conditions</title>
+
+		</head>
+	</head>
+	<body class="h-full bg-dark-blue font-poppins">
+		<div class="flex flex-col h-full px-2 pt-2 overflow-x-clip lg:px-4 lg:pt-4">
+			<header>
+	<div x-data="navigationMenu()" x-init="init()" class="flex items-center justify-between h-12 p-1 bg-white rounded-lg lg:h-16 lg:px-4 lg:py-3" :class="{'rounded-br-none rounded-bl-none' : isMobMenuOpen}">
+		<a href="index.html" class="flex ml-2 lg:ml-0">
+			<img src="img/svg/logo-dark.svg" alt="logo" class="h-7 w-33 lg:w-38" />
+		</a>
+
+		<!-- header menu -->
+<nav x-show="showMenu" class="absolute z-40 flex-grow max-h-screen px-3 text-sm font-semibold bg-white rounded-bl-lg rounded-br-lg left-2 right-2 top-14 h-mob-menu py-7 sm:left-auto sm:w-76 lg:static lg:h-auto lg:max-h-max lg:w-auto lg:p-0" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="transform opacity-0 -translate-y-5" x-transition:enter-end="transform opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-200" x-transition:leave-start="transform opacity-200 translate-y-0" x-transition:leave-end="transform opacity-0 -translate-y-5" @click.away="closeMenu()" x-cloak>
+	<div class="h-full overflow-y-auto lg:overflow-visible">
+		<ul class="flex flex-col justify-center gap-2 lg:flex-row lg:items-center lg:gap-6">
+			<li class="relative p-3 group lg:p-0" x-data="{ isSubMenuOpen: false }" :class="{'rounded-lg bg-gray-100 lg:bg-transparent lg:rounded-none' : isSubMenuOpen == true }" @mouseenter="window.innerWidth >= 1024 && (isSubMenuOpen = true)" @mouseleave="window.innerWidth >= 1024 && (isSubMenuOpen = false)">
+				<div href="#" class="flex items-center w-full gap-1 group lg:z-10">
+					<a href="#" class="transition-all lg:group-hover:text-pink" :class="{'text-pink' : isSubMenuOpen == true}">Online Casinos</a>
+					<button @click="isSubMenuOpen = !isSubMenuOpen" class="ml-auto">
+						<svg class="transition-all opacity-50" :class="{'transform rotate-x-180  opacity-100' : isSubMenuOpen == true}" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path class="lg:group-hover:stroke-pink" :class="{'stroke-pink' : isSubMenuOpen == true}" d="M4 7L8 10L12 7" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+						</svg>
+					</button>
+				</div>
+				<div x-show="isSubMenuOpen" @click.outside="window.innerWidth >= 1024 && (isSubMenuOpen = false)" class="z-30 pointer-events-none lg:pt-10 lg:-my-2 lg:top-full -left-5 lg:absolute" :class="{'pointer-events-auto' : isSubMenuOpen == true}" x-collapse x-cloak>
+					<div class="lg:w-66 lg:rounded-md lg:shadow-lg">
+						<ul class="py-2 rounded-lg lg:bg-white lg:p-2">
+							<li>
+								<a href="#" class="flex p-3 transition-all rounded hover:bg-gray-100 lg:hover:text-pink">Real Money Casinos</a>
+							</li>
+							<li>
+								<a href="#" class="flex p-3 transition-all rounded hover:bg-gray-100 lg:hover:text-pink">Fast Withdrawal Casinos</a>
+							</li>
+							<li>
+								<a href="#" class="flex p-3 transition-all rounded hover:bg-gray-100 lg:hover:text-pink">Best Payout Casinos</a>
+							</li>
+							<li>
+								<a href="#" class="flex p-3 transition-all rounded hover:bg-gray-100 lg:hover:text-pink">New Casinos</a>
+							</li>
+							<li>
+								<a href="#" class="flex p-3 transition-all rounded hover:bg-gray-100 lg:hover:text-pink">VIP Casinos</a>
+							</li>
+							<li x-data="{ isSubOpen: false }" class="transition-all rounded group/item" :class="{ 'lg:bg-gray-100 bg-white' : isSubOpen == true }">
+								<div class="flex justify-between w-full gap-4 p-3 transition-all lg:hover:bg-gray-100 lg:hover:text-pink">
+									<a href="#" :class="{'text-pink' : isSubOpen == true}">Live Dealer Casinos</a>
+									<button @click="isSubOpen = !isSubOpen">
+										<svg class="ml-4 transition-all" :class="{'transform rotate-x-180 ' : isSubOpen == true}" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path :class="{'stroke-pink' : isSubOpen == true}" class="lg:group-hover/item:stroke-pink" d="M4 7L8 10L12 7" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+										</svg>
+									</button>
+								</div>
+								<div x-show="isSubOpen" x-collapse>
+									<hr class="mx-3 my-1 border border-gray-300" />
+									<ul class="flex flex-col gap-4 p-3">
+										<li>
+											<a href="#" class="transition-all rounded lg:hover:text-pink">Online Slots</a>
+										</li>
+										<li>
+											<a href="#" class="transition-all rounded lg:hover:text-pink">Online Roulette</a>
+										</li>
+										<li>
+											<a href="#" class="transition-all rounded lg:hover:text-pink">Online Blackjack</a>
+										</li>
+										<li>
+											<a href="#" class="transition-all rounded lg:hover:text-pink">Online Baccarat</a>
+										</li>
+										<li>
+											<a href="#" class="transition-all rounded lg:hover:text-pink">Online Scratch Cards</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+
+							<li x-data="{ isSubOpen: false }" class="transition-all rounded group/item" :class="{ 'lg:bg-gray-100 bg-white' : isSubOpen == true }">
+								<div class="flex justify-between w-full gap-4 p-3 transition-all lg:hover:bg-gray-100 lg:hover:text-pink">
+									<a href="#" :class="{'text-pink' : isSubOpen == true}">Mobile Casinos</a>
+									<button @click="isSubOpen = !isSubOpen">
+										<svg class="ml-4 transition-all" :class="{'transform rotate-x-180 ' : isSubOpen == true}" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path :class="{'stroke-pink' : isSubOpen == true}" class="lg:group-hover/item:stroke-pink" d="M4 7L8 10L12 7" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+										</svg>
+									</button>
+								</div>
+								<div x-show="isSubOpen" x-collapse>
+									<hr class="mx-3 my-1 border border-gray-300" />
+									<ul class="flex flex-col gap-4 p-3">
+										<li>
+											<a href="#" class="transition-all rounded lg:hover:text-pink">Item 1</a>
+										</li>
+										<li>
+											<a href="#" class="transition-all rounded lg:hover:text-pink">Item 2</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+
+							<li x-data="{ isSubOpen: false }" class="transition-all rounded group/item" :class="{ 'lg:bg-gray-100 bg-white' : isSubOpen == true }">
+								<div class="flex justify-between w-full gap-4 p-3 transition-all lg:hover:bg-gray-100 lg:hover:text-pink">
+									<a href="#" :class="{'text-pink' : isSubOpen == true}">Games</a>
+									<button @click="isSubOpen = !isSubOpen">
+										<svg class="ml-4 transition-all" :class="{'transform rotate-x-180 ' : isSubOpen == true}" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path :class="{'stroke-pink' : isSubOpen == true}" class="lg:group-hover/item:stroke-pink" d="M4 7L8 10L12 7" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+										</svg>
+									</button>
+								</div>
+								<div x-show="isSubOpen" x-collapse>
+									<hr class="mx-3 my-1 border border-gray-300" />
+									<ul class="flex flex-col gap-4 p-3">
+										<li>
+											<a href="#" class="transition-all rounded lg:hover:text-pink">Item 1</a>
+										</li>
+										<li>
+											<a href="#" class="transition-all rounded lg:hover:text-pink">Item 2</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</li>
+			<li class="relative p-3 pt-5 border-t group lg:border-t-0 lg:p-0">
+				<a href="#" class="flex items-center w-full gap-1 group lg:z-10">
+					<span class="transition-all lg:group-hover:text-pink">Min. Deposit Casinos</span>
+				</a>
+			</li>
+			<li class="relative p-3 pt-5 border-t group lg:border-t-0 lg:p-0">
+				<a href="#" class="flex items-center w-full gap-1 group lg:z-10">
+					<span class="transition-all lg:group-hover:text-pink"> Bonuses </span>
+				</a>
+			</li>
+			<li class="relative p-3 pt-5 border-t group lg:border-t-0 lg:p-0" x-data="{ isSubMenuOpen: false }" :class="{'rounded-lg bg-gray-100 lg:bg-transparent lg:rounded-none' : isSubMenuOpen == true }" @mouseenter="window.innerWidth >= 1024 && (isSubMenuOpen = true)" @mouseleave="window.innerWidth >= 1024 && (isSubMenuOpen = false)">
+				<div href="#" class="flex items-center w-full gap-1 group lg:z-10">
+					<a href="#" class="transition-all lg:group-hover:text-pink" :class="{'text-pink' : isSubMenuOpen == true}">Reviews</a>
+					<button @click="isSubMenuOpen = !isSubMenuOpen" class="ml-auto">
+						<svg class="transition-all opacity-50" :class="{'transform rotate-x-180  opacity-100' : isSubMenuOpen == true}" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path class="lg:group-hover:stroke-pink" :class="{'stroke-pink' : isSubMenuOpen == true}" d="M4 7L8 10L12 7" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+						</svg>
+					</button>
+				</div>
+
+				<div x-show="isSubMenuOpen" @click.outside="window.innerWidth >= 1024 && (isSubMenuOpen = false)" class="z-30 pointer-events-none lg:pt-10 lg:-my-2 lg:top-full -left-5 lg:absolute" :class="{'pointer-events-auto' : isSubMenuOpen == true}" x-collapse x-cloak>
+					<div class="lg:w-66 lg:rounded-md lg:shadow-lg">
+						
+						<ul class="py-2 rounded-lg lg:bg-white lg:p-2">
+							<li>
+								<a href="#" class="flex p-3 transition-all rounded hover:bg-gray-100 lg:hover:text-pink">Item 1</a>
+							</li>
+							<li>
+								<a href="#" class="flex p-3 transition-all rounded hover:bg-gray-100 lg:hover:text-pink">Item 2</a>
+							</li>
+	
+							<li x-data="{ isSubOpen: false }" class="transition-all rounded group/item" :class="{ 'lg:bg-gray-100 bg-white' : isSubOpen == true }">
+								<div class="flex justify-between w-full gap-4 p-3 transition-all lg:hover:bg-gray-100 lg:hover:text-pink">
+									<a href="#" :class="{'text-pink' : isSubOpen == true}">Submenu Item</a>
+									<button @click="isSubOpen = !isSubOpen">
+										<svg class="ml-4 transition-all" :class="{'transform rotate-x-180 ' : isSubOpen == true}" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path :class="{'stroke-pink' : isSubOpen == true}" class="lg:group-hover/item:stroke-pink" d="M4 7L8 10L12 7" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+										</svg>
+									</button>
+								</div>
+								<div x-show="isSubOpen" x-collapse>
+									<hr class="mx-3 my-1 border border-gray-300" />
+									<ul class="flex flex-col gap-4 p-3">
+										<li>
+											<a href="#" class="transition-all rounded lg:hover:text-pink">Item 1</a>
+										</li>
+										<li>
+											<a href="#" class="transition-all rounded lg:hover:text-pink">Item 2</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</div>
+					
+					
+				</div>
+			</li>
+		</ul>
+	</div>
+</nav>
+<!-- ./header menu -->
+
+
+		<div class="flex gap-1">
+			<div x-data="{isHeaderSearchOpen: false}">
+				<!-- search button -->
+				<button @click="toggleHeaderSearch()" class="flex items-center gap-3 transition-all group rounded-xl lg:border lg:border-gray-300 lg:bg-gray-100 lg:py-1 lg:pl-1 lg:pr-4 lg:hover:border-pink lg:hover:bg-pink/5" :class="{'lg:border-pink lg:bg-pink/5' : isHeaderSearchOpen == true}">
+					<div class="flex items-center justify-center w-10 h-10 bg-gray-100 rounded lg:h-8 lg:w-8 lg:rounded-lg lg:bg-white" :class="{'border-pink bg-pink/5 border lg:border-none' : isHeaderSearchOpen == true}">
+						<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M14.0782 14.1002L16.6448 16.6668M15.834 9.5835C15.834 11.2411 15.1755 12.8308 14.0034 14.0029C12.8313 15.175 11.2416 15.8335 9.58398 15.8335C7.92638 15.8335 6.33667 15.175 5.16457 14.0029C3.99246 12.8308 3.33398 11.2411 3.33398 9.5835C3.33398 7.92589 3.99246 6.33618 5.16457 5.16408C6.33667 3.99198 7.92638 3.3335 9.58398 3.3335C11.2416 3.3335 12.8313 3.99198 14.0034 5.16408C15.1755 6.33618 15.834 7.92589 15.834 9.5835Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+						</svg>
+					</div>
+					<div class="hidden text-sm transition-opacity opacity-50 group-hover:opacity-100 lg:block" :class="{'!opacity-100' : isHeaderSearchOpen == true}">Search</div>
+				</button>
+				<!-- ./search button -->
+
+				<div class="fixed inset-0 z-50 bg-dark-blue/20"  x-show="isHeaderSearchOpen" x-transition:enter="transition-opacity ease-linear duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition-opacity ease-linear duration-300" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" x-cloak></div>
+<div x-show="isHeaderSearchOpen" class="absolute z-50 left-2 right-2 top-16 lg:left-4 lg:right-4 lg:top-22 lg:mx-auto lg:w-211"  x-transition:enter="transition ease-out duration-200" x-transition:enter-start="transform opacity-0 -translate-y-5" x-transition:enter-end="transform opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-200" x-transition:leave-start="transform opacity-200 translate-y-0" x-transition:leave-end="transform opacity-0 -translate-y-5" @click.outside="isHeaderSearchOpen = false" x-cloak>
+	<div class="w-full">
+		<div x-data="{ searchTerm: '', results: [] }" class="relative w-full">
+			<div class="flex items-center h-12 gap-3 px-4 py-2 bg-white rounded-lg">
+				<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M14.0782 14.1002L16.6448 16.6668M15.834 9.5835C15.834 11.2411 15.1755 12.8308 14.0034 14.0029C12.8313 15.175 11.2416 15.8335 9.58398 15.8335C7.92638 15.8335 6.33667 15.175 5.16457 14.0029C3.99246 12.8308 3.33398 11.2411 3.33398 9.5835C3.33398 7.92589 3.99246 6.33618 5.16457 5.16408C6.33667 3.99198 7.92638 3.3335 9.58398 3.3335C11.2416 3.3335 12.8313 3.99198 14.0034 5.16408C15.1755 6.33618 15.834 7.92589 15.834 9.5835Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+				</svg>
+				<input type="text" x-model="searchTerm" @input="fetchResults" class="w-full p-0 text-base font-semibold bg-transparent border-0 outline-0 placeholder:text-sm placeholder:font-normal focus:outline-none focus:ring-0" placeholder="Search..." @keydown.escape="isHeaderSearchOpen = false" />
+			</div>
+
+			<div x-show="results.length > 0" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 -translate-y-4" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-4" class="absolute z-10 w-full p-2 mt-2 overflow-hidden bg-white shadow-lg rounded-2xl">
+				<template x-for="result in results" :key="result.name">
+					<a :href="result.link" class="flex items-center p-2 pr-4 transition-all rounded-lg cursor-pointer group hover:bg-gray-100">
+						<div class="flex items-center justify-center w-10 h-10 mr-3 overflow-hidden bg-gray-100 rounded-lg">
+							<img :src="result.image" class="" />
+						</div>
+						<div>
+							<div x-text="result.text" class="text-xs"></div>
+							<div x-text="result.name" class="text-sm font-semibold"></div>
+						</div>
+						<svg class="ml-auto transition-opacity opacity-0 group-hover:opacity-100" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M7 12L10 8L7 4" stroke="#EF0094" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+						</svg>
+					</a>
+				</template>
+			</div>
+
+			<div x-show="results.length === 0 && searchTerm.length >= 3" class="flex flex-col items-center justify-center mt-2 bg-white h-50 rounded-2xl shadow-custom">
+				<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path fill-rule="evenodd" clip-rule="evenodd" d="M20.001 36C28.8375 36 36.001 28.8366 36.001 20C36.001 11.1634 28.8375 4 20.001 4C11.1644 4 4.00098 11.1634 4.00098 20C4.00098 28.8366 11.1644 36 20.001 36ZM14.001 18C15.1055 18 16.001 17.1046 16.001 16C16.001 14.8954 15.1055 14 14.001 14C12.8964 14 12.001 14.8954 12.001 16C12.001 17.1046 12.8964 18 14.001 18ZM28.001 16C28.001 17.1046 27.1055 18 26.001 18C24.8964 18 24.001 17.1046 24.001 16C24.001 14.8954 24.8964 14 26.001 14C27.1055 14 28.001 14.8954 28.001 16ZM12.9299 27.7569C13.711 28.538 14.9773 28.538 15.7583 27.7569C18.1015 25.4138 21.9005 25.4138 24.2436 27.7569C25.0247 28.538 26.291 28.538 27.072 27.7569C27.8531 26.9759 27.8531 25.7095 27.072 24.9285C23.1668 21.0232 16.8352 21.0232 12.9299 24.9285C12.1489 25.7095 12.1489 26.9759 12.9299 27.7569Z" fill="#FF5269" />
+				</svg>
+				<p class="text-xl font-bold text-center">No search results</p>
+				<p class="font-semibold text-center opacity-70">Try entering another query</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+			</div>
+
+			<!-- mobile menu button -->
+
+			<button @click="toggleMenu()" class="flex items-center justify-center w-10 h-10 bg-gray-100 rounded lg:hidden">
+				<svg x-show="!isMobMenuOpen" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M3.33337 5H16.6667M3.33337 10H16.6667M10.8334 15H16.6667" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+				</svg>
+				<svg x-show="isMobMenuOpen" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" x-cloak>
+					<g opacity="0.5">
+						<path d="M5 15L15 5M5 5L15 15" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+					</g>
+				</svg>
+			</button>
+		</div>
+		<!-- ./mobile menu button -->
+	</div>
+</header>
+
+			<main class="flex-grow">
+				<!-- breadcrumbs -->
+				<div class="-mt-2.5 bg-white pt-6.5">
+					<div class="container">
+						<ul class="flex items-center gap-1">
+							<li class="flex items-center gap-1 text-sm leading-none">
+								<a href="/" class="transition-all hover:text-pink">
+									<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M6.5 13.4999V9.49991H9.5V13.4999H13.5V7.49991C13.5001 7.43422 13.4872 7.36918 13.4621 7.30848C13.437 7.24778 13.4002 7.19262 13.3538 7.14615L8.35375 2.14615C8.30731 2.09967 8.25217 2.06279 8.19147 2.03763C8.13077 2.01246 8.06571 1.99951 8 1.99951C7.93429 1.99951 7.86923 2.01246 7.80853 2.03763C7.74783 2.06279 7.69269 2.09967 7.64625 2.14615L2.64625 7.14615C2.59983 7.19262 2.56303 7.24778 2.53793 7.30848C2.51284 7.36918 2.49995 7.43422 2.5 7.49991V13.4999H6.5Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+									</svg>
+								</a>
+							</li>
+							<li class="flex items-center gap-1 text-sm leading-none opacity-50">
+								<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<circle opacity="0.5" cx="8" cy="8" r="2" fill="currentColor" />
+								</svg>
+								<a>
+									<div>Online Casinos</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!-- breadcrumbs -->
+
+				<div class="px-4 py-6 -mx-4 bg-white rounded-bl-2xl rounded-br-2xl lg:mx-0 lg:rounded-bl-3xl lg:rounded-br-3xl lg:pb-10 lg:pt-6">
+					<section class="pt-4 pb-10 lg:pt-10 lg:pb-20">
+						<div class="container max-w-185">
+							<div class="flex flex-col gap-6 lg:gap-10">
+								<h1 class="text-2base font-semibold tracking-tight lg:text-3.5base">Terms and Conditions</h1>
+	
+								<div class="flex flex-col gap-4 md:flex-row">
+									<div class="relative w-full px-4 py-3 bg-gray-100 rounded-xl lg:rounded-2xl">
+										<div class="flex gap-1 font-medium">
+											<div class="text-sm opacity-50 lg:text-base">Author:</div>
+											<div class="relative">
+												<div class="text-sm transition-all cursor-pointer peer hover:text-pink lg:text-base">Eva Johnson</div>
+	
+												<!-- tooltip -->
+												<div class="pointer-events-none absolute bottom-full left-1/2 z-40 mb-1.5 w-50 -translate-x-1/2 rounded-lg bg-white p-2 text-black opacity-0 shadow-md transition-all peer-hover:pointer-events-auto peer-hover:opacity-100 lg:w-60">
+													<svg class="absolute rotate-90 -translate-x-1/2 -bottom-2 left-1/2" width="6" height="12" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M6 6L0 12L-5.24537e-07 0L6 6Z" fill="white"></path>
+													</svg>
+													<div class="flex items-center gap-3">
+														<div class="flex-shrink-0 w-12 h-12 overflow-hidden rounded-xl bg-pink">
+															<img decoding="async" loading="lazy" src="img/persons/johnson-eva.png" class="object-cover w-full h-full" alt="eva" />
+														</div>
+														<div>
+															<div class="text-sm lg:text-base">Eva Johnson</div>
+															<div class="text-xs font-normal lg:text-sm">Content &amp; Marketing</div>
+														</div>
+													</div>
+												</div>
+												<!-- ./tooltip -->
+											</div>
+										</div>
+									</div>
+	
+									<div class="relative w-full px-4 py-3 bg-gray-100 rounded-xl lg:rounded-2xl">
+										<div class="flex gap-1 font-medium">
+											<div class="text-sm opacity-50 lg:text-base">Last Updated:</div>
+											<div class="relative">
+												<div class="text-sm transition-all cursor-pointer peer hover:text-pink lg:text-base">Oct 11, 2024</div>
+	
+												<!-- tooltip -->
+												<div class="pointer-events-none absolute bottom-full left-1/2 z-40 mb-1.5 w-50 -translate-x-1/2 rounded-lg bg-white p-2 text-black opacity-0 shadow-md transition-all peer-hover:pointer-events-auto peer-hover:opacity-100 lg:w-60">
+													<svg class="absolute rotate-90 -translate-x-1/2 -bottom-2 left-1/2" width="6" height="12" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M6 6L0 12L-5.24537e-07 0L6 6Z" fill="white"></path>
+													</svg>
+													<p class="text-xs font-normal">We double-check all the gambling terms and offers for every online casino reviewed monthly to ensure you have up-to-date information.</p>
+												</div>
+												<!-- ./tooltip -->
+											</div>
+										</div>
+									</div>
+								</div>
+	
+								<div class="flex flex-col gap-6 text-base font-medium opacity-80 lg:text-lg">
+									<p class="">Note: The Terms & Conditions have been updated. Please review the updated Terms carefully before using the Site. By using the Site, you agree to the terms of the updated Terms & Conditions.</p>
+									<p>You are welcome to the CasinosHunter Site, <a href="#" class="underline transition-all opacity-100 text-pink underline-offset-4 hover:text-pink-hover">https://casinoshunter.com/</a> (collectively “CasinosHunter” or “we”, or “Site”) represents you Terms & Conditions, that with our  <a href="#" class="underline transition-all opacity-100 text-pink underline-offset-4 hover:text-pink-hover">Privacy Policy</a> (collectively called “Terms”) govern use of the website.</p>
+								</div>
+	
+								<div class="border-b border-b-gray-300"></div>
+	
+								<h2 class="text-2xl font-semibold !leading-110 lg:text-2base">Acceptance And Modification To The Agreement</h2>
+	
+								<div class="flex flex-col gap-6 text-base font-medium opacity-80 lg:text-lg">
+									<p>These Terms are effective as of the Effective Date mentioned above. If you have not reviewed the Terms applicable to this Site since the Effective Date, please review these updated Terms carefully before using Site.</p>
+									<p>Please visit the Terms & Conditions section regularly in order not to miss out on important updates.</p>
+									<p>The administration of the Site has the right to:</p>
+									<ul class="flex flex-col gap-4 text-sm lg:text-base">
+										<li class="flex gap-2">
+											<div class="flex-shrink-0 w-5 h-5 lg:w-6 lg:h-6 text-purple">
+												<svg viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M7.99961 14.4001C11.5342 14.4001 14.3996 11.5347 14.3996 8.0001C14.3996 4.46548 11.5342 1.6001 7.99961 1.6001C4.46499 1.6001 1.59961 4.46548 1.59961 8.0001C1.59961 11.5347 4.46499 14.4001 7.99961 14.4001ZM10.9653 6.96578C11.2777 6.65336 11.2777 6.14683 10.9653 5.83441C10.6529 5.52199 10.1463 5.52199 9.83392 5.83441L7.19961 8.46873L6.16529 7.43441C5.85288 7.12199 5.34634 7.12199 5.03392 7.43441C4.7215 7.74683 4.7215 8.25336 5.03392 8.56578L6.63392 10.1658C6.94634 10.4782 7.45288 10.4782 7.76529 10.1658L10.9653 6.96578Z"></path>
+												</svg>
+											</div>
+											<div>create, modify, cancel the rules of the use, delete information;</div>
+										</li>
+										<li class="flex gap-2">
+											<div class="flex-shrink-0 w-5 h-5 lg:w-6 lg:h-6 text-purple">
+												<svg viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M7.99961 14.4001C11.5342 14.4001 14.3996 11.5347 14.3996 8.0001C14.3996 4.46548 11.5342 1.6001 7.99961 1.6001C4.46499 1.6001 1.59961 4.46548 1.59961 8.0001C1.59961 11.5347 4.46499 14.4001 7.99961 14.4001ZM10.9653 6.96578C11.2777 6.65336 11.2777 6.14683 10.9653 5.83441C10.6529 5.52199 10.1463 5.52199 9.83392 5.83441L7.19961 8.46873L6.16529 7.43441C5.85288 7.12199 5.34634 7.12199 5.03392 7.43441C4.7215 7.74683 4.7215 8.25336 5.03392 8.56578L6.63392 10.1658C6.94634 10.4782 7.45288 10.4782 7.76529 10.1658L10.9653 6.96578Z"></path>
+												</svg>
+											</div>
+											<div>restrict access to any information on the Site.</div>
+										</li>
+									</ul>
+	
+									<p>The user is personally liable to follow this Agreement to be well-informed about all modifications on the Site. Moreover, the User has the right to:</p>
+	
+									<ul class="flex flex-col gap-4 text-sm lg:text-base">
+										<li class="flex gap-2">
+											<div class="flex-shrink-0 w-5 h-5 lg:w-6 lg:h-6 text-purple">
+												<svg viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M7.99961 14.4001C11.5342 14.4001 14.3996 11.5347 14.3996 8.0001C14.3996 4.46548 11.5342 1.6001 7.99961 1.6001C4.46499 1.6001 1.59961 4.46548 1.59961 8.0001C1.59961 11.5347 4.46499 14.4001 7.99961 14.4001ZM10.9653 6.96578C11.2777 6.65336 11.2777 6.14683 10.9653 5.83441C10.6529 5.52199 10.1463 5.52199 9.83392 5.83441L7.19961 8.46873L6.16529 7.43441C5.85288 7.12199 5.34634 7.12199 5.03392 7.43441C4.7215 7.74683 4.7215 8.25336 5.03392 8.56578L6.63392 10.1658C6.94634 10.4782 7.45288 10.4782 7.76529 10.1658L10.9653 6.96578Z"></path>
+												</svg>
+											</div>
+											<div>search for information on the Site;</div>
+										</li>
+										<li class="flex gap-2">
+											<div class="flex-shrink-0 w-5 h-5 lg:w-6 lg:h-6 text-purple">
+												<svg viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M7.99961 14.4001C11.5342 14.4001 14.3996 11.5347 14.3996 8.0001C14.3996 4.46548 11.5342 1.6001 7.99961 1.6001C4.46499 1.6001 1.59961 4.46548 1.59961 8.0001C1.59961 11.5347 4.46499 14.4001 7.99961 14.4001ZM10.9653 6.96578C11.2777 6.65336 11.2777 6.14683 10.9653 5.83441C10.6529 5.52199 10.1463 5.52199 9.83392 5.83441L7.19961 8.46873L6.16529 7.43441C5.85288 7.12199 5.34634 7.12199 5.03392 7.43441C4.7215 7.74683 4.7215 8.25336 5.03392 8.56578L6.63392 10.1658C6.94634 10.4782 7.45288 10.4782 7.76529 10.1658L10.9653 6.96578Z"></path>
+												</svg>
+											</div>
+											<div>receive information and use it for personal non-commercial purposes.</div>
+										</li>
+									</ul>
+								</div>
+	
+								<div class="border-b border-b-gray-300"></div>
+	
+								<h2 class="text-2xl font-semibold !leading-110 lg:text-2base">The Use Of Site</h2>
+	
+								<div class="flex flex-col gap-6 text-base font-medium opacity-80 lg:text-lg">
+									<p>Without limiting any other provision in these Terms, you agree not to do the following, or assist others to do the following:</p>
+									
+									<ul class="flex flex-col gap-4 text-sm lg:text-base">
+										<li class="flex gap-2">
+											<div class="flex-shrink-0 w-5 h-5 lg:w-6 lg:h-6 text-purple">
+												<svg viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M7.99961 14.4001C11.5342 14.4001 14.3996 11.5347 14.3996 8.0001C14.3996 4.46548 11.5342 1.6001 7.99961 1.6001C4.46499 1.6001 1.59961 4.46548 1.59961 8.0001C1.59961 11.5347 4.46499 14.4001 7.99961 14.4001ZM10.9653 6.96578C11.2777 6.65336 11.2777 6.14683 10.9653 5.83441C10.6529 5.52199 10.1463 5.52199 9.83392 5.83441L7.19961 8.46873L6.16529 7.43441C5.85288 7.12199 5.34634 7.12199 5.03392 7.43441C4.7215 7.74683 4.7215 8.25336 5.03392 8.56578L6.63392 10.1658C6.94634 10.4782 7.45288 10.4782 7.76529 10.1658L10.9653 6.96578Z"></path>
+												</svg>
+											</div>
+											<div>Frame the Content, make Content available via in-line links, otherwise display Content in connection with an unauthorized logo or mark, or do anything that could falsely suggest a relationship between the CasinosHunter and any third party or potentially deprive us of revenue (including, without limitation, revenue from advertising, branding, or promotional activities);</div>
+										</li>
+										<li class="flex gap-2">
+											<div class="flex-shrink-0 w-5 h-5 lg:w-6 lg:h-6 text-purple">
+												<svg viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M7.99961 14.4001C11.5342 14.4001 14.3996 11.5347 14.3996 8.0001C14.3996 4.46548 11.5342 1.6001 7.99961 1.6001C4.46499 1.6001 1.59961 4.46548 1.59961 8.0001C1.59961 11.5347 4.46499 14.4001 7.99961 14.4001ZM10.9653 6.96578C11.2777 6.65336 11.2777 6.14683 10.9653 5.83441C10.6529 5.52199 10.1463 5.52199 9.83392 5.83441L7.19961 8.46873L6.16529 7.43441C5.85288 7.12199 5.34634 7.12199 5.03392 7.43441C4.7215 7.74683 4.7215 8.25336 5.03392 8.56578L6.63392 10.1658C6.94634 10.4782 7.45288 10.4782 7.76529 10.1658L10.9653 6.96578Z"></path>
+												</svg>
+											</div>
+											<div>Transmit, collect, or access personally identifiable information about other users without the consent of those users and CasinosHunter;</div>
+										</li>
+										<li class="flex gap-2">
+											<div class="flex-shrink-0 w-5 h-5 lg:w-6 lg:h-6 text-purple">
+												<svg viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M7.99961 14.4001C11.5342 14.4001 14.3996 11.5347 14.3996 8.0001C14.3996 4.46548 11.5342 1.6001 7.99961 1.6001C4.46499 1.6001 1.59961 4.46548 1.59961 8.0001C1.59961 11.5347 4.46499 14.4001 7.99961 14.4001ZM10.9653 6.96578C11.2777 6.65336 11.2777 6.14683 10.9653 5.83441C10.6529 5.52199 10.1463 5.52199 9.83392 5.83441L7.19961 8.46873L6.16529 7.43441C5.85288 7.12199 5.34634 7.12199 5.03392 7.43441C4.7215 7.74683 4.7215 8.25336 5.03392 8.56578L6.63392 10.1658C6.94634 10.4782 7.45288 10.4782 7.76529 10.1658L10.9653 6.96578Z"></path>
+												</svg>
+											</div>
+											<div>Engage in unauthorized spidering, “scraping,” data mining or harvesting of Content, or use any other unauthorized automated means to gather data from CasinosHunter;</div>
+										</li>
+									</ul>
+	
+									<p>If you violate this Section CasinosHunter may take any actions or seek any remedies permitted by laws of the USA (Delaware).</p>
+									<p>The Site was launched according to the standards and requirements that prevent young people under 18 years old from using our Site.</p>
+	
+									
+								</div>
+								
+							</div>
+						</div>
+
+					</section>
+					
+				</div>
+			</main>
+			<footer class="relative pt-10 mt-4 text-white">
+	<div class="absolute bottom-0 pointer-events-none lg:-right-4 -right-2 lg:w-360 lg:h-130 h-35 w-96">
+		<img src="img/glow-right.png" alt="" class="object-cover w-full h-full" />
+	</div>
+	<div class="container">
+		<div class="flex flex-col gap-3 lg:flex-row">
+			<div class="relative flex-shrink-0 p-4 border p lg:p-6 rounded-2xl lg:w-90 bg-white/10 border-white/5">
+				<div class="absolute inset-0 overflow-hidden pointer-events-none bg-pink-radial">
+					<svg class="absolute inset-0" viewBox="0 0 360 382" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<rect x="0.5" y="0.5" width="359" height="381" rx="15.5" stroke="url(#paint0_radial_2401_1004)" />
+						<defs>
+							<radialGradient id="paint0_radial_2401_1004" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(180.279 1.71887e-05) rotate(90.0419) scale(382 120.955)">
+								<stop stop-color="#EF0094" stop-opacity="0.8" />
+								<stop offset="1" stop-color="#EF0094" stop-opacity="0" />
+							</radialGradient>
+						</defs>
+					</svg>
+				</div>
+				<div class="h-6 lg:w-47 lg:h-9 w-33">
+					<img class="w-full h-full" src="img/svg/logo-white.svg" alt="footer logo" />
+				</div>
+				<div class="mt-6 lg:mt-10">
+					<h5 class="text-sm font-semibold opacity-50 lg:font-base">Follow Us</h5>
+					<div class="flex gap-2 mt-2">
+						<a href="#" class="flex items-center justify-center p-2 transition-all rounded-lg bg-white/10 w-11 h-11 group">
+							<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path class="transition-all group-hover:fill-pink"
+									d="M14.8995 5.25108C15.538 5.24863 16.1765 5.25504 16.8148 5.27033L16.9845 5.27645C17.1805 5.28345 17.3739 5.2922 17.6075 5.3027C18.5384 5.34645 19.1737 5.49344 19.731 5.70956C20.3085 5.9318 20.795 6.23279 21.2814 6.71928C21.7262 7.15642 22.0705 7.6852 22.2903 8.26885C22.5064 8.8262 22.6534 9.46231 22.6971 10.3933C22.7076 10.626 22.7164 10.8203 22.7234 11.0163L22.7286 11.186C22.7442 11.824 22.7509 12.4622 22.7487 13.1004L22.7496 13.7532V14.8994C22.7518 15.5379 22.7451 16.1764 22.7295 16.8147L22.7242 16.9844C22.7172 17.1804 22.7085 17.3738 22.698 17.6074C22.6542 18.5384 22.5055 19.1736 22.2903 19.731C22.0712 20.3152 21.7269 20.8444 21.2814 21.2814C20.8439 21.7262 20.3149 22.0704 19.731 22.2902C19.1737 22.5064 18.5384 22.6534 17.6075 22.6971C17.3739 22.7076 17.1805 22.7164 16.9845 22.7234L16.8148 22.7286C16.1765 22.7442 15.538 22.7509 14.8995 22.7487L14.2468 22.7496H13.1015C12.463 22.7518 11.8245 22.7451 11.1862 22.7295L11.0165 22.7242C10.8088 22.7167 10.6011 22.708 10.3935 22.698C9.46254 22.6542 8.82732 22.5055 8.2691 22.2902C7.68523 22.0709 7.15637 21.7266 6.71955 21.2814C6.27424 20.8442 5.92967 20.3151 5.70986 19.731C5.49374 19.1736 5.34675 18.5384 5.303 17.6074C5.29326 17.3998 5.28451 17.1921 5.27675 16.9844L5.27238 16.8147C5.25625 16.1764 5.24896 15.5379 5.2505 14.8994V13.1004C5.24806 12.4622 5.25448 11.824 5.26975 11.186L5.27588 11.0163C5.28288 10.8203 5.29163 10.626 5.30213 10.3933C5.34587 9.46143 5.49287 8.82708 5.70898 8.26885C5.92892 7.68491 6.27417 7.15628 6.72043 6.72015C7.15694 6.27457 7.68547 5.92968 8.2691 5.70956C8.82732 5.49344 9.46166 5.34645 10.3935 5.3027L11.0165 5.27645L11.1862 5.27208C11.8242 5.25595 12.4624 5.24866 13.1006 5.2502L14.8995 5.25108ZM14.0001 9.62593C13.4204 9.61773 12.8449 9.72482 12.307 9.94098C11.7691 10.1571 11.2795 10.478 10.8667 10.8851C10.4539 11.2921 10.1261 11.7771 9.90237 12.3119C9.67863 12.8467 9.56341 13.4206 9.56341 14.0003C9.56341 14.5801 9.67863 15.154 9.90237 15.6888C10.1261 16.2236 10.4539 16.7086 10.8667 17.1156C11.2795 17.5226 11.7691 17.8436 12.307 18.0597C12.8449 18.2759 13.4204 18.383 14.0001 18.3748C15.1603 18.3748 16.2731 17.9138 17.0935 17.0934C17.9139 16.2729 18.3748 15.1602 18.3748 13.9999C18.3748 12.8396 17.9139 11.7269 17.0935 10.9064C16.2731 10.086 15.1603 9.62593 14.0001 9.62593ZM14.0001 11.3759C14.3487 11.3694 14.6952 11.4326 15.0192 11.5615C15.3432 11.6905 15.6383 11.8828 15.8871 12.1271C16.136 12.3714 16.3337 12.6628 16.4687 12.9844C16.6037 13.3059 16.6732 13.6512 16.6733 13.9999C16.6733 14.3486 16.6039 14.6939 16.469 15.0155C16.3342 15.3371 16.1366 15.6286 15.8878 15.873C15.639 16.1174 15.344 16.3097 15.02 16.4388C14.696 16.5679 14.3496 16.6311 14.0009 16.6248C13.3048 16.6248 12.6371 16.3483 12.1449 15.856C11.6526 15.3637 11.3761 14.6961 11.3761 13.9999C11.3761 13.3037 11.6526 12.6361 12.1449 12.1438C12.6371 11.6515 13.3048 11.375 14.0009 11.375L14.0001 11.3759ZM18.5936 8.31347C18.3113 8.32477 18.0444 8.44485 17.8486 8.64856C17.6529 8.85227 17.5436 9.12381 17.5436 9.40631C17.5436 9.68881 17.6529 9.96035 17.8486 10.1641C18.0444 10.3678 18.3113 10.4879 18.5936 10.4991C18.8836 10.4991 19.1618 10.3839 19.3669 10.1788C19.572 9.9737 19.6873 9.69551 19.6873 9.40544C19.6873 9.11536 19.572 8.83717 19.3669 8.63206C19.1618 8.42695 18.8836 8.31172 18.5936 8.31172V8.31347Z"
+									fill="white"
+								/>
+							</svg>
+						</a>
+
+						<a href="#" class="flex items-center justify-center p-2 transition-all rounded-lg bg-white/10 w-11 h-11 group">
+							<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path class="transition-all group-hover:fill-pink" d="M19.0323 6.125H21.7157L15.8532 12.7965L22.75 21.875H17.349L13.1194 16.369L8.27983 21.875H5.59476L11.8653 14.739L5.25 6.125H10.7864L14.6096 11.1577L19.0307 6.125H19.0323ZM18.0905 20.2758H19.5774L9.97929 7.64023H8.38366L18.0905 20.2758Z" fill="white" />
+							</svg>
+						</a>
+
+						<a href="#" class="flex items-center justify-center p-2 transition-all rounded-lg bg-white/10 w-11 h-11 group">
+							<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path class="transition-all group-hover:fill-pink" d="M22.75 14.0219C22.75 9.17982 18.83 5.25 14 5.25C9.17 5.25 5.25 9.17982 5.25 14.0219C5.25 18.2675 8.26 21.8026 12.25 22.6184V16.6535H10.5V14.0219H12.25V11.8289C12.25 10.136 13.6237 8.75877 15.3125 8.75877H17.5V11.3904H15.75C15.2688 11.3904 14.875 11.7851 14.875 12.2675V14.0219H17.5V16.6535H14.875V22.75C19.2937 22.3114 22.75 18.5746 22.75 14.0219Z" fill="white" />
+							</svg>
+						</a>
+
+						<a href="#" class="flex items-center justify-center p-2 transition-all rounded-lg bg-white/10 w-11 h-11 group">
+							<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path class="transition-all group-hover:fill-pink"
+									d="M20.8056 5.25C21.3213 5.25 21.8158 5.45486 22.1805 5.81951C22.5451 6.18417 22.75 6.67875 22.75 7.19444V20.8056C22.75 21.3213 22.5451 21.8158 22.1805 22.1805C21.8158 22.5451 21.3213 22.75 20.8056 22.75H7.19444C6.67875 22.75 6.18417 22.5451 5.81951 22.1805C5.45486 21.8158 5.25 21.3213 5.25 20.8056V7.19444C5.25 6.67875 5.45486 6.18417 5.81951 5.81951C6.18417 5.45486 6.67875 5.25 7.19444 5.25H20.8056ZM20.3194 20.3194V15.1667C20.3194 14.3261 19.9855 13.5199 19.3911 12.9255C18.7967 12.3311 17.9906 11.9972 17.15 11.9972C16.3236 11.9972 15.3611 12.5028 14.8944 13.2611V12.1819H12.1819V20.3194H14.8944V15.5264C14.8944 14.7778 15.4972 14.1653 16.2458 14.1653C16.6068 14.1653 16.953 14.3087 17.2083 14.5639C17.4635 14.8192 17.6069 15.1654 17.6069 15.5264V20.3194H20.3194ZM9.02222 10.6556C9.45541 10.6556 9.87085 10.4835 10.1772 10.1772C10.4835 9.87085 10.6556 9.45541 10.6556 9.02222C10.6556 8.11806 9.92639 7.37917 9.02222 7.37917C8.58646 7.37917 8.16854 7.55227 7.86041 7.86041C7.55227 8.16854 7.37917 8.58646 7.37917 9.02222C7.37917 9.92639 8.11806 10.6556 9.02222 10.6556ZM10.3736 20.3194V12.1819H7.68056V20.3194H10.3736Z"
+									fill="white"
+								/>
+							</svg>
+						</a>
+					</div>
+					<h5 class="mt-6 text-sm font-semibold opacity-50 lg:font-base">Cooperation</h5>
+					<a href="#" class="flex items-center gap-2 transition-all group">
+						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="">
+							<path class="transition-all group-hover:fill-pink" d="M2.40439 7.06007L12.0003 11.858L21.5964 7.06001C21.524 5.79959 20.4789 4.7998 19.2004 4.7998H4.80039C3.52181 4.7998 2.47675 5.79962 2.40439 7.06007Z" fill="white" />
+							<path class="transition-all group-hover:fill-pink" d="M21.6004 9.74129L12.0003 14.5413L2.40039 9.74135V16.7998C2.40039 18.1253 3.47491 19.1998 4.80039 19.1998H19.2004C20.5259 19.1998 21.6004 18.1253 21.6004 16.7998V9.74129Z" fill="white" />
+						</svg>
+						<span class="text-sm font-semibold transition-all group-hover:text-pink">casino.fw@gmail.com</span>
+					</a>
+
+					<h5 class="mt-6 text-sm font-semibold opacity-50 lg:mt-10 lg:font-base">Certified & Protected by</h5>
+					<div class="flex items-center gap-4 mt-3 opacity-50">
+						<div>
+							<img src="img/svg/dmca.svg" alt="" />
+						</div>
+						<div>
+							<img src="img/svg/gpwa.svg" alt="" />
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="relative flex-grow p-6 border lg:px-8 lg:py-6 rounded-2xl bg-white/10 border-white/5">
+				<div class="absolute inset-0 overflow-hidden pointer-events-none bg-pink-radial">
+					<svg class="absolute inset-0" viewBox="0 0 748 382" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+						<defs>
+							<radialGradient gradientTransform="translate(374.58 0) rotate(90) scale(382 251.318)" cx="0.000000" cy="0.000000" r="1.000000" id="paint_radial_2_2905_0" gradientUnits="userSpaceOnUse">
+								<stop stop-color="#EF0094" stop-opacity="0.800000" />
+								<stop offset="1.000000" stop-color="#EF0094" stop-opacity="0.000000" />
+							</radialGradient>
+						</defs>
+						<rect id="Stroke" x="0.500000" y="0.500000" rx="16.000000" width="747.000000" height="381.000000" stroke="url(#paint_radial_2_2905_0)" stroke-opacity="1.000000" stroke-width="1.000000" />
+					</svg>
+				</div>
+				<ul class="flex flex-col gap-6 lg:gap-11 sm:flex-row">
+					<li>
+						<h5 class="font-semibold opacity-50">Casinos</h5>
+						<ul class="flex flex-col gap-4 mt-4 text-sm font-medium leading-none">
+							<li><a href="#" class="transition-all hover:text-pink">Online Casinos Canada</a></li>
+							<li><a href="#" class="transition-all hover:text-pink">Highest Payout Casinos</a></li>
+							<li><a href="#" class="transition-all hover:text-pink">Low Deposit Casinos</a></li>
+							<li><a href="#" class="transition-all hover:text-pink">Free Spins For $1</a></li>
+							<li><a href="#" class="transition-all hover:text-pink">Free Spins For $3</a></li>
+							<li><a href="#" class="transition-all hover:text-pink">Free Spins For $5</a></li>
+							<li><a href="#" class="transition-all hover:text-pink">No Wagering Bonuses</a></li>
+							<li><a href="#" class="transition-all hover:text-pink">Casinos With Live Dealer</a></li>
+							<li><a href="#" class="transition-all hover:text-pink">Quality Casinos</a></li>
+						</ul>
+					</li>
+					<li>
+						<h5 class="font-semibold opacity-50">Reviews</h5>
+						<ul class="flex flex-col gap-4 mt-4 text-sm font-medium leading-none">
+							<li><a href="#" class="transition-all hover:text-pink">Casino Days</a></li>
+							<li><a href="#" class="transition-all hover:text-pink">Jackpot City Casino</a></li>
+							<li><a href="#" class="transition-all hover:text-pink">Spin Casino</a></li>
+							<li><a href="#" class="transition-all hover:text-pink">LeoVegas Casino</a></li>
+							<li><a href="#" class="transition-all hover:text-pink">888 Casino</a></li>
+							<li><a href="#" class="transition-all hover:text-pink">Casino Classic</a></li>
+							<li><a href="#" class="transition-all hover:text-pink">Night Rush Casino</a></li>
+							<li><a href="#" class="transition-all hover:text-pink">BitStarz Casino</a></li>
+							<li><a href="#" class="transition-all hover:text-pink">Platinum Play Casino</a></li>
+						</ul>
+					</li>
+					<li>
+						<h5 class="font-semibold opacity-50">Company</h5>
+						<ul class="flex flex-col gap-4 mt-4 text-sm font-medium leading-none">
+							<li><a href="#" class="transition-all hover:text-pink">About us</a></li>
+							<li><a href="#" class="transition-all hover:text-pink">Contacts</a></li>
+							<li><a href="#" class="transition-all hover:text-pink">Careers</a></li>
+							<li><a href="#" class="transition-all hover:text-pink">Blog</a></li>
+							<li><a href="#" class="transition-all hover:text-pink">Rating Guidelines</a></li>
+							<li><a href="#" class="transition-all hover:text-pink">Terms and Conditions</a></li>
+							<li><a href="#" class="transition-all hover:text-pink">Privacy Policy</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="relative flex-grow mt-3 border rounded-2xl bg-white/10 border-white/5">
+			<div class="absolute inset-0 overflow-hidden pointer-events-none bg-pink-radial">
+				<svg class="absolute inset-0" viewBox="0 0 1120 80" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+					<defs>
+						<radialGradient gradientTransform="translate(560.869 -1.14441e-05) rotate(90.6221) scale(80.0047 376.284)" cx="0.000000" cy="0.000000" r="1.000000" id="paint_radial_2_2920_0" gradientUnits="userSpaceOnUse">
+							<stop stop-color="#EF0094" stop-opacity="0.800000" />
+							<stop offset="1.000000" stop-color="#EF0094" stop-opacity="0.000000" />
+						</radialGradient>
+					</defs>
+					<rect id="Stroke" x="0.500000" y="0.500000" rx="16.000000" width="1119.000000" height="79.000000" stroke="url(#paint_radial_2_2920_0)" stroke-opacity="1.000000" stroke-width="1.000000" />
+				</svg>
+			</div>
+			<div class="grid grid-cols-3 md:grid-cols-6 place-items-center">
+				<div class="flex items-center justify-center flex-shrink-0 h-16 px-5 lg:w-40 lg:h-20 w-30 grayscale">
+					<img src="img/logos/logo-01.webp" alt="" class="h-8 lg:h-12" />
+				</div>
+				<div class="flex items-center justify-center flex-shrink-0 h-16 px-5 lg:w-40 lg:h-20 w-30 grayscale">
+					<img src="img/logos/logo-02.webp" alt="" class="h-8 lg:h-12" />
+				</div>
+				<div class="flex items-center justify-center flex-shrink-0 h-16 px-5 lg:w-40 lg:h-20 w-30 grayscale">
+					<img src="img/logos/logo-03.webp" alt="" class="h-8 lg:h-12" />
+				</div>
+				<div class="flex items-center justify-center flex-shrink-0 h-16 px-5 lg:w-40 lg:h-20 w-30 grayscale">
+					<img src="img/logos/logo-04.webp" alt="" class="h-8 lg:h-12" />
+				</div>
+				<div class="flex items-center justify-center flex-shrink-0 h-16 px-5 lg:w-40 lg:h-20 w-30 grayscale">
+					<img src="img/logos/logo-05.webp" alt="" class="h-8 lg:h-12" />
+				</div>
+				<div class="flex items-center justify-center flex-shrink-0 h-16 px-5 lg:w-40 lg:h-20 w-30 grayscale">
+					<img src="img/logos/logo-06.webp" alt="" class="h-8 lg:h-12" />
+				</div>
+			</div>
+		</div>
+
+		<div class="flex flex-col gap-4 py-5 mt-3 text-xs lg:items-center lg:justify-between lg:flex-row lg:text-sm">
+			<p class="text-sm opacity-70">© Casino Fast Withdrawal, 2024. All rights reserved.</p>
+			<p class="text-sm opacity-70">700 2 St SW, Calgary, AB T2P 2W3, Canada</p>
+		</div>
+	</div>
+</footer>
+ <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="js/app.js"></script>
+		</div>
+	</body>
+</html>

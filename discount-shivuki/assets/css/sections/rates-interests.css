@@ -1,0 +1,28 @@
+.rates-interest {
+  position: relative;
+  padding: 1.875em 0 5.625em;
+}
+.rates-interest__bg-left {
+  position: absolute;
+  right: 0;
+  top: -10%;
+  z-index: -1;
+}
+@media (max-width: 1023px) {
+  .rates-interest__bg-left {
+    display: none;
+  }
+}
+.rates-interest__bottom {
+  display: flex;
+  flex-flow: column;
+  row-gap: 12px;
+}
+.rates-interest .purple-link {
+  margin-top: 0;
+}
+@media (max-width: 1023px) {
+  .rates-interest {
+    padding: 1.25em 0 3.125em;
+  }
+}

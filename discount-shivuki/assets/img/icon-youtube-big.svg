@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="39px" viewBox="0 0 48 39" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>24E192CA-7FAA-40ED-A2AD-024249D44B2B</title>
+    <defs>
+        <filter x="-15.0%" y="-15.0%" width="130.0%" height="130.0%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.211764706   0 0 0 0 0.239215686   0 0 0 0 0.31372549  0 0 0 0.231568663 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Concept" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-1920_DISCOUNT---financial-reports" transform="translate(-883.000000, -2561.000000)" fill-rule="nonzero">
+            <g id="Group-33" transform="translate(1.000000, 2434.134744)">
+                <g id="Group-18" transform="translate(765.000000, 111.000000)">
+                    <g id="Group-14" filter="url(#filter-1)" transform="translate(106.000000, 0.000000)">
+                        <g id="youtube-(1)" transform="translate(19.250000, 24.500000)">
+                            <path d="M30.85112,3.45108032 C30.4879875,2.10165022 29.4240646,1.0379677 28.0748749,0.674594895 C25.6098519,0 15.7497597,0 15.7497597,0 C15.7497597,0 5.88990784,0 3.42488481,0.648880005 C2.10165022,1.0120125 1.01177212,2.10189053 0.648639694,3.45108032 C0,5.91586304 0,11.0275956 0,11.0275956 C0,11.0275956 0,16.1650429 0.648639694,18.6041107 C1.0120125,19.9533004 2.07569502,21.0172233 3.42512512,21.3805961 C5.91586304,22.055191 15.75,22.055191 15.75,22.055191 C15.75,22.055191 25.6098519,22.055191 28.0748749,21.406311 C29.424305,21.0431785 30.4879875,19.9792557 30.8513603,18.6300659 C31.5001324,16.1650429 31.5001324,11.0535507 31.5001324,11.0535507 C31.5001324,11.0535507 31.5259552,5.91586304 30.85112,3.45108032 Z" id="Path" fill="#FFFFFF"></path>
+                            <polygon id="Path" fill="#3C3F45" points="12.6103821 15.75 20.8095817 11.0275956 12.6103821 6.30519104"></polygon>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

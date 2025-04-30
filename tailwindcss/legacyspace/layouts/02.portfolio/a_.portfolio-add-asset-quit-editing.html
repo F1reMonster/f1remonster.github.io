@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+<title>Legacy space - Portfolio page</title>
+<meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=yes">
+<link rel="canonical" href='' />
+<meta name="MobileOptimized" content="width"/>
+<meta name="HandheldFriendly" content="True"/>
+<meta name="viewport" content="initial-scale=1.0, width=device-width">
+<link rel="stylesheet" type="text/css" href="../../css/style.css" />
+
+	</head>
+
+	<body class="flex flex-col h-full overflow-clip font-inter">
+		<main class="flex-grow py-4 lg:py-12"></main>
+		
+		<!-- quit editing modal -->
+<div class="fixed inset-0 z-50 p-4">
+	<div class="absolute inset-0 bg-primary-black/60"></div>
+
+	<div class="flex items-center justify-center w-full h-full">
+		<div class="relative z-20 p-6 bg-white border shadow-lg w-110 rounded-3xl border-neutral-black-5">
+			<div class="flex items-center justify-center w-12 h-12 border-8 rounded-full border-island-spice bg-beeswax">
+				<span class="icon icon--alert-triangle text-bamboo"></span>
+			</div>
+			<p class="mt-5 text-lg font-medium">Quit editing?</p>
+			<p class="mt-2 text-sm text-neutral-black-70">Changes you made so far will not be saved.</p>
+
+			<div class="mt-8 flex flex-col gap-2.5 sd:flex-row">
+				<button class="flex h-12 w-full items-center justify-center gap-2 rounded-xl border border-neutral-black-5 px-5 py-3.5 text-sm font-medium transition-all duration-300 hover:bg-neutral-black-1">
+					<span>Quit</span>
+				</button>
+				<button class="-order-1 flex h-12 w-full items-center justify-center gap-2 rounded-xl bg-primary px-5 py-3.5 text-sm font-semibold  transition-all duration-300 hover:bg-primary-hover sd:order-none">
+					<span>Continue editing</span>
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- ./quit editing modal -->
+ 
+		<script src="../../js/app.js"></script>
+
+	</body>
+</html>

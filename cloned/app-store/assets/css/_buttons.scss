@@ -1,0 +1,32 @@
+.btn {
+	--bg-color: var(--athens-gray);
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--bg-color);
+	outline: none;
+	border: 0;
+	font-family: var(--font-primary);
+	font-weight: 600;
+	min-height: rem(28);
+	padding: rem(6) rem(20);
+	border-radius: rem(14);
+	transition: all 0.2s ease-out;
+	gap: rem(8);
+	color: var(--dodger-blue);
+	width: fit-content;
+
+	.icon {
+		flex-shrink: 0;
+	}
+
+	&--primary {
+		background-color: var(--dodger-blue);
+		color: var(--white);
+
+		@include hover-supported {
+			color: var(--white);
+			background-color: var(--science-blue);
+		}
+	}
+}

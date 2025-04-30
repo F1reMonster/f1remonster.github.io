@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="671" height="354" viewBox="0 0 671 354">
+	<defs>
+		<style>
+			.a{fill:none;}
+			.b{isolation:isolate;
+			clip-path:url(#a);}
+			.c{fill:url(#b);}
+		</style>
+		<clipPath id="a">
+			<rect class="a" width="671" height="354" transform="translate(695 66)"/>
+		</clipPath>
+		<linearGradient id="b" x1="0.5" x2="1.125" y2="0.971" gradientUnits="objectBoundingBox">
+			<stop offset="0" stop-color="#6562a3"/>
+			<stop offset="1" stop-color="#1b365d" stop-opacity="0"/>
+		</linearGradient>
+	</defs>
+	<g class="b" transform="translate(-695 -66)">
+		<circle class="c" cx="88.5" cy="88.5" r="88.5" transform="translate(734 89)"/>
+		<circle class="c" cx="101.5" cy="101.5" r="101.5" transform="translate(831 178)"/>
+		<circle class="c" cx="81" cy="81" r="81" transform="translate(995 148)"/>
+		<circle class="c" cx="59" cy="59" r="59" transform="translate(1167 73)"/>
+		<circle class="c" cx="95" cy="95" r="95" transform="translate(1103 215)"/>
+		<circle class="c" cx="81.5" cy="81.5" r="81.5" transform="translate(1235 125)"/>
+	</g>
+</svg>

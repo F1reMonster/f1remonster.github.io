@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="en" class="h-full">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="shortcut icon" href="https://framerusercontent.com/images/kuYZ0IVNAYGc5VDNZZ0fblUJY8.png" type="image/x-icon" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?&family=Inter:opsz,wght@14..32,100..900&display=swap" rel="stylesheet" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.10.3/cdn.min.js" defer></script>
+		<script src="https://cdn.tailwindcss.com"></script>
+		<script>
+			tailwind.config = {
+				theme: {
+					extend: {
+						fontFamily: {
+							inter: "Inter, sans-serif",
+						},
+					},
+				},
+			};
+		</script>
+
+		<style>
+			[x-cloak] {
+				display: none;
+			}
+		</style>
+		<title>bestwebdesigntools.com | Web Design Tools | Pixelums</title>
+	</head>
+	<body class="font-inter flex h-full flex-col text-base text-neutral-950">
+		<main class="xl:block flex flex-grow flex-col" x-data="navigationMenu()">
+			<nav class="xl:w-60 xl:h-full xl:fixed xl:top-0 xl:left-0 xl:overflow-y-auto xl:border xl:border-r xl:border-r-red-600 xl:flex xl:flex-col xl:gap-2">
+				<div class="xl:static xl:border-none fixed left-0 top-0 z-30 flex h-14 w-full items-center justify-between border-b border-neutral-950/40 bg-white px-2">
+					<div class="xl:pl-2 flex w-full items-center justify-between pl-4">
+						<a href="#" class="flex font-bold">Best<span class="text-red-600">Web</span>DesignTools</a>
+						<!-- theme switcher -->
+						<button class="flex h-10 w-10 flex-shrink-0 items-center justify-center">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" class="h-5 w-5">
+								<path
+									d="M116,32V16a12,12,0,0,1,24,0V32a12,12,0,0,1-24,0Zm80,96a68,68,0,1,1-68-68A68.07,68.07,0,0,1,196,128Zm-24,0a44,44,0,1,0-44,44A44.05,44.05,0,0,0,172,128ZM51.51,68.49a12,12,0,1,0,17-17l-12-12a12,12,0,0,0-17,17Zm0,119-12,12a12,12,0,0,0,17,17l12-12a12,12,0,1,0-17-17ZM196,72a12,12,0,0,0,8.49-3.51l12-12a12,12,0,0,0-17-17l-12,12A12,12,0,0,0,196,72Zm8.49,115.51a12,12,0,0,0-17,17l12,12a12,12,0,0,0,17-17ZM44,128a12,12,0,0,0-12-12H16a12,12,0,0,0,0,24H32A12,12,0,0,0,44,128Zm84,84a12,12,0,0,0-12,12v16a12,12,0,0,0,24,0V224A12,12,0,0,0,128,212Zm112-96H224a12,12,0,0,0,0,24h16a12,12,0,0,0,0-24Z"
+								></path>
+							</svg>
+						</button>
+						<!-- ./theme switcher -->
+					</div>
+
+					<!-- burger -->
+					<button @click="toggleMenu()" class="xl:hidden flex h-11 w-11 items-center justify-center text-red-600">
+						<svg class="h-6 w-6" x-show="!isMobMenuOpen" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+						</svg>
+						<svg class="h-6 w-6" x-show="isMobMenuOpen" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" x-cloak>
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+						</svg>
+					</button>
+					<!-- ./burger -->
+				</div>
+
+				<!-- nav content -->
+				<div
+					x-show="showMenu"
+					x-transition:enter="transition ease-out duration-300"
+					x-transition:enter-start="transform -translate-x-full"
+					x-transition:enter-end="transform translate-x-0"
+					x-transition:leave="transition ease-in duration-300"
+					x-transition:leave-start="transform translate-x-0"
+					x-transition:leave-end="transform -translate-x-full"
+					class="xl:static xl:w-auto xl:pt-5 xl:border-none fixed top-0 z-20 flex h-screen w-60 flex-col gap-4 overflow-auto border-r border-red-600 bg-white px-5 pb-5 pt-20"
+				>
+					<!-- search button -->
+					<button class="flex w-full items-center justify-between rounded-md border border-neutral-950/40 px-4 py-1.5 transition ease-out hover:border-neutral-950 hover:bg-neutral-100/50">
+						<span class="text-sm font-light">Search...</span>
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" class="h-4 w-4">
+							<path d="M232.49,215.51,185,168a92.12,92.12,0,1,0-17,17l47.53,47.54a12,12,0,0,0,17-17ZM44,112a68,68,0,1,1,68,68A68.07,68.07,0,0,1,44,112Z" fill="currentColor"></path>
+						</svg>
+					</button>
+					<!-- ./search button -->
+
+					<!-- menu -->
+					<div class="flex flex-col gap-4">
+						<div>
+							<ul class="flex flex-col gap-2">
+								<li>
+									<a href="#" class="flex min-h-10 items-center gap-2 rounded-md border border-transparent p-2 text-neutral-950/80 transition ease-out hover:border-neutral-950 hover:bg-neutral-100/50">
+										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" class="h-4 w-4 flex-shrink-0">
+											<path
+												d="M218.83,103.77l-80-75.48a1.14,1.14,0,0,1-.11-.11,16,16,0,0,0-21.53,0l-.11.11L37.17,103.77A16,16,0,0,0,32,115.55V208a16,16,0,0,0,16,16H96a16,16,0,0,0,16-16V160h32v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V115.55A16,16,0,0,0,218.83,103.77ZM208,208H160V160a16,16,0,0,0-16-16H112a16,16,0,0,0-16,16v48H48V115.55l.11-.1L128,40l79.9,75.43.11.1Z"
+											></path>
+										</svg>
+										<span class="text-sm">Discover</span>
+									</a>
+								</li>
+								<li>
+									<a href="#" class="flex min-h-10 items-center gap-2 rounded-md border border-transparent p-2 text-neutral-950/80 transition ease-out hover:border-neutral-950 hover:bg-neutral-100/50">
+										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" class="h-4 w-4 flex-shrink-0">
+											<path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm16-40a8,8,0,0,1-8,8,16,16,0,0,1-16-16V128a8,8,0,0,1,0-16,16,16,0,0,1,16,16v40A8,8,0,0,1,144,176ZM112,84a12,12,0,1,1,12,12A12,12,0,0,1,112,84Z"></path>
+										</svg>
+										<span class="text-sm">About</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+
+						<div>
+							<p class="mb-4 border-b border-b-neutral-950/40 text-[12px] text-neutral-950/80">Explore</p>
+							<ul class="flex flex-col gap-2">
+								<li>
+									<a href="#" class="flex min-h-10 items-center gap-2 rounded-md border border-transparent p-2 text-neutral-950/80 transition ease-out hover:border-neutral-950 hover:bg-neutral-100/50">
+										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" class="h-4 w-4 flex-shrink-0">
+											<path
+												d="M224,64H176V56a24,24,0,0,0-24-24H104A24,24,0,0,0,80,56v8H32A16,16,0,0,0,16,80V192a16,16,0,0,0,16,16H224a16,16,0,0,0,16-16V80A16,16,0,0,0,224,64ZM96,56a8,8,0,0,1,8-8h48a8,8,0,0,1,8,8v8H96ZM224,80v32H192v-8a8,8,0,0,0-16,0v8H80v-8a8,8,0,0,0-16,0v8H32V80Zm0,112H32V128H64v8a8,8,0,0,0,16,0v-8h96v8a8,8,0,0,0,16,0v-8h32v64Z"
+											></path>
+										</svg>
+										<span class="text-sm">Web Design Tools</span>
+									</a>
+								</li>
+								<li>
+									<a href="#" class="flex min-h-10 items-center gap-2 rounded-md border border-transparent p-2 text-neutral-950/80 transition ease-out hover:border-neutral-950 hover:bg-neutral-100/50">
+										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" class="h-4 w-4 flex-shrink-0">
+											<path d="M208,96V32a8,8,0,0,0-8-8H56a8,8,0,0,0-5.31,14L107,88H56a8,8,0,0,0-8,8v64a8,8,0,0,0,2.34,5.66l72,72A8,8,0,0,0,136,232V168h64a8,8,0,0,0,5.31-14L149,104h51A8,8,0,0,0,208,96Zm-29,56H128a8,8,0,0,0-8,8v52.69l-56-56V104h61Zm13-64H131L77,40H192Z"></path>
+										</svg>
+										<span class="text-sm">Framer Templates</span>
+									</a>
+								</li>
+								<li>
+									<a href="#" class="flex min-h-10 items-center gap-2 rounded-md border border-transparent p-2 text-neutral-950/80 transition ease-out hover:border-neutral-950 hover:bg-neutral-100/50">
+										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" class="h-4 w-4 flex-shrink-0">
+											<path
+												d="M232,168h-8V72a24,24,0,0,0-24-24H56A24,24,0,0,0,32,72v96H24a8,8,0,0,0-8,8v16a24,24,0,0,0,24,24H216a24,24,0,0,0,24-24V176A8,8,0,0,0,232,168ZM48,72a8,8,0,0,1,8-8H200a8,8,0,0,1,8,8v96H48ZM224,192a8,8,0,0,1-8,8H40a8,8,0,0,1-8-8v-8H224ZM152,88a8,8,0,0,1-8,8H112a8,8,0,0,1,0-16h32A8,8,0,0,1,152,88Z"
+											></path>
+										</svg>
+										<span class="text-sm">Web Design Agencies</span>
+									</a>
+								</li>
+								<li>
+									<a href="#" class="flex min-h-10 items-center gap-2 rounded-md border border-transparent p-2 text-neutral-950/80 transition ease-out hover:border-neutral-950 hover:bg-neutral-100/50">
+										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" class="h-4 w-4 flex-shrink-0">
+											<path
+												d="M251.76,88.94l-120-64a8,8,0,0,0-7.52,0l-120,64a8,8,0,0,0,0,14.12L32,117.87v48.42a15.91,15.91,0,0,0,4.06,10.65C49.16,191.53,78.51,216,128,216a130,130,0,0,0,48-8.76V240a8,8,0,0,0,16,0V199.51a115.63,115.63,0,0,0,27.94-22.57A15.91,15.91,0,0,0,224,166.29V117.87l27.76-14.81a8,8,0,0,0,0-14.12ZM128,200c-43.27,0-68.72-21.14-80-33.71V126.4l76.24,40.66a8,8,0,0,0,7.52,0L176,143.47v46.34C163.4,195.69,147.52,200,128,200Zm80-33.75a97.83,97.83,0,0,1-16,14.25V134.93l16-8.53ZM188,118.94l-.22-.13-56-29.87a8,8,0,0,0-7.52,14.12L171,128l-43,22.93L25,96,128,41.07,231,96Z"
+											></path>
+										</svg>
+										<span class="text-sm">Web Design Courses</span>
+									</a>
+								</li>
+								<li>
+									<a href="#" class="flex min-h-10 items-center gap-2 rounded-md border border-transparent p-2 text-neutral-950/80 transition ease-out hover:border-neutral-950 hover:bg-neutral-100/50">
+										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" class="h-4 w-4 flex-shrink-0">
+											<path
+												d="M216,40H40A16,16,0,0,0,24,56V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40Zm0,160H40V56H216V200ZM184,96a8,8,0,0,1-8,8H80a8,8,0,0,1,0-16h96A8,8,0,0,1,184,96Zm0,32a8,8,0,0,1-8,8H80a8,8,0,0,1,0-16h96A8,8,0,0,1,184,128Zm0,32a8,8,0,0,1-8,8H80a8,8,0,0,1,0-16h96A8,8,0,0,1,184,160Z"
+											></path>
+										</svg>
+										<span class="text-sm">Blog</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+
+						<div>
+							<p class="mb-4 border-b border-b-neutral-950/40 text-[12px] text-neutral-950/80">Submission</p>
+							<ul class="flex flex-col gap-2">
+								<li>
+									<a href="#" class="flex min-h-10 items-center gap-2 rounded-md border border-transparent p-2 text-neutral-950/80 transition ease-out hover:border-neutral-950 hover:bg-neutral-100/50">
+										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" class="h-4 w-4 flex-shrink-0">
+											<path
+												d="M227.32,28.68a16,16,0,0,0-15.66-4.08l-.15,0L19.57,82.84a16,16,0,0,0-2.42,29.84l85.62,40.55,40.55,85.62A15.86,15.86,0,0,0,157.74,248q.69,0,1.38-.06a15.88,15.88,0,0,0,14-11.51l58.2-191.94c0-.05,0-.1,0-.15A16,16,0,0,0,227.32,28.68ZM157.83,231.85l-.05.14L118.42,148.9l47.24-47.25a8,8,0,0,0-11.31-11.31L107.1,137.58,24,98.22l.14,0L216,40Z"
+											></path>
+										</svg>
+										<span class="text-sm">Submit</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div>
+							<p class="mb-4 border-b border-b-neutral-950/40 text-[12px] text-neutral-950/80">Contact</p>
+							<ul class="flex flex-wrap gap-4">
+								<li>
+									<a href="#" class="group flex items-center">
+										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" class="h-4 w-4 flex-shrink-0 fill-neutral-950/70 transition-all group-hover:fill-neutral-950">
+											<path
+												d="M128,26a102,102,0,0,0,0,204c21.13,0,43.31-6.35,59.32-17a6,6,0,0,0-6.65-10c-13.9,9.25-34.09,15-52.67,15a90,90,0,1,1,90-90c0,29.58-13.78,34-22,34s-22-4.42-22-34V88a6,6,0,0,0-12,0v9a46,46,0,1,0,4.34,56.32C171.76,166.6,182,174,196,174c21.29,0,34-17.2,34-46A102.12,102.12,0,0,0,128,26Zm0,136a34,34,0,1,1,34-34A34,34,0,0,1,128,162Z"
+											></path>
+										</svg>
+									</a>
+								</li>
+								<li>
+									<a href="#" class="group flex items-center">
+										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" class="h-4 w-4 flex-shrink-0 fill-neutral-950/70 transition-all group-hover:fill-neutral-950">
+											<path
+												d="M245.54,69.71A6,6,0,0,0,240,66H208.4a46.6,46.6,0,0,0-40.33-24,44.93,44.93,0,0,0-32.31,13.12A45.92,45.92,0,0,0,122,88v8.66c-42-10-76.6-44.52-77-44.88A6,6,0,0,0,34.8,55.46c-4.25,47.22,9.42,78.75,21.64,96.89a107.71,107.71,0,0,0,23.07,25c-15.49,19-41.34,28.89-41.62,29a6,6,0,0,0-2.88,9C36,216.83,45.78,230,80,230c69.88,0,128.23-54,133.82-123.34l30.42-30.41A6,6,0,0,0,245.54,69.71ZM203.76,99.76a6,6,0,0,0-1.75,3.86C197.93,167.76,144.33,218,80,218c-14,0-22.76-2.41-28.06-4.8,11.3-5.68,29.72-16.88,41.05-33.87a6,6,0,0,0,.85-4.67A6,6,0,0,0,91,170.82c-.13-.08-13.13-7.86-25-25.72C52,124,45.31,98.43,46,68.88c14.88,12.6,45.57,35.09,81,41a6,6,0,0,0,7-5.92V88a34,34,0,0,1,10.19-24.34A33.05,33.05,0,0,1,167.93,54c13.43.17,26,8.37,31.24,20.4a6,6,0,0,0,5.5,3.6h20.84Z"
+											></path>
+										</svg>
+									</a>
+								</li>
+								<li>
+									<a href="#" class="group flex items-center">
+										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" class="h-4 w-4 flex-shrink-0 fill-neutral-950/70 transition-all group-hover:fill-neutral-950">
+											<path
+												d="M128,82a46,46,0,1,0,46,46A46.06,46.06,0,0,0,128,82Zm0,80a34,34,0,1,1,34-34A34,34,0,0,1,128,162ZM176,26H80A54.06,54.06,0,0,0,26,80v96a54.06,54.06,0,0,0,54,54h96a54.06,54.06,0,0,0,54-54V80A54.06,54.06,0,0,0,176,26Zm42,150a42,42,0,0,1-42,42H80a42,42,0,0,1-42-42V80A42,42,0,0,1,80,38h96a42,42,0,0,1,42,42ZM190,76a10,10,0,1,1-10-10A10,10,0,0,1,190,76Z"
+											></path>
+										</svg>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<!-- ./menu -->
+				</div>
+				<!-- ./nav content -->
+
+				<!-- menu overlay -->
+				<div
+					x-show="isMobMenuOpen"
+					x-transition:enter="transition ease-out duration-300"
+					x-transition:enter-start="opacity-0"
+					x-transition:enter-end="opacity-100"
+					x-transition:leave="transition ease-in duration-300"
+					x-transition:leave-start="opacity-100"
+					x-transition:leave-end="opacity-0"
+					@click="toggleMenu()"
+					class="xl:hidden xl:unvisible fixed inset-0 z-10 bg-neutral-500/20"
+				></div>
+				<!-- /menu overlay -->
+			</nav>
+
+			<div class="xl:pl-64 xl:py-5 px-5 pt-20">
+				<section class="xl:pt-3">
+					<div class="flex items-center justify-between gap-2 border-b border-b-neutral-950/50 pb-4">
+						<ul class="flex flex-wrap gap-1 text-sm text-neutral-950/80">
+							<li><a href="#" class="transition-all duration-200 ease-out after:pl-1 after:text-neutral-950 after:content-['/'] hover:text-neutral-950">Home</a></li>
+							<li><a href="#" class="transition-all duration-200 ease-out after:pl-1 after:text-neutral-950 after:content-['/'] hover:text-neutral-950">Web Design Tools</a></li>
+							<li><a href="#" class="transition-all duration-200 ease-out hover:text-neutral-950">Pixelums</a></li>
+						</ul>
+						<a href="#" class="flex min-h-10 w-fit items-center justify-center gap-2 rounded-md border border-neutral-950/40 bg-red-500 px-4 py-2 text-sm font-bold text-white transition ease-out hover:border-neutral-950/80 hover:bg-neutral-100/50 hover:text-neutral-950">Submit</a>
+					</div>
+				</section>
+
+				<section>
+					<div class="xl:p-20 flex justify-center py-4">
+						<div class="xl:gap-14 sm:flex-row flex max-w-5xl flex-col gap-8">
+							<div class="">
+								<div class="aspect-[1.6666/1] overflow-hidden rounded-md border border-neutral-950/40">
+									<img
+										decoding="async"
+										sizes=""
+										srcset="https://framerusercontent.com/images/9Tvo0UatwFEETgSmi1SpPctu5c.png?scale-down-to=512 512w, https://framerusercontent.com/images/9Tvo0UatwFEETgSmi1SpPctu5c.png?scale-down-to=1024 1024w, https://framerusercontent.com/images/9Tvo0UatwFEETgSmi1SpPctu5c.png 1200w"
+										src="https://framerusercontent.com/images/9Tvo0UatwFEETgSmi1SpPctu5c.png"
+										class="h-full w-full object-cover"
+									/>
+								</div>
+							</div>
+							<div class="sm:max-w-sm sm:order-none -order-1 flex w-full flex-grow flex-col gap-4">
+								<div class="flex flex-col gap-2">
+									<div class="h-fit w-fit rounded bg-red-500 px-1.5 py-0.5 text-[12px] text-white">New</div>
+									<h1 class="xl:text-5xl text-3xl font-bold">Pixelums</h1>
+									<p class="text-sm text-neutral-950/80">Wallpapers and icons</p>
+									<p class="text-sm text-neutral-950/80">Mobile & desktop wallpapers and icons designed by artists</p>
+								</div>
+
+								<ul class="flex flex-wrap gap-2">
+									<li class="h-min w-fit rounded-md border border-neutral-950/50 bg-neutral-200/80 px-2 py-0.5 text-[.75rem] text-neutral-950/80">Category: Icons</li>
+								</ul>
+								<div class="text-neutrals-950/80 text-[.75rem]">
+									<div>Socials:</div>
+									<ul class="mt-2 flex items-center gap-8">
+										<li>
+											<a href="#" class="group flex items-center">
+												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" class="h-4 w-4 flex-shrink-0 fill-neutral-950/70 transition-all group-hover:fill-neutral-950">
+													<path
+														d="M245.54,69.71A6,6,0,0,0,240,66H208.4a46.6,46.6,0,0,0-40.33-24,44.93,44.93,0,0,0-32.31,13.12A45.92,45.92,0,0,0,122,88v8.66c-42-10-76.6-44.52-77-44.88A6,6,0,0,0,34.8,55.46c-4.25,47.22,9.42,78.75,21.64,96.89a107.71,107.71,0,0,0,23.07,25c-15.49,19-41.34,28.89-41.62,29a6,6,0,0,0-2.88,9C36,216.83,45.78,230,80,230c69.88,0,128.23-54,133.82-123.34l30.42-30.41A6,6,0,0,0,245.54,69.71ZM203.76,99.76a6,6,0,0,0-1.75,3.86C197.93,167.76,144.33,218,80,218c-14,0-22.76-2.41-28.06-4.8,11.3-5.68,29.72-16.88,41.05-33.87a6,6,0,0,0,.85-4.67A6,6,0,0,0,91,170.82c-.13-.08-13.13-7.86-25-25.72C52,124,45.31,98.43,46,68.88c14.88,12.6,45.57,35.09,81,41a6,6,0,0,0,7-5.92V88a34,34,0,0,1,10.19-24.34A33.05,33.05,0,0,1,167.93,54c13.43.17,26,8.37,31.24,20.4a6,6,0,0,0,5.5,3.6h20.84Z"
+													></path>
+												</svg>
+											</a>
+										</li>
+									</ul>
+								</div>
+								<div>
+									<a href="#" class="xl:w-fit flex min-h-10 w-full items-center justify-center gap-2 rounded-md border border-red-500 bg-red-500 p-2 text-sm font-bold text-white transition ease-out hover:bg-white hover:text-red-500">Visit website</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- Web Design Tools -->
+				<section class="pb-5 pt-14">
+					<!-- block title -->
+					<div class="flex w-full items-center gap-2">
+						<div class="flex items-center gap-2">
+							<h2 class="md:text-xl text-base">Web Design Tools</h2>
+						</div>
+						<div class="h-[1px] flex-grow bg-neutral-950/40"></div>
+						<div class="flex items-center gap-2">
+							<p class="text-sm text-neutral-950/50">Explore</p>
+							<a href="#" class="flex-shrink-0">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" class="h-4 w-4 fill-neutral-950/50 transition-all duration-200 group-hover:fill-neutral-950">
+									<path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"></path>
+								</svg>
+							</a>
+						</div>
+					</div>
+					<!-- ./block title -->
+
+					<div class="xl:grid-cols-4 md:grid-cols-3 mt-8 grid gap-4">
+						<div>
+							<a href="#" class="group relative block rounded-md border border-neutral-950/40 p-2 transition-all duration-200 hover:bg-neutral-100/50">
+								<div class="absolute right-4 top-4 rounded bg-red-500 px-1.5 py-0.5 text-[12px] text-white">New</div>
+								<div class="aspect-[1.65/1] overflow-hidden rounded-md">
+									<img src="https://framerusercontent.com/images/XeGQxAdpviAHvcjPQCAhQN7IQeo.png" alt="" class="h-full w-full object-cover" />
+								</div>
+								<div class="flex gap-2 px-2 pt-2">
+									<div class="flex flex-grow flex-col gap-2">
+										<h3 class="font-bold">Motion primitives</h3>
+										<p class="text-sm text-neutral-950/50">Beautifully designed motions components.</p>
+									</div>
+									<div class="flex-shrink-0">
+										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" class="h-5 w-5 fill-neutral-950/50 transition-all duration-200 group-hover:fill-neutral-950">
+											<path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"></path>
+										</svg>
+									</div>
+								</div>
+							</a>
+						</div>
+
+						<div>
+							<a href="#" class="group relative block rounded-md border border-neutral-950/40 p-2 transition-all duration-200 hover:bg-neutral-100/50">
+								<div class="absolute right-4 top-4 rounded bg-red-500 px-1.5 py-0.5 text-[12px] text-white">New</div>
+								<div class="aspect-[1.65/1] overflow-hidden rounded-md">
+									<img src="https://framerusercontent.com/images/2YNfFIrQaBEUtJkKVPkz4z5hM.jpeg" alt="" class="h-full w-full object-cover" />
+								</div>
+								<div class="flex gap-2 px-2 pt-2">
+									<div class="flex flex-grow flex-col gap-2">
+										<h3 class="font-bold">It's baked</h3>
+										<p class="text-sm text-neutral-950/50">Collection of framer components</p>
+									</div>
+									<div class="flex-shrink-0">
+										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" class="h-5 w-5 fill-neutral-950/50 transition-all duration-200 group-hover:fill-neutral-950">
+											<path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"></path>
+										</svg>
+									</div>
+								</div>
+							</a>
+						</div>
+
+						<div>
+							<a href="#" class="group relative block rounded-md border border-neutral-950/40 p-2 transition-all duration-200 hover:bg-neutral-100/50">
+								<div class="absolute right-4 top-4 rounded bg-red-500 px-1.5 py-0.5 text-[12px] text-white">New</div>
+								<div class="aspect-[1.65/1] overflow-hidden rounded-md">
+									<img src="https://framerusercontent.com/images/p66srN1azdWzYCkBgVRhCH8yhQ.jpeg" alt="" class="h-full w-full object-cover" />
+								</div>
+								<div class="flex gap-2 px-2 pt-2">
+									<div class="flex flex-grow flex-col gap-2">
+										<h3 class="font-bold">Nova UI kit</h3>
+										<p class="text-sm text-neutral-950/50">Ultimate Figma and Framer UI kit</p>
+									</div>
+									<div class="flex-shrink-0">
+										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" class="h-5 w-5 fill-neutral-950/50 transition-all duration-200 group-hover:fill-neutral-950">
+											<path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"></path>
+										</svg>
+									</div>
+								</div>
+							</a>
+						</div>
+
+						<div>
+							<a href="#" class="md:hidden xl:block group relative block rounded-md border border-neutral-950/40 p-2 transition-all duration-200 hover:bg-neutral-100/50">
+								<div class="absolute right-4 top-4 rounded bg-red-500 px-1.5 py-0.5 text-[12px] text-white">New</div>
+								<div class="aspect-[1.65/1] overflow-hidden rounded-md">
+									<img src="https://framerusercontent.com/images/FUWTMCeR9Z63vqTGhQ7EieXjPXQ.jpeg" alt="" class="h-full w-full object-cover" />
+								</div>
+								<div class="flex gap-2 px-2 pt-2">
+									<div class="flex flex-grow flex-col gap-2">
+										<h3 class="font-bold">Untitled UI</h3>
+										<p class="text-sm text-neutral-950/50">UI kit and design syste,</p>
+									</div>
+									<div class="flex-shrink-0">
+										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" class="h-5 w-5 fill-neutral-950/50 transition-all duration-200 group-hover:fill-neutral-950">
+											<path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"></path>
+										</svg>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+				</section>
+				<!-- ./Web Design Tools -->
+			</div>
+		</main>
+		<footer class="xl:pl-64 px-5">
+			<div class="md:flex-row flex flex-col items-center justify-between gap-4 border-t border-t-neutral-950/50 py-3 text-[12px] text-neutral-950/80">
+				<div>coded in TailwindCSS + AlpineJs By <a href="https://web.khorol.com.ua" class="underline-offset-4 hover:underline">FireMonster</a></div>
+				<div class="md:order-none -order-1 flex items-center gap-2">
+					<a href="#" class="underline-offset-4 hover:underline">Terms</a>
+					<a href="#" class="underline-offset-4 hover:underline">Privacy</a>
+					<a href="#" class="underline-offset-4 hover:underline">404</a>
+				</div>
+				<div>© Copyright 2024</div>
+			</div>
+		</footer>
+
+		<script>
+			function navigationMenu() {
+				return {
+					isMobMenuOpen: false,
+					showMenu: window.innerWidth >= 1280,
+					toggleMenu() {
+						this.isMobMenuOpen = !this.isMobMenuOpen;
+						this.updateMenuVisibility();
+						this.toggleScrollLock();
+					},
+					updateMenuVisibility() {
+						this.showMenu = window.innerWidth >= 1280 || this.isMobMenuOpen;
+					},
+					toggleScrollLock() {
+						if (window.innerWidth < 1280) {
+							document.body.classList.toggle("overflow-hidden", this.isMobMenuOpen);
+						} else {
+							document.body.classList.remove("overflow-hidden");
+						}
+					},
+					init() {
+						this.updateMenuVisibility();
+						window.addEventListener("resize", () => {
+							this.updateMenuVisibility();
+							this.toggleScrollLock();
+						});
+					},
+				};
+			}
+		</script>
+	</body>
+</html>

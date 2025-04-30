@@ -1,0 +1,197 @@
+.text-section ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.text-section {
+  position: relative;
+  overflow: hidden;
+  padding: 1.25em 0 4.375em;
+}
+.text-section .main-container {
+  position: relative;
+  z-index: 2;
+  max-width: 771px;
+}
+.text-section .typical-header {
+  margin-bottom: 0.8em;
+  font: 3.125em/1.24 "rubik-medium", sans-serif;
+}
+@media (max-width: 767px) {
+  .text-section .typical-header {
+    margin-bottom: 0.5333333333em;
+    font: 1.875em/1.4 "rubik-medium", sans-serif;
+  }
+}
+.text-section .typical-header--normal {
+  text-align: unset;
+}
+.text-section p {
+  margin: 0;
+  font: 1.125em/1.6666666667 "rubik-reg", sans-serif;
+  color: #353535;
+}
+.text-section p .purple-link {
+  margin-top: 0;
+}
+.text-section p span {
+  font-family: "rubik-medium", sans-serif;
+}
+@media (max-width: 767px) {
+  .text-section p {
+    font: 1em/1.875 "rubik-reg", sans-serif;
+  }
+}
+.text-section__item:not(:last-child) {
+  margin-bottom: 4.0625em;
+}
+@media (max-width: 767px) {
+  .text-section__item:not(:last-child) {
+    margin-bottom: 1.875em;
+  }
+}
+.text-section__item--paragraph-offset-bottom p:not(:last-child) {
+  margin-bottom: 2.2222222222em;
+}
+@media (max-width: 767px) {
+  .text-section__item--paragraph-offset-bottom p:not(:last-child) {
+    margin-bottom: 2.5em;
+  }
+}
+.text-section__item--with-bullets p {
+  position: relative;
+  padding-right: 1.4444444444em;
+}
+.text-section__item--with-bullets p:not(:last-child) {
+  margin-bottom: 1.1111111111em;
+}
+@media (max-width: 767px) {
+  .text-section__item--with-bullets p:not(:last-child) {
+    margin-bottom: 1.25em;
+  }
+}
+.text-section__item--with-bullets p::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0.2777777778em;
+  width: 1em;
+  height: 1em;
+  background: url("../../img/faq-tick.svg") no-repeat center;
+  background-size: contain;
+}
+@media (max-width: 767px) {
+  .text-section__item--with-bullets p {
+    padding-right: 1.625em;
+  }
+  .text-section__item--with-bullets p::before {
+    top: 0.3125em;
+    width: 1.125em;
+    height: 1.125em;
+  }
+}
+.text-section__background-bottom {
+  position: absolute;
+  z-index: 1;
+}
+@media (max-width: 767px) {
+  .text-section__background-bottom {
+    display: none;
+  }
+}
+.text-section__background-bottom {
+  inset-inline-end: 50%;
+  transform: translateX(-50%);
+  bottom: -180px;
+  max-width: none;
+}
+html[dir=ltr] .text-section__background-bottom {
+  transform: translateX(50%);
+}
+
+.text-section .primary-btn,
+.text-section .secondary-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5em 1em;
+  min-width: 10.5em;
+  min-height: 3em;
+}
+@media (max-width: 767px) {
+  .text-section .primary-btn,
+.text-section .secondary-btn {
+    min-width: 8.75em;
+    min-height: 2.5em;
+  }
+}
+.text-section .primary-btn {
+  background-color: #00a661;
+}
+.text-section .primary-btn:hover {
+  background-color: #018c52;
+}
+.text-section .secondary-btn:hover {
+  border-color: #018c52;
+}
+.text-section .btns-wrap {
+  display: flex;
+  flex-flow: wrap;
+  gap: 1.25em;
+  margin-top: 3.125em;
+}
+@media (max-width: 767px) {
+  .text-section .btns-wrap {
+    margin-top: 2.5em;
+  }
+}
+@media (max-width: 373px) {
+  .text-section .btns-wrap {
+    justify-content: center;
+  }
+}
+.text-section--bigger-text {
+  padding: 4.125em 0 7.375em;
+}
+.text-section--bigger-text p {
+  margin: 0;
+  font: 1.5em/1.5 "rubik-medium", sans-serif;
+  color: #353535;
+}
+@media (max-width: 767px) {
+  .text-section--bigger-text p {
+    font: 1.125em/1.6666666667 "rubik-medium", sans-serif;
+  }
+}
+.text-section--bigger-text__item--paragraph-offset-bottom p:not(:last-child) {
+  margin-bottom: 1.6666666667em;
+}
+@media (max-width: 767px) {
+  .text-section--bigger-text__item--paragraph-offset-bottom p:not(:last-child) {
+    margin-bottom: 2.2222222222em;
+  }
+}
+@media (max-width: 767px) {
+  .text-section--bigger-text {
+    padding: 4.375em 0;
+  }
+}
+.text-section--regulatory-api {
+  padding: 3.3125em 0 9.6875em;
+}
+.text-section--regulatory-api .text-section__background-bottom {
+  bottom: -300px;
+}
+@media (max-width: 767px) {
+  .text-section--regulatory-api {
+    padding: 2.8125em 0;
+  }
+}
+.text-section--regulatory-api-bottom {
+  padding: 3.75em 0 4.625em;
+  text-align: center;
+}
+.text-section--regulatory-api-bottom .primary-btn {
+  min-width: 13em;
+}

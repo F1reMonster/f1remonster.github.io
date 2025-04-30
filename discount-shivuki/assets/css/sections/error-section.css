@@ -1,0 +1,103 @@
+.error-section {
+  position: relative;
+  padding: 4.5625em 0 11.4375em;
+  overflow: hidden;
+}
+@media screen and (max-width: 767px) {
+  .error-section {
+    padding: 3.9375em 0 4.1875em;
+  }
+}
+.error-section .wrap {
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 767px) {
+  .error-section .wrap {
+    flex-direction: column-reverse;
+  }
+}
+.error-section .txt {
+  font: 1.875em/1.0666666667 "rubik-reg", sans-serif;
+  color: #3c3f45;
+  margin-top: 1.2em;
+  max-width: 17.7333333333em;
+}
+@media screen and (max-width: 767px) {
+  .error-section .txt {
+    font-size: 1em;
+    line-height: 1.5;
+  }
+}
+.error-section .try-again, .error-section .go-home {
+  min-width: 12.5em;
+}
+@media screen and (max-width: 767px) {
+  .error-section .try-again, .error-section .go-home {
+    min-width: 10.625em;
+  }
+}
+.error-section .actions {
+  display: flex;
+  gap: 2em;
+  margin-top: 3.375em;
+}
+@media screen and (max-width: 900px) {
+  .error-section .actions {
+    display: block;
+  }
+  .error-section .actions a:last-child {
+    margin-top: 12px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .error-section .actions {
+    display: flex;
+    gap: 0.625em;
+    margin-top: 2.375em;
+  }
+  .error-section .actions a:last-child {
+    margin-top: 0;
+  }
+}
+@media screen and (max-width: 380px) {
+  .error-section .actions a {
+    min-width: 8.75em;
+  }
+}
+.error-section .msg {
+  margin-inline-end: 1.25em;
+}
+@media screen and (max-width: 767px) {
+  .error-section .msg {
+    margin-inline-end: 0;
+  }
+}
+.error-section .img-wrap {
+  margin-inline-start: auto;
+  max-width: 47.5em;
+}
+@media screen and (max-width: 767px) {
+  .error-section .img-wrap {
+    margin-inline-start: 0;
+    margin-bottom: 1.5625em;
+  }
+}
+.error-section .img-wrap .main-error-img {
+  display: block;
+}
+.error-section .error-bg-img {
+  position: absolute;
+  bottom: -18.229167vw;
+  inset-inline-end: -14.8438vw;
+  z-index: -1;
+}
+html[dir=ltr] .error-section .error-bg-img {
+  transform: scaleX(-1);
+}
+
+@media screen and (max-width: 767px) {
+  .error-section .error-bg-img {
+    display: none;
+  }
+}

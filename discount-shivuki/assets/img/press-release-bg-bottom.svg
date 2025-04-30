@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="555px" height="433px" viewBox="0 0 555 433" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>B9120DA7-AC7A-4168-8A39-C78F44496B7C</title>
+    <defs>
+        <linearGradient x1="74.565583%" y1="43.5003813%" x2="-33.5201794%" y2="35.0038038%" id="linearGradient-1">
+            <stop stop-color="#8FE600" offset="0%"></stop>
+            <stop stop-color="#2FC059" offset="47.8119537%"></stop>
+            <stop stop-color="#218370" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Concept" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" fill-opacity="0.2">
+        <g id="Desktop-1920_DISCOUNT---Press-Releases" transform="translate(0.000000, -1620.000000)" fill="url(#linearGradient-1)">
+            <path d="M236,1620 C317.800893,1620 385.782457,1675.42505 399.482687,1748.37248 C411.812237,1744.24817 425.121491,1742 439,1742 C503.065031,1742 555,1789.90553 555,1849 C555,1908.09447 503.065031,1956 439,1956 C422.763241,1956 407.30563,1952.9229 393.27516,1947.36641 C371.096093,2008.78716 309.05992,2053 236,2053 C164.49863,2053 103.555695,2010.65338 80.1931269,1951.27286 C69.3848014,1954.34666 57.9017206,1956 46,1956 C-18.065031,1956 -70,1908.09447 -70,1849 C-70,1789.90553 -18.065031,1742 46,1742 C55.3691533,1742 64.4788757,1743.02458 73.2046658,1744.95889 C88.3486935,1673.70387 155.479257,1620 236,1620 Z" id="Combined-Shape-Copy-3"></path>
+        </g>
+    </g>
+</svg>

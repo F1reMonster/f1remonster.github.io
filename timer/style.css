@@ -1,0 +1,67 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Lato", sans-serif;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  max-width: 73.125rem;
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+  margin: 0 auto;
+}
+
+.timer__block p {
+  font-weight: 700;
+  margin: 0 0 0.9375rem;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.timer {
+  display: flex;
+  justify-content: center;
+  gap: 0.625rem;
+}
+.timer__item {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  font-size: 1.25rem;
+}
+.timer__item .count {
+  display: flex;
+  gap: 0.1875rem;
+}
+.timer__item .text {
+  margin-top: 0.625rem;
+  font-size: 1.125rem;
+}
+.timer__item span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.3125rem 0.5rem;
+  background-color: #0000ff;
+  color: #fbff00;
+  font-weight: 700;
+  font-size: 3rem;
+}/*# sourceMappingURL=style.css.map */

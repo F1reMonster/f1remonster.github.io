@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1920px" height="281px" viewBox="0 0 1920 281" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>CA37D45B-7032-434E-92C0-11922023F50A</title>
+    <defs>
+        <linearGradient x1="39.4329379%" y1="48.9900264%" x2="106.405556%" y2="48.9230643%" id="linearGradient-1">
+            <stop stop-color="#8FE600" offset="0%"></stop>
+            <stop stop-color="#2FC059" offset="90.4556381%"></stop>
+            <stop stop-color="#218370" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Concept" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" fill-opacity="0.2">
+        <g id="Desktop-1920_DISCOUNT---Portal-pages" transform="translate(0.000000, -2971.000000)" fill="url(#linearGradient-1)">
+            <g id="Group-50" transform="translate(-89.639549, 2659.589896)">
+                <path d="M142.964441,261.59103 C530.418434,377.060223 882.050407,421.14733 1197.86036,393.852353 C1513.67031,366.557375 1766.56568,378.601373 1956.54646,429.984345 C2200.36448,508.50673 2183.37224,581.347286 1905.56972,648.506011 C1812.18936,671.080703 1451.53385,693.475288 865.793625,515.081367 C475.300142,396.152086 191.200967,390.73727 13.4961002,498.83692 L142.964441,261.59103 Z" id="Path-4-Copy-3" transform="translate(1070.496100, 462.591030) scale(-1, -1) rotate(-5.000000) translate(-1070.496100, -462.591030) "></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,55 @@
+@mixin mediaPC() {
+	@media (max-width: 1400px) {
+		@content;
+	}
+}
+@mixin mediaLaptop() {
+	@media (max-width: 1200px) {
+		@content;
+	}
+}
+
+@mixin mediaTablet() {
+	@media (max-width: 1023px) {
+		@content;
+	}
+}
+@mixin mediaMobileN() {
+	@media (max-width: 870px) {
+		@content;
+	}
+}
+
+@mixin mediaMobile() {
+	@media (max-width: 767px) {
+		@content;
+	}
+}
+@mixin mediaMobileD() {
+	@media (max-width: 635px) {
+		@content;
+	}
+}
+
+@mixin mediaMobileS() {
+	@media (max-width: 475px) {
+		@content;
+	}
+}
+
+@mixin mediaMobileXS() {
+	@media (max-width: 374px) {
+		@content;
+	}
+}
+
+@mixin hover-supported {
+	// https://developer.mozilla.org/en-US/docs/Web/CSS/@media/pointer
+	// coarse: The primary input mechanism includes a pointing device of limited accuracy.
+
+	@media not all and (pointer: coarse) {
+		&:hover {
+			@content;
+		}
+	}
+}

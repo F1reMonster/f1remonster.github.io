@@ -1,0 +1,85 @@
+.save-smart-video-section .video .iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.save-smart-video-section {
+  padding: 4.0625em 0 3.125em;
+  position: relative;
+}
+.save-smart-video-section .save-smart-video-bg {
+  position: absolute;
+  z-index: -1;
+  top: calc(100% - 10em);
+  inset-inline-end: 0;
+}
+html[dir=ltr] .save-smart-video-section .save-smart-video-bg {
+  transform: scaleX(-1);
+}
+
+@media screen and (max-width: 767px) {
+  .save-smart-video-section .save-smart-video-bg {
+    display: none;
+  }
+}
+@media screen and (max-width: 767px) {
+  .save-smart-video-section {
+    padding: 2.1875em 0 30px;
+    min-height: 0;
+  }
+}
+.save-smart-video-section .msg {
+  font: 1.5em/1.1666666667 "rubik-reg", sans-serif;
+  color: #000;
+  text-align: center;
+  margin-bottom: 2.0833333333em;
+}
+@media screen and (max-width: 767px) {
+  .save-smart-video-section .msg {
+    font-size: 1em;
+    line-height: 1.625;
+    color: #6924e8;
+  }
+}
+.save-smart-video-section .typical-header {
+  margin-bottom: 0.1em;
+}
+@media screen and (max-width: 767px) {
+  .save-smart-video-section .typical-header {
+    margin-bottom: 0.4em;
+  }
+}
+.save-smart-video-section .video {
+  position: relative;
+  clear: both;
+  overflow: hidden;
+  border-radius: 20px 20px 0 0;
+}
+@media screen and (max-width: 767px) {
+  .save-smart-video-section .video {
+    border-radius: 20px;
+  }
+}
+.save-smart-video-section .video::before {
+  content: "";
+  float: right;
+  padding-bottom: 56.25%;
+}
+.save-smart-video-section .video::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.save-smart-video-section .link-wrap {
+  margin-top: 1.25em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.save-smart-video-section .link-wrap .primary-btn {
+  min-width: 10.375em;
+}

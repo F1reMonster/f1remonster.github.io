@@ -1,0 +1,27 @@
+.intro-section--help-page .wrap {
+  position: relative;
+}
+.intro-section--help-page .wrap .help-page-background {
+  position: absolute;
+  left: 50%;
+  bottom: -6.25em;
+  z-index: -1;
+  transform: translateX(-50%);
+}
+@media screen and (max-width: 767px) {
+  .intro-section--help-page .wrap {
+    display: flex;
+    flex-flow: column-reverse;
+  }
+  .intro-section--help-page .wrap .help-page-background {
+    display: none;
+  }
+}
+.intro-section--help-page .txt-part .msg {
+  max-width: 25.5em;
+}
+@media (max-width: 767px) {
+  .intro-section--help-page .txt-part {
+    margin-top: 1.25em;
+  }
+}

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="250px" height="234px" viewBox="0 0 250 234" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>E422860C-244C-4FA9-9615-C4D312E43B0B</title>
+    <defs>
+        <linearGradient x1="21.7619243%" y1="61.6948093%" x2="120.106908%" y2="20.3752597%" id="linearGradient-1">
+            <stop stop-color="#8FE600" offset="0%"></stop>
+            <stop stop-color="#2FC059" offset="47.8119537%"></stop>
+            <stop stop-color="#218370" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Concept" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" fill-opacity="0.2">
+        <g id="Desktop-1920_DISCOUNT_CreditCards-Lobby" transform="translate(0.000000, -2907.000000)" fill="url(#linearGradient-1)">
+            <path d="M96.5,2907 C136.486264,2907 169.746743,2936.67984 176.674636,2975.83127 C182.128783,2973.99286 187.952442,2973 194,2973 C224.927946,2973 250,2998.96748 250,3031 C250,3063.03252 224.927946,3089 194,3089 C186.718808,3089 179.762177,3087.56076 173.380845,3084.94198 C162.210498,3117.59733 132.006904,3141 96.5,3141 C61.3589259,3141 31.4124432,3118.07708 19.9687525,3085.94767 C14.3295305,3087.92741 8.28570493,3089 2,3089 C-28.927946,3089 -54,3063.03252 -54,3031 C-54,2998.96748 -28.927946,2973 2,2973 C7.00960379,2973 11.8655699,2973.68129 16.4862358,2974.9593 C23.7481009,2936.24024 56.8109672,2907 96.5,2907 Z" id="Combined-Shape-Copy"></path>
+        </g>
+    </g>
+</svg>

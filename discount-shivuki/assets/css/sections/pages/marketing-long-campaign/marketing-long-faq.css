@@ -1,0 +1,12 @@
+.long-campaign-wrap .faq {
+  padding-bottom: 1.5625em;
+}
+@media screen and (max-width: 767px) {
+  .long-campaign-wrap .faq {
+    padding-top: 3.75em;
+    padding-bottom: 2.8125em;
+  }
+}
+.long-campaign-wrap .faq-cloud {
+  display: none;
+}

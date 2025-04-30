@@ -1,0 +1,33 @@
+.intro-section--currency-rates .img-part img {
+  position: relative;
+  left: 7em;
+}
+@media (max-width: 1180px) {
+  .intro-section--currency-rates .img-part img {
+    left: unset;
+  }
+}
+.intro-section--currency-rates .btns-wrap {
+  display: flex;
+  gap: 3.125em;
+  margin-top: 2.1875em;
+  padding-bottom: 1em;
+}
+@media screen and (max-width: 767px) {
+  .intro-section--currency-rates .btns-wrap {
+    flex-flow: wrap;
+    align-items: center;
+    margin-top: 1.6875em;
+    gap: 0.9375em;
+  }
+}
+@media (max-width: 389px) {
+  .intro-section--currency-rates .btns-wrap {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 767px) {
+  .intro-section--currency-rates .btns-wrap a {
+    min-width: 10.375em;
+  }
+}

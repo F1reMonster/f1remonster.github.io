@@ -1,0 +1,112 @@
+.marketing-steps .wrap {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.marketing-steps {
+  padding: 4.0625em 20px 2.3125em;
+  position: relative;
+  text-align: center;
+}
+@media screen and (max-width: 767px) {
+  .marketing-steps {
+    padding: 2.8125em 20px 3.125em;
+  }
+}
+.marketing-steps .typical-header {
+  letter-spacing: -1px;
+}
+.marketing-steps .bg-wrap {
+  position: relative;
+}
+@media screen and (max-width: 767px) {
+  .marketing-steps .bg-wrap {
+    display: none;
+  }
+}
+.marketing-steps .bg-wrap .bg {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -8.25em;
+  max-width: none;
+  z-index: -1;
+}
+html[dir=ltr] .marketing-steps .bg-wrap .bg {
+  transform: translateX(-50%) scaleX(-1);
+}
+
+.marketing-steps .subheader {
+  font: 1.25em/1.6 "rubik-reg", sans-serif;
+  margin: 0;
+}
+@media screen and (max-width: 767px) {
+  .marketing-steps .subheader {
+    font-size: 1em;
+    line-height: 1.625;
+    margin-top: 0.75em;
+  }
+}
+.marketing-steps .wrap {
+  display: flex;
+  align-items: flex-start;
+  max-width: 67.5em;
+  margin: 2.5em auto 40px;
+}
+@media screen and (max-width: 767px) {
+  .marketing-steps .wrap {
+    display: block;
+    margin: 1.0625em auto 3.125em;
+  }
+}
+.marketing-steps .info {
+  flex-basis: 9.25em;
+}
+@media screen and (max-width: 767px) {
+  .marketing-steps .info {
+    margin-bottom: 45px;
+  }
+}
+.marketing-steps .icon-wrap {
+  width: 8.875em;
+  height: 8.875em;
+  border-radius: 50%;
+  box-shadow: 0 2px 13px 0 rgba(56, 59, 64, 0.1);
+  border: 0.81px solid rgba(60, 63, 69, 0.2);
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 767px) {
+  .marketing-steps .icon-wrap {
+    margin: 0 auto 0;
+  }
+}
+.marketing-steps .msg {
+  font: 1.5em/1.3333333333 "rubik-medium", sans-serif;
+  margin-top: 1.3333333333em;
+  color: #3c3f45;
+}
+@media screen and (max-width: 767px) {
+  .marketing-steps .msg {
+    font-size: 1.25em;
+    line-height: 1.4;
+    max-width: 7.1em;
+    margin: 0.7em auto 0;
+  }
+}
+.marketing-steps .arr {
+  flex-grow: 1;
+  padding-top: 2.375em;
+}
+@media screen and (max-width: 767px) {
+  .marketing-steps .arr {
+    display: none;
+  }
+}
+.marketing-steps .arr span {
+  font: 4.375em/1 "rubik-light", sans-serif;
+  color: #3c3f45;
+}

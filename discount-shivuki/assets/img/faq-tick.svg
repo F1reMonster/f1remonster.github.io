@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="42px" height="42px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>9372997F-DBF4-490B-8292-7215BF14D592</title>
+    <defs>
+        <linearGradient x1="-67.3828125%" y1="-35.1025391%" x2="89.6909969%" y2="99.8586904%" id="linearGradient-1">
+            <stop stop-color="#6F2EE8" offset="0.0983391608%"></stop>
+            <stop stop-color="#6924E8" offset="43.9685315%"></stop>
+            <stop stop-color="#A07CE1" offset="100%"></stop>
+        </linearGradient>
+        <circle id="path-2" cx="18.3333333" cy="18.3333333" r="18.3333333"></circle>
+        <filter x="-9.5%" y="-6.8%" width="119.1%" height="119.1%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="ui" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-1920_DISCOUNT_lobby-page---Credit-Card" transform="translate(-204.000000, -2062.000000)">
+            <g id="Group-2" transform="translate(181.000000, 1882.000000)">
+                <g id="Group-37" transform="translate(0.000000, 145.000000)">
+                    <g id="Group-55" transform="translate(1.000000, 20.000000)">
+                        <g id="Icon-/-Arrow-Copy-3" transform="translate(44.000000, 36.000000) rotate(-270.000000) translate(-44.000000, -36.000000) translate(24.000000, 16.000000)">
+                            <g id="Group" transform="translate(1.666667, 1.666667)">
+                                <g id="Oval-Copy">
+                                    <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-2"></use>
+                                    <use fill="url(#linearGradient-1)" fill-rule="evenodd" xlink:href="#path-2"></use>
+                                </g>
+                                <path d="M11.2817378,23.817385 L19.1406562,15.717259 L27.0522269,23.817385 C28.1071083,24.9290304 29.9004785,23.1292586 28.8455971,22.017357 L19.8787461,12.8058258 C19.5094698,12.4351786 18.8238647,12.3823147 18.4545804,12.7529652 L9.48772934,22.0173442 C8.43284793,23.1289896 10.226282,24.9290176 11.2810995,23.8173722 L11.2817378,23.817385 Z" id="Path" fill="#FFFFFF" fill-rule="nonzero" transform="translate(19.166667, 18.333333) rotate(-270.000000) translate(-19.166667, -18.333333) "></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

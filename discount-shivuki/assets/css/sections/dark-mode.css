@@ -1,0 +1,162 @@
+.dark-mode body {
+  background: #000;
+}
+.dark-mode .home-top-stripe {
+  background-color: #b491f3;
+}
+.dark-mode .custom-hamburger .stick {
+  background-color: #fff;
+}
+.dark-mode .custom-hamburger .btn-txt {
+  color: #fff;
+}
+.dark-mode .lang-switcher .label .cur-name,
+.dark-mode .client-switcher .label .cur-name {
+  color: #fff;
+}
+.dark-mode .lang-switcher .label .lang-tick svg polyline,
+.dark-mode .client-switcher .label .lang-tick svg polyline {
+  stroke: #fff;
+}
+.dark-mode .main-navigation {
+  background-color: #3c3f45;
+  box-shadow: 0 0 10px 0 #000;
+}
+.dark-mode .main-navigation .top-menu-items a {
+  color: #fff;
+  color: transparent;
+}
+.dark-mode .main-navigation .top-menu-items a::before {
+  color: #fff;
+}
+.dark-mode .site-header .header-menu {
+  background-color: #000;
+}
+.dark-mode .site-header .menu-block .menu-in-menu-block a {
+  color: #fff;
+}
+.dark-mode .site-header .submenus-wrap .submenu a {
+  color: #fff;
+}
+.dark-mode .menu-dropdown.is-search {
+  background: rgba(60, 63, 69, 0.8);
+}
+.dark-mode .menu-dropdown.is-search .inner {
+  background-color: #000;
+}
+.dark-mode .search-input {
+  margin-left: 0;
+  background-color: #3c3f45;
+}
+.dark-mode .search-input input {
+  background-color: #3c3f45;
+  color: #fff;
+}
+.dark-mode .search-input svg .svg-glass {
+  stroke: #fff;
+}
+.dark-mode .search-input.is-focused input {
+  background-color: #fff;
+  color: #000;
+}
+.dark-mode .search-input-inner button {
+  width: 2.9375em;
+  height: 2.9375em;
+}
+.dark-mode .close-search-form {
+  color: #fff;
+}
+.dark-mode .search-tags__title {
+  color: #fff;
+}
+.dark-mode .search-wrapper .inner::before {
+  border-bottom-color: #000;
+}
+.dark-mode .search-wrapper ul.search-tags li a {
+  color: #fff;
+}
+.dark-mode .mobile-header {
+  background-color: #000;
+}
+.dark-mode .mobile-header .bottom {
+  border-top: none;
+}
+.dark-mode .header-menu-mobile {
+  padding-top: 1.25em;
+}
+.dark-mode .mobile-search-open svg .svg-glass {
+  stroke: #fff;
+}
+.dark-mode .mobile-search-inner {
+  background-color: rgba(60, 63, 69, 0.8);
+}
+.dark-mode .close-mobile-search {
+  color: #fff;
+}
+.dark-mode .all-search-results a {
+  color: #fff;
+}
+.dark-mode .footer {
+  background-color: #000;
+}
+.dark-mode .intro-section .header,
+.dark-mode .intro-section .msg,
+.dark-mode .intro-section .msg-mid,
+.dark-mode .intro-section .msg-big {
+  color: #fff;
+}
+.dark-mode .intro-section.white {
+  background-color: #fff;
+}
+.dark-mode .intro-section.white .msg,
+.dark-mode .intro-section.white .msg-mid,
+.dark-mode .intro-section.white .msg-big {
+  color: #000;
+}
+.dark-mode .marketing-items-section {
+  background-color: #fff;
+}
+.dark-mode .site-pagination {
+  color: #fff;
+}
+.dark-mode .textual-section,
+.dark-mode .text-section {
+  background-color: #fff;
+}
+.dark-mode .contact-form-section {
+  padding: 3.125em 0 5em;
+}
+@media (max-width: 767px) {
+  .dark-mode .contact-form-section {
+    padding: 3.125em 0 0.625em;
+  }
+}
+.dark-mode .discount-open-banking__contact-form {
+  background-color: #fff;
+}
+.dark-mode .text-section--bigger-text {
+  background-color: #000;
+}
+.dark-mode .text-section--bigger-text p {
+  color: #fff;
+}
+.dark-mode .text-section--bigger-text .typical-header {
+  color: #fff;
+}
+.dark-mode .text-section--bigger-text .purple-link {
+  color: #b491f3;
+}
+.dark-mode .text-section--bigger-text .purple-link:hover {
+  text-shadow: 0 0 0.01px #b491f3, 0 0 0.01px #b491f3;
+}
+.dark-mode .catalogue-cards .typical-header {
+  color: #fff;
+}
+.dark-mode .catalogue-cards__footer p {
+  color: #fff;
+}
+.dark-mode .discount-open-banking__faq,
+.dark-mode .discount-open-banking__contact,
+.dark-mode .user-login {
+  background-color: #fff;
+}

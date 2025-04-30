@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+<title>Legacy space - Login page</title>
+<meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=yes">
+<link rel="canonical" href='' />
+<meta name="MobileOptimized" content="width"/>
+<meta name="HandheldFriendly" content="True"/>
+<meta name="viewport" content="initial-scale=1.0, width=device-width">
+<link rel="stylesheet" type="text/css" href="../../css/style.css" />
+
+	</head>
+
+	<body class="flex flex-col h-full font-inter">
+		<header class="border-b border-neutral-black-5">
+	<div class="container">
+		<div class="flex items-center justify-center gap-4 py-5 lg:py-10">
+			<a href="../../index.html">
+				<img decoding="async" src="../../img/svg/logo.svg" title="" alt="" loading="lazy" class="w-25.5 lg:w-35" />
+			</a>
+		</div>
+	</div>
+</header>
+
+		<main class="flex-grow">
+			<div class="container flex flex-col h-full py-13 lg:py-10">
+				<div class="w-full mx-auto max-w-110">
+					<div class="text-center">
+						<h1 class="font-semibold tracking-tight text-sm2x leading-125 text-primary-black lg:text-base2x">Login</h1>
+						<p class="mt-2 text-sm leading-150 text-neutral-black-70 lg:text-base">Welcome back! Please enter your details.</p>
+					</div>
+
+					<div class="mt-8">
+						<a href="#" class="flex h-12 w-full items-center justify-center gap-2 rounded-xl border border-neutral-black-5 px-5 py-3.5 transition-all duration-300 hover:bg-neutral-black-1">
+							<div class="w-5 h-5">
+								<img decoding="async" src="../../img/google.png" srcset="../../img/google2x.png 2x" title="" alt="google logo" loading="lazy" class="object-contain w-full h-full" />
+							</div>
+							<div class="font-medium leading-150 text-primary-black">Continue with Google</div>
+						</a>
+
+						<div class="relative flex flex-col items-center mt-6">
+							<div class="absolute left-0 right-0 -translate-y-1/2 top-1/2 z-1 h-one bg-neutral-black-5"></div>
+							<p class="relative z-10 flex justify-center px-4 text-sm font-semibold bg-white w-max">or</p>
+						</div>
+					</div>
+
+					<!-- errors messages -->
+					<div class="pb-6 mt-6 border-b border-b-neutral-black-5">
+						<div class="flex flex-col gap-2">
+							<div class="relative text-sm text-error-100">
+								<div class="absolute left-0 flex-shrink-0 w-1 h-1 rounded-full top-2 bg-error-100"></div>
+								<p><span class="inline-block pl-2 font-semibold">Error:</span> Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio vel facilis illo corporis, placeat aliquid!</p>
+							</div>
+							<div class="relative text-sm text-error-100">
+								<div class="absolute left-0 flex-shrink-0 w-1 h-1 rounded-full top-2 bg-error-100"></div>
+								<p><span class="inline-block pl-2 font-semibold">Error:</span> Lorem ipsum dolor sit.</p>
+							</div>
+							<div class="relative text-sm text-error-100">
+								<div class="absolute left-0 flex-shrink-0 w-1 h-1 rounded-full top-2 bg-error-100"></div>
+								<p><span class="inline-block pl-2 font-semibold">Error:</span> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum veniam recusandae commodi molestias natus nostrum provident! Numquam quia odit eaque officia nesciunt non sed earum.</p>
+							</div>
+						</div>
+					</div>
+					<!-- errors messages -->
+
+					<div class="mt-6">
+						<label class="flex flex-col gap-2">
+							<span class="text-sm font-semibold tracking-tight leading-150 text-primary-black">Email</span>
+							<input type="email" class="h-12 w-full rounded-xl border border-error-100 bg-white px-3.5 py-3 text-error-100 shadow-input-error transition-all duration-300 focus:border-error-100 focus:bg-white" value="anreyche" />
+							<span class="px-3.5 text-xs font-semibold text-error-60">Error</span>
+						</label>
+						<label class="flex flex-col gap-2 mt-5">
+							<span class="text-sm font-semibold tracking-tight leading-150 text-primary-black">Password</span>
+							<input type="password" class="h-12 w-full rounded-xl border border-primary-green-gray bg-primary-green-gray px-3.5 py-3 text-primary-black transition-all duration-300 focus:border-secondary focus:bg-white focus:shadow-input" />
+						</label>
+						<button class="mt-12 flex h-12 w-full items-center justify-center rounded-xl bg-primary px-3.5 py-3 text-sm font-semibold text-primary-100 transition-all duration-300 hover:bg-primary-hover">Continue with Email</button>
+					</div>
+
+					<div class="mt-6">
+						<div class="flex justify-center gap-2 text-sm text-primary-black">
+							<p class="">Don’t have an account?</p>
+							<a href="#" class="transition-all duration-300 text-secondary hover:text-secondary-30">Sign up</a>
+						</div>
+						<div class="flex justify-center gap-2 mt-1 text-sm text-primary-black">
+							<p class="">Forgot password?</p>
+							<a href="#" class="transition-all duration-300 text-secondary hover:text-secondary-30">Change password</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<script src="../../js/app.js"></script>
+
+	</body>
+</html>

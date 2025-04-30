@@ -1,0 +1,218 @@
+.fundraising {
+	background-color: #fec214;
+	overflow: hidden;
+	border-radius: 60px;
+	position: relative;
+	z-index: 0;
+	max-width: calc(var(--container-width) - 30px);
+	margin: 70px auto 0 auto;
+	@include mediaMobile {
+		border-radius: 30px;
+	}
+
+	& .container {
+		position: relative;
+	}
+
+	&-bg {
+		position: absolute;
+		z-index: -1;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		background-image: url("./../img/icons/fundraising3.webp");
+		background-position: top center;
+		background-repeat: no-repeat;
+	}
+
+	&-content {
+		display: flex;
+		flex-direction: column;
+		margin: 0 auto;
+		width: 63%;
+		font-size: 28px;
+		@include mediaMobile {
+			width: 90%;
+			font-size: 20px;
+		}
+	}
+
+	&-desc {
+		text-align: center;
+		margin-top: 25px;
+	}
+
+	&-line {
+		width: 100%;
+		height: 25px;
+		background-color: #8dd2ef;
+		border-radius: 100px;
+		overflow: hidden;
+		margin-top: 55px;
+		position: relative;
+		display: flex;
+		&-bar {
+			content: "";
+			display: block;
+			width: 30%;
+			height: 100%;
+			position: absolute;
+			background-color: #ffffff;
+			border-radius: 100px;
+		}
+	}
+
+	&-items {
+		display: flex;
+		justify-content: space-between;
+		margin-top: 30px;
+
+		@include mediaMobile {
+			margin-top: 15px;
+		}
+	}
+	.donat-raised {
+		font-weight: bold;
+	}
+
+	.btnblock {
+		margin-top: 90px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding-bottom: 125px;
+		@include mediaMobile {
+			padding-bottom: 50px;
+			margin-top: 45px;
+			flex-direction: column;
+		}
+		.btn-donate {
+			margin: 0 25px;
+			@include mediaMobile {
+				min-width: 200px;
+				margin-bottom: 20px;
+			}
+		}
+	}
+
+	&-block {
+		display: flex;
+		flex-wrap: wrap;
+		width: 100%;
+		// padding: 0 70px;
+		justify-content: space-between;
+		margin-top: 60px;
+
+		@include mediaMobileN {
+			width: 80%;
+			margin: 60px auto;
+		}
+
+		@include mediaMobile {
+			width: 100%;
+			padding: 0 20px;
+		}
+
+		&-item {
+			width: 47%;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			@include mediaMobileN {
+				width: 100%;
+			}
+			a {
+				display: flex;
+				flex-direction: column;
+			}
+			&:hover {
+				.fundraising-block-img {
+					img {
+						transform: scale(1.4);
+					}
+				}
+			}
+		}
+
+		&-img {
+			display: flex;
+			width: 100%;
+			height: 240px;
+			overflow: hidden;
+			border-radius: 15px;
+			align-items: center;
+			justify-content: center;
+			@include mediaMobileS {
+				height: 180px;
+			}
+			& img {
+				display: block;
+
+				transform: scale(1.3);
+				transition: all 0.3s ease-in-out;
+			}
+		}
+
+		&-name {
+			font-size: 28px;
+			font-weight: 700;
+			color: #000000;
+			margin-top: 15px;
+			text-transform: uppercase;
+			@include mediaMobile {
+				font-size: 24px;
+			}
+		}
+		&-cost {
+			font-size: 28px;
+			font-weight: 400;
+			color: #000000;
+			margin-bottom: 20px;
+			@include mediaMobile {
+				font-size: 24px;
+			}
+		}
+
+		&--col3 {
+			display: grid;
+			grid-template-columns: repeat(3, minmax(0, 1fr));
+			gap: rem(20);
+
+			.fundraising-block-item {
+				width: 100%;
+			}
+
+			.fundraising-block-img {
+				height: unset;
+
+			}
+
+			@media (max-width: em(992)) {
+				grid-template-columns: 1fr 1fr;
+			}
+
+			@media (max-width: em(870)) {
+				width: 100%;
+				margin: 0;
+			}
+
+			@media (max-width: em(575)) {
+				grid-template-columns: 1fr;
+			}
+		}
+	}
+	.btnfblock {
+		margin-bottom: 50px;
+		display: flex;
+		justify-content: space-between;
+		a {
+			display: flex;
+			flex-direction: row;
+		}
+		@include mediaMobile {
+			.btn-donate {
+				font-size: 20px;
+			}
+		}
+	}
+}

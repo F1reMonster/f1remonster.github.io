@@ -1,0 +1,122 @@
+.smart-save-wrap {
+  overflow: hidden;
+  position: relative;
+}
+
+.save-smart-section {
+  padding: 3.125em 0 3.125em;
+  position: relative;
+}
+@media screen and (max-width: 767px) {
+  .save-smart-section {
+    padding: 2.1875em 0 1.875em;
+  }
+}
+.save-smart-section .save-smart-bg {
+  position: absolute;
+  bottom: -12.125em;
+  inset-inline-end: 0;
+  z-index: -1;
+}
+html[dir=ltr] .save-smart-section .save-smart-bg {
+  transform: scaleX(-1);
+}
+
+@media screen and (max-width: 767px) {
+  .save-smart-section .save-smart-bg {
+    display: none;
+  }
+}
+.save-smart-section .flex-wrap {
+  display: flex;
+  margin-inline-end: -7.75em;
+  align-items: center;
+}
+@media screen and (max-width: 767px) {
+  .save-smart-section .flex-wrap {
+    display: block;
+    margin-inline-end: 0;
+  }
+}
+.save-smart-section .typical-header {
+  text-align: initial;
+}
+.save-smart-section .txt-part {
+  flex-basis: 38.125em;
+  margin-inline-end: 20px;
+}
+.save-smart-section .img-part {
+  margin-inline-start: auto;
+}
+@media screen and (max-width: 767px) {
+  .save-smart-section .img-part {
+    display: none;
+  }
+}
+.save-smart-section .txt {
+  color: #000;
+  margin-bottom: 3.125em;
+}
+@media screen and (max-width: 767px) {
+  .save-smart-section .txt {
+    margin-bottom: 2.3125em;
+  }
+}
+.save-smart-section .txt h3 {
+  font: 400 1.5em/1.3333333333 "rubik-medium", sans-serif;
+  margin: 1.0416666667em 0 0.6666666667em;
+}
+@media screen and (max-width: 767px) {
+  .save-smart-section .txt h3 {
+    font-size: 1em;
+    line-height: 1.5;
+    margin: 1.5625em 0 1em;
+  }
+}
+.save-smart-section .txt p {
+  font: 1.25em/1.4 "rubik-reg", sans-serif;
+  margin: 0 0 1em;
+}
+@media screen and (max-width: 767px) {
+  .save-smart-section .txt p {
+    font-size: 1em;
+    line-height: 1.5;
+  }
+}
+@media screen and (max-width: 767px) {
+  .save-smart-section .join-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.save-smart-section .join {
+  font: 1.25em/1.2 "rubik-bold", sans-serif;
+  padding: 0.5em 1.1em;
+  color: #fff;
+  height: 2.4em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+  text-decoration: none;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.5);
+  background-color: #6924E8;
+  transition: background-color 0.3s, opacity 0.3s;
+  text-align: center;
+}
+.save-smart-section .join:focus-visible {
+  opacity: 0.5;
+  outline: none;
+}
+@media screen and (max-width: 767px) {
+  .save-smart-section .join {
+    font-size: 1em;
+    line-height: 1.5;
+    font-family: "rubik-medium", sans-serif;
+    min-width: 10.375em;
+  }
+}
+.save-smart-section .join:hover {
+  background-color: #5D1FCE;
+}

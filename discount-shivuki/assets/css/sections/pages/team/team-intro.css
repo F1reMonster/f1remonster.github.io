@@ -1,0 +1,21 @@
+.intro-team {
+  padding-bottom: 1.5em;
+}
+@media screen and (max-width: 767px) {
+  .intro-team {
+    padding-bottom: 2.3125em;
+  }
+}
+.intro-team .msg {
+  max-width: 28em;
+  line-height: 1.5;
+}
+.intro-team .img-part {
+  margin: 0 auto;
+  padding-top: 3.125em;
+}
+@media screen and (max-width: 767px) {
+  .intro-team .header {
+    margin-bottom: 0.2em;
+  }
+}

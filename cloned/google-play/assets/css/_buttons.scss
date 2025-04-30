@@ -1,0 +1,60 @@
+.btn {
+	--bg-color: transparent;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--bg-color);
+	outline: none;
+	border: 0;
+	font-family: var(--font-secondary);
+	line-height: rem(24);
+	font-weight: 500;
+	min-height: rem(44);
+	min-width: rem(200);
+	padding: rem(10) rem(16);
+	border-radius: rem(8);
+	transition: all 0.2s ease-out;
+	gap: rem(8);
+
+	.icon {
+		flex-shrink: 0;
+	}
+
+	&--burger-button {
+		width: rem(32);
+		height: rem(32);
+		padding: 0;
+		min-width: fit-content;
+		min-height: fit-content;
+
+		svg {
+			width: rem(32);
+			height: rem(32);
+		}
+	}
+
+	&--primary {
+		--bg-color: var(--deep-sea);
+		background-color: var(--bg-color);
+		
+		color: var(--white);
+		
+
+		@include hover-supported {
+			--bg-color: var(--watercourse);
+		}
+	}
+
+	&--default {
+		min-width: auto;
+		color: var(--deep-sea);
+		padding: 0 rem(8); 
+
+		
+
+		@include hover-supported {
+			--bg-color: var(--selago);
+
+		}
+	}
+}

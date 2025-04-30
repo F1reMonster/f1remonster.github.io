@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+<title>Legacy space - Portfolio page</title>
+<meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=yes">
+<link rel="canonical" href='' />
+<meta name="MobileOptimized" content="width"/>
+<meta name="HandheldFriendly" content="True"/>
+<meta name="viewport" content="initial-scale=1.0, width=device-width">
+<link rel="stylesheet" type="text/css" href="../../css/style.css" />
+
+	</head>
+
+	<body class="flex flex-col h-full overflow-clip font-inter">
+		<main class="flex-grow py-4 lg:py-12"></main>
+
+		<!-- asset archive modal -->
+<div class="fixed inset-0 z-50 p-4">
+	<div class="absolute inset-0 bg-primary-black/60"></div>
+
+	<div class="flex items-center justify-center w-full h-full">
+		<div class="relative z-20 bg-white border shadow-lg w-110 rounded-3xl border-neutral-black-5">
+			<div class="px-6 pt-6 pb-5 border-b border-b-neutral-black-5">
+				<p class="text-lg font-medium">Archive asset</p>
+				<p class="mt-2 text-sm text-neutral-black-70">Are you sure you want to archive this asset?</p>
+			</div>
+
+			
+			<div class="px-6 pt-5 pb-6">
+				
+				<div class="">
+					<p class="font-medium">What are the reasons for archiving?</p>
+					<ul class="grid grid-cols-2 mt-2">
+						<li class="py-2 pr-4">
+							<label>
+								<input type="radio" class="hidden peer" name="archive-reason" checked />
+								<div class="flex gap-3 group">
+									<div>
+										<div class="relative">
+											<div class="flex items-center justify-center flex-shrink-0 w-5 h-5 transition-all duration-300 border-2 rounded-full border-neutral-black-20 group-peer-checked:border-primary-100"></div>
+											<div class="absolute left-1/2 top-1/2 h-2.5 w-2.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary-100 opacity-0 transition-all duration-300 group-peer-checked:opacity-100"></div>
+										</div>
+									</div>
+									<div class="-mt-0.5">
+										<h4 class="text-sm transition-all duration-300 leading-150 group-peer-checked:text-shadow-mid lg:text-base">Lost</h4>
+									</div>
+								</div>
+							</label>
+						</li>
+						<li class="py-2 pr-4">
+							<label>
+								<input type="radio" class="hidden peer" name="archive-reason" />
+								<div class="flex gap-3 group">
+									<div>
+										<div class="relative">
+											<div class="flex items-center justify-center flex-shrink-0 w-5 h-5 transition-all duration-300 border-2 rounded-full border-neutral-black-20 group-peer-checked:border-primary-100"></div>
+											<div class="absolute left-1/2 top-1/2 h-2.5 w-2.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary-100 opacity-0 transition-all duration-300 group-peer-checked:opacity-100"></div>
+										</div>
+									</div>
+									<div class="-mt-0.5">
+										<h4 class="text-sm transition-all duration-300 leading-150 group-peer-checked:text-shadow-mid lg:text-base">Discarded</h4>
+									</div>
+								</div>
+							</label>
+						</li>
+						<li class="py-2 pr-4">
+							<label>
+								<input type="radio" class="hidden peer" name="archive-reason" />
+								<div class="flex gap-3 group">
+									<div>
+										<div class="relative">
+											<div class="flex items-center justify-center flex-shrink-0 w-5 h-5 transition-all duration-300 border-2 rounded-full border-neutral-black-20 group-peer-checked:border-primary-100"></div>
+											<div class="absolute left-1/2 top-1/2 h-2.5 w-2.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary-100 opacity-0 transition-all duration-300 group-peer-checked:opacity-100"></div>
+										</div>
+									</div>
+									<div class="-mt-0.5">
+										<h4 class="text-sm transition-all duration-300 leading-150 group-peer-checked:text-shadow-mid lg:text-base">Sold</h4>
+									</div>
+								</div>
+							</label>
+						</li>
+						<li class="py-2 pr-4">
+							<label>
+								<input type="radio" class="hidden peer" name="archive-reason" />
+								<div class="flex gap-3 group">
+									<div>
+										<div class="relative">
+											<div class="flex items-center justify-center flex-shrink-0 w-5 h-5 transition-all duration-300 border-2 rounded-full border-neutral-black-20 group-peer-checked:border-primary-100"></div>
+											<div class="absolute left-1/2 top-1/2 h-2.5 w-2.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary-100 opacity-0 transition-all duration-300 group-peer-checked:opacity-100"></div>
+										</div>
+									</div>
+									<div class="-mt-0.5">
+										<h4 class="text-sm transition-all duration-300 leading-150 group-peer-checked:text-shadow-mid lg:text-base">Donated</h4>
+									</div>
+								</div>
+							</label>
+						</li>
+						<li class="py-2 pr-4">
+							<label>
+								<input id="otherReasonArchiveAssetBtn" type="radio" class="hidden peer" name="archive-reason" />
+								<div class="flex gap-3 group">
+									<div>
+										<div class="relative">
+											<div class="flex items-center justify-center flex-shrink-0 w-5 h-5 transition-all duration-300 border-2 rounded-full border-neutral-black-20 group-peer-checked:border-primary-100"></div>
+											<div class="absolute left-1/2 top-1/2 h-2.5 w-2.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary-100 opacity-0 transition-all duration-300 group-peer-checked:opacity-100"></div>
+										</div>
+									</div>
+									<div class="-mt-0.5">
+										<h4 class="text-sm transition-all duration-300 leading-150 group-peer-checked:text-shadow-mid lg:text-base">Other</h4>
+									</div>
+								</div>
+							</label>
+						</li>
+					</ul>
+				</div>
+	
+				<div id="otherReasonArchiveAssetInput" class="hidden mt-2 transition-all duration-300 opacity-0">
+					<input type="text" class="h-12 w-full rounded-xl border border-primary-green-gray bg-primary-green-gray px-3.5 py-3 text-primary-black transition-all duration-300 placeholder:text-neutral-black-50 focus:border-secondary focus:bg-white focus:shadow-input" placeholder="Write your reasons..." />
+				</div>
+	
+				<div class="mt-8 flex flex-col gap-2.5 sd:flex-row">
+					<button class="flex h-12 w-full items-center justify-center gap-2 rounded-xl border border-neutral-black-5 px-5 py-3.5 text-sm font-medium transition-all duration-300 hover:bg-neutral-black-1">
+						<span>Discard</span>
+					</button>
+					<button class="-order-1 flex h-12 w-full items-center justify-center gap-2 rounded-xl bg-primary px-5 py-3.5 text-sm font-semibold transition-all duration-300 hover:bg-primary-hover sd:order-none">
+						<span class="w-5 h-5 icon icon--mailbox-archive"></span>
+						<span>Archive asset</span>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- ./asset archive modal -->
+ <script src="../../js/app.js"></script>
+
+
+		<script>
+			const otherReasonArchiveAssetBtn = document.getElementById("otherReasonArchiveAssetBtn");
+			const otherReasonArchiveAssetInput = document.getElementById("otherReasonArchiveAssetInput");
+			const allReasons = document.querySelectorAll('input[name="archive-reason"]');
+
+			if (otherReasonArchiveAssetBtn) {
+				allReasons.forEach((radioBtn) => {
+					radioBtn.addEventListener("change", () => {
+						if (otherReasonArchiveAssetBtn.checked) {
+							otherReasonArchiveAssetInput.classList.remove("hidden");
+							setTimeout(() => {
+								otherReasonArchiveAssetInput.classList.remove("opacity-0");
+							}, 5);
+						} else {
+							otherReasonArchiveAssetInput.classList.add("opacity-0");
+							setTimeout(() => {
+								otherReasonArchiveAssetInput.classList.add("hidden");
+							}, 300);
+						}
+					});
+				});
+			}
+		</script>
+	</body>
+</html>

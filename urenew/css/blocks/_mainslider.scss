@@ -1,0 +1,86 @@
+.mainslider {
+	.main-slider {
+		margin-top: 96px;
+		position: relative;
+		@include mediaMobile {
+			margin-top: 60px;
+		}
+	}
+	.swiper-slide {
+		height: 100%;
+		img {
+			display: block;
+			width: 100%;
+			height: 31rem;
+			object-fit: cover;
+			@include mediaLaptop {
+				height: 25rem;
+			}
+			@include mediaMobile {
+				height: 15rem;
+			}
+		}
+	}
+	.swiper-main-nav {
+		position: absolute;
+		width: 100%;
+		top: 35%;
+		z-index: 1;
+		height: 0;
+		@include mediaLaptop {
+			top: 40%;
+		}
+		.swiper-arrow {
+			width: 125px;
+			height: 125px;
+			display: block;
+			background-image: url("./../img/icons/mainslider-arrow.svg");
+			background-repeat: no-repeat;
+			background-size: contain;
+			position: absolute;
+			opacity: 0.7;
+			transition: all 0.3s ease-in-out;
+			cursor: pointer;
+			@include mediaLaptop {
+				width: 80px;
+				height: 80px;
+			}
+			@include mediaMobile {
+				width: 48px;
+				height: 48px;
+			}
+			&:hover {
+				opacity: 1;
+			}
+		}
+		.swiper-main-next {
+			right: 2%;
+			@include mediaMobile {
+				right: 5%;
+			}
+		}
+		.swiper-main-prev {
+			left: 2%;
+			transform: rotate(180deg);
+			@include mediaMobile {
+				left: 5%;
+			}
+		}
+	}
+	.swiper-main-pag {
+		position: absolute;
+		bottom: 30px;
+		width: 100%;
+		z-index: 10;
+		.swiper-main-pagination {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			.swiper-pagination-bullet {
+				width: 10px;
+				height: 10px;
+				background: #ffffff;
+			}
+		}
+	}
+}

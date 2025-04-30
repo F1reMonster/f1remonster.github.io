@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+<title>Legacy space - Portfolio page</title>
+<meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=yes">
+<link rel="canonical" href='' />
+<meta name="MobileOptimized" content="width"/>
+<meta name="HandheldFriendly" content="True"/>
+<meta name="viewport" content="initial-scale=1.0, width=device-width">
+<link rel="stylesheet" type="text/css" href="../../css/style.css" />
+
+	</head>
+
+	<body class="flex flex-col h-full overflow-clip font-inter">
+		<main class="flex-grow py-4 lg:py-12"></main>
+
+		<!-- transfer ownership modal -->
+<div class="fixed inset-0 z-50 p-4">
+	<div class="absolute inset-0 bg-primary-black/60"></div>
+
+	<div class="flex items-center justify-center w-full h-full">
+		<div class="relative z-20 bg-white border shadow-lg w-110 rounded-3xl border-neutral-black-5">
+			<div class="px-6 pt-6 pb-5 border-b border-b-neutral-black-5">
+				<p class="text-lg font-medium">Transfer ownership</p>
+				<p class="mt-2 text-sm text-neutral-black-70">Allows securely transfer the ownership of an asset to another user.</p>
+			</div>
+
+			<div class="px-6 pt-5 pb-6">
+				<p class="text-sm font-medium">Specify the user's email address to which the essay asset will be sent</p>
+
+				<div class="mt-2">
+					<input type="text" class="h-12 w-full rounded-xl border border-primary-green-gray bg-primary-green-gray px-3.5 py-3 text-primary-black transition-all duration-300 placeholder:text-neutral-black-50 focus:border-secondary focus:bg-white focus:shadow-input" placeholder="ex. anreychernov@gmail.com" />
+				</div>
+
+				<div class="mt-8 flex flex-col gap-2.5 xs:flex-row">
+					<button class="flex h-12 w-full items-center justify-center gap-2 rounded-xl border border-neutral-black-5 px-5 py-3.5 text-sm font-medium transition-all duration-300 hover:bg-neutral-black-1">
+						<span>Discard</span>
+					</button>
+					<button class="-order-1 flex h-12 w-full items-center justify-center gap-2 rounded-xl bg-primary px-5 py-3.5 text-sm font-semibold transition-all duration-300 hover:bg-primary-hover xs:order-none">
+						<span>Transfer ownership</span>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- ./transfer ownership modal -->
+ 
+		<script src="../../js/app.js"></script>
+
+
+		
+	</body>
+</html>

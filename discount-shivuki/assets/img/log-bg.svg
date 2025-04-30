@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1920px" height="301px" viewBox="0 0 1920 301" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>1F6FF5CE-D69C-4D5A-8A15-82B1F945C54C</title>
+    <defs>
+        <linearGradient x1="-2.8467895%" y1="22.0701966%" x2="191.711901%" y2="22.0701966%" id="linearGradient-1">
+            <stop stop-color="#8FE600" offset="0%"></stop>
+            <stop stop-color="#2FC059" offset="47.8119537%"></stop>
+            <stop stop-color="#218370" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Concept" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" fill-opacity="0.1">
+        <g id="Desktop-1920_DISCOUNT---Long-campaign-page" transform="translate(0.000000, -3195.000000)" fill="url(#linearGradient-1)">
+            <g id="Group-17" transform="translate(0.000000, 3195.000000)">
+                <path d="M0,60.6628846 C404.741567,20.2209615 720.693948,0 947.857143,0 C1175.02034,0 1499.06796,20.2209615 1920,60.6628846 L1920,255.60968 C1498.39931,285.869893 1179.23264,301 962.5,301 C745.767361,301 424.934028,285.869893 0,255.60968 L0,60.6628846 Z" id="Rectangle"></path>
+            </g>
+        </g>
+    </g>
+</svg>

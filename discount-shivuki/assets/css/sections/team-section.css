@@ -1,0 +1,377 @@
+.people-slider-bg .next, .people-slider-bg .prev, .people-slider-bg .close-people-slider {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 0;
+}
+
+.team-slide .img-wrap-mobile img, .team-slide .img-wrap .inner img, .boss-card .img-wrap img, .member-card .img-wrap img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.member-card {
+  position: relative;
+  background-color: #fff;
+  padding: 2em 1.625em 1.5em;
+  box-shadow: 0 1px 15px 0 rgba(60, 63, 69, 0.2);
+  border-radius: 0.75em;
+  max-width: 21.875em;
+  text-align: center;
+  color: #000;
+}
+@media screen and (max-width: 767px) {
+  .member-card {
+    padding: 1.625em 1.625em 1.1875em;
+  }
+}
+.member-card .img-wrap {
+  padding-bottom: 86.5771812081%;
+  border-radius: 0.875em;
+  overflow: hidden;
+}
+@media screen and (max-width: 767px) {
+  .member-card .img-wrap {
+    padding-bottom: 98.6784140969%;
+  }
+}
+.member-card .name {
+  font: 1.5em/1.3333333333 "rubik-medium", sans-serif;
+  margin: 1em 0 0.3333333333em;
+}
+@media screen and (max-width: 767px) {
+  .member-card .name {
+    font-size: 1.1875em;
+    line-height: 1.3684210526;
+    margin: 0.3157894737em 0 0;
+  }
+}
+.member-card .position, .member-card .resposnsibility {
+  font: 1.125em/1.5555555556 "rubik-reg", sans-serif;
+  margin: 0;
+}
+@media screen and (max-width: 767px) {
+  .member-card .position, .member-card .resposnsibility {
+    font-size: 0.75em;
+    line-height: 1.6666666667;
+  }
+}
+
+.people-slider-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(243, 243, 243, 0.9);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 201;
+  padding: 20px;
+  opacity: 0;
+  transition: opacity 0.6s;
+}
+.people-slider-bg.show {
+  display: flex;
+}
+.people-slider-bg.visible {
+  opacity: 1;
+}
+.people-slider-bg .content-wrap {
+  background-color: #fff;
+  width: 100%;
+  max-width: 70.875em;
+  min-height: 32.6875em;
+  border-radius: 1.25em;
+  box-shadow: 0 4px 8px 0 rgba(60, 63, 69, 0.21);
+  position: relative;
+  box-shadow: 0 4px 8px 0 rgba(60, 63, 69, 0.21);
+}
+@media screen and (max-width: 767px) {
+  .people-slider-bg .content-wrap {
+    min-height: 0;
+  }
+}
+.people-slider-bg .next, .people-slider-bg .prev, .people-slider-bg .close-people-slider {
+  position: absolute;
+  cursor: pointer;
+  z-index: 10;
+  display: block;
+}
+.people-slider-bg .next img, .people-slider-bg .prev img, .people-slider-bg .close-people-slider img {
+  display: block;
+}
+.people-slider-bg .next:focus-visible, .people-slider-bg .prev:focus-visible, .people-slider-bg .close-people-slider:focus-visible {
+  outline: 1px dashed #00a661;
+  outline-offset: 1px;
+}
+.people-slider-bg .close-people-slider {
+  font-size: inherit;
+  top: 2.625em;
+  inset-inline-end: 2.5em;
+}
+@media screen and (max-width: 767px) {
+  .people-slider-bg .close-people-slider {
+    top: 1.5em;
+    inset-inline-end: 1.375em;
+  }
+}
+@media screen and (max-width: 767px) {
+  .people-slider-bg .close-people-slider img {
+    width: 1em;
+  }
+}
+.people-slider-bg .next, .people-slider-bg .prev {
+  bottom: -78px;
+}
+.people-slider-bg .next {
+  inset-inline-end: calc(50% - 58px);
+}
+html[dir=ltr] .people-slider-bg .next {
+  transform: rotate(180deg);
+}
+
+.people-slider-bg .prev {
+  inset-inline-start: calc(50% - 58px);
+}
+html[dir=ltr] .people-slider-bg .prev {
+  transform: rotate(180deg);
+}
+
+.boss-card {
+  position: relative;
+  background-color: #fff;
+  box-shadow: 0 1px 15px 0 rgba(60, 63, 69, 0.2);
+  border-radius: 0.75em;
+  padding: 2.875em 2.3125em 1.5625em;
+  text-align: center;
+  color: #000;
+  max-width: 31.375em;
+}
+@media screen and (max-width: 767px) {
+  .boss-card {
+    padding: 2em 1.625em 1.875em;
+    max-width: 21.875em;
+    margin: 0 auto;
+  }
+}
+.boss-card .img-wrap {
+  padding-bottom: 86.6510538642%;
+}
+.boss-card .name {
+  font: 400 1.5em/1.3333333333 "rubik-medium", sans-serif;
+  margin: 1em 0 0.3333333333em;
+}
+.boss-card .position {
+  font: 1.125em/1.5555555556 "rubik-reg", sans-serif;
+  margin: 0;
+}
+
+.team-section {
+  padding-top: 1.5em;
+  padding-bottom: 2.6875em;
+  position: relative;
+}
+@media screen and (max-width: 767px) {
+  .team-section {
+    padding-top: 2.375em;
+  }
+}
+.team-section .team-header {
+  text-align: initial;
+  margin-bottom: 1em;
+}
+@media screen and (max-width: 767px) {
+  .team-section .team-header {
+    text-align: center;
+  }
+}
+.team-section .team-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2.75em 3.3125em;
+  margin: 5em 0;
+}
+@media screen and (max-width: 767px) {
+  .team-section .team-wrap {
+    margin: 2.875em 0 2.75em;
+    gap: 1.875em;
+  }
+}
+.team-section .member-card {
+  flex-basis: 21.875em;
+}
+@media screen and (max-width: 767px) {
+  .team-section .member-card {
+    flex-basis: 17.5em;
+  }
+}
+.team-section .team-top-bg {
+  position: absolute;
+  inset-inline-end: 0;
+  top: 11.25em;
+  z-index: -1;
+}
+html[dir=ltr] .team-section .team-top-bg {
+  transform: scaleX(-1);
+}
+
+@media screen and (max-width: 767px) {
+  .team-section .team-top-bg {
+    display: none;
+  }
+}
+.team-section .team-bottom-bg {
+  position: absolute;
+  inset-inline-start: 0;
+  bottom: -17.5625em;
+  z-index: -1;
+}
+html[dir=ltr] .team-section .team-bottom-bg {
+  transform: scaleX(-1);
+}
+
+@media screen and (max-width: 767px) {
+  .team-section .team-bottom-bg {
+    display: none;
+  }
+}
+
+.team-slide {
+  padding-block: 1.5625em 1.75em;
+  height: 32.6875em;
+  box-sizing: border-box;
+  padding-inline-start: 29.6875em;
+  color: #000;
+  position: relative;
+}
+@media screen and (max-width: 767px) {
+  .team-slide {
+    padding-block: 1.5em 4.3125em;
+    padding-inline: 1.5em 0;
+    height: 75vh;
+  }
+}
+.team-slide .slide-inner {
+  height: 100%;
+  overflow: auto;
+  padding-inline-end: 1.75em;
+}
+@media screen and (max-width: 767px) {
+  .team-slide .slide-inner {
+    padding-inline-end: 1.5em;
+  }
+}
+.team-slide .slide-inner .scrollbar-track-y {
+  right: auto;
+  inset-inline-end: 0.8125em;
+}
+@media screen and (max-width: 767px) {
+  .team-slide .slide-inner .scrollbar-track-y {
+    inset-inline-end: 0.5em;
+  }
+}
+.team-slide .img-wrap-mobile {
+  display: none;
+}
+@media screen and (max-width: 767px) {
+  .team-slide .img-wrap-mobile {
+    display: block;
+  }
+}
+.team-slide .img-wrap-mobile .inner {
+  width: 10.1875em;
+  height: 12.8125em;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.875em;
+}
+.team-slide .img-wrap {
+  position: absolute;
+  inset-inline-start: 1.75em;
+  top: 1.5625em;
+  width: 25.5em;
+  height: calc(100% - 3.3125em);
+}
+.team-slide .img-wrap .inner {
+  position: relative;
+  padding-bottom: 115.1960784314%;
+  overflow: hidden;
+  border-radius: 0.75em;
+}
+.team-slide .img-wrap .inner::before {
+  content: "";
+  float: left;
+}
+.team-slide .img-wrap .inner::after {
+  content: "";
+  display: block;
+}
+@media screen and (max-width: 767px) {
+  .team-slide .img-wrap {
+    display: none;
+  }
+}
+.team-slide .name {
+  font: 400 2em/1.5 "rubik-medium", sans-serif;
+  margin: 1.15625em 0 0.125em;
+}
+@media screen and (max-width: 767px) {
+  .team-slide .name {
+    font-size: 1.5em;
+    line-height: 1.3333333333;
+    margin: 0 0 0.375em;
+  }
+}
+@media screen and (max-width: 767px) {
+  .team-slide .position-container {
+    display: flex;
+    align-items: flex-end;
+  }
+}
+.team-slide .position-wrap {
+  margin-bottom: 2.5em;
+}
+@media screen and (max-width: 767px) {
+  .team-slide .position-wrap {
+    margin-inline-start: 1.375em;
+    margin-bottom: -0.25em;
+  }
+}
+.team-slide .position {
+  font: 1.375em/1.1818181818 "rubik-reg", sans-serif;
+}
+@media screen and (max-width: 767px) {
+  .team-slide .position {
+    font-size: 1em;
+    line-height: 1.75;
+  }
+}
+.team-slide .responsibility, .team-slide .bio {
+  font: 1.125em/1.4444444444 "rubik-reg", sans-serif;
+  opacity: 0.8;
+}
+@media screen and (max-width: 767px) {
+  .team-slide .responsibility, .team-slide .bio {
+    font-size: 1em;
+    line-height: 1.625;
+  }
+}
+.team-slide .additional-responsobilities {
+  font: 1.125em/1.4444444444 "rubik-medium", sans-serif;
+  max-width: 20.6666666667em;
+  margin-bottom: 1em;
+}
+@media screen and (max-width: 767px) {
+  .team-slide .additional-responsobilities {
+    font-size: 1em;
+    line-height: 1.625;
+    margin: 5.125em 0 1.125em;
+  }
+}

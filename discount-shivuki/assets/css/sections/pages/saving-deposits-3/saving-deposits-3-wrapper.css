@@ -1,0 +1,39 @@
+.sd-3-wrapper {
+  position: relative;
+}
+.sd-3-wrapper .faq {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 9.625em;
+  padding: 0;
+}
+@media (max-width: 767px) {
+  .sd-3-wrapper .faq {
+    margin-bottom: 3.75em;
+  }
+}
+.sd-3-wrapper .faq-cloud {
+  display: none !important;
+}
+.sd-3-wrapper-oval-bot {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+@media (max-width: 767px) {
+  .sd-3-wrapper-oval-bot {
+    display: none;
+  }
+}
+.sd-3-wrapper-oval-bot-2 {
+  position: absolute;
+  bottom: -20.625em;
+  left: 0;
+  z-index: -1;
+}
+@media (max-width: 767px) {
+  .sd-3-wrapper-oval-bot-2 {
+    display: none;
+  }
+}

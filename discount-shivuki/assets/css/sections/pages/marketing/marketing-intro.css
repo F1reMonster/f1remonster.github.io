@@ -1,0 +1,63 @@
+.marketing-intro {
+  padding-top: 0;
+  padding-bottom: 2.75em;
+  position: relative;
+}
+@media screen and (max-width: 767px) {
+  .marketing-intro {
+    padding-bottom: 0;
+  }
+}
+.marketing-intro .header {
+  font: 400 7.5em/0.95 "mixtape-reg", sans-serif;
+  margin: 0.8416666667em 0 0.2166666667em;
+  letter-spacing: 0;
+}
+@media (max-width: 767px) {
+  .marketing-intro .header {
+    font-size: 4.375em;
+    line-height: 1.1;
+    margin: 0.1714285714em 0 0.1428571429em;
+  }
+  html[dir=ltr] .marketing-intro .header {
+    line-height: 1;
+  }
+}
+.marketing-intro .header span {
+  font-size: 0.75em;
+  line-height: 1;
+}
+@media (max-width: 767px) {
+  .marketing-intro .header span {
+    font-size: 0.7142857143em;
+  }
+}
+.marketing-intro .msg {
+  max-width: 30.2em;
+}
+@media (max-width: 767px) {
+  .marketing-intro .msg {
+    font-size: 1em;
+    line-height: 1.625;
+  }
+}
+.marketing-intro .btns-wrap {
+  display: flex;
+  margin-top: 2.5em;
+  gap: 1.25em;
+}
+@media (max-width: 767px) {
+  .marketing-intro .btns-wrap {
+    display: none;
+  }
+}
+.marketing-intro .img-part {
+  margin-top: -1.375em;
+  margin-inline-end: -6.25em;
+}
+@media (max-width: 767px) {
+  .marketing-intro .img-part {
+    margin-inline-end: 0;
+    margin-top: 0;
+  }
+}

@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="shortcut icon" href="assets/img/svg/favicon.svg" type="image/x-icon" />
+		<title>Albatros - Оформлення покупки</title>
+		<link rel="stylesheet" href="assets/css/uikit/uikit.min.css?_v=20240725190623" />
+		<link rel="stylesheet" href="assets/css/vendors/nouislider.css?_v=20240725190623" />
+		<link rel="stylesheet" href="assets/css/global/base.css?_v=20240725190623" />
+		<link rel="stylesheet" href="assets/css/components/header/header.css?_v=20240725190623" />
+
+		<link rel="stylesheet" href="assets/css/components/checkout/checkout.css?_v=20240725190623" />
+	</head>
+	<body>
+		<div class="body-wrapper">
+			<!-- header -->
+<header class="header header--light">
+	<div class="container">
+		<div class="header__wrapper">
+			
+				<a href="index.html" class="header__logo header__logo--visible" title="Albatros Logo" role="link" aria-label="Albatros Logo">
+					<img src="assets/img/svg/header-allports2.svg" alt="Albatros Logo" class="" />
+				</a>
+			
+		
+			<div class="header__action">
+				<a href="#!" class="contact-phone">+38 067 357 35 00</a>
+				<div class="header__lang">
+					<button class="btn btn--dropdown" type="button">
+						<span class="btn-text">UA</span>
+						<span class="icon icon--chevron-down"></span>
+					</button>
+					<div uk-dropdown="mode: click; pos: bottom-center">
+						<ul class="uk-nav uk-dropdown-nav">
+							<li class="uk-active"><a href="#">UA</a></li>
+							<li><a href="#">RU</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</header>
+<!-- ./header -->
+
+
+			<main>
+
+				<!-- checkout -->
+<section class="checkout">
+	<div class="container">
+		<a href="#!" class="link link--w-icon link--c-allports">
+			<span class="icon icon--arrow-left"></span>
+			<span>Повернутися на корзину</span>
+		</a>
+
+		<div class="checkout__wrapper">
+			<div class="checkout__column checkout__column--list">
+				
+				<!-- checkout contact info -->
+<div class="checkout__item checkout__item--contacts checkout__item--active">
+	<div class="checkout__item-title">
+		<div class="icon icon--user2"></div>
+		<div class="block__title">Контактна інформація</div>
+	</div>
+	<div class="checkout__item-content">
+		<div class="checkout__contacts-wrapper">
+			<div class="checkout__input-login">
+				<div class="form__group">
+					<input type="text" class="form__input" placeholder="+38 (0_ _) _ _ _ - _ _ _ _" />
+					<a href="#!" class="btn-login">Увійти</a>
+				</div>
+
+				<!-- login box to show add class → "login-prompt--active"-->
+				<div class="login-prompt">
+					<div class="title">Вхід в особистий кабінет</div>
+					<div class="login-prompt-confirmation">
+						<div class="form__label">Введіть код підтвердження</div>
+						<input type="text" class="form__input" placeholder="_ _ _ _" />
+						<a href="#!" class="link link--c-allports">Надіслати ще раз</a>
+						<a href="#!" class="btn btn--primary">Увійти</a>
+					</div>
+					<div class="login-prompt-alt">
+						<div class="c-gray">або</div>
+						<a href="#!" class="btn">
+							<div class="btn-icon">
+								<img src="assets/img/svg/google.svg" alt="" />
+							</div>
+							<div class="btn-text">Google</div>
+						</a>
+					</div>
+				</div>
+				<!-- ./login box -->
+			</div>
+			<div class="form__group">
+				<input type="text" class="form__input form__input--error" placeholder="Введіть ім'я" value="sdklf"/>
+				<span class="form__input-error-msg">Error</span>
+			</div>
+			<div class="form__group">
+				<input type="text" class="form__input" placeholder="Введіть прізвище" />
+			</div>
+			<div class="form__group">
+				<input type="text" class="form__input" placeholder="Введіть email" />
+			</div>
+		</div>
+		<label class="form__checkbox form__checkbox--another-contact">
+			<input type="checkbox" name="another-contact" class="form__checkbox-input" />
+			<span class="form__checkbox-box"></span>
+			<span class="form__checkbox-label">Отримає інша людина </span>
+		</label>
+
+		<div class="_another-contact">
+			<div class="checkout__contacts-wrapper">
+				<div class="form__group">
+					<input type="text" class="form__input" placeholder="+38 (0_ _) _ _ _ - _ _ _ _" />
+				</div>
+				<div class="form__group">
+					<input type="text" class="form__input" placeholder="Введіть ім'я" />
+				</div>
+				<div class="form__group">
+					<input type="text" class="form__input" placeholder="Введіть прізвище" />
+				</div>
+			</div>
+		</div>
+
+		<div class="checkout__item-control">
+			<a href="#!" class="btn btn--primary">Продовжити оформлення</a>
+		</div>
+	</div>
+	<div class="checkout__item-content-short">
+		<div class="content-info">Олександр Міллер / +38 (095) 556 22 11 / johnsmith@gmail.com</div>
+		<div class="checkout__item-content-short-controls">
+			<a href="#!" class="btn btn--secondary btn--content-change">Змінити</a>
+		</div>
+	</div>
+</div>
+<!-- ./checkout contact info -->
+
+				<!-- checkout contact order → checkout__item--active-->
+<div class="checkout__item checkout__item--order checkout__item--active">
+	<div class="checkout__item-title">
+		<a href="#!">
+			<span class="icon icon--edit"></span>
+			<span>Редагувати замовлення</span>
+		</a>
+	</div>
+	<div class="checkout__item-content">
+		<ul class="orders-list">
+			<li>
+				<div class="product-info">
+					<a href="#!" class="product-image">
+						<img src="assets/img/products/product-001.webp" alt="" />
+					</a>
+					<div class="product-details">
+						<div class="product-name">
+							<a href="#!" class="product-name-link"> Рушники паперові “Альбатрос”, V складання, зелені, </a>
+						</div>
+						<div class="product-article">Код: : .2773422</div>
+					</div>
+				</div>
+				<div class="product-qty">1 шт.</div>
+				<div class="product-price">
+					<div class="price-common price-common--old">3 050 грн</div>
+					<div class="price-common">2050 грн</div>
+				</div>
+			</li>
+			<li>
+				<div class="product-info">
+					<a href="#!" class="product-image">
+						<img src="assets/img/products/product-002.webp" alt="" />
+					</a>
+					<div class="product-details">
+						<div class="product-name">
+							<a href="#!" class="product-name-link"> Рідкий КРОТ ТМ “ICE BLIK” 0,95 л </a>
+						</div>
+						<div class="product-article">Код: : .2773422</div>
+					</div>
+				</div>
+				<div class="product-qty">1 шт.</div>
+				<div class="product-price">
+					<div class="price-common price-common--old">3 050 грн</div>
+					<div class="price-common">2050 грн</div>
+				</div>
+			</li>
+			<li>
+				<div class="product-info">
+					<a href="#!" class="product-image">
+						<img src="assets/img/products/product-003.webp" alt="" />
+					</a>
+					<div class="product-details">
+						<div class="product-name">
+							<a href="#!" class="product-name-link"> Рідкий КРОТ ТМ “ICE BLIK” 0,95 л </a>
+						</div>
+						<div class="product-article">Код: : .2773422</div>
+					</div>
+				</div>
+				<div class="product-qty">1 шт.</div>
+				<div class="product-price">
+					<div class="price-common price-common--old">3 050 грн</div>
+					<div class="price-common">2050 грн</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+
+	<div class="checkout__item-content-short">
+		<ul class="orders-list-short">
+			<li>
+				<a href="#!">
+					<img src="assets/img/products/product-001.webp" alt="" />
+				</a>
+			</li>
+			<li>
+				<a href="#!">
+					<img src="assets/img/products/product-002.webp" alt="" />
+				</a>
+			</li>
+			<li>
+				<a href="#!">
+					<img src="assets/img/products/product-003.webp" alt="" />
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>
+<!-- ./checkout contact order -->
+
+				<!-- checkout contact delivery -->
+<div class="checkout__item checkout__item--active">
+	<div class="checkout__item-title">
+		<div class="icon icon--truck"></div>
+		<div class="block__title">Спосіб доставки</div>
+	</div>
+	<div class="checkout__item-content">
+		<div class="delivery__list">
+			<div class="delivery__item">
+				<label class="delivery__item-title">
+					<input type="radio" name="delivery-type" class="form__checkbox-input" />
+					<span class="form__checkbox-box"></span>
+					<span class="form__checkbox-label">
+						<div class="delivery__name">До відділення НП</div>
+						<div class="delivery__icon">
+							<img src="assets/img/svg/nova-poshta.svg" alt="" />
+						</div>
+					</span>
+				</label>
+				<div class="delivery__item-content-wrapper">
+					<div class="delivery__item-content">
+						<div class="content-item">
+							<div class="form__group">
+								<label class="form__label">Місто</label>
+								<input type="text" class="form__input" placeholder="Введіть місто" />
+							</div>
+						</div>
+						<div class="content-item">
+							<div class="form__group">
+								<label class="form__label">Відділення</label>
+								<input type="text" class="form__input" placeholder="Номер відділення" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="delivery__item">
+				<label class="delivery__item-title">
+					<input type="radio" name="delivery-type" class="form__checkbox-input" />
+					<span class="form__checkbox-box"></span>
+					<span class="form__checkbox-label">
+						<div class="delivery__name">Курьер НП</div>
+						<div class="delivery__icon">
+							<img src="assets/img/svg/nova-poshta.svg" alt="" />
+						</div>
+					</span>
+				</label>
+				<div class="delivery__item-content-wrapper">
+					<div class="delivery__item-content">
+						<div class="content-item">
+							<div class="form__group">
+								<label class="form__label">Місто</label>
+								<input type="text" class="form__input" placeholder="Введіть місто" />
+							</div>
+						</div>
+						<div class="content-item">
+							<div class="form__group">
+								<label class="form__label">Адреса доставки</label>
+								<input type="text" class="form__input" placeholder="Ввведіть адресу" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="checkout__item-control">
+			<a href="#!" class="btn btn--primary">Продовжити оформлення</a>
+		</div>
+	</div>
+
+	<div class="checkout__item-content-short">
+		<div class="content-info">
+			<div class="delivery-icon">
+				<img src="assets/img/svg/nova-poshta.svg" alt="" />
+			</div>
+
+			До відділення НП / Курьер НП
+		</div>
+		<div class="checkout__item-content-short-controls">
+			<a href="#!" class="btn btn--secondary btn--content-change">Змінити</a>
+		</div>
+	</div>
+</div>
+<!-- ./checkout contact delivery -->
+
+				<!-- checkout contact payment -->
+<div class="checkout__item checkout__item--active">
+	<div class="checkout__item-title">
+		<div class="icon icon--wallet"></div>
+		<div class="block__title">Спосіб оплати</div>
+	</div>
+
+	<div class="checkout__item-content">
+		<div class="payment__list">
+			<label class="payment__item">
+				<input type="radio" name="payment-type" class="form__radio-input" />
+				<span class="form__radio-box"></span>
+				<span class="form__radio-label">
+					
+					<div class="payment__name">Карта онлайн</div>
+					<div class="payment__icon">
+						<img src="assets/img/svg/creditcard.svg" alt="" />
+					</div>
+				</span>
+			</label>
+			<label class="payment__item">
+				<input type="radio" name="payment-type" class="form__radio-input" />
+				<span class="form__radio-box"></span>
+				<span class="form__radio-label">
+					
+					<div class="payment__name">Google Pay</div>
+					<div class="payment__icon">
+						<img src="assets/img/svg/google-pay2.svg" alt="" />
+					</div>
+				</span>
+			</label>
+			<label class="payment__item">
+				<input type="radio" name="payment-type" class="form__radio-input" />
+				<span class="form__radio-box"></span>
+				<span class="form__radio-label">
+					
+					<div class="payment__name">Apple Pay</div>
+					<div class="payment__icon">
+						<img src="assets/img/svg/apple-pay.svg" alt="" />
+					</div>
+				</span>
+			</label>
+		</div>
+		<div class="payment__details">
+			<input type="text" class="form__input" placeholder="Пояснення способу оплати">
+		</div>
+
+		<div class="checkout__item-control">
+			<a href="#!" class="btn btn--primary">Продовжити оформлення</a>
+		</div>
+	</div>
+
+	<div class="checkout__item-content-short">
+		<div class="content-info">
+			<div class="payment__icon">
+				<img src="assets/img/svg/creditcard.svg" alt="" />
+			</div>
+
+			Карта онлайн
+		</div>
+		<div class="checkout__item-content-short-controls">
+			<a href="#!" class="btn btn--secondary btn--content-change">Змінити</a>
+		</div>
+	</div>
+</div>
+<!-- ./checkout contact payment -->
+
+
+			</div>
+			<div class="checkout__column checkout__column--aside">
+				
+				<!-- checkout contact aside -->
+<div class="checkout__item checkout__item--aside">
+	<div class="checkout__row checkout__row--spacebetween checkout__row--total-orders">
+		<div class="">4 товари:</div>
+		<div class="sum">90 000 ₴</div>
+	</div>
+	<div class="checkout__row checkout__row--spacebetween">
+		<div class="">Знижка:</div>
+		<div class="discount-sum">50 000 ₴</div>
+	</div>
+	<div class="checkout__row checkout__row--spacebetween checkout__row--total-sum">
+		<div class="total-name">Загальна сумма:</div>
+		<div class="total-sum">40 000 ₴</div>
+	</div>
+	<label class="form__group">
+		<span class="form__label">Комментар до замовлення</span>
+		<textarea class="form__input form__input--textarea" placeholder="Введіть комментар"></textarea>
+	</label>
+	<label class="form__checkbox">
+		<input type="checkbox" name="agree" class="form__checkbox-input" checked/>
+		<span class="form__checkbox-box"></span>
+		<span class="form__checkbox-label">Підтверджую замовлення та погоджуюсь
+			<a href="#!" class="link link--c-allports">з правилами користування сайтом</a></span>
+	</label>
+
+	<div class="checkout__item-control">
+		<a href="#!" class="btn btn--red-ribbon btn--checkout-apply">
+			<span class="btn-text">Оформити замовлення</span>
+		</a>
+	</div>
+</div>
+<!-- ./checkout contact aside -->
+
+
+			</div>
+
+
+		</div>
+
+
+
+	</div>
+</section>
+<!-- ./checkout -->
+			
+			</main>
+
+			<script src="assets/js/vendors/uikit.min.js?_v=20240725190623"></script>
+<script src="assets/js/vendors/nouislider.js?_v=20240725190623"></script>
+<script src="assets/js/vendors/wNumb.js?_v=20240725190623"></script>
+<script src="assets/js/vendors/slideToggle.js?_v=20240725190623"></script>
+
+
+			
+			<script src="assets/js/components/checkout/checkout.js?_v=20240725190623"></script>
+		</div>
+	</body>
+</html>

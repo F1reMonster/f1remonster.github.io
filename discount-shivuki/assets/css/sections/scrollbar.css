@@ -1,0 +1,19 @@
+.ps__rail-y {
+  margin: 7px 0;
+  width: 7px;
+  background-color: transparent !important;
+  opacity: 1 !important;
+}
+
+.ps__rail-y.ps--clicking .ps__thumb-y,
+.ps__rail-y:focus > .ps__thumb-y,
+.ps__rail-y:hover > .ps__thumb-y {
+  width: 7px;
+  background-color: #A4A4A4;
+}
+
+.ps__thumb-y {
+  right: 0;
+  width: 7px;
+  background-color: #A4A4A4;
+}

@@ -1,0 +1,31 @@
+.glosary-intro {
+  padding-bottom: 1.5625em;
+}
+@media screen and (max-width: 767px) {
+  .glosary-intro {
+    padding-bottom: 2.5em;
+  }
+}
+.glosary-intro .msg {
+  max-width: 28em;
+}
+.glosary-intro .img-part {
+  margin-inline-end: 12%;
+  margin-top: -1.875em;
+}
+@media screen and (max-width: 767px) {
+  .glosary-intro .img-part {
+    margin-top: 2em;
+    margin-inline-end: auto;
+  }
+}
+@media screen and (max-width: 767px) {
+  .glosary-intro .header {
+    margin-bottom: 2px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .glosary-intro .msg {
+    line-height: 1.5;
+  }
+}

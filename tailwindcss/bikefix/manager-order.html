@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<!-- for dark mode add class "dark" -->
+<html lang="en" class="h-full w-full">
+	<head>
+		<meta charset="UTF-8" />
+<meta name="description" content="Meta descritpion page" />
+<meta name="keywords" content="kyewords, for, search, optimization " />
+<meta name="author" content="Author Name" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<link rel="shortcut icon" href="img/favicon.svg" type="image/x-icon" />
+<link rel="stylesheet" type="text/css" href="./css/style.css" />
+<title>Manager → User page</title>
+
+	</head>
+
+	<body class="relative h-full w-full overflow-x-hidden bg-white dark:bg-black">
+		<!-- header -->
+		<header>
+	<div class="container relative pl-[11.25rem] pr-[11.25rem] min-hd:max-w-[95.875rem] min-hd:pl-[0.625rem] min-hd:pr-[0.625rem] lg:pl-[7.5rem] lg:pr-[0.625rem] sm:pl-[4.625rem] ">
+		<div class="flex items-center justify-between py-7">
+			<div class="relative w-[40.5625rem]">
+				<input class="block w-full appearance-none rounded-[1.0625rem] border-none bg-transparent py-[0.625rem] pl-4 pr-12 shadow-custom placeholder:text-slate-600 focus:outline-none sm:text-sm sm:leading-6" placeholder="Search" value="" />
+				<svg class="pointer-events-none absolute right-4 top-[10px] h-6 w-6 fill-slate-400" xmlns="http://www.w3.org/2000/svg">
+					<path d="M20.47 21.53a.75.75 0 1 0 1.06-1.06l-1.06 1.06Zm-9.97-4.28a6.75 6.75 0 0 1-6.75-6.75h-1.5a8.25 8.25 0 0 0 8.25 8.25v-1.5ZM3.75 10.5a6.75 6.75 0 0 1 6.75-6.75v-1.5a8.25 8.25 0 0 0-8.25 8.25h1.5Zm6.75-6.75a6.75 6.75 0 0 1 6.75 6.75h1.5a8.25 8.25 0 0 0-8.25-8.25v1.5Zm11.03 16.72-5.196-5.197-1.061 1.06 5.197 5.197 1.06-1.06Zm-4.28-9.97c0 1.864-.755 3.55-1.977 4.773l1.06 1.06A8.226 8.226 0 0 0 18.75 10.5h-1.5Zm-1.977 4.773A6.727 6.727 0 0 1 10.5 17.25v1.5a8.226 8.226 0 0 0 5.834-2.416l-1.061-1.061Z"></path>
+				</svg>
+			</div>
+
+			<div class="lang-swither">
+				<!-- <label id="listbox-label" class="block text-sm font-medium leading-6 text-gray-900">Assigned to</label> -->
+				<div class="relative w-[5rem]">
+					<!-- <button type="button" class="relative w-full cursor-default rounded-md bg-white py-2 pl-1 pr-1.5 text-left text-gray-900 focus:outline-none hover:border-indigo-500 focus:ring-2 focus:ring-indigo-500 dark:bg-black dark:text-white sm:text-sm sm:leading-6" aria-haspopup="listbox" aria-expanded="true" aria-labelledby="listbox-label">
+						<span class="flex items-center justify-center">
+							<span class="block truncate uppercase">Ua</span>
+						</span>
+						<span class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
+							<svg class="rotate-[180deg]" width="19" height="16" viewBox="0 0 19 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M9.4876 0.500055L0.904228 15.5442L18.2245 15.4555L9.4876 0.500055ZM11.0592 14.4921L11.0567 13.9922L8.05671 14.0076L8.05927 14.5075L11.0592 14.4921Z" fill="black" />
+							</svg>
+						</span>
+					</button> -->
+
+					<!--
+					Select popover, show/hide based on select state.
+					Entering: ""
+						From: ""
+						To: ""
+					Leaving: "transition ease-in duration-100"
+						From: "opacity-100"
+						To: "opacity-0"
+				-->
+					<ul class="absolute z-20 hidden max-h-56 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none dark:bg-black dark:ring-white sm:text-sm" tabindex="-1" role="listbox" aria-label="Language list">
+						<!--
+						Select option, manage highlight styles based on mouseenter/mouseleave and keyboard navigation.
+						Highlighted: "bg-indigo-600 text-white", Not Highlighted: "text-gray-900"
+					-->
+						<li aria-labelledby="eng" class="relative cursor-default select-none py-2 pl-1 pr-1.5 text-gray-900 hover:shadow-custom dark:text-white dark:hover:shadow-darkcustom" role="option">
+							<div class="flex items-center justify-center">
+								<!-- Selected: "font-semibold", Not Selected: "font-normal" -->
+								<span id="eng" class="block truncate font-normal uppercase">En</span>
+							</div>
+						</li>
+						<li aria-labelledby="fra" class="relative cursor-default select-none py-2 pl-1 pr-1.5 text-gray-900 hover:shadow-custom dark:text-white dark:hover:shadow-darkcustom" role="option">
+							<div class="flex items-center justify-center">
+								<!-- Selected: "font-semibold", Not Selected: "font-normal" -->
+								<span id="fra" class="block truncate font-normal uppercase">Fr</span>
+							</div>
+						</li>
+
+						<!-- More items... -->
+					</ul>
+
+					<select class="block rounded-[0.3125rem] border border-transparent hover:border-indigo bg-transparent bg-select-arrow py-1 pl-2 pr-[3rem] text-[1.0625rem] text-gray-900 placeholder-silver-chalice focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500">
+						<option value="0">EN</option>
+						<option value="1" selected="">UA</option>
+						<option value="2">FR</option>
+						<option value="3">DE</option>
+					</select>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+
+		<!--  ./header-->
+
+		<main class="relative">
+			<!-- menu -->
+			<aside id="menu" class="menu fixed left-0 top-0 z-[999] h-full w-[10.625rem] lg:w-[6.875rem] sm:w-[4rem] bg-black py-[48px] px-4 dark:bg-white">
+	
+	<div class="flex flex-col justify-between items-center h-full">
+		<nav class="nav-service text-white dark:text-black">
+			<ul class="nav__list text-center">
+				<li class="text-[1.25rem] sm:text-[1rem] mb-2"><a href="#" class="hover:underline hover:text-perano duration-300 ease-out">Users</a></li>
+				<li class="text-[1.25rem] sm:text-[1rem] mb-2"><a href="#" class="hover:underline hover:text-perano duration-300 ease-out">Details</a></li>
+				<li class="text-[1.25rem] sm:text-[1rem]"><a href="#" class="hover:underline hover:text-perano duration-300 ease-out">Queue</a></li>
+			</ul>
+		</nav>
+		
+		<button  class="group" title="Recycle Bin" aria-label="Recycle Bin">
+			<svg class="sm:h-8 sm:w-8" width="46" height="54" viewBox="0 0 46 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path class="group-hover:stroke-perano dark:stroke-black duration-300 ease-out" d="M5.84619 9.69232L8.25004 48.1538C8.36422 50.3762 9.98081 52 12.0962 52H34.2116C36.3354 52 37.9219 50.3762 38.0577 48.1538L40.4616 9.69232" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+				<path class="group-hover:stroke-perano dark:stroke-black duration-300 ease-out" d="M2 9.69232H44.3077H2Z" fill="black"/>
+				<path class="group-hover:stroke-perano dark:stroke-black duration-300 ease-out" d="M2 9.69232H44.3077" stroke="white" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round"/>
+				<path class="group-hover:stroke-perano dark:stroke-black duration-300 ease-out" d="M15.4615 9.69232V4.88463C15.4604 4.5055 15.5343 4.1299 15.6789 3.77942C15.8234 3.42894 16.0359 3.1105 16.3039 2.84242C16.572 2.57434 16.8905 2.3619 17.2409 2.21733C17.5914 2.07276 17.967 1.9989 18.3462 2.00001H27.9615C28.3407 1.9989 28.7163 2.07276 29.0667 2.21733C29.4172 2.3619 29.7357 2.57434 30.0037 2.84242C30.2718 3.1105 30.4843 3.42894 30.6288 3.77942C30.7734 4.1299 30.8473 4.5055 30.8461 4.88463V9.69232M23.1538 17.3846V44.3077M14.5 17.3846L15.4615 44.3077M31.8077 17.3846L30.8461 44.3077" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+				</svg>
+				
+		</button>
+	</div>
+</aside>
+
+			<!-- ./menu -->
+
+			<div class="container relative pb-[2rem] pl-[11.25rem] pr-[11.25rem] pt-[1.4375rem] min-hd:max-w-[95.875rem] min-hd:pl-[0.625rem] min-hd:pr-[0.625rem] lg:pl-[7.5rem] lg:pr-[0.625rem] exmd:pb-[5.5rem] sm:pl-[4.625rem]">
+				<div class="flex gap-[2.125rem]">
+					<div class="w-[19.5625rem] rounded-[1.0625rem] bg-chetwode-blue p-[1.875rem] ">
+						<div class="sticky top-[1.875rem]">
+							<div class="flex flex-col items-center justify-center">
+								<div class="h-[8.625rem] w-[8.625rem] flex-shrink-0 overflow-hidden rounded-[50%]">
+									<figure v-lazyload class="simg h-full w-full" background="">
+										<img class="simg-lazy fade-in object-cover" decoding="async" src="img/user-3.jpg" alt="user" />
+									</figure>
+								</div>
+								<div class="mt-[3.25rem]">Alisha</div>
+								<div>name@email.com</div>
+								<ul class="mt-[3.25rem] flex flex-col items-center gap-[1.625rem]">
+									<li><a class="hover:underline" href="#">Messages</a></li>
+									<li><a class="hover:underline" href="#">Order</a></li>
+									<li><a class="hover:underline" href="#">Statistics</a></li>
+								</ul>
+
+								<button title="Return" aria-label="Return button" class="group mt-[1.625rem]">
+									<svg class="sm:h-6 sm:w-6" width="48" height="49" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path class="duration-300 ease-out group-hover:fill-indigo-500 dark:fill-white" d="M24 0C10.7452 0 0 10.969 0 24.5C0 38.031 10.7452 49 24 49C37.2548 49 48 38.031 48 24.5C48 10.969 37.2548 0 24 0Z" fill="#232532" />
+										<path class="duration-300 ease-out dark:fill-black dark:group-hover:fill-white" fill-rule="evenodd" clip-rule="evenodd" d="M34 25C34 24.6591 33.8749 24.3321 33.6522 24.091C33.4296 23.85 33.1275 23.7145 32.8126 23.7145H19.0558L24.1544 18.1972C24.3773 17.9558 24.5026 17.6285 24.5026 17.2871C24.5026 16.9457 24.3773 16.6184 24.1544 16.377C23.9314 16.1356 23.629 16 23.3137 16C22.9984 16 22.696 16.1356 22.473 16.377L15.3488 24.0899C15.2383 24.2093 15.1505 24.3511 15.0907 24.5073C15.0308 24.6635 15 24.8309 15 25C15 25.1691 15.0308 25.3365 15.0907 25.4927C15.1505 25.6489 15.2383 25.7907 15.3488 25.9101L22.473 33.623C22.696 33.8644 22.9984 34 23.3137 34C23.629 34 23.9314 33.8644 24.1544 33.623C24.3773 33.3816 24.5026 33.0543 24.5026 32.7129C24.5026 32.3715 24.3773 32.0442 24.1544 31.8028L19.0558 26.2855H32.8126C33.1275 26.2855 33.4296 26.15 33.6522 25.909C33.8749 25.6679 34 25.3409 34 25Z" fill="white" />
+									</svg>
+								</button>
+							</div>
+						</div>
+					</div>
+					<div class="flex-grow">
+						<div class="flow-root">
+							<div class="overflow-x-auto">
+								<table class="mb-4 min-w-full dark:text-white xlg:min-w-[63.125rem]">
+									<thead>
+										<tr>
+											<th scope="col" class="py-3.5 pl-4 pr-3 text-center text-[1.25rem] font-normal">Date</th>
+											<th scope="col" class="px-3 py-3.5 text-[1.25rem] font-normal">Payment</th>
+											<th scope="col" class="px-3 py-3.5 text-[1.25rem] font-normal">Delivery</th>
+											<th scope="col" class="px-3 py-3.5 text-[1.25rem] font-normal">Status</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr class="bg-[rgba(166,187,255,0.64)] duration-300 ease-out hover:bg-[rgba(166,187,255)]">
+											<td class="whitespace-nowrap rounded-bl-[1.1875rem] rounded-tl-[1.1875rem] py-8 pl-4 pr-3 text-center">02/03/2020</td>
+											<td class="whitespace-nowrap px-3 py-4 text-center">Monobank (234 UAH)</td>
+											<td class="whitespace-nowrap px-3 py-4 text-center">
+												1901 Thornridge Cir.<br />
+												Shiloh, Hawaii 81063
+											</td>
+											<td class="whitespace-nowrap rounded-br-[1.1875rem] rounded-tr-[1.1875rem] px-3 py-4 text-center">
+												<div class="relative flex justify-center">
+													<select class="block rounded-[0.3125rem] border border-indigo bg-transparent bg-select-arrow py-1 pl-2 pr-[3rem] text-[1.0625rem] text-gray-900 placeholder-silver-chalice focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500">
+														<option value="0" selected>In progress</option>
+														<option value="1">Done</option>
+														<option value="2">Success</option>
+														<option value="3">Accepted</option>
+													</select>
+												</div>
+											</td>
+										</tr>
+										<tr class="duration-300 ease-out hover:bg-[rgba(166,187,255)]">
+											<td class="whitespace-nowrap rounded-bl-[1.1875rem] rounded-tl-[1.1875rem] py-8 pl-4 pr-3 text-center">02/03/2020</td>
+											<td class="whitespace-nowrap px-3 py-4 text-center">Monobank (234 UAH)</td>
+											<td class="whitespace-nowrap px-3 py-4 text-center">
+												1901 Thornridge Cir.<br />
+												Shiloh, Hawaii 81063
+											</td>
+											<td class="whitespace-nowrap rounded-br-[1.1875rem] rounded-tr-[1.1875rem] px-3 py-4 text-center">
+												<div class="relative flex justify-center">
+													<select class="block rounded-[0.3125rem] border border-indigo bg-transparent bg-select-arrow py-1 pl-2 pr-[3rem] text-[1.0625rem] text-gray-900 placeholder-silver-chalice focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500">
+														<option value="0">In progress</option>
+														<option value="1" selected>Done</option>
+														<option value="2">Success</option>
+														<option value="3">Accepted</option>
+													</select>
+												</div>
+											</td>
+										</tr>
+										<tr class="bg-[rgba(166,187,255,0.64)] duration-300 ease-out hover:bg-[rgba(166,187,255)]">
+											<td class="whitespace-nowrap rounded-bl-[1.1875rem] rounded-tl-[1.1875rem] py-8 pl-4 pr-3 text-center">02/03/2020</td>
+											<td class="whitespace-nowrap px-3 py-4 text-center">Monobank (234 UAH)</td>
+											<td class="whitespace-nowrap px-3 py-4 text-center">
+												1901 Thornridge Cir.<br />
+												Shiloh, Hawaii 81063
+											</td>
+											<td class="whitespace-nowrap rounded-br-[1.1875rem] rounded-tr-[1.1875rem] px-3 py-4 text-center">
+												<div class="relative flex justify-center">
+													<select class="block rounded-[0.3125rem] border border-indigo bg-transparent bg-select-arrow py-1 pl-2 pr-[3rem] text-[1.0625rem] text-gray-900 placeholder-silver-chalice focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500">
+														<option value="0">In progress</option>
+														<option value="1">Done</option>
+														<option value="2" selected>Success</option>
+														<option value="3">Accepted</option>
+													</select>
+												</div>
+											</td>
+										</tr>
+
+										<tr class="duration-300 ease-out hover:bg-[rgba(166,187,255)]">
+											<td class="whitespace-nowrap rounded-bl-[1.1875rem] rounded-tl-[1.1875rem] py-8 pl-4 pr-3 text-center">02/03/2020</td>
+											<td class="whitespace-nowrap px-3 py-4 text-center">Monobank (234 UAH)</td>
+											<td class="whitespace-nowrap px-3 py-4 text-center">
+												1901 Thornridge Cir.<br />
+												Shiloh, Hawaii 81063
+											</td>
+											<td class="whitespace-nowrap rounded-br-[1.1875rem] rounded-tr-[1.1875rem] px-3 py-4 text-center">
+												<div class="relative flex justify-center">
+													<select class="block rounded-[0.3125rem] border border-indigo bg-transparent bg-select-arrow py-1 pl-2 pr-[3rem] text-[1.0625rem] text-gray-900 placeholder-silver-chalice focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500">
+														<option value="0">In progress</option>
+														<option value="1">Done</option>
+														<option value="2">Success</option>
+														<option value="3" selected>Accepted</option>
+													</select>
+												</div>
+											</td>
+										</tr>
+										<tr class="bg-[rgba(166,187,255,0.64)] duration-300 ease-out hover:bg-[rgba(166,187,255)]">
+											<td class="whitespace-nowrap rounded-bl-[1.1875rem] rounded-tl-[1.1875rem] py-8 pl-4 pr-3 text-center">02/03/2020</td>
+											<td class="whitespace-nowrap px-3 py-4 text-center">Monobank (234 UAH)</td>
+											<td class="whitespace-nowrap px-3 py-4 text-center">
+												1901 Thornridge Cir.<br />
+												Shiloh, Hawaii 81063
+											</td>
+											<td class="whitespace-nowrap rounded-br-[1.1875rem] rounded-tr-[1.1875rem] px-3 py-4 text-center">
+												<div class="relative flex justify-center">
+													<select class="block rounded-[0.3125rem] border border-indigo bg-transparent bg-select-arrow py-1 pl-2 pr-[3rem] text-[1.0625rem] text-gray-900 placeholder-silver-chalice focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500">
+														<option value="0" selected>In progress</option>
+														<option value="1">Done</option>
+														<option value="2">Success</option>
+														<option value="3">Accepted</option>
+													</select>
+												</div>
+											</td>
+										</tr>
+										<tr class="duration-300 ease-out hover:bg-[rgba(166,187,255)]">
+											<td class="whitespace-nowrap rounded-bl-[1.1875rem] rounded-tl-[1.1875rem] py-8 pl-4 pr-3 text-center">02/03/2020</td>
+											<td class="whitespace-nowrap px-3 py-4 text-center">Monobank (234 UAH)</td>
+											<td class="whitespace-nowrap px-3 py-4 text-center">
+												1901 Thornridge Cir.<br />
+												Shiloh, Hawaii 81063
+											</td>
+											<td class="whitespace-nowrap rounded-br-[1.1875rem] rounded-tr-[1.1875rem] px-3 py-4 text-center">
+												<div class="relative flex justify-center">
+													<select class="block rounded-[0.3125rem] border border-indigo bg-transparent bg-select-arrow py-1 pl-2 pr-[3rem] text-[1.0625rem] text-gray-900 placeholder-silver-chalice focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500">
+														<option value="0">In progress</option>
+														<option value="1" selected>Done</option>
+														<option value="2">Success</option>
+														<option value="3">Accepted</option>
+													</select>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+
+						<div class="flex items-center justify-center gap-[1.875rem] pt-[5rem]">
+							<button title="previous" aria-label="Previous button" class="group">
+								<svg class="sm:h-6 sm:w-6" width="48" height="49" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path class="duration-300 ease-out group-hover:fill-indigo-500 dark:fill-white" d="M24 0C10.7452 0 0 10.969 0 24.5C0 38.031 10.7452 49 24 49C37.2548 49 48 38.031 48 24.5C48 10.969 37.2548 0 24 0Z" fill="#232532" />
+									<path class="duration-300 ease-out dark:fill-black dark:group-hover:fill-white" fill-rule="evenodd" clip-rule="evenodd" d="M34 25C34 24.6591 33.8749 24.3321 33.6522 24.091C33.4296 23.85 33.1275 23.7145 32.8126 23.7145H19.0558L24.1544 18.1972C24.3773 17.9558 24.5026 17.6285 24.5026 17.2871C24.5026 16.9457 24.3773 16.6184 24.1544 16.377C23.9314 16.1356 23.629 16 23.3137 16C22.9984 16 22.696 16.1356 22.473 16.377L15.3488 24.0899C15.2383 24.2093 15.1505 24.3511 15.0907 24.5073C15.0308 24.6635 15 24.8309 15 25C15 25.1691 15.0308 25.3365 15.0907 25.4927C15.1505 25.6489 15.2383 25.7907 15.3488 25.9101L22.473 33.623C22.696 33.8644 22.9984 34 23.3137 34C23.629 34 23.9314 33.8644 24.1544 33.623C24.3773 33.3816 24.5026 33.0543 24.5026 32.7129C24.5026 32.3715 24.3773 32.0442 24.1544 31.8028L19.0558 26.2855H32.8126C33.1275 26.2855 33.4296 26.15 33.6522 25.909C33.8749 25.6679 34 25.3409 34 25Z" fill="white" />
+								</svg>
+							</button>
+
+							<div class="flex gap-[0.3125rem]">
+								<div class="text-[#979797] dark:text-white dark:opacity-[0.5]"><a href="">1</a></div>
+								<div class="dark:text-white">...</div>
+								<div class="flex gap-[0.1875rem] dark:text-white">
+									<a href="#">2</a>
+									<a href="#">3</a>
+									<a href="#">4</a>
+									<a href="#">5</a>
+								</div>
+								<div class="dark:text-white">...</div>
+								<div class="dark:text-white">
+									<a href="#">100</a>
+								</div>
+							</div>
+
+							<button title="previous" aria-label="Previous button" class="group">
+								<svg class="sm:h-6 sm:w-6" width="48" height="49" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path class="duration-300 ease-out group-hover:fill-indigo-500 dark:fill-white" d="M24 49C37.2548 49 48 38.031 48 24.5C48 10.969 37.2548 0 24 0C10.7452 0 0 10.969 0 24.5C0 38.031 10.7452 49 24 49Z" fill="#232532" />
+									<path class="duration-300 ease-out dark:fill-black dark:group-hover:fill-white" fill-rule="evenodd" clip-rule="evenodd" d="M15 25C15 25.3409 15.1251 25.6679 15.3478 25.909C15.5704 26.15 15.8725 26.2855 16.1874 26.2855H29.9442L24.8456 31.8028C24.6227 32.0442 24.4974 32.3715 24.4974 32.7129C24.4974 33.0543 24.6227 33.3816 24.8456 33.623C25.0686 33.8644 25.371 34 25.6863 34C26.0016 34 26.304 33.8644 26.527 33.623L33.6512 25.9101C33.7617 25.7907 33.8495 25.6489 33.9093 25.4927C33.9692 25.3365 34 25.1691 34 25C34 24.8309 33.9692 24.6635 33.9093 24.5073C33.8495 24.3511 33.7617 24.2093 33.6512 24.0899L26.527 16.377C26.304 16.1356 26.0016 16 25.6863 16C25.371 16 25.0686 16.1356 24.8456 16.377C24.6227 16.6184 24.4974 16.9457 24.4974 17.2871C24.4974 17.6285 24.6227 17.9558 24.8456 18.1972L29.9442 23.7145H16.1874C15.8725 23.7145 15.5704 23.85 15.3478 24.091C15.1251 24.3321 15 24.6591 15 25Z" fill="white" />
+								</svg>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+	</body>
+</html>

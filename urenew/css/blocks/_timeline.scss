@@ -1,0 +1,59 @@
+.timeline {
+	.des-future {
+		&::before {
+			display: block;
+			content: "";
+			background-image: url("./../img/icons/future.webp");
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-size: contain;
+			width: 260px;
+			height: 42px;
+			position: absolute;
+			margin: 0 0 0 -20px;
+			z-index: -1;
+			@include mediaMobile {
+				width: 190px;
+				margin: -5px 0 0 -20px;
+			}
+		}
+	}
+	&-block {
+		display: grid;
+		grid-template-columns: 1fr 2fr;
+		grid-gap: 20px 20px;
+		border: 1px solid;
+		padding: 60px;
+		border-radius: 60px;
+		background-image: url("./../img/icons/hands.webp");
+		background-repeat: no-repeat;
+		background-position: left -50px top 40px;
+		background-size: 50%;
+		overflow: hidden;
+		@include mediaMobile {
+			display: flex;
+			flex-direction: column;
+			padding: 30px 20px;
+			background-size: 350px;
+			border-radius: 30px;
+		}
+	}
+	&-content {
+		font-size: 28px;
+		&.m-80 {
+			margin-bottom: 80px;
+		}
+		@include mediaMobile {
+			font-size: 20px;
+		}
+		p {
+			margin-bottom: 1rem;
+		}
+	}
+	&-dop {
+		margin-top: 100px;
+		@include mediaMobile {
+			margin-top: 50px;
+		}
+	}
+}

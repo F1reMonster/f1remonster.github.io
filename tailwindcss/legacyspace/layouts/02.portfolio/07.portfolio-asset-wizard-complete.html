@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+<title>Legacy space - Portfolio page</title>
+<meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=yes">
+<link rel="canonical" href='' />
+<meta name="MobileOptimized" content="width"/>
+<meta name="HandheldFriendly" content="True"/>
+<meta name="viewport" content="initial-scale=1.0, width=device-width">
+<link rel="stylesheet" type="text/css" href="../../css/style.css" />
+
+	</head>
+
+	<body class="flex flex-col h-full overflow-clip font-inter">
+		<main class="flex-grow py-4 lg:py-12">
+			<div class="mx-auto h-full w-full max-w-167.5 px-4">
+				<div class="flex flex-col items-center justify-center w-full h-full">
+					<div class="h-40 w-19.5">
+						<img decoding="async" class="object-cover w-full h-full transform rotate-y-180" src="../../img/wizard-asset-complete.webp" title="Wizard complete" alt="Wizard complete" loading="lazy" />
+					</div>
+					<h1 class="mt-6 font-semibold tracking-tight text-center text-sm2x leading-125 text-primary-black lg:text-base2x">Your asset has been successfully added</h1>
+					<p class="mt-3 text-sm text-center leading-150 text-neutral-black-70 lg:text-base">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+					<div class="flex flex-col justify-center w-full gap-2 mt-12 sm:flex-row">
+						<button class="flex h-12 items-center justify-center gap-2 rounded-xl border border-neutral-black-5 px-5 py-3.5 text-sm font-medium transition-all duration-300 hover:bg-neutral-black-1 sm:w-fit">
+							<span>View my asset</span>
+						</button>
+						<button class="-order-1 flex h-12 flex-shrink-0 items-center justify-center gap-2 rounded-xl bg-primary px-5 py-3.5 text-sm font-semibold text-primary-100 transition-all duration-300 hover:bg-primary-hover sm:order-none sm:w-fit">
+							<span class="icon icon--rocket"></span>
+							<span>Evaluate request</span>
+						</button>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+		<script src="../../js/app.js"></script>
+
+		
+		<!-- confetti config -->
+		<script>
+			const duration = 15 * 1000,
+				animationEnd = Date.now() + duration,
+				defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
+
+			function randomInRange(min, max) {
+				return Math.random() * (max - min) + min;
+			}
+
+			const interval = setInterval(function () {
+				const timeLeft = animationEnd - Date.now();
+
+				if (timeLeft <= 0) {
+					return clearInterval(interval);
+				}
+
+				const particleCount = 25 * (timeLeft / duration);
+
+				// since particles fall down, start a bit higher than random
+				confetti(
+					Object.assign({}, defaults, {
+						particleCount,
+						origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 },
+					})
+				);
+				confetti(
+					Object.assign({}, defaults, {
+						particleCount,
+						origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 },
+					})
+				);
+			}, 250);
+		</script>
+	</body>
+</html>

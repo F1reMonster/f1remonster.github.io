@@ -1,0 +1,39 @@
+.long-campaign-intro {
+  padding-bottom: 2.8125em;
+}
+@media screen and (max-width: 767px) {
+  .long-campaign-intro {
+    padding-bottom: 1.875em;
+  }
+}
+.long-campaign-intro .header {
+  font-size: 7.5em;
+  line-height: 1;
+  margin: 0.4em 0 0.3083333333em;
+}
+@media (max-width: 767px) {
+  .long-campaign-intro .header {
+    font-size: 3.75em;
+    margin: 0.2166666667em 0 0.4833333333em;
+  }
+}
+@media (max-width: 767px) {
+  .long-campaign-intro .primary-btn {
+    min-width: 11.875em;
+  }
+}
+.long-campaign-intro .img-part {
+  margin-inline-end: 3.3125em;
+}
+@media (max-width: 767px) {
+  .long-campaign-intro .img-part {
+    margin-inline-end: 0;
+  }
+}
+@media (max-width: 767px) {
+  .long-campaign-intro .img-part img {
+    max-width: 76.726342711vw;
+    display: block;
+    margin: 0 auto;
+  }
+}

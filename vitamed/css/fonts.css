@@ -1,0 +1,70 @@
+@font-face {
+	font-family: "Gotham Pro";
+	src: url(../fonts/GothamPro-Light.eot);
+	src: url(../fonts/GothamPro-Light.eot?#iefix) format("embedded-opentype"),
+		url(../fonts/GothamPro-Light.woff) format("woff"),
+		url(../fonts/GothamPro-Light.ttf) format("truetype");
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: "Gotham Pro";
+	src: url(../fonts/GothamPro.eot);
+	src: url(../fonts/GothamPro.eot?#iefix) format("embedded-opentype"),
+		url(../fonts/GothamPro.woff) format("woff"),
+		url(../fonts/GothamPro.ttf) format("truetype");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: "Gotham Pro";
+	src: url(../fonts/GothamPro-Medium.eot);
+	src: url(../fonts/GothamPro-Medium.eot?#iefix) format("embedded-opentype"),
+		url(../fonts/GothamPro-Medium.woff) format("woff"),
+		url(../fonts/GothamPro-Medium.ttf) format("truetype");
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: "Gotham Pro";
+	src: url(../fonts/GothamPro-Bold.eot);
+	src: url(../fonts/GothamPro-Bold.eot?#iefix) format("embedded-opentype"),
+		url(../fonts/GothamPro-Bold.woff) format("woff"),
+		url(../fonts/GothamPro-Bold.ttf) format("truetype");
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: "Gotham Pro Narrow";
+	src: url(../fonts/GothamProNarrow-Medium.eot);
+	src: url(../fonts/GothamProNarrow-Medium.eot?#iefix)
+			format("embedded-opentype"),
+		url(../fonts/GothamProNarrow-Medium.woff) format("woff"),
+		url(../fonts/GothamProNarrow-Medium.ttf) format("truetype");
+	font-weight: 500;
+	font-style: normal;
+}
+@font-face {
+	font-family: "Museo Sans";
+	src: url(../fonts/MuseoSansCyrl-700.eot);
+	src: url(../fonts/MuseoSansCyrl-700.eot?#iefix) format("embedded-opentype"),
+		url(../fonts/MuseoSansCyrl-700.woff) format("woff"),
+		url(../fonts/MuseoSansCyrl-700.ttf) format("truetype");
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: "Museo Sans";
+	src: url(../fonts/MuseoSansCyrl-300.eot);
+	src: url(../fonts/MuseoSansCyrl-300.eot?#iefix) format("embedded-opentype"),
+		url(../fonts/MuseoSansCyrl-300.woff) format("woff"),
+		url(../fonts/MuseoSansCyrl-300.ttf) format("truetype");
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}

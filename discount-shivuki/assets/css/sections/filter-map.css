@@ -1,0 +1,217 @@
+.filter-map__title {
+  font: 2.25em/1.6666666667 "rubik", sans-serif;
+  color: #00A661;
+  letter-spacing: 0.01em;
+  margin-bottom: 0;
+}
+html[dir=ltr] .filter-map__title {
+  text-align: left;
+}
+
+#map div[role=dialog] {
+  padding: 0 !important;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2) !important;
+}
+#map div[role=dialog] .gm-style-iw-d {
+  overflow: hidden !important;
+}
+#map div[role=dialog] .gm-ui-hover-effect {
+  display: none !important;
+}
+#map .gm-style-iw-t {
+  right: -1.375em !important;
+  bottom: 5em !important;
+}
+#map .gm-style .gm-style-iw-tc {
+  filter: drop-shadow(0 2px 0 rgba(178, 178, 178, 0.4));
+}
+#map .infowindow {
+  max-width: 19.375em;
+  border-radius: 0.625em;
+  padding: 0.875em 1.1875em 0;
+}
+#map .infowindow__top {
+  display: flex;
+  align-items: flex-start;
+  color: #00a661;
+  margin: 0 0 -0.5625em;
+}
+#map .infowindow__top span {
+  display: block;
+  font-weight: bold;
+}
+#map .infowindow__top span:first-child {
+  font-size: 1.063rem;
+  font-family: "rubik-bold", sans-serif;
+  color: #000;
+  margin: 0.125em 0 0 0.625em;
+}
+#map .infowindow__top span:last-child {
+  font-weight: bold;
+  font-family: "rubik-bold", sans-serif;
+  font-size: 1.25rem;
+}
+#map .infowindow__body {
+  font-size: 1.125rem;
+  color: #000;
+}
+
+.filter-map-filter {
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 1024px) {
+  .filter-map-filter {
+    flex-direction: column-reverse;
+  }
+  html[dir=ltr] .filter-map-filter {
+    flex-direction: column;
+  }
+}
+.filter-map-filter.show {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  left: 0;
+  justify-content: center;
+  top: 0;
+  z-index: 101;
+  width: 100%;
+  background-color: #f6f7f7;
+  height: 153px;
+  padding: 0 25px;
+}
+
+.filter-map-checkboxes-form {
+  display: flex;
+  width: 100%;
+  margin: 0 2.25em 0 0;
+}
+html[dir=ltr] .filter-map-checkboxes-form {
+  margin: 0 0 0 2.25em;
+}
+
+@media (max-width: 1024px) {
+  .filter-map-checkboxes-form {
+    display: none;
+  }
+}
+
+.filter-map-checkboxes {
+  position: relative;
+  width: 70%;
+  display: flex;
+}
+html[dir=ltr] .filter-map-checkboxes {
+  direction: ltr;
+}
+
+.filter-map-checkboxes .input-checkbox {
+  flex-shrink: 0;
+}
+.filter-map-checkboxes .input-checkbox + .input-checkbox {
+  margin: 0 2.25em 0 0;
+}
+html[dir=ltr] .filter-map-checkboxes .input-checkbox + .input-checkbox {
+  margin: 0 0 0 2.25em;
+}
+
+.filter-map-checkboxes .input-checkbox input:focus-visible ~ .input-checkbox-checkmark {
+  outline: 2px dotted #00a661;
+  outline-offset: 2px;
+}
+
+.filter-hidden-checkboxes {
+  position: relative;
+  z-index: 2;
+  margin: 0 auto 0 0;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+html[dir=ltr] .filter-hidden-checkboxes {
+  margin: 0 0 0 auto;
+}
+
+.filter-button-checkboxes {
+  display: flex;
+  align-items: center;
+  font-family: "rubik-bold";
+  margin: 0 1.25em 0 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+html[dir=ltr] .filter-button-checkboxes {
+  margin: 0 0 0 1.25em;
+  flex-direction: row-reverse;
+}
+
+.filter-button-checkboxes span {
+  font-family: "rubik-bold";
+  font-size: 1.25em;
+  margin: 0 0 0 0.5em;
+}
+html[dir=ltr] .filter-button-checkboxes span {
+  margin: 0 0.5em 0 0;
+}
+
+.filter-button-checkboxes img {
+  width: 1em;
+  height: 0.875em;
+}
+.filter-button-checkboxes:focus-visible {
+  outline: 1px dotted #00a661;
+  outline-offset: 2px;
+}
+
+.filter-count {
+  justify-content: center;
+  align-items: center;
+  width: 2em;
+  height: 2em;
+  border-radius: 3.125em;
+  border: 1px solid #6924E8;
+  font-size: 0.875em;
+  color: #6924E8;
+  margin: 0 0 0 0.5em;
+  display: none;
+}
+html[dir=ltr] .filter-count {
+  margin: 0 0.5em 0 0;
+}
+
+.filter-dropdown-checkboxes {
+  position: absolute;
+  z-index: 2;
+  flex-direction: column;
+  width: 15em;
+  top: calc(100% + 0.625em);
+  right: -0.5em;
+  background-color: #fff;
+  padding: 0 0.9375em 1.25em;
+  margin: 0;
+  border-radius: 1.25em;
+  box-shadow: 0 0 0.625em 0 rgba(199, 212, 212, 0.2);
+  display: none;
+}
+html[dir=ltr] .filter-dropdown-checkboxes {
+  direction: ltr;
+}
+
+.filter-dropdown-checkboxes.show {
+  display: flex;
+}
+.filter-dropdown-checkboxes .input-checkbox {
+  list-style: none;
+  display: none;
+}
+.filter-dropdown-checkboxes .input-checkbox + .input-checkbox {
+  margin: 1.5em 0 0;
+}
+.filter-dropdown-checkboxes .input-checkbox input:focus-visible ~ .input-checkbox-checkmark {
+  outline: 2px dotted #00a661;
+  outline-offset: 2px;
+}
+.filter-dropdown-checkboxes .typical-btn {
+  max-width: 10em;
+}

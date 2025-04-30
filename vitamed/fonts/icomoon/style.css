@@ -1,0 +1,181 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?90oedr');
+  src:  url('fonts/icomoon.eot?90oedr#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?90oedr') format('truetype'),
+    url('fonts/icomoon.woff?90oedr') format('woff'),
+    url('fonts/icomoon.svg?90oedr#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-star:before {
+  content: "\e927";
+  color: #d8d8dc;
+}
+.icon-head:before {
+  content: "\e926";
+}
+.icon-cardiogram:before {
+  content: "\e920";
+}
+.icon-cells:before {
+  content: "\e921";
+}
+.icon-crutches:before {
+  content: "\e922";
+}
+.icon-dna:before {
+  content: "\e923";
+}
+.icon-ginekolog:before {
+  content: "\e924";
+}
+.icon-hand-holding:before {
+  content: "\e925";
+}
+.icon-head2:before {
+  content: "\e928";
+}
+.icon-head3:before {
+  content: "\e929";
+  color: #0467a8;
+}
+.icon-hemoglobin:before {
+  content: "\e92a";
+}
+.icon-ipod:before {
+  content: "\e92b";
+}
+.icon-massage:before {
+  content: "\e92c";
+}
+.icon-medical-stethoscope:before {
+  content: "\e92d";
+}
+.icon-open-eye-with-shine:before {
+  content: "\e92e";
+}
+.icon-stomach:before {
+  content: "\e92f";
+}
+.icon-urinary-system:before {
+  content: "\e930";
+}
+.icon-woman-hair:before {
+  content: "\e931";
+}
+.icon-alarm-clock:before {
+  content: "\e903";
+}
+.icon-ambulance:before {
+  content: "\e904";
+}
+.icon-arrow-down:before {
+  content: "\e905";
+  color: #666;
+}
+.icon-arrow-left1:before {
+  content: "\e906";
+}
+.icon-arrow-right1:before {
+  content: "\e907";
+}
+.icon-arrow-up:before {
+  content: "\e908";
+  color: #cc2726;
+}
+.icon-baby-stroller:before {
+  content: "\e909";
+}
+.icon-desk-bell:before {
+  content: "\e90a";
+}
+.icon-doctor:before {
+  content: "\e90b";
+}
+.icon-doctor-person:before {
+  content: "\e90c";
+}
+.icon-family:before {
+  content: "\e90d";
+}
+.icon-family2:before {
+  content: "\e90e";
+}
+.icon-file:before {
+  content: "\e90f";
+}
+.icon-first-aid-kit:before {
+  content: "\e910";
+}
+.icon-growth:before {
+  content: "\e911";
+}
+.icon-icu-monitor:before {
+  content: "\e912";
+}
+.icon-id-card:before {
+  content: "\e913";
+}
+.icon-instagram:before {
+  content: "\e914";
+}
+.icon-map:before {
+  content: "\e915";
+}
+.icon-medical-drugs:before {
+  content: "\e916";
+}
+.icon-parents:before {
+  content: "\e917";
+}
+.icon-placeholder:before {
+  content: "\e918";
+}
+.icon-play-button:before {
+  content: "\e919";
+}
+.icon-search:before {
+  content: "\e91a";
+}
+.icon-smile:before {
+  content: "\e91b";
+}
+.icon-stethoscope:before {
+  content: "\e91c";
+}
+.icon-visibility:before {
+  content: "\e91d";
+}
+.icon-vk:before {
+  content: "\e91e";
+}
+.icon-wallet:before {
+  content: "\e91f";
+}
+.icon-code:before {
+  content: "\e900";
+}
+.icon-arrow-right:before {
+  content: "\e901";
+}
+.icon-arrow-left:before {
+  content: "\e902";
+}

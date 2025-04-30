@@ -1,0 +1,102 @@
+.card-with-deep-dent canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.card-with-deep-dent .img-wrap .img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-with-deep-dent {
+  padding: 20px;
+  flex-basis: 24.375em;
+  position: relative;
+  display: flex;
+}
+.card-with-deep-dent canvas.back-img {
+  z-index: -1;
+  filter: blur(0.375em);
+}
+.card-with-deep-dent .card-inner {
+  padding: 1.625em;
+  position: relative;
+}
+@media screen and (max-width: 767px) {
+  .card-with-deep-dent .card-inner {
+    padding: 2em 1.625em 2.8125em;
+  }
+}
+.card-with-deep-dent .img-wrap {
+  position: relative;
+}
+.card-with-deep-dent .img-wrap::before {
+  content: "";
+  float: left;
+  padding-bottom: 73.1543624161%;
+}
+.card-with-deep-dent .img-wrap::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+.card-with-deep-dent .msg {
+  font: 400 1.25em/1.4 "rubik-reg", sans-serif;
+  color: #000;
+  transition: color 0.3s;
+  text-align: center;
+  margin: 0.7em 1em 1.5em;
+}
+@media screen and (max-width: 767px) {
+  .card-with-deep-dent .msg {
+    font-size: 1.5em;
+    line-height: 1.3333333333;
+    margin: 1.125em 0 1em;
+  }
+}
+
+.how-to-join {
+  padding: 0.625em 0 4.375em;
+}
+@media screen and (max-width: 767px) {
+  .how-to-join .main-container {
+    padding: 0;
+  }
+}
+.how-to-join .cards-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  justify-content: center;
+  text-align: center;
+  gap: 1.0625em;
+  margin-top: 1.25em;
+}
+@media screen and (max-width: 767px) {
+  .how-to-join .cards-wrap {
+    margin-top: 0.8125em;
+  }
+}
+.how-to-join .card-btn {
+  position: absolute;
+  left: 50%;
+  top: calc(100% - 1.125em);
+  transform: translateX(-50%);
+}
+@media screen and (max-width: 767px) {
+  .how-to-join .card-btn {
+    top: calc(100% - em);
+  }
+}
+@media screen and (max-width: 767px) {
+  .how-to-join .card-with-deep-dent:not(:last-child) {
+    margin-bottom: -0.625em;
+  }
+}

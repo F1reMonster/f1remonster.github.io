@@ -1,0 +1,70 @@
+@use "sass:math";
+
+:root {
+	--font-primary: "SF Pro Display", sans-serif;
+
+	--white: #fff;
+	--black: #000;
+	--science-blue: #0070c9;
+	--dodger-blue: #4593fc;
+	--gray: #808080;
+	--oslo-gray: #858688;
+	--empress: #7c7a7b;
+	--athens-gray: #eeeef0;
+	--jumbo: #86868b;
+	--alto: #d6d6d6;
+	--concrete: #f2f2f2;
+	--silver: #c4c4c4;
+	--celeste: #d2d6ce;
+	--iron: #e6e6e8;
+	--porcelain: #ebeff0;
+	--french-gray: #c6c6c8;
+	--bombay: #b4b4b8;
+	--mountain-mist: #8e8d92;
+	--alabaster: #f8f8f8;
+	--pizazz: #ff9500;
+}
+
+// змінні
+// параметри сітки
+// максимальна ширина контейнера
+// $container-max-width: 1140px !default;
+
+// кількість колонок
+$grid-columns: 12 !default;
+
+// відстань між елементами
+// $grid-gap: 20px !default;
+$grid-gap: 12;
+$grid-gap-side: math.div($grid-gap, 2); // migrate sass 5
+
+// контрольні точки сітки
+$grid-breakpoints: (
+	xs: 0,
+	sm: 576,
+	md: 768,
+	lg: 992,
+	xl: 1200,
+	xxl: 1400,
+) !default;
+$maxWidth: 1920;
+$minWidth: 320;
+$maxWidthContainer: 1065;
+$fontSizeDefault: 16;
+$containerPadding: 20;
+
+// Ширина спрацьовування першого брейкпоінту
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+// Брейк-поинты
+$pc: em($containerWidth); // ПК, ноутбуки, деякі планшети у горизонтальному положенні
+$tablet: em(991.98); // Планшети, деякі телефони в горизонтальному положенні
+$mobile: em(767.98); // Телефони L
+$mobileMiddle: em(575.98); // Телефони M
+$mobileSmall: em(479.98); // Телефони S
+
+// breakpoints
+$bp-xl: 1200;
+$bp-lg: 992;
+$bp-md: 768;
+$bp-sm: 576;

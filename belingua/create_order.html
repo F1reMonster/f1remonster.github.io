@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="assets/style/jquery-ui.css">
+	<link rel="stylesheet" href="assets/style/style.css">
+	<link rel="stylesheet" href="assets/style/catalogue.css">
+	<link rel="stylesheet" href="assets/style/portfolio.css">
+	<link rel="stylesheet" href="assets/style/settings.css">
+	<link rel="stylesheet" href="assets/style/dropzone.css">
+	<link rel="stylesheet" href="assets/style/tasks.css">
+	<link rel="stylesheet" href="assets/style/new-style.css" />
+
+	<!-- Useful meta tags -->
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="robots" content="index, follow">
+	<meta name="google" content="notranslate">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="description" content="">
+	<link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+
+
+	<title>Создание заказа</title>
+</head>
+<body>
+
+<header id="header">
+	<div class="container">
+		<div class="row align-center">
+			<div class="header__logo">
+				<a href="index.html">
+					<img src="assets/images/header/logo.png" alt="logo" />
+				</a>
+			</div>
+			<button class="burger" type="button" id="sidebarToggle">
+				<span>Открыть навигацию</span>
+			</button>
+			<nav class="menu">
+				<ul class="menu__items">
+					<li class="menu__item">
+						<a href="index.html" class="menu__link">Главная страница</a>
+					</li>
+					<li class="menu__item">
+						<a href="catalogue.html" class="menu__link">Каталог переводчиков</a>
+					</li>
+					<li class="menu__item">
+						<a href="#" class="menu__link">Для переводчиков</a>
+					</li>
+					<li class="menu__item">
+						<a href="#" class="menu__link">Блог</a>
+					</li>
+				</ul>
+			</nav>
+			<div class="header__actions">
+				<div class="enter">
+					<a href="#">Войти</a>
+				</div>
+				<div class="create-order">
+					<a href="create_order.html" class="btn primary small">Создать заказ</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<span class="header__line"></span>
+</header>
+<main class="main">
+	<div class="step" id="app">
+	<div class="container">
+		<div class="row">
+			<div class="step__content">
+				<div class="step__wrapper">
+					<div class="step__item active" id="step1" data-hash="1">
+						<div class="step-element">
+							<div class="container-form_1">
+								<div class="step-element__count">Шаг 1 из 3</div>
+								<h3 class="step-element__title">Укажите детали перевода</h3>
+								<form action="#" class="form-step" id="form-step-1">
+									<div class="form-step__group dropdown-group">
+
+										<label for="form-step__original">Язык оригинала</label>
+										<input id="form-step__original" required type="text" name="form-step__original" class="form-step__original js-smartinput js-nonumbers"/>
+										<ul class="dropdown-list">
+											<li class="dropdown-list__item"><span>Русский</span></li>
+											<li class="dropdown-list__item"><span>Английский</span></li>
+											<li class="dropdown-list__item"><span>Немецкий</span></li>
+											<li class="dropdown-list__item"><span>Французский</span></li>
+											<li class="dropdown-list__item"><span>Испанский</span></li>
+											<li class="dropdown-list__item"><span>Итальянский</span></li>
+											<li class="dropdown-list__item"><span>Мандаринский</span></li>
+											<li class="dropdown-list__item"><span>Апельсинский</span></li>
+										</ul>
+										<i class="Aa">
+											<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<rect width="20" height="20"/>
+												<path d="M1.40002 15L5.60002 4.5H7.40002L11.6 15H9.87502L8.82502 12.3H4.17502L3.12502 15H1.40002ZM4.77502 10.8H8.22502L6.50002 6.45L4.77502 10.8Z" fill=""/>
+												<path d="M16.703 15V13.95C16.563 14.16 16.373 14.36 16.133 14.55C15.593 14.95 15.008 15.15 14.378 15.15C13.678 15.15 13.103 14.945 12.653 14.535C12.203 14.125 11.978 13.63 11.978 13.05C11.978 12.46 12.163 11.965 12.533 11.565C12.913 11.165 13.428 10.91 14.078 10.8L16.703 10.35C16.703 9.96 16.563 9.64 16.283 9.39C16.003 9.13 15.643 9 15.203 9C14.763 9 14.308 9.165 13.838 9.495C13.668 9.615 13.498 9.775 13.328 9.975L12.353 9C12.553 8.74 12.793 8.515 13.073 8.325C13.703 7.875 14.413 7.65 15.203 7.65C16.093 7.65 16.813 7.915 17.363 8.445C17.923 8.965 18.203 9.625 18.203 10.425V15H16.703ZM16.703 11.775V11.55L14.603 11.925C13.853 12.055 13.478 12.38 13.478 12.9C13.478 13.17 13.583 13.4 13.793 13.59C14.013 13.78 14.308 13.875 14.678 13.875C15.248 13.875 15.728 13.675 16.118 13.275C16.508 12.875 16.703 12.375 16.703 11.775Z" fill=""/>
+											</svg>
+										</i>
+										<span class="error-text" style="display: none">заполните поле</span>
+									</div>
+									<div class="form-step__group dropdown-group">
+
+										<label for="form-step__translation">Язык перевода</label>
+										<input id="form-step__translation" required
+											   type="text"
+											   name="form-step__translation"
+											   class="form-step__translation js-smartinput js-nonumbers"/>
+										<ul class="dropdown-list">
+											<li class="dropdown-list__item"><span>Русский</span></li>
+											<li class="dropdown-list__item"><span>Английский</span></li>
+											<li class="dropdown-list__item"><span>Немецкий</span></li>
+										</ul>
+										<i class="union">
+											<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<rect width="20" height="20"/>
+												<path d="M10.75 3H9.25V6.12524H3.5V7.62524H8.27777C7.99193 8.1998 7.63357 8.81016 7.13859 9.4684C6.28531 10.6031 5.00635 11.9056 2.95422 13.4001L3.83727 14.6126C5.98595 13.0478 7.37892 11.6446 8.33746 10.3699C8.70066 9.88691 8.99866 9.42601 9.25 8.98741V12.8293H6.5V14.3293H9.25V17H10.75V14.3293H13.5V12.8293H10.75V8.98741C11.0013 9.42601 11.2993 9.88691 11.6625 10.3699C12.6211 11.6446 14.014 13.0478 16.1627 14.6126L17.0458 13.4001C14.9936 11.9056 13.7147 10.6031 12.8614 9.4684C12.3664 8.81016 12.0081 8.1998 11.7222 7.62524H16.5V6.12524H10.75V3Z" fill=""/>
+											</svg>
+										</i>
+										<span class="error-text" style="display: none">заполните поле</span>
+									</div>
+									<div class="tabs_wrapper">
+
+
+										<div class="form-step__tabs-label">Вид перевода</div>
+										<div class="form-step__tabs translate-tabs">
+											<input name="translateType" id="verbal" type="radio" checked>
+											<label for="verbal">Устный <span> перевод</span></label>
+											<input name="translateType" type="radio" id="writing">
+											<label for="writing" type="radio">Письменный <span> перевод</span></label>
+										</div>
+
+										<div class="form-step__content verbal-type active js-required">
+											<div class="form-step_label">Метод перевода</div>
+											<div class="form-step__group_list">
+												<input name="method" type="radio" id="1"/>
+												<label for="1"><span>Последовательный перевод</span></label>
+											</div>
+											<div class="form-step__group_list">
+												<input name="method" type="radio" id="2"/>
+												<label for="2"><span>Синхронный перевод</span></label>
+											</div>
+											<div class="form-step__group_list">
+												<input name="method" type="radio" id="3"/>
+												<label for="3"><span>Шушутаж</span></label>
+											</div>
+											<div class="form-step__group_list">
+												<input name="method" type="radio" id="4"/>
+												<label for="4"><span>Аудио-визуальный перевод</span></label>
+											</div>
+											<div class="form-step__group_list">
+												<input name="method" type="radio" id="5"/>
+												<label for="5"><span>Гид-переводчик</span></label>
+											</div>
+											<div class="form-step__group_list">
+												<input name="method" type="radio" id="6"/>
+												<label for="6"><span>Сурдоперевод</span></label>
+											</div>
+											<div class="form-step__group_list">
+												<input name="method" type="radio" id="7"/>
+												<label for="7" class="input_radio"> </label>
+												<input class="other js-nonumbers" type="text" placeholder="Другой">
+
+											</div>
+										</div>
+										<div class="form-step__content writing-type js-required">
+											<div class="form-step_label">Метод перевода</div>
+											<div class="form-step__group_list">
+												<input name="method" type="radio" id="8"/>
+												<label for="8"><span>Перевод текстов</span></label>
+											</div>
+											<div class="form-step__group_list">
+												<input name="method" type="radio" id="9"/>
+												<label for="9"><span>Нотариальное заверение документов</span></label>
+											</div>
+											<div class="form-step__group_list">
+												<input name="method" type="radio" id="10"/>
+												<label for="10"><span>Перевод технической документации</span></label>
+											</div>
+											<div class="form-step__group_list">
+												<input name="method" type="radio" id="11"/>
+												<label for="11"><span>Локализация сайтов и приложений</span></label>
+											</div>
+											<div class="form-step__group_list">
+												<input name="method" type="radio" id="12"/>
+												<label for="12"><span>Перевод субтитров</span></label>
+											</div>
+											<div class="form-step__group_list">
+												<input name="method" type="radio" id="13"/>
+												<label for="13"><span>Локализация ПО</span></label>
+											</div>
+											<div class="form-step__group_list">
+												<input name="method" type="radio" id="14"/>
+												<label for="14"><span>Локализация игр</span></label>
+											</div>
+											<div class="form-step__group_list">
+												<input name="method" type="radio" id="15"/>
+												<label for="15" class="input_radio"> </label>
+												<input class="other" type="text" placeholder="Другой">
+
+											</div>
+										</div>
+
+
+										<span class="error-text" style="display: none">заполните поле</span>
+									</div>
+									<div class="form-step__group checkbox_dropdown">
+										<label for="form-step__subjects">Тематики перевода</label>
+										<div class="temes__inner">
+											<input type="hidden">
+											<input id="form-step__subjects"
+												   placeholder="Например, медицина"
+												   type="text"
+												   name="form-step__subjects"
+												   class="form-step__subjects not_icon js-smartmultiselect js-nonumbers"/>
+										</div>
+										<ul class="checkbox-list">
+											<li class="list-item__smart-checkbox__item">
+												<label class="list-item__checkbox">
+													<input type="checkbox" value="1" checked><span>Архитектура</span>
+												</label>
+											</li>
+											<li class="list-item__smart-checkbox__item">
+												<label class="list-item__checkbox">
+													<input type="checkbox" value="2"><span>Археология</span>
+												</label>
+											</li>
+											<li class="list-item__smart-checkbox__item">
+												<label class="list-item__checkbox">
+													<input type="checkbox" value="3"><span>Атомная энергетика</span>
+												</label>
+											</li>
+											<li class="list-item__smart-checkbox__item">
+												<label class="list-item__checkbox">
+													<input type="checkbox" value="4"><span>Банковское дело</span>
+												</label>
+											</li>
+											<li class="list-item__smart-checkbox__item">
+												<label class="list-item__checkbox">
+													<input type="checkbox" value="5"><span>Бизнес</span>
+												</label>
+											</li>
+											<li class="list-item__smart-checkbox__item">
+												<label class="list-item__checkbox">
+													<input type="checkbox" value="5"><span>Бухгалтерия</span>
+												</label>
+											</li>
+											<li class="list-item__smart-checkbox__item">
+												<label class="list-item__checkbox">
+													<input type="checkbox" value="6"><span>Медицина</span>
+												</label>
+											</li>
+											<li class="list-item__smart-checkbox__item">
+												<label class="list-item__checkbox">
+													<input type="checkbox" value="6"><span>Мода</span>
+												</label>
+											</li>
+											<li class="list-item__smart-checkbox__item">
+												<label class="list-item__checkbox">
+													<input type="checkbox" value="7"><span>Политика</span>
+												</label>
+											</li>
+											<li class="list-item__smart-checkbox__item">
+												<label class="list-item__checkbox">
+													<input type="checkbox" value="7"><span>Игровая индустрия (Gamedev)</span>
+												</label>
+											</li>
+											<li class="list-item__smart-checkbox__item">
+												<label class="list-item__checkbox">
+													<input type="checkbox" value="7"><span>Зооиндустрия</span>
+												</label>
+											</li>
+											<li class="list-item__smart-checkbox__item">
+												<label class="list-item__checkbox">
+													<input type="checkbox" value="7"><span>Авиационная промышленность</span>
+												</label>
+											</li>
+										</ul>
+									</div>
+								</form>
+							</div>
+						</div>
+						<div class="step-element__btn">
+							<a href="index.html" class="btn tertiary medium">
+								Вернуться на главную
+							</a>
+							<button type="button" class="btn primary medium next">
+								К следующему шагу
+							</button>
+						</div>
+					</div>
+
+					<div class="step__item" id="step2" data-hash="2">
+						<div class="step-element" >
+							<div class="step-element__count">2 из 3</div>
+							<h3 class="step-element__title">Подробно опишите задачу</h3>
+							<div class="form-step_label">Место оказания услуги</div>
+							<form action="#" class="form-step" id="form-step-2">
+
+								<div class="form-step__tabs translate-tabs">
+									<input name="translateForm" id="local" type="radio" checked>
+									<label for="local">По адресу</label>
+									<input name="translateForm" type="radio" id="distance">
+									<label for="distance" type="radio">Удаленно</label>
+								</div>
+
+								<div class="container-form_2 container-form_local active">
+									<div class="form-step__group dropdown-group">
+										<label for="form-step__address">Адрес</label>
+										<input id="form-step__address" type="text" name="form-step__address" placeholder="Город, район, улица" required class="form-step__original address-input dropdown"/>
+										<i class="location">
+											<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M10 1.25C6.55391 1.25 3.75 3.93164 3.75 7.22656C3.75 8.7957 4.46523 10.8824 5.87578 13.4289C7.00859 15.4734 8.31914 17.3223 9.00078 18.2422C9.11596 18.3994 9.26656 18.5272 9.44037 18.6153C9.61418 18.7034 9.8063 18.7493 10.0012 18.7493C10.196 18.7493 10.3882 18.7034 10.562 18.6153C10.7358 18.5272 10.8864 18.3994 11.0016 18.2422C11.682 17.3223 12.9938 15.4734 14.1266 13.4289C15.5348 10.8832 16.25 8.79648 16.25 7.22656C16.25 3.93164 13.4461 1.25 10 1.25ZM10 10C9.50555 10 9.0222 9.85338 8.61107 9.57867C8.19995 9.30397 7.87952 8.91352 7.6903 8.45671C7.50108 7.99989 7.45157 7.49723 7.54804 7.01227C7.6445 6.52732 7.8826 6.08186 8.23223 5.73223C8.58186 5.3826 9.02732 5.1445 9.51227 5.04804C9.99723 4.95157 10.4999 5.00108 10.9567 5.1903C11.4135 5.37952 11.804 5.69995 12.0787 6.11107C12.3534 6.5222 12.5 7.00555 12.5 7.5C12.4993 8.16282 12.2357 8.79828 11.767 9.26697C11.2983 9.73565 10.6628 9.99928 10 10Z" fill="#B5BABF"/>
+											</svg>
+										</i>
+										<span class="error-text" style="display: none">заполните поле</span>
+									</div>
+								</div>
+								<hr>
+								<div class="form-step__content">
+
+									<div class="step-element__text">
+										Выберите дату или период выполнения услуги, также укажите общее количество рабочих часов, минимальное
+										время
+										работы — 3 часа
+									</div>
+
+									<div class="container-form_2">
+										<div class="form-step__date">
+											<div class="form-step__group">
+
+												<label for="form-step__date_start1">Дата начала</label>
+												<input id="form-step__date_start1" type="text" name="form-date-start" readonly class="form-step__time" value="11 Июня 2021"/>
+												<i class="date-start">
+													<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M18.75 4.99995C18.75 4.33691 18.4866 3.70102 18.0178 3.23218C17.5489 2.76334 16.913 2.49995 16.25 2.49995H15.625V1.89252C15.625 1.55619 15.3664 1.26752 15.0301 1.25072C14.9456 1.24665 14.8611 1.25978 14.7818 1.28931C14.7026 1.31884 14.6301 1.36417 14.5688 1.42253C14.5076 1.48089 14.4588 1.55109 14.4255 1.62885C14.3922 1.70662 14.375 1.79034 14.375 1.87494V2.49995H5.625V1.89252C5.625 1.55619 5.36641 1.26752 5.03008 1.25072C4.94557 1.24665 4.86112 1.25978 4.78184 1.28931C4.70255 1.31884 4.63009 1.36417 4.56884 1.42253C4.50759 1.48089 4.45883 1.55109 4.42551 1.62885C4.39219 1.70662 4.37501 1.79034 4.375 1.87494V2.49995H3.75C3.08696 2.49995 2.45107 2.76334 1.98223 3.23218C1.51339 3.70102 1.25 4.33691 1.25 4.99995V5.4687C1.25 5.51014 1.26646 5.54988 1.29576 5.57919C1.32507 5.60849 1.36481 5.62495 1.40625 5.62495H18.5938C18.6352 5.62495 18.6749 5.60849 18.7042 5.57919C18.7335 5.54988 18.75 5.51014 18.75 5.4687V4.99995Z" fill=""/>
+														<path fill-rule="evenodd" clip-rule="evenodd" d="M1.98223 18.0178C1.51339 17.5489 1.25 16.913 1.25 16.25V7.03125C1.25 6.98981 1.26646 6.95007 1.29576 6.92076C1.32507 6.89146 1.36481 6.875 1.40625 6.875H18.5938C18.6352 6.875 18.6749 6.89146 18.7042 6.92076C18.7335 6.95007 18.75 6.98981 18.75 7.03125V16.25C18.75 16.913 18.4866 17.5489 18.0178 18.0178C17.5489 18.4866 16.913 18.75 16.25 18.75H3.75C3.08696 18.75 2.45107 18.4866 1.98223 18.0178ZM7.30665 10.9083C7.30665 12.0285 6.39853 12.9367 5.27832 12.9367C4.15811 12.9367 3.25 12.0285 3.25 10.9083C3.25 9.78812 4.15811 8.88 5.27832 8.88C6.39853 8.88 7.30665 9.78812 7.30665 10.9083Z" fill="#B5BABF"/>
+													</svg>
+												</i>
+											</div>
+
+											<div class="form-step__group date-group">
+
+												<label for="form-step__date_end1">Дата окончания</label>
+												<input id="form-step__date_end1" type="text" readonly name="form-date-end" required class="form-step__time "/>
+												<i class="date-end">
+													<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M18.75 4.99995C18.75 4.33691 18.4866 3.70102 18.0178 3.23218C17.5489 2.76334 16.913 2.49995 16.25 2.49995H15.625V1.89252C15.625 1.55619 15.3664 1.26752 15.0301 1.25072C14.9456 1.24665 14.8611 1.25978 14.7818 1.28931C14.7026 1.31884 14.6301 1.36417 14.5688 1.42253C14.5076 1.48089 14.4588 1.55109 14.4255 1.62885C14.3922 1.70662 14.375 1.79034 14.375 1.87494V2.49995H5.625V1.89252C5.625 1.55619 5.36641 1.26752 5.03008 1.25072C4.94557 1.24665 4.86112 1.25978 4.78184 1.28931C4.70255 1.31884 4.63009 1.36417 4.56884 1.42253C4.50759 1.48089 4.45883 1.55109 4.42551 1.62885C4.39219 1.70662 4.37501 1.79034 4.375 1.87494V2.49995H3.75C3.08696 2.49995 2.45107 2.76334 1.98223 3.23218C1.51339 3.70102 1.25 4.33691 1.25 4.99995V5.4687C1.25 5.51014 1.26646 5.54988 1.29576 5.57919C1.32507 5.60849 1.36481 5.62495 1.40625 5.62495H18.5938C18.6352 5.62495 18.6749 5.60849 18.7042 5.57919C18.7335 5.54988 18.75 5.51014 18.75 5.4687V4.99995Z" fill=""/>
+														<path fill-rule="evenodd" clip-rule="evenodd" d="M1.98223 18.0178C1.51339 17.5489 1.25 16.913 1.25 16.25V7.03125C1.25 6.98981 1.26646 6.95007 1.29576 6.92076C1.32507 6.89146 1.36481 6.875 1.40625 6.875H18.5938C18.6352 6.875 18.6749 6.89146 18.7042 6.92076C18.7335 6.95007 18.75 6.98981 18.75 7.03125V16.25C18.75 16.913 18.4866 17.5489 18.0178 18.0178C17.5489 18.4866 16.913 18.75 16.25 18.75H3.75C3.08696 18.75 2.45107 18.4866 1.98223 18.0178ZM16.7466 14.7183C16.7466 15.8385 15.8385 16.7466 14.7183 16.7466C13.5981 16.7466 12.6899 15.8385 12.6899 14.7183C12.6899 13.5981 13.5981 12.69 14.7183 12.69C15.8385 12.69 16.7466 13.5981 16.7466 14.7183Z" fill="#B5BABF"/>
+													</svg>
+												</i>
+												<span class="error-text" style="display: none">заполните поле</span>
+											</div>
+										</div>
+									</div>
+									<div class="container-form_2 default-work-time active">
+										<div class="form-step__group time-group">
+											<i class="time">часов</i>
+											<label for="form-step__work_time1">Длительность работы</label>
+											<input required maxlength="4" id="form-step__work_time1" type="number" name="form-step__work_time"
+												   class="form-step__original not_icon"/>
+											<div class="error-text" style="display: none"></div>
+										</div>
+									</div>
+									<div class="container-form_2 duration-text">
+										<label class="form-step_label js-value-label">Длительность работы</label>
+										<div class="form-step__price">
+											<div class="form-step__group">
+												<input type="number"
+													   name="form-step__work_time"
+													   id="js-input-symbols"
+													   placeholder="Минут или часов"
+													   class="form-step__original not_icon"/>
+												<span class="error-text" style="display: none">заполните поле</span>
+											</div>
+											<div
+												 class="form-step__group forms-language__group dropdown-group dropdown-symbols">
+												<input name="form-step__work_time"
+													   class="form-step__work_time dropdown"
+													   id="js-dropdown-work_time"
+													   value="Минут"/>
+												<i class="dropdown"></i>
+												<ul class="dropdown-list">
+													<li class="dropdown-list__item js-time"><span>Минут</span></li>
+													<li class="dropdown-list__item js-time"><span>Часов</span></li>
+													<li class="dropdown-list__item js-symbols"><span>Знаков</span></li>
+													<li class="dropdown-list__item js-symbols"><span>Страниц</span></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<hr>
+
+									<div class="container-form_2">
+										<div class="step-element__text" id="minPricePerHour" data-price="2000">
+											Минимальная стоимость работы переводчиков для этой услуги составляет 2 000 ₽ в час
+										</div>
+										<div class="step-element__text" id="minPricePerList" data-price="1000" style="display: none">
+											Минимальная стоимость работы переводчиков для этой услуги составляет 1 000 ₽ за страницу
+										</div>
+										<div class="form-step_label">Примерный бюджет</div>
+										<div class="form-step__price">
+											<div class="form-step__group">
+
+												<label for="form-step__price_start1">от</label>
+												<input type="hidden" class="js-price-start">
+												<input id="form-step__price_start1" disabled type="number" name="form-price-start"
+													   class="form-step__price" value="12 000"/>
+												<i class="price">₽</i>
+											</div>
+
+											<div class="form-step__group price-group">
+
+												<label for="form-step__price_end1">до</label>
+												<input id="form-step__price_end1" type="number" name="form-price-end"
+													   required class="form-step__price "/>
+												<i class="price">₽</i>
+												<span class="error-text" style="display: none">заполните поле</span>
+											</div>
+										</div>
+
+									</div>
+									<hr>
+									<div class="container-form_2 description_form">
+										<div class="form-step_label">Описание</div>
+										<textarea class="richtext" placeholder="Добавьте важные детали, о которых мы не спросили"></textarea>
+									</div>
+									<div class="container-form_2">
+										<div class="form-step_label">Прикрепите фото или документ, чтобы переводчик смог лучше понять задачу</div>
+										<div class="dropzone-wrapper">
+											<div id="loadOrderFiles" class="droped_files">
+												<div class="drop_files first_file">
+													<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M27.5 14H0.5M14 0.5V27.5V0.5Z" stroke="#636B75" stroke-width="2.4"/>
+													</svg>
+												</div>
+												<div class="drop_files last_file">
+													<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M27.5 14H0.5M14 0.5V27.5V0.5Z" stroke="#636B75" stroke-width="2.4"/>
+													</svg>
+												</div>
+											</div>
+
+										</div>
+
+									</div>
+								</div>
+							</form>
+
+
+						</div>
+						<div class="step-element__btn">
+							<button type="button" class="btn tertiary prev">
+								Вернуться к деталям перевода
+							</button>
+							<button type="button" class="btn primary medium next">
+								К следующему шагу
+							</button>
+						</div>
+					</div>
+					<div class="step__item" id="step3" data-hash="3">
+						<div class="step-element" >
+							<div class="step-element__count">3 из 3</div>
+							<div class="row">
+								<div class="step-element__flex">
+									<h3 class="step-element__title">Зарегистрируйтесь</h3>
+									<div class="form-step_label">Укажите контактные данные, чтобы получать предложения переводчиков</div>
+									<form action="#" class="form-step reg-form" id="form-step-3">
+										<div class="form-step__group">
+											<label for="form-step__name">Имя</label>
+											<input id="form-step__name" type="text" name="form-step__name"
+												   class="form-step__name not_icon"/>
+										</div>
+										<div class="form-step__group">
+											<label for="form-step__surname">Фамилия</label>
+											<input id="form-step__surname" type="text" name="form-step__name"
+												   class="form-step__name not_icon"/>
+										</div>
+										<div class="form-step__group">
+											<label for="form-step__email">Почта</label>
+											<input id="form-step__email" type="email" name="form-step__name"
+												   class="form-step__name not_icon"/>
+											<span class="error-text" style="display: none;">введите корректный email </span>
+										</div>
+										<div class="form-step__group">
+											<label for="form-step__password">Пароль</label>
+											<input id="form-step__password" type="password" name="form-step__password"
+												   class="form-step__password"/>
+											<i class="icon private"></i>
+
+
+										</div>
+
+									</form>
+								</div>
+								<div class="step-element__flex">
+									<h3 class="step-element__title">Или авторизируйтесь</h3>
+									<div class="form-step_label">Войдите, если у вас уже есть аккаунт
+									</div>
+									<button type="button" class="btn medium secondary have-acc">Войти в аккаунт</button>
+								</div>
+
+							</div>
+							<div class="step-element__notifications">
+								<div class="step-element__flex">
+									<h3 class="step-element__title">Настройки уведомлений</h3>
+									<div class="form-step_label">Cейчас этот заказ виден только тем переводчикам,
+										которым вы его предложили</div>
+									<div class="notify-checkbox">
+										<label class="styled-checkbox-blue">
+											<input type="checkbox" checked id="notify">
+											<div class="checkbox__text">Разрешить всем откликаться на заказ</div>
+										</label>
+									</div>
+								</div>
+							</div>
+
+						</div>
+
+						<div class="step-element__btn">
+							<button type="button" class="btn tertiary prev">
+								Вернуться к описанию заказа
+							</button>
+							<button type="button" class="btn primary medium create">
+								Предложить задание
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="questions">
+				<div class="questions__title">
+					<h4 class="questions__h4">Частые вопросы</h4>
+				</div>
+				<div class="questions__list">
+
+					<div class="questions__item">
+						<div class="questions__toggle js-slide__toggle">
+							<span class="questions__text">Как понять какой вид перевода мне нужен?</span>
+							<i class="dropdown_dark"></i>
+						</div>
+						<div class="questions__content js-slide__content" style="display: none">
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium alias, aliquid commodi
+							cumque eius eligendi fugiat inventore labore magnam, neque nihil nobis, numquam odit officia
+							officiis quidem quisquam unde voluptas?
+						</div>
+					</div>
+
+					<div class="questions__item">
+						<div class="questions__toggle js-slide__toggle">
+							<span class="questions__text">Как получить качественный перевод?</span>
+							<i class="dropdown_dark"></i>
+						</div>
+						<div class="questions__content js-slide__content" style="display: none">
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium alias, aliquid commodi
+							cumque eius eligendi fugiat inventore labore magnam, neque nihil nobis, numquam odit officia
+							officiis quidem quisquam unde voluptas?
+						</div>
+					</div>
+
+					<div class="questions__item">
+						<div class="questions__toggle js-slide__toggle">
+							<span class="questions__text">Как происходит оплата работы?</span>
+							<i class="dropdown_dark"></i>
+						</div>
+						<div class="questions__content  js-slide__content" style="display: none">
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium alias, aliquid commodi
+							cumque eius eligendi fugiat inventore labore magnam, neque nihil nobis, numquam odit officia
+							officiis quidem quisquam unde voluptas?
+						</div>
+					</div>
+
+					<div class="questions__item">
+						<div class="questions__toggle js-slide__toggle">
+							<span class="questions__text">Когда появятся первые предложения?</span>
+							<i class="dropdown_dark"></i>
+						</div>
+						<div class="questions__content js-slide__content" style="display: none">
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium alias, aliquid commodi
+							cumque eius eligendi fugiat inventore labore magnam, neque nihil nobis, numquam odit officia
+							officiis quidem quisquam unde voluptas?
+						</div>
+					</div>
+					<div class="questions__item">
+						<div class="questions__toggle js-slide__toggle">
+							<span class="questions__text">Какую цену установить?</span>
+							<i class="dropdown_dark"></i>
+						</div>
+						<div class="questions__content js-slide__content" style="display: none">
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium alias, aliquid commodi
+							cumque eius eligendi fugiat inventore labore magnam, neque nihil nobis, numquam odit officia
+							officiis quidem quisquam unde voluptas?
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+	<div id="orderCreated" class="modal" style="display: none">
+		<div class="modal_inner">
+			<div class="modal-wrapper create_order">
+				<div class="modal_header">
+					<div class="modal_header-title">Задание А517 успешно создано</div>
+					<div class="modal_header-subtitle">Предложения переводчиков появятся на странице задания, там же можно отредактировать его детали </div>
+				</div>
+
+
+				<div class="modal_footer">
+					<a href="client_order.html" class="btn primary medium">Перейти на страницу задания</a>
+					<a href="home.html" type="button" class="btn secondary medium">
+						Вернуться на главную
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="modal-overlay"></div>
+	</div>
+
+	<div id="modalLogin" class="modal" style="display: none">
+
+		<div class="modal_inner">
+			<div class="modal-wrapper log-form">
+				<div class="modal_close">
+					<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<g filter="url(#filter0_d)">
+							<rect x="6" y="2" width="36" height="36" rx="18" fill="white"/>
+							<path d="M30.75 14.8198L29.1802 13.25L24 18.4302L18.8198 13.25L17.25 14.8198L22.4302 20L17.25 25.1802L18.8198 26.75L24 21.5698L29.1802 26.75L30.75 25.1802L25.5698 20L30.75 14.8198Z" fill="#B5BABF"/>
+						</g>
+						<defs>
+							<filter id="filter0_d" x="0" y="0" width="48" height="48" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+								<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+								<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+								<feMorphology radius="2" operator="erode" in="SourceAlpha" result="effect1_dropShadow"/>
+								<feOffset dy="4"/>
+								<feGaussianBlur stdDeviation="4"/>
+								<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0.0666667 0 0 0 0 0.239216 0 0 0 0.08 0"/>
+								<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+								<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+							</filter>
+						</defs>
+					</svg>
+
+				</div>
+				<div class="modal_header">
+					<div class="modal_header-title text-center">Войти в аккаунт</div>
+				</div>
+				<div class="modal_body">
+					<div class="modal-form__group">
+						<input class="modal__pure-input" type="email" placeholder="Почта" name="email">
+						<span class="error-text" style="display: none">некорректный email</span>
+					</div>
+
+					<div class="modal-form__group">
+					<input class="modal__pure-input" type="password" placeholder="Пароль" name="password">
+					<span class="error-text" style="display: none">введите пароль</span>
+					</div>
+					<div class="forget-wrapper text-right">
+						<a href="" class="forget-pass">Забыли пароль?</a>
+					</div>
+
+					<button class="btn primary big js-login">Войти</button>
+					<a href="" class="btn tertiary text-center login_modal">Зарегистрироваться</a>
+
+				</div>
+			</div>
+
+
+		</div>
+		<div class="modal-overlay"></div>
+	</div>
+
+</main>
+<!-- JS -->
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/jquery.maskedinput.min.js"></script>
+<script src="assets/js/dropzone.js"></script>
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>

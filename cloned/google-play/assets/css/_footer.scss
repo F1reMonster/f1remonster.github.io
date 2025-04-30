@@ -1,0 +1,12 @@
+.footer {
+	padding-top: rem(16);
+	font-family: var(--font-secondary);
+
+	ul {
+		li {
+			> a {
+				font-size: rem(12);
+			}
+		}
+	}
+}

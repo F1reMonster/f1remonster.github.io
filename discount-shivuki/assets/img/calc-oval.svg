@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="270px" height="598px" viewBox="0 0 270 598" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>E8382A65-3243-421E-ABCE-CD1810DB3D72</title>
+    <defs>
+        <linearGradient x1="39.4329379%" y1="31.0618099%" x2="106.405556%" y2="29.8061915%" id="linearGradient-1">
+            <stop stop-color="#8FE600" offset="0%"></stop>
+            <stop stop-color="#2FC059" offset="90.4556381%"></stop>
+            <stop stop-color="#218370" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Concept" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" fill-opacity="0.2">
+        <g id="Desktop-1920_DISCOUNT_Savings-and-deposits-Lobby" transform="translate(-1650.000000, -1172.000000)" fill="url(#linearGradient-1)">
+            <path d="M2023.26598,1705.76607 C2169.52853,1705.76607 2302.25641,1407.56869 2302.25641,1284.8773 C2302.25641,1162.1859 2005.35073,1122.76607 1859.08818,1122.76607 C1712.82563,1122.76607 1594.25641,1222.2271 1594.25641,1344.91849 C1594.25641,1467.60989 1877.00343,1705.76607 2023.26598,1705.76607 Z" id="Oval-Copy-3" transform="translate(1948.256410, 1414.266073) scale(-1, -1) rotate(-40.000000) translate(-1948.256410, -1414.266073) "></path>
+        </g>
+    </g>
+</svg>

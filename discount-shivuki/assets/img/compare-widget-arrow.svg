@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>9CE9DB3C-D047-4D4A-8A0C-22B6342020EC</title>
+    <defs>
+        <linearGradient x1="-67.3828125%" y1="-35.1025391%" x2="89.6909969%" y2="99.8586904%" id="linearGradient-1">
+            <stop stop-color="#6F2EE8" offset="0.0983391608%"></stop>
+            <stop stop-color="#6924E8" offset="43.9685315%"></stop>
+            <stop stop-color="#A07CE1" offset="100%"></stop>
+        </linearGradient>
+        <circle id="path-2" cx="13.75" cy="13.75" r="13.75"></circle>
+        <filter x="-12.7%" y="-9.1%" width="125.5%" height="125.5%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Concept" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Mobile-_DISCOUNT_-Savings-and-deposits---filters-+-Comparison-drawer" transform="translate(-176.000000, -1742.000000)">
+            <g id="Group-7" transform="translate(-7.000000, 1743.000000)">
+                <g id="Icon-/-Arrow-Copy-8" transform="translate(200.000000, 15.000000) scale(1, -1) rotate(-270.000000) translate(-200.000000, -15.000000) translate(185.000000, 0.000000)">
+                    <g id="Group" transform="translate(1.250000, 1.250000)">
+                        <g id="Oval-Copy">
+                            <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-2"></use>
+                            <use fill="url(#linearGradient-1)" fill-rule="evenodd" xlink:href="#path-2"></use>
+                        </g>
+                        <path d="M8.46130332,17.8630388 L14.3554921,11.7879442 L20.2891702,17.8630388 C21.0803312,18.6967728 22.4253589,17.346944 21.6341978,16.5130178 L14.9090596,9.60436933 C14.6321023,9.32638391 14.1178985,9.28673605 13.8409353,9.56472388 L7.11579701,16.5130081 C6.32463594,17.3467422 7.66971146,18.6967632 8.46082466,17.8630291 L8.46130332,17.8630388 Z" id="Path" fill="#FFFFFF" fill-rule="nonzero" transform="translate(14.375000, 13.750000) rotate(-270.000000) translate(-14.375000, -13.750000) "></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

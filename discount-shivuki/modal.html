@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="he">
+	<head>
+		<title>Modal</title>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!-- general css styles -->
+
+		<link rel="stylesheet" href="./assets/css/sections/base.css" />
+		<link rel="stylesheet" href="./assets/css/sections/fancybox.css" />
+		<link rel="stylesheet" href="./assets/css/sections/modal.css" />
+
+		<!-- styles for this page -->
+
+		<style>
+			body {
+				background: none;
+			}
+			.modal-section {
+				min-height: 22vh;
+			}
+
+			.modal-section .main-container {
+				padding: 50px 0;
+				text-align: center;
+			}
+		</style>
+	</head>
+
+	<body>
+		<section class="modal-section">
+			<div class="main-container">
+				<button data-fancybox="dialog" data-src="#modal" class="typical-btn">Open modal</button>
+			</div>
+		</section>
+
+		<div id="modal" class="modal modal--mobile" style="display: none">
+			<div class="modal__body">
+				<div class="modal__img">
+					<img src="assets/img/modal-girl.png" alt="modal girl" />
+				</div>
+				<div class="modal__header">
+					<h2 class="typical-header">חשוב לנו שתהיה לך חוויה מדהימה למה שלא נמשיך באפליקציה?</h2>
+				</div>
+				<div class="modal__content">
+					<ul class="list-chevron-bullet">
+						<li>כניסה קלה וחוויה מותאמת</li>
+						<li>מגוון פעולות ומידע שרלוונטי לך</li>
+						<li>כניסה קלה עם טביעת אצבע</li>
+						<li>כניסה קלה וחוויה מותאמת</li>
+						<li>מגוון פעולות ומידע שרלוונטי לך</li>
+					</ul>
+				</div>
+				<div class="modal__btns">
+					<div class="modal__btns-item">
+						<a href="#" class="typical-btn-small">פרטים נוספים</a>
+					</div>
+					<div class="modal__btns-item">
+						<a href="#" class="purple-link">המשך באתר</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- common js -->
+
+		<script type="text/javascript" src="assets/js/fancybox.js"></script>
+		<script type="text/javascript" src="assets/js/sections/modal.js"></script>
+
+		<!-- sections js -->
+	</body>
+</html>

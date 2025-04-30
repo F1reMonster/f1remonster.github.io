@@ -1,0 +1,72 @@
+.btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	font-family: "Raleway", sans-serif;
+	font-weight: 800;
+	font-size: 20px;
+	line-height: 130%;
+	border: 1px solid var(--c-main);
+	border-radius: 100px;
+	padding: 15px 30px;
+	min-height: 56px;
+	color: var(--c-white);
+	background-color: var(--c-main);
+	outline: none;
+	cursor: pointer;
+	transition: all 0.2s ease-out;
+
+	@include hover-supported {
+		border-color: #cc7f38;
+		background-color: #cc7f38;
+	}
+
+	&__outline {
+		background-color: var(--c-white);
+		color: var(--c-gray-1);
+
+		@include hover-supported {
+			border-color: var(--c-main);
+			background-color: var(--c-main);
+			color: var(--c-white);
+		}
+	}
+}
+
+.s-article {
+	&__sidebar-socials {
+		margin-top: 40px;
+		padding: 16px;
+		
+		h6 {
+			font-weight: 600;
+			font-size: 16px;
+			line-height: 150%;
+		}
+
+		ul {
+			display: flex;
+			align-items: center;
+			flex-flow: wrap;
+			gap: 8px;
+			margin-top: 12px;
+
+			a {
+				display: inline-flex;
+				justify-content: center;
+				align-items: center;
+				width: 50px;
+				height: 50px;
+				border-radius: 12px;
+				background-color: var(--c-gray-6);
+				transition: background-color 0.2s ease-out;
+
+				@include hover-supported {
+					background-color: var(--c-gray-5);
+				}
+
+			}
+		}
+	}
+}
+

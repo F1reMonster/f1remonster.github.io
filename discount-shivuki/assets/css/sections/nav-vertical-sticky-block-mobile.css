@@ -1,0 +1,40 @@
+.nav-vertical-sticky-block-mobile {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-vertical-sticky-block-mobile {
+  display: none;
+  flex-wrap: wrap;
+  row-gap: 1.9375em;
+  border: 1px solid rgba(0, 166, 97, 0.6);
+  border-radius: 1.25em;
+  background-color: #FFFFFF;
+  box-shadow: 0 1px 21px 0 rgba(138, 145, 149, 0.3);
+  margin: 1.25em 1.25em 0;
+  padding: 1.5em 1.3125em 1.4375em;
+}
+@media screen and (max-width: 767px) {
+  .nav-vertical-sticky-block-mobile {
+    display: flex;
+  }
+}
+.nav-vertical-sticky-block-mobile li {
+  width: 33.3333333333%;
+  display: flex;
+  justify-content: center;
+}
+.nav-vertical-sticky-block-mobile a {
+  font: 0.8125em/1.1538461538 "rubik-reg", sans-serif;
+  color: #000;
+  display: flex;
+  align-items: center;
+  max-width: 6.7692307692em;
+  margin: 0 auto;
+  text-decoration: none;
+  gap: 10px;
+}
+.nav-vertical-sticky-block-mobile a img {
+  flex-shrink: 0;
+}

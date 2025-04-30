@@ -1,0 +1,1016 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/png" href="https://www.designslist.com/icon.ico?79270a6d60431490" sizes="16x16" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.10.3/cdn.min.js" defer></script>
+		<script src="https://cdn.tailwindcss.com"></script>
+
+		<title>Design Agencies Directory | DesignsList</title>
+
+		<style>
+			/* @font-face {
+							src: url("fonts/Haskoy-Bold.woff2"), url("fonts/Haskoy-Bold.woff");
+							font-family: "Haskoy";
+							font-weight: 700;
+							font-style: normal;
+							font-display: swap;
+						}
+
+						@font-face {
+							src: url("fonts/Haskoy-Regular.woff2"), url("fonts/Haskoy-Regular.woff");
+							font-family: "Haskoy";
+							font-weight: 400;
+							font-style: normal;
+							font-display: swap;
+						}
+						@font-face {
+							src: url("fonts/Haskoy-Medium.woff2"), url("fonts/Haskoy-Medium.woff");
+							font-family: "Haskoy";
+							font-weight: 500;
+							font-style: normal;
+							font-display: swap;
+						}
+
+						@font-face {
+							src: url("fonts/Haskoy-ExtraBold.woff2"), url("fonts/Haskoy-ExtraBold.woff");
+							font-family: "Haskoy";
+							font-weight: 900;
+							font-style: normal;
+							font-display: swap;
+						}
+
+						@font-face {
+							src: url("fonts/Haskoy-SemiBold.woff2"), url("fonts/Haskoy-SemiBold.woff");
+							font-family: "Haskoy";
+							font-weight: 600;
+							font-style: normal;
+							font-display: swap;
+						} */
+			@keyframes spin-scale {
+				0%,
+				to {
+					transform: rotate(0deg) scale(1);
+					opacity: 1;
+				}
+
+				50% {
+					transform: rotate(180deg) scale(1.2);
+					opacity: 0.5;
+				}
+			}
+
+			@keyframes spin-scale-skew {
+				0%,
+				to {
+					transform: rotate(0deg) scale(1) skew(0deg, 0deg) translate(0);
+					opacity: 1;
+				}
+
+				25% {
+					transform: rotate(90deg) scale(1.1) skew(10deg, 10deg) translate(5px, -5px);
+					opacity: 0.7;
+				}
+
+				50% {
+					transform: rotate(180deg) scale(1.2) skew(20deg, 20deg) translate(10px, -10px);
+					opacity: 0.5;
+				}
+
+				75% {
+					transform: rotate(270deg) scale(1.1) skew(10deg, 10deg) translate(5px, -5px);
+					opacity: 0.7;
+				}
+			}
+		</style>
+		<script>
+			tailwind.config = {
+				theme: {
+					extend: {
+						fontFamily: {
+							sans: "Haskoy, ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji",
+						},
+					},
+				},
+			};
+
+			function navigationMenu() {
+				return {
+					isMobMenuOpen: false,
+					showMenu: window.innerWidth >= 768,
+					toggleMenu() {
+						this.isMobMenuOpen = !this.isMobMenuOpen;
+						this.updateMenuVisibility();
+						this.toggleScrollLock();
+					},
+					updateMenuVisibility() {
+						this.showMenu = window.innerWidth >= 768 || this.isMobMenuOpen;
+					},
+					toggleScrollLock() {
+						if (window.innerWidth < 768) {
+							document.body.classList.toggle("overflow-hidden", this.isMobMenuOpen);
+						} else {
+							document.body.classList.remove("overflow-hidden");
+						}
+					},
+					init() {
+						this.updateMenuVisibility();
+						window.addEventListener("resize", () => {
+							this.updateMenuVisibility();
+							this.toggleScrollLock();
+						});
+					},
+				};
+			}
+		</script>
+	</head>
+	<body class="flex flex-col min-h-screen font-sans bg-neutral-50 text-neutral-950 dark:bg-neutral-950" x-data="navigationMenu()">
+		<header class="fixed top-0 left-0 right-0 z-20 flex items-center gap-4 px-4 mx-4 bg-white rounded-b-lg shadow-md h-14 dark:bg-neutral-950 md:h-auto md:border-0 md:bg-transparent md:px-6">
+			<button @click="toggleMenu()" class="relative inline-flex items-center px-4 py-2 text-base font-medium leading-6 rounded-lg shadow-md hover:bg-heutral-100 hover:text-neutral-900 h-9 group focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500/20 disabled:opacity-50 disabled:cursor-not-allowed md:hidden bg-neutral-100" type="button">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="">
+					<rect width="18" height="18" x="3" y="3" rx="2"></rect>
+					<path d="M9 3v18"></path>
+				</svg>
+				<span class="sr-only">Toggle Menu</span>
+			</button>
+
+			<div class="flex items-center mt-1 ml-auto space-x-4 md:hidden">
+				<button type="button" class="flex w-10 h-10 rounded-full">
+					<div class="flex items-center justify-center w-full h-full rounded-full bg-neutral-100">
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-all scale-100 rotate-0 dark:-rotate-90 dark:scale-0">
+							<circle cx="12" cy="12" r="4"></circle>
+							<path d="M12 2v2"></path>
+							<path d="M12 20v2"></path>
+							<path d="m4.93 4.93 1.41 1.41"></path>
+							<path d="m17.66 17.66 1.41 1.41"></path>
+							<path d="M2 12h2"></path>
+							<path d="M20 12h2"></path>
+							<path d="m6.34 17.66-1.41 1.41"></path>
+							<path d="m19.07 4.93-1.41 1.41"></path>
+						</svg>
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="absolute transition-all scale-0 rotate-90 dark:rotate-0 dark:scale-100">
+							<path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+						</svg>
+						<span class="sr-only">Toggle theme</span>
+					</div>
+				</button>
+
+				<a class="relative flex items-center justify-center px-4 py-2 text-base font-medium leading-6 bg-black rounded-full shadow-sm hover:bg-accent hover:text-accent-foreground group focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500/20 disabled:opacity-50 disabled:cursor-not-allowed size-9" href="/">
+					<div class="l-0 r-0 absolute h-4/5 w-0.5 animate-[spin-scale_40s_linear_infinite] rounded-bl-full rounded-br-full bg-yellow-300/90"></div>
+					<div class="l-0 r-0 absolute h-4/5 w-0.5 animate-[spin-scale_30s_linear_infinite] rounded-bl-full rounded-br-full bg-pink-300/90"></div>
+					<div class="l-0 r-0 absolute h-4/5 w-0.5 animate-[spin-scale_20s_linear_infinite] rounded-bl-full rounded-br-full bg-cyan-300/70"></div>
+					<div class="l-0 r-0 absolute h-4/5 w-0.5 animate-[spin-scale_15s_linear_infinite] rounded-bl-full rounded-br-full bg-yellow-300/90"></div>
+					<div class="l-0 r-0 absolute h-4/5 w-0.5 animate-[spin-scale_10s_linear_infinite] rounded-bl-full rounded-br-full bg-pink-300/70"></div>
+					<div class="l-0 r-0 absolute h-2/5 w-0.5 animate-[spin-scale_80s_linear_infinite] rounded-bl-full rounded-br-full bg-pink-300/90"></div>
+					<div class="l-0 r-0 absolute h-2/5 w-0.5 animate-[spin-scale_60s_linear_infinite] rounded-bl-full rounded-br-full bg-cyan-300/70"></div>
+					<div class="l-0 r-0 absolute h-2/5 w-0.5 animate-[spin-scale_40s_linear_infinite] rounded-bl-full rounded-br-full bg-yellow-300/90"></div>
+					<div class="l-0 r-0 absolute h-2/5 w-0.5 animate-[spin-scale_30s_linear_infinite] rounded-bl-full rounded-br-full bg-pink-300/90"></div>
+					<div class="l-0 r-0 absolute h-2/5 w-0.5 animate-[spin-scale_20s_linear_infinite] rounded-bl-full rounded-br-full bg-cyan-300/90"></div>
+				</a>
+			</div>
+		</header>
+		<main class="flex-grow pt-16 md:pt-0">
+			<aside x-show="showMenu" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="transform -translate-x-full" x-transition:enter-end="transform translate-x-0" x-transition:leave="transition ease-in duration-300" x-transition:leave-start="transform translate-x-0" x-transition:leave-end="transform -translate-x-full" class="fixed top-0 left-0 z-50 flex flex-col h-screen px-2 py-5 w-42 bg-neutral-50 dark:bg-neutral-950">
+				<a class="relative flex items-center justify-center flex-shrink-0 px-4 py-2 text-base font-medium leading-6 bg-black rounded-full group size-9 hover:bg-neutral-100 hover:text-neutral-900" href="/">
+					<div class="l-0 r-0 absolute h-4/5 w-0.5 animate-[spin-scale_40s_linear_infinite] rounded-bl-full rounded-br-full bg-yellow-300/90"></div>
+					<div class="l-0 r-0 absolute h-4/5 w-0.5 animate-[spin-scale_30s_linear_infinite] rounded-bl-full rounded-br-full bg-pink-300/90"></div>
+					<div class="l-0 r-0 absolute h-4/5 w-0.5 animate-[spin-scale_20s_linear_infinite] rounded-bl-full rounded-br-full bg-cyan-300/70"></div>
+					<div class="l-0 r-0 absolute h-4/5 w-0.5 animate-[spin-scale_15s_linear_infinite] rounded-bl-full rounded-br-full bg-yellow-300/90"></div>
+					<div class="l-0 r-0 absolute h-4/5 w-0.5 animate-[spin-scale_10s_linear_infinite] rounded-bl-full rounded-br-full bg-pink-300/70"></div>
+					<div class="l-0 r-0 absolute h-2/5 w-0.5 animate-[spin-scale_80s_linear_infinite] rounded-bl-full rounded-br-full bg-pink-300/90"></div>
+					<div class="l-0 r-0 absolute h-2/5 w-0.5 animate-[spin-scale_60s_linear_infinite] rounded-bl-full rounded-br-full bg-cyan-300/70"></div>
+					<div class="l-0 r-0 absolute h-2/5 w-0.5 animate-[spin-scale_40s_linear_infinite] rounded-bl-full rounded-br-full bg-yellow-300/90"></div>
+					<div class="l-0 r-0 absolute h-2/5 w-0.5 animate-[spin-scale_30s_linear_infinite] rounded-bl-full rounded-br-full bg-pink-300/90"></div>
+					<div class="l-0 r-0 absolute h-2/5 w-0.5 animate-[spin-scale_20s_linear_infinite] rounded-bl-full rounded-br-full bg-cyan-300/90"></div>
+				</a>
+				<button @click="toggleMenu()" class="absolute md:hidden top-3 right-3">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6"><path fill="currentColor" fill-rule="evenodd" d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10s-4.477 10-10 10m0-1.2a8.8 8.8 0 1 0 0-17.6a8.8 8.8 0 0 0 0 17.6m.849-8.8l3.11 3.111l-.848.849L12 12.849l-3.111 3.11l-.849-.848L11.151 12l-3.11-3.111l.848-.849L12 11.151l3.111-3.11l.849.848z" /></svg>
+				</button>
+				<nav class="flex flex-col items-center gap-4 overflow-y-auto max-h-[calc(100vh-40rem))] mt-6">
+					<div class="relative flex flex-col gap-4 pl-2">
+						<div class="w-full h-full rounded">
+							<div class="table min-w-full">
+								<div class="flex items-center gap-2 cursor-pointer text-neutral-500">
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform duration-300 size-5 stroke-yellow-400">
+										<path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"></path>
+										<path d="m3.3 7 8.7 5 8.7-5"></path>
+										<path d="M12 22V12"></path>
+									</svg>
+									<p class="text-sm md:hidden">Specialties</p>
+								</div>
+								<ul class="flex flex-col items-start justify-center gap-3 py-2 mt-2">
+									<li>
+										<a class="flex items-start px-2 py-1 space-x-2 text-sm font-medium text-yellow-800 transition-colors duration-200 bg-yellow-100 rounded-md" href="#">
+											<span class="px-1">All</span>
+										</a>
+									</li>
+									<li>
+										<a class="flex items-start px-2 py-1 space-x-2 text-sm font-medium text-purple-800 transition-colors duration-200 bg-purple-100 rounded-md hover:opacity-80" href="#">
+											<span class="px-1 whitespace-nowrap">Branding Ui Ux</span>
+										</a>
+									</li>
+									<li>
+										<a class="flex items-start px-2 py-1 space-x-2 text-sm font-medium text-blue-800 transition-colors duration-200 bg-blue-100 rounded-md hover:opacity-80" href="#">
+											<span class="px-1 whitespace-nowrap">Full Service Digital</span>
+										</a>
+									</li>
+									<li>
+										<a class="flex items-start px-2 py-1 space-x-2 text-sm font-medium text-teal-800 transition-colors duration-200 bg-teal-100 rounded-md hover:opacity-80" href="#">
+											<span class="px-1 whitespace-nowrap">Product Design</span>
+										</a>
+									</li>
+									<li>
+										<a class="flex items-start px-2 py-1 space-x-2 text-sm font-medium text-green-800 transition-colors duration-200 bg-green-100 rounded-md hover:opacity-80" href="#">
+											<span class="px-1 whitespace-nowrap">Web Design Development</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</nav>
+
+				<!-- theme switcher -->
+				<div class="flex flex-col items-start justify-center gap-4 pt-10">
+					<div class="">
+						<button type="button" class="flex w-10 h-10 rounded-full">
+							<div class="flex items-center justify-center w-full h-full rounded-full bg-neutral-100">
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-all scale-100 rotate-0 dark:-rotate-90 dark:scale-0">
+									<circle cx="12" cy="12" r="4"></circle>
+									<path d="M12 2v2"></path>
+									<path d="M12 20v2"></path>
+									<path d="m4.93 4.93 1.41 1.41"></path>
+									<path d="m17.66 17.66 1.41 1.41"></path>
+									<path d="M2 12h2"></path>
+									<path d="M20 12h2"></path>
+									<path d="m6.34 17.66-1.41 1.41"></path>
+									<path d="m19.07 4.93-1.41 1.41"></path>
+								</svg>
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="absolute transition-all scale-0 rotate-90 dark:rotate-0 dark:scale-100">
+									<path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+								</svg>
+								<span class="sr-only">Toggle theme</span>
+							</div>
+						</button>
+					</div>
+				</div>
+				<!-- ./theme swither -->
+			</aside>
+
+			<!-- menu overlay -->
+			<div x-show="isMobMenuOpen" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition ease-in duration-300" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" @click="toggleMenu()" class="fixed inset-0 z-30 md:hidden md:unvisible bg-neutral-500/20"></div>
+			<!-- /menu overlay -->
+
+			<div class="max-w-full px-2 pt-2 md:pl-8 md:pr-0">
+				<div class="flex flex-col md:items-start gap-4 overflow-hidden pb-4 md:mx-4 mx-0 md:ml-[12rem] lg:ml-[12rem] relative">
+					<div class="w-full gap-3 p-4 bg-white shadow-2xl dark:bg-neutral-800 rounded-3xl">
+						<div class="relative grid grid-cols-1 pt-8 pb-8 xl:grid-cols-6 lg:gap-16">
+							<div class="z-10 col-span-1 md:col-span-2">
+								<div class="flex flex-col items-center justify-center gap-2 md:items-start md:px-2 md:ml-12">
+									<h1 class="text-4xl font-black text-center sm:text-5xl sm:text-left">Find Top Design Agencies</h1>
+									<div class="flex flex-col items-center md:items-start md:mt-4">
+										<div class="items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-neutral-800 text-neutral-100 shadow hover:bg-primary/80 hidden md:block">✨ Connect with the Top Design Agencies</div>
+										<p class="px-2 mt-2 text-sm text-center md:text-left text-neutral-500 md:text-base">Find trusted web design agencies for your project. Save time, get quality work.</p>
+									</div>
+									<div class="flex flex-col mt-4 mb-4 space-y-2 sm:flex-row sm:space-y-0 sm:space-x-4">
+										<button class="relative inline-flex items-center px-4 py-2 text-base font-medium leading-6 rounded-lg shadow-md cursor-not-allowed bg-gradient-to-b from-white to-gray-50 text-black/80 dark:from-neutral-700 dark:to-gray-950 dark:text-white/90 dark:border dark:border-black/30 hover:text-black dark:hover:text-white h-9 group focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500/20 disabled:opacity-50 disabled:cursor-not-allowed opacity-80" data-state="closed" style="background-clip: padding-box">
+											<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-1 size-4">
+												<rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect>
+												<path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+											</svg>
+											List your agency
+										</button>
+										<div class="text-sm text-neutral-500 sm:hidden">(invite only - <a href="mailto:hi@designslist.com" class="underline">hi@designslist.com</a>)</div>
+										<button class="group relative z-0 flex cursor-pointer items-center justify-center overflow-hidden whitespace-nowrap border border-black text-white dark:text-black transform-all transition-transform duration-300 ease-in-out active:translate-y-0.5 shadow-2xl text-xs sm:text-sm px-3 py-1.5 bg-black rounded-3xl">
+											<span class="font-medium leading-none tracking-tight text-center text-white whitespace-nowrap dark:from-white dark:to-slate-900/10">32 spots left</span>
+										</button>
+									</div>
+									<h3 class="mb-2 text-lg font-semibold">Search Design Agencies</h3>
+									<div class="relative max-w-[90%] md:min-w-[4rem] w-full md:max-w-[42ch] md:mr-auto">
+										<div class="flex w-full mt-2 rounded-md">
+											<div class="relative w-full before:pointer-events-none before:absolute before:-inset-1 before:rounded-full before:border before:border-accent/20 before:opacity-0 before:ring-2 before:ring-neutral-100/40 before:transition dark:before:border-yellow-400/40 dark:before:ring-2 dark:before:ring-yellow-900/40 input-shadow-glow after:pointer-events-none after:absolute after:inset-px after:rounded-full after:shadow-white/5 after:transition focus-within:before:opacity-100 focus-within:after:shadow-neutral-100/20 dark:after:shadow-white/5 dark:focus-within:after:shadow-yellow-500/30">
+												<input autocomplete="false" class="text-lg font-semibold focus:outline-none focus:ring-2 focus:ring-inset focus:ring-stone-100 dark:focus:ring-neutral-900 disabled:cursor-not-allowed disabled:opacity-50 sm:leading-6 dark:border dark:border-black/40 input-shadow rounded-full !outline-none border border-black/5 bg-white/90 py-4 shadow-black/5 placeholder:text-stone-400 focus:bg-white text-stone-800 dark:bg-neutral-800/70 dark:text-neutral-100 dark:shadow-black/10 dark:placeholder:text-stone-500 relative pr-10 pl-12 shadow-sm md:py-5 w-full" id="search" tabindex="0" placeholder="Search agencies" spellcheck="false" enterkeyhint="go" type="search" value="" />
+												<div class="absolute inset-y-0 left-0 flex items-center pl-5 pointer-events-none">
+													<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5">
+														<path class="stroke-stone-500/70" d="M21 21l-4.35-4.35M19 11a8 8 0 11-16 0 8 8 0 0116 0z" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+													</svg>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-span-1 mt-6 md:col-span-4 md:mt-0">
+								<h3 class="pl-4 mb-4 text-2xl font-bold">Featured</h3>
+
+								<div class="relative">
+									<div class="w-full px-3 py-3 mx-auto border border-dashed max-w-7xl bg-black/20 dark:bg-neutral-950/40 border-black/10 rounded-3xl">
+										<div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
+											<div class="relative w-full group break-inside-avoid">
+												<a target="_blank" rel="noopener noreferrer" class="block" href="https://designslist.com"
+													><div class="w-full">
+														<div class="relative w-full p-4 pb-12 no-underline transition-colors shadow-md rounded-3xl dark:bg-neutral-800 bg-neutral-50 hover:bg-neutral-100 dark:hover:bg-neutral-800/80">
+															<div class="relative w-full h-40 mb-4 shadow-md rounded-3xl">
+																<img src="https://www.designslist.com/featured1.webp" alt="Showcase Your Work" width="200" height="200" class="absolute inset-0 object-cover w-full h-full rounded-2xl" />
+																<div class="absolute inset-0 rounded-2xl">
+																	<div class="absolute inset-0 shadow-md rounded-2xl"></div>
+																	<div class="absolute inset-0 rounded-2xl dark:shadow-md"></div>
+																</div>
+															</div>
+															<h3 class="mb-2 text-base font-semibold leading-tight text-neutral-900">Showcase Your Work</h3>
+															<div class="flex items-center mb-3 text-xs text-neutral-500">
+																<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2">
+																	<circle cx="12" cy="12" r="10"></circle>
+																	<path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
+																	<path d="M2 12h20"></path>
+																</svg>
+																<span class="hover:text-neutral-700">designslist.com</span>
+															</div>
+															<div class="absolute bottom-3 right-3">
+																<button class="relative rounded-full px-3 py-0.5 text-[.625rem] font-medium bg-gradient-to-r from-yellow-50 to-yellow-100 dark:from-yellow-900 dark:to-yellow-800 text-yellow-800 dark:text-yellow-100 border border-yellow-200 dark:border-yellow-700 transition-colors duration-300 ease-in-out hover:border-yellow-300 dark:hover:border-yellow-600">
+																	<span class="relative z-10 jsx-5dfe15aee42ead01">Featured</span>
+																	<span class="absolute inset-0 z-0 overflow-hidden rounded-full" style="opacity: 0">
+																		<span class="absolute inset-0 jsx-5dfe15aee42ead01 bg-gradient-to-r from-transparent via-yellow-200 to-transparent opacity-30 dark:via-yellow-500" style="transform: translateX(-100%); animation: 2s ease 0s infinite normal none running shine"></span>
+																	</span>
+																</button>
+															</div>
+														</div>
+													</div>
+												</a>
+											</div>
+											<div class="relative w-full group break-inside-avoid">
+												<a target="_blank" rel="noopener noreferrer" class="block" href="https://designslist.com"
+													><div class="w-full">
+														<div class="relative w-full p-4 pb-12 no-underline transition-colors shadow-md rounded-3xl dark:bg-neutral-800 bg-neutral-50 hover:bg-neutral-100 dark:hover:bg-neutral-800/80">
+															<div class="relative w-full h-40 mb-4 shadow-md rounded-3xl">
+																<img src="https://www.designslist.com/featured2.webp" alt="Get Featured" width="200" height="200" class="absolute inset-0 object-cover w-full h-full rounded-2xl" />
+																<div class="absolute inset-0 rounded-2xl">
+																	<div class="absolute inset-0 shadow-md rounded-2xl"></div>
+																	<div class="absolute inset-0 rounded-2xl dark:shadow-md"></div>
+																</div>
+															</div>
+															<h3 class="mb-2 text-base font-semibold leading-tight text-neutral-900">Get Featured</h3>
+															<div class="flex items-center mb-3 text-xs text-neutral-500">
+																<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2">
+																	<circle cx="12" cy="12" r="10"></circle>
+																	<path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
+																	<path d="M2 12h20"></path>
+																</svg>
+																<span class="hover:text-neutral-700">designslist.com</span>
+															</div>
+															<div class="absolute bottom-3 right-3">
+																<button class="relative rounded-full px-3 py-0.5 text-[.625rem] font-medium bg-gradient-to-r from-yellow-50 to-yellow-100 dark:from-yellow-900 dark:to-yellow-800 text-yellow-800 dark:text-yellow-100 border border-yellow-200 dark:border-yellow-700 transition-colors duration-300 ease-in-out hover:border-yellow-300 dark:hover:border-yellow-600">
+																	<span class="relative z-10 jsx-5dfe15aee42ead01">Featured</span><span class="absolute inset-0 z-0 overflow-hidden rounded-full" style="opacity: 0"><span class="absolute inset-0 jsx-5dfe15aee42ead01 bg-gradient-to-r from-transparent via-yellow-200 to-transparent opacity-30 dark:via-yellow-500" style="transform: translateX(-100%); animation: 2s ease 0s infinite normal none running shine"></span></span>
+																</button>
+															</div>
+														</div>
+													</div>
+												</a>
+											</div>
+											<div class="relative w-full group break-inside-avoid">
+												<a target="_blank" rel="noopener noreferrer" class="block" href="https://designslist.com"
+													><div class="w-full">
+														<div class="relative w-full p-4 pb-12 no-underline transition-colors shadow-md rounded-3xl dark:bg-neutral-800 bg-neutral-50 hover:bg-neutral-100 dark:hover:bg-neutral-800/80">
+															<div class="relative w-full h-40 mb-4 shadow-md rounded-3xl">
+																<img src="https://www.designslist.com/featured3.webp" alt="Stand Out" width="200" height="200" class="absolute inset-0 object-cover w-full h-full rounded-2xl" />
+																<div class="absolute inset-0 rounded-2xl">
+																	<div class="absolute inset-0 shadow-md rounded-2xl"></div>
+																	<div class="absolute inset-0 rounded-2xl dark:shadow-md"></div>
+																</div>
+															</div>
+															<h3 class="mb-2 text-base font-semibold leading-tight text-neutral-900">Stand Out</h3>
+															<div class="flex items-center mb-3 text-xs text-neutral-500">
+																<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2">
+																	<circle cx="12" cy="12" r="10"></circle>
+																	<path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
+																	<path d="M2 12h20"></path>
+																</svg>
+																<span class="hover:text-neutral-700">designslist.com</span>
+															</div>
+															<div class="absolute bottom-3 right-3">
+																<button class="relative rounded-full px-3 py-0.5 text-[.625rem] font-medium bg-gradient-to-r from-yellow-50 to-yellow-100 dark:from-yellow-900 dark:to-yellow-800 text-yellow-800 dark:text-yellow-100 border border-yellow-200 dark:border-yellow-700 transition-colors duration-300 ease-in-out hover:border-yellow-300 dark:hover:border-yellow-600">
+																	<span class="relative z-10 jsx-5dfe15aee42ead01">Featured</span><span class="absolute inset-0 z-0 overflow-hidden rounded-full" style="opacity: 0"><span class="absolute inset-0 jsx-5dfe15aee42ead01 bg-gradient-to-r from-transparent via-yellow-200 to-transparent opacity-30 dark:via-yellow-500" style="transform: translateX(-100%); animation: 2s ease 0s infinite normal none running shine"></span></span>
+																</button>
+															</div>
+														</div>
+													</div>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="w-full p-4 bg-white shadow-md dark:bg-neutral-800 rounded-3xl">
+						<div class="relative">
+							<div class="flex justify-center w-full">
+								<div class="w-full gap-4">
+									<div class="w-full space-y-3 columns-1 lg:columns-2 xl:columns-3 2xl:columns-4 3xl:columns-4">
+										<div class="">
+											<div class="relative w-full group break-inside-avoid">
+												<a class="" href="/agencies/browser">
+													<div class="relative w-full p-4 no-underline transition-shadow duration-200 shadow-md rounded-3xl dark:bg-neutral-800 bg-neutral-50 hover:bg-neutral-100 dark:hover:bg-neutral-800/80 hover:shadow-md">
+														<div class="flex items-center mb-2">
+															<div class="relative w-10 h-10 mb-4 mr-3 rounded-full shadow-md">
+																<img src="https://riksaacgoolsgafemmlv.supabase.co/storage/v1/object/public/agency-logos/0.8389059093577331.jpg" alt="Browser" width="200" height="200" class="absolute inset-0 object-cover w-full h-full rounded-2xl" />
+																<div class="absolute inset-0 rounded-2xl">
+																	<div class="absolute inset-0 shadow-md rounded-2xl"></div>
+																	<div class="absolute inset-0 rounded-2xl dark:shadow-md"></div>
+																</div>
+															</div>
+															<div>
+																<h3 class="text-base font-semibold text-neutral-900 line-clamp-1">Browser</h3>
+																<div class="text-xs text-neutral-500 flex items-center mt-0.5">
+																	<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-1">
+																		<circle cx="12" cy="12" r="10"></circle>
+																		<path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
+																		<path d="M2 12h20"></path>
+																	</svg>
+																	<a class="text-xs text-neutral-500 hover:underline hover:text-neutral-700 line-clamp-1" href="https://browser.design/" target="_blank" rel="noopener noreferrer">browser.design</a>
+																</div>
+															</div>
+														</div>
+														<p class="mt-2 mb-5 text-sm text-neutral-600 line-clamp-2">A web design agency focused on creating beautiful and high-converting landing pages and websites for digital creators selling to their audiences.</p>
+														<div class="flex items-center justify-end">
+															<div class="px-2 py-1 text-xs text-green-800 bg-green-100 rounded-full">Web Design Development</div>
+														</div>
+													</div>
+												</a>
+											</div>
+										</div>
+										<div class="">
+											<div class="relative w-full group break-inside-avoid">
+												<a class="" href="/agencies/designme">
+													<div class="relative w-full p-4 no-underline transition-shadow duration-200 shadow-md rounded-3xl dark:bg-neutral-800 bg-neutral-50 hover:bg-neutral-100 dark:hover:bg-neutral-800/80 hover:shadow-md">
+														<div class="flex items-center mb-2">
+															<div class="relative w-10 h-10 mb-4 mr-3 rounded-full shadow-md">
+																<img src="https://riksaacgoolsgafemmlv.supabase.co/storage/v1/object/public/agency-logos/0.9885905512195874.jpeg" alt="DesignMe" width="200" height="200" class="absolute inset-0 object-cover w-full h-full rounded-2xl" />
+																<div class="absolute inset-0 rounded-2xl">
+																	<div class="absolute inset-0 shadow-md rounded-2xl"></div>
+																	<div class="absolute inset-0 rounded-2xl dark:shadow-md"></div>
+																</div>
+															</div>
+															<div>
+																<h3 class="text-base font-semibold text-neutral-900 line-clamp-1">DesignMe</h3>
+																<div class="text-xs text-neutral-500 flex items-center mt-0.5">
+																	<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-1">
+																		<circle cx="12" cy="12" r="10"></circle>
+																		<path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
+																		<path d="M2 12h20"></path>
+																	</svg>
+																	<a class="text-xs text-neutral-500 hover:underline hover:text-neutral-700 line-clamp-1" href="https://www.designme.agency/" target="_blank" rel="noopener noreferrer">designme.agency</a>
+																</div>
+															</div>
+														</div>
+														<p class="mt-2 mb-5 text-sm text-neutral-600 line-clamp-2">Your #1 all-in-one design subscriptions. High-quality landing pages, mobile apps, MVPs, branding, and marketing websites. Reliable, world-class quality for one predictable fee. From pixel to perfection.</p>
+														<div class="flex items-center justify-end"><div class="px-2 py-1 text-xs text-blue-800 bg-blue-100 rounded-full">Full Service Digital</div></div>
+													</div>
+												</a>
+											</div>
+										</div>
+										<div class="">
+											<div class="relative w-full group break-inside-avoid">
+												<a class="" href="/agencies/halaska-studio">
+													<div class="relative w-full p-4 no-underline transition-shadow duration-200 shadow-md rounded-3xl dark:bg-neutral-800 bg-neutral-50 hover:bg-neutral-100 dark:hover:bg-neutral-800/80 hover:shadow-md">
+														<div class="flex items-center mb-2">
+															<div class="relative w-10 h-10 mb-4 mr-3 rounded-full shadow-md">
+																<img src="https://riksaacgoolsgafemmlv.supabase.co/storage/v1/object/public/agency-logos/0.10476426819235352.jpeg" alt="Halaska Studio" width="200" height="200" class="absolute inset-0 object-cover w-full h-full rounded-2xl" />
+																<div class="absolute inset-0 rounded-2xl">
+																	<div class="absolute inset-0 shadow-md rounded-2xl"></div>
+																	<div class="absolute inset-0 rounded-2xl dark:shadow-md"></div>
+																</div>
+															</div>
+															<div>
+																<h3 class="text-base font-semibold text-neutral-900 line-clamp-1">Halaska Studio</h3>
+																<div class="text-xs text-neutral-500 flex items-center mt-0.5">
+																	<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-1">
+																		<circle cx="12" cy="12" r="10"></circle>
+																		<path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
+																		<path d="M2 12h20"></path>
+																	</svg>
+																	<a class="text-xs text-neutral-500 hover:underline hover:text-neutral-700 line-clamp-1" href="https://halaskastudio.com" target="_blank" rel="noopener noreferrer">halaskastudio.com</a>
+																</div>
+															</div>
+														</div>
+														<p class="mt-2 mb-5 text-sm text-neutral-600 line-clamp-2">We work with forward thinking companies to craft delightful digital experiences. Our deep passion &amp; expertise in web3, tech &amp; AI allows us to immediately tackle any challenge we're presented with.</p>
+														<div class="flex items-center justify-end">
+															<div class="px-2 py-1 text-xs text-purple-800 bg-purple-100 rounded-full">Branding Ui Ux</div>
+														</div>
+													</div>
+												</a>
+											</div>
+										</div>
+										<div class="">
+											<div class="relative w-full group break-inside-avoid">
+												<a class="" href="/agencies/endless">
+													<div class="relative w-full p-4 no-underline transition-shadow duration-200 shadow-md rounded-3xl dark:bg-neutral-800 bg-neutral-50 hover:bg-neutral-100 dark:hover:bg-neutral-800/80 hover:shadow-md">
+														<div class="flex items-center mb-2">
+															<div class="relative w-10 h-10 mb-4 mr-3 rounded-full shadow-md">
+																<img src="https://riksaacgoolsgafemmlv.supabase.co/storage/v1/object/public/agency-logos/0.29529642909559506.webp" alt="Endless" width="200" height="200" class="absolute inset-0 object-cover w-full h-full rounded-2xl" />
+																<div class="absolute inset-0 rounded-2xl">
+																	<div class="absolute inset-0 shadow-md rounded-2xl"></div>
+																	<div class="absolute inset-0 rounded-2xl dark:shadow-md"></div>
+																</div>
+															</div>
+															<div>
+																<h3 class="text-base font-semibold text-neutral-900 line-clamp-1">Endless</h3>
+																<div class="text-xs text-neutral-500 flex items-center mt-0.5">
+																	<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-1">
+																		<circle cx="12" cy="12" r="10"></circle>
+																		<path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
+																		<path d="M2 12h20"></path>
+																	</svg>
+																	<a class="text-xs text-neutral-500 hover:underline hover:text-neutral-700 line-clamp-1" href="https://endless.design/start" target="_blank" rel="noopener noreferrer">endless.design</a>
+																</div>
+															</div>
+														</div>
+														<p class="mt-2 mb-5 text-sm text-neutral-600 line-clamp-2">Endless is a design partner for passionate founders and startups looking to boost their online presence. Endless partners with visionary founders and startups of all sizes to deliver world-class design for a simple monthly fee.</p>
+														<div class="flex items-center justify-end">
+															<div class="px-2 py-1 text-xs text-green-800 bg-green-100 rounded-full">Web Design Development</div>
+														</div>
+													</div>
+												</a>
+											</div>
+										</div>
+										<div class="">
+											<div class="relative w-full group break-inside-avoid">
+												<a class="" href="/agencies/jades-agency">
+													<div class="relative w-full p-4 no-underline transition-shadow duration-200 shadow-md rounded-3xl dark:bg-neutral-800 bg-neutral-50 hover:bg-neutral-100 dark:hover:bg-neutral-800/80 hover:shadow-md">
+														<div class="flex items-center mb-2">
+															<div class="relative w-10 h-10 mb-4 mr-3 rounded-full shadow-md">
+																<img src="https://riksaacgoolsgafemmlv.supabase.co/storage/v1/object/public/agency-logos/0.37610818476359764.jpg" alt="Jades Agency" width="200" height="200" class="absolute inset-0 object-cover w-full h-full rounded-2xl" />
+																<div class="absolute inset-0 rounded-2xl">
+																	<div class="absolute inset-0 shadow-md rounded-2xl"></div>
+																	<div class="absolute inset-0 rounded-2xl dark:shadow-md"></div>
+																</div>
+															</div>
+															<div>
+																<h3 class="text-base font-semibold text-neutral-900 line-clamp-1">Jades Agency</h3>
+																<div class="text-xs text-neutral-500 flex items-center mt-0.5">
+																	<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-1">
+																		<circle cx="12" cy="12" r="10"></circle>
+																		<path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
+																		<path d="M2 12h20"></path>
+																	</svg>
+																	<a class="text-xs text-neutral-500 hover:underline hover:text-neutral-700 line-clamp-1" href="https://www.jades.agency/" target="_blank" rel="noopener noreferrer">jades.agency</a>
+																</div>
+															</div>
+														</div>
+														<p class="mt-2 mb-5 text-sm text-neutral-600 line-clamp-2">We selectively partner with innovative tech startups and visionary founders to become long-term collaborators. We selectively partner with innovative tech startups and visionary founders to become long-term collaborators.</p>
+														<div class="flex items-center justify-end">
+															<div class="px-2 py-1 text-xs text-blue-800 bg-blue-100 rounded-full">Full Service Digital</div>
+														</div>
+													</div>
+												</a>
+											</div>
+										</div>
+										<div class="">
+											<div class="relative w-full group break-inside-avoid">
+												<a class="" href="/agencies/zipzap">
+													<div class="relative w-full p-4 no-underline transition-shadow duration-200 shadow-md rounded-3xl dark:bg-neutral-800 bg-neutral-50 hover:bg-neutral-100 dark:hover:bg-neutral-800/80 hover:shadow-md">
+														<div class="flex items-center mb-2">
+															<div class="relative w-10 h-10 mb-4 mr-3 rounded-full shadow-md">
+																<img src="https://riksaacgoolsgafemmlv.supabase.co/storage/v1/object/public/agency-logos/0.09703106017619834.png" alt="ZipZap" width="200" height="200" class="absolute inset-0 object-cover w-full h-full rounded-2xl" />
+																<div class="absolute inset-0 rounded-2xl">
+																	<div class="absolute inset-0 shadow-md rounded-2xl"></div>
+																	<div class="absolute inset-0 rounded-2xl dark:shadow-md"></div>
+																</div>
+															</div>
+															<div>
+																<h3 class="text-base font-semibold text-neutral-900 line-clamp-1">ZipZap</h3>
+																<div class="text-xs text-neutral-500 flex items-center mt-0.5">
+																	<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-1">
+																		<circle cx="12" cy="12" r="10"></circle>
+																		<path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
+																		<path d="M2 12h20"></path>
+																	</svg>
+																	<a class="text-xs text-neutral-500 hover:underline hover:text-neutral-700 line-clamp-1" href="https://zipzap.design" target="_blank" rel="noopener noreferrer">zipzap.design</a>
+																</div>
+															</div>
+														</div>
+														<p class="mt-2 mb-5 text-sm text-neutral-600 line-clamp-2">Add a dedicated Senior Designer to your team for a Fixed Monthly Fee. We handle all your design needs, including Branding, Web Design, Product Design, and Social Media Graphics.</p>
+														<div class="flex items-center justify-end"><div class="px-2 py-1 text-xs text-purple-800 bg-purple-100 rounded-full">Branding Ui Ux</div></div>
+													</div>
+												</a>
+											</div>
+										</div>
+										<div class="">
+											<div class="relative w-full group break-inside-avoid">
+												<a class="" href="/agencies/baked">
+													<div class="relative w-full p-4 no-underline transition-shadow duration-200 shadow-md rounded-3xl dark:bg-neutral-800 bg-neutral-50 hover:bg-neutral-100 dark:hover:bg-neutral-800/80 hover:shadow-md">
+														<div class="flex items-center mb-2">
+															<div class="relative w-10 h-10 mb-4 mr-3 rounded-full shadow-md">
+																<img src="https://riksaacgoolsgafemmlv.supabase.co/storage/v1/object/public/agency-logos/7213375d-31fb-4a42-8bee-ec024dc8940f_1726933244722.jpeg" alt="Baked" width="200" height="200" class="absolute inset-0 object-cover w-full h-full rounded-2xl" />
+																<div class="absolute inset-0 rounded-2xl">
+																	<div class="absolute inset-0 shadow-md rounded-2xl"></div>
+																	<div class="absolute inset-0 rounded-2xl dark:shadow-md"></div>
+																</div>
+															</div>
+															<div>
+																<h3 class="text-base font-semibold text-neutral-900 line-clamp-1">Baked</h3>
+																<div class="text-xs text-neutral-500 flex items-center mt-0.5">
+																	<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-1">
+																		<circle cx="12" cy="12" r="10"></circle>
+																		<path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
+																		<path d="M2 12h20"></path>
+																	</svg>
+																	<a class="text-xs text-neutral-500 hover:underline hover:text-neutral-700 line-clamp-1" href="https://baked.design" target="_blank" rel="noopener noreferrer">baked.design</a>
+																</div>
+															</div>
+														</div>
+														<p class="mt-2 mb-5 text-sm text-neutral-600 line-clamp-2">product design partner for startup founders. Our designs help founders raise capital, build teams, and launch products fast.</p>
+														<div class="flex items-center justify-end">
+															<div class="px-2 py-1 text-xs text-blue-800 bg-blue-100 rounded-full">Full Service Digital</div>
+														</div>
+													</div>
+												</a>
+											</div>
+										</div>
+										<div class="">
+											<div class="relative w-full group break-inside-avoid">
+												<a class="" href="/agencies/quick14">
+													<div class="relative w-full p-4 no-underline transition-shadow duration-200 shadow-md rounded-3xl dark:bg-neutral-800 bg-neutral-50 hover:bg-neutral-100 dark:hover:bg-neutral-800/80 hover:shadow-md">
+														<div class="flex items-center mb-2">
+															<div class="relative w-10 h-10 mb-4 mr-3 rounded-full shadow-md">
+																<img src="https://riksaacgoolsgafemmlv.supabase.co/storage/v1/object/public/agency-logos/0.2354652823612453.jpg" alt="Quick14" width="200" height="200" class="absolute inset-0 object-cover w-full h-full rounded-2xl" />
+																<div class="absolute inset-0 rounded-2xl">
+																	<div class="absolute inset-0 shadow-md rounded-2xl"></div>
+																	<div class="absolute inset-0 rounded-2xl dark:shadow-md"></div>
+																</div>
+															</div>
+															<div>
+																<h3 class="text-base font-semibold text-neutral-900 line-clamp-1">Quick14</h3>
+																<div class="text-xs text-neutral-500 flex items-center mt-0.5">
+																	<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-1">
+																		<circle cx="12" cy="12" r="10"></circle>
+																		<path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
+																		<path d="M2 12h20"></path>
+																	</svg>
+																	<a class="text-xs text-neutral-500 hover:underline hover:text-neutral-700 line-clamp-1" href="https://www.quick14studio.com" target="_blank" rel="noopener noreferrer">quick14studio.com</a>
+																</div>
+															</div>
+														</div>
+														<p class="mt-2 mb-5 text-sm text-neutral-600 line-clamp-2">Not just another design agency, we analyze the market to craft websites that increase your conversion rates and generates more revenue in just 14 days</p>
+														<div class="flex items-center justify-end">
+															<div class="px-2 py-1 text-xs text-green-800 bg-green-100 rounded-full">Web Design Development</div>
+														</div>
+													</div>
+												</a>
+											</div>
+										</div>
+										<div class="">
+											<div class="relative w-full group break-inside-avoid">
+												<a class="" href="/agencies/design-fox">
+													<div class="relative w-full p-4 no-underline transition-shadow duration-200 shadow-md rounded-3xl dark:bg-neutral-800 bg-neutral-50 hover:bg-neutral-100 dark:hover:bg-neutral-800/80 hover:shadow-md">
+														<div class="flex items-center mb-2">
+															<div class="relative w-10 h-10 mb-4 mr-3 rounded-full shadow-md">
+																<img src="https://riksaacgoolsgafemmlv.supabase.co/storage/v1/object/public/agency-logos/0.0646770238423875.jpeg" alt="Design Fox" width="200" height="200" class="absolute inset-0 object-cover w-full h-full rounded-2xl" />
+																<div class="absolute inset-0 rounded-2xl">
+																	<div class="absolute inset-0 shadow-md rounded-2xl"></div>
+																	<div class="absolute inset-0 rounded-2xl dark:shadow-md"></div>
+																</div>
+															</div>
+															<div>
+																<h3 class="text-base font-semibold text-neutral-900 line-clamp-1">Design Fox</h3>
+																<div class="text-xs text-neutral-500 flex items-center mt-0.5">
+																	<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-1">
+																		<circle cx="12" cy="12" r="10"></circle>
+																		<path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
+																		<path d="M2 12h20"></path>
+																	</svg>
+																	<a class="text-xs text-neutral-500 hover:underline hover:text-neutral-700 line-clamp-1" href="https://www.designfox.io/" target="_blank" rel="noopener noreferrer">designfox.io</a>
+																</div>
+															</div>
+														</div>
+														<p class="mt-2 mb-5 text-sm text-neutral-600 line-clamp-2">Dedicated design, monthly unlimited requests instead of in-house UX or expensive agencies. Pause or cancel anytime. Landing pages, prototypes, branding and marketing design, org strategy and design systems.</p>
+														<div class="flex items-center justify-end">
+															<div class="px-2 py-1 text-xs text-purple-800 bg-purple-100 rounded-full">Branding Ui Ux</div>
+														</div>
+													</div>
+												</a>
+											</div>
+										</div>
+										<div class="">
+											<div class="relative w-full group break-inside-avoid">
+												<a class="" href="/agencies/build-fast">
+													<div class="relative w-full p-4 no-underline transition-shadow duration-200 shadow-md rounded-3xl dark:bg-neutral-800 bg-neutral-50 hover:bg-neutral-100 dark:hover:bg-neutral-800/80 hover:shadow-md">
+														<div class="flex items-center mb-2">
+															<div class="relative w-10 h-10 mb-4 mr-3 rounded-full shadow-md">
+																<img src="https://riksaacgoolsgafemmlv.supabase.co/storage/v1/object/public/agency-logos/0.8983265049726796.jpg" alt="Build Fast" width="200" height="200" class="absolute inset-0 object-cover w-full h-full rounded-2xl" />
+																<div class="absolute inset-0 rounded-2xl">
+																	<div class="absolute inset-0 shadow-md rounded-2xl"></div>
+																	<div class="absolute inset-0 rounded-2xl dark:shadow-md"></div>
+																</div>
+															</div>
+															<div>
+																<h3 class="text-base font-semibold text-neutral-900 line-clamp-1">Build Fast</h3>
+																<div class="text-xs text-neutral-500 flex items-center mt-0.5">
+																	<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-1">
+																		<circle cx="12" cy="12" r="10"></circle>
+																		<path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
+																		<path d="M2 12h20"></path>
+																	</svg>
+																	<a class="text-xs text-neutral-500 hover:underline hover:text-neutral-700 line-clamp-1" href="https://www.buildfast.co.in/" target="_blank" rel="noopener noreferrer">buildfast.co.in</a>
+																</div>
+															</div>
+														</div>
+														<p class="mt-2 mb-5 text-sm text-neutral-600 line-clamp-2">Buildfast is a creative design agency that provides various design services like web design, UI/UX Designing, Wireframes, Branding, Brand Guidelines under one monthly subscription.</p>
+														<div class="flex items-center justify-end">
+															<div class="px-2 py-1 text-xs text-blue-800 bg-blue-100 rounded-full">Full Service Digital</div>
+														</div>
+													</div>
+												</a>
+											</div>
+										</div>
+										<div class="">
+											<div class="relative w-full group break-inside-avoid">
+												<a class="" href="/agencies/supafast">
+													<div class="relative w-full p-4 no-underline transition-shadow duration-200 shadow-md rounded-3xl dark:bg-neutral-800 bg-neutral-50 hover:bg-neutral-100 dark:hover:bg-neutral-800/80 hover:shadow-md">
+														<div class="flex items-center mb-2">
+															<div class="relative w-10 h-10 mb-4 mr-3 rounded-full shadow-md">
+																<img src="https://riksaacgoolsgafemmlv.supabase.co/storage/v1/object/public/agency-logos/0.32978561630643677.jpg" alt="Supafast" width="200" height="200" class="absolute inset-0 object-cover w-full h-full rounded-2xl" />
+																<div class="absolute inset-0 rounded-2xl">
+																	<div class="absolute inset-0 shadow-md rounded-2xl"></div>
+																	<div class="absolute inset-0 rounded-2xl dark:shadow-md"></div>
+																</div>
+															</div>
+															<div>
+																<h3 class="text-base font-semibold text-neutral-900 line-clamp-1">Supafast</h3>
+																<div class="text-xs text-neutral-500 flex items-center mt-0.5">
+																	<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-1">
+																		<circle cx="12" cy="12" r="10"></circle>
+																		<path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
+																		<path d="M2 12h20"></path>
+																	</svg>
+																	<a class="text-xs text-neutral-500 hover:underline hover:text-neutral-700 line-clamp-1" href="https://withsupafast.com" target="_blank" rel="noopener noreferrer">withsupafast.com</a>
+																</div>
+															</div>
+														</div>
+														<p class="mt-2 mb-5 text-sm text-neutral-600 line-clamp-2">Design, copy, and development engineered to turn browsers into buyers and drive sales on autopilot.</p>
+														<div class="flex items-center justify-end"><div class="px-2 py-1 text-xs text-blue-800 bg-blue-100 rounded-full">Full Service Digital</div></div>
+													</div>
+												</a>
+											</div>
+										</div>
+										<div class="">
+											<div class="relative w-full group break-inside-avoid">
+												<a class="" href="/agencies/designjoy"
+													><div class="relative w-full p-4 no-underline transition-shadow duration-200 shadow-md rounded-3xl dark:bg-neutral-800 bg-neutral-50 hover:bg-neutral-100 dark:hover:bg-neutral-800/80 hover:shadow-md">
+														<div class="flex items-center mb-2">
+															<div class="relative w-10 h-10 mb-4 mr-3 rounded-full shadow-md">
+																<img src="https://riksaacgoolsgafemmlv.supabase.co/storage/v1/object/public/agency-logos/7213375d-31fb-4a42-8bee-ec024dc8940f_1727088480854.jpeg" alt="Designjoy" width="200" height="200" class="absolute inset-0 object-cover w-full h-full rounded-2xl" />
+																<div class="absolute inset-0 rounded-2xl">
+																	<div class="absolute inset-0 shadow-md rounded-2xl"></div>
+																	<div class="absolute inset-0 rounded-2xl dark:shadow-md"></div>
+																</div>
+															</div>
+															<div>
+																<h3 class="text-base font-semibold text-neutral-900 line-clamp-1">Designjoy</h3>
+																<div class="text-xs text-neutral-500 flex items-center mt-0.5">
+																	<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-1">
+																		<circle cx="12" cy="12" r="10"></circle>
+																		<path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
+																		<path d="M2 12h20"></path>
+																	</svg>
+																	<a class="text-xs text-neutral-500 hover:underline hover:text-neutral-700 line-clamp-1" href="https://www.designjoy.co/" target="_blank" rel="noopener noreferrer">designjoy.co</a>
+																</div>
+															</div>
+														</div>
+														<p class="mt-2 mb-5 text-sm text-neutral-600 line-clamp-2">We didn’t reinvent the wheel. Just design. Design as you know it is out the door. Design as you want it just arrived.</p>
+														<div class="flex items-center justify-end">
+															<div class="px-2 py-1 text-xs text-blue-800 bg-blue-100 rounded-full">Full Service Digital</div>
+														</div>
+													</div></a
+												>
+											</div>
+										</div>
+										<div class="">
+											<div class="relative w-full group break-inside-avoid">
+												<a class="" href="/agencies/exalt-studio">
+													<div class="relative w-full p-4 no-underline transition-shadow duration-200 shadow-md rounded-3xl dark:bg-neutral-800 bg-neutral-50 hover:bg-neutral-100 dark:hover:bg-neutral-800/80 hover:shadow-md">
+														<div class="flex items-center mb-2">
+															<div class="relative w-10 h-10 mb-4 mr-3 rounded-full shadow-md">
+																<img src="https://riksaacgoolsgafemmlv.supabase.co/storage/v1/object/public/agency-logos/0.8765061664392579.jpeg" alt="Exalt Studio" width="200" height="200" class="absolute inset-0 object-cover w-full h-full rounded-2xl" />
+																<div class="absolute inset-0 rounded-2xl">
+																	<div class="absolute inset-0 shadow-md rounded-2xl"></div>
+																	<div class="absolute inset-0 rounded-2xl dark:shadow-md"></div>
+																</div>
+															</div>
+															<div>
+																<h3 class="text-base font-semibold text-neutral-900 line-clamp-1">Exalt Studio</h3>
+																<div class="text-xs text-neutral-500 flex items-center mt-0.5">
+																	<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-1">
+																		<circle cx="12" cy="12" r="10"></circle>
+																		<path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
+																		<path d="M2 12h20"></path>
+																	</svg>
+																	<a class="text-xs text-neutral-500 hover:underline hover:text-neutral-700 line-clamp-1" href="https://exaltstudio.co" target="_blank" rel="noopener noreferrer">exaltstudio.co</a>
+																</div>
+															</div>
+														</div>
+														<p class="mt-2 mb-5 text-sm text-neutral-600 line-clamp-2">Stellar UI/UX design for ambitious SaaS companies. Your specialised design partner to elevate your user experience and bring your ideas to life.</p>
+														<div class="flex items-center justify-end">
+															<div class="px-2 py-1 text-xs text-teal-800 bg-teal-100 rounded-full">Product Design</div>
+														</div>
+													</div>
+												</a>
+											</div>
+										</div>
+										<div class="">
+											<div class="relative w-full group break-inside-avoid">
+												<a class="" href="/agencies/kojo-design">
+													<div class="relative w-full p-4 no-underline transition-shadow duration-200 shadow-md rounded-3xl dark:bg-neutral-800 bg-neutral-50 hover:bg-neutral-100 dark:hover:bg-neutral-800/80 hover:shadow-md">
+														<div class="flex items-center mb-2">
+															<div class="relative w-10 h-10 mb-4 mr-3 rounded-full shadow-md">
+																<img src="https://riksaacgoolsgafemmlv.supabase.co/storage/v1/object/public/agency-logos/0.46419426983266887.jpg" alt="Kojo Design" width="200" height="200" class="absolute inset-0 object-cover w-full h-full rounded-2xl" />
+																<div class="absolute inset-0 rounded-2xl">
+																	<div class="absolute inset-0 shadow-md rounded-2xl"></div>
+																	<div class="absolute inset-0 rounded-2xl dark:shadow-md"></div>
+																</div>
+															</div>
+															<div>
+																<h3 class="text-base font-semibold text-neutral-900 line-clamp-1">Kojo Design</h3>
+																<div class="text-xs text-neutral-500 flex items-center mt-0.5">
+																	<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-1">
+																		<circle cx="12" cy="12" r="10"></circle>
+																		<path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
+																		<path d="M2 12h20"></path>
+																	</svg>
+																	<a class="text-xs text-neutral-500 hover:underline hover:text-neutral-700 line-clamp-1" href="https://www.kojo.design/" target="_blank" rel="noopener noreferrer">kojo.design</a>
+																</div>
+															</div>
+														</div>
+														<p class="mt-2 mb-5 text-sm text-neutral-600 line-clamp-2">An all-in-one design engineering subscription that help you make money while spending less. Kojo is every founder's secret weapon. Unlock unlimited design, React components, and standout websites that help you spend less, ship faster, and most importantly – grow your business.</p>
+														<div class="flex items-center justify-end">
+															<div class="px-2 py-1 text-xs text-blue-800 bg-blue-100 rounded-full">Full Service Digital</div>
+														</div>
+													</div>
+												</a>
+											</div>
+										</div>
+										<div class="">
+											<div class="relative w-full group break-inside-avoid">
+												<a class="" href="/agencies/off-menu">
+													<div class="relative w-full p-4 no-underline transition-shadow duration-200 shadow-md rounded-3xl dark:bg-neutral-800 bg-neutral-50 hover:bg-neutral-100 dark:hover:bg-neutral-800/80 hover:shadow-md">
+														<div class="flex items-center mb-2">
+															<div class="relative w-10 h-10 mb-4 mr-3 rounded-full shadow-md">
+																<img src="https://riksaacgoolsgafemmlv.supabase.co/storage/v1/object/public/agency-logos/0.03208477390961062.jpg" alt="OFF MENU" width="200" height="200" class="absolute inset-0 object-cover w-full h-full rounded-2xl" />
+																<div class="absolute inset-0 rounded-2xl">
+																	<div class="absolute inset-0 shadow-md rounded-2xl"></div>
+																	<div class="absolute inset-0 rounded-2xl dark:shadow-md"></div>
+																</div>
+															</div>
+															<div>
+																<h3 class="text-base font-semibold text-neutral-900 line-clamp-1">OFF MENU</h3>
+																<div class="text-xs text-neutral-500 flex items-center mt-0.5">
+																	<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-1">
+																		<circle cx="12" cy="12" r="10"></circle>
+																		<path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
+																		<path d="M2 12h20"></path>
+																	</svg>
+																	<a class="text-xs text-neutral-500 hover:underline hover:text-neutral-700 line-clamp-1" href="https://offmenu.design/" target="_blank" rel="noopener noreferrer">offmenu.design</a>
+																</div>
+															</div>
+														</div>
+														<p class="mt-2 mb-5 text-sm text-neutral-600 line-clamp-2">Off menu is a full-service creative partner for fast moving teams. Work closely with our team of senior designers, strategists, and copywriters. Get full-service creative with full-service care. We collaborate closely. We help craft strategy and story. We become an extension of your team.</p>
+														<div class="flex items-center justify-end"><div class="px-2 py-1 text-xs text-blue-800 bg-blue-100 rounded-full">Full Service Digital</div></div>
+													</div>
+												</a>
+											</div>
+										</div>
+										<div class="">
+											<div class="relative w-full group break-inside-avoid">
+												<a class="" href="/agencies/uddin-studios">
+													<div class="relative w-full p-4 no-underline transition-shadow duration-200 shadow-md rounded-3xl dark:bg-neutral-800 bg-neutral-50 hover:bg-neutral-100 dark:hover:bg-neutral-800/80 hover:shadow-md">
+														<div class="flex items-center mb-2">
+															<div class="relative w-10 h-10 mb-4 mr-3 rounded-full shadow-md">
+																<img src="https://riksaacgoolsgafemmlv.supabase.co/storage/v1/object/public/agency-logos/0.014543864884275282.png" alt="Uddin Studios" width="200" height="200" class="absolute inset-0 object-cover w-full h-full rounded-2xl" />
+																<div class="absolute inset-0 rounded-2xl">
+																	<div class="absolute inset-0 shadow-md rounded-2xl"></div>
+																	<div class="absolute inset-0 rounded-2xl dark:shadow-md"></div>
+																</div>
+															</div>
+															<div>
+																<h3 class="text-base font-semibold text-neutral-900 line-clamp-1">Uddin Studios</h3>
+																<div class="text-xs text-neutral-500 flex items-center mt-0.5">
+																	<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-1">
+																		<circle cx="12" cy="12" r="10"></circle>
+																		<path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
+																		<path d="M2 12h20"></path>
+																	</svg>
+																	<a class="text-xs text-neutral-500 hover:underline hover:text-neutral-700 line-clamp-1" href="https://uddinstudios.framer.ai/" target="_blank" rel="noopener noreferrer">uddinstudios.framer.ai</a>
+																</div>
+															</div>
+														</div>
+														<p class="mt-2 mb-5 text-sm text-neutral-600 line-clamp-2">Your B2B Web Design Partner That Helps You Close More Leads &amp; Sell Your B2B Offer</p>
+														<div class="flex items-center justify-end">
+															<div class="px-2 py-1 text-xs text-green-800 bg-green-100 rounded-full">Web Design Development</div>
+														</div>
+													</div>
+												</a>
+											</div>
+										</div>
+										<div class="">
+											<div class="relative w-full group break-inside-avoid">
+												<a class="" href="/agencies/lift-up-design">
+													<div class="relative w-full p-4 no-underline transition-shadow duration-200 shadow-md rounded-3xl dark:bg-neutral-800 bg-neutral-50 hover:bg-neutral-100 dark:hover:bg-neutral-800/80 hover:shadow-md">
+														<div class="flex items-center mb-2">
+															<div class="relative w-10 h-10 mb-4 mr-3 rounded-full shadow-md">
+																<img src="https://riksaacgoolsgafemmlv.supabase.co/storage/v1/object/public/agency-logos/0.22223098349809112.png" alt="Liftup Design" width="200" height="200" class="absolute inset-0 object-cover w-full h-full rounded-2xl" />
+																<div class="absolute inset-0 rounded-2xl">
+																	<div class="absolute inset-0 shadow-md rounded-2xl"></div>
+																	<div class="absolute inset-0 rounded-2xl dark:shadow-md"></div>
+																</div>
+															</div>
+															<div>
+																<h3 class="text-base font-semibold text-neutral-900 line-clamp-1">Liftup Design</h3>
+																<div class="text-xs text-neutral-500 flex items-center mt-0.5">
+																	<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-1">
+																		<circle cx="12" cy="12" r="10"></circle>
+																		<path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
+																		<path d="M2 12h20"></path>
+																	</svg>
+																	<a class="text-xs text-neutral-500 hover:underline hover:text-neutral-700 line-clamp-1" href="https://liftup.design/" target="_blank" rel="noopener noreferrer">liftup.design</a>
+																</div>
+															</div>
+														</div>
+														<p class="mt-2 mb-5 text-sm text-neutral-600 line-clamp-2">Your partner in turning website traffic into loyal customers. We bring your vision to life with results-driven design and development.</p>
+														<div class="flex items-center justify-end">
+															<div class="px-2 py-1 text-xs text-green-800 bg-green-100 rounded-full">Web Design Development</div>
+														</div>
+													</div>
+												</a>
+											</div>
+										</div>
+										<div class="">
+											<div class="relative w-full group break-inside-avoid">
+												<a class="" href="/agencies/creatifly">
+													<div class="relative w-full p-4 no-underline transition-shadow duration-200 shadow-md rounded-3xl dark:bg-neutral-800 bg-neutral-50 hover:bg-neutral-100 dark:hover:bg-neutral-800/80 hover:shadow-md">
+														<div class="flex items-center mb-2">
+															<div class="relative w-10 h-10 mb-4 mr-3 rounded-full shadow-md">
+																<img src="https://riksaacgoolsgafemmlv.supabase.co/storage/v1/object/public/agency-logos/0.9567472408356561.jpg" alt="Creatifly" width="200" height="200" class="absolute inset-0 object-cover w-full h-full rounded-2xl" />
+																<div class="absolute inset-0 rounded-2xl">
+																	<div class="absolute inset-0 shadow-md rounded-2xl"></div>
+																	<div class="absolute inset-0 rounded-2xl dark:shadow-md"></div>
+																</div>
+															</div>
+															<div>
+																<h3 class="text-base font-semibold text-neutral-900 line-clamp-1">Creatifly</h3>
+																<div class="text-xs text-neutral-500 flex items-center mt-0.5">
+																	<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-1">
+																		<circle cx="12" cy="12" r="10"></circle>
+																		<path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
+																		<path d="M2 12h20"></path>
+																	</svg>
+																	<a class="text-xs text-neutral-500 hover:underline hover:text-neutral-700 line-clamp-1" href="https://creatifly.co" target="_blank" rel="noopener noreferrer">creatifly.co</a>
+																</div>
+															</div>
+														</div>
+														<p class="mt-2 mb-5 text-sm text-neutral-600 line-clamp-2">Unlock endless design possibilities with Creatifly's subscription service. Say goodbye to the hassle of full-time hires and agencies, and enjoy top-tier design solutions tailored to your needs</p>
+														<div class="flex items-center justify-end">
+															<div class="px-2 py-1 text-xs text-green-800 bg-green-100 rounded-full">Web Design Development</div>
+														</div>
+													</div>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<footer class="border-t border-black/10 dark:border-white/10 bg-neutral-100 dark:bg-neutral-900 md:ml-[12rem]">
+			<div class="p-4 px-4 mx-auto sm:w-5/6 md:w-4/5 lg:w-3/4 max-w-7xl sm:px-6 md:px-8 lg:px-12">
+				<div class="flex flex-col items-center justify-between sm:flex-row">
+					<div class="flex flex-wrap items-center justify-center mb-4 space-x-6 sm:justify-start sm:mb-0">
+						<a class="mb-2 text-sm transition-colors text-neutral-500 hover:text-foreground sm:mb-0" href="/">Home</a>
+						<a class="mb-2 text-sm transition-colors text-neutral-500 hover:text-foreground sm:mb-0" href="/blog">Blog</a>
+					</div>
+					<div class="flex items-center space-x-4">
+						<a href="https://twitter.com/designslist" target="_blank" rel="noopener noreferrer" class="transition-colors text-neutral-500 hover:text-foreground">
+							<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+								<path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
+							</svg>
+						</a>
+						<a href="https://instagram.com/designslist" target="_blank" rel="noopener noreferrer" class="transition-colors text-neutral-500 hover:text-foreground">
+							<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+								<path
+									d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+								></path>
+							</svg>
+						</a>
+					</div>
+				</div>
+				<div class="mt-4 text-xs text-center text-neutral-500">© 2024 Designs List. All rights reserved.</div>
+			</div>
+		</footer>
+	</body>
+</html>

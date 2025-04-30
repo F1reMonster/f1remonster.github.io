@@ -1,0 +1,41 @@
+@media screen and (max-width: 767px) {
+  .intro-save-smart {
+    padding: 0 0 2.1875em;
+  }
+}
+.intro-save-smart .header {
+  font: 7.5em/1 "mixtape-reg-latin", sans-serif;
+}
+@media screen and (max-width: 767px) {
+  .intro-save-smart .header {
+    font-size: 6.25em;
+    line-height: 1;
+    margin-bottom: 0.17em;
+  }
+}
+.intro-save-smart .header span {
+  font: 0.5em/1.1 "mixtape-reg", sans-serif;
+  display: inline-block;
+  transform: translateY(10px);
+}
+html[dir=ltr] .intro-save-smart .header span {
+  font-family: "mixtape-reg-latin", sans-serif;
+}
+
+@media screen and (max-width: 767px) {
+  .intro-save-smart .header span {
+    font-size: 0.6em;
+  }
+}
+.intro-save-smart .img-part img {
+  display: block;
+  margin: 0 auto;
+}
+.intro-save-smart .msg {
+  max-width: 28.05em;
+}
+@media screen and (max-width: 767px) {
+  .intro-save-smart .msg {
+    line-height: 1.5em;
+  }
+}

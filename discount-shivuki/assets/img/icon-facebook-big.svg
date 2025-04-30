@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="26px" height="42px" viewBox="0 0 26 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>B47CB052-D055-40D5-A88F-1668451E16BE</title>
+    <defs>
+        <filter x="-15.0%" y="-15.0%" width="130.0%" height="130.0%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.211764706   0 0 0 0 0.239215686   0 0 0 0 0.31372549  0 0 0 0.231568663 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Concept" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-1920_DISCOUNT---financial-reports" transform="translate(-787.000000, -2559.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <g id="Group-33" transform="translate(1.000000, 2434.134744)">
+                <g id="Group-14" transform="translate(765.000000, 111.000000)" filter="url(#filter-1)">
+                    <g id="Group-33">
+                        <path d="M36.4739415,50.75 L36.4739415,36.3824232 L41.1157133,36.3824232 L41.812116,30.7814621 L36.4739415,30.7814621 L36.4739415,27.2060652 C36.4739415,25.5849641 36.9056251,24.4802032 39.1465479,24.4802032 L42,24.478985 L42,19.4692872 C41.5065356,19.4026889 39.8126466,19.25 37.8411351,19.25 C33.7243045,19.25 30.9058485,21.859721 30.9058485,26.6513498 L30.9058485,30.7814621 L26.25,30.7814621 L26.25,36.3824232 L30.9058485,36.3824232 L30.9058485,50.75 L36.4739415,50.75 Z" id="f_1_"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

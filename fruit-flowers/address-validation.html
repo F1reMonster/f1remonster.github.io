@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Fruit Flowers - Address Validation</title>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<style></style>
+	<body>
+		<div class="container">
+			<h2>Modal address validation</h2>
+
+			<div>
+				<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#address-validation">Lunch modal Address Validation</button>
+			</div>
+
+			<div style="margin-top: 16px;"">
+				<button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#address-unknown">Lunch modal Address Unknown</button>
+
+			</div>
+		</div>
+
+		<div class="modal fade" id="address-validation" tabindex="-1" aria-labelledby="address-validation" style="display: none" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-body">
+						<div class="popup popup--address-validation">
+							<h2 class="popup__title">Verify Your Delivery Address</h2>
+							<p>We don’t recognize the delivery address you entered. You can select the address below or go back and edit your entry.</p>
+
+							<div class="popup__body">
+								<div class="popup__body-item">
+									<div class="title">Original Address</div>
+									<p>1120 Bay Pointe Alpharetta GA, 30005</p>
+								</div>
+
+								<div class="popup__body-item">
+									<svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M18 6L15.885 8.115L24.255 16.5H6V19.5H24.255L15.885 27.885L18 30L30 18L18 6Z" fill="black" fill-opacity="0.12" />
+									</svg>
+								</div>
+
+								<div class="popup__body-item">
+									<div class="title">Suggested Address</div>
+									<p>1120 Bay Pointe Xing Alpharetta GA, 30005</p>
+								</div>
+							</div>
+							<div class="popup__footer">
+								<div class="row">
+									<div class="col-md-6">
+										<button class="btn btn-light" onclick="alert('Dev mode\n\nuser correcting his address\n\n');">Modify Original Address</button>
+									</div>
+									<div class="col-md-6">
+										<button class="btn btn-primary" onclick="alert('Dev mode\n\ndelivery address form populated with suggested address\n\n');">Confirm Suggested Address</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade" id="address-unknown" tabindex="-1" aria-labelledby="address-unknown" style="display: none" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-body">
+						<div class="popup popup--address-unknown">
+							<h2 class="popup__title">Verify Your Delivery Address</h2>
+							<p>Sorry, we don't recognize the delivery address you entered. Please go back and edit your entry.</p>
+
+							<div class="popup__container">
+								<div class="popup__body">
+									<div class="popup__body-item">
+										<div class="title">Original Address</div>
+										<p>1120213123 Main Street Atlanta GA, 30315</p>
+									</div>
+								</div>
+								<div class="popup__footer">
+									<div class="row">
+										<div class="col-md-12">
+											<button class="btn btn-danger">Go Back to Modify Address</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+	</body>
+</html>

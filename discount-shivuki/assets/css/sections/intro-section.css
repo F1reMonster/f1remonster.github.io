@@ -1,0 +1,247 @@
+.intro-section {
+  padding: 2.25em 0 4.5em;
+  letter-spacing: 0;
+  color: #000;
+  font-family: "rubik-reg", sans-serif;
+}
+@media screen and (max-width: 767px) {
+  .intro-section {
+    padding-bottom: 1.875em;
+  }
+}
+.intro-section .wrap {
+  display: flex;
+}
+@media screen and (max-width: 1100px) {
+  .intro-section .wrap {
+    align-items: center;
+  }
+}
+@media screen and (max-width: 767px) {
+  .intro-section .wrap {
+    display: block;
+  }
+}
+.intro-section .header {
+  font: 6.25em/1.08 "mixtape-reg", sans-serif;
+  color: #00a661;
+  margin: 0.48em 0 0.17em;
+}
+html[dir=ltr] .intro-section .header {
+  font-family: "mixtape-reg-latin";
+}
+
+@media screen and (max-width: 767px) {
+  .intro-section .header {
+    font-size: 3.75em;
+    line-height: 1;
+    margin: 0 0 0.1333333333em;
+  }
+}
+.intro-section .typical-header {
+  font: 3.125em/1.24 "rubik-medium", sans-serif;
+}
+@media (max-width: 767px) {
+  .intro-section .typical-header {
+    font: 1.875em/1.4 "rubik-medium", sans-serif;
+  }
+}
+.intro-section .typical-header--normal {
+  text-align: unset;
+}
+.intro-section .msg {
+  font: 1.25em/1.6 "rubik-reg", sans-serif;
+  max-width: 28.05em;
+  margin: 0;
+}
+.intro-section .msg.msg-w-full {
+  max-width: 100%;
+}
+@media screen and (max-width: 767px) {
+  .intro-section .msg {
+    font-size: 1em;
+    line-height: 1.625;
+  }
+}
+.intro-section .msg-mid {
+  font: 1.5em/1.5 "rubik-medium", sans-serif;
+  max-width: 25em;
+  margin: 0;
+}
+.intro-section .msg-mid.msg-w-full {
+  max-width: 100%;
+}
+@media (max-width: 767px) {
+  .intro-section .msg-mid {
+    font: 1.125em/1.6666666667 "rubik-medium", sans-serif;
+    max-width: 33.3333333333em;
+  }
+}
+.intro-section .msg-big {
+  font: 3.125em/1.24 "rubik-medium", sans-serif;
+  max-width: 15.42em;
+}
+.intro-section .msg-big p {
+  margin: 0;
+}
+.intro-section .msg-big.msg-w-full {
+  max-width: 100%;
+}
+@media (max-width: 767px) {
+  .intro-section .msg-big {
+    font: 1.875em/1.4 "rubik-medium", sans-serif;
+  }
+}
+.intro-section .txt-part {
+  margin-inline-end: 1.25em;
+  max-width: 51.25em;
+}
+@media screen and (max-width: 767px) {
+  .intro-section .txt-part {
+    margin-inline-end: 0;
+  }
+}
+.intro-section .img-part {
+  margin-inline-start: auto;
+}
+.intro-section .img-part--rates-interests img {
+  position: relative;
+  left: 6.625em;
+}
+@media (max-width: 1023px) {
+  .intro-section .img-part--rates-interests img {
+    left: 0;
+  }
+}
+@media screen and (max-width: 992px) {
+  .intro-section .img-part {
+    flex-shrink: 2;
+  }
+}
+@media screen and (max-width: 767px) {
+  .intro-section .img-part {
+    margin-top: 2.125em;
+  }
+}
+.intro-section--help-page .wrap {
+  position: relative;
+}
+.intro-section--help-page .wrap .help-page-background {
+  position: absolute;
+  left: 50%;
+  bottom: -6.25em;
+  z-index: -1;
+  transform: translateX(-50%);
+}
+@media screen and (max-width: 767px) {
+  .intro-section--help-page .wrap {
+    display: flex;
+    flex-flow: column-reverse;
+  }
+  .intro-section--help-page .wrap .help-page-background {
+    display: none;
+  }
+}
+.intro-section--help-page .txt-part .msg {
+  max-width: 25.5em;
+}
+@media (max-width: 767px) {
+  .intro-section--help-page .txt-part {
+    margin-top: 1.25em;
+  }
+}
+.intro-section.intro-filter-map .header {
+  margin: 0;
+}
+.intro-section.reverse {
+  padding: 2.25em 0;
+}
+.intro-section.reverse .wrap {
+  flex-flow: row-reverse;
+  justify-content: flex-end;
+}
+.intro-section.reverse .img-part {
+  margin-inline-start: unset;
+}
+.intro-section.reverse .txt-part {
+  margin-inline-end: unset;
+  margin-inline-start: 2.875em;
+  max-width: 100%;
+}
+@media (max-width: 767px) {
+  .intro-section.reverse .txt-part {
+    margin-inline-start: auto;
+  }
+}
+.intro-section.reverse .msg-mid {
+  max-width: 38.3333333333em;
+}
+@media (max-width: 767px) {
+  .intro-section.reverse .msg-mid {
+    max-width: 51.1111111111em;
+  }
+}
+.intro-section.reverse-offset {
+  padding: 8.125em 0 10.3125em;
+}
+.intro-section.reverse-offset .txt-part {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  margin-inline-start: 9.75em;
+}
+@media (max-width: 767px) {
+  .intro-section.reverse-offset .txt-part {
+    margin-inline-start: unset;
+  }
+}
+@media (max-width: 767px) {
+  .intro-section.reverse-offset {
+    padding: 4.125em 0 3.625em;
+  }
+}
+.intro-section.reverse-offset--mid {
+  padding: 3.5em 0;
+}
+.intro-section.store-api {
+  position: relative;
+  padding: 0 0 10.1875em;
+}
+@media (max-width: 767px) {
+  .intro-section.store-api {
+    padding: 0 0 3.3125em;
+  }
+  .intro-section.store-api .img-part {
+    display: none;
+  }
+}
+.intro-section__background {
+  position: absolute;
+}
+@media (max-width: 767px) {
+  .intro-section__background {
+    display: none;
+  }
+}
+.intro-section__background-center {
+  inset-inline-end: 50%;
+  top: 50%;
+  transform: translate(-50%, -65%);
+  max-width: none;
+}
+html[dir=ltr] .intro-section__background-center {
+  transform: translateX(50%, -65%);
+}
+
+@media (max-width: 767px) {
+  .intro-section.mob-reverse .wrap {
+    display: flex;
+    flex-flow: column;
+    align-items: unset;
+  }
+  .intro-section.mob-reverse .img-part {
+    order: -1;
+    margin-top: 0;
+    margin-inline-start: unset;
+  }
+}

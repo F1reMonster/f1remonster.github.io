@@ -1,0 +1,220 @@
+.projects-list {
+	padding: rem(100) 0 rem(130);
+
+	&__list {
+		display: grid;
+		grid-template-columns: repeat(4, minmax(0, 1fr));
+
+		gap: rem(22);
+
+		@media (max-width: em(1023)) {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+			gap: rem(10);
+		}
+	}
+
+	&__group-header {
+		position: relative;
+		display: flex;
+		flex-flow: column;
+		padding-bottom: rem(108);
+		font-weight: 700;
+		font-size: clamp(1rem, 0.85rem + 0.75vw, 1.75rem);
+		text-transform: uppercase;
+		gap: rem(18);
+
+		&::after {
+			content: "";
+			position: absolute;
+			bottom: rem(20);
+			left: 50%;
+			width: rem(32);
+			height: rem(32);
+			transform: translateX(-50%);
+			background: url("../img/icons/arrow-down-feijoa.svg") no-repeat center / contain;
+		}
+
+		&--group1 {
+			@media (max-width: em(1023)) {
+				order: 1;
+			}
+		}
+
+		&--group2 {
+			@media (max-width: em(1023)) {
+				order: 2;
+			}
+		}
+
+		&--group3 {
+			@media (max-width: em(1023)) {
+				order: 5;
+			}
+		}
+
+		&--group4 {
+			@media (max-width: em(1023)) {
+				order: 6;
+			}
+		}
+
+		@media (max-width: em(1023)) {
+			padding-bottom: rem(60);
+
+			&::after {
+				bottom: rem(10);
+			}
+		}
+	}
+
+	&__group-list {
+		--color: var(--text-muted);
+
+		ul {
+			border-radius: rem(20);
+			padding: rem(34) rem(7);
+			border: rem(5) solid var(--color);
+
+			@media (max-width: em(1023)) {
+				border-width: rem(2);
+				padding: rem(20) rem(5);
+			}
+		}
+
+		li {
+			display: flex;
+			align-items: center;
+
+			gap: rem(15);
+
+			.image {
+				flex-shrink: 0;
+				border-radius: 50%;
+				width: rem(114);
+				// height: rem(114);
+				aspect-ratio: 1;
+				background-color: var(--text-muted);
+				overflow: hidden;
+				align-self: center;
+
+				img {
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+				}
+
+				@media (max-width: em(575)) {
+					width: rem(80);
+				}
+			}
+
+			.project-info {
+				display: flex;
+				flex-flow: column;
+				gap: rem(18);
+
+				> a {
+					font-size: clamp(1rem, 0.95rem + 0.25vw, 1.25rem);
+					color: var(--lightning-yellow);
+					text-underline-offset: rem(6);
+					text-decoration-thickness: rem(0.5);
+
+					@include hover-supported {
+						text-decoration: underline;
+					}
+				}
+			}
+
+			.title {
+				font-weight: 700;
+				font-size: clamp(1rem, 0.95rem + 0.25vw, 1.25rem);
+				text-transform: uppercase;
+			}
+
+			&:not(:last-child) {
+				margin-bottom: rem(40);
+
+				@media (max-width: em(1023)) {
+					margin-bottom: rem(20);
+				}
+			}
+
+			@media (max-width: em(1365)) {
+				flex-flow: column;
+				align-items: flex-start;
+			}
+
+			@media (max-width: em(1023)) {
+				flex-flow: row;
+				align-items: center;
+			}
+
+			@media (max-width: em(650)) {
+				flex-flow: column;
+				align-items: flex-start;
+			}
+		}
+
+		&--group1 {
+			--color: var(--feijoa);
+
+			@media (max-width: em(1023)) {
+				order: 3;
+				margin-bottom: rem(20);
+			}
+		}
+
+		&--group2 {
+			--color: var(--curious-blue);
+
+			@media (max-width: em(1023)) {
+				order: 4;
+				margin-bottom: rem(20);
+			}
+		}
+
+		&--group3 {
+			--color: var(--sun);
+
+			@media (max-width: em(1023)) {
+				order: 7;
+			}
+		}
+
+		&--group4 {
+			--color: var(--curious-blue);
+
+			@media (max-width: em(1023)) {
+				order: 8;
+			}
+		}
+	}
+
+	&__actions {
+		display: flex;
+		margin-top: rem(126);
+
+		.btn-donate {
+			flex-basis: rem(650);
+			justify-content: flex-start;
+			max-width: unset;
+			gap: rem(50);
+
+			@media (max-width: em(767)) {
+				flex-basis: rem(350);
+				font-size: rem(20);
+				gap: rem(20);
+			}
+		}
+
+		@media (max-width: em(1023)) {
+			margin-top: rem(50);
+		}
+
+		
+	}
+
+	@media (max-width: em(1023)) {
+		padding: rem(70) 0;
+	}
+}

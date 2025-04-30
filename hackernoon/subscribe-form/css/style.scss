@@ -1,0 +1,392 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap");
+
+// ****** colors
+
+$starship: #f5ec43;
+$bright-sun: #fcd343;
+$amber: #ffdb0d;
+$yukon-gold: #666105;
+$driftwood: #b58a49;
+$green: #0f0;
+$green-tagged-header: #0b0;
+$screamin-green: #62ff86;
+$green-darken: #00b300;
+$japanese-laurel: #008000;
+$deep-fir: #003b00;
+$crusoe: #004d00;
+$ocean-green: #49a791;
+$deep-fir: #003b00;
+$black: #000;
+$cod-gray: #1c1c1c;
+$white: #fff;
+$mine-shaft: #3b3b3b;
+$mona-lisa: #ff9797;
+$razzle-dazzle-rose: #ff45ec;
+$iron: #e7e7e8;
+$alabaster: #fafafa;
+$bittersweet: #ff5f5f;
+$emerald: #3fd55f;
+$fountain-blue: #5aabc7;
+$tropical-blue: #bee3f8;
+$denim: #177daf;
+$blush: #b9486b;
+$kimberly: #736da0;
+$catskill-white: #f0f4f8;
+$periwinkle-gray: #bfd0e3;
+$athens-gray: #f6f7f9;
+$shark: #212428;
+$tuatara: #3c3c3b;
+$silver: #cccccc;
+
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	font-family: "IBM Plex Mono", monospace;
+	font-size: 14px;
+	color: $mine-shaft;
+}
+
+ul,
+li {
+	list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: 14px;
+	font-weight: normal;
+}
+
+a {
+	color: $mine-shaft;
+	text-decoration: none;
+	-webkit-transition: all 0.2s linear;
+	-o-transition: all 0.2s linear;
+	transition: all 0.2s linear;
+}
+
+.container {
+	max-width: 1430px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 60px;
+}
+
+.wrapper {
+	display: flex;
+}
+
+.link {
+	padding: 2px 0 1px;
+	word-break: break-word;
+	background-image: linear-gradient(
+		transparent 0%,
+		transparent calc(50% - 9px),
+		rgba(0, 255, 0, 0.35) calc(50% - 9px),
+		rgba(0, 255, 0, 0.35) 100%
+	);
+	background-position: 0 0;
+	background-size: 100% 200%;
+	transition: all 120ms ease-in-out 0s;
+	cursor: pointer;
+
+	&:hover {
+		background-image: linear-gradient(
+			transparent 0%,
+			transparent calc(50% - 9px),
+			$green calc(50% - 9px),
+			$green 100%
+		);
+		background-position: 0 100%;
+	}
+}
+
+.left {
+
+	padding: 0 10px;
+
+	&__wrapper {
+		max-width: 450px;
+	}
+
+	&__img {
+		max-width: 450px;
+
+		img {
+			width: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__title,
+	&__subtitle,
+	&__text {
+		padding-top: 20px;
+	}
+
+	&__title {
+		font-size: 32px;
+		font-weight: 700;
+	}
+
+	&__subtitle {
+		font-size: 18px;
+		font-weight: 600;
+	}
+
+	&__text {
+		line-height: 24px;
+	}
+}
+
+.form {
+	&__body {
+		padding-left: 50px;
+	}
+
+	&__top {
+		display: flex;
+	}
+
+	&__middle {
+		margin-top: 40px;
+	}
+
+	&__middle-title {
+		font-size: 20px;
+		font-weight: 700;
+	}
+
+	&__middle-checkboxes {
+		display: flex;
+		border-top: 1px solid $mine-shaft;
+		border-bottom: 1px solid $mine-shaft;
+		margin: 20px 0;
+		padding: 20px 0;
+	}
+
+	&__bottom {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__bottom-wrapper {
+		display: flex;
+		align-items: center;
+	}
+
+	&__bottom-email {
+		display: flex;
+		flex-direction: column;
+		margin-right: 20px;
+	}
+
+	&__bottom-email-text {
+		font-size: 12px;
+		font-weight: 700;
+	}
+
+	&__bottom-input {
+		width: 280px;
+		padding: 10px;
+		border: 1px solid $silver;
+		border-radius: 3px;
+		transition: 0.3s all;
+		outline: none;
+
+		&:focus {
+			border: 1px solid $mine-shaft;
+			transition: 0.3s all;
+
+		}
+	}
+
+	&__bottom-terms {
+		margin-top: 20px;
+		font-size: 12px;
+		text-align: center;
+	}
+
+	&__bottom-btn {
+		margin-top: 12px;
+		button {
+			padding: 10px;
+			background-color: $green;
+			color: $white;
+			font-weight: 700;
+			text-transform: uppercase;
+			cursor: pointer;
+			border: 1px solid $green;
+			border-radius: 3px;
+			transition: 0.3s linear;
+
+			&:hover {
+				background-color: $screamin-green;
+				transition: 0.3s linear;
+			}
+		}
+	}
+
+	.checkbox {
+		&__list {
+			width: 50%;
+		}
+
+		&__item {
+			padding: 0 10px;
+
+			&:not(:last-child) {
+				margin-bottom: 25px;
+			}
+		}
+
+		&__label {
+			display: flex;
+			align-items: center;
+		}
+
+		&__div {
+			margin-right: 20px;
+		}
+
+		&__input {
+			display: none;
+
+			&:checked ~ .checkbox__box {
+				background-image: url(../img/check-box.svg);
+				transition: 0.3s all;
+			}
+		}
+
+		&__box {
+			display: block;
+			width: 20px;
+			height: 20px;
+			background-image: url(../img/blank-check-box.svg);
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			transition: 0.3s all;
+		}
+
+		&__content {
+			display: flex;
+			flex-direction: column;
+		}
+
+		&__period {
+			text-transform: uppercase;
+			font-size: 12px;
+			font-weight: 700;
+			color: $crusoe;
+			//margin-bottom: 5px;
+		}
+
+		&__title {
+			font-size: 20px;
+			font-weight: 700;
+
+		}
+
+		&__mark {
+			margin-top: 8px;
+		}
+
+		&__span {
+			padding: 5px 8px;
+			font-weight: 700;
+			text-transform: uppercase;
+
+			&.gray {
+				background-color: $periwinkle-gray;
+				color: $white;
+			}
+
+			&.green {
+				background-color: $green;
+				color: $white;
+			}
+		}
+	}
+}
+
+
+@media only screen and (max-width: 976px) {
+	.wrapper {
+		flex-direction: column;
+	}
+
+	.left {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.form {
+		&__body {
+			margin-top: 20px;
+			padding-left: 0;
+		}
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.container {
+		padding: 0 10px;
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	.container {
+		padding: 10px;
+	}
+
+	.form {
+
+		&__top,
+		&__middle-checkboxes {
+			flex-wrap: wrap;
+		}
+
+		&__middle {
+			margin-top: 20px;
+		}
+
+		&__bottom-wrapper {
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+
+		&__bottom-email {
+			margin-right: 0;
+		}
+
+		.checkbox {
+			&__list {
+				width: 100%;
+			}
+
+			&__item {
+				margin-bottom: 20px;
+
+				&:not(:last-child) {
+					margin-bottom: 20px;
+				}
+			}
+		}
+	}
+
+}

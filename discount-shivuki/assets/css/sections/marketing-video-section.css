@@ -1,0 +1,74 @@
+.marketing-video-section .video-wrap iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.marketing-video-section {
+  padding: 4.0625em 0 min(4.6875%, 90px);
+  position: relative;
+  text-align: center;
+}
+@media (max-width: 767px) {
+  .marketing-video-section {
+    padding: 1.25em 0 1.25em;
+  }
+}
+.marketing-video-section .video-sectin-header {
+  margin-bottom: 0.22em;
+}
+@media (max-width: 767px) {
+  .marketing-video-section .video-sectin-header {
+    text-align: center;
+    margin-bottom: 0;
+  }
+}
+.marketing-video-section .video-wrap {
+  margin-top: 2em;
+  padding-bottom: 56.25%;
+}
+@media (max-width: 767px) {
+  .marketing-video-section .video-wrap {
+    margin: 1.125em -20px 0;
+  }
+}
+.marketing-video-section .subheader {
+  font: 1.5em/1.3333333333 "rubik-reg", sans-serif;
+  color: #000;
+  margin: 0;
+}
+@media (max-width: 767px) {
+  .marketing-video-section .subheader {
+    font-size: 1em;
+    line-height: 1.625;
+  }
+}
+.marketing-video-section .video-section-btn {
+  margin-top: 1.6em;
+}
+@media (max-width: 767px) {
+  .marketing-video-section .video-section-btn {
+    min-width: 11.875em;
+  }
+}
+.marketing-video-section .bg-wrap {
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  width: 100%;
+}
+.marketing-video-section .bg-img {
+  position: relative;
+  top: -7.75em;
+}
+html[dir=ltr] .marketing-video-section .bg-img {
+  transform: scaleX(-1);
+}
+
+@media (max-width: 767px) {
+  .marketing-video-section .bg-img {
+    display: none;
+  }
+}

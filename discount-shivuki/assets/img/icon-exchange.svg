@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="56px" height="56px" viewBox="0 0 56 56" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 17</title>
+    <defs>
+        <circle id="path-1" cx="25" cy="25" r="25"></circle>
+        <filter x="-10.0%" y="-8.0%" width="120.0%" height="120.0%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Concept" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-1920_DISCOUNT_coin-rates" transform="translate(-585.000000, -2290.000000)">
+            <g id="Group-24" transform="translate(0.000000, 2025.000000)">
+                <g id="Group-37" transform="translate(517.000000, 113.000000)">
+                    <g id="Group-20" transform="translate(71.000000, 93.000000)">
+                        <g id="Group-17" transform="translate(0.000000, 61.000000)">
+                            <g id="Oval">
+                                <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                                <use fill="#00A661" fill-rule="evenodd" xlink:href="#path-1"></use>
+                            </g>
+                            <g id="Group-16" transform="translate(15.666667, 15.909091)" stroke="#FFFFFF" stroke-linecap="round" stroke-width="3">
+                                <g id="Group-12" transform="translate(0.000000, 3.030303)">
+                                    <line x1="4.16666667" y1="0.270562771" x2="4.16666667" y2="14.3398268" id="Line-7"></line>
+                                    <line x1="0.277777778" y1="11.0930736" x2="4.16666667" y2="14.8809524" id="Line"></line>
+                                    <line x1="4.16666667" y1="11.0930736" x2="8.05555556" y2="14.8809524" id="Line-Copy" transform="translate(6.111111, 12.987013) scale(-1, 1) translate(-6.111111, -12.987013) "></line>
+                                </g>
+                                <g id="Group-12-Copy" transform="translate(14.500000, 7.575758) scale(1, -1) translate(-14.500000, -7.575758) translate(10.333333, 0.000000)">
+                                    <line x1="4.16666667" y1="0.270562771" x2="4.16666667" y2="14.3398268" id="Line-7"></line>
+                                    <line x1="0.277777778" y1="11.0930736" x2="4.16666667" y2="14.8809524" id="Line"></line>
+                                    <line x1="4.16666667" y1="11.0930736" x2="8.05555556" y2="14.8809524" id="Line-Copy" transform="translate(6.111111, 12.987013) scale(-1, 1) translate(-6.111111, -12.987013) "></line>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
